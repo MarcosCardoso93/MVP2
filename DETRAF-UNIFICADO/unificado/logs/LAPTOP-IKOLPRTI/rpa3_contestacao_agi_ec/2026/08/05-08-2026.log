@@ -1,0 +1,6 @@
+2026-08-05 10:06:17.583 | INFO    |comum.config.diagnostico:verificar_banco:320 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-05 10:06:17.583 | INFO    |comum.config.diagnostico:verificar_banco:320 - Utilizando SQLite local [banco_de_dados\TABELAS_DETRAF.db]
+2026-08-05 10:07:13.226 | INFO    |comum.config.diagnostico:verificar_banco:332 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-05 10:07:13.227 | INFO    |comum.config.diagnostico:verificar_banco:332 - Utilizando SQLite local [banco_de_dados\TABELAS_DETRAF.db]
+2026-08-05 10:07:31.684 | INFO    |comum.config.diagnostico:verificar_banco:332 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-05 10:07:31.684 | INFO    |comum.config.diagnostico:verificar_banco:332 - Utilizando SQLite local [banco_de_dados\TABELAS_DETRAF.db]

@@ -1,0 +1,37 @@
+loguru==0.7.3
+numpy==2.5.1
+openpyxl==3.1.5
+pandas==3.0.5
+PyMySQL==1.2.0
+pytest==9.1.1
+python-dateutil==2.9.0.post0
+python-docx==1.2.0
+python-dotenv==1.2.2
+pywin32==312
+SQLAlchemy==2.0.51
+
+# --- Automação de interface do AGI (RPA 3, HU-17/HU-18) --------------------
+# O AGI não tem API: a integração é por comparação de imagem na tela e pelos
+# diálogos nativos do Windows. Ver rpa3_contestacao_agi_ec/src/integracoes/agi.py.
+#
+# opencv-python não é importado diretamente, mas é o que habilita o parâmetro
+# `confidence` do pyautogui — sem ele, todo locateOnScreen exige match exato.
+opencv-python==5.0.0.93
+pillow==12.3.0
+psutil==7.2.2
+PyAutoGUI==0.9.54
+PyGetWindow==0.0.9
+pywinauto==0.6.9
+
+# SFTP do ClickHub — de onde a expectativa Vivo vem desde 2026-08-10 (RPA 2,
+# etapa `expectativa`). Puxa junto `cryptography`, `bcrypt` e `pynacl`, que são
+# dependências dele e não são usadas diretamente por nada aqui.
+#
+# O import é TARDIO, dentro de `SFTPService.conectar` — uma execução com
+# PERMITIR_DOWNLOAD_SFTP desligado não carrega nada disso.
+paramiko==5.0.0
+
+# NÃO acrescentar, apesar de estarem nos requirements dos Projetos 5 e 7:
+#   mysql-connector-python — a camada de banco unificada usa SQLAlchemy + PyMySQL;
+#   dotenv==0.9.9          — é um pacote DIFERENTE de python-dotenv, um stub no
+#                            PyPI que conflita com ele. Os dois vinham juntos lá.

@@ -1,0 +1,22 @@
+Prezados,
+
+Os arquivos de Detraf abaixo, enviados por sua empresa nesta mensagem, não
+puderam ser processados e estão sendo devolvidos para correção.
+
+Recebido em:      {data_recebimento}
+Enviado por:      {remetente}
+Assunto original: {assunto_original}
+
+Arquivos recusados: {quantidade}
+
+{arquivos}
+
+Pedimos a gentileza de corrigir os pontos acima e reenviar os arquivos em
+resposta a esta mensagem.
+
+Enquanto o reenvio não ocorrer, o Detraf de sua empresa permanece pendente e
+não é considerado na apuração do mês.
+
+
+Atenciosamente
+Equipe Detraf

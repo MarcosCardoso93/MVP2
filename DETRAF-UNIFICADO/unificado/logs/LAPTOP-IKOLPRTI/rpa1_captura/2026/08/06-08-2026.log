@@ -1,0 +1,148 @@
+2026-08-06 11:40:45.030 | INFO    |__main__:<module>:118 - [RPA 1] robô: rpa1_captura
+2026-08-06 11:40:45.030 | INFO    |__main__:<module>:118 - [RPA 1] modo: DEV  (de ENV)
+2026-08-06 11:40:45.031 | INFO    |__main__:<module>:118 - [RPA 1] log: nível INFO (de LOG_LEVEL), diagnose ligado
+2026-08-06 11:40:45.031 | INFO    |__main__:<module>:118 - [RPA 1] competência: 202603  (forçada por COMPETENCIA)
+2026-08-06 11:40:45.031 | INFO    |__main__:<module>:118 - [RPA 1] banco: SQLite [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF.db] (de CAMINHO_SQLITE)
+2026-08-06 11:40:45.031 | INFO    |__main__:<module>:118 - [RPA 1] EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: desligado | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado
+2026-08-06 11:40:45.031 | INFO    |__main__:<module>:118 - [RPA 1] parâmetros: referência forçada: 202603; apenas a etapa: processamento; DRY-RUN: todos os efeitos externos desligados
+2026-08-06 11:40:45.572 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-06 11:40:45.572 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF.db]
+2026-08-06 11:40:45.784 | INFO    |__main__:main:94 - Aplicação iniciada
+2026-08-06 11:40:45.785 | INFO    |src.main.process_handle:run:34 - [RPA 1] Captura PULADA. Os arquivos serão lidos de DIRETORIO_ENTRADA, e o remetente de cada um vem do rastreamento gravado pela captura anterior.
+2026-08-06 11:40:45.785 | INFO    |src.main.process_handle:run:34 - [RPA 1] Etapa 2/2 — identificação da operadora e salvamento (HU-02/HU-03)
+2026-08-06 11:40:45.785 | INFO    |src.controllers.processamento_controller:processar:155 - Iniciando fluxo de processamento
+2026-08-06 11:40:45.785 | INFO    |src.controllers.processamento_controller:processar:155 - Competência: 202603 | Ano: 2026
+2026-08-06 11:40:45.786 | INFO    |src.services.processamento_service:executar:139 - [RPA 1] 2 arquivo(s) em [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\arquivos\Entrada] (busca recursiva); 0 com remetente recuperado do rastreamento.
+2026-08-06 11:40:45.786 | WARNING |src.services.processamento_service:executar:139 - [RPA 1] Nenhum arquivo tem rastreamento: a identificação vai depender só da EOT credora dentro do arquivo, sem o fallback por domínio do remetente. É o esperado numa pasta preparada à mão; se veio de uma captura, confira RASTREAMENTO_ARQUIVO_PATH.
+2026-08-06 11:40:45.786 | INFO    |src.controllers.processamento_controller:processar:155 - Total de arquivos a processar: 2
+2026-08-06 11:40:45.801 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_anexo5_processado]
+2026-08-06 11:40:45.828 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_anexo5_processado] carregada | Linhas: 2656 | Colunas: 17
+2026-08-06 11:40:45.834 | INFO    |comum.dominio.validacao_colunas:_validar_col_1_2_eot:548 - DataFrame reprovado na validação de EOT (Índice Coluna: 0). Encontrados códigos de operadoras que não existem no Anexo 5 cadastrado.
+2026-08-06 11:40:45.837 | INFO    |comum.dominio.validacao_colunas:_validar_col_1_2_eot:549 - DataFrame reprovado na validação de EOT (Índice Coluna: 1). Encontrados códigos de operadoras que não existem no Anexo 5 cadastrado.
+2026-08-06 11:40:45.837 | INFO    |comum.dominio.validacao_colunas:validar_tudo_detalhado:248 - DataFrame reprovado na validação da Coluna 1 (EOT). Encontrados códigos de operadoras que não existem no Anexo 5 cadastrado.
+2026-08-06 11:40:45.837 | INFO    |comum.dominio.validacao_colunas:validar_tudo_detalhado:248 - DataFrame reprovado na validação da Coluna 2 (EOT). Encontrados códigos de operadoras que não existem no Anexo 5 cadastrado.
+2026-08-06 11:40:45.842 | INFO    |comum.dominio.validacao_colunas:validar_tudo_detalhado:249 - DataFrame reprovado na validação da Coluna 2 (EOT Vivo). Encontrados códigos de operadoras que não correspondem aos nomes fantasia da Vivo.
+2026-08-06 11:40:45.856 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_detraf_tarifas]
+2026-08-06 11:40:45.859 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_detraf_tarifas] carregada | Linhas: 110 | Colunas: 17
+2026-08-06 11:40:45.898 | INFO    |comum.dominio.validacao_colunas:validar_tudo_detalhado:252 - Validação de tarifas concluída | Total: 542 | Válidas: 450 | Inválidas: 92 | Resultado final: False
+2026-08-06 11:40:45.898 | INFO    |comum.dominio.validacao_colunas:validar_tudo_detalhado:265 - DataFrame reprovado na validação da Coluna 3 (Referência). Esperado apenas: 202603
+2026-08-06 11:40:45.899 | INFO    |comum.dominio.validacao_colunas:validar_tudo_detalhado:266 - DataFrame reprovado na validação da Coluna 4 (Tráfego). Valores permitidos: {'202603', '202601', '202602'}
+2026-08-06 11:40:45.899 | INFO    |comum.dominio.validacao_colunas:validar_tudo_detalhado:267 - DataFrame reprovado na validação da Coluna 8 (GH). Valores fora das opções {'R', 'D', 'N', 'S'} detectados.
+2026-08-06 11:40:45.902 | INFO    |comum.dominio.validacao_colunas:validar_tudo_detalhado:270 - DataFrame reprovado na validação da Coluna 11 (Tarifa). Valores inválidos ou não numéricos detectados.
+2026-08-06 11:40:45.906 | INFO    |src.services.processamento_service:_validar:436 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': False, 'v_col2_vivo': False, 'v_col3': False, 'v_col4': False, 'v_col8': False, 'v_col9': True, 'v_col10': True, 'v_col11': False, 'v_col12_15': True, 'v_tarifas_remuneradas': False}
+2026-08-06 11:40:45.906 | WARNING |src.services.processamento_service:_processar_arquivo:261 - Arquivo [DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_032026_V02.csv] rejeitado: regras de coluna não atendidas.
+  Colunas 1 e 2 (EOT): há códigos de operadora (EOT) que não constam do Anexo 5 cadastrado.
+  Coluna 2 (EOT da Vivo): a coluna da devedora traz EOT que não corresponde a nenhum nome fantasia da Vivo.
+  Coluna 3 (Referência): a referência precisa ser 202603 (AAAAMM) em todas as linhas.
+  Coluna 4 (Tráfego): o mês de tráfego precisa ser um de 202601, 202602, 202603.
+  Coluna 8 (GH): o grupo horário precisa ser S, R, N ou D.
+  Coluna 11 (Tarifa): a tarifa admite no máximo 5 casas decimais e não pode ser zero.
+  Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+2026-08-06 11:40:45.912 | INFO    |src.services.processamento_service:_reprovar:487 - [Layout] Motivo da recusa gravado em [DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_032026_V02_RECUSADO.md].
+2026-08-06 11:40:45.913 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - Inserindo 1 registro(s) em [tbl_rpa_log_detraf_despesa_arquivos].
+2026-08-06 11:40:45.922 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - 1 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_arquivos].
+2026-08-06 11:40:45.922 | WARNING |src.services.processamento_service:_processar_arquivo:263 - [RPA 1] 'DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_032026_V02.csv' REPROVADO na validação — quarentena em [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\arquivos\_QUARENTENA\202603\DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_032026_V02].
+2026-08-06 11:40:45.946 | INFO    |comum.dominio.validacao_colunas:_validar_col_1_2_eot:548 - DataFrame reprovado na validação de EOT (Índice Coluna: 0). Encontrados códigos de operadoras que não existem no Anexo 5 cadastrado.
+2026-08-06 11:40:45.951 | INFO    |comum.dominio.validacao_colunas:_validar_col_1_2_eot:549 - DataFrame reprovado na validação de EOT (Índice Coluna: 1). Encontrados códigos de operadoras que não existem no Anexo 5 cadastrado.
+2026-08-06 11:40:45.951 | INFO    |comum.dominio.validacao_colunas:validar_tudo_detalhado:248 - DataFrame reprovado na validação da Coluna 1 (EOT). Encontrados códigos de operadoras que não existem no Anexo 5 cadastrado.
+2026-08-06 11:40:45.951 | INFO    |comum.dominio.validacao_colunas:validar_tudo_detalhado:248 - DataFrame reprovado na validação da Coluna 2 (EOT). Encontrados códigos de operadoras que não existem no Anexo 5 cadastrado.
+2026-08-06 11:40:45.957 | INFO    |comum.dominio.validacao_colunas:validar_tudo_detalhado:249 - DataFrame reprovado na validação da Coluna 2 (EOT Vivo). Encontrados códigos de operadoras que não correspondem aos nomes fantasia da Vivo.
+2026-08-06 11:40:46.172 | INFO    |comum.dominio.validacao_colunas:validar_tudo_detalhado:252 - Validação de tarifas concluída | Total: 8712 | Válidas: 3248 | Inválidas: 5464 | Resultado final: False
+2026-08-06 11:40:46.175 | INFO    |comum.dominio.validacao_colunas:validar_tudo_detalhado:265 - DataFrame reprovado na validação da Coluna 3 (Referência). Esperado apenas: 202603
+2026-08-06 11:40:46.176 | INFO    |comum.dominio.validacao_colunas:validar_tudo_detalhado:266 - DataFrame reprovado na validação da Coluna 4 (Tráfego). Valores permitidos: {'202603', '202601', '202602'}
+2026-08-06 11:40:46.178 | INFO    |comum.dominio.validacao_colunas:validar_tudo_detalhado:267 - DataFrame reprovado na validação da Coluna 8 (GH). Valores fora das opções {'R', 'D', 'N', 'S'} detectados.
+2026-08-06 11:40:46.186 | INFO    |comum.dominio.validacao_colunas:validar_tudo_detalhado:270 - DataFrame reprovado na validação da Coluna 11 (Tarifa). Valores inválidos ou não numéricos detectados.
+2026-08-06 11:40:46.201 | INFO    |src.services.processamento_service:_validar:436 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': False, 'v_col2_vivo': False, 'v_col3': False, 'v_col4': False, 'v_col8': False, 'v_col9': True, 'v_col10': True, 'v_col11': False, 'v_col12_15': True, 'v_tarifas_remuneradas': False}
+2026-08-06 11:40:46.202 | WARNING |src.services.processamento_service:_processar_arquivo:261 - Arquivo [DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02.csv] rejeitado: regras de coluna não atendidas.
+  Colunas 1 e 2 (EOT): há códigos de operadora (EOT) que não constam do Anexo 5 cadastrado.
+  Coluna 2 (EOT da Vivo): a coluna da devedora traz EOT que não corresponde a nenhum nome fantasia da Vivo.
+  Coluna 3 (Referência): a referência precisa ser 202603 (AAAAMM) em todas as linhas.
+  Coluna 4 (Tráfego): o mês de tráfego precisa ser um de 202601, 202602, 202603.
+  Coluna 8 (GH): o grupo horário precisa ser S, R, N ou D.
+  Coluna 11 (Tarifa): a tarifa admite no máximo 5 casas decimais e não pode ser zero.
+  Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+2026-08-06 11:40:46.212 | INFO    |src.services.processamento_service:_reprovar:487 - [Layout] Motivo da recusa gravado em [DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02_RECUSADO.md].
+2026-08-06 11:40:46.213 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - Inserindo 1 registro(s) em [tbl_rpa_log_detraf_despesa_arquivos].
+2026-08-06 11:40:46.220 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - 1 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_arquivos].
+2026-08-06 11:40:46.220 | WARNING |src.services.processamento_service:_processar_arquivo:263 - [RPA 1] 'DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02.csv' REPROVADO na validação — quarentena em [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\arquivos\_QUARENTENA\202603\DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02].
+2026-08-06 11:40:46.221 | WARNING |src.services.notificacao_operadora:notificar_arquivos_recusados:74 - [RPA 1] 'DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_032026_V02.csv' foi reprovado, mas não há e-mail de origem para responder (sem entry_id e sem rastreamento). É o esperado numa pasta preparada à mão.
+2026-08-06 11:40:46.221 | INFO    |src.services.processamento_service:executar:150 - [RPA 1] E-mail de origem de 'DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_032026_V02.csv': 1 arquivo(s) recusado(s), operadora NÃO notificada.
+2026-08-06 11:40:46.222 | WARNING |src.services.notificacao_operadora:notificar_arquivos_recusados:74 - [RPA 1] 'DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02.csv' foi reprovado, mas não há e-mail de origem para responder (sem entry_id e sem rastreamento). É o esperado numa pasta preparada à mão.
+2026-08-06 11:40:46.222 | INFO    |src.services.processamento_service:executar:150 - [RPA 1] E-mail de origem de 'DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02.csv': 1 arquivo(s) recusado(s), operadora NÃO notificada.
+2026-08-06 11:40:46.222 | INFO    |src.services.processamento_service:executar:152 - Resumo — Sucesso: 0 | Reprovados: 2 | Não identificados: 0 | Erros: 0
+2026-08-06 11:40:46.222 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Arquivos salvos:          0
+2026-08-06 11:40:46.222 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Reprovados na validação:  2
+2026-08-06 11:40:46.222 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Não identificados:        0
+2026-08-06 11:40:46.222 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Com erro:                 0
+2026-08-06 11:40:46.222 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Reprovados (vão para a quarentena, não para a operadora):
+2026-08-06 11:40:46.222 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_032026_V02.csv (Algar)
+2026-08-06 11:40:46.222 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       Colunas 1 e 2 (EOT): há códigos de operadora (EOT) que não constam do Anexo 5 cadastrado.
+2026-08-06 11:40:46.223 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-06 11:40:46.223 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02.csv (Algar)
+2026-08-06 11:40:46.223 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       Colunas 1 e 2 (EOT): há códigos de operadora (EOT) que não constam do Anexo 5 cadastrado.
+2026-08-06 11:40:46.223 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-06 11:40:46.223 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Pasta: C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\arquivos\Operadoras
+2026-08-06 11:40:46.223 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] ────────────────────────────────────────────────────────────
+2026-08-06 11:40:46.223 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Esta é a última etapa da execução.
+2026-08-06 11:40:46.223 | INFO    |__main__:main:94 - Aplicação finalizada
+2026-08-06 11:40:46.224 | INFO    |__main__:main:110 - [Diagnóstico] Etapas desta execução em [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\logs\LAPTOP-IKOLPRTI\rpa1_captura\diagnosticos\2026-08-06_11-40-45.txt].
+2026-08-06 11:40:46.224 | INFO    |__main__:<module>:118 - [RPA 1] Diagnóstico das etapas em [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\logs\LAPTOP-IKOLPRTI\rpa1_captura\diagnosticos\2026-08-06_11-40-45.txt]
+2026-08-06 11:43:01.653 | INFO    |__main__:<module>:118 - [RPA 1] robô: rpa1_captura
+2026-08-06 11:43:01.653 | INFO    |__main__:<module>:118 - [RPA 1] modo: DEV  (de ENV)
+2026-08-06 11:43:01.653 | INFO    |__main__:<module>:118 - [RPA 1] log: nível INFO (de LOG_LEVEL), diagnose ligado
+2026-08-06 11:43:01.654 | INFO    |__main__:<module>:118 - [RPA 1] competência: 202603  (forçada por COMPETENCIA)
+2026-08-06 11:43:01.654 | INFO    |__main__:<module>:118 - [RPA 1] banco: SQLite [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF.db] (de CAMINHO_SQLITE)
+2026-08-06 11:43:01.654 | INFO    |__main__:<module>:118 - [RPA 1] EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: desligado | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado
+2026-08-06 11:43:01.654 | INFO    |__main__:<module>:118 - [RPA 1] parâmetros: referência forçada: 202603; apenas a etapa: processamento; DRY-RUN: todos os efeitos externos desligados
+2026-08-06 11:43:02.251 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-06 11:43:02.251 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF.db]
+2026-08-06 11:43:02.380 | INFO    |__main__:main:94 - Aplicação iniciada
+2026-08-06 11:43:02.380 | INFO    |src.main.process_handle:run:34 - [RPA 1] Captura PULADA. Os arquivos serão lidos de DIRETORIO_ENTRADA, e o remetente de cada um vem do rastreamento gravado pela captura anterior.
+2026-08-06 11:43:02.380 | INFO    |src.main.process_handle:run:34 - [RPA 1] Etapa 2/2 — identificação da operadora e salvamento (HU-02/HU-03)
+2026-08-06 11:43:02.381 | INFO    |src.controllers.processamento_controller:processar:155 - Iniciando fluxo de processamento
+2026-08-06 11:43:02.381 | INFO    |src.controllers.processamento_controller:processar:155 - Competência: 202603 | Ano: 2026
+2026-08-06 11:43:02.382 | INFO    |src.services.processamento_service:executar:140 - [RPA 1] 2 arquivo(s) em [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\arquivos\Entrada] (busca recursiva); 0 com remetente recuperado do rastreamento.
+2026-08-06 11:43:02.382 | WARNING |src.services.processamento_service:executar:140 - [RPA 1] Nenhum arquivo tem rastreamento: a identificação vai depender só da EOT credora dentro do arquivo, sem o fallback por domínio do remetente. É o esperado numa pasta preparada à mão; se veio de uma captura, confira RASTREAMENTO_ARQUIVO_PATH.
+2026-08-06 11:43:02.382 | INFO    |src.controllers.processamento_controller:processar:155 - Total de arquivos a processar: 2
+2026-08-06 11:43:02.391 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_anexo5_processado]
+2026-08-06 11:43:02.404 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_anexo5_processado] carregada | Linhas: 2656 | Colunas: 17
+2026-08-06 11:43:02.420 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_detraf_tarifas]
+2026-08-06 11:43:02.422 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_detraf_tarifas] carregada | Linhas: 110 | Colunas: 17
+2026-08-06 11:43:02.452 | INFO    |comum.dominio.validacao_colunas:validar_tudo_detalhado:252 - Validação de tarifas concluída | Total: 542 | Válidas: 450 | Inválidas: 92 | Resultado final: False
+2026-08-06 11:43:02.458 | INFO    |src.services.processamento_service:_validar:452 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': False}
+2026-08-06 11:43:02.459 | WARNING |src.services.processamento_service:_processar_arquivo:262 - Arquivo [DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_032026_V02.csv] rejeitado: regras de coluna não atendidas.
+  Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+2026-08-06 11:43:02.464 | INFO    |src.services.processamento_service:_reprovar:503 - [Layout] Motivo da recusa gravado em [DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_032026_V02_RECUSADO.md].
+2026-08-06 11:43:02.464 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - Inserindo 1 registro(s) em [tbl_rpa_log_detraf_despesa_arquivos].
+2026-08-06 11:43:02.472 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - 1 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_arquivos].
+2026-08-06 11:43:02.473 | WARNING |src.services.processamento_service:_processar_arquivo:264 - [RPA 1] 'DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_032026_V02.csv' REPROVADO na validação — quarentena em [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\arquivos\_QUARENTENA\202603\DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_032026_V02].
+2026-08-06 11:43:02.703 | INFO    |comum.dominio.validacao_colunas:validar_tudo_detalhado:252 - Validação de tarifas concluída | Total: 8712 | Válidas: 3248 | Inválidas: 5464 | Resultado final: False
+2026-08-06 11:43:02.732 | INFO    |src.services.processamento_service:_validar:452 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': False}
+2026-08-06 11:43:02.732 | WARNING |src.services.processamento_service:_processar_arquivo:262 - Arquivo [DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02.csv] rejeitado: regras de coluna não atendidas.
+  Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+2026-08-06 11:43:02.741 | INFO    |src.services.processamento_service:_reprovar:503 - [Layout] Motivo da recusa gravado em [DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02_RECUSADO.md].
+2026-08-06 11:43:02.742 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - Inserindo 1 registro(s) em [tbl_rpa_log_detraf_despesa_arquivos].
+2026-08-06 11:43:02.748 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - 1 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_arquivos].
+2026-08-06 11:43:02.748 | WARNING |src.services.processamento_service:_processar_arquivo:264 - [RPA 1] 'DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02.csv' REPROVADO na validação — quarentena em [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\arquivos\_QUARENTENA\202603\DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02].
+2026-08-06 11:43:02.749 | WARNING |src.services.notificacao_operadora:notificar_arquivos_recusados:74 - [RPA 1] 'DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_032026_V02.csv' foi reprovado, mas não há e-mail de origem para responder (sem entry_id e sem rastreamento). É o esperado numa pasta preparada à mão.
+2026-08-06 11:43:02.749 | INFO    |src.services.processamento_service:executar:151 - [RPA 1] E-mail de origem de 'DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_032026_V02.csv': 1 arquivo(s) recusado(s), operadora NÃO notificada.
+2026-08-06 11:43:02.750 | WARNING |src.services.notificacao_operadora:notificar_arquivos_recusados:74 - [RPA 1] 'DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02.csv' foi reprovado, mas não há e-mail de origem para responder (sem entry_id e sem rastreamento). É o esperado numa pasta preparada à mão.
+2026-08-06 11:43:02.750 | INFO    |src.services.processamento_service:executar:151 - [RPA 1] E-mail de origem de 'DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02.csv': 1 arquivo(s) recusado(s), operadora NÃO notificada.
+2026-08-06 11:43:02.750 | INFO    |src.services.processamento_service:executar:153 - Resumo — Sucesso: 0 | Reprovados: 2 | Não identificados: 0 | Erros: 0
+2026-08-06 11:43:02.750 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Arquivos salvos:          0
+2026-08-06 11:43:02.750 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Reprovados na validação:  2
+2026-08-06 11:43:02.750 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Não identificados:        0
+2026-08-06 11:43:02.750 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Com erro:                 0
+2026-08-06 11:43:02.750 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Reprovados (vão para a quarentena, não para a operadora):
+2026-08-06 11:43:02.750 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_032026_V02.csv (Algar)
+2026-08-06 11:43:02.750 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+2026-08-06 11:43:02.750 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-06 11:43:02.751 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02.csv (Algar)
+2026-08-06 11:43:02.751 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+2026-08-06 11:43:02.751 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-06 11:43:02.751 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Pasta: C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\arquivos\Operadoras
+2026-08-06 11:43:02.751 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] ────────────────────────────────────────────────────────────
+2026-08-06 11:43:02.751 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Esta é a última etapa da execução.
+2026-08-06 11:43:02.751 | INFO    |__main__:main:94 - Aplicação finalizada
+2026-08-06 11:43:02.752 | INFO    |__main__:main:110 - [Diagnóstico] Etapas desta execução em [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\logs\LAPTOP-IKOLPRTI\rpa1_captura\diagnosticos\2026-08-06_11-43-01.txt].
+2026-08-06 11:43:02.752 | INFO    |__main__:<module>:118 - [RPA 1] Diagnóstico das etapas em [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\logs\LAPTOP-IKOLPRTI\rpa1_captura\diagnosticos\2026-08-06_11-43-01.txt]

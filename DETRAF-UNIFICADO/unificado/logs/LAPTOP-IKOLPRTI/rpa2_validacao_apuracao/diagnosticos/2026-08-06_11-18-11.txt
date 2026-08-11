@@ -1,0 +1,63 @@
+======================================================================
+EXECUÇÃO
+======================================================================
+robô:       rpa2_validacao_apuracao
+referência: 202603
+início:     2026-08-06 11:18:11
+duração:    0.5s
+desfecho:   ERRO na etapa 1/1 (arranque)
+parâmetro:  parâmetros: referência forçada: 202603; DRY-RUN: todos os efeitos externos desligados
+
+======================================================================
+AMBIENTE
+======================================================================
+robô: rpa2_validacao_apuracao
+modo: DEV  (de ENV)
+log: nível INFO (de LOG_LEVEL), diagnose ligado
+competência: 202603  (forçada por COMPETENCIA)
+banco: SQLite [banco_de_dados/TABELAS_DETRAF_espelho.db] (de CAMINHO_SQLITE)
+EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: desligado | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado
+
+======================================================================
+ETAPA 1/1: arranque   [ERRO]   0.5s
+======================================================================
+erro: RuntimeError: [BANCO] O SQLite [banco_de_dados/TABELAS_DETRAF_espelho.db] não existe.
+  -> Gere-o com `python preparar_banco_dev.py` (dados dos projetos de origem) ou `python espelhar_banco.py` (cópia do banco real).
+  -> Se o caminho está errado, corrija CAMINHO_SQLITE no .env.
+traceback:
+  Traceback (most recent call last):
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\comum\config\diagnostico_execucao.py", line 114, in etapa
+      yield atual
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\rpa2_validacao_apuracao\main.py", line 92, in main
+      from src.main.process_handle import run
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\rpa2_validacao_apuracao\src\main\process_handle.py", line 25, in <module>
+      from src.controllers.batimento_detraf_controller import BatimentoDetrafController
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\rpa2_validacao_apuracao\src\controllers\batimento_detraf_controller.py", line 1, in <module>
+      from src.services.batimento_detraf import BatimentoDetrafService
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\rpa2_validacao_apuracao\src\services\batimento_detraf.py", line 15, in <module>
+      from src.services.criacao_arquivo_contestacao import CriacaoArquivoContestacao
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\rpa2_validacao_apuracao\src\services\criacao_arquivo_contestacao.py", line 22, in <module>
+      from comum.dados.repositorio_tabelas import bd_tabelas
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\comum\dados\repositorio_tabelas.py", line 1107, in <module>
+      bd_tabelas = RepositorioTabelas()
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\comum\dados\repositorio_tabelas.py", line 53, in __init__
+      self.cache = cache or RepositorioCache()
+                            ~~~~~~~~~~~~~~~~^^
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\comum\dados\repositorio_cache.py", line 77, in __init__
+      self.engine: Engine = self._obter_engine()
+                            ~~~~~~~~~~~~~~~~~~^^
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\comum\dados\repositorio_cache.py", line 109, in _obter_engine
+      raise RuntimeError(
+      ...<5 lines>...
+      )
+  RuntimeError: [BANCO] O SQLite [banco_de_dados/TABELAS_DETRAF_espelho.db] não existe.
+    -> Gere-o com `python preparar_banco_dev.py` (dados dos projetos de origem) ou `python espelhar_banco.py` (cópia do banco real).
+    -> Se o caminho está errado, corrija CAMINHO_SQLITE no .env.
+
+======================================================================
+LOG COMPLETO
+======================================================================
+C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\logs
+
+Este arquivo é o resumo por etapa. O log tem a sequência completa,
+linha a linha, de tudo o que a execução fez.

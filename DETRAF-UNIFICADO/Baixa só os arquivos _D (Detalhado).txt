@@ -1,0 +1,120 @@
+"""Baixa só os arquivos _D (Detalhado) do SFTP DETRAF do mes anterior.
+Script autonomo: nao importa nada do resto do RPA (sem src/, sem config/).
+Unica dependencia externa: paramiko (pip install paramiko).
+
+Credenciais via variavel de ambiente (nao ficam hardcoded no script):
+  CLICKHUB_SFTP_HOST
+  CLICKHUB_SFTP_USER
+  CLICKHUB_SFTP_PASSWORD
+"""
+import os
+import sys
+from datetime import datetime, timedelta
+
+import paramiko
+
+# ---------------------------------------------------------------------------
+# Configuracao (edite aqui se precisar mudar pasta remota/local ou porta)
+# ---------------------------------------------------------------------------
+SFTP_HOST = os.getenv('CLICKHUB_SFTP_HOST')
+SFTP_USER = os.getenv('CLICKHUB_SFTP_USER')
+SFTP_PASSWORD = os.getenv('CLICKHUB_SFTP_PASSWORD')
+SFTP_PORT = int(os.getenv('SFTP_PORT', 22))
+SFTP_TIMEOUT = 30
+
+FOLDER_MAPPING = {
+    '/interfaces/GERACAO_DETRAF_SMS_ITF': 'Vivo',
+    '/interfaces/GERACAO_DETRAF_VIVO': 'Vivo',
+    '/interfaces/GERACAO_DETRAF_TELEFONICA': 'TLF',
+    '/interfaces/MVNO/NEXTEL/DESMP': 'MVNO',
+    '/interfaces/GERACAO_DETRAF_TRP': 'Detraf TRP',
+}
+
+BASE_DOWNLOAD_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'downloads')
+
+
+def periodo_mes_anterior() -> str:
+    hoje = datetime.now()
+    primeiro_dia_mes_atual = hoje.replace(day=1)
+    mes_anterior = primeiro_dia_mes_atual - timedelta(days=1)
+    return mes_anterior.strftime('%Y%m')
+
+
+def is_arquivo_d(nome: str) -> bool:
+    return os.path.splitext(nome)[0].upper().endswith('_D')
+
+
+def main():
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+
+    if not SFTP_HOST or not SFTP_USER or not SFTP_PASSWORD:
+        print("Erro: defina CLICKHUB_SFTP_HOST, CLICKHUB_SFTP_USER e CLICKHUB_SFTP_PASSWORD no ambiente.")
+        sys.exit(1)
+
+    periodo = periodo_mes_anterior()
+    print(f"=== PERIODO: {periodo} (apenas arquivos _D) ===")
+
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+
+    print(f"Conectando ao SFTP: {SFTP_HOST}:{SFTP_PORT}")
+    try:
+        ssh.connect(hostname=SFTP_HOST, port=SFTP_PORT, username=SFTP_USER,
+                    password=SFTP_PASSWORD, timeout=SFTP_TIMEOUT)
+    except Exception as e:
+        print(f"Falha na conexao SFTP: {e}")
+        sys.exit(1)
+
+    sftp = ssh.open_sftp()
+    total_baixados = 0
+
+    try:
+        for remote_path, local_folder in FOLDER_MAPPING.items():
+            print(f"\n=== {remote_path.split('/')[-1]} ===")
+            try:
+                todos_arquivos = sftp.listdir(remote_path)
+            except Exception as e:
+                print(f"Erro ao listar {remote_path}: {e}")
+                continue
+
+            arquivos_d = [
+                f for f in todos_arquivos
+                if periodo in f and '_L_' not in f and is_arquivo_d(f)
+            ]
+            print(f"Arquivos _D encontrados: {len(arquivos_d)}")
+
+            if not arquivos_d:
+                continue
+
+            local_dir = os.path.join(BASE_DOWNLOAD_DIR, local_folder)
+            os.makedirs(local_dir, exist_ok=True)
+
+            for i, nome in enumerate(arquivos_d, 1):
+                remote_file = f"{remote_path}/{nome}"
+                local_file = os.path.join(local_dir, nome)
+                try:
+                    sftp.get(remote_file, local_file)
+                    total_baixados += 1
+                    print(f"  [{i}/{len(arquivos_d)}] OK: {nome}")
+                except Exception as e:
+                    print(f"  [{i}/{len(arquivos_d)}] ERRO: {nome} -> {e}")
+
+        print(f"\n=== TOTAL BAIXADO: {total_baixados} arquivo(s) ===")
+        print(f"Destino: {BASE_DOWNLOAD_DIR}")
+
+    finally:
+        sftp.close()
+        ssh.close()
+
+
+if __name__ == "__main__":
+    main()
+
+
+
+
+
+CLICKHUB_SFTP_HOST — BRTLVLTS1739FU
+CLICKHUB_SFTP_USER — ictprd
+CLICKHUB_SFTP_PASSWORD — vivo@2023

@@ -1,0 +1,3 @@
+﻿Conectado: 'Portal Triad: Vivo - Produção: '
+Filtro aberto.
+[FALHOU] abrir_dropdown_operadora_por_tab: timed out

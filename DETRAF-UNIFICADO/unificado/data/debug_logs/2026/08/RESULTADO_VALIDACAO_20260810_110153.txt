@@ -1,0 +1,26 @@
+RESULTADO DA VALIDAÇÃO
+================================================================================
+TOTAL DE ARQUIVOS: 6
+================================================================================
+
+DETRAF VÁLIDOS (0)
+--------------------------------------------------------------------------------
+  Nenhum arquivo
+
+DETRAF INVÁLIDOS (2)
+--------------------------------------------------------------------------------
+  • DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02.csv
+  • DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_032026_V02.csv
+
+EXPECTATIVA VÁLIDOS (4)
+--------------------------------------------------------------------------------
+  • DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D.csv
+  • DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D.csv
+  • DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D.csv
+  • DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D.csv
+
+EXPECTATIVA INVÁLIDOS (0)
+--------------------------------------------------------------------------------
+  Nenhum arquivo
+
+================================================================================

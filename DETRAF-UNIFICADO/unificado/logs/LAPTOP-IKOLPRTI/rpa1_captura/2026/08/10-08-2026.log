@@ -1,0 +1,4 @@
+2026-08-10 15:12:13.866 | INFO    |comum.config.diagnostico:verificar_banco:376 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-10 15:12:13.867 | INFO    |comum.config.diagnostico:verificar_banco:376 - Utilizando SQLite local [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db]
+2026-08-10 16:52:36.460 | INFO    |comum.config.diagnostico:verificar_banco:376 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-10 16:52:36.460 | INFO    |comum.config.diagnostico:verificar_banco:376 - Utilizando SQLite local [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db]

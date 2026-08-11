@@ -1,0 +1,200 @@
+======================================================================
+EXECUÇÃO
+======================================================================
+robô:       rpa2_validacao_apuracao
+referência: (mês corrente -1)
+início:     2026-08-10 10:50:20
+duração:    1.4s
+desfecho:   ERRO na etapa 2/2 (validacao)
+parâmetro:  parâmetros: apenas a etapa: validacao
+
+======================================================================
+AMBIENTE
+======================================================================
+robô: rpa2_validacao_apuracao
+modo: DEV  (de ENV)
+log: nível INFO (de LOG_LEVEL), diagnose ligado
+competência: 202607  (mês anterior ao corrente)
+banco: SQLite [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db] (de CAMINHO_SQLITE)
+AGI: ambiente [producao] host [10.238.6.120] (de AGI_AMBIENTE) | executável [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
+EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: desligado | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado
+
+======================================================================
+ETAPA 1/2: arranque   [ok]   0.7s
+======================================================================
+produziu:
+  módulos carregados, banco resolvido
+
+======================================================================
+ETAPA 2/2: validacao   [ERRO]   0.6s
+======================================================================
+entrada:
+  CAMINHO_OPERADORAS = C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\arquivos\Operadoras
+  CAMINHO_EXPECTATIVA_DETRAF = C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\arquivos\Expectativa
+erro: RuntimeError: Falha ao inserir o lote em [tbl_rpa_log_detraf_despesa_arquivos]. Motivo: Execution failed on sql 'INSERT INTO tbl_rpa_log_detraf_despesa_arquivos (tipo_registro, nome_arquivo, periodo, empresa, tipo_servico_operadora, tipo_servico_vivo, remuneracoes, minuto_desp, valor_bruto_desp, status, codigo_erro, created_at) VALUES (:tipo_registro, :nome_arquivo, :periodo, :empresa, :tipo_servico_operadora, :tipo_servico_vivo, :remuneracoes, :minuto_desp, :valor_bruto_desp, :status, :codigo_erro, :created_at)': (sqlite3.IntegrityError) NOT NULL constraint failed: tbl_rpa_log_detraf_despesa_arquivos.id
+[SQL: INSERT INTO tbl_rpa_log_detraf_despesa_arquivos (tipo_registro, nome_arquivo, periodo, empresa, tipo_servico_operadora, tipo_servico_vivo, remuneracoes, minuto_desp, valor_bruto_desp, status, codigo_erro, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: [('EXPECTATIVA', 'DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D.csv', '202607', None, None, None, None, 0.0, 0.0, 'Validado', None, '2026-08-10 10:50:21'), ('EXPECTATIVA', 'DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D.csv', '202607', None, None, None, None, 0.0, 0.0, 'Validado', None, '2026-08-10 10:50:21'), ('EXPECTATIVA', 'DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D.csv', '202607', None, None, None, None, 0.0, 0.0, 'Validado', None, '2026-08-10 10:50:21'), ('EXPECTATIVA', 'DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D.csv', '202607', None, None, None, None, 0.0, 0.0, 'Validado', None, '2026-08-10 10:50:21')]]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+traceback:
+  Traceback (most recent call last):
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1938, in _exec_single_context
+      self.dialect.do_executemany(
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+          cursor,
+          ^^^^^^^
+      ...<2 lines>...
+          context,
+          ^^^^^^^^
+      )
+      ^
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 949, in do_executemany
+      cursor.executemany(statement, parameters)
+      ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  sqlite3.IntegrityError: NOT NULL constraint failed: tbl_rpa_log_detraf_despesa_arquivos.id
+  
+  The above exception was the direct cause of the following exception:
+  
+  Traceback (most recent call last):
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\.venv\Lib\site-packages\pandas\io\sql.py", line 1679, in execute
+      return execute_function(sql, *args)
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1421, in execute
+      return meth(
+          self,
+          distilled_parameters,
+          execution_options or NO_OPTIONS,
+      )
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+      return connection._execute_clauseelement(
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+          self, distilled_params, execution_options
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      )
+      ^
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1643, in _execute_clauseelement
+      ret = self._execute_context(
+          dialect,
+      ...<8 lines>...
+          cache_hit=cache_hit,
+      )
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1848, in _execute_context
+      return self._exec_single_context(
+             ~~~~~~~~~~~~~~~~~~~~~~~~~^
+          dialect, context, statement, parameters
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      )
+      ^
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1988, in _exec_single_context
+      self._handle_dbapi_exception(
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+          e, str_statement, effective_parameters, cursor, context
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      )
+      ^
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2365, in _handle_dbapi_exception
+      raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1938, in _exec_single_context
+      self.dialect.do_executemany(
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+          cursor,
+          ^^^^^^^
+      ...<2 lines>...
+          context,
+          ^^^^^^^^
+      )
+      ^
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 949, in do_executemany
+      cursor.executemany(statement, parameters)
+      ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) NOT NULL constraint failed: tbl_rpa_log_detraf_despesa_arquivos.id
+  [SQL: INSERT INTO tbl_rpa_log_detraf_despesa_arquivos (tipo_registro, nome_arquivo, periodo, empresa, tipo_servico_operadora, tipo_servico_vivo, remuneracoes, minuto_desp, valor_bruto_desp, status, codigo_erro, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+  [parameters: [('EXPECTATIVA', 'DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D.csv', '202607', None, None, None, None, 0.0, 0.0, 'Validado', None, '2026-08-10 10:50:21'), ('EXPECTATIVA', 'DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D.csv', '202607', None, None, None, None, 0.0, 0.0, 'Validado', None, '2026-08-10 10:50:21'), ('EXPECTATIVA', 'DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D.csv', '202607', None, None, None, None, 0.0, 0.0, 'Validado', None, '2026-08-10 10:50:21'), ('EXPECTATIVA', 'DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D.csv', '202607', None, None, None, None, 0.0, 0.0, 'Validado', None, '2026-08-10 10:50:21')]]
+  (Background on this error at: https://sqlalche.me/e/20/gkpj)
+  
+  The above exception was the direct cause of the following exception:
+  
+  Traceback (most recent call last):
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\comum\dados\repositorio_cache.py", line 243, in inserir
+      df.to_sql(
+      ~~~~~~~~~^
+          name=nome_tabela,
+          ^^^^^^^^^^^^^^^^^
+      ...<3 lines>...
+          chunksize=_TAMANHO_BLOCO,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+      )
+      ^
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\.venv\Lib\site-packages\pandas\core\generic.py", line 3040, in to_sql
+      return sql.to_sql(
+             ~~~~~~~~~~^
+          self,
+          ^^^^^
+      ...<8 lines>...
+          method=method,
+          ^^^^^^^^^^^^^^
+      )
+      ^
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\.venv\Lib\site-packages\pandas\io\sql.py", line 841, in to_sql
+      return pandas_sql.to_sql(
+             ~~~~~~~~~~~~~~~~~^
+          frame,
+          ^^^^^^
+      ...<9 lines>...
+          **engine_kwargs,
+          ^^^^^^^^^^^^^^^^
+      )
+      ^
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\.venv\Lib\site-packages\pandas\io\sql.py", line 2037, in to_sql
+      total_inserted = sql_engine.insert_records(
+          table=table,
+      ...<7 lines>...
+          **engine_kwargs,
+      )
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\.venv\Lib\site-packages\pandas\io\sql.py", line 1571, in insert_records
+      return table.insert(chunksize=chunksize, method=method)
+             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\.venv\Lib\site-packages\pandas\io\sql.py", line 1122, in insert
+      num_inserted = exec_insert(conn, keys, chunk_iter)
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\.venv\Lib\site-packages\pandas\io\sql.py", line 1014, in _execute_insert
+      result = self.pd_sql.execute(self.table.insert(), data)
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\.venv\Lib\site-packages\pandas\io\sql.py", line 1681, in execute
+      raise DatabaseError(f"Execution failed on sql '{sql}': {exc}") from exc
+  pandas.errors.DatabaseError: Execution failed on sql 'INSERT INTO tbl_rpa_log_detraf_despesa_arquivos (tipo_registro, nome_arquivo, periodo, empresa, tipo_servico_operadora, tipo_servico_vivo, remuneracoes, minuto_desp, valor_bruto_desp, status, codigo_erro, created_at) VALUES (:tipo_registro, :nome_arquivo, :periodo, :empresa, :tipo_servico_operadora, :tipo_servico_vivo, :remuneracoes, :minuto_desp, :valor_bruto_desp, :status, :codigo_erro, :created_at)': (sqlite3.IntegrityError) NOT NULL constraint failed: tbl_rpa_log_detraf_despesa_arquivos.id
+  [SQL: INSERT INTO tbl_rpa_log_detraf_despesa_arquivos (tipo_registro, nome_arquivo, periodo, empresa, tipo_servico_operadora, tipo_servico_vivo, remuneracoes, minuto_desp, valor_bruto_desp, status, codigo_erro, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+  [parameters: [('EXPECTATIVA', 'DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D.csv', '202607', None, None, None, None, 0.0, 0.0, 'Validado', None, '2026-08-10 10:50:21'), ('EXPECTATIVA', 'DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D.csv', '202607', None, None, None, None, 0.0, 0.0, 'Validado', None, '2026-08-10 10:50:21'), ('EXPECTATIVA', 'DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D.csv', '202607', None, None, None, None, 0.0, 0.0, 'Validado', None, '2026-08-10 10:50:21'), ('EXPECTATIVA', 'DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D.csv', '202607', None, None, None, None, 0.0, 0.0, 'Validado', None, '2026-08-10 10:50:21')]]
+  (Background on this error at: https://sqlalche.me/e/20/gkpj)
+  
+  The above exception was the direct cause of the following exception:
+  
+  Traceback (most recent call last):
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\comum\config\diagnostico_execucao.py", line 114, in etapa
+      yield atual
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\rpa2_validacao_apuracao\src\main\process_handle.py", line 52, in run
+      resumo = ValidacaoDetrafsController().validar_detrafs()
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\rpa2_validacao_apuracao\src\controllers\validacao_detrafs_controller.py", line 15, in validar_detrafs
+      self.service.executar()
+      ~~~~~~~~~~~~~~~~~~~~~^^
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\comum\utils\decoradores.py", line 22, in wrapper
+      return func(*args, **kwargs)
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\rpa2_validacao_apuracao\src\services\validacao_detrafs.py", line 639, in executar
+      self.repositorio_tabelas.salvar_dados_tabela_despesa(df_consolidado_final)  # type: ignore
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\comum\dados\repositorio_tabelas.py", line 110, in salvar_dados_tabela_despesa
+      self.cache.salvar_dados_tabela_despesa(df_despesa)
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\comum\dados\repositorio_cache.py", line 262, in salvar_dados_tabela_despesa
+      self.inserir(tabelas.LOG_DESPESA_ARQUIVOS, df_consolidado)
+      ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\comum\dados\repositorio_cache.py", line 255, in inserir
+      raise RuntimeError(mensagem) from erro
+  RuntimeError: Falha ao inserir o lote em [tbl_rpa_log_detraf_despesa_arquivos]. Motivo: Execution failed on sql 'INSERT INTO tbl_rpa_log_detraf_despesa_arquivos (tipo_registro, nome_arquivo, periodo, empresa, tipo_servico_operadora, tipo_servico_vivo, remuneracoes, minuto_desp, valor_bruto_desp, status, codigo_erro, created_at) VALUES (:tipo_registro, :nome_arquivo, :periodo, :empresa, :tipo_servico_operadora, :tipo_servico_vivo, :remuneracoes, :minuto_desp, :valor_bruto_desp, :status, :codigo_erro, :created_at)': (sqlite3.IntegrityError) NOT NULL constraint failed: tbl_rpa_log_detraf_despesa_arquivos.id
+  [SQL: INSERT INTO tbl_rpa_log_detraf_despesa_arquivos (tipo_registro, nome_arquivo, periodo, empresa, tipo_servico_operadora, tipo_servico_vivo, remuneracoes, minuto_desp, valor_bruto_desp, status, codigo_erro, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+  [parameters: [('EXPECTATIVA', 'DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D.csv', '202607', None, None, None, None, 0.0, 0.0, 'Validado', None, '2026-08-10 10:50:21'), ('EXPECTATIVA', 'DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D.csv', '202607', None, None, None, None, 0.0, 0.0, 'Validado', None, '2026-08-10 10:50:21'), ('EXPECTATIVA', 'DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D.csv', '202607', None, None, None, None, 0.0, 0.0, 'Validado', None, '2026-08-10 10:50:21'), ('EXPECTATIVA', 'DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D.csv', '202607', None, None, None, None, 0.0, 0.0, 'Validado', None, '2026-08-10 10:50:21')]]
+  (Background on this error at: https://sqlalche.me/e/20/gkpj)
+
+======================================================================
+LOG COMPLETO
+======================================================================
+C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\logs
+
+Este arquivo é o resumo por etapa. O log tem a sequência completa,
+linha a linha, de tudo o que a execução fez.

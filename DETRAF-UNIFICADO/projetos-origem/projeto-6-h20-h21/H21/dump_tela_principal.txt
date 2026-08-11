@@ -1,0 +1,196 @@
+Control Identifiers:
+
+Dialog - 'Portal Triad: Vivo - Produção: '    (L234, T234, R1674, B987)
+['Portal Triad: Vivo - Produção: Dialog', 'Dialog', 'Portal Triad: Vivo - Produção: ']
+child_window(title="Portal Triad: Vivo - Produção: ", control_type="Window")
+   | 
+   | Pane - ''    (L242, T265, R1666, B979)
+   | ['Total:Pane', 'Pane']
+   |    | 
+   |    | Image - ''    (L251, T270, R1657, B312)
+   |    | ['Image', 'Image0', 'Image1']
+   |    | 
+   |    | Image - ''    (L252, T301, R1656, B941)
+   |    | ['Image2', 'Total:Image', 'Total:Image0', 'Total:Image1']
+   |    | 
+   |    | Edit - 'Número Processo : '    (L357, T343, R445, B362)
+   |    | ['Edit']
+   |    | child_window(title="Número Processo : ", control_type="Edit")
+   |    | 
+   |    | Image - ''    (L262, T372, R1224, B931)
+   |    | ['Image3', 'Total:Image2']
+   |    | 
+   |    | Image - ''    (L454, T342, R519, B364)
+   |    | ['Image4']
+   |    | 
+   |    | Button - 'Operacão Lote'    (L527, T342, R687, B364)
+   |    | ['Button', 'Operacão Lote', 'Operacão LoteButton', 'Button0', 'Button1']
+   |    | child_window(title="Operacão Lote", control_type="Button")
+   |    | 
+   |    | Static - 'Total:'    (L272, T406, R301, B423)
+   |    | ['Total:', 'Static', 'Total:Static', 'Static0', 'Static1']
+   |    | child_window(title="Total:", control_type="Text")
+   |    | 
+   |    | Static - 'Per. Ref. Inicial=202607,Per. Ref. Final=202607'    (L695, T340, R1404, B370)
+   |    | ['Per. Ref. Inicial=202607,Per. Ref. Final=202607Static', 'Per. Ref. Inicial=202607,Per. Ref. Final=202607', 'Static2']
+   |    | child_window(title="Per. Ref. Inicial=202607,Per. Ref. Final=202607", control_type="Text")
+   |    | 
+   |    | Static - '4'    (L301, T406, R317, B423)
+   |    | ['4', '4Static', 'Static3']
+   |    | child_window(title="4", control_type="Text")
+   |    | 
+   |    | Static - 'Pág.:'    (L317, T406, R344, B423)
+   |    | ['Pág.:', 'Static4', 'Pág.:Static']
+   |    | child_window(title="Pág.:", control_type="Text")
+   |    | 
+   |    | Static - '1'    (L344, T406, R360, B423)
+   |    | ['1Static', 'Static5', '1', '1Static0', '1Static1', '10', '11']
+   |    | child_window(title="1", control_type="Text")
+   |    | 
+   |    | Static - '/'    (L360, T406, R368, B423)
+   |    | ['Static6', '/', '/Static']
+   |    | child_window(title="/", control_type="Text")
+   |    | 
+   |    | Static - '1'    (L368, T406, R384, B423)
+   |    | ['1Static2', 'Static7', '12']
+   |    | child_window(title="1", control_type="Text")
+   |    | 
+   |    | Image - ''    (L272, T430, R1311, B893)
+   |    | ['Image5', '1Image', 'Total:Image3', '1Image0', '1Image1']
+   |    | 
+   |    | Button - '1'    (L764, T404, R779, B425)
+   |    | ['1Button', 'Button2', '13']
+   |    | child_window(title="1", control_type="Button")
+   |    | 
+   |    | Image - ''    (L1226, T372, R1232, B931)
+   |    | ['Image6', 'Reg./Pág.:Image', 'Reg./Pág.:Image0', 'Reg./Pág.:Image1']
+   |    | 
+   |    | Button - 'Filtro'    (L1412, T342, R1525, B367)
+   |    | ['Button3', 'FiltroButton', 'Filtro']
+   |    | child_window(title="Filtro", control_type="Button")
+   |    | 
+   |    | Image - ''    (L1234, T372, R1646, B931)
+   |    | ['Image7', 'Processo Selecionado: 0Image', 'Processo Selecionado: 0Image0', 'Processo Selecionado: 0Image1']
+   |    | 
+   |    | Static - 'Reg./Pág.:'    (L1077, T406, R1126, B423)
+   |    | ['Reg./Pág.:Static', 'Reg./Pág.:', 'Static8']
+   |    | child_window(title="Reg./Pág.:", control_type="Text")
+   |    | 
+   |    | Image - ''    (L1134, T403, R1214, B425)
+   |    | ['Image8', 'Reg./Pág.:Image2']
+   |    | 
+   |    | Button - 'Exportar'    (L1533, T339, R1646, B371)
+   |    | ['ExportarButton', 'Button4', 'Exportar']
+   |    | child_window(title="Exportar", control_type="Button")
+   |    | 
+   |    | Static - 'Processo Selecionado: 0'    (L1244, T401, R1696, B418)
+   |    | ['Processo Selecionado: 0', 'Static9', 'Processo Selecionado: 0Static']
+   |    | child_window(title="Processo Selecionado: 0", control_type="Text")
+   |    | 
+   |    | Image - ''    (L1244, T424, R1665, B893)
+   |    | ['Image9', 'Processo Selecionado: 0Image2']
+   |    | 
+   |    | Image - ''    (L306, T906, R426, B928)
+   |    | ['Image10', '4Image']
+   |    | 
+   |    | Image - ''    (L434, T906, R554, B928)
+   |    | ['Image11', '1Image2']
+   |    | 
+   |    | Static - 'Usuário: '    (L259, T950, R305, B968)
+   |    | ['Usuário: Static', 'Static10', 'Usuário: ']
+   |    | child_window(title="Usuário: ", control_type="Text")
+   |    | 
+   |    | Image - ''    (L562, T906, R682, B928)
+   |    | ['Image12', '1Image3']
+   |    | 
+   |    | Static - 'TBR00841'    (L313, T950, R423, B968)
+   |    | ['TBR00841', 'Static11', 'TBR00841Static', 'TBR008410', 'TBR008411', 'TBR00841Static0', 'TBR00841Static1']
+   |    | child_window(title="TBR00841", control_type="Text")
+   |    | 
+   |    | Image - ''    (L690, T906, R810, B928)
+   |    | ['Image13', 'Per. Ref. Inicial=202607,Per. Ref. Final=202607Image', 'Per. Ref. Inicial=202607,Per. Ref. Final=202607Image0', 'Per. Ref. Inicial=202607,Per. Ref. Final=202607Image1']
+   |    | 
+   |    | Static - 'Matrícula: '    (L431, T950, R483, B968)
+   |    | ['Matrícula: ', 'Static12', 'Matrícula: Static']
+   |    | child_window(title="Matrícula: ", control_type="Text")
+   |    | 
+   |    | Static - 'TBR00841'    (L491, T950, R601, B968)
+   |    | ['TBR008412', 'Static13', 'TBR00841Static2']
+   |    | child_window(title="TBR00841", control_type="Text")
+   |    | 
+   |    | Image - ''    (L818, T906, R938, B928)
+   |    | ['Image14', 'Per. Ref. Inicial=202607,Per. Ref. Final=202607Image2']
+   |    | 
+   |    | Static - 'Host: '    (L609, T950, R641, B968)
+   |    | ['Host: Static', 'Static14', 'Host: ']
+   |    | child_window(title="Host: ", control_type="Text")
+   |    | 
+   |    | Static - '10.125.71.242'    (L649, T950, R759, B968)
+   |    | ['10.125.71.242', '10.125.71.242Static', 'Static15']
+   |    | child_window(title="10.125.71.242", control_type="Text")
+   |    | 
+   |    | Image - ''    (L979, T911, R996, B923)
+   |    | ['Image15', 'Per. Ref. Inicial=202607,Per. Ref. Final=202607Image3']
+   |    | 
+   |    | Static - 'Alterados'    (L1004, T908, R1048, B925)
+   |    | ['Alterados', 'AlteradosStatic', 'Static16']
+   |    | child_window(title="Alterados", control_type="Text")
+   |    | 
+   |    | Static - 'Último Acesso: '    (L767, T950, R841, B968)
+   |    | ['Último Acesso: Static', 'Último Acesso: ', 'Static17']
+   |    | child_window(title="Último Acesso: ", control_type="Text")
+   |    | 
+   |    | Image - ''    (L1056, T911, R1073, B923)
+   |    | ['Image16', 'AlteradosImage']
+   |    | 
+   |    | Static - 'Novos'    (L1081, T908, R1113, B925)
+   |    | ['Novos', 'Static18', 'NovosStatic']
+   |    | child_window(title="Novos", control_type="Text")
+   |    | 
+   |    | Static - '05/08/2026 17:33:31'    (L849, T950, R959, B968)
+   |    | ['05/08/2026 17:33:31', 'Static19', '05/08/2026 17:33:31Static']
+   |    | child_window(title="05/08/2026 17:33:31", control_type="Text")
+   |    | 
+   |    | Image - ''    (L1121, T911, R1138, B923)
+   |    | ['Image17', 'NovosImage']
+   |    | 
+   |    | Static - 'Apagados'    (L1146, T908, R1192, B925)
+   |    | ['ApagadosStatic', 'Apagados', 'Static20']
+   |    | child_window(title="Apagados", control_type="Text")
+   |    | 
+   |    | Image - ''    (L1235, T896, R1645, B930)
+   |    | ['Image18', 'ApagadosImage']
+   |    | 
+   |    | Static - 'Versão: '    (L967, T950, R1009, B968)
+   |    | ['Versão: Static', 'Versão: ', 'Static21']
+   |    | child_window(title="Versão: ", control_type="Text")
+   |    | 
+   |    | Static - '4.3.10'    (L1017, T950, R1127, B968)
+   |    | ['4.3.10Static', 'Static22', '4.3.10']
+   |    | child_window(title="4.3.10", control_type="Text")
+   |    | 
+   |    | Button - ''    (L1609, T948, R1649, B971)
+   |    | ['Button5', 'ApagadosButton', '4.3.10Button']
+   | 
+   | TitleBar - ''    (L258, T237, R1666, B265)
+   | ['TitleBar']
+   |    | 
+   |    | Menu - 'Sistema'    (L242, T242, R264, B264)
+   |    | ['Menu', 'SistemaMenu', 'Sistema', 'Sistema0', 'Sistema1']
+   |    | child_window(title="Sistema", auto_id="MenuBar", control_type="MenuBar")
+   |    |    | 
+   |    |    | MenuItem - 'Sistema'    (L242, T242, R264, B264)
+   |    |    | ['MenuItem', 'SistemaMenuItem', 'Sistema2']
+   |    |    | child_window(title="Sistema", control_type="MenuItem")
+   |    | 
+   |    | Button - 'Minimizar'    (L1527, T235, R1574, B265)
+   |    | ['MinimizarButton', 'Button6', 'Minimizar']
+   |    | child_window(title="Minimizar", control_type="Button")
+   |    | 
+   |    | Button - 'Maximizar'    (L1574, T235, R1620, B265)
+   |    | ['Maximizar', 'Button7', 'MaximizarButton']
+   |    | child_window(title="Maximizar", control_type="Button")
+   |    | 
+   |    | Button - 'Fechar'    (L1620, T235, R1667, B265)
+   |    | ['Button8', 'FecharButton', 'Fechar']
+   |    | child_window(title="Fechar", control_type="Button")

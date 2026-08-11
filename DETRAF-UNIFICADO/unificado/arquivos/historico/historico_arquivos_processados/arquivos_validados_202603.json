@@ -1,0 +1,44 @@
+{
+    "C:\\Users\\btime\\Desktop\\Projetos\\detraf unificado\\DETRAF-UNIFICADO\\unificado\\arquivos\\Expectativa\\TLF\\DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D.csv": {
+        "status": "Válido",
+        "data_processamento": "2026-08-10 16:51:02",
+        "tamanho_bytes": 54551,
+        "modificado_em": 1777290100,
+        "numero_de_linhas": 251
+    },
+    "C:\\Users\\btime\\Desktop\\Projetos\\detraf unificado\\DETRAF-UNIFICADO\\unificado\\arquivos\\Expectativa\\TLF\\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D.csv": {
+        "status": "Válido",
+        "data_processamento": "2026-08-10 16:51:02",
+        "tamanho_bytes": 1802554,
+        "modificado_em": 1777290100,
+        "numero_de_linhas": 8277
+    },
+    "C:\\Users\\btime\\Desktop\\Projetos\\detraf unificado\\DETRAF-UNIFICADO\\unificado\\arquivos\\Expectativa\\Vivo\\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D.csv": {
+        "status": "Válido",
+        "data_processamento": "2026-08-10 16:51:02",
+        "tamanho_bytes": 77620,
+        "modificado_em": 1777290100,
+        "numero_de_linhas": 357
+    },
+    "C:\\Users\\btime\\Desktop\\Projetos\\detraf unificado\\DETRAF-UNIFICADO\\unificado\\arquivos\\Expectativa\\Vivo\\DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D.csv": {
+        "status": "Válido",
+        "data_processamento": "2026-08-10 16:51:02",
+        "tamanho_bytes": 11632,
+        "modificado_em": 1777290100,
+        "numero_de_linhas": 54
+    },
+    "C:\\Users\\btime\\Desktop\\Projetos\\detraf unificado\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\ALGAR\\2026\\202603\\Detrafs Recebidos\\DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02.csv": {
+        "status": "Inválido",
+        "data_processamento": "2026-08-10 16:51:02",
+        "tamanho_bytes": 691364,
+        "modificado_em": 1777290100,
+        "numero_de_linhas": 8714
+    },
+    "C:\\Users\\btime\\Desktop\\Projetos\\detraf unificado\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\ALGAR\\2026\\202603\\Detrafs Recebidos\\DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_032026_V02.csv": {
+        "status": "Inválido",
+        "data_processamento": "2026-08-10 16:51:02",
+        "tamanho_bytes": 49613,
+        "modificado_em": 1779819564,
+        "numero_de_linhas": 543
+    }
+}

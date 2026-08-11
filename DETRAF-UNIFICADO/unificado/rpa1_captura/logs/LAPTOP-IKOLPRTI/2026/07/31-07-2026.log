@@ -1,0 +1,2 @@
+2026-07-31 10:49:33.140 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-07-31 10:49:33.141 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [banco_de_dados\TABELAS_DETRAF.db]

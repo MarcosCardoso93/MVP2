@@ -1,0 +1,143 @@
+2026-08-06 11:17:26.545 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-06 11:17:26.545 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [banco_de_dados/TABELAS_DETRAF_espelho.db]
+2026-08-06 11:18:11.385 | INFO    |__main__:<module>:120 - [RPA 2] robô: rpa2_validacao_apuracao
+2026-08-06 11:18:11.385 | INFO    |__main__:<module>:120 - [RPA 2] modo: DEV  (de ENV)
+2026-08-06 11:18:11.385 | INFO    |__main__:<module>:120 - [RPA 2] log: nível INFO (de LOG_LEVEL), diagnose ligado
+2026-08-06 11:18:11.385 | INFO    |__main__:<module>:120 - [RPA 2] competência: 202603  (forçada por COMPETENCIA)
+2026-08-06 11:18:11.385 | INFO    |__main__:<module>:120 - [RPA 2] banco: SQLite [banco_de_dados/TABELAS_DETRAF_espelho.db] (de CAMINHO_SQLITE)
+2026-08-06 11:18:11.385 | INFO    |__main__:<module>:120 - [RPA 2] EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: desligado | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado
+2026-08-06 11:18:11.386 | INFO    |__main__:<module>:120 - [RPA 2] parâmetros: referência forçada: 202603; DRY-RUN: todos os efeitos externos desligados
+2026-08-06 11:18:11.899 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-06 11:18:11.900 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [banco_de_dados/TABELAS_DETRAF_espelho.db]
+2026-08-06 11:18:11.903 | ERROR   |__main__:<module>:120 - [RPA 2] Execução interrompida por erro não tratado — ERRO na etapa 1/1 (arranque)
+Traceback (most recent call last):
+
+  File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\rpa2_validacao_apuracao\main.py", line 120, in <module>
+    raise SystemExit(main())
+                     └ <function main at 0x000001CFEAB07530>
+
+> File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\rpa2_validacao_apuracao\main.py", line 92, in main
+    from src.main.process_handle import run
+
+  File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\rpa2_validacao_apuracao\src\main\process_handle.py", line 25, in <module>
+    from src.controllers.batimento_detraf_controller import BatimentoDetrafController
+
+  File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\rpa2_validacao_apuracao\src\controllers\batimento_detraf_controller.py", line 1, in <module>
+    from src.services.batimento_detraf import BatimentoDetrafService
+
+  File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\rpa2_validacao_apuracao\src\services\batimento_detraf.py", line 15, in <module>
+    from src.services.criacao_arquivo_contestacao import CriacaoArquivoContestacao
+
+  File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\rpa2_validacao_apuracao\src\services\criacao_arquivo_contestacao.py", line 22, in <module>
+    from comum.dados.repositorio_tabelas import bd_tabelas
+
+  File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\comum\dados\repositorio_tabelas.py", line 1107, in <module>
+    bd_tabelas = RepositorioTabelas()
+                 └ <class 'comum.dados.repositorio_tabelas.RepositorioTabelas'>
+
+  File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\comum\dados\repositorio_tabelas.py", line 53, in __init__
+    self.cache = cache or RepositorioCache()
+    │            │        └ <class 'comum.dados.repositorio_cache.RepositorioCache'>
+    │            └ None
+    └ <comum.dados.repositorio_tabelas.RepositorioTabelas object at 0x000001CF86FE5E80>
+
+  File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\comum\dados\repositorio_cache.py", line 77, in __init__
+    self.engine: Engine = self._obter_engine()
+    │                     │    └ <classmethod(<function RepositorioCache._obter_engine at 0x000001CF8708E610>)>
+    │                     └ <comum.dados.repositorio_cache.RepositorioCache object at 0x000001CF86FE5FD0>
+    └ <comum.dados.repositorio_cache.RepositorioCache object at 0x000001CF86FE5FD0>
+
+  File "C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\comum\dados\repositorio_cache.py", line 109, in _obter_engine
+    raise RuntimeError(
+
+RuntimeError: [BANCO] O SQLite [banco_de_dados/TABELAS_DETRAF_espelho.db] não existe.
+  -> Gere-o com `python preparar_banco_dev.py` (dados dos projetos de origem) ou `python espelhar_banco.py` (cópia do banco real).
+  -> Se o caminho está errado, corrija CAMINHO_SQLITE no .env.
+2026-08-06 11:18:11.905 | INFO    |__main__:main:112 - [Diagnóstico] Etapas desta execução em [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\logs\LAPTOP-IKOLPRTI\rpa2_validacao_apuracao\diagnosticos\2026-08-06_11-18-11.txt].
+2026-08-06 11:18:11.905 | INFO    |__main__:<module>:120 - [RPA 2] Diagnóstico das etapas em [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\logs\LAPTOP-IKOLPRTI\rpa2_validacao_apuracao\diagnosticos\2026-08-06_11-18-11.txt]
+2026-08-06 11:19:17.958 | INFO    |__main__:<module>:120 - [RPA 2] robô: rpa2_validacao_apuracao
+2026-08-06 11:19:17.959 | INFO    |__main__:<module>:120 - [RPA 2] modo: DEV  (de ENV)
+2026-08-06 11:19:17.959 | INFO    |__main__:<module>:120 - [RPA 2] log: nível INFO (de LOG_LEVEL), diagnose ligado
+2026-08-06 11:19:17.959 | INFO    |__main__:<module>:120 - [RPA 2] competência: 202603  (forçada por COMPETENCIA)
+2026-08-06 11:19:17.959 | INFO    |__main__:<module>:120 - [RPA 2] banco: SQLite [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF.db] (de CAMINHO_SQLITE)
+2026-08-06 11:19:17.959 | INFO    |__main__:<module>:120 - [RPA 2] EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: desligado | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado
+2026-08-06 11:19:17.959 | INFO    |__main__:<module>:120 - [RPA 2] parâmetros: referência forçada: 202603; DRY-RUN: todos os efeitos externos desligados
+2026-08-06 11:19:18.601 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-06 11:19:18.602 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF.db]
+2026-08-06 11:19:18.626 | INFO    |__main__:main:96 - [STEP] Iniciando: run
+2026-08-06 11:19:18.626 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Etapa 1/2 - validação dos arquivos de Detraf
+2026-08-06 11:19:18.627 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_anexo5_processado]
+2026-08-06 11:19:18.640 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_anexo5_processado] carregada | Linhas: 2656 | Colunas: 17
+2026-08-06 11:19:18.640 | INFO    |src.controllers.validacao_detrafs_controller:validar_detrafs:15 - [STEP] Iniciando: ValidacaoDetrafsService.executar
+2026-08-06 11:19:18.640 | INFO    |comum.utils.decoradores:wrapper:22 - Executando a validação dos detrafs...
+2026-08-06 11:19:18.641 | INFO    |src.services.validacao_detrafs:executar:563 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_detrafs
+2026-08-06 11:19:18.641 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os detrafs para validação...
+2026-08-06 11:19:18.641 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando busca de arquivos para o período 202603 no diretório: 'C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\arquivos\Operadoras'
+2026-08-06 11:19:18.641 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 0. Total geral de arquivos encontrados: 0
+2026-08-06 11:19:18.641 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:137 - Filtro de Histórico concluído para o período 202603.
+2026-08-06 11:19:18.641 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:137 - Arquivos originais recebidos: 0
+2026-08-06 11:19:18.641 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:137 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-06 11:19:18.642 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:137 - Novos arquivos retornados para execução: 0
+2026-08-06 11:19:18.642 | INFO    |src.services.validacao_detrafs:executar:563 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_detrafs | Tempo gasto: 0.0s
+2026-08-06 11:19:18.642 | INFO    |src.services.validacao_detrafs:executar:564 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_expectativa
+2026-08-06 11:19:18.642 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os arquivos de expectativa para validação...
+2026-08-06 11:19:18.642 | ERROR   |src.services.validacao_detrafs:_preparar_arquivos_expectativa:236 - [Q21] Sem expectativa Vivo em [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\arquivos\Expectativa\Vivo]: não existe. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
+2026-08-06 11:19:18.642 | ERROR   |src.services.validacao_detrafs:_preparar_arquivos_expectativa:236 - [Q21] Sem expectativa Vivo em [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\arquivos\Expectativa\TLF]: não existe. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
+2026-08-06 11:19:18.642 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento de expectativa concluído. Total geral de arquivos válidos: 0
+2026-08-06 11:19:18.642 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:247 - Filtro de Histórico concluído para o período 202603.
+2026-08-06 11:19:18.642 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:247 - Arquivos originais recebidos: 0
+2026-08-06 11:19:18.642 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:247 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-06 11:19:18.642 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:247 - Novos arquivos retornados para execução: 0
+2026-08-06 11:19:18.642 | INFO    |src.services.validacao_detrafs:executar:564 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_expectativa | Tempo gasto: 0.0s
+2026-08-06 11:19:18.643 | WARNING |comum.utils.decoradores:wrapper:22 - Nenhum arquivo de detraf encontrado para validação. Verifique os logs anteriores para detalhes.
+2026-08-06 11:19:18.643 | WARNING |comum.utils.decoradores:wrapper:22 - Nenhum arquivo de expectativa encontrado para validação. Verifique os logs anteriores para detalhes.
+2026-08-06 11:19:18.644 | INFO    |src.services.validacao_detrafs:executar:612 - Iniciando transformação de lote tipo [DETRAF_SUCESSO] com 0 arquivo(s).
+2026-08-06 11:19:18.645 | INFO    |src.services.validacao_detrafs:executar:616 - Iniciando transformação de lote tipo [DETRAF_ERRO] com 0 arquivo(s).
+2026-08-06 11:19:18.645 | INFO    |src.services.validacao_detrafs:executar:620 - Iniciando transformação de lote tipo [EXPECTATIVA_SUCESSO] com 0 arquivo(s).
+2026-08-06 11:19:18.645 | INFO    |src.services.validacao_detrafs:executar:624 - Iniciando transformação de lote tipo [EXPECTATIVA_ERRO] com 0 arquivo(s).
+2026-08-06 11:19:18.646 | INFO    |src.services.validacao_detrafs:_salvar_historico_arquivos_processados:444 - Histórico atualizado com sucesso. Lote finalizado com 0 arquivo(s) salvo(s) como 'Válido'.
+2026-08-06 11:19:18.646 | INFO    |src.services.validacao_detrafs:_salvar_historico_arquivos_processados:447 - Histórico atualizado com sucesso. Lote finalizado com 0 arquivo(s) salvo(s) como 'Inválido'.
+2026-08-06 11:19:18.646 | INFO    |src.controllers.validacao_detrafs_controller:validar_detrafs:15 - [STEP] Finalizando: ValidacaoDetrafsService.executar | Tempo gasto: 0.01s
+2026-08-06 11:19:18.646 | INFO    |src.main.process_handle:run:54 - [RPA 2 — etapa 1/2: validação] Detraf válidos:           0
+2026-08-06 11:19:18.647 | INFO    |src.main.process_handle:run:54 - [RPA 2 — etapa 1/2: validação] Detraf inválidos:         0
+2026-08-06 11:19:18.647 | INFO    |src.main.process_handle:run:54 - [RPA 2 — etapa 1/2: validação] Expectativa válidos:      0
+2026-08-06 11:19:18.647 | INFO    |src.main.process_handle:run:54 - [RPA 2 — etapa 1/2: validação] Expectativa inválidos:    0
+2026-08-06 11:19:18.647 | INFO    |src.main.process_handle:run:54 - [RPA 2 — etapa 1/2: validação] Operadoras sem Detraf no mês (1):
+2026-08-06 11:19:18.647 | INFO    |src.main.process_handle:run:54 - [RPA 2 — etapa 1/2: validação]   MEGATELECOM
+2026-08-06 11:19:18.647 | INFO    |src.main.process_handle:run:54 - [RPA 2 — etapa 1/2: validação] Pasta: C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\arquivos\Operadoras
+2026-08-06 11:19:18.647 | INFO    |src.main.process_handle:run:54 - [RPA 2 — etapa 1/2: validação] ────────────────────────────────────────────────────────────
+2026-08-06 11:19:18.647 | INFO    |src.main.process_handle:run:54 - [RPA 2 — etapa 1/2: validação] PRÓXIMA ETAPA: batimento Detraf × expectativa, que LÊ o que a validação acabou de registrar
+2026-08-06 11:19:18.647 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Etapa 2/2 - batimento Detraf x expectativa
+2026-08-06 11:19:18.648 | INFO    |src.controllers.batimento_detraf_controller:batimento_detraf:10 - [STEP] Iniciando: BatimentoDetrafService.executar
+2026-08-06 11:19:18.648 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando processo de batimento dos arquivos Detraf...
+2026-08-06 11:19:18.648 | INFO    |src.services.batimento_detraf:executar:327 - Preparando os detrafs para validação...
+2026-08-06 11:19:18.648 | INFO    |src.services.batimento_detraf:executar:327 - Iniciando busca de arquivos para o período 202603 no diretório: 'C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\arquivos\Operadoras'
+2026-08-06 11:19:18.648 | INFO    |src.services.batimento_detraf:executar:327 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 0. Total geral de arquivos encontrados: 0
+2026-08-06 11:19:18.648 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:127 - Filtro de Histórico concluído para o período 202603.
+2026-08-06 11:19:18.648 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:127 - Arquivos originais recebidos: 0
+2026-08-06 11:19:18.648 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:127 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-06 11:19:18.648 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:127 - Novos arquivos retornados para execução: 0
+2026-08-06 11:19:18.649 | INFO    |src.services.batimento_detraf:executar:328 - Preparando os arquivos de expectativa para validação...
+2026-08-06 11:19:18.649 | ERROR   |src.services.batimento_detraf:_preparar_arquivos_expectativa:311 - [Q21] Sem expectativa Vivo em [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\arquivos\Expectativa\Vivo]: não existe. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
+2026-08-06 11:19:18.649 | ERROR   |src.services.batimento_detraf:_preparar_arquivos_expectativa:311 - [Q21] Sem expectativa Vivo em [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\arquivos\Expectativa\TLF]: não existe. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
+2026-08-06 11:19:18.649 | INFO    |src.services.batimento_detraf:executar:328 - Mapeamento de expectativa concluído. Total geral de arquivos válidos: 0
+2026-08-06 11:19:18.649 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:322 - Filtro de Histórico concluído para o período 202603.
+2026-08-06 11:19:18.649 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:322 - Arquivos originais recebidos: 0
+2026-08-06 11:19:18.649 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:322 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-06 11:19:18.649 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:322 - Novos arquivos retornados para execução: 0
+2026-08-06 11:19:18.649 | WARNING |comum.utils.decoradores:wrapper:22 - Nenhum arquivo de detraf encontrado para o batimento. Verifique os logs anteriores para detalhes.
+2026-08-06 11:19:18.649 | WARNING |comum.utils.decoradores:wrapper:22 - Nenhum arquivo de expectativa encontrado para o batimento. Verifique os logs anteriores para detalhes.
+2026-08-06 11:19:18.649 | INFO    |src.services.batimento_detraf:executar:342 - Iniciando mapeamento de operadoras para 0 arquivo(s).
+2026-08-06 11:19:18.649 | INFO    |src.services.batimento_detraf:executar:346 - Iniciando a apuração da contestação.
+2026-08-06 11:19:18.649 | INFO    |src.controllers.batimento_detraf_controller:batimento_detraf:10 - [STEP] Finalizando: BatimentoDetrafService.executar | Tempo gasto: 0.0s
+2026-08-06 11:19:18.650 | INFO    |src.main.process_handle:run:85 - [RPA 2 — etapa 2/2: batimento] Operadoras apuradas:      0
+2026-08-06 11:19:18.650 | INFO    |src.main.process_handle:run:85 - [RPA 2 — etapa 2/2: batimento] O resultado é a TABELA `tbl_rpa_log_detraf_despesa_contestacao`,
+2026-08-06 11:19:18.650 | INFO    |src.main.process_handle:run:85 - [RPA 2 — etapa 2/2: batimento] não um arquivo — a Base de Contestação virou tabela em 2026-08-04.
+2026-08-06 11:19:18.650 | INFO    |src.main.process_handle:run:85 - [RPA 2 — etapa 2/2: batimento] Próximo passo é humano: o analista sinaliza no WebFat o que
+2026-08-06 11:19:18.650 | INFO    |src.main.process_handle:run:85 - [RPA 2 — etapa 2/2: batimento] contestar e se haverá retenção. Só então o RPA 3 tem o que fazer.
+2026-08-06 11:19:18.650 | INFO    |src.main.process_handle:run:85 - [RPA 2 — etapa 2/2: batimento] ────────────────────────────────────────────────────────────
+2026-08-06 11:19:18.650 | INFO    |src.main.process_handle:run:85 - [RPA 2 — etapa 2/2: batimento] Esta é a última etapa da execução.
+2026-08-06 11:19:18.650 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Concluído. Aguardando a decisão do analista no WebFat para o RPA 3 prosseguir.
+2026-08-06 11:19:18.650 | INFO    |__main__:main:96 - [STEP] Finalizando: run | Tempo gasto: 0.02s
+2026-08-06 11:19:18.651 | INFO    |__main__:main:112 - [Diagnóstico] Etapas desta execução em [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\logs\LAPTOP-IKOLPRTI\rpa2_validacao_apuracao\diagnosticos\2026-08-06_11-19-17.txt].
+2026-08-06 11:19:18.651 | INFO    |__main__:<module>:120 - [RPA 2] Diagnóstico das etapas em [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\logs\LAPTOP-IKOLPRTI\rpa2_validacao_apuracao\diagnosticos\2026-08-06_11-19-17.txt]
