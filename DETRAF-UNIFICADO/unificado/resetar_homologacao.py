@@ -46,7 +46,7 @@ if str(RAIZ) not in sys.path:
 _ARTEFATOS = (
     "_EXT",
     "_INT",
-    "_ENV",
+    "_EXP",
     "_BK",
     "_ERRO",
     "_RECUSADO",

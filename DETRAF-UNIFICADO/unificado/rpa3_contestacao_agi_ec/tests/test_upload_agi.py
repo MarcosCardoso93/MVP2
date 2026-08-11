@@ -136,10 +136,10 @@ class TestListaDeContestacao:
         assert uc.listar_arquivos_contestacao(["CLARO"], "202507", raiz_operadoras) == []
 
     def test_a_carta_e_o_env_nao_entram(self, raiz_operadoras):
-        """A carta e o `_ENV` da HU-14 ficam em `Contestações`, e não são para o AGI."""
+        """A carta e o `_EXP` da HU-14 ficam em `Contestações`, e não são para o AGI."""
         pasta = ep.caminho_contestacoes("CLARO", "202507", raiz_operadoras, criar=True)
         (pasta / "CT - 363.docx").write_text("x", encoding="utf-8")
-        (pasta / "Base Contestação_CLARO_202507_ENV.xlsx").write_text("x", encoding="utf-8")
+        (pasta / "Base Contestação_CLARO_202507_EXP.xlsx").write_text("x", encoding="utf-8")
 
         assert uc.listar_arquivos_contestacao(["CLARO"], "202507", raiz_operadoras) == []
 

@@ -82,7 +82,7 @@ arquivos/
 Está no `.gitignore`: são Detrafs reais, com tráfego e faturamento.
 
 🔴 **Entrada e saída são pastas diferentes desde 2026-08-10.** O RPA 2 copia o
-insumo para `_TEMP`, escreve **na cópia** e entrega os artefatos (`_ENV`,
+insumo para `_TEMP`, escreve **na cópia** e entrega os artefatos (`_EXP`,
 `_ERRO`, `_BK`, `_RECUSADO.md`) em `_SAIDA/{aaaamm}/`. Antes disso ele regravava
 o arquivo de expectativa no lugar, e um banco com uma coluna fora do lugar
 bastava para reduzir o insumo ao cabeçalho — em produção, o arquivo da rede.
@@ -218,7 +218,7 @@ O corte é por **natureza do gatilho**, não por afinidade temática.
 
 Por operadora do mês, na ordem que a V2 define: consolida o Detraf recebido contra
 a expectativa Vivo → **HU-19** (despesa) → **HU-12** (`_EXT`) → **HU-13** (`_INT`)
-→ **HU-14** (`_ENV` e carta) → **HU-16** (`CONT_PROC`). Depois, para o lote
+→ **HU-14** (`_EXP` e carta) → **HU-16** (`CONT_PROC`). Depois, para o lote
 inteiro: **HU-17/HU-18** (carga no AGI), **HU-15** (e-mail de contestação) e
 **HU-20** (conferência do relatório contra o Encontro de Contas).
 
@@ -232,7 +232,7 @@ vez só** — abrir e logar custa minutos.
 **A HU-14 pode emitir mais de uma carta.** O sinal do analista é por chave, então a
 mesma operadora pode ter linhas COM e SEM retenção no mesmo mês — e a carta é um
 documento com **um** texto de cenário. Desde a decisão de 2026-08-05 (Q25) sai
-**uma carta por cenário**, cada uma com o seu número CT; o `_ENV` continua único, e
+**uma carta por cenário**, cada uma com o seu número CT; o `_EXP` continua único, e
 a HU-15 anexa todos. Por isso a numeração CT tem trava por arquivo (Q18): é a
 mesma execução consumindo dois números seguidos da sequência global.
 

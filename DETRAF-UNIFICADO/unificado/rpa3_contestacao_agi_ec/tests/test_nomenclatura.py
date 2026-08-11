@@ -51,7 +51,7 @@ class TestBaseEEnv:
     """
     `nome_base_contestacao` e `nome_modelo_base_contestacao` foram removidas em
     2026-08-04: a base de contestação virou tabela, e o modelo `_M` deixou de
-    existir junto com o arquivo. O `_ENV` continua sendo arquivo.
+    existir junto com o arquivo. O `_EXP` continua sendo arquivo.
     """
 
     def test_a_base_contestacao_nao_e_mais_um_arquivo(self):
@@ -60,7 +60,9 @@ class TestBaseEEnv:
 
     def test_env_usa_espaco_entre_base_e_contestacao(self):
         # Grafia literal da documentação (AI/09 §4.1): "Base Contestação..._ENV".
-        assert nom.nome_env("Claro", "202507") == "Base Contestação_Claro_202507_ENV"
+        # O sufixo em si foi renomeado para `_EXP` nesta troca — ver
+        # `nomenclatura.nome_env` e `constantes.SUFIXO_EXP`.
+        assert nom.nome_env("Claro", "202507") == "Base Contestação_Claro_202507_EXP"
 
 
 class TestContProcECarta:

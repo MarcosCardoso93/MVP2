@@ -20,7 +20,7 @@ operadora, e o Encontro de Contas conferido.
  👤 analista sinaliza no WebFat
          │
          ▼
- ┌──────────────────┐   por operadora: EXT, INT, _ENV, cartas, CONT_PROC
+ ┌──────────────────┐   por operadora: EXT, INT, _EXP, cartas, CONT_PROC
  │ 1. ARTEFATOS     │   + despesa da contestação no banco (HU-19)
  │    HU-12 a HU-16 │
  └────────┬─────────┘
@@ -32,7 +32,7 @@ operadora, e o Encontro de Contas conferido.
  └────────┬─────────┘
           │
           ▼
- ┌──────────────────┐   e-mail com as cartas + o _ENV
+ ┌──────────────────┐   e-mail com as cartas + o _EXP
  │ 3. EMAIL  HU-15  │
  └────────┬─────────┘
           │
@@ -85,7 +85,7 @@ Por operadora, na ordem da V2 — `GeracaoAgiController._gerar_para_operadora`.
 HU-17 tentaria subir no AGI.
 
 **Sem expectativa:** o EXT ainda sai (ele só depende do lado da operadora), mas o
-INT e o `_ENV` ficam vazios — a comparação sai com o lado da Vivo zerado, e o
+INT e o `_EXP` ficam vazios — a comparação sai com o lado da Vivo zerado, e o
 robô avisa.
 
 ### 1.2 Gravar a despesa da contestação (HU-19)
@@ -115,18 +115,21 @@ nas linhas contestadas com retenção.
 
 A expectativa da Vivo, **apenas para o tráfego contestado COM retenção**.
 
-### 1.5 `_ENV` e as cartas (HU-14)
+### 1.5 `_EXP` e as cartas (HU-14)
 
 **Onde:** `services/geracao_env_carta.py`
-**Sai:** `Contestações/Base Contestação_{OP}_{aaaamm}_ENV.xlsx` e uma ou mais
+**Sai:** `Contestações/Base Contestação_{OP}_{aaaamm}_EXP.xlsx` e uma ou mais
 `Contestações/CT - {n}.docx`
+
+⚠️ A V2 (¶599) cita o sufixo como `_ENV`; o código usa `_EXP` desde esta troca —
+ver a nota em `nomenclatura.nome_env`.
 
 ⚠️ **Mais de uma carta é o caso normal** desde a decisão Q25. O sinal do analista
 é por chave, então a mesma operadora pode ter linhas COM e SEM retenção no mesmo
 mês — e a carta é um documento com **um** texto de cenário. Sai **uma carta por
 cenário, cada uma com o seu número CT**.
 
-O `_ENV` **continua único**: o nome dele não tem cenário, e ele é o anexo de
+O `_EXP` **continua único**: o nome dele não tem cenário, e ele é o anexo de
 dados da contestação inteira.
 
 **A numeração CT** sai do maior número na pasta de controle, +1. Como a mesma
@@ -178,7 +181,7 @@ contra a tela **sem clicar em nada**.
 **Onde:** `services/envio_email_contestacao.py`
 
 - **Assunto:** `CONTESTAÇÃO_TBRA|{operadora}_{mês}`
-- **Anexos:** **todas as cartas** + o `_ENV`, com o `_ENV` por último
+- **Anexos:** **todas as cartas** + o `_EXP`, com o `_EXP` por último
 - **Destinatários:** do CSV `operadora;para;cc` em
   `CAMINHO_CONTATOS_OPERADORAS`, com uma linha `*` de **cópia fixa**
 
@@ -255,7 +258,7 @@ Ver [`../../docs/03-checklists/homologacao-guia-de-partida.md`](../../docs/03-ch
 |---|---|
 | Nada foi contestado | O analista não sinalizou no WebFat. É o ponto de decisão humana |
 | Operadora pulada, "sem Detraf recebido" | Sem Detraf não há o que gerar (1.1) |
-| "_ENV e carta sem expectativa Vivo" | Sem expectativa não há a comparação lado a lado que o `_ENV` é |
+| "_EXP e carta sem expectativa Vivo" | Sem expectativa não há a comparação lado a lado que o `_EXP` é |
 | Carta desabilitada para **todas** | A numeração falhou. É global e serial: falhou para uma, falha para todas |
 | **Duas** cartas para a mesma operadora | Cenário misto — comportamento correto desde a Q25 |
 | "chave sem linha correspondente" | A linha-base é do Épico 3, fora deste projeto (B-D20) |

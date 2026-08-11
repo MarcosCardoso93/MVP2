@@ -73,7 +73,7 @@ def servico():
 @pytest.fixture()
 def anexos(tmp_path: Path) -> list[Path]:
     carta = tmp_path / "CT - 363.docx"
-    env = tmp_path / "Base Contestação_CLARO_202507_ENV.xlsx"
+    env = tmp_path / "Base Contestação_CLARO_202507_EXP.xlsx"
     carta.write_text("carta", encoding="utf-8")
     env.write_text("env", encoding="utf-8")
     return [carta, env]
@@ -114,7 +114,7 @@ class TestAnexos:
         mail = servico._app.criados[0]
         assert [Path(c).name for c in mail.Attachments.adicionados] == [
             "CT - 363.docx",
-            "Base Contestação_CLARO_202507_ENV.xlsx",
+            "Base Contestação_CLARO_202507_EXP.xlsx",
         ]
         assert mail.enviado
 

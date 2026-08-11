@@ -31,7 +31,7 @@ RPA  Uso
 ===  ==========================================================
 1    lê a caixa, move e-mails processados, baixa anexos
 2    responde ao e-mail de origem quando o Detraf é inválido
-3    envia a contestação à operadora, com carta e ``_ENV`` (HU-15)
+3    envia a contestação à operadora, com carta e ``_EXP`` (HU-15)
 ===  ==========================================================
 
 ## Envio é irreversível
@@ -322,7 +322,7 @@ class OutlookService:
         Envia um e-mail com anexos.
 
         A HU-15 exige dois anexos obrigatórios — a carta de contestação e o
-        arquivo ``_ENV``. No Projeto 5 isto era uma subclasse
+        arquivo ``_EXP``. No Projeto 5 isto era uma subclasse
         (``OutlookServiceComAnexo``) porque o ``send_email`` de lá não aceitava
         anexo; aqui os dois casos são o mesmo método, e ``send_email`` delega
         para cá com a lista vazia.

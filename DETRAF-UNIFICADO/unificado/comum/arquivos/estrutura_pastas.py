@@ -6,7 +6,7 @@ Estrutura por operadora/mês::
         ├── Detrafs Recebidos   (entrada — arquivos da operadora)
         ├── Detrafs Enviados    (entrada — expectativa Vivo `_D_`)
         ├── AGI                 (saída — EXT/INT, HU-12/13)
-        └── Contestações        (saída — _ENV, carta, Base_Contestação, HU-14)
+        └── Contestações        (saída — _EXP, carta, Base_Contestação, HU-14)
 
 Nota: a HU-19 (Épico 6, D-15) não usa pasta/planilha — grava direto no banco
 (`tbl_rpa_log_detraf_despesa_contestacao`, D-16 revisada 2026-07-28).
@@ -185,7 +185,7 @@ def caminho_contestacoes(
     raiz_operadoras: Path | None = None,
     criar: bool = False,
 ) -> Path:
-    """Subpasta de saída Contestações (_ENV, carta, Base_Contestação — HU-14)."""
+    """Subpasta de saída Contestações (_EXP, carta, Base_Contestação — HU-14)."""
 
     return _subpasta(
         cfg.SUBPASTA_CONTESTACOES, operadora, aaaamm, raiz_operadoras, criar
@@ -235,7 +235,7 @@ def caminho_controle_ct(
 # ---------------------------------------------------------------------------
 # Saída da validação (RPA 2) — 2026-08-10
 #
-# Os artefatos (`_ENV`, `_ERRO`, `_BK`, `_RECUSADO.md`) saíam ao lado do insumo.
+# Os artefatos (`_EXP`, `_ERRO`, `_BK`, `_RECUSADO.md`) saíam ao lado do insumo.
 # Agora vão para uma árvore própria, que espelha a origem:
 #
 #     {raiz_saida}\\{aaaamm}\\Operadoras\\{operadora}\\{subpasta}

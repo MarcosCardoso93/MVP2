@@ -50,7 +50,7 @@ class TestOInsumoNaoEhTocado:
     def test_renomear_a_copia_nao_renomeia_o_original(self, area, insumo):
         (copia,) = area.acolher([insumo])
 
-        copia.rename(copia.with_name("DETRAF_D_ENV.csv"))
+        copia.rename(copia.with_name("DETRAF_D_EXP.csv"))
 
         assert insumo.exists()
         assert insumo.name == "DETRAF_D.csv"
@@ -93,11 +93,11 @@ class TestPromocao:
     def test_a_copia_renomeada_volta_com_o_nome_novo(self, area, insumo):
         (copia,) = area.acolher([insumo])
         copia.write_text("so as validas\n", encoding="utf-8")
-        copia.rename(copia.with_name("DETRAF_D_ENV.csv"))
+        copia.rename(copia.with_name("DETRAF_D_EXP.csv"))
 
         area.promover()
 
-        assert (insumo.parent / "DETRAF_D_ENV.csv").read_text(
+        assert (insumo.parent / "DETRAF_D_EXP.csv").read_text(
             encoding="utf-8"
         ) == "so as validas\n"
         assert insumo.read_text(encoding="utf-8") == "linha1\nlinha2\nlinha3\n"
@@ -199,11 +199,11 @@ class TestEntregaNumaPastaDeSaida:
             tmp_path / "_TEMP", "202603", destino_de=lambda _: saida
         )
         (copia,) = area.acolher([insumo])
-        (copia.parent / "DETRAF_D_ENV.csv").write_text("ok\n", encoding="utf-8")
+        (copia.parent / "DETRAF_D_EXP.csv").write_text("ok\n", encoding="utf-8")
 
         area.promover()
 
-        assert (saida / "DETRAF_D_ENV.csv").exists()
+        assert (saida / "DETRAF_D_EXP.csv").exists()
 
     def test_destino_desconhecido_deixa_o_artefato_na_area(self, tmp_path, insumo):
         """

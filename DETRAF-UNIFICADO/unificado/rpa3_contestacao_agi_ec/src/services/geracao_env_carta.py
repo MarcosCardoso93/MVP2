@@ -1,22 +1,28 @@
-"""Serviço da HU-14 — arquivo `_ENV` + carta para a operadora.
+"""Serviço da HU-14 — arquivo `_EXP` + carta para a operadora.
 
-**Escopo: T-080 (`_ENV`), T-081 (numeração CT), T-082 (renderizar carta), T-083 (salvar
+**Escopo: T-080 (`_EXP`), T-081 (numeração CT), T-082 (renderizar carta), T-083 (salvar
 carta).**
 
-## Duas divergências deliberadas em relação à V2
+## Três divergências deliberadas em relação à V2
 
-A V2 descreve os dois artefatos saindo de modelos pré-existentes:
+A V2 descreve os dois artefatos saindo de modelos pré-existentes, com o
+sufixo `_ENV`:
 
     ¶599 — "Ele copia o `Base_Contestação_<<nomedaoperadora>>_<<mesdodetraf>>_M`
             da operadora e salva na pasta com o novo nome: `..._ENV`."
     ¶601 — "O robô cria (…) a carta da operadora **a partir de um modelo
             pré-existente para cada operadora**."
 
-Nenhum dos dois vale mais, por decisão do cliente:
+Nenhuma das três vale mais, por decisão do cliente/desenvolvedor:
 
-- **`_ENV`** — não há modelo `_M`, porque a base de contestação deixou de ser
-  arquivo e virou tabela (decisão de 2026-08-04). O `_ENV` é montado a partir do
-  output da Consolidação (`montar_contest` + `consolidar_expectativa_vivo`);
+- **`_ENV` → `_EXP`** — o sufixo em si foi renomeado (decisão registrada nesta
+  troca). O nome do artefato passou a ser
+  ``Base Contestação_{operadora}_{mês}_EXP`` — ver `comum.arquivos.nomenclatura.
+  nome_env` e `comum.config.constantes.SUFIXO_EXP`;
+- **Sem modelo `_M`** — não há mais modelo `_M`, porque a base de contestação
+  deixou de ser arquivo e virou tabela (decisão de 2026-08-04). O `_EXP` é
+  montado a partir do output da Consolidação (`montar_contest` +
+  `consolidar_expectativa_vivo`);
 - **Carta** — o modelo é **único para todas as operadoras** (decisão de
   2026-08-04), não um por operadora. Ela é montada do zero com `python-docx`, a
   partir de dois exemplos reais já emitidos.
@@ -59,12 +65,12 @@ from comum.arquivos import gerenciador as ga
 from comum.arquivos import nomenclatura as nom
 from comum.utils.decoradores import log_execucao
 
-# Nomes das abas mantidas no _ENV (AI/09 §4.1: "manter apenas as abas Contest e TBRA").
+# Nomes das abas mantidas no _EXP (AI/09 §4.1: "manter apenas as abas Contest e TBRA").
 ABA_CONTEST = const.ABA_CONTEST
 ABA_TBRA = const.ABA_TBRA
 
 #: Coluna interna com o sinal do analista. Existe só entre a seleção das linhas
-#: contestadas e o consumo delas — **nunca chega ao `_ENV`**, que vai para a
+#: contestadas e o consumo delas — **nunca chega ao `_EXP`**, que vai para a
 #: operadora e não deve carregar campo de controle nosso.
 COLUNA_SINAL = "_sinal"
 
@@ -280,7 +286,7 @@ def selecionar_contestadas(
     `None` (cenário SEM ou COM retenção; nunca "sem contestação").
 
     Existe como função própria porque **dois consumidores precisam do mesmo
-    conjunto**: `montar_abas_env`, que descarta o sinal antes de gravar o `_ENV`,
+    conjunto**: `montar_abas_env`, que descarta o sinal antes de gravar o `_EXP`,
     e `separar_por_cenario`, que agrupa justamente por ele.
     """
 
@@ -355,7 +361,7 @@ def montar_abas_env(
     indice_trafego: int = const.COL_TRAFEGO,
 ) -> dict[str, pd.DataFrame]:
     """
-    Monta as abas `Contest` e `TBRA` do `_ENV` (T-080), só com as linhas contestadas.
+    Monta as abas `Contest` e `TBRA` do `_EXP` (T-080), só com as linhas contestadas.
 
     AI/09 §4.1: "manter apenas as abas Contest e TBRA; apagar as demais" e "remover as
     linhas do que não será contestado — deixar somente os dados contestados". Como o
@@ -395,7 +401,7 @@ def montar_abas_env(
     ).drop(columns=[COLUNA_SINAL], errors="ignore")
 
     if contestadas.empty:
-        logger.info("[HU-14 _ENV] Nenhuma linha contestada — abas ficam vazias.")
+        logger.info("[HU-14 _EXP] Nenhuma linha contestada — abas ficam vazias.")
         return {
             ABA_CONTEST: df_contest.iloc[0:0].copy(),
             ABA_TBRA: df_tbra_bruta.iloc[0:0].copy(),
@@ -427,7 +433,7 @@ def montar_abas_env(
     )
 
     logger.info(
-        f"[HU-14 _ENV] Contest: {contestadas.shape[0]} linha(s) contestada(s); "
+        f"[HU-14 _EXP] Contest: {contestadas.shape[0]} linha(s) contestada(s); "
         f"TBRA: {tbra_filtrada.shape[0]} linha(s) correspondente(s)."
     )
     return {ABA_CONTEST: contestadas, ABA_TBRA: tbra_filtrada}
@@ -441,10 +447,10 @@ def gerar_arquivo_env(
     raiz_operadoras: Path | None = None,
 ) -> Optional[Path]:
     """
-    Grava o arquivo `_ENV` na pasta `Contestações` (T-080) — **só se houver contestação**.
+    Grava o arquivo `_EXP` na pasta `Contestações` (T-080) — **só se houver contestação**.
 
     Se ambas as abas estiverem vazias (nenhuma linha contestada), **nenhum arquivo é
-    criado** — mesmo critério de `gerar_arquivo_int`/`gerar_arquivo_cont_proc`: o `_ENV`
+    criado** — mesmo critério de `gerar_arquivo_int`/`gerar_arquivo_cont_proc`: o `_EXP`
     só existe nos cenários SEM/COM retenção (AI/09 §0, matriz).
 
     Args:
@@ -458,7 +464,7 @@ def gerar_arquivo_env(
     """
 
     if all(df.empty for df in abas_env.values()):
-        logger.info("[HU-14 _ENV] Nada a gravar (nenhuma linha contestada).")
+        logger.info("[HU-14 _EXP] Nada a gravar (nenhuma linha contestada).")
         return None
 
     pasta_contestacoes = ep.caminho_contestacoes(
@@ -469,7 +475,7 @@ def gerar_arquivo_env(
 
     ga.salvar_planilhas(abas_env, caminho, incluir_cabecalho=True)
 
-    logger.info(f"[HU-14 _ENV] Arquivo gravado em [{caminho}].")
+    logger.info(f"[HU-14 _EXP] Arquivo gravado em [{caminho}].")
     return caminho
 
 

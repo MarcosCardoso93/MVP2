@@ -1,4 +1,4 @@
-"""Testes da HU-14: numeração CT (T-081), escrita do `_ENV` (T-080) e da carta
+"""Testes da HU-14: numeração CT (T-081), escrita do `_EXP` (T-080) e da carta
 (T-082/T-083, a partir dos exemplos reais CT 251/252-2026 — D-3). Assinatura fixa
 (Angélica, CT 252-2026) via `ProvedorAssinaturaCartaPadrao`.
 """
@@ -116,7 +116,7 @@ def test_nome_proxima_carta(tmp_path: Path):
 
 
 # --------------------------------------------------------------------------
-# T-080 — escrita do `_ENV`
+# T-080 — escrita do `_EXP`
 # --------------------------------------------------------------------------
 INDICE_DESCRITOR_TESTE = 6
 
@@ -232,7 +232,7 @@ def test_gerar_arquivo_env_grava_no_caminho_e_nome_corretos(tmp_path: Path, indi
         abas, operadora="Claro", aaaamm="202507", raiz_operadoras=tmp_path
     )
 
-    assert caminho.name == "Base Contestação_Claro_202507_ENV.xlsx"
+    assert caminho.name == "Base Contestação_Claro_202507_EXP.xlsx"
     assert caminho.parent == tmp_path / "Claro" / "2025" / "202507" / "Contestações"
     assert caminho.is_file()
 

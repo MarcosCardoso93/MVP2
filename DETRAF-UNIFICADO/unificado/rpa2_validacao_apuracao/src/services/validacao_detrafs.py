@@ -567,10 +567,10 @@ class ValidacaoDetrafsService:
     ):
         if arquivos_validos:
             logger.info(
-                f"Renomeando {len(arquivos_validos)} arquivos validados adicionando _ENV"
+                f"Renomeando {len(arquivos_validos)} arquivos validados adicionando _EXP"
             )
             for arquivo in arquivos_validos:
-                renomear_arquivo_com_sufixo(arquivo, sufixo="_ENV")
+                renomear_arquivo_com_sufixo(arquivo, sufixo="_EXP")
 
         if arquivos_invalidos:
             logger.info(
@@ -687,7 +687,7 @@ class ValidacaoDetrafsService:
         )
 
         # Devolver os artefatos às pastas de origem. Vem DEPOIS da renomeação,
-        # senão o que sobe é a cópia de trabalho crua, sem o `_ENV`/`_ERRO` que
+        # senão o que sobe é a cópia de trabalho crua, sem o `_EXP`/`_ERRO` que
         # diz o que aconteceu com ela.
         self.area.promover()
 

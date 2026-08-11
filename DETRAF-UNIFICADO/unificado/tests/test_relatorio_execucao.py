@@ -59,7 +59,7 @@ class TestConteudoDoRelatorio:
     def test_o_motivo_do_pulo_aparece(self, relatorio):
         """É a coluna mais consultada: quase toda dúvida é 'por que não saiu?'."""
         relatorio.acrescentar(
-            rel.LinhaDeRelatorio("TIM", {}, pulos=["_ENV e carta sem expectativa Vivo"])
+            rel.LinhaDeRelatorio("TIM", {}, pulos=["_EXP e carta sem expectativa Vivo"])
         )
 
         texto = relatorio.gravar().read_text(encoding="utf-8")

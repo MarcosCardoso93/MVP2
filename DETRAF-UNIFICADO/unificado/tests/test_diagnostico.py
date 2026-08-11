@@ -206,11 +206,11 @@ class TestListaDeFiltroVazia:
 
     def test_lista_preenchida_passa(self):
         resultado = diag.verificar_lista_de_filtro(
-            "g", "ARQUIVOS_VALIDADOS", ["_ENV"], "É o filtro do batimento."
+            "g", "ARQUIVOS_VALIDADOS", ["_EXP"], "É o filtro do batimento."
         )
 
         assert resultado.situacao == "ok"
-        assert "_ENV" in resultado.detalhe
+        assert "_EXP" in resultado.detalhe
 
     def test_lista_vazia_e_falha_nao_aviso(self):
         """

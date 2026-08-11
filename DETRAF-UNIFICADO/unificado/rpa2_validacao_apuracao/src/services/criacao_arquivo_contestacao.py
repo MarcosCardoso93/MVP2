@@ -12,7 +12,7 @@ from comum.config.logger_config import logger
      a lógica e popular a tabela 'tbl_rpa_log_detraf_despesa_contestacao'"
 
 Até 2026-08-04 este serviço gravava um `.xlsx` `Base_Contestação_{OP}_{aaaamm}`
-com cinco abas — e **ninguém o lia**: o `_ENV` do RPA 3 é montado a partir de
+com cinco abas — e **ninguém o lia**: o `_EXP` do RPA 3 é montado a partir de
 DataFrames, não daquele arquivo. A lógica de agregação continua aqui (é ela que
 produz o comparativo); o que saiu foi a exportação.
 """

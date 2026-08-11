@@ -153,7 +153,7 @@ segunda execução do mesmo mês processa menos** — use
 
 Cada arquivo varrido é copiado para `{DIRETORIO_TEMP}/{aaaamm}/{pasta}-{marca}/`,
 e **todos** os passos abaixo operam sobre a cópia: o `_RECUSADO.md`, o `_BK`, o
-`_ERRO`, a regravação das linhas válidas e a renomeação para `_ENV`. No fim
+`_ERRO`, a regravação das linhas válidas e a renomeação para `_EXP`. No fim
 (passo 1.8) os artefatos são copiados de volta para a pasta de origem.
 
 🔴 **Por que isto existe.** O passo 1.6 regrava o arquivo de expectativa com as
@@ -289,7 +289,7 @@ diz por quê.
 
 **Onde:** `renomear_arquivos_processados` — evita reprocessamento futuro.
 
-Válidos ganham `_ENV`; reprovados ganham `_ERRO`.
+Válidos ganham `_EXP`; reprovados ganham `_ERRO`.
 
 O `_ERRO` continua importando por dois motivos: é o que impede o
 reprocessamento (o batimento acha os arquivos por `ARQUIVOS_VALIDADOS`), e é a

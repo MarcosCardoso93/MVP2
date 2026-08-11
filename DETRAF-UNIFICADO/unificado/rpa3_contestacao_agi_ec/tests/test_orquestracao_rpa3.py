@@ -210,7 +210,7 @@ class TestGeracaoDeArtefatos:
     ):
         """
         `gerar_arquivo_ext` **não tem guarda de vazio**, ao contrário do
-        INT/_ENV/CONT_PROC: sem o short-circuit ele gravaria um `.xlsx` vazio, que
+        INT/_EXP/CONT_PROC: sem o short-circuit ele gravaria um `.xlsx` vazio, que
         a HU-17 depois tentaria subir no AGI.
         """
         ep.caminho_detrafs_recebidos("VAZIA", "202507", raiz_operadoras, criar=True)
@@ -344,7 +344,7 @@ class TestEtapasBloqueadas:
         )[0]
 
         assert resultado.cartas == []
-        assert resultado.env is not None, "o _ENV não depende da numeração"
+        assert resultado.env is not None, "o _EXP não depende da numeração"
         assert resultado.ext is not None
         assert resultado.cont_proc is not None
         assert any("numeração CT" in pulo for pulo in resultado.pulos)
@@ -436,7 +436,7 @@ class TestEtapasBloqueadas:
 
 class TestSemExpectativaVivo:
     """
-    O EXT depende só do lado da operadora e sai; o `_ENV` é a comparação lado a
+    O EXT depende só do lado da operadora e sai; o `_EXP` é a comparação lado a
     lado e não tem como existir. Antes disto o fluxo estourava com
     "single positional indexer is out-of-bounds" no meio da HU-14.
     """
@@ -597,8 +597,8 @@ class TestCenarioMistoDaCarta:
     ):
         """
         Decisão de desenho do desenvolvedor, registrada junto com a Q25: o nome
-        do `_ENV` (`Base Contestação_{op}_{mes}_ENV`) não tem cenário, e ele é o
-        anexo de dados da contestação inteira. Duas cartas, um `_ENV`.
+        do `_EXP` (`Base Contestação_{op}_{mes}_EXP`) não tem cenário, e ele é o
+        anexo de dados da contestação inteira. Duas cartas, um `_EXP`.
         """
         resultado = controller.gerar_artefatos(
             referencia="202507",
@@ -669,7 +669,7 @@ class TestModoSoLeitura:
         operadora_com_divergencia,
     ):
         """
-        O fluxo inteiro roda — EXT, INT, `_ENV`, carta, CONT_PROC saem —, e nem o
+        O fluxo inteiro roda — EXT, INT, `_EXP`, carta, CONT_PROC saem —, e nem o
         uploader nem o Outlook são tocados. Qualquer chamada a eles é
         `AssertionError`.
         """

@@ -215,7 +215,7 @@ def _verificar_filtros(diag, cfg) -> list:
         diag.verificar_lista_de_filtro(
             "Filtros", "ARQUIVOS_VALIDADOS", cfg.ARQUIVOS_VALIDADOS,
             "É o que o BATIMENTO do RPA 2 usa para achar os arquivos que a "
-            "validação aprovou (ela os renomeia acrescentando `_ENV`).",
+            "validação aprovou (ela os renomeia acrescentando `_EXP`).",
         ),
         diag.verificar_lista_de_filtro(
             "Filtros", "EXPECTATIVA_SUBSTRING", cfg.EXPECTATIVA_SUBSTRING,

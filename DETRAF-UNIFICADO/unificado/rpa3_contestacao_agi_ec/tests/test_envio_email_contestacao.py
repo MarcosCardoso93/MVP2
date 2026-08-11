@@ -23,7 +23,7 @@ def pasta_contestacoes(raiz_operadoras: Path) -> Path:
 
 @pytest.fixture()
 def anexos_prontos(pasta_contestacoes: Path) -> tuple[Path, Path]:
-    """Simula o que a HU-14 deixa na pasta: a carta CT e o `_ENV`."""
+    """Simula o que a HU-14 deixa na pasta: a carta CT e o `_EXP`."""
     carta = pasta_contestacoes / "CT - 363.docx"
     env = pasta_contestacoes / f"{nom.nome_env('CLARO', '202507')}.xlsx"
     carta.write_text("carta", encoding="utf-8")
@@ -79,7 +79,7 @@ class TestLocalizacaoDosAnexos:
         )
 
     def test_env_de_outro_mes_nao_e_confundido(self, raiz_operadoras, pasta_contestacoes):
-        """O nome do `_ENV` é determinístico — não vale casar por substring."""
+        """O nome do `_EXP` é determinístico — não vale casar por substring."""
         (pasta_contestacoes / f"{nom.nome_env('CLARO', '202506')}.xlsx").write_text(
             "mes errado", encoding="utf-8"
         )
@@ -107,7 +107,7 @@ class TestLocalizacaoDosAnexos:
     def test_as_duas_cartas_e_o_env_sao_anexados(
         self, raiz_operadoras, pasta_contestacoes, anexos_prontos, monkeypatch
     ):
-        """Duas cartas + **um** `_ENV` — a decisão de desenho registrada na Q25."""
+        """Duas cartas + **um** `_EXP` — a decisão de desenho registrada na Q25."""
         outra = pasta_contestacoes / "CT - 364.docx"
         outra.write_text("carta do outro cenário", encoding="utf-8")
         monkeypatch.setattr(
@@ -121,7 +121,7 @@ class TestLocalizacaoDosAnexos:
 
         anexos = outlook.enviados[0]["anexos"]
         assert len(anexos) == 3
-        assert anexos[-1] == anexos_prontos[1], "o _ENV vai por último"
+        assert anexos[-1] == anexos_prontos[1], "o _EXP vai por último"
 
 
 class TestPendenciasBloqueadas:
@@ -248,7 +248,7 @@ class TestEnvio:
         with pytest.raises(envio.EnvioEmailContestacaoIncompleto) as erro:
             envio.enviar_contestacao("CLARO", "202507", _OutlookFalso(), raiz_operadoras)
 
-        assert "carta CT" in str(erro.value) and "_ENV" in str(erro.value)
+        assert "carta CT" in str(erro.value) and "_EXP" in str(erro.value)
 
     def test_kill_switch_desligado_monta_e_nao_envia(
         self, raiz_operadoras, anexos_prontos, monkeypatch

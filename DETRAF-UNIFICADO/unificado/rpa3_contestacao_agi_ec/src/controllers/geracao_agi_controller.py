@@ -511,7 +511,7 @@ class GeracaoAgiController:
                 for nome, saiu in (
                     ("EXT", resultado.ext),
                     ("INT", resultado.int_),
-                    ("_ENV", resultado.env),
+                    ("_EXP", resultado.env),
                     (f"{len(resultado.cartas)} carta(s)", resultado.cartas),
                     ("CONT_PROC", resultado.cont_proc),
                 )
@@ -562,7 +562,7 @@ class GeracaoAgiController:
             if df_operadora.empty:
                 # Sem Detraf não há o que gerar. E o short-circuit importa:
                 # `gerar_arquivo_ext` não tem guarda de vazio (ao contrário do
-                # INT/_ENV/CONT_PROC), então gravaria um .xlsx vazio que a HU-17
+                # INT/_EXP/CONT_PROC), então gravaria um .xlsx vazio que a HU-17
                 # tentaria subir no AGI.
                 logger.warning(
                     f"[RPA 3] {operadora}: nenhum Detraf em {referencia} — "
@@ -576,7 +576,7 @@ class GeracaoAgiController:
             )
             if df_tbra.empty:
                 # O Contest trata o par ausente como 100% de variação, então o
-                # EXT ainda sai — mas INT e _ENV ficarão vazios.
+                # EXT ainda sai — mas INT e _EXP ficarão vazios.
                 logger.warning(
                     f"[RPA 3] {operadora}: sem expectativa Vivo em {referencia}; "
                     f"a comparação sairá com o lado da Vivo zerado."
@@ -664,19 +664,19 @@ class GeracaoAgiController:
         indice_descritor: int,
         pulos: list[str],
     ) -> tuple[Optional[Path], list[Path]]:
-        """HU-14 — o `_ENV` e a carta. Sem linha contestada, nenhum dos dois sai."""
+        """HU-14 — o `_EXP` e a carta. Sem linha contestada, nenhum dos dois sai."""
 
         if df_tbra.empty:
             # `montar_abas_env` monta a aba TBRA a partir da expectativa bruta e
             # indexa por posição — sem ela, estoura em vez de degradar. O EXT já
             # saiu (ele só depende do lado da operadora), e o CONT_PROC ainda sai;
-            # o que não dá para montar é a comparação lado a lado que o _ENV é.
+            # o que não dá para montar é a comparação lado a lado que o _EXP é.
             logger.warning(
-                f"[RPA 3] {operadora}: sem expectativa Vivo — _ENV e carta não "
+                f"[RPA 3] {operadora}: sem expectativa Vivo — _EXP e carta não "
                 f"serão gerados. Confira a pasta "
                 f"'{configuration.SUBPASTA_DETRAFS_ENVIADOS}' da operadora."
             )
-            pulos.append("_ENV e carta sem expectativa Vivo")
+            pulos.append("_EXP e carta sem expectativa Vivo")
             return None, []
 
         abas = gec.montar_abas_env(
@@ -818,7 +818,7 @@ class GeracaoAgiController:
         raiz_operadoras: Path | None,
     ) -> None:
         """
-        Envia a contestação de quem tem `_ENV` **e** carta.
+        Envia a contestação de quem tem `_EXP` **e** carta.
 
         Hoje isto sempre termina em `pulos`: `buscar_destinatarios` devolve lista
         vazia porque a tabela de contatos do WebFat não foi informada (Q16). A
@@ -926,7 +926,7 @@ class GeracaoAgiController:
             produzidos = {
                 "EXT": "sim" if resultado.ext else "-",
                 "INT": "sim" if resultado.int_ else "-",
-                "_ENV": "sim" if resultado.env else "-",
+                "_EXP": "sim" if resultado.env else "-",
                 "cartas": str(len(resultado.cartas)) if resultado.cartas else "-",
                 "CONT_PROC": "sim" if resultado.cont_proc else "-",
             }
@@ -970,7 +970,7 @@ class GeracaoAgiController:
         logger.info(
             f"[RPA 3] Resumo de {referencia} — {len(resultados)} operadora(s): "
             f"EXT {_quantos('ext')}, INT {_quantos('int_')}, "
-            f"_ENV {_quantos('env')}, "
+            f"_EXP {_quantos('env')}, "
             f"carta {sum(len(r.cartas) for r in resultados)}, "
             f"CONT_PROC {_quantos('cont_proc')}."
         )

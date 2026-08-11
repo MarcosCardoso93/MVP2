@@ -4,7 +4,7 @@ O controller é o único ponto que combina service + repositório: os services n
 acessam banco (AI/01 §1). Aqui verificamos a **ordem** exigida pela V2 — o writeback de
 `tipo_contestacao` (HU-16) só ocorre **depois** de o CONT_PROC ser efetivamente gravado.
 
-A orquestração completa do Épico 4 (consolidação → EXT → INT → _ENV/carta) continua
+A orquestração completa do Épico 4 (consolidação → EXT → INT → _EXP/carta) continua
 pendente em T-120.
 """
 

@@ -8,13 +8,13 @@ Gatilho: sinalização do analista no WebFat, informando a decisão de contesta�
 
 O fluxo, na ordem da V2, para cada operadora do mês: consolida o Detraf recebido
 contra a expectativa Vivo → HU-19 (despesa) → HU-12 (`_EXT`) → HU-13 (`_INT`) →
-HU-14 (`_ENV` e cartas) → HU-16 (`CONT_PROC`). Depois, para o lote inteiro:
+HU-14 (`_EXP` e cartas) → HU-16 (`CONT_PROC`). Depois, para o lote inteiro:
 HU-17/HU-18 (carga no AGI), HU-15 (e-mail de contestação) e HU-20 (conferência do
 relatório contra o Encontro de Contas).
 
 A HU-14 pode emitir **mais de uma carta**: a operadora com linhas COM e SEM
 retenção no mesmo mês recebe uma por cenário, cada uma com o seu número CT
-(decisão Q25, de 2026-08-05). O `_ENV` continua único, e a HU-15 anexa os três.
+(decisão Q25, de 2026-08-05). O `_EXP` continua único, e a HU-15 anexa os três.
 
 ---
 

@@ -68,7 +68,10 @@ ID_MODALIDADE_PADRAO: str = "00"
 # ---------------------------------------------------------------------------
 SUFIXO_EXT: str = "EXT"
 SUFIXO_INT: str = "INT"
-SUFIXO_ENV: str = "ENV"
+#: Renomeado de "ENV" para "EXP" (decisão registrada nesta troca). O ¶599 da V2
+#: e o AI/09 §4.1 citam "_ENV" literalmente — ver a nota em
+#: `nomenclatura.nome_env` e em `geracao_env_carta`.
+SUFIXO_EXP: str = "EXP"
 
 PREFIXO_AGI: str = "DE_AGI_D"
 INFIXO_AGI: str = "TBRA_X"

@@ -41,7 +41,7 @@ from comum.integracoes.sftp import MAPA_PASTAS, SFTPError, SFTPService
 #:
 #: O `_L_` é o resumido; o robô quer o Detalhado. A regra veio do script e **não**
 #: existe em `IGNORAR_ARQUIVOS` — aquela lista filtra o que o próprio robô
-#: produziu (`_BK`, `_ERRO`, `_ENV`), e esta filtra o que o ClickHub oferece.
+#: produziu (`_BK`, `_ERRO`, `_EXP`), e esta filtra o que o ClickHub oferece.
 MARCA_RESUMIDO = "_L_"
 
 

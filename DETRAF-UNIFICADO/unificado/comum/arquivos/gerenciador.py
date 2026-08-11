@@ -646,7 +646,7 @@ def salvar_planilhas(
 
     Cria os diretórios da pasta pai caso eles não existam. Diferente de
     :func:`salvar_dados` (uma aba só), esta função é para artefatos multi-aba
-    (ex.: `_ENV` da HU-14, que mantém as abas `Contest` e `TBRA`).
+    (ex.: `_EXP` da HU-14, que mantém as abas `Contest` e `TBRA`).
 
     Args:
         abas: Mapeamento ``{nome_da_aba: DataFrame}``, na ordem em que devem

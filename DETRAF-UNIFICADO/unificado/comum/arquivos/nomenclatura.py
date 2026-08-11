@@ -10,7 +10,7 @@ Padrões (AI/02 §7, AI/09, AI/10 §2):
 | EXT (HU-12)             | ``DE_AGI_D_{aaaamm}_TBRA_X_{OPERADORA}_EXT``      |
 | INT (HU-13)             | ``DE_AGI_D_{aaaamm}_TBRA_X_{OPERADORA}_INT``      |
 | Base Contestação (dep.) | ``Base_Contestação_{operadora}_{mes}``           |
-| ``_ENV`` (HU-14)        | ``Base Contestação_{operadora}_{mes}_ENV``       |
+| ``_EXP`` (HU-14)        | ``Base Contestação_{operadora}_{mes}_EXP``       |
 | CONT_PROC (HU-16)       | ``CONT_PROC_MASCARA_{operadora}_{aaaamm}.xls``   |
 | Carta (HU-14)           | ``CT - {n}`` (numeração sequencial)              |
 
@@ -99,20 +99,22 @@ def nome_int(aaaamm: str, operadora: str) -> str:
 # (2026-08-04): nomeavam o arquivo `Base_Contestação_{OP}_{mes}[.xlsx]` e o seu
 # modelo `_M`. A base de contestação é uma **tabela** — decisão do cliente, e o
 # que a V2 já pedia ("Não é necessário gerar o arquivo, mas usar a lógica e
-# popular a tabela"). O `_ENV` (abaixo) continua sendo arquivo e mantém a grafia
+# popular a tabela"). O `_EXP` (abaixo) continua sendo arquivo e mantém a grafia
 # herdada daquele nome.
 
 
 def nome_env(operadora: str, mes: str) -> str:
     """
-    Nome-base do arquivo ``_ENV`` (HU-14).
+    Nome-base do arquivo ``_EXP`` (HU-14).
 
-    Segue a grafia literal da documentação (AI/09 §4.1, AI/10 §2), com **espaço**
-    entre "Base" e "Contestação": ``Base Contestação_{operadora}_{mes}_ENV``.
+    🔴 A V2 (¶599) e o AI/09 §4.1 citam literalmente o sufixo ``_ENV``; o código
+    passou a usar ``_EXP`` (decisão registrada nesta troca). O **espaço** entre
+    "Base" e "Contestação" continua fiel à documentação:
+    ``Base Contestação_{operadora}_{mes}_EXP``.
     """
 
     op = normalizar_operadora(operadora)
-    return f"Base Contestação_{op}_{mes}_{const.SUFIXO_ENV}"
+    return f"Base Contestação_{op}_{mes}_{const.SUFIXO_EXP}"
 
 
 def nome_cont_proc(

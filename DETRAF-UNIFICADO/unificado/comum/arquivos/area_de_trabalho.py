@@ -17,7 +17,7 @@ de expectativa foram reduzidos a uma linha cada, e foi preciso semeá-los de nov
 O robô não trabalha mais sobre o insumo. Cada arquivo é copiado para
 ``{DIRETORIO_TEMP}/{aaaamm}/{pasta}-{marca}/`` e **toda** a escrita da etapa
 acontece lá: a regravação das linhas válidas, o ``_ERRO`` de linha, o ``_BK``, o
-``_RECUSADO.md`` e a renomeação para ``_ENV``. No fim, os artefatos são copiados
+``_RECUSADO.md`` e a renomeação para ``_EXP``. No fim, os artefatos são copiados
 de volta para a pasta de origem.
 
 O insumo continua exatamente como chegou. Se a etapa morrer no meio, ele

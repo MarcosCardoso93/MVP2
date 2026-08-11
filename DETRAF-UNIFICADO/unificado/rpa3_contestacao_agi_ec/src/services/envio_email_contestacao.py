@@ -7,7 +7,7 @@ Critérios de aceite (V2):
 
 - destinatários vindos da tabela de contatos do WebFat;
 - assunto ``CONTESTAÇÃO_TBRA|{operadora}_{mês}``;
-- anexos: as cartas CT e o arquivo ``_ENV`` — produzidos pela HU-14
+- anexos: as cartas CT e o arquivo ``_EXP`` — produzidos pela HU-14
   (`geracao_env_carta.py`), na pasta ``Contestações`` da operadora;
 - disparo automático após a sinalização do analista, **sem** aprovação manual.
 
@@ -15,7 +15,7 @@ Critérios de aceite (V2):
 
 O original varria ``DIRETORIO_CONTESTACOES`` como pasta **plana**, filtrando por
 substring do nome. Aqui os anexos vêm de `comum/arquivos/estrutura_pastas.py`
-(`{operadora}/{ano}/{aaaamm}/Contestações/`) e o ``_ENV`` é localizado pelo nome
+(`{operadora}/{ano}/{aaaamm}/Contestações/`) e o ``_EXP`` é localizado pelo nome
 exato que a HU-14 grava (`nomenclatura.nome_env`), não por heurística. Era a
 terceira ocorrência do mesmo desvio de caminho — as anteriores foram o contrato
 RPA 1 → RPA 2 e o P7.
@@ -74,7 +74,7 @@ COPIA_FIXA = "*"
 
 
 class EnvioEmailContestacaoIncompleto(RuntimeError):
-    """Faltou algo para enviar: destinatário, carta ou `_ENV`."""
+    """Faltou algo para enviar: destinatário, carta ou `_EXP`."""
 
 
 def montar_assunto(operadora: str, mes: str) -> str:
@@ -95,9 +95,9 @@ def localizar_anexos(
     raiz_operadoras: Path | None = None,
 ) -> tuple[list[Path], Optional[Path]]:
     """
-    Localiza a carta CT e o ``_ENV`` da operadora no mês, na pasta ``Contestações``.
+    Localiza a carta CT e o ``_EXP`` da operadora no mês, na pasta ``Contestações``.
 
-    O ``_ENV`` tem nome determinístico (`nomenclatura.nome_env`). O das cartas
+    O ``_EXP`` tem nome determinístico (`nomenclatura.nome_env`). O das cartas
     depende do número CT sequencial, que só é conhecido depois da HU-14 — por isso
     são procuradas por prefixo (``CT - ...``).
 
@@ -107,12 +107,12 @@ def localizar_anexos(
     a mais recente e avisava que "a HU-14 rodou duas vezes" — o que passou a ser
     falso.
 
-    O ``_ENV`` **continua único** (decisão de desenho registrada junto com a
+    O ``_EXP`` **continua único** (decisão de desenho registrada junto com a
     Q25): o nome dele não tem cenário, e ele é o anexo de dados da contestação
     inteira.
 
     Returns:
-        ``(cartas, caminho_env)`` — lista possivelmente vazia e `None` se o `_ENV`
+        ``(cartas, caminho_env)`` — lista possivelmente vazia e `None` se o `_EXP`
         não for encontrado. As cartas saem ordenadas por número CT.
     """
 
@@ -126,7 +126,7 @@ def localizar_anexos(
 
     caminho_env = pasta / f"{nom.nome_env(operadora, aaaamm)}{const.EXTENSAO_EXCEL}"
     if not caminho_env.is_file():
-        logger.warning(f"[HU-15] Arquivo _ENV não encontrado: [{caminho_env}].")
+        logger.warning(f"[HU-15] Arquivo _EXP não encontrado: [{caminho_env}].")
         caminho_env = None
 
     cartas = sorted(pasta.glob(f"{const.PREFIXO_CARTA}*{const.EXTENSAO_DOCX}"))
@@ -342,7 +342,7 @@ def enviar_contestacao(
         raiz_operadoras: Raiz alternativa, para teste.
 
     Raises:
-        EnvioEmailContestacaoIncompleto: Sem destinatário, sem carta ou sem `_ENV`.
+        EnvioEmailContestacaoIncompleto: Sem destinatário, sem carta ou sem `_EXP`.
     """
 
     destinatarios = buscar_destinatarios(operadora)
@@ -354,7 +354,7 @@ def enviar_contestacao(
     if not cartas:
         faltando.append("carta CT")
     if caminho_env is None:
-        faltando.append("arquivo _ENV")
+        faltando.append("arquivo _EXP")
     if faltando:
         raise EnvioEmailContestacaoIncompleto(
             f"E-mail de contestação de {operadora}/{aaaamm} não enviado — "
@@ -362,7 +362,7 @@ def enviar_contestacao(
         )
 
     assunto = montar_assunto(operadora, aaaamm)
-    # As cartas primeiro, o `_ENV` por último — é a ordem em que a operadora lê:
+    # As cartas primeiro, o `_EXP` por último — é a ordem em que a operadora lê:
     # o documento que explica a contestação, depois os dados que a sustentam.
     anexos = [*cartas, caminho_env]
 
