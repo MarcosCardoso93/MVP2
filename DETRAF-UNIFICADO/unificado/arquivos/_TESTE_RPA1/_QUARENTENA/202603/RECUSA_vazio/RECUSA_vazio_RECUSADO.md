@@ -1,6 +1,6 @@
 # Arquivo recusado — RECUSA_vazio.csv
 
-**Pasta:** `C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA1\_QUARENTENA\202603\RECUSA_vazio`
+**Pasta:** `C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA1\_QUARENTENA\202603\RECUSA_vazio`
 **Colunas encontradas:** 0
 
 ## Por que foi recusado

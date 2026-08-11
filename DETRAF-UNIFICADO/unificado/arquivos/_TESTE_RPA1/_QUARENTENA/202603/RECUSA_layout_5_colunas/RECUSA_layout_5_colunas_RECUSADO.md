@@ -1,6 +1,6 @@
 # Arquivo recusado — RECUSA_layout_5_colunas.csv
 
-**Pasta:** `C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA1\_QUARENTENA\202603\RECUSA_layout_5_colunas`
+**Pasta:** `C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA1\_QUARENTENA\202603\RECUSA_layout_5_colunas`
 **Colunas encontradas:** 5
 
 ## Por que foi recusado

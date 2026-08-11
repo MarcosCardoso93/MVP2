@@ -1,0 +1,61 @@
+======================================================================
+EXECUÇÃO
+======================================================================
+robô:       rpa3_contestacao_agi_ec
+referência: 202603
+início:     2026-08-11 17:53:55
+duração:    1.2s
+desfecho:   OK
+parâmetro:  parâmetros: referência forçada: 202603; apenas as operadoras: Algar, SemExpectativa, SemDetraf, SemContestacao; apenas a etapa: artefatos; DRY-RUN: todos os efeitos externos desligados
+
+======================================================================
+AMBIENTE
+======================================================================
+robô: rpa3_contestacao_agi_ec
+modo: DEV  (de ENV)
+log: nível INFO (de LOG_LEVEL), diagnose ligado
+competência: 202603  (forçada por COMPETENCIA)
+banco: SQLite [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA3\banco.db] (de CAMINHO_SQLITE)
+AGI: ambiente [producao] host [10.238.6.120] (de AGI_AMBIENTE) | executável [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
+EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: desligado | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado | download SFTP: desligado
+
+======================================================================
+ETAPA 1/5: arranque   [ok]   0.8s
+======================================================================
+produziu:
+  módulos carregados, banco resolvido
+
+======================================================================
+ETAPA 2/5: artefatos   [ok]   0.4s
+======================================================================
+entrada:
+  operadoras = Algar, SemExpectativa, SemDetraf, SemContestacao
+  referencia = 202603
+produziu:
+  Algar: gerou artefato
+  SemExpectativa: gerou artefato | pulos: sem expectativa Vivo; _EXP e carta sem expectativa Vivo
+  SemDetraf: nada gerado | pulos: sem Detraf recebido
+  SemContestacao: gerou artefato
+
+======================================================================
+ETAPA 3/5: carga   [pulada]   0.0s
+======================================================================
+motivo: pulada por --etapa=artefatos
+
+======================================================================
+ETAPA 4/5: email   [pulada]   0.0s
+======================================================================
+motivo: pulada por --etapa=artefatos
+
+======================================================================
+ETAPA 5/5: verificacao   [pulada]   0.0s
+======================================================================
+motivo: pulada por --etapa=artefatos
+
+======================================================================
+LOG COMPLETO
+======================================================================
+C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA3\logs
+
+Este arquivo é o resumo por etapa. O log tem a sequência completa,
+linha a linha, de tudo o que a execução fez.

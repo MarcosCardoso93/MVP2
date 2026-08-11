@@ -1,6 +1,6 @@
 # Arquivo recusado — RECUSA_gh_invalido.csv
 
-**Pasta:** `C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA1\_QUARENTENA\202603\RECUSA_gh_invalido`
+**Pasta:** `C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA1\_QUARENTENA\202603\RECUSA_gh_invalido`
 **Colunas encontradas:** 15
 
 ## Por que foi recusado

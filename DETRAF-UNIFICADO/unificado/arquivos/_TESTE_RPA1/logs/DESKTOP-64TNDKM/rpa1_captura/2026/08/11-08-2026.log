@@ -1,0 +1,128 @@
+2026-08-11 17:05:08.216 | INFO    |__main__:<module>:118 - [RPA 1] robô: rpa1_captura
+2026-08-11 17:05:08.216 | INFO    |__main__:<module>:118 - [RPA 1] modo: DEV  (de ENV)
+2026-08-11 17:05:08.216 | INFO    |__main__:<module>:118 - [RPA 1] log: nível INFO (de LOG_LEVEL), diagnose ligado
+2026-08-11 17:05:08.216 | INFO    |__main__:<module>:118 - [RPA 1] competência: 202603  (forçada por COMPETENCIA)
+2026-08-11 17:05:08.216 | INFO    |__main__:<module>:118 - [RPA 1] banco: SQLite [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA1\banco.db] (de CAMINHO_SQLITE)
+2026-08-11 17:05:08.216 | INFO    |__main__:<module>:118 - [RPA 1] AGI: ambiente [producao] host [10.238.6.120] (de AGI_AMBIENTE) | executável [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
+2026-08-11 17:05:08.217 | INFO    |__main__:<module>:118 - [RPA 1] EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: desligado | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado | download SFTP: desligado
+2026-08-11 17:05:08.217 | INFO    |__main__:<module>:118 - [RPA 1] parâmetros: referência forçada: 202603; apenas a etapa: processamento; lendo da pasta: C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA1\Entrada; DRY-RUN: todos os efeitos externos desligados
+2026-08-11 17:05:08.867 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-11 17:05:08.867 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA1\banco.db]
+2026-08-11 17:05:09.067 | INFO    |__main__:main:94 - Aplicação iniciada
+2026-08-11 17:05:09.067 | INFO    |src.main.process_handle:run:34 - [RPA 1] Captura PULADA. Os arquivos serão lidos de DIRETORIO_ENTRADA, e o remetente de cada um vem do rastreamento gravado pela captura anterior.
+2026-08-11 17:05:09.067 | INFO    |src.main.process_handle:run:34 - [RPA 1] Etapa 2/2 — identificação da operadora e salvamento (HU-02/HU-03)
+2026-08-11 17:05:09.067 | INFO    |src.controllers.processamento_controller:processar:155 - Iniciando fluxo de processamento
+2026-08-11 17:05:09.067 | INFO    |src.controllers.processamento_controller:processar:155 - Competência: 202603 | Ano: 2026
+2026-08-11 17:05:09.068 | INFO    |src.services.processamento_service:executar:140 - [RPA 1] 9 arquivo(s) em [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA1\Entrada] (busca recursiva); 0 com remetente recuperado do rastreamento.
+2026-08-11 17:05:09.069 | WARNING |src.services.processamento_service:executar:140 - [RPA 1] Nenhum arquivo tem rastreamento: a identificação vai depender só da EOT credora dentro do arquivo, sem o fallback por domínio do remetente. É o esperado numa pasta preparada à mão; se veio de uma captura, confira RASTREAMENTO_ARQUIVO_PATH.
+2026-08-11 17:05:09.069 | INFO    |src.controllers.processamento_controller:processar:155 - Total de arquivos a processar: 9
+2026-08-11 17:05:09.077 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_anexo5_processado]
+2026-08-11 17:05:09.096 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_anexo5_processado] carregada | Linhas: 2656 | Colunas: 18
+2026-08-11 17:05:09.115 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_detraf_tarifas]
+2026-08-11 17:05:09.117 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_detraf_tarifas] carregada | Linhas: 110 | Colunas: 21
+2026-08-11 17:05:09.157 | INFO    |comum.dominio.validacao_colunas:validar_tudo_detalhado:252 - Validação de tarifas concluída | Total: 542 | Válidas: 450 | Inválidas: 92 | Resultado final: False
+2026-08-11 17:05:09.164 | INFO    |src.services.processamento_service:_validar:482 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': False}
+2026-08-11 17:05:09.165 | WARNING |src.services.processamento_service:_processar_arquivo:262 - Arquivo [DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_032026_V02.csv] rejeitado: regras de coluna não atendidas.
+  Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+2026-08-11 17:05:09.172 | INFO    |src.services.processamento_service:_reprovar:533 - [Layout] Motivo da recusa gravado em [DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_032026_V02_RECUSADO.md].
+2026-08-11 17:05:09.173 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - Inserindo 1 registro(s) em [tbl_rpa_log_detraf_despesa_arquivos].
+2026-08-11 17:05:09.180 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - 1 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_arquivos].
+2026-08-11 17:05:09.181 | WARNING |src.services.processamento_service:_processar_arquivo:264 - [RPA 1] 'DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_032026_V02.csv' REPROVADO na validação — quarentena em [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA1\_QUARENTENA\202603\DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_032026_V02].
+2026-08-11 17:05:09.503 | INFO    |comum.dominio.validacao_colunas:validar_tudo_detalhado:252 - Validação de tarifas concluída | Total: 8712 | Válidas: 3248 | Inválidas: 5464 | Resultado final: False
+2026-08-11 17:05:09.543 | INFO    |src.services.processamento_service:_validar:482 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': False}
+2026-08-11 17:05:09.544 | WARNING |src.services.processamento_service:_processar_arquivo:262 - Arquivo [DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02.csv] rejeitado: regras de coluna não atendidas.
+  Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+2026-08-11 17:05:09.552 | INFO    |src.services.processamento_service:_reprovar:533 - [Layout] Motivo da recusa gravado em [DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02_RECUSADO.md].
+2026-08-11 17:05:09.553 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - Inserindo 1 registro(s) em [tbl_rpa_log_detraf_despesa_arquivos].
+2026-08-11 17:05:09.559 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - 1 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_arquivos].
+2026-08-11 17:05:09.560 | WARNING |src.services.processamento_service:_processar_arquivo:264 - [RPA 1] 'DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02.csv' REPROVADO na validação — quarentena em [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA1\_QUARENTENA\202603\DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02].
+2026-08-11 17:05:09.568 | INFO    |comum.dominio.validacao_colunas:_validar_col_1_2_eot:548 - DataFrame reprovado na validação de EOT (Índice Coluna: 0). Encontrados códigos de operadoras que não existem no Anexo 5 cadastrado.
+2026-08-11 17:05:09.570 | INFO    |comum.dominio.validacao_colunas:validar_tudo_detalhado:248 - DataFrame reprovado na validação da Coluna 1 (EOT). Encontrados códigos de operadoras que não existem no Anexo 5 cadastrado.
+2026-08-11 17:05:09.580 | INFO    |src.services.processamento_service:_validar:482 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': False, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}
+2026-08-11 17:05:09.580 | WARNING |src.services.processamento_service:_processar_arquivo:262 - Arquivo [RECUSA_eot_desconhecida.csv] rejeitado: regras de coluna não atendidas.
+  Colunas 1 e 2 (EOT): há códigos de operadora (EOT) que não constam do Anexo 5 cadastrado.
+2026-08-11 17:05:09.583 | INFO    |src.services.operadora_service:obter_operadora:159 - Nome Fantasia não encontrado para o EOT [997]
+2026-08-11 17:05:09.588 | INFO    |src.services.processamento_service:_reprovar:533 - [Layout] Motivo da recusa gravado em [RECUSA_eot_desconhecida_RECUSADO.md].
+2026-08-11 17:05:09.589 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - Inserindo 1 registro(s) em [tbl_rpa_log_detraf_despesa_arquivos].
+2026-08-11 17:05:09.596 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - 1 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_arquivos].
+2026-08-11 17:05:09.596 | WARNING |src.services.processamento_service:_processar_arquivo:264 - [RPA 1] 'RECUSA_eot_desconhecida.csv' REPROVADO na validação — quarentena em [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA1\_QUARENTENA\202603\RECUSA_eot_desconhecida].
+2026-08-11 17:05:09.600 | WARNING |src.services.processamento_service:_processar_arquivo:262 - Arquivo [RECUSA_gh_invalido.csv] rejeitado: layout fora do padrão da V2.
+  posição 7 (GH): esperado S, R, N ou D, encontrado "X", "X", "X" [0/5 válidos]
+2026-08-11 17:05:09.605 | INFO    |src.services.processamento_service:_reprovar:533 - [Layout] Motivo da recusa gravado em [RECUSA_gh_invalido_RECUSADO.md].
+2026-08-11 17:05:09.605 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - Inserindo 1 registro(s) em [tbl_rpa_log_detraf_despesa_arquivos].
+2026-08-11 17:05:09.612 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - 1 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_arquivos].
+2026-08-11 17:05:09.612 | WARNING |src.services.processamento_service:_processar_arquivo:264 - [RPA 1] 'RECUSA_gh_invalido.csv' REPROVADO na validação — quarentena em [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA1\_QUARENTENA\202603\RECUSA_gh_invalido].
+2026-08-11 17:05:09.614 | WARNING |src.services.processamento_service:_processar_arquivo:262 - Arquivo [RECUSA_layout_5_colunas.csv] rejeitado: layout fora do padrão da V2.
+  esperadas ao menos 15 colunas, encontradas 5.
+2026-08-11 17:05:09.619 | INFO    |src.services.processamento_service:_reprovar:533 - [Layout] Motivo da recusa gravado em [RECUSA_layout_5_colunas_RECUSADO.md].
+2026-08-11 17:05:09.620 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - Inserindo 1 registro(s) em [tbl_rpa_log_detraf_despesa_arquivos].
+2026-08-11 17:05:09.626 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - 1 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_arquivos].
+2026-08-11 17:05:09.627 | WARNING |src.services.processamento_service:_processar_arquivo:264 - [RPA 1] 'RECUSA_layout_5_colunas.csv' REPROVADO na validação — quarentena em [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA1\_QUARENTENA\202603\RECUSA_layout_5_colunas].
+2026-08-11 17:05:09.639 | INFO    |comum.dominio.validacao_colunas:validar_tudo_detalhado:265 - DataFrame reprovado na validação da Coluna 3 (Referência). Esperado apenas: 202603
+2026-08-11 17:05:09.640 | INFO    |comum.dominio.validacao_colunas:validar_tudo_detalhado:266 - DataFrame reprovado na validação da Coluna 4 (Tráfego). Valores permitidos: {'202601', '202602', '202603'}
+2026-08-11 17:05:09.643 | INFO    |src.services.processamento_service:_validar:482 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': False, 'v_col4': False, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}
+2026-08-11 17:05:09.643 | WARNING |src.services.processamento_service:_processar_arquivo:262 - Arquivo [RECUSA_referencia_errada.csv] rejeitado: regras de coluna não atendidas.
+  Coluna 3 (Referência): a referência precisa ser 202603 (AAAAMM) em todas as linhas.
+  Coluna 4 (Tráfego): o mês de tráfego precisa ser um de 202601, 202602, 202603.
+2026-08-11 17:05:09.648 | INFO    |src.services.processamento_service:_reprovar:533 - [Layout] Motivo da recusa gravado em [RECUSA_referencia_errada_RECUSADO.md].
+2026-08-11 17:05:09.649 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - Inserindo 1 registro(s) em [tbl_rpa_log_detraf_despesa_arquivos].
+2026-08-11 17:05:09.654 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - 1 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_arquivos].
+2026-08-11 17:05:09.655 | WARNING |src.services.processamento_service:_processar_arquivo:264 - [RPA 1] 'RECUSA_referencia_errada.csv' REPROVADO na validação — quarentena em [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA1\_QUARENTENA\202603\RECUSA_referencia_errada].
+2026-08-11 17:05:09.655 | WARNING |comum.arquivos.gerenciador:carregar_dados:120 - Nenhum separador reconhecido nas primeiras 20 linhas de [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA1\Entrada\RECUSA_vazio.csv] — assumindo ';'. Se o arquivo usar outro, ele será lido como coluna única e reprovado na validação.
+2026-08-11 17:05:09.656 | WARNING |src.services.processamento_service:_processar_arquivo:261 - [RPA 1] Não foi possível ler [RECUSA_vazio.csv]: Erro ao processar a leitura do arquivo C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA1\Entrada\RECUSA_vazio.csv: No columns to parse from file
+2026-08-11 17:05:09.657 | WARNING |src.services.operadora_service:_extrair_eot_csv:77 - Nenhum separador reconhecido nas primeiras 20 linhas de [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA1\Entrada\RECUSA_vazio.csv] — assumindo ';'. Se o arquivo usar outro, ele será lido como coluna única e reprovado na validação.
+2026-08-11 17:05:09.663 | INFO    |src.services.processamento_service:_reprovar:533 - [Layout] Motivo da recusa gravado em [RECUSA_vazio_RECUSADO.md].
+2026-08-11 17:05:09.664 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - Inserindo 1 registro(s) em [tbl_rpa_log_detraf_despesa_arquivos].
+2026-08-11 17:05:09.670 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - 1 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_arquivos].
+2026-08-11 17:05:09.670 | WARNING |src.services.processamento_service:_processar_arquivo:264 - [RPA 1] 'RECUSA_vazio.csv' REPROVADO na validação — quarentena em [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA1\_QUARENTENA\202603\RECUSA_vazio].
+2026-08-11 17:05:09.696 | INFO    |src.services.processamento_service:_validar:482 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}
+2026-08-11 17:05:09.702 | INFO    |src.services.processamento_service:executar:145 - Processado com sucesso: VALIDO_algar.csv (operadora identificada via 'eot')
+2026-08-11 17:05:09.725 | INFO    |src.services.processamento_service:_validar:482 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}
+2026-08-11 17:05:09.729 | INFO    |src.services.processamento_service:executar:145 - Processado com sucesso: VALIDO_ponto_e_virgula.csv (operadora identificada via 'eot')
+2026-08-11 17:05:09.729 | WARNING |src.services.notificacao_operadora:notificar_arquivos_recusados:74 - [RPA 1] 'DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_032026_V02.csv' foi reprovado, mas não há e-mail de origem para responder (sem entry_id e sem rastreamento). É o esperado numa pasta preparada à mão.
+2026-08-11 17:05:09.730 | INFO    |src.services.processamento_service:executar:151 - [RPA 1] E-mail de origem de 'DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_032026_V02.csv': 1 arquivo(s) recusado(s), operadora NÃO notificada.
+2026-08-11 17:05:09.730 | WARNING |src.services.notificacao_operadora:notificar_arquivos_recusados:74 - [RPA 1] 'DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02.csv' foi reprovado, mas não há e-mail de origem para responder (sem entry_id e sem rastreamento). É o esperado numa pasta preparada à mão.
+2026-08-11 17:05:09.730 | INFO    |src.services.processamento_service:executar:151 - [RPA 1] E-mail de origem de 'DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02.csv': 1 arquivo(s) recusado(s), operadora NÃO notificada.
+2026-08-11 17:05:09.730 | WARNING |src.services.notificacao_operadora:notificar_arquivos_recusados:74 - [RPA 1] 'RECUSA_eot_desconhecida.csv' foi reprovado, mas não há e-mail de origem para responder (sem entry_id e sem rastreamento). É o esperado numa pasta preparada à mão.
+2026-08-11 17:05:09.730 | INFO    |src.services.processamento_service:executar:151 - [RPA 1] E-mail de origem de 'RECUSA_eot_desconhecida.csv': 1 arquivo(s) recusado(s), operadora NÃO notificada.
+2026-08-11 17:05:09.731 | WARNING |src.services.notificacao_operadora:notificar_arquivos_recusados:74 - [RPA 1] 'RECUSA_gh_invalido.csv' foi reprovado, mas não há e-mail de origem para responder (sem entry_id e sem rastreamento). É o esperado numa pasta preparada à mão.
+2026-08-11 17:05:09.731 | INFO    |src.services.processamento_service:executar:151 - [RPA 1] E-mail de origem de 'RECUSA_gh_invalido.csv': 1 arquivo(s) recusado(s), operadora NÃO notificada.
+2026-08-11 17:05:09.731 | WARNING |src.services.notificacao_operadora:notificar_arquivos_recusados:74 - [RPA 1] 'RECUSA_layout_5_colunas.csv' foi reprovado, mas não há e-mail de origem para responder (sem entry_id e sem rastreamento). É o esperado numa pasta preparada à mão.
+2026-08-11 17:05:09.731 | INFO    |src.services.processamento_service:executar:151 - [RPA 1] E-mail de origem de 'RECUSA_layout_5_colunas.csv': 1 arquivo(s) recusado(s), operadora NÃO notificada.
+2026-08-11 17:05:09.732 | WARNING |src.services.notificacao_operadora:notificar_arquivos_recusados:74 - [RPA 1] 'RECUSA_referencia_errada.csv' foi reprovado, mas não há e-mail de origem para responder (sem entry_id e sem rastreamento). É o esperado numa pasta preparada à mão.
+2026-08-11 17:05:09.732 | INFO    |src.services.processamento_service:executar:151 - [RPA 1] E-mail de origem de 'RECUSA_referencia_errada.csv': 1 arquivo(s) recusado(s), operadora NÃO notificada.
+2026-08-11 17:05:09.732 | WARNING |src.services.notificacao_operadora:notificar_arquivos_recusados:74 - [RPA 1] 'RECUSA_vazio.csv' foi reprovado, mas não há e-mail de origem para responder (sem entry_id e sem rastreamento). É o esperado numa pasta preparada à mão.
+2026-08-11 17:05:09.732 | INFO    |src.services.processamento_service:executar:151 - [RPA 1] E-mail de origem de 'RECUSA_vazio.csv': 1 arquivo(s) recusado(s), operadora NÃO notificada.
+2026-08-11 17:05:09.732 | INFO    |src.services.processamento_service:executar:153 - Resumo — Sucesso: 2 | Reprovados: 7 | Não identificados: 0 | Erros: 0
+2026-08-11 17:05:09.732 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Arquivos salvos:          2
+2026-08-11 17:05:09.733 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Reprovados na validação:  7
+2026-08-11 17:05:09.733 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Não identificados:        0
+2026-08-11 17:05:09.733 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Com erro:                 0
+2026-08-11 17:05:09.733 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Reprovados (vão para a quarentena, não para a operadora):
+2026-08-11 17:05:09.733 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_032026_V02.csv (Algar)
+2026-08-11 17:05:09.733 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+2026-08-11 17:05:09.733 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-11 17:05:09.733 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02.csv (Algar)
+2026-08-11 17:05:09.733 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+2026-08-11 17:05:09.733 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-11 17:05:09.733 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   RECUSA_eot_desconhecida.csv (Claro STFC)
+2026-08-11 17:05:09.733 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       Colunas 1 e 2 (EOT): há códigos de operadora (EOT) que não constam do Anexo 5 cadastrado.
+2026-08-11 17:05:09.734 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-11 17:05:09.734 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   RECUSA_gh_invalido.csv (Algar)
+2026-08-11 17:05:09.734 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 7 (GH): esperado S, R, N ou D, encontrado "X", "X", "X" [0/5 válidos]
+2026-08-11 17:05:09.734 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-11 17:05:09.734 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   RECUSA_layout_5_colunas.csv (Algar)
+2026-08-11 17:05:09.734 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       esperadas ao menos 15 colunas, encontradas 5.
+2026-08-11 17:05:09.734 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-11 17:05:09.734 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   RECUSA_referencia_errada.csv (Algar)
+2026-08-11 17:05:09.734 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       Coluna 3 (Referência): a referência precisa ser 202603 (AAAAMM) em todas as linhas.
+2026-08-11 17:05:09.734 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-11 17:05:09.734 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   RECUSA_vazio.csv (Claro STFC)
+2026-08-11 17:05:09.734 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-11 17:05:09.734 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-11 17:05:09.735 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Pasta: C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA1\Operadoras
+2026-08-11 17:05:09.735 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] ────────────────────────────────────────────────────────────
+2026-08-11 17:05:09.735 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Esta é a última etapa da execução.
+2026-08-11 17:05:09.735 | INFO    |__main__:main:94 - Aplicação finalizada
+2026-08-11 17:05:09.736 | INFO    |__main__:main:110 - [Diagnóstico] Etapas desta execução em [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA1\logs\DESKTOP-64TNDKM\rpa1_captura\diagnosticos\2026-08-11_17-05-08.txt].
+2026-08-11 17:05:09.737 | INFO    |__main__:<module>:118 - [RPA 1] Diagnóstico das etapas em [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA1\logs\DESKTOP-64TNDKM\rpa1_captura\diagnosticos\2026-08-11_17-05-08.txt]
