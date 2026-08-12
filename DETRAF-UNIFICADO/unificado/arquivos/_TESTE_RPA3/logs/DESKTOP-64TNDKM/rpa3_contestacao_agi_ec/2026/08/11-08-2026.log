@@ -1,0 +1,214 @@
+2026-08-11 17:53:55.503 | INFO    |__main__:<module>:164 - [RPA 3] robô: rpa3_contestacao_agi_ec
+2026-08-11 17:53:55.503 | INFO    |__main__:<module>:164 - [RPA 3] modo: DEV  (de ENV)
+2026-08-11 17:53:55.503 | INFO    |__main__:<module>:164 - [RPA 3] log: nível INFO (de LOG_LEVEL), diagnose ligado
+2026-08-11 17:53:55.503 | INFO    |__main__:<module>:164 - [RPA 3] competência: 202603  (forçada por COMPETENCIA)
+2026-08-11 17:53:55.504 | INFO    |__main__:<module>:164 - [RPA 3] banco: SQLite [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA3\banco.db] (de CAMINHO_SQLITE)
+2026-08-11 17:53:55.504 | INFO    |__main__:<module>:164 - [RPA 3] AGI: ambiente [producao] host [10.238.6.120] (de AGI_AMBIENTE) | executável [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
+2026-08-11 17:53:55.504 | INFO    |__main__:<module>:164 - [RPA 3] EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: desligado | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado | download SFTP: desligado
+2026-08-11 17:53:55.504 | INFO    |__main__:<module>:164 - [RPA 3] parâmetros: referência forçada: 202603; apenas as operadoras: Algar, SemExpectativa, SemDetraf, SemContestacao; apenas a etapa: artefatos; DRY-RUN: todos os efeitos externos desligados
+2026-08-11 17:53:56.179 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-11 17:53:56.179 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA3\banco.db]
+2026-08-11 17:53:56.254 | INFO    |__main__:main:127 - [STEP] Iniciando: run
+2026-08-11 17:53:56.254 | INFO    |src.main.process_handle:run:31 - [STEP] Iniciando: GeracaoAgiController.gerar_artefatos
+2026-08-11 17:53:56.255 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 3] 4 operadora(s) em 202603: Algar, SemExpectativa, SemDetraf, SemContestacao.
+2026-08-11 17:53:56.255 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_detraf_mapeamento_descritores]
+2026-08-11 17:53:56.258 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_detraf_mapeamento_descritores] carregada | Linhas: 25 | Colunas: 8
+2026-08-11 17:53:56.263 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:558 - [STEP] Iniciando: consolidar_detrafs_operadora
+2026-08-11 17:53:56.263 | INFO    |src.services.consolidacao_contestacao:consolidar_detrafs_operadora:174 - [Consolidação] 1 arquivo(s) encontrado(s) em [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA3\Operadoras\Algar\2026\202603\Detrafs Recebidos].
+2026-08-11 17:53:56.267 | INFO    |src.services.consolidacao_contestacao:consolidar_detrafs_operadora:177 - [Consolidação] [DETRAF_ALGAR.csv]: 3 linha(s) -> 3 após remover totais.
+2026-08-11 17:53:56.267 | INFO    |src.services.consolidacao_contestacao:consolidar_detrafs_operadora:177 - [Consolidação] Consolidado: 3 linha(s) de 1 arquivo(s).
+2026-08-11 17:53:56.267 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:558 - [STEP] Finalizando: consolidar_detrafs_operadora | Tempo gasto: 0.0s
+2026-08-11 17:53:56.268 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:574 - [STEP] Iniciando: consolidar_expectativa_vivo
+2026-08-11 17:53:56.268 | INFO    |src.services.consolidacao_contestacao:consolidar_expectativa_vivo:207 - [Consolidação] 1 arquivo(s) encontrado(s) em [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA3\Operadoras\Algar\2026\202603\Detrafs Enviados].
+2026-08-11 17:53:56.270 | INFO    |src.services.consolidacao_contestacao:consolidar_expectativa_vivo:211 - [Consolidação] [EXPECTATIVA_D.csv]: 3 linha(s) -> 3 após remover totais.
+2026-08-11 17:53:56.270 | INFO    |src.services.consolidacao_contestacao:consolidar_expectativa_vivo:211 - [Consolidação] Consolidado: 3 linha(s) de 1 arquivo(s).
+2026-08-11 17:53:56.271 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:574 - [STEP] Finalizando: consolidar_expectativa_vivo | Tempo gasto: 0.0s
+2026-08-11 17:53:56.271 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:586 - [STEP] Iniciando: montar_contest
+2026-08-11 17:53:56.286 | INFO    |comum.utils.decoradores:wrapper:22 - [Consolidação] Contest: 1 combinação(ões) analisada(s).
+2026-08-11 17:53:56.287 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:586 - [STEP] Finalizando: montar_contest | Tempo gasto: 0.02s
+2026-08-11 17:53:56.287 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:595 - [STEP] Iniciando: GeracaoAgiController.atualizar_despesa_contestacao
+2026-08-11 17:53:56.287 | INFO    |src.controllers.geracao_agi_controller:atualizar_despesa_contestacao:1066 - [STEP] Iniciando: preparar_atualizacoes_despesa_contestacao
+2026-08-11 17:53:56.287 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-11 17:53:56.289 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 37 | Colunas: 19
+2026-08-11 17:53:56.293 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-19 Despesa Contestação] 1 atualização(ões) preparada(s).
+2026-08-11 17:53:56.293 | INFO    |src.controllers.geracao_agi_controller:atualizar_despesa_contestacao:1066 - [STEP] Finalizando: preparar_atualizacoes_despesa_contestacao | Tempo gasto: 0.01s
+2026-08-11 17:53:56.293 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] A tabela 'tbl_rpa_log_detraf_despesa_contestacao' não tem a(s) coluna(s) vb_contestacao — NÃO gravada(s). As demais seguem normalmente. Um ALTER TABLE resolve; ver pendencias-para-o-cliente.md (Q24).
+2026-08-11 17:53:56.303 | INFO    |comum.dados.repositorio_tabelas:_atualizar_contestacao_em_lote:976 - 1 linha(s) atualizada(s) em [tbl_rpa_log_detraf_despesa_contestacao].
+2026-08-11 17:53:56.303 | INFO    |comum.dados.repositorio_cache:recarregar_cache_local:375 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-11 17:53:56.305 | INFO    |comum.dados.repositorio_cache:recarregar_cache_local:375 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 37 | Colunas: 19
+2026-08-11 17:53:56.305 | INFO    |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] 1 linha(s) atualizada(s), 0 chave(s) ausente(s).
+2026-08-11 17:53:56.305 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:595 - [STEP] Finalizando: GeracaoAgiController.atualizar_despesa_contestacao | Tempo gasto: 0.02s
+2026-08-11 17:53:56.305 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:633 - [STEP] Iniciando: montar_linhas_ext
+2026-08-11 17:53:56.310 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-12 EXT] 3 linha(s) montada(s).
+2026-08-11 17:53:56.311 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:633 - [STEP] Finalizando: montar_linhas_ext | Tempo gasto: 0.01s
+2026-08-11 17:53:56.311 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:639 - [STEP] Iniciando: gerar_arquivo_ext
+2026-08-11 17:53:56.494 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-12 EXT] Arquivo gravado em [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA3\Operadoras\Algar\2026\202603\AGI\DE_AGI_D_202603_TBRA_X_ALGAR_EXT.xlsx].
+2026-08-11 17:53:56.494 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:639 - [STEP] Finalizando: gerar_arquivo_ext | Tempo gasto: 0.18s
+2026-08-11 17:53:56.494 | INFO    |src.controllers.geracao_agi_controller:_gerar_int:648 - [STEP] Iniciando: montar_linhas_int
+2026-08-11 17:53:56.502 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-13 INT] 3 linha(s) montada(s) (COM retenção).
+2026-08-11 17:53:56.502 | INFO    |src.controllers.geracao_agi_controller:_gerar_int:648 - [STEP] Finalizando: montar_linhas_int | Tempo gasto: 0.01s
+2026-08-11 17:53:56.503 | INFO    |src.controllers.geracao_agi_controller:_gerar_int:654 - [STEP] Iniciando: gerar_arquivo_int
+2026-08-11 17:53:56.512 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-13 INT] Arquivo gravado em [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA3\Operadoras\Algar\2026\202603\AGI\DE_AGI_D_202603_TBRA_X_ALGAR_INT.xlsx].
+2026-08-11 17:53:56.512 | INFO    |src.controllers.geracao_agi_controller:_gerar_int:654 - [STEP] Finalizando: gerar_arquivo_int | Tempo gasto: 0.01s
+2026-08-11 17:53:56.512 | INFO    |src.controllers.geracao_agi_controller:_gerar_env_e_carta:682 - [STEP] Iniciando: montar_abas_env
+2026-08-11 17:53:56.519 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-14 _EXP] Contest: 1 linha(s) contestada(s); TBRA: 3 linha(s) correspondente(s).
+2026-08-11 17:53:56.520 | INFO    |src.controllers.geracao_agi_controller:_gerar_env_e_carta:682 - [STEP] Finalizando: montar_abas_env | Tempo gasto: 0.01s
+2026-08-11 17:53:56.520 | INFO    |src.controllers.geracao_agi_controller:_gerar_env_e_carta:690 - [STEP] Iniciando: gerar_arquivo_env
+2026-08-11 17:53:56.530 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-14 _EXP] Arquivo gravado em [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA3\Operadoras\Algar\2026\202603\Contestações\Base Contestação_Algar_202603_EXP.xlsx].
+2026-08-11 17:53:56.531 | INFO    |src.controllers.geracao_agi_controller:_gerar_env_e_carta:690 - [STEP] Finalizando: gerar_arquivo_env | Tempo gasto: 0.01s
+2026-08-11 17:53:56.537 | INFO    |src.controllers.geracao_agi_controller:_emitir_cartas:756 - [STEP] Iniciando: obter_proximo_numero_carta
+2026-08-11 17:53:56.538 | WARNING |comum.utils.decoradores:wrapper:22 - [HU-14] Nenhuma carta CT em [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA3\CT\2026] — iniciando a sequência em 1 (CT_NUMERO_INICIAL).
+2026-08-11 17:53:56.538 | INFO    |src.controllers.geracao_agi_controller:_emitir_cartas:756 - [STEP] Finalizando: obter_proximo_numero_carta | Tempo gasto: 0.0s
+2026-08-11 17:53:56.538 | INFO    |src.controllers.geracao_agi_controller:_emitir_cartas:764 - [STEP] Iniciando: montar_tabelas_carta
+2026-08-11 17:53:56.541 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-14 Carta] 1 tabela(s) de remuneração montada(s).
+2026-08-11 17:53:56.541 | INFO    |src.controllers.geracao_agi_controller:_emitir_cartas:764 - [STEP] Finalizando: montar_tabelas_carta | Tempo gasto: 0.0s
+2026-08-11 17:53:56.541 | INFO    |src.controllers.geracao_agi_controller:_emitir_cartas:758 - [STEP] Iniciando: renderizar_carta
+2026-08-11 17:53:56.559 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-14 Carta] Carta CT-1 renderizada (1 tabela(s)).
+2026-08-11 17:53:56.559 | INFO    |src.controllers.geracao_agi_controller:_emitir_cartas:758 - [STEP] Finalizando: renderizar_carta | Tempo gasto: 0.02s
+2026-08-11 17:53:56.559 | INFO    |src.controllers.geracao_agi_controller:_emitir_cartas:768 - [STEP] Iniciando: gerar_arquivo_carta
+2026-08-11 17:53:56.574 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-14 Carta] Carta gravada em [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA3\Operadoras\Algar\2026\202603\Contestações\CT - 1.docx], cópia em [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA3\CT\2026\CT - 1.docx].
+2026-08-11 17:53:56.574 | INFO    |src.controllers.geracao_agi_controller:_emitir_cartas:768 - [STEP] Finalizando: gerar_arquivo_carta | Tempo gasto: 0.02s
+2026-08-11 17:53:56.574 | INFO    |src.controllers.geracao_agi_controller:_gerar_env_e_carta:710 - [RPA 3] Algar: carta CT 1 — COM retenção.
+2026-08-11 17:53:56.575 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:617 - [STEP] Iniciando: GeracaoAgiController.gerar_cont_proc
+2026-08-11 17:53:56.575 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1030 - [STEP] Iniciando: montar_linhas_cont_proc
+2026-08-11 17:53:56.575 | INFO    |src.services.geracao_cont_proc:montar_linhas_cont_proc:224 - [STEP] Iniciando: selecionar_linhas_contestadas
+2026-08-11 17:53:56.579 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-16 CONT_PROC] 1 linha(s) contestada(s).
+2026-08-11 17:53:56.579 | INFO    |src.services.geracao_cont_proc:montar_linhas_cont_proc:224 - [STEP] Finalizando: selecionar_linhas_contestadas | Tempo gasto: 0.0s
+2026-08-11 17:53:56.580 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-16 CONT_PROC] 1 linha(s) montada(s) (T-100+T-101 completos).
+2026-08-11 17:53:56.580 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1030 - [STEP] Finalizando: montar_linhas_cont_proc | Tempo gasto: 0.01s
+2026-08-11 17:53:56.581 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1036 - [STEP] Iniciando: gerar_arquivo_cont_proc
+2026-08-11 17:53:56.589 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-16 CONT_PROC] Arquivo gravado em [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA3\Operadoras\Algar\2026\202603\AGI\CONT_PROC_MASCARA_Algar_202603.xlsx].
+2026-08-11 17:53:56.589 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1036 - [STEP] Finalizando: gerar_arquivo_cont_proc | Tempo gasto: 0.01s
+2026-08-11 17:53:56.589 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1046 - [STEP] Iniciando: selecionar_linhas_contestadas
+2026-08-11 17:53:56.593 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-16 CONT_PROC] 1 linha(s) contestada(s).
+2026-08-11 17:53:56.593 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1046 - [STEP] Finalizando: selecionar_linhas_contestadas | Tempo gasto: 0.0s
+2026-08-11 17:53:56.596 | INFO    |comum.dados.repositorio_tabelas:_atualizar_contestacao_em_lote:976 - 1 linha(s) atualizada(s) em [tbl_rpa_log_detraf_despesa_contestacao].
+2026-08-11 17:53:56.597 | INFO    |comum.dados.repositorio_cache:recarregar_cache_local:375 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-11 17:53:56.599 | INFO    |comum.dados.repositorio_cache:recarregar_cache_local:375 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 37 | Colunas: 19
+2026-08-11 17:53:56.599 | INFO    |comum.dados.repositorio_tabelas:atualizar_tipo_contestacao:1046 - [HU-16 Writeback tipo_contestacao] 1 linha(s) atualizada(s), 0 chave(s) ausente(s).
+2026-08-11 17:53:56.600 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:617 - [STEP] Finalizando: GeracaoAgiController.gerar_cont_proc | Tempo gasto: 0.03s
+2026-08-11 17:53:56.600 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:558 - [STEP] Iniciando: consolidar_detrafs_operadora
+2026-08-11 17:53:56.600 | INFO    |src.services.consolidacao_contestacao:consolidar_detrafs_operadora:174 - [Consolidação] 1 arquivo(s) encontrado(s) em [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA3\Operadoras\SemExpectativa\2026\202603\Detrafs Recebidos].
+2026-08-11 17:53:56.603 | INFO    |src.services.consolidacao_contestacao:consolidar_detrafs_operadora:177 - [Consolidação] [DETRAF_SEM_EXPECTATIVA.csv]: 1 linha(s) -> 1 após remover totais.
+2026-08-11 17:53:56.603 | INFO    |src.services.consolidacao_contestacao:consolidar_detrafs_operadora:177 - [Consolidação] Consolidado: 1 linha(s) de 1 arquivo(s).
+2026-08-11 17:53:56.603 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:558 - [STEP] Finalizando: consolidar_detrafs_operadora | Tempo gasto: 0.0s
+2026-08-11 17:53:56.603 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:574 - [STEP] Iniciando: consolidar_expectativa_vivo
+2026-08-11 17:53:56.603 | WARNING |src.services.consolidacao_contestacao:consolidar_expectativa_vivo:207 - Pasta de Detrafs inexistente: [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA3\Operadoras\SemExpectativa\2026\202603\Detrafs Enviados]
+2026-08-11 17:53:56.603 | WARNING |comum.utils.decoradores:wrapper:22 - [Consolidação] Nenhum arquivo de expectativa (_D_) em [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA3\Operadoras\SemExpectativa\2026\202603\Detrafs Enviados].
+2026-08-11 17:53:56.604 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:574 - [STEP] Finalizando: consolidar_expectativa_vivo | Tempo gasto: 0.0s
+2026-08-11 17:53:56.604 | WARNING |src.controllers.geracao_agi_controller:_gerar_todos:269 - [RPA 3] SemExpectativa: sem expectativa Vivo em 202603; a comparação sairá com o lado da Vivo zerado.
+2026-08-11 17:53:56.604 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:586 - [STEP] Iniciando: montar_contest
+2026-08-11 17:53:56.612 | INFO    |comum.utils.decoradores:wrapper:22 - [Consolidação] Contest: 1 combinação(ões) analisada(s).
+2026-08-11 17:53:56.613 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:586 - [STEP] Finalizando: montar_contest | Tempo gasto: 0.01s
+2026-08-11 17:53:56.613 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:595 - [STEP] Iniciando: GeracaoAgiController.atualizar_despesa_contestacao
+2026-08-11 17:53:56.613 | INFO    |src.controllers.geracao_agi_controller:atualizar_despesa_contestacao:1066 - [STEP] Iniciando: preparar_atualizacoes_despesa_contestacao
+2026-08-11 17:53:56.617 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=031, tbra=010, referencia=202603, trafego=202603, remuneracao=TU-RL] — tratado como sem contestação.
+2026-08-11 17:53:56.618 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-19 Despesa Contestação] 1 atualização(ões) preparada(s).
+2026-08-11 17:53:56.618 | INFO    |src.controllers.geracao_agi_controller:atualizar_despesa_contestacao:1066 - [STEP] Finalizando: preparar_atualizacoes_despesa_contestacao | Tempo gasto: 0.01s
+2026-08-11 17:53:56.618 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] A tabela 'tbl_rpa_log_detraf_despesa_contestacao' não tem a(s) coluna(s) vb_contestacao — NÃO gravada(s). As demais seguem normalmente. Um ALTER TABLE resolve; ver pendencias-para-o-cliente.md (Q24).
+2026-08-11 17:53:56.621 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': '031', 'eot_tbra': '010', 'referencia': '202603', 'trafego': '202603', 'remuneracoes': 'TU-RL'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-11 17:53:56.621 | INFO    |comum.dados.repositorio_cache:recarregar_cache_local:375 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-11 17:53:56.623 | INFO    |comum.dados.repositorio_cache:recarregar_cache_local:375 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 37 | Colunas: 19
+2026-08-11 17:53:56.623 | INFO    |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] 0 linha(s) atualizada(s), 1 chave(s) ausente(s).
+2026-08-11 17:53:56.623 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:595 - [STEP] Finalizando: GeracaoAgiController.atualizar_despesa_contestacao | Tempo gasto: 0.01s
+2026-08-11 17:53:56.623 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:633 - [STEP] Iniciando: montar_linhas_ext
+2026-08-11 17:53:56.627 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=031, tbra=010, referencia=202603, trafego=202603, remuneracao=TU-RL] — tratado como sem contestação.
+2026-08-11 17:53:56.629 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-12 EXT] 1 linha(s) montada(s).
+2026-08-11 17:53:56.629 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:633 - [STEP] Finalizando: montar_linhas_ext | Tempo gasto: 0.01s
+2026-08-11 17:53:56.629 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:639 - [STEP] Iniciando: gerar_arquivo_ext
+2026-08-11 17:53:56.638 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-12 EXT] Arquivo gravado em [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA3\Operadoras\SemExpectativa\2026\202603\AGI\DE_AGI_D_202603_TBRA_X_SEMEXPECTATIVA_EXT.xlsx].
+2026-08-11 17:53:56.638 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:639 - [STEP] Finalizando: gerar_arquivo_ext | Tempo gasto: 0.01s
+2026-08-11 17:53:56.638 | WARNING |src.controllers.geracao_agi_controller:_gerar_para_operadora:606 - [RPA 3] SemExpectativa: sem expectativa Vivo — _EXP e carta não serão gerados. Confira a pasta 'Detrafs Enviados' da operadora.
+2026-08-11 17:53:56.638 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:617 - [STEP] Iniciando: GeracaoAgiController.gerar_cont_proc
+2026-08-11 17:53:56.638 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1030 - [STEP] Iniciando: montar_linhas_cont_proc
+2026-08-11 17:53:56.639 | INFO    |src.services.geracao_cont_proc:montar_linhas_cont_proc:224 - [STEP] Iniciando: selecionar_linhas_contestadas
+2026-08-11 17:53:56.642 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=031, tbra=010, referencia=202603, trafego=202603, remuneracao=TU-RL] — tratado como sem contestação.
+2026-08-11 17:53:56.643 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-16 CONT_PROC] Nenhuma combinação com sinal do analista (todas 'sem contestação' apesar da variação).
+2026-08-11 17:53:56.643 | INFO    |src.services.geracao_cont_proc:montar_linhas_cont_proc:224 - [STEP] Finalizando: selecionar_linhas_contestadas | Tempo gasto: 0.0s
+2026-08-11 17:53:56.644 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1030 - [STEP] Finalizando: montar_linhas_cont_proc | Tempo gasto: 0.01s
+2026-08-11 17:53:56.644 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1036 - [STEP] Iniciando: gerar_arquivo_cont_proc
+2026-08-11 17:53:56.644 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-16 CONT_PROC] Nada a gravar (nenhuma linha a contestar).
+2026-08-11 17:53:56.644 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1036 - [STEP] Finalizando: gerar_arquivo_cont_proc | Tempo gasto: 0.0s
+2026-08-11 17:53:56.644 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:617 - [STEP] Finalizando: GeracaoAgiController.gerar_cont_proc | Tempo gasto: 0.01s
+2026-08-11 17:53:56.644 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:558 - [STEP] Iniciando: consolidar_detrafs_operadora
+2026-08-11 17:53:56.645 | INFO    |src.services.consolidacao_contestacao:consolidar_detrafs_operadora:174 - [Consolidação] 0 arquivo(s) encontrado(s) em [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA3\Operadoras\SemDetraf\2026\202603\Detrafs Recebidos].
+2026-08-11 17:53:56.645 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:558 - [STEP] Finalizando: consolidar_detrafs_operadora | Tempo gasto: 0.0s
+2026-08-11 17:53:56.645 | WARNING |src.controllers.geracao_agi_controller:_gerar_todos:269 - [RPA 3] SemDetraf: nenhum Detraf em 202603 — operadora pulada.
+2026-08-11 17:53:56.645 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:558 - [STEP] Iniciando: consolidar_detrafs_operadora
+2026-08-11 17:53:56.646 | INFO    |src.services.consolidacao_contestacao:consolidar_detrafs_operadora:174 - [Consolidação] 1 arquivo(s) encontrado(s) em [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA3\Operadoras\SemContestacao\2026\202603\Detrafs Recebidos].
+2026-08-11 17:53:56.649 | INFO    |src.services.consolidacao_contestacao:consolidar_detrafs_operadora:177 - [Consolidação] [DETRAF_SEM_CONTESTACAO.csv]: 1 linha(s) -> 1 após remover totais.
+2026-08-11 17:53:56.649 | INFO    |src.services.consolidacao_contestacao:consolidar_detrafs_operadora:177 - [Consolidação] Consolidado: 1 linha(s) de 1 arquivo(s).
+2026-08-11 17:53:56.649 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:558 - [STEP] Finalizando: consolidar_detrafs_operadora | Tempo gasto: 0.0s
+2026-08-11 17:53:56.650 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:574 - [STEP] Iniciando: consolidar_expectativa_vivo
+2026-08-11 17:53:56.650 | INFO    |src.services.consolidacao_contestacao:consolidar_expectativa_vivo:207 - [Consolidação] 1 arquivo(s) encontrado(s) em [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA3\Operadoras\SemContestacao\2026\202603\Detrafs Enviados].
+2026-08-11 17:53:56.652 | INFO    |src.services.consolidacao_contestacao:consolidar_expectativa_vivo:211 - [Consolidação] [EXPECTATIVA_D.csv]: 1 linha(s) -> 1 após remover totais.
+2026-08-11 17:53:56.652 | INFO    |src.services.consolidacao_contestacao:consolidar_expectativa_vivo:211 - [Consolidação] Consolidado: 1 linha(s) de 1 arquivo(s).
+2026-08-11 17:53:56.652 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:574 - [STEP] Finalizando: consolidar_expectativa_vivo | Tempo gasto: 0.0s
+2026-08-11 17:53:56.653 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:586 - [STEP] Iniciando: montar_contest
+2026-08-11 17:53:56.665 | INFO    |comum.utils.decoradores:wrapper:22 - [Consolidação] Contest: 1 combinação(ões) analisada(s).
+2026-08-11 17:53:56.666 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:586 - [STEP] Finalizando: montar_contest | Tempo gasto: 0.01s
+2026-08-11 17:53:56.666 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:595 - [STEP] Iniciando: GeracaoAgiController.atualizar_despesa_contestacao
+2026-08-11 17:53:56.666 | INFO    |src.controllers.geracao_agi_controller:atualizar_despesa_contestacao:1066 - [STEP] Iniciando: preparar_atualizacoes_despesa_contestacao
+2026-08-11 17:53:56.668 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=032, tbra=010, referencia=202603, trafego=202603, remuneracao=TU-RL] — tratado como sem contestação.
+2026-08-11 17:53:56.670 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-19 Despesa Contestação] 1 atualização(ões) preparada(s).
+2026-08-11 17:53:56.670 | INFO    |src.controllers.geracao_agi_controller:atualizar_despesa_contestacao:1066 - [STEP] Finalizando: preparar_atualizacoes_despesa_contestacao | Tempo gasto: 0.0s
+2026-08-11 17:53:56.670 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] A tabela 'tbl_rpa_log_detraf_despesa_contestacao' não tem a(s) coluna(s) vb_contestacao — NÃO gravada(s). As demais seguem normalmente. Um ALTER TABLE resolve; ver pendencias-para-o-cliente.md (Q24).
+2026-08-11 17:53:56.672 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': '032', 'eot_tbra': '010', 'referencia': '202603', 'trafego': '202603', 'remuneracoes': 'TU-RL'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-11 17:53:56.673 | INFO    |comum.dados.repositorio_cache:recarregar_cache_local:375 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-11 17:53:56.674 | INFO    |comum.dados.repositorio_cache:recarregar_cache_local:375 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 37 | Colunas: 19
+2026-08-11 17:53:56.674 | INFO    |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] 0 linha(s) atualizada(s), 1 chave(s) ausente(s).
+2026-08-11 17:53:56.675 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:595 - [STEP] Finalizando: GeracaoAgiController.atualizar_despesa_contestacao | Tempo gasto: 0.01s
+2026-08-11 17:53:56.675 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:633 - [STEP] Iniciando: montar_linhas_ext
+2026-08-11 17:53:56.679 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=032, tbra=010, referencia=202603, trafego=202603, remuneracao=TU-RL] — tratado como sem contestação.
+2026-08-11 17:53:56.680 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-12 EXT] 1 linha(s) montada(s).
+2026-08-11 17:53:56.680 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:633 - [STEP] Finalizando: montar_linhas_ext | Tempo gasto: 0.01s
+2026-08-11 17:53:56.680 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:639 - [STEP] Iniciando: gerar_arquivo_ext
+2026-08-11 17:53:56.690 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-12 EXT] Arquivo gravado em [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA3\Operadoras\SemContestacao\2026\202603\AGI\DE_AGI_D_202603_TBRA_X_SEMCONTESTACAO_EXT.xlsx].
+2026-08-11 17:53:56.691 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:639 - [STEP] Finalizando: gerar_arquivo_ext | Tempo gasto: 0.01s
+2026-08-11 17:53:56.691 | INFO    |src.controllers.geracao_agi_controller:_gerar_int:648 - [STEP] Iniciando: montar_linhas_int
+2026-08-11 17:53:56.695 | INFO    |src.services.geracao_int:montar_linhas_int:96 - Sinal de contestação não encontrado para [operadora=032, tbra=010, referencia=202603, trafego=202603, remuneracao=TU-RL] — tratado como sem contestação.
+2026-08-11 17:53:56.696 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-13 INT] Nenhuma linha COM retenção — INT não se aplica a este cenário.
+2026-08-11 17:53:56.696 | INFO    |src.controllers.geracao_agi_controller:_gerar_int:648 - [STEP] Finalizando: montar_linhas_int | Tempo gasto: 0.0s
+2026-08-11 17:53:56.696 | INFO    |src.controllers.geracao_agi_controller:_gerar_int:654 - [STEP] Iniciando: gerar_arquivo_int
+2026-08-11 17:53:56.696 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-13 INT] Nada a gravar (sem linhas COM retenção) — arquivo não criado.
+2026-08-11 17:53:56.696 | INFO    |src.controllers.geracao_agi_controller:_gerar_int:654 - [STEP] Finalizando: gerar_arquivo_int | Tempo gasto: 0.0s
+2026-08-11 17:53:56.696 | INFO    |src.controllers.geracao_agi_controller:_gerar_env_e_carta:682 - [STEP] Iniciando: montar_abas_env
+2026-08-11 17:53:56.697 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-14 _EXP] Nenhuma linha contestada — abas ficam vazias.
+2026-08-11 17:53:56.699 | INFO    |src.controllers.geracao_agi_controller:_gerar_env_e_carta:682 - [STEP] Finalizando: montar_abas_env | Tempo gasto: 0.0s
+2026-08-11 17:53:56.699 | INFO    |src.controllers.geracao_agi_controller:_gerar_env_e_carta:690 - [STEP] Iniciando: gerar_arquivo_env
+2026-08-11 17:53:56.699 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-14 _EXP] Nada a gravar (nenhuma linha contestada).
+2026-08-11 17:53:56.699 | INFO    |src.controllers.geracao_agi_controller:_gerar_env_e_carta:690 - [STEP] Finalizando: gerar_arquivo_env | Tempo gasto: 0.0s
+2026-08-11 17:53:56.699 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:617 - [STEP] Iniciando: GeracaoAgiController.gerar_cont_proc
+2026-08-11 17:53:56.700 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1030 - [STEP] Iniciando: montar_linhas_cont_proc
+2026-08-11 17:53:56.700 | INFO    |src.services.geracao_cont_proc:montar_linhas_cont_proc:224 - [STEP] Iniciando: selecionar_linhas_contestadas
+2026-08-11 17:53:56.700 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-16 CONT_PROC] Nenhuma combinação com 'contestacao_a_enviar'=S.
+2026-08-11 17:53:56.701 | INFO    |src.services.geracao_cont_proc:montar_linhas_cont_proc:224 - [STEP] Finalizando: selecionar_linhas_contestadas | Tempo gasto: 0.0s
+2026-08-11 17:53:56.701 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1030 - [STEP] Finalizando: montar_linhas_cont_proc | Tempo gasto: 0.0s
+2026-08-11 17:53:56.702 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1036 - [STEP] Iniciando: gerar_arquivo_cont_proc
+2026-08-11 17:53:56.702 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-16 CONT_PROC] Nada a gravar (nenhuma linha a contestar).
+2026-08-11 17:53:56.702 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1036 - [STEP] Finalizando: gerar_arquivo_cont_proc | Tempo gasto: 0.0s
+2026-08-11 17:53:56.702 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:617 - [STEP] Finalizando: GeracaoAgiController.gerar_cont_proc | Tempo gasto: 0.0s
+2026-08-11 17:53:56.703 | INFO    |src.controllers.geracao_agi_controller:gerar_artefatos:299 - [RPA 3] 'SemDetraf' não tem artefato em [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA3\Operadoras\SemDetraf\2026\202603\AGI] — fora da carga. Rode --etapa artefatos antes.
+2026-08-11 17:53:56.703 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos] 4 operadora(s) em 202603:
+2026-08-11 17:53:56.703 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]   Algar                EXT · INT · _EXP · 1 carta(s) · CONT_PROC
+2026-08-11 17:53:56.704 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]   SemExpectativa       EXT
+2026-08-11 17:53:56.704 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: sem expectativa Vivo
+2026-08-11 17:53:56.704 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: _EXP e carta sem expectativa Vivo
+2026-08-11 17:53:56.704 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]   SemDetraf            nada gerado
+2026-08-11 17:53:56.704 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: sem Detraf recebido
+2026-08-11 17:53:56.704 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]   SemContestacao       EXT
+2026-08-11 17:53:56.704 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos] Pasta: C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA3\Operadoras
+2026-08-11 17:53:56.704 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos] ────────────────────────────────────────────────────────────
+2026-08-11 17:53:56.704 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos] PRÓXIMA ETAPA: nenhuma — a execução termina aqui (--etapa=artefatos)
+2026-08-11 17:53:56.704 | INFO    |src.controllers.geracao_agi_controller:gerar_artefatos:312 - [RPA 3] Etapa 'carga' pulada por --etapa=artefatos.
+2026-08-11 17:53:56.705 | INFO    |src.controllers.geracao_agi_controller:gerar_artefatos:350 - [RPA 3] Etapa 'email' pulada por --etapa=artefatos.
+2026-08-11 17:53:56.705 | INFO    |src.controllers.geracao_agi_controller:gerar_artefatos:388 - [RPA 3] Etapa 'verificacao' pulada por --etapa=artefatos.
+2026-08-11 17:53:56.705 | INFO    |src.controllers.geracao_agi_controller:gerar_artefatos:415 - [RPA 3] Resumo de 202603 — 4 operadora(s): EXT 3, INT 1, _EXP 1, carta 1, CONT_PROC 1.
+2026-08-11 17:53:56.705 | INFO    |src.controllers.geracao_agi_controller:gerar_artefatos:415 - [RPA 3]   SemExpectativa: sem expectativa Vivo; _EXP e carta sem expectativa Vivo.
+2026-08-11 17:53:56.705 | INFO    |src.controllers.geracao_agi_controller:gerar_artefatos:415 - [RPA 3]   SemDetraf: sem Detraf recebido.
+2026-08-11 17:53:56.705 | WARNING |src.controllers.geracao_agi_controller:gerar_artefatos:415 - [RPA 3] 2 chave(s) da HU-19 sem linha-base no banco. É esperado quando o RPA 3 roda isolado — a linha é inserida pelo RPA 2 (bloqueio B-D20), não é defeito deste robô.
+2026-08-11 17:53:56.706 | INFO    |src.controllers.geracao_agi_controller:_gravar_relatorio:956 - [Relatório] Resumo da execução em [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA3\logs\DESKTOP-64TNDKM\rpa3_contestacao_agi_ec\execucoes\2026-08-11_17-53-56.md].
+2026-08-11 17:53:56.706 | INFO    |src.main.process_handle:run:31 - [STEP] Finalizando: GeracaoAgiController.gerar_artefatos | Tempo gasto: 0.45s
+2026-08-11 17:53:56.707 | INFO    |__main__:main:127 - [STEP] Finalizando: run | Tempo gasto: 0.45s
+2026-08-11 17:53:56.708 | INFO    |__main__:main:149 - [Diagnóstico] Etapas desta execução em [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA3\logs\DESKTOP-64TNDKM\rpa3_contestacao_agi_ec\diagnosticos\2026-08-11_17-53-55.txt].
+2026-08-11 17:53:56.708 | INFO    |__main__:<module>:164 - [RPA 3] Diagnóstico das etapas em [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA3\logs\DESKTOP-64TNDKM\rpa3_contestacao_agi_ec\diagnosticos\2026-08-11_17-53-55.txt]

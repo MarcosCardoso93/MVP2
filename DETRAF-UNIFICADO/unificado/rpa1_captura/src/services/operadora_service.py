@@ -7,6 +7,7 @@ from typing import Optional
 
 import openpyxl
 
+from comum.arquivos.gerenciador import detectar_separador_csv
 from comum.config.logger_config import logger
 from src.models.dto.operadora_resultado import OperadoraResultado
 from comum.dados.repositorio_tabelas import bd_tabelas
@@ -65,10 +66,15 @@ def _extrair_eot_csv(caminho: Path) -> Optional[str]:
     else:
         return None
 
-    try:
-        delimitador = csv.Sniffer().sniff(texto.splitlines()[0]).delimiter
-    except (csv.Error, IndexError):
-        delimitador = ";"
+    # O MESMO detector que `carregar_dados` usa para validar — e não
+    # `csv.Sniffer` (como era até 2026-08-11). O Sniffer olha só a primeira
+    # linha e é enganado por decimal em vírgula (`"0,0061"`), podendo escolher
+    # `,` num arquivo separado por `;`. Aí a validação lia certo e a
+    # identificação lia errado: a EOT saía como lixo, caía no fallback por
+    # domínio, e sem remetente casava com a primeira operadora do cadastro —
+    # o arquivo era salvo, só que na pasta de quem não o mandou, sem erro
+    # nenhum no log. Ver `comum.arquivos.gerenciador.detectar_separador_csv`.
+    delimitador = detectar_separador_csv(caminho)
 
     leitor = csv.reader(io.StringIO(texto), delimiter=delimitador)
     try:

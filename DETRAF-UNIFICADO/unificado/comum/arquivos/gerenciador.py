@@ -34,6 +34,59 @@ def _validar_indice_coluna(df: pd.DataFrame, indice_coluna: int) -> None:
         )
 
 
+def detectar_separador_csv(caminho: Path, linhas_amostra: int = 20) -> str:
+    """
+    Descobre o separador de colunas de um CSV, por contagem de ocorrências.
+
+    🔴 **Único detector de separador do repositório** (desde a correção do
+    achado "identificação errada com `;`", 2026-08-11). Antes, esta lógica
+    vivia só dentro de `carregar_dados`, e `operadora_service._extrair_eot_csv`
+    tinha a própria — via `csv.Sniffer`, que olha só a primeira linha e é
+    enganado por decimal em vírgula (``"0,0061"`` soma pontos para a vírgula
+    como se fosse separador).
+
+    O efeito prático: um Detraf separado por `;` era **validado** com o
+    separador certo, e a EOT era **extraída** com o separador errado — a
+    leitura da credora saía como lixo, a identificação caía no fallback por
+    domínio do remetente, e sem remetente (pasta preparada à mão) o
+    `bd_tabelas.buscar_nome_fantasia("")` casava com a primeira operadora do
+    cadastro. Nada disso gerava erro: o arquivo era salvo, só que na pasta de
+    uma operadora que não o mandou.
+
+    As duas leituras usarem a mesma função é o que impede a divergência.
+    """
+    separadores_alvo = [";", ",", "\t"]
+    pontuacao = {sep: 0 for sep in separadores_alvo}
+    try:
+        with open(caminho, mode="r", encoding="utf-8", errors="ignore") as arquivo:
+            linhas_analisadas = 0
+            for linha in arquivo:
+                linha_limpa = linha.strip()
+                if not linha_limpa or len(linha_limpa) < 10:
+                    continue
+                for sep in separadores_alvo:
+                    pontuacao[sep] += linha_limpa.count(sep)
+                linhas_analisadas += 1
+                if linhas_analisadas >= linhas_amostra:
+                    break
+        vencedor = max(pontuacao, key=pontuacao.get)  # type: ignore
+        if pontuacao[vencedor] > 0:
+            return vencedor
+
+        logger.warning(
+            f"Nenhum separador reconhecido nas primeiras {linhas_amostra} "
+            f"linhas de [{caminho}] — assumindo ';'. Se o arquivo usar outro, "
+            f"ele será lido como coluna única e reprovado na validação."
+        )
+        return ";"
+    except Exception as erro:
+        logger.warning(
+            f"Falha ao detectar o separador de [{caminho}]: {erro}. "
+            f"Assumindo ';'."
+        )
+        return ";"
+
+
 def carregar_dados(
     caminho_arquivo: Path, mostrar_cabecalho: bool = False
 ) -> pd.DataFrame:
@@ -59,45 +112,12 @@ def carregar_dados(
     extensao = caminho_arquivo.suffix
     _validar_extensao(extensao)
 
-    # Função auxiliar interna para detectar o separador por heurística de contagem
-    def _detectar_separador_csv(caminho: Path, linhas_amostra: int = 20) -> str:
-        separadores_alvo = [";", ",", "\t"]
-        pontuacao = {sep: 0 for sep in separadores_alvo}
-        try:
-            with open(caminho, mode="r", encoding="utf-8", errors="ignore") as arquivo:
-                linhas_analisadas = 0
-                for linha in arquivo:
-                    linha_limpa = linha.strip()
-                    if not linha_limpa or len(linha_limpa) < 10:
-                        continue
-                    for sep in separadores_alvo:
-                        pontuacao[sep] += linha_limpa.count(sep)
-                    linhas_analisadas += 1
-                    if linhas_analisadas >= linhas_amostra:
-                        break
-            vencedor = max(pontuacao, key=pontuacao.get)  # type: ignore
-            if pontuacao[vencedor] > 0:
-                return vencedor
-
-            logger.warning(
-                f"Nenhum separador reconhecido nas primeiras {linhas_amostra} "
-                f"linhas de [{caminho}] — assumindo ';'. Se o arquivo usar outro, "
-                f"ele será lido como coluna única e reprovado na validação."
-            )
-            return ";"
-        except Exception as erro:
-            logger.warning(
-                f"Falha ao detectar o separador de [{caminho}]: {erro}. "
-                f"Assumindo ';'."
-            )
-            return ";"
-
     try:
         extensao_lower = extensao.lower()
 
         # Carrega o arquivo SEMPRE com header=None para trazer a primeira linha para o corpo (índice 0)
         if extensao_lower in EXTENSOES_CSV:
-            separador_detectado = _detectar_separador_csv(caminho_arquivo)
+            separador_detectado = detectar_separador_csv(caminho_arquivo)
             df = pd.read_csv(
                 caminho_arquivo,
                 engine="c",
