@@ -1,130 +1,148 @@
-PS C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado> .\.venv\Scripts\python .\rpa2_validacao_apuracao\main.py
-2026-08-12 15:45:51.548 | INFO    |__main__:<module>:126 - [RPA 2] robô: rpa2_validacao_apuracao
-2026-08-12 15:45:51.549 | INFO    |__main__:<module>:126 - [RPA 2] modo: DEV  (de ENV)
-2026-08-12 15:45:51.549 | INFO    |__main__:<module>:126 - [RPA 2] log: nível INFO (de LOG_LEVEL), diagnose ligado
-2026-08-12 15:45:51.549 | INFO    |__main__:<module>:126 - [RPA 2] competência: 202607  (mês anterior ao corrente)
-2026-08-12 15:45:51.550 | INFO    |__main__:<module>:126 - [RPA 2] banco: SQLite [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db] (de CAMINHO_SQLITE)
-2026-08-12 15:45:51.550 | INFO    |__main__:<module>:126 - [RPA 2] AGI: ambiente [producao] host [10.238.6.120] (de AGI_AMBIENTE) | executável [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
-2026-08-12 15:45:51.550 | INFO    |__main__:<module>:126 - [RPA 2] EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: desligado | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado | download SFTP: desligado
-2026-08-12 15:45:51.551 | INFO    |__main__:<module>:126 - [RPA 2] parâmetros: nenhum — execução completa, como na agenda
-2026-08-12 15:45:54.375 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
-2026-08-12 15:45:54.376 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db]
-2026-08-12 15:45:54.505 | INFO    |__main__:main:97 - [STEP] Iniciando: run
-2026-08-12 15:45:54.505 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Etapa 1/3 - captação da expectativa Vivo
-2026-08-12 15:45:54.506 | WARNING |src.services.captacao_expectativa:executar:181 - [MODO SEGURO] PERMITIR_DOWNLOAD_SFTP está desligado — nada foi baixado. A validação segue com o que já está em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Expectativa].
-2026-08-12 15:45:54.506 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Origem:                   nenhuma (PERMITIR_DOWNLOAD_SFTP desligado)
-2026-08-12 15:45:54.507 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Período procurado:        202607
-2026-08-12 15:45:54.507 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Arquivos baixados:        0
-2026-08-12 15:45:54.508 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Pasta: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Expectativa
-2026-08-12 15:45:54.508 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] ────────────────────────────────────────────────────────────
-2026-08-12 15:45:54.509 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] PRÓXIMA ETAPA: validação dos arquivos, que LÊ o que a captação acabou de trazer
-2026-08-12 15:45:54.509 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Etapa 2/3 - validação dos arquivos de Detraf
-2026-08-12 15:45:54.512 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_anexo5_processado]
-2026-08-12 15:45:54.591 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_anexo5_processado] carregada | Linhas: 2656 | Colunas: 18
-2026-08-12 15:45:54.592 | INFO    |src.controllers.validacao_detrafs_controller:validar_detrafs:15 - [STEP] Iniciando: ValidacaoDetrafsService.executar
-2026-08-12 15:45:54.593 | INFO    |comum.utils.decoradores:wrapper:22 - Executando a validação dos detrafs...
-2026-08-12 15:45:54.593 | INFO    |src.services.validacao_detrafs:executar:585 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_detrafs
-2026-08-12 15:45:54.594 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os detrafs para validação...
-2026-08-12 15:45:54.594 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando busca de arquivos para o período 202607 no diretório: 'C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras'
-2026-08-12 15:45:54.595 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 0. Total geral de arquivos encontrados: 0
-2026-08-12 15:45:54.596 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:151 - Filtro de Histórico concluído para o período 202607.
-2026-08-12 15:45:54.596 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:151 - Arquivos originais recebidos: 0
-2026-08-12 15:45:54.597 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:151 - Arquivos já processados anteriormente (encontrados no JSON): 0
-2026-08-12 15:45:54.597 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:151 - Novos arquivos retornados para execução: 0
-2026-08-12 15:45:54.598 | INFO    |src.services.validacao_detrafs:executar:585 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_detrafs | Tempo gasto: 0.0s
-2026-08-12 15:45:54.599 | INFO    |src.services.validacao_detrafs:executar:586 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_expectativa
-2026-08-12 15:45:54.599 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os arquivos de expectativa para validação...
-2026-08-12 15:45:54.601 | INFO    |comum.utils.decoradores:wrapper:22 - Pasta [Vivo] processada -> Válidos: 2 | Inválidos/Ignorados: 0
-2026-08-12 15:45:54.602 | INFO    |comum.utils.decoradores:wrapper:22 - Pasta [TLF] processada -> Válidos: 2 | Inválidos/Ignorados: 0
-2026-08-12 15:45:54.603 | ERROR   |src.services.validacao_detrafs:_preparar_arquivos_expectativa:250 - [Q21] Sem expectativa Vivo em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Expectativa\MVNO]: não existe. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
-2026-08-12 15:45:54.604 | ERROR   |src.services.validacao_detrafs:_preparar_arquivos_expectativa:250 - [Q21] Sem expectativa Vivo em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Expectativa\Detraf TRP]: não existe. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
-2026-08-12 15:45:54.604 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento de expectativa concluído. Total geral de arquivos válidos: 4
-2026-08-12 15:45:54.608 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:261 - Filtro de Histórico concluído para o período 202607.
-2026-08-12 15:45:54.609 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:261 - Arquivos originais recebidos: 4
-2026-08-12 15:45:54.609 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:261 - Arquivos já processados anteriormente (encontrados no JSON): 0
-2026-08-12 15:45:54.609 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:261 - Novos arquivos retornados para execução: 4
-2026-08-12 15:45:54.610 | INFO    |src.services.validacao_detrafs:executar:586 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_expectativa | Tempo gasto: 0.01s
-2026-08-12 15:45:54.610 | WARNING |comum.utils.decoradores:wrapper:22 - Nenhum arquivo de detraf encontrado para validação. Verifique os logs anteriores para detalhes.
-2026-08-12 15:45:54.631 | INFO    |src.services.validacao_detrafs:executar:602 - Área de trabalho em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202607]: 4 arquivo(s) copiado(s). O insumo original não será tocado.
-2026-08-12 15:45:54.703 | INFO    |src.services.validacao_detrafs:executar:617 - Validando o fluxo BK do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202607\Vivo-5cf010\DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D.csv
-2026-08-12 15:45:54.712 | INFO    |src.services.validacao_detrafs:executar:617 - Validando o fluxo BK do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202607\Vivo-5cf010\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D.csv
-2026-08-12 15:45:54.721 | INFO    |src.services.validacao_detrafs:executar:617 - Validando o fluxo BK do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202607\TLF-048ad4\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D.csv
-2026-08-12 15:45:54.777 | INFO    |src.services.validacao_detrafs:executar:617 - Validando o fluxo BK do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202607\TLF-048ad4\DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D.csv
-2026-08-12 15:45:54.785 | INFO    |src.services.validacao_detrafs:executar:622 - Validando o fluxo LL do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202607\Vivo-5cf010\DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D.csv
-2026-08-12 15:45:54.794 | INFO    |src.services.validacao_detrafs:executar:622 - Validando o fluxo LL do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202607\Vivo-5cf010\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D.csv
-2026-08-12 15:45:54.803 | INFO    |src.services.validacao_detrafs:executar:622 - Validando o fluxo LL do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202607\TLF-048ad4\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D.csv
-2026-08-12 15:45:54.870 | INFO    |src.services.validacao_detrafs:executar:622 - Validando o fluxo LL do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202607\TLF-048ad4\DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D.csv
-2026-08-12 15:45:54.948 | INFO    |src.services.validacao_detrafs:executar:641 - Validando as colunas do arquivo de expectativa: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202607\Vivo-5cf010\DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D.csv
-2026-08-12 15:45:55.007 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_detraf_tarifas]
-2026-08-12 15:45:55.013 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_detraf_tarifas] carregada | Linhas: 110 | Colunas: 21
-2026-08-12 15:45:55.069 | WARNING |src.services.validacao_detrafs:_validar_colunas_arquivos:354 - Arquivo [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202607\Vivo-5cf010\DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D.csv] teve 52 linha(s) movida(s) para [DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D_ERRO.csv] por falha de validação de coluna.
-2026-08-12 15:45:55.069 | INFO    |src.services.validacao_detrafs:executar:641 - Validando as colunas do arquivo de expectativa: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202607\Vivo-5cf010\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D.csv
-2026-08-12 15:45:55.249 | WARNING |src.services.validacao_detrafs:_validar_colunas_arquivos:354 - Arquivo [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202607\Vivo-5cf010\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D.csv] teve 355 linha(s) movida(s) para [DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D_ERRO.csv] por falha de validação de coluna.
-2026-08-12 15:45:55.250 | INFO    |src.services.validacao_detrafs:executar:641 - Validando as colunas do arquivo de expectativa: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202607\TLF-048ad4\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D.csv
-2026-08-12 15:45:55.789 | WARNING |src.services.validacao_detrafs:_validar_colunas_arquivos:354 - Arquivo [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202607\TLF-048ad4\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D.csv] teve 8275 linha(s) movida(s) para [DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D_ERRO.csv] por falha de validação de coluna.
-2026-08-12 15:45:55.790 | INFO    |src.services.validacao_detrafs:executar:641 - Validando as colunas do arquivo de expectativa: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202607\TLF-048ad4\DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D.csv
-2026-08-12 15:45:55.830 | WARNING |src.services.validacao_detrafs:_validar_colunas_arquivos:354 - Arquivo [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202607\TLF-048ad4\DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D.csv] teve 249 linha(s) movida(s) para [DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D_ERRO.csv] por falha de validação de coluna.
-2026-08-12 15:45:55.833 | INFO    |src.services.validacao_detrafs:executar:651 - Iniciando transformação de lote tipo [DETRAF_SUCESSO] com 0 arquivo(s).
-2026-08-12 15:45:55.833 | INFO    |src.services.validacao_detrafs:executar:655 - Iniciando transformação de lote tipo [DETRAF_ERRO] com 0 arquivo(s).
-2026-08-12 15:45:55.834 | INFO    |src.services.validacao_detrafs:executar:659 - Iniciando transformação de lote tipo [EXPECTATIVA_SUCESSO] com 4 arquivo(s).
-2026-08-12 15:45:55.851 | INFO    |src.services.validacao_detrafs:executar:663 - Iniciando transformação de lote tipo [EXPECTATIVA_ERRO] com 0 arquivo(s).
-2026-08-12 15:45:55.852 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - Inserindo 4 registro(s) em [tbl_rpa_log_detraf_despesa_arquivos].
-2026-08-12 15:45:55.872 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - 4 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_arquivos].
-2026-08-12 15:45:55.872 | INFO    |src.services.validacao_detrafs:executar:684 - Renomeando 4 arquivos validados adicionando _EXP
-2026-08-12 15:45:55.902 | INFO    |src.services.validacao_detrafs:executar:692 - 8 artefato(s) promovido(s) da área de trabalho para as pastas de origem.
-2026-08-12 15:45:55.919 | INFO    |src.services.validacao_detrafs:_salvar_historico_arquivos_processados:466 - Histórico atualizado com sucesso. Lote finalizado com 4 arquivo(s) salvo(s) como 'Válido'.
-2026-08-12 15:45:55.921 | INFO    |src.services.validacao_detrafs:_salvar_historico_arquivos_processados:469 - Histórico atualizado com sucesso. Lote finalizado com 0 arquivo(s) salvo(s) como 'Inválido'.
-2026-08-12 15:45:55.922 | INFO    |src.controllers.validacao_detrafs_controller:validar_detrafs:15 - [STEP] Finalizando: ValidacaoDetrafsService.executar | Tempo gasto: 1.33s
-2026-08-12 15:45:55.922 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Detraf válidos:           0
-2026-08-12 15:45:55.923 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Detraf inválidos:         0
-2026-08-12 15:45:55.923 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Expectativa válidos:      4
-2026-08-12 15:45:55.924 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Expectativa inválidos:    0
-2026-08-12 15:45:55.924 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Operadoras sem Detraf no mês (1):
-2026-08-12 15:45:55.925 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   ALGAR
-2026-08-12 15:45:55.925 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Pasta: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras
-2026-08-12 15:45:55.926 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] ────────────────────────────────────────────────────────────
-2026-08-12 15:45:55.927 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] PRÓXIMA ETAPA: batimento Detraf × expectativa, que LÊ o que a validação acabou de registrar
-2026-08-12 15:45:55.928 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Etapa 3/3 - batimento Detraf x expectativa
-2026-08-12 15:45:55.929 | INFO    |src.controllers.batimento_detraf_controller:batimento_detraf:10 - [STEP] Iniciando: BatimentoDetrafService.executar
-2026-08-12 15:45:55.930 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando processo de batimento dos arquivos Detraf...
-2026-08-12 15:45:55.930 | INFO    |src.services.batimento_detraf:executar:348 - Preparando os detrafs para validação...
-2026-08-12 15:45:55.931 | INFO    |src.services.batimento_detraf:executar:348 - Iniciando busca de arquivos para o período 202607 na saída da validação: 'C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_SAIDA'
-2026-08-12 15:45:55.932 | INFO    |src.services.batimento_detraf:executar:348 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 0. Total geral de arquivos encontrados: 0
-2026-08-12 15:45:55.933 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:135 - Filtro de Histórico concluído para o período 202607.
-2026-08-12 15:45:55.934 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:135 - Arquivos originais recebidos: 0
-2026-08-12 15:45:55.935 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:135 - Arquivos já processados anteriormente (encontrados no JSON): 0
-2026-08-12 15:45:55.935 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:135 - Novos arquivos retornados para execução: 0
-2026-08-12 15:45:55.936 | INFO    |src.services.batimento_detraf:executar:349 - Preparando os arquivos de expectativa para validação...
-2026-08-12 15:45:55.938 | INFO    |src.services.batimento_detraf:executar:349 - Pasta [Vivo] processada -> Válidos: 2 | Inválidos/Ignorados: 0
-2026-08-12 15:45:55.940 | INFO    |src.services.batimento_detraf:executar:349 - Pasta [TLF] processada -> Válidos: 2 | Inválidos/Ignorados: 0
-2026-08-12 15:45:55.940 | ERROR   |src.services.batimento_detraf:_preparar_arquivos_expectativa:329 - [Q21] Sem expectativa Vivo em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Expectativa\MVNO]: não tem nenhum arquivo aprovado pela validação. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
-2026-08-12 15:45:55.941 | ERROR   |src.services.batimento_detraf:_preparar_arquivos_expectativa:329 - [Q21] Sem expectativa Vivo em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Expectativa\Detraf TRP]: não tem nenhum arquivo aprovado pela validação. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
-2026-08-12 15:45:55.942 | INFO    |src.services.batimento_detraf:executar:349 - Mapeamento de expectativa concluído. Total geral de arquivos válidos: 4
-2026-08-12 15:45:55.947 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Filtro de Histórico concluído para o período 202607.
-2026-08-12 15:45:55.948 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Arquivos originais recebidos: 4
-2026-08-12 15:45:55.949 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Arquivos já processados anteriormente (encontrados no JSON): 0
-2026-08-12 15:45:55.949 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Novos arquivos retornados para execução: 4
-2026-08-12 15:45:55.950 | WARNING |comum.utils.decoradores:wrapper:22 - Nenhum arquivo de detraf encontrado para o batimento. Verifique os logs anteriores para detalhes.
-2026-08-12 15:45:55.951 | INFO    |src.services.batimento_detraf:executar:363 - Iniciando mapeamento de operadoras para 4 arquivo(s).
-2026-08-12 15:45:55.955 | INFO    |src.services.batimento_detraf:_mapear_arquivos_por_operadora:196 - EOT não encontrado [ALGAR]
-2026-08-12 15:45:55.956 | ERROR   |src.services.batimento_detraf:executar:363 - Nenhum EOT válido encontrado para o arquivo: DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D_EXP.csv
-2026-08-12 15:45:55.961 | INFO    |src.services.batimento_detraf:_mapear_arquivos_por_operadora:196 - EOT não encontrado [ALGAR]
-2026-08-12 15:45:55.961 | ERROR   |src.services.batimento_detraf:executar:363 - Nenhum EOT válido encontrado para o arquivo: DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D_EXP.csv
-2026-08-12 15:45:55.967 | INFO    |src.services.batimento_detraf:_mapear_arquivos_por_operadora:196 - EOT não encontrado [ALGAR]
-2026-08-12 15:45:55.968 | ERROR   |src.services.batimento_detraf:executar:363 - Nenhum EOT válido encontrado para o arquivo: DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D_EXP.csv
-2026-08-12 15:45:55.974 | INFO    |src.services.batimento_detraf:_mapear_arquivos_por_operadora:196 - EOT não encontrado [ALGAR]
-2026-08-12 15:45:55.975 | ERROR   |src.services.batimento_detraf:executar:363 - Nenhum EOT válido encontrado para o arquivo: DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D_EXP.csv
-2026-08-12 15:45:55.976 | INFO    |src.services.batimento_detraf:executar:367 - Iniciando a apuração da contestação.
-2026-08-12 15:45:55.977 | INFO    |src.controllers.batimento_detraf_controller:batimento_detraf:10 - [STEP] Finalizando: BatimentoDetrafService.executar | Tempo gasto: 0.05s
-2026-08-12 15:45:55.977 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] Operadoras apuradas:      1
-2026-08-12 15:45:55.978 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] O resultado é a TABELA `tbl_rpa_log_detraf_despesa_contestacao`,
-2026-08-12 15:45:55.978 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] não um arquivo — a Base de Contestação virou tabela em 2026-08-04.
-2026-08-12 15:45:55.979 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] Próximo passo é humano: o analista sinaliza no WebFat o que
-2026-08-12 15:45:55.979 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] contestar e se haverá retenção. Só então o RPA 3 tem o que fazer.
-2026-08-12 15:45:55.980 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] Operadoras: OPERADORA_NAO_IDENTIFICADA
-2026-08-12 15:45:55.981 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] ────────────────────────────────────────────────────────────
-2026-08-12 15:45:55.981 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] Esta é a última etapa da execução.
-2026-08-12 15:45:55.982 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Concluído. Aguardando a decisão do analista no WebFat para o RPA 3 prosseguir.
-2026-08-12 15:45:55.982 | INFO    |__main__:main:97 - [STEP] Finalizando: run | Tempo gasto: 1.48s
-2026-08-12 15:45:55.984 | INFO    |__main__:main:118 - [Diagnóstico] Etapas desta execução em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\logs\NALPE0881WP\rpa2_validacao_apuracao\diagnosticos\2026-08-12_15-45-51.txt].
-2026-08-12 15:45:55.985 | INFO    |__main__:<module>:126 - [RPA 2] Diagnóstico das etapas em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\logs\NALPE0881WP\rpa2_validacao_apuracao\diagnosticos\2026-08-12_15-45-51.txt]
+PS C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado> .\.venv\Scripts\python .\rpa2_validacao_apuracao\main.py --referencia 202603 
+2026-08-12 15:57:54.240 | INFO    |__main__:<module>:126 - [RPA 2] robô: rpa2_validacao_apuracao
+2026-08-12 15:57:54.241 | INFO    |__main__:<module>:126 - [RPA 2] modo: DEV  (de ENV)
+2026-08-12 15:57:54.243 | INFO    |__main__:<module>:126 - [RPA 2] log: nível INFO (de LOG_LEVEL), diagnose ligado
+2026-08-12 15:57:54.243 | INFO    |__main__:<module>:126 - [RPA 2] competência: 202603  (forçada por COMPETENCIA)
+2026-08-12 15:57:54.244 | INFO    |__main__:<module>:126 - [RPA 2] banco: SQLite [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db] (de CAMINHO_SQLITE)
+2026-08-12 15:57:54.245 | INFO    |__main__:<module>:126 - [RPA 2] AGI: ambiente [producao] host [10.238.6.120] (de AGI_AMBIENTE) | executável [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
+2026-08-12 15:57:54.245 | INFO    |__main__:<module>:126 - [RPA 2] EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: desligado | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado | download SFTP: desligado
+2026-08-12 15:57:54.245 | INFO    |__main__:<module>:126 - [RPA 2] parâmetros: referência forçada: 202603
+2026-08-12 15:57:57.079 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-12 15:57:57.080 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db]
+2026-08-12 15:57:57.172 | INFO    |__main__:main:97 - [STEP] Iniciando: run
+2026-08-12 15:57:57.173 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Etapa 1/3 - captação da expectativa Vivo
+2026-08-12 15:57:57.174 | WARNING |src.services.captacao_expectativa:executar:181 - [MODO SEGURO] PERMITIR_DOWNLOAD_SFTP está desligado — nada foi baixado. A validação segue com o que já está em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Expectativa].
+2026-08-12 15:57:57.174 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Origem:                   nenhuma (PERMITIR_DOWNLOAD_SFTP desligado)
+2026-08-12 15:57:57.175 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Período procurado:        202603
+2026-08-12 15:57:57.175 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Arquivos baixados:        0
+2026-08-12 15:57:57.176 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Pasta: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Expectativa
+2026-08-12 15:57:57.176 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] ────────────────────────────────────────────────────────────
+2026-08-12 15:57:57.177 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] PRÓXIMA ETAPA: validação dos arquivos, que LÊ o que a captação acabou de trazer
+2026-08-12 15:57:57.177 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Etapa 2/3 - validação dos arquivos de Detraf
+2026-08-12 15:57:57.180 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_anexo5_processado]
+2026-08-12 15:57:57.255 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_anexo5_processado] carregada | Linhas: 2656 | Colunas: 18
+2026-08-12 15:57:57.256 | INFO    |src.controllers.validacao_detrafs_controller:validar_detrafs:15 - [STEP] Iniciando: ValidacaoDetrafsService.executar
+2026-08-12 15:57:57.256 | INFO    |comum.utils.decoradores:wrapper:22 - Executando a validação dos detrafs...
+2026-08-12 15:57:57.257 | INFO    |src.services.validacao_detrafs:executar:585 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_detrafs
+2026-08-12 15:57:57.257 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os detrafs para validação...
+2026-08-12 15:57:57.258 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando busca de arquivos para o período 202603 no diretório: 'C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras'
+2026-08-12 15:57:57.259 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [ALGAR]
+2026-08-12 15:57:57.261 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 1. Total geral de arquivos encontrados: 2
+2026-08-12 15:57:57.261 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [ALGAR]: 2 arquivo(s) encontrado(s)
+2026-08-12 15:57:57.265 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:151 - Filtro de Histórico concluído para o período 202603.
+2026-08-12 15:57:57.265 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:151 - Arquivos originais recebidos: 2
+2026-08-12 15:57:57.266 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:151 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-12 15:57:57.266 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:151 - Novos arquivos retornados para execução: 2
+2026-08-12 15:57:57.267 | INFO    |src.services.validacao_detrafs:executar:585 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_detrafs | Tempo gasto: 0.01s
+2026-08-12 15:57:57.267 | INFO    |src.services.validacao_detrafs:executar:586 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_expectativa
+2026-08-12 15:57:57.268 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os arquivos de expectativa para validação...
+2026-08-12 15:57:57.269 | INFO    |comum.utils.decoradores:wrapper:22 - Pasta [Vivo] processada -> Válidos: 2 | Inválidos/Ignorados: 0
+2026-08-12 15:57:57.271 | INFO    |comum.utils.decoradores:wrapper:22 - Pasta [TLF] processada -> Válidos: 2 | Inválidos/Ignorados: 0
+2026-08-12 15:57:57.271 | ERROR   |src.services.validacao_detrafs:_preparar_arquivos_expectativa:250 - [Q21] Sem expectativa Vivo em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Expectativa\MVNO]: não existe. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
+2026-08-12 15:57:57.272 | ERROR   |src.services.validacao_detrafs:_preparar_arquivos_expectativa:250 - [Q21] Sem expectativa Vivo em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Expectativa\Detraf TRP]: não existe. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
+2026-08-12 15:57:57.272 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento de expectativa concluído. Total geral de arquivos válidos: 4
+2026-08-12 15:57:57.276 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:261 - Filtro de Histórico concluído para o período 202603.
+2026-08-12 15:57:57.276 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:261 - Arquivos originais recebidos: 4
+2026-08-12 15:57:57.277 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:261 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-12 15:57:57.278 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:261 - Novos arquivos retornados para execução: 4
+2026-08-12 15:57:57.278 | INFO    |src.services.validacao_detrafs:executar:586 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_expectativa | Tempo gasto: 0.01s
+2026-08-12 15:57:57.292 | INFO    |src.services.validacao_detrafs:executar:601 - Área de trabalho em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603]: 2 arquivo(s) copiado(s). O insumo original não será tocado.
+2026-08-12 15:57:57.316 | INFO    |src.services.validacao_detrafs:executar:602 - Área de trabalho em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603]: 4 arquivo(s) copiado(s). O insumo original não será tocado.
+2026-08-12 15:57:57.416 | INFO    |src.services.validacao_detrafs:executar:617 - Validando o fluxo BK do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\Vivo-5cf010\DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D.csv
+2026-08-12 15:57:57.426 | INFO    |src.services.validacao_detrafs:executar:617 - Validando o fluxo BK do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\Vivo-5cf010\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D.csv
+2026-08-12 15:57:57.435 | INFO    |src.services.validacao_detrafs:executar:617 - Validando o fluxo BK do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\TLF-048ad4\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D.csv
+2026-08-12 15:57:57.478 | INFO    |src.services.validacao_detrafs:executar:617 - Validando o fluxo BK do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\TLF-048ad4\DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D.csv
+2026-08-12 15:57:57.486 | INFO    |src.services.validacao_detrafs:executar:617 - Validando o fluxo BK do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\Detrafs Recebidos-10fdd3\DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_032026_V02.csv
+2026-08-12 15:57:57.494 | INFO    |src.services.validacao_detrafs:executar:617 - Validando o fluxo BK do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\Detrafs Recebidos-10fdd3\DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02.csv
+2026-08-12 15:57:57.647 | INFO    |src.services.validacao_detrafs:executar:622 - Validando o fluxo LL do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\Vivo-5cf010\DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D.csv
+2026-08-12 15:57:57.653 | INFO    |src.services.validacao_detrafs:executar:622 - Validando o fluxo LL do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\Vivo-5cf010\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D.csv
+2026-08-12 15:57:57.663 | INFO    |src.services.validacao_detrafs:executar:622 - Validando o fluxo LL do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\TLF-048ad4\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D.csv
+2026-08-12 15:57:57.702 | INFO    |src.services.validacao_detrafs:executar:622 - Validando o fluxo LL do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\TLF-048ad4\DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D.csv
+2026-08-12 15:57:57.709 | INFO    |src.services.validacao_detrafs:executar:623 - Validando o fluxo LL do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\Detrafs Recebidos-10fdd3\DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_032026_V02.csv
+2026-08-12 15:57:57.753 | WARNING |src.services.validacao_detrafs:executar:623 - Arquivo [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\Detrafs Recebidos-10fdd3\DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_032026_V02.csv] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
+2026-08-12 15:57:57.754 | INFO    |src.services.validacao_detrafs:executar:623 - Validando o fluxo LL do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\Detrafs Recebidos-10fdd3\DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02.csv
+2026-08-12 15:57:57.859 | INFO    |src.services.validacao_detrafs:executar:634 - Validando as colunas do arquivo de detraf: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\Detrafs Recebidos-10fdd3\DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02.csv
+2026-08-12 15:57:57.946 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_detraf_tarifas]
+2026-08-12 15:57:57.952 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_detraf_tarifas] carregada | Linhas: 110 | Colunas: 21
+2026-08-12 15:57:58.250 | INFO    |comum.dominio.validacao_colunas:validar_tudo_detalhado:252 - Validação de tarifas concluída | Total: 8626 | Válidas: 3162 | Inválidas: 5464 | Resultado final: False
+2026-08-12 15:57:58.299 | INFO    |comum.dominio.validacao_colunas:validar_tudo:298 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': False}
+2026-08-12 15:57:58.301 | ERROR   |src.services.validacao_detrafs:executar:634 - Arquivo [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\Detrafs Recebidos-10fdd3\DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02.csv] falhou em uma ou mais validações APÓS ter passado pelo portão do RPA 1 — investigar por que ele chegou à pasta da operadora.
+2026-08-12 15:57:58.302 | INFO    |src.services.validacao_detrafs:executar:641 - Validando as colunas do arquivo de expectativa: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\Vivo-5cf010\DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D.csv
+2026-08-12 15:57:58.352 | INFO    |src.services.validacao_detrafs:_validar_colunas_arquivos:354 - Arquivo [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\Vivo-5cf010\DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D.csv] passou em todas as validações.
+2026-08-12 15:57:58.353 | INFO    |src.services.validacao_detrafs:executar:641 - Validando as colunas do arquivo de expectativa: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\Vivo-5cf010\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D.csv
+2026-08-12 15:57:58.448 | WARNING |src.services.validacao_detrafs:_validar_colunas_arquivos:354 - Arquivo [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\Vivo-5cf010\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D.csv] teve 139 linha(s) movida(s) para [DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D_ERRO.csv] por falha de validação de coluna.
+2026-08-12 15:57:58.449 | INFO    |src.services.validacao_detrafs:executar:641 - Validando as colunas do arquivo de expectativa: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\TLF-048ad4\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D.csv
+2026-08-12 15:57:58.922 | WARNING |src.services.validacao_detrafs:_validar_colunas_arquivos:354 - Arquivo [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\TLF-048ad4\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D.csv] teve 3066 linha(s) movida(s) para [DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D_ERRO.csv] por falha de validação de coluna.
+2026-08-12 15:57:58.924 | INFO    |src.services.validacao_detrafs:executar:641 - Validando as colunas do arquivo de expectativa: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\TLF-048ad4\DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D.csv
+2026-08-12 15:57:58.951 | INFO    |src.services.validacao_detrafs:_validar_colunas_arquivos:354 - Arquivo [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\TLF-048ad4\DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D.csv] passou em todas as validações.
+2026-08-12 15:57:58.954 | INFO    |src.services.validacao_detrafs:executar:651 - Iniciando transformação de lote tipo [DETRAF_SUCESSO] com 0 arquivo(s).
+2026-08-12 15:57:58.955 | INFO    |src.services.validacao_detrafs:executar:655 - Iniciando transformação de lote tipo [DETRAF_ERRO] com 2 arquivo(s).
+2026-08-12 15:57:59.007 | INFO    |src.services.validacao_detrafs:executar:659 - Iniciando transformação de lote tipo [EXPECTATIVA_SUCESSO] com 4 arquivo(s).
+2026-08-12 15:57:59.077 | INFO    |src.services.validacao_detrafs:executar:663 - Iniciando transformação de lote tipo [EXPECTATIVA_ERRO] com 0 arquivo(s).
+2026-08-12 15:57:59.078 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - Inserindo 6 registro(s) em [tbl_rpa_log_detraf_despesa_arquivos].
+2026-08-12 15:57:59.094 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - 6 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_arquivos].
+2026-08-12 15:57:59.095 | INFO    |src.services.validacao_detrafs:executar:684 - Renomeando 4 arquivos validados adicionando _EXP
+2026-08-12 15:57:59.099 | INFO    |src.services.validacao_detrafs:executar:684 - Renomeando 2 arquivos inválidos adicionando _ERRO
+2026-08-12 15:57:59.124 | INFO    |src.services.validacao_detrafs:executar:692 - 9 artefato(s) promovido(s) da área de trabalho para as pastas de origem.
+2026-08-12 15:57:59.137 | INFO    |src.services.validacao_detrafs:_salvar_historico_arquivos_processados:466 - Histórico atualizado com sucesso. Lote finalizado com 4 arquivo(s) salvo(s) como 'Válido'.
+2026-08-12 15:57:59.142 | INFO    |src.services.validacao_detrafs:_salvar_historico_arquivos_processados:469 - Histórico atualizado com sucesso. Lote finalizado com 2 arquivo(s) salvo(s) como 'Inválido'.
+2026-08-12 15:57:59.143 | INFO    |src.controllers.validacao_detrafs_controller:validar_detrafs:15 - [STEP] Finalizando: ValidacaoDetrafsService.executar | Tempo gasto: 1.89s
+2026-08-12 15:57:59.143 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Detraf válidos:           0
+2026-08-12 15:57:59.144 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Detraf inválidos:         2
+2026-08-12 15:57:59.144 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Expectativa válidos:      4
+2026-08-12 15:57:59.145 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Expectativa inválidos:    0
+2026-08-12 15:57:59.146 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Recusados (cada um tem um *_RECUSADO.md ao lado):
+2026-08-12 15:57:59.146 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_032026_V02.csv
+2026-08-12 15:57:59.147 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02.csv
+2026-08-12 15:57:59.147 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Pasta: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras
+2026-08-12 15:57:59.149 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] ────────────────────────────────────────────────────────────
+2026-08-12 15:57:59.150 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] PRÓXIMA ETAPA: batimento Detraf × expectativa, que LÊ o que a validação acabou de registrar
+2026-08-12 15:57:59.153 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Etapa 3/3 - batimento Detraf x expectativa
+2026-08-12 15:57:59.156 | INFO    |src.controllers.batimento_detraf_controller:batimento_detraf:10 - [STEP] Iniciando: BatimentoDetrafService.executar
+2026-08-12 15:57:59.156 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando processo de batimento dos arquivos Detraf...
+2026-08-12 15:57:59.157 | INFO    |src.services.batimento_detraf:executar:348 - Preparando os detrafs para validação...
+2026-08-12 15:57:59.158 | INFO    |src.services.batimento_detraf:executar:348 - Iniciando busca de arquivos para o período 202603 na saída da validação: 'C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_SAIDA'
+2026-08-12 15:57:59.160 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [ALGAR]
+2026-08-12 15:57:59.162 | INFO    |src.services.batimento_detraf:executar:348 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 1. Total geral de arquivos encontrados: 0
+2026-08-12 15:57:59.164 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [ALGAR]: 0 arquivo(s) encontrado(s)
+2026-08-12 15:57:59.165 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:135 - Filtro de Histórico concluído para o período 202603.
+2026-08-12 15:57:59.166 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:135 - Arquivos originais recebidos: 0
+2026-08-12 15:57:59.167 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:135 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-12 15:57:59.167 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:135 - Novos arquivos retornados para execução: 0
+2026-08-12 15:57:59.168 | INFO    |src.services.batimento_detraf:executar:349 - Preparando os arquivos de expectativa para validação...
+2026-08-12 15:57:59.173 | INFO    |src.services.batimento_detraf:executar:349 - Pasta [Vivo] processada -> Válidos: 2 | Inválidos/Ignorados: 0
+2026-08-12 15:57:59.176 | INFO    |src.services.batimento_detraf:executar:349 - Pasta [TLF] processada -> Válidos: 2 | Inválidos/Ignorados: 0
+2026-08-12 15:57:59.177 | ERROR   |src.services.batimento_detraf:_preparar_arquivos_expectativa:329 - [Q21] Sem expectativa Vivo em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Expectativa\MVNO]: não tem nenhum arquivo aprovado pela validação. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
+2026-08-12 15:57:59.178 | ERROR   |src.services.batimento_detraf:_preparar_arquivos_expectativa:329 - [Q21] Sem expectativa Vivo em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Expectativa\Detraf TRP]: não tem nenhum arquivo aprovado pela validação. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
+2026-08-12 15:57:59.180 | INFO    |src.services.batimento_detraf:executar:349 - Mapeamento de expectativa concluído. Total geral de arquivos válidos: 4
+2026-08-12 15:57:59.186 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Filtro de Histórico concluído para o período 202603.
+2026-08-12 15:57:59.187 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Arquivos originais recebidos: 4
+2026-08-12 15:57:59.188 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-12 15:57:59.188 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Novos arquivos retornados para execução: 4
+2026-08-12 15:57:59.189 | INFO    |src.services.batimento_detraf:executar:363 - Iniciando mapeamento de operadoras para 4 arquivo(s).
+2026-08-12 15:57:59.231 | INFO    |src.services.batimento_detraf:executar:367 - Iniciando a apuração da contestação.
+2026-08-12 15:57:59.232 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=ALGAR | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-12 15:57:59.236 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=ALGAR | Arquivo=DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D_EXP.csv | Linhas originais=53 | Linhas após filtro=52
+2026-08-12 15:57:59.242 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=ALGAR | Arquivo=DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D_EXP.csv | Linhas originais=217 | Linhas após filtro=216
+2026-08-12 15:57:59.264 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=ALGAR | Arquivo=DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D_EXP.csv | Linhas originais=5210 | Linhas após filtro=5209
+2026-08-12 15:57:59.270 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=ALGAR | Arquivo=DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D_EXP.csv | Linhas originais=250 | Linhas após filtro=249
+2026-08-12 15:57:59.272 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=ALGAR | Arquivos válidos=4 | Linhas consolidadas=5726
+2026-08-12 15:57:59.312 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_detraf_mapeamento_descritores]
+2026-08-12 15:57:59.315 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_detraf_mapeamento_descritores] carregada | Linhas: 25 | Colunas: 8
+2026-08-12 15:57:59.324 | WARNING |src.services.criacao_arquivo_contestacao:_comparar_e_persistir:470 - [HU-09] 15 linha(s) com descritor sem remuneração na tabela `tbl_detraf_mapeamento_descritores`: ['NSNI']. Elas ficam sem `remuneracao` e não serão encontradas pelo RPA 3 — confira se falta linha na tabela.
+2026-08-12 15:57:59.390 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 36 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao].
+2026-08-12 15:57:59.405 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 36 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].
+2026-08-12 15:57:59.406 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'ALGAR' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 36
+2026-08-12 15:57:59.408 | INFO    |src.controllers.batimento_detraf_controller:batimento_detraf:10 - [STEP] Finalizando: BatimentoDetrafService.executar | Tempo gasto: 0.25s
+2026-08-12 15:57:59.408 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] Operadoras apuradas:      1
+2026-08-12 15:57:59.409 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] O resultado é a TABELA `tbl_rpa_log_detraf_despesa_contestacao`,
+2026-08-12 15:57:59.409 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] não um arquivo — a Base de Contestação virou tabela em 2026-08-04.
+2026-08-12 15:57:59.410 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] Próximo passo é humano: o analista sinaliza no WebFat o que
+2026-08-12 15:57:59.410 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] contestar e se haverá retenção. Só então o RPA 3 tem o que fazer.
+2026-08-12 15:57:59.411 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] Operadoras: ALGAR
+2026-08-12 15:57:59.411 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] ────────────────────────────────────────────────────────────
+2026-08-12 15:57:59.411 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] Esta é a última etapa da execução.
+2026-08-12 15:57:59.412 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Concluído. Aguardando a decisão do analista no WebFat para o RPA 3 prosseguir.
+2026-08-12 15:57:59.412 | INFO    |__main__:main:97 - [STEP] Finalizando: run | Tempo gasto: 2.24s
+2026-08-12 15:57:59.414 | INFO    |__main__:main:118 - [Diagnóstico] Etapas desta execução em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\logs\NALPE0881WP\rpa2_validacao_apuracao\diagnosticos\2026-08-12_15-57-54.txt].
+2026-08-12 15:57:59.415 | INFO    |__main__:<module>:126 - [RPA 2] Diagnóstico das etapas em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\logs\NALPE0881WP\rpa2_validacao_apuracao\diagnosticos\2026-08-12_15-57-54.txt]
