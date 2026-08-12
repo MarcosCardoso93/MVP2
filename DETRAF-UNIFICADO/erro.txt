@@ -1,53 +1,104 @@
---- Preparando a caixa de areia em C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA1 ---
+======================================================================                               
+  VERIFICAÇÃO DE AMBIENTE — RPAs do Detraf
+======================================================================
+  robô: (nenhum — execução fora de um main.py)
+  modo: DEV  (de ENV)
+  log: nível INFO (de LOG_LEVEL), diagnose ligado
+  competência: 202607  (mês anterior ao corrente)
+  banco: SQLite [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db] (de CAMINHO_SQLITE)
+  AGI: ambiente [producao] host [10.238.6.120] (de AGI_AMBIENTE) | executável [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
+  EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: desligado | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado | download SFTP: desligado
+2026-08-12 11:13:27.316 | INFO    |comum.config.diagnostico:verificar_banco:376 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-12 11:13:27.317 | INFO    |comum.config.diagnostico:verificar_banco:376 - Utilizando SQLite local [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db]
 
-  12 casos montados, referência 202603
+── Configuração ──────────────────────────────────────────────────────
+  [OK   ] nomes de variável                  61 documentadas, sem divergência
 
---- Executando o RPA 1 ---
+── Pastas ────────────────────────────────────────────────────────────
+  [OK   ] CAMINHO_OPERADORAS                 [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras] — leitura e escrita
+  [FALHA] DIRETORIO_ENTRADA                  não existe: [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Entrada]
+           -> Crie a pasta, ou corrija o caminho no .env. Se for pasta de
+           -> rede, confira se o compartilhamento está montado.
+  [FALHA] DIRETORIO_NAO_IDENTIFICADOS        não existe: [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_NAO_IDENTIFICADOS]
+           -> Crie a pasta, ou corrija o caminho no .env. Se for pasta de
+           -> rede, confira se o compartilhamento está montado.
+  [FALHA] DIRETORIO_QUARENTENA               não existe: [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_QUARENTENA]
+           -> Crie a pasta, ou corrija o caminho no .env. Se for pasta de
+           -> rede, confira se o compartilhamento está montado.
+  [OK   ] DIRETORIO_TEMP                     [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP] — leitura e escrita
+  [OK   ] DIRETORIO_SAIDA_VALIDACAO          [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_SAIDA] — leitura e escrita
+  [OK   ] CAMINHO_EXPECTATIVA_DETRAF         [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Expectativa]
+  [FALHA] CAMINHO_CONTROLE_CT                não existe: [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\CT]
+           -> Crie a pasta, ou corrija o caminho no .env. Se for pasta de
+           -> rede, confira se o compartilhamento está montado.
+  [OK   ] DIRETORIO_HISTORICO_ARQUIVOS       [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\historico] — leitura e escrita
+  [OK   ] RAIZ_LOGS                          [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\logs] — leitura e escrita
 
-  $ C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\main.py --pasta-entrada C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA1\Entrada --referencia 202603 --etapa processamento --dry-run
+── Validação ─────────────────────────────────────────────────────────
+  [OK   ] NOME_FANTASIA_VIVO                 Vivo, Telefônica
 
+── Filtros ───────────────────────────────────────────────────────────
+  [OK   ] ARQUIVOS_VALIDADOS                 _EXP
+  [OK   ] EXPECTATIVA_SUBSTRING              _D
+  [OK   ] PASTAS_EXPECTATIVAS                Vivo, TLF, MVNO, Detraf TRP
 
-==============================================================================
-RESULTADO POR CASO
-==============================================================================
+── Banco ─────────────────────────────────────────────────────────────
+  [OK   ] modo                               dev — SQLite [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db]
+  [OK   ] conexão                            estabelecida
+  [OK   ] tbl_anexo5_processado              18 coluna(s)
+  [OK   ] tbl_detraf_mapeamento_descritores  8 coluna(s)
+  [OK   ] tbl_detraf_tarifas                 21 coluna(s)
+  [OK   ] tbl_rpa_log_detraf_despesa_arquivos 13 coluna(s)
+  [AVISO] tbl_rpa_log_detraf_despesa_contestacao faltam as colunas: vb_contestacao (pendente no DBA)
+           -> Ausência conhecida e tratada: a escrita segue sem estas
+           -> colunas, com aviso no log. Um único ALTER TABLE resolve — ver
+           -> pendencias-para-o-cliente.md (Q24).
 
-[OK  ] detraf_valido                      Detraf válido da ALGAR — tarifa regulada 0,0061
-         -> salvo intacto em [Operadoras\Algar\2026\202603\Detrafs Recebidos]
+── SFTP ──────────────────────────────────────────────────────────────
+  [AVISO] CLICKHUB_SFTP_HOST                 AUSENTE
+           -> Defina CLICKHUB_SFTP_HOST no ambiente da máquina (não no .env
+           -> versionado).
+  [AVISO] CLICKHUB_SFTP_USER                 AUSENTE
+           -> Defina CLICKHUB_SFTP_USER no ambiente da máquina (não no .env
+           -> versionado).
+  [AVISO] CLICKHUB_SFTP_PASSWORD             AUSENTE
+           -> Defina CLICKHUB_SFTP_PASSWORD no ambiente da máquina (não no
+           -> .env versionado).
+  [OK   ] CAMINHO_EXPECTATIVA_DETRAF (destino do download) [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Expectativa] — leitura e escrita
+  [OK   ] destinos do download               as 4 pastas baixadas estão em PASTAS_EXPECTATIVAS
 
-[FALHA] identificacao_com_ponto_e_virgula  Detraf válido separado por `;` — vai para a operadora certa?
-         -> salvo na pasta de Claro STFC — a operadora ERRADA (a credora do arquivo é a EOT 025, Algar). O arquivo entra na apuração de quem não o mandou, sem erro nenhum no log.
+── Outlook ───────────────────────────────────────────────────────────
+  [OK   ] OUTLOOK_ACCOUNT                    detrafTBRA.br@telefonica.com
+  [OK   ] pastas                             origem [Detraf Despesas], destino [PROCESSADOS]
+  [OK   ] CAMINHO_TEMPLATE_EMAIL_DETRAF_INVALIDO [email-detraf-invalido.txt]
 
-[OK  ] detraf_real_1                      Detraf real da ALGAR — DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_0…
-         -> recusado (íntegro, com diagnóstico ao lado) — Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+── AGI ───────────────────────────────────────────────────────────────
+  [OK   ] RPA_DETRAF_DESPESA_AGI_USER        definida (8 caracteres)
+  [OK   ] RPA_DETRAF_DESPESA_AGI_PASSWORD    definida (28 caracteres)
+  [FALHA] DIRETORIO_AGI                      executável não encontrado: [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
+           -> Aponte para o `portal_air_vivo.exe` do Portal AIR — em
+           -> `aplicacao_agi/Portal AIR/portal_air_vivo.exe`, relativo a
+           -> `unificado/`. Não é o `adl.exe`, que fica no `runtime/` ao
+           -> lado.
+  [OK   ] AGI_AMBIENTE                       producao (de AGI_AMBIENTE)
+  [OK   ] AGI_JANELA_HOST_PRODUCAO           10.238.6.120 (de AGI_JANELA_HOST_PRODUCAO)
+  [OK   ] imagens                            44 imagem(ns) em [imagens]
+  [AVISO] resolução                          27 das 30 imagens vieram de outra máquina
+           -> Elas são comparadas pixel a pixel. As 3 do portal já foram
+           -> recapturadas aqui — `python ensaiar_portal_agi.py` as confere
+           -> sozinho. As 27 restantes são telas de dentro do AGI e só dá
+           -> para conferi-las com acesso a ele. Se um passo falhar por
+           -> imagem não encontrada, recapture NESTA VM — ver
+           -> docs/03-checklists/checklist-validacao-agi.md.
 
-[OK  ] detraf_real_2                      Detraf real da ALGAR — DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R…
-         -> recusado (íntegro, com diagnóstico ao lado) — Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+======================================================================
+  27 OK, 5 aviso(s), 5 falha(s)
 
-[OK  ] estrutura_do_mes                   As quatro subpastas do mês, clonadas de 202602
-         -> as 4 subpastas foram clonadas do mês anterior
+  🔴 Corrija as falhas antes de rodar os robôs:
+     - Pastas/DIRETORIO_ENTRADA: não existe: [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Entrada]
+     - Pastas/DIRETORIO_NAO_IDENTIFICADOS: não existe: [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_NAO_IDENTIFICADOS]
+     - Pastas/DIRETORIO_QUARENTENA: não existe: [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_QUARENTENA]
+     - Pastas/CAMINHO_CONTROLE_CT: não existe: [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\CT]
+     - AGI/DIRETORIO_AGI: executável não encontrado: [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
 
-[OK  ] layout_quebrado                    Arquivo com 5 colunas (o layout da V2 exige 15)
-         -> recusado por 'ao menos 15 colunas', com diagnóstico ao lado
-
-[OK  ] eot_fora_do_anexo5                 Credora EOT 997, que não consta do Anexo 5
-         -> fora da árvore, em quarentena
-
-[OK  ] gh_invalido                        Coluna 8 com grupo horário 'X' (válidos: S, R, N, D)
-         -> recusado por 'S, R, N ou D', com diagnóstico ao lado
-
-[OK  ] referencia_errada                  Coluna 3 com referência de seis meses atrás
-         -> recusado por 'a referência precisa ser', com diagnóstico ao lado
-
-[OK  ] arquivo_vazio                      Arquivo vazio — precisa ser recusado sem derrubar o lote
-         -> em quarentena, em [_QUARENTENA\202603\RECUSA_vazio]
-
-[OK  ] extensao_ignorada                  Anexo `.pdf` — fora de EXTENSOES_PERMITIDAS
-         -> ignorado, como esperado para `.pdf`
-
-[OK  ] efeitos_externos                   Nenhum e-mail enviado (execução --dry-run e sem Outlook)
-         -> kill-switch desligado e nenhuma operadora notificada
-
-==============================================================================
-11/12 casos OK  |  código de saída do robô: 0
-Falharam: identificacao_com_ponto_e_virgula
-Evidência em: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TESTE_RPA1
+  🔒 Nenhum efeito externo ligado — nada sai desta máquina.
