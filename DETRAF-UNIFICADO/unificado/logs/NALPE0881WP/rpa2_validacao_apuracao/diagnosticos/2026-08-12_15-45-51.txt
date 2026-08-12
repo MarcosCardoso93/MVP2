@@ -1,0 +1,76 @@
+======================================================================
+EXECUÇÃO
+======================================================================
+robô:       rpa2_validacao_apuracao
+referência: (mês corrente -1)
+início:     2026-08-12 15:45:51
+duração:    4.4s
+desfecho:   OK
+parâmetro:  parâmetros: nenhum — execução completa, como na agenda
+
+======================================================================
+AMBIENTE
+======================================================================
+robô: rpa2_validacao_apuracao
+modo: DEV  (de ENV)
+log: nível INFO (de LOG_LEVEL), diagnose ligado
+competência: 202607  (mês anterior ao corrente)
+banco: SQLite [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db] (de CAMINHO_SQLITE)
+AGI: ambiente [producao] host [10.238.6.120] (de AGI_AMBIENTE) | executável [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
+EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: desligado | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado | download SFTP: desligado
+
+======================================================================
+ETAPA 1/4: arranque   [ok]   3.0s
+======================================================================
+produziu:
+  módulos carregados, banco resolvido
+
+======================================================================
+ETAPA 2/4: expectativa   [ok]   0.0s
+======================================================================
+entrada:
+  origem = SFTP ClickHub
+  destino = C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Expectativa
+produziu:
+  Origem:                   nenhuma (PERMITIR_DOWNLOAD_SFTP desligado)
+  Período procurado:        202607
+  Arquivos baixados:        0
+
+======================================================================
+ETAPA 3/4: validacao   [ok]   1.4s
+======================================================================
+entrada:
+  CAMINHO_OPERADORAS = C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras
+  CAMINHO_EXPECTATIVA_DETRAF = C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Expectativa
+produziu:
+  Detraf válidos:           0
+  Detraf inválidos:         0
+  Expectativa válidos:      4
+  Expectativa inválidos:    0
+  
+  Operadoras sem Detraf no mês (1):
+    ALGAR
+
+======================================================================
+ETAPA 4/4: batimento   [ok]   0.0s
+======================================================================
+entrada:
+  CAMINHO_OPERADORAS = C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras
+produziu:
+  Operadoras apuradas:      1
+  
+  O resultado é a TABELA `tbl_rpa_log_detraf_despesa_contestacao`,
+  não um arquivo — a Base de Contestação virou tabela em 2026-08-04.
+  
+  Próximo passo é humano: o analista sinaliza no WebFat o que
+  contestar e se haverá retenção. Só então o RPA 3 tem o que fazer.
+  
+  Operadoras: OPERADORA_NAO_IDENTIFICADA
+
+======================================================================
+LOG COMPLETO
+======================================================================
+C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\logs
+
+Este arquivo é o resumo por etapa. O log tem a sequência completa,
+linha a linha, de tudo o que a execução fez.

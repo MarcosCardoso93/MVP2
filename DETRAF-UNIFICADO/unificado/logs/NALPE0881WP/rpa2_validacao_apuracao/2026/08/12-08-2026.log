@@ -1,4 +1,3 @@
-PS C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado> .\.venv\Scripts\python .\rpa2_validacao_apuracao\main.py
 2026-08-12 15:45:51.548 | INFO    |__main__:<module>:126 - [RPA 2] robô: rpa2_validacao_apuracao
 2026-08-12 15:45:51.549 | INFO    |__main__:<module>:126 - [RPA 2] modo: DEV  (de ENV)
 2026-08-12 15:45:51.549 | INFO    |__main__:<module>:126 - [RPA 2] log: nível INFO (de LOG_LEVEL), diagnose ligado
