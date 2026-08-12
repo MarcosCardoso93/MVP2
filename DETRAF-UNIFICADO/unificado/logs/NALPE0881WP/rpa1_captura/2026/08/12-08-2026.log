@@ -1,4 +1,3 @@
-PS C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado> .\.venv\Scripts\python .\rpa1_captura\main.py
 2026-08-12 11:24:35.402 | INFO    |__main__:<module>:118 - [RPA 1] robô: rpa1_captura
 2026-08-12 11:24:35.403 | INFO    |__main__:<module>:118 - [RPA 1] modo: DEV  (de ENV)
 2026-08-12 11:24:35.403 | INFO    |__main__:<module>:118 - [RPA 1] log: nível INFO (de LOG_LEVEL), diagnose ligado
@@ -86,4 +85,3 @@ Traceback (most recent call last):
 comum.integracoes.outlook.OutlookError: Não foi possível acessar a conta 'detrafTBRA.br@telefonica.com' para localizar 'Detraf Despesas'.
 2026-08-12 11:24:37.753 | INFO    |__main__:main:110 - [Diagnóstico] Etapas desta execução em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\logs\NALPE0881WP\rpa1_captura\diagnosticos\2026-08-12_11-24-35.txt].
 2026-08-12 11:24:37.754 | INFO    |__main__:<module>:118 - [RPA 1] Diagnóstico das etapas em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\logs\NALPE0881WP\rpa1_captura\diagnosticos\2026-08-12_11-24-35.txt]
-PS C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado> 

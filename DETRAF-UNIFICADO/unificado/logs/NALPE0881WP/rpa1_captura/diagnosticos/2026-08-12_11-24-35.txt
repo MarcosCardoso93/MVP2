@@ -1,0 +1,68 @@
+======================================================================
+EXECUÇÃO
+======================================================================
+robô:       rpa1_captura
+referência: (mês corrente -1)
+início:     2026-08-12 11:24:35
+duração:    2.3s
+desfecho:   ERRO na etapa 2/2 (captura)
+parâmetro:  parâmetros: nenhum — execução completa, como na agenda
+
+======================================================================
+AMBIENTE
+======================================================================
+robô: rpa1_captura
+modo: DEV  (de ENV)
+log: nível INFO (de LOG_LEVEL), diagnose ligado
+competência: 202607  (mês anterior ao corrente)
+banco: SQLite [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db] (de CAMINHO_SQLITE)
+AGI: ambiente [producao] host [10.238.6.120] (de AGI_AMBIENTE) | executável [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
+EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: desligado | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado | download SFTP: desligado
+
+======================================================================
+ETAPA 1/2: arranque   [ok]   2.1s
+======================================================================
+produziu:
+  módulos carregados, banco resolvido
+
+======================================================================
+ETAPA 2/2: captura   [ERRO]   0.2s
+======================================================================
+entrada:
+  OUTLOOK_ACCOUNT = detrafTBRA.br@telefonica.com
+  pasta de origem = Detraf Despesas
+  DIRETORIO_ENTRADA = C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Entrada
+erro: OutlookError: Não foi possível acessar a conta 'detrafTBRA.br@telefonica.com' para localizar 'Detraf Despesas'.
+traceback:
+  Traceback (most recent call last):
+    File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\comum\integracoes\outlook.py", line 379, in _get_or_create_top_level_folder
+      parent = self._ns.Folders(self._account)
+    File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\.venv\Lib\site-packages\win32com\client\dynamic.py", line 214, in __call__
+      self._oleobj_.Invoke(*allArgs), self._olerepr_.defaultDispatchName, None
+      ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  pywintypes.com_error: (-2147352567, 'Exceção.', (4096, 'Microsoft Outlook', 'Falha na operação tentada. Objeto não encontrado.', None, 0, -2147221233), None)
+  
+  The above exception was the direct cause of the following exception:
+  
+  Traceback (most recent call last):
+    File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\comum\config\diagnostico_execucao.py", line 114, in etapa
+      yield atual
+    File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\src\controllers\processamento_controller.py", line 104, in processar
+      arquivos = self._outlook.capturar_arquivos()
+    File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\src\controllers\outlook_controller.py", line 59, in capturar_arquivos
+      emails = outlook.fetch_emails_from_folder(self._config.detraf_despesas_folder)
+    File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\comum\integracoes\outlook.py", line 118, in fetch_emails_from_folder
+      folder = self._get_or_create_top_level_folder(folder_name)
+    File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\comum\integracoes\outlook.py", line 388, in _get_or_create_top_level_folder
+      raise OutlookError(
+          f"Não foi possível acessar a conta '{self._account}' para localizar '{name}'."
+      ) from exc
+  comum.integracoes.outlook.OutlookError: Não foi possível acessar a conta 'detrafTBRA.br@telefonica.com' para localizar 'Detraf Despesas'.
+
+======================================================================
+LOG COMPLETO
+======================================================================
+C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\logs
+
+Este arquivo é o resumo por etapa. O log tem a sequência completa,
+linha a linha, de tudo o que a execução fez.
