@@ -85,3 +85,44 @@ Traceback (most recent call last):
 comum.integracoes.outlook.OutlookError: Não foi possível acessar a conta 'detrafTBRA.br@telefonica.com' para localizar 'Detraf Despesas'.
 2026-08-12 11:24:37.753 | INFO    |__main__:main:110 - [Diagnóstico] Etapas desta execução em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\logs\NALPE0881WP\rpa1_captura\diagnosticos\2026-08-12_11-24-35.txt].
 2026-08-12 11:24:37.754 | INFO    |__main__:<module>:118 - [RPA 1] Diagnóstico das etapas em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\logs\NALPE0881WP\rpa1_captura\diagnosticos\2026-08-12_11-24-35.txt]
+2026-08-12 11:29:48.766 | INFO    |__main__:<module>:118 - [RPA 1] robô: rpa1_captura
+2026-08-12 11:29:48.768 | INFO    |__main__:<module>:118 - [RPA 1] modo: DEV  (de ENV)
+2026-08-12 11:29:48.769 | INFO    |__main__:<module>:118 - [RPA 1] log: nível INFO (de LOG_LEVEL), diagnose ligado
+2026-08-12 11:29:48.769 | INFO    |__main__:<module>:118 - [RPA 1] competência: 202607  (mês anterior ao corrente)
+2026-08-12 11:29:48.770 | INFO    |__main__:<module>:118 - [RPA 1] banco: SQLite [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db] (de CAMINHO_SQLITE)
+2026-08-12 11:29:48.770 | INFO    |__main__:<module>:118 - [RPA 1] AGI: ambiente [producao] host [10.238.6.120] (de AGI_AMBIENTE) | executável [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
+2026-08-12 11:29:48.771 | INFO    |__main__:<module>:118 - [RPA 1] EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: desligado | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado | download SFTP: desligado
+2026-08-12 11:29:48.771 | INFO    |__main__:<module>:118 - [RPA 1] parâmetros: nenhum — execução completa, como na agenda
+2026-08-12 11:29:51.356 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-12 11:29:51.357 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db]
+2026-08-12 11:29:52.094 | INFO    |__main__:main:94 - Aplicação iniciada
+2026-08-12 11:29:52.095 | INFO    |src.main.process_handle:run:34 - [RPA 1] Etapa 1/2 — captura dos anexos no Outlook (HU-01)
+2026-08-12 11:29:52.096 | INFO    |src.controllers.outlook_controller:capturar_arquivos:58 - Conectando ao Outlook (conta configurada: 'detrafTBRA')...
+2026-08-12 11:29:52.116 | INFO    |src.controllers.outlook_controller:capturar_arquivos:58 - Conectado ao Outlook com sucesso.
+2026-08-12 11:30:35.396 | INFO    |comum.integracoes.outlook:_get_or_create_top_level_folder:391 - Pasta 'Detraf Despesas' não encontrada em 'detrafTBRA' — criando.
+2026-08-12 11:30:39.475 | INFO    |src.controllers.processamento_controller:processar:104 - 0 e-mail(s) em 'Detraf Despesas'
+2026-08-12 11:30:39.475 | INFO    |src.controllers.processamento_controller:processar:104 - Resumo da captura — lidos: 0 | filtrados (ignorados): 0 | já rastreados (ignorados): 0 | falha no download: 0 | falha ao mover p/ PROCESSADOS: 0 | arquivos capturados: 0
+2026-08-12 11:30:39.477 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] E-mails lidos:            0
+2026-08-12 11:30:39.478 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] Ignorados pelo filtro:    0
+2026-08-12 11:30:39.478 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] Ignorados (já capturados):0
+2026-08-12 11:30:39.478 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] Falha no download:        0
+2026-08-12 11:30:39.479 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] Falha ao mover:           0
+2026-08-12 11:30:39.479 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] Arquivos baixados:        0
+2026-08-12 11:30:39.479 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] Pasta: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Entrada
+2026-08-12 11:30:39.480 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] ────────────────────────────────────────────────────────────
+2026-08-12 11:30:39.480 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] PRÓXIMA ETAPA: identificação da operadora e salvamento na árvore
+2026-08-12 11:30:39.480 | INFO    |src.main.process_handle:run:34 - [RPA 1] Etapa 2/2 — identificação da operadora e salvamento (HU-02/HU-03)
+2026-08-12 11:30:39.481 | INFO    |src.controllers.processamento_controller:processar:155 - Iniciando fluxo de processamento
+2026-08-12 11:30:39.481 | INFO    |src.controllers.processamento_controller:processar:155 - Competência: 202607 | Ano: 2026
+2026-08-12 11:30:39.481 | INFO    |src.controllers.processamento_controller:processar:155 - Total de arquivos a processar: 0
+2026-08-12 11:30:39.482 | INFO    |src.services.processamento_service:executar:153 - Resumo — Sucesso: 0 | Reprovados: 0 | Não identificados: 0 | Erros: 0
+2026-08-12 11:30:39.483 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Arquivos salvos:          0
+2026-08-12 11:30:39.483 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Reprovados na validação:  0
+2026-08-12 11:30:39.483 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Não identificados:        0
+2026-08-12 11:30:39.484 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Com erro:                 0
+2026-08-12 11:30:39.484 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Pasta: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras
+2026-08-12 11:30:39.485 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] ────────────────────────────────────────────────────────────
+2026-08-12 11:30:39.485 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Esta é a última etapa da execução.
+2026-08-12 11:30:39.486 | INFO    |__main__:main:94 - Aplicação finalizada
+2026-08-12 11:30:39.488 | INFO    |__main__:main:110 - [Diagnóstico] Etapas desta execução em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\logs\NALPE0881WP\rpa1_captura\diagnosticos\2026-08-12_11-29-48.txt].
+2026-08-12 11:30:39.489 | INFO    |__main__:<module>:118 - [RPA 1] Diagnóstico das etapas em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\logs\NALPE0881WP\rpa1_captura\diagnosticos\2026-08-12_11-29-48.txt]
