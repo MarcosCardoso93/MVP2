@@ -1,0 +1,99 @@
+======================================================================
+EXECUÇÃO
+======================================================================
+robô:       rpa2_validacao_apuracao
+referência: (mês corrente -1)
+início:     2026-08-13 14:31:01
+duração:    8.6s
+desfecho:   OK
+parâmetro:  parâmetros: nenhum — execução completa, como na agenda
+
+======================================================================
+AMBIENTE
+======================================================================
+robô: rpa2_validacao_apuracao
+modo: DEV  (de ENV)
+log: nível INFO (de LOG_LEVEL), diagnose ligado
+competência: 202607  (mês anterior ao corrente)
+banco: SQLite [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db] (de CAMINHO_SQLITE)
+AGI: ambiente [producao] host [10.238.6.120] (de AGI_AMBIENTE) | executável [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
+EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: desligado | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado | download SFTP: LIGADO
+
+======================================================================
+ETAPA 1/4: arranque   [ok]   1.7s
+======================================================================
+produziu:
+  módulos carregados, banco resolvido
+
+======================================================================
+ETAPA 2/4: expectativa   [ok]   2.6s
+======================================================================
+entrada:
+  origem = SFTP ClickHub
+  destino = C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Expectativa
+produziu:
+  Origem:                   SFTP
+  Período procurado:        202607
+  Arquivos baixados:        0
+  
+  Falhas (1):
+    [SFTP] Faltam credenciais no ambiente: CLICKHUB_SFTP_HOST, CLICKHUB_SFTP_USER, CLICKHUB_SFTP_PASSWORD.
+  -> Elas são variáveis de ambiente da máquina, não do `.env` do repositório.
+  -> Para testar SEM SFTP, o RPA 2 aceita `main.py --etapa expectativa --de-pasta CAMINHO`: ele lê de um diretório local aplicando os mesmos filtros.
+
+======================================================================
+ETAPA 3/4: validacao   [ok]   3.1s
+======================================================================
+entrada:
+  CAMINHO_OPERADORAS = C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras
+  CAMINHO_EXPECTATIVA_DETRAF = C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Expectativa
+produziu:
+  Detraf válidos:           13
+  Detraf inválidos:         19
+  Expectativa válidos:      0
+  Expectativa inválidos:    0
+  
+  Recusados (cada um tem um *_RECUSADO.md ao lado):
+    DETRAF-TMCO ( ITELCO X VIVO 07-26).xlsx
+    Detraf Nova x Vivo SMP 202607.csv
+    SISTEL - 07.2026 - VIVO.xlsx
+    expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx
+    202607-C-DETRAF-LC-SAMM-TBRASMP.csv
+    DETRAF-TMCO-0123-2026-GGNET-VIVO SMP - RESUMO EOT_044_045_202607.csv
+    DETRAF_FINAL_202607_VONARE_VIVO_ITX_20260806161630.csv
+    layout-telefonica-brasil-smp-c-vc1-202607.xlsx
+    Detraf_GLT912XVivo020_202607.xlsx
+    Opcao_Telefonica_Brasil_S_A__202607.csv
+    20260806103500_655_030_detraf_203.csv
+    Agil_Vivo_SMP_202607.csv
+    ATLANET - 07.2026 - VIVO.xlsx
+    202607-C-DETRAF-LC-TRIADE-VIVOMOVEL.csv
+    expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx
+    expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx
+    202607-C-DETRAF-LC-ADYLNET-TBRASMP.csv
+    MEGALINK - 07.2026  -  VIVO.xlsx
+    DETRAF-TMCO-0116-2026-PREDLINK-VIVO SMP - RESUMO_EOT 20-202607.csv
+
+======================================================================
+ETAPA 4/4: batimento   [ok]   1.2s
+======================================================================
+entrada:
+  CAMINHO_OPERADORAS = C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras
+produziu:
+  Operadoras apuradas:      23
+  
+  O resultado é a TABELA `tbl_rpa_log_detraf_despesa_contestacao`,
+  não um arquivo — a Base de Contestação virou tabela em 2026-08-04.
+  
+  Próximo passo é humano: o analista sinaliza no WebFat o que
+  contestar e se haverá retenção. Só então o RPA 3 tem o que fazer.
+  
+  Operadoras: ADYLNET INTERNET PROVIDER, AGIL TELECOM, ALGAR, ATLANET TELECOMUNICACOES, BTT TELECOMUNICACOES S.A, DESKTOP SIGMANET, GGNET TELECOM, GOLDEN LINE TELECOM, INVISTA NET, ITELCO TELECOM, LH TELECOMUNICACOES LTDA, MEGALINK SERVICOS, MEGATELECOM TELECOMUNICACOES S.A, NOVA TECNOLOGIA E TELECOMUNICACOES, OPCAO TELECOM, OPERADORA_NAO_IDENTIFICADA, PREDIALNET, SISTEL FIBRA, T1 TELECOM, TRI TELECOM, UFINET BRASIL, UNIFIQUE, VONARE
+
+======================================================================
+LOG COMPLETO
+======================================================================
+C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\logs
+
+Este arquivo é o resumo por etapa. O log tem a sequência completa,
+linha a linha, de tudo o que a execução fez.

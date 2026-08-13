@@ -50,5 +50,229 @@
         "tamanho_bytes": 77620,
         "modificado_em": 1786469378,
         "numero_de_linhas": 357
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\Desktop Sigmanet\\2026\\202607\\Detrafs Recebidos\\layout-telefonica-brasil-stfc-c-ldn-202607.xlsx": {
+        "status": "Válido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 11913,
+        "modificado_em": 1786129181,
+        "numero_de_linhas": 39
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\LH Telecomunicacoes LTDA\\2026\\202607\\Detrafs Recebidos\\expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx": {
+        "status": "Válido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 9372,
+        "modificado_em": 1786640047,
+        "numero_de_linhas": 5
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\Megatelecom Telecomunicacoes S.A\\2026\\202607\\Detrafs Recebidos\\202607-C-DETRAF-LD-SAMM-TBRASMP.csv": {
+        "status": "Válido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 568,
+        "modificado_em": 1786139118,
+        "numero_de_linhas": 7
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\Unifique\\2026\\202607\\Detrafs Recebidos\\202607 Detraf C SMS SMP Unifique X SMP Telefonica Brasil.xlsx": {
+        "status": "Válido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 23087,
+        "modificado_em": 1786640047,
+        "numero_de_linhas": 81
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\Agil Telecom\\2026\\202607\\Detrafs Recebidos\\Agil_Vivo_202607.csv": {
+        "status": "Válido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 1010,
+        "modificado_em": 1786640047,
+        "numero_de_linhas": 10
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\Tri Telecom\\2026\\202607\\Detrafs Recebidos\\202607-C-DETRAF-LD-TRIADE-VIVOMOVEL.csv": {
+        "status": "Válido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 412,
+        "modificado_em": 1786359780,
+        "numero_de_linhas": 5
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\Nova Tecnologia e Telecomunicacoes\\2026\\202607\\Detrafs Recebidos\\Detraf Nova x TLF_011 202607.csv": {
+        "status": "Válido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 568,
+        "modificado_em": 1786471249,
+        "numero_de_linhas": 5
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\Invista Net\\2026\\202607\\Detrafs Recebidos\\expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx": {
+        "status": "Válido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 9565,
+        "modificado_em": 1786640047,
+        "numero_de_linhas": 7
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\Adylnet Internet Provider\\2026\\202607\\Detrafs Recebidos\\202607-C-DETRAF-LD-ADYLNET-TBRASTFC.csv": {
+        "status": "Válido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 1914,
+        "modificado_em": 1785939193,
+        "numero_de_linhas": 24
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\ALGAR\\2026\\202607\\Detrafs Recebidos\\RELAM_SMS_ALGAR_X_VIVO_SMP_R_202607_V00.csv": {
+        "status": "Válido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 28029,
+        "modificado_em": 1786131895,
+        "numero_de_linhas": 376
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\UFINET BRASIL\\2026\\202607\\Detrafs Recebidos\\Declaração de Tráfego UFINET x VIVO LDN 07-2026.xlsx": {
+        "status": "Válido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 17924,
+        "modificado_em": 1786397204,
+        "numero_de_linhas": 6
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\GGNET Telecom\\2026\\202607\\Detrafs Recebidos\\DETRAF-TMCO-0122-2026-GGNET-VIVO STFC - RESUMO_EOT_200_948_202607.csv": {
+        "status": "Válido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 1745,
+        "modificado_em": 1786131970,
+        "numero_de_linhas": 19
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\T1 Telecom\\2026\\202607\\Detrafs Recebidos\\expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx": {
+        "status": "Válido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 9361,
+        "modificado_em": 1786640047,
+        "numero_de_linhas": 5
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\Invista Net\\2026\\202607\\Detrafs Recebidos\\expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx": {
+        "status": "Inválido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 9326,
+        "modificado_em": 1786640047,
+        "numero_de_linhas": 4
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\Agil Telecom\\2026\\202607\\Detrafs Recebidos\\Agil_Vivo_SMP_202607.csv": {
+        "status": "Inválido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 574,
+        "modificado_em": 1786640047,
+        "numero_de_linhas": 5
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\LH Telecomunicacoes LTDA\\2026\\202607\\Detrafs Recebidos\\expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx": {
+        "status": "Inválido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 9296,
+        "modificado_em": 1786640047,
+        "numero_de_linhas": 4
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\Tri Telecom\\2026\\202607\\Detrafs Recebidos\\202607-C-DETRAF-LC-TRIADE-VIVOMOVEL.csv": {
+        "status": "Inválido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 333,
+        "modificado_em": 1786359780,
+        "numero_de_linhas": 4
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\BTT Telecomunicacoes S.A\\2026\\202607\\Detrafs Recebidos\\20260806103500_655_030_detraf_203.csv": {
+        "status": "Inválido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 643,
+        "modificado_em": 1786026961,
+        "numero_de_linhas": 7
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\Megatelecom Telecomunicacoes S.A\\2026\\202607\\Detrafs Recebidos\\202607-C-DETRAF-LC-SAMM-TBRASMP.csv": {
+        "status": "Inválido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 346,
+        "modificado_em": 1786139118,
+        "numero_de_linhas": 4
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\Nova Tecnologia e Telecomunicacoes\\2026\\202607\\Detrafs Recebidos\\Detraf Nova x Vivo SMP 202607.csv": {
+        "status": "Inválido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 904,
+        "modificado_em": 1786471249,
+        "numero_de_linhas": 9
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\Vonare\\2026\\202607\\Detrafs Recebidos\\DETRAF_FINAL_202607_VONARE_VIVO_ITX_20260806161630.csv": {
+        "status": "Inválido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 868,
+        "modificado_em": 1786124557,
+        "numero_de_linhas": 7
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\Opcao Telecom\\2026\\202607\\Detrafs Recebidos\\Opcao_Telefonica_Brasil_S_A__202607.csv": {
+        "status": "Inválido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 1459,
+        "modificado_em": 1786471273,
+        "numero_de_linhas": 16
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\Sistel Fibra\\2026\\202607\\Detrafs Recebidos\\SISTEL - 07.2026 - VIVO.xlsx": {
+        "status": "Inválido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 10890,
+        "modificado_em": 1786640047,
+        "numero_de_linhas": 0
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\Desktop Sigmanet\\2026\\202607\\Detrafs Recebidos\\layout-telefonica-brasil-smp-c-vc1-202607.xlsx": {
+        "status": "Inválido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 11604,
+        "modificado_em": 1786129181,
+        "numero_de_linhas": 35
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\Adylnet Internet Provider\\2026\\202607\\Detrafs Recebidos\\202607-C-DETRAF-LC-ADYLNET-TBRASMP.csv": {
+        "status": "Inválido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 853,
+        "modificado_em": 1785939193,
+        "numero_de_linhas": 10
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\T1 Telecom\\2026\\202607\\Detrafs Recebidos\\expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx": {
+        "status": "Inválido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 9630,
+        "modificado_em": 1786640047,
+        "numero_de_linhas": 8
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\Megalink Servicos\\2026\\202607\\Detrafs Recebidos\\MEGALINK - 07.2026  -  VIVO.xlsx": {
+        "status": "Inválido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 11196,
+        "modificado_em": 1786640047,
+        "numero_de_linhas": 0
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\Itelco Telecom\\2026\\202607\\Detrafs Recebidos\\DETRAF-TMCO ( ITELCO X VIVO 07-26).xlsx": {
+        "status": "Inválido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 11755,
+        "modificado_em": 1786640047,
+        "numero_de_linhas": 9
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\Golden Line Telecom\\2026\\202607\\Detrafs Recebidos\\Detraf_GLT912XVivo020_202607.xlsx": {
+        "status": "Inválido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 10217,
+        "modificado_em": 1785948378,
+        "numero_de_linhas": 7
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\GGNET Telecom\\2026\\202607\\Detrafs Recebidos\\DETRAF-TMCO-0123-2026-GGNET-VIVO SMP - RESUMO EOT_044_045_202607.csv": {
+        "status": "Inválido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 1112,
+        "modificado_em": 1786131970,
+        "numero_de_linhas": 11
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\Atlanet Telecomunicacoes\\2026\\202607\\Detrafs Recebidos\\ATLANET - 07.2026 - VIVO.xlsx": {
+        "status": "Inválido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 10431,
+        "modificado_em": 1786640047,
+        "numero_de_linhas": 0
+    },
+    "C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\arquivos\\Operadoras\\Predialnet\\2026\\202607\\Detrafs Recebidos\\DETRAF-TMCO-0116-2026-PREDLINK-VIVO SMP - RESUMO_EOT 20-202607.csv": {
+        "status": "Inválido",
+        "data_processamento": "2026-08-13 14:31:09",
+        "tamanho_bytes": 769,
+        "modificado_em": 1786041840,
+        "numero_de_linhas": 7
     }
 }

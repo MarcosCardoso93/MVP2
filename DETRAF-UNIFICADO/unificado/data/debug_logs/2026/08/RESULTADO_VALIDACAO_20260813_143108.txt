@@ -1,0 +1,52 @@
+RESULTADO DA VALIDAÇÃO
+================================================================================
+TOTAL DE ARQUIVOS: 32
+================================================================================
+
+DETRAF VÁLIDOS (13)
+--------------------------------------------------------------------------------
+  • DETRAF-TMCO-0122-2026-GGNET-VIVO STFC - RESUMO_EOT_200_948_202607.csv
+  • Agil_Vivo_202607.csv
+  • layout-telefonica-brasil-stfc-c-ldn-202607.xlsx
+  • Declaração de Tráfego UFINET x VIVO LDN 07-2026.xlsx
+  • 202607-C-DETRAF-LD-TRIADE-VIVOMOVEL.csv
+  • expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx
+  • 202607-C-DETRAF-LD-SAMM-TBRASMP.csv
+  • 202607 Detraf C SMS SMP Unifique X SMP Telefonica Brasil.xlsx
+  • Detraf Nova x TLF_011 202607.csv
+  • 202607-C-DETRAF-LD-ADYLNET-TBRASTFC.csv
+  • expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx
+  • RELAM_SMS_ALGAR_X_VIVO_SMP_R_202607_V00.csv
+  • expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx
+
+DETRAF INVÁLIDOS (19)
+--------------------------------------------------------------------------------
+  • 202607-C-DETRAF-LC-TRIADE-VIVOMOVEL.csv
+  • DETRAF-TMCO ( ITELCO X VIVO 07-26).xlsx
+  • expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx
+  • DETRAF-TMCO-0123-2026-GGNET-VIVO SMP - RESUMO EOT_044_045_202607.csv
+  • SISTEL - 07.2026 - VIVO.xlsx
+  • expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx
+  • 202607-C-DETRAF-LC-SAMM-TBRASMP.csv
+  • Opcao_Telefonica_Brasil_S_A__202607.csv
+  • DETRAF_FINAL_202607_VONARE_VIVO_ITX_20260806161630.csv
+  • DETRAF-TMCO-0116-2026-PREDLINK-VIVO SMP - RESUMO_EOT 20-202607.csv
+  • Detraf Nova x Vivo SMP 202607.csv
+  • Agil_Vivo_SMP_202607.csv
+  • ATLANET - 07.2026 - VIVO.xlsx
+  • 202607-C-DETRAF-LC-ADYLNET-TBRASMP.csv
+  • layout-telefonica-brasil-smp-c-vc1-202607.xlsx
+  • expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx
+  • MEGALINK - 07.2026  -  VIVO.xlsx
+  • Detraf_GLT912XVivo020_202607.xlsx
+  • 20260806103500_655_030_detraf_203.csv
+
+EXPECTATIVA VÁLIDOS (0)
+--------------------------------------------------------------------------------
+  Nenhum arquivo
+
+EXPECTATIVA INVÁLIDOS (0)
+--------------------------------------------------------------------------------
+  Nenhum arquivo
+
+================================================================================
