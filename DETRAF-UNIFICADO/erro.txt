@@ -1,1 +1,14 @@
-Test-NetConnection -ComputerName BRTLVLTS1739FU -Port 22
+PS C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado> Test-NetConnection -ComputerName BRTLVLTS1739FU -Port 22                                                                                      
+AVISO: TCP connect to (10.240.52.4 : 22) failed                                                                                                                                                     
+AVISO: Ping to 10.240.52.4 failed with status: TimedOut                                                                                                                                             
+                                                                                                                                                                                                    
+                                                                                                                                                                                                    
+ComputerName           : BRTLVLTS1739FU                                                                                                                                                             
+RemoteAddress          : 10.240.52.4                                                                                                                                                                
+RemotePort             : 22                                                                                                                                                                         
+InterfaceAlias         : Wi-Fi                                                                                                                                                                      
+SourceAddress          : 10.125.65.132                                                                                                                                                              
+PingSucceeded          : False                                                                                                                                                                      
+PingReplyDetails (RTT) : 0 ms                                                                                                                                                                       
+TcpTestSucceeded       : False                                                                                                                                                                      
+                                   
