@@ -217,6 +217,28 @@ def test_eot_vinda_de_excel_como_float_e_aceita():
     assert validar_layout(pd.DataFrame([linha] * 5)).conforme
 
 
+def test_eot_com_letra_e_aceita():
+    """
+    🔴 2026-08-13: 1885 das 2656 EOTs do Anexo 5 (71%) têm uma letra na frente
+    (ex. "D67", da Novacia Telecom) — só dígito rejeitava a maioria real.
+    """
+    linha = _linha_valida()
+    linha[0] = "D67"
+
+    assert validar_layout(pd.DataFrame([linha] * 5)).conforme
+
+
+def test_eot_nan_continua_rejeitada():
+    """`nan` (texto) é como o pandas converte célula vazia — não é EOT válida."""
+    linha = _linha_valida()
+    linha[0] = "nan"
+
+    resultado = validar_layout(pd.DataFrame([linha] * 5))
+
+    assert not resultado.conforme
+    assert any(d.indice == 0 for d in resultado.divergencias)
+
+
 def test_rel_vazia_e_aceita():
     """A V2 diz que a coluna Rel pode estar vazia."""
     linha = _linha_valida()

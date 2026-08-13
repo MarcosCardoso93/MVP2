@@ -72,13 +72,21 @@ def _limpo(valor) -> str:
 
 
 def _eh_eot(valor) -> bool:
-    """EOT: só dígitos. Aceita `11.0`, que é como o Excel devolve um número."""
+    """
+    EOT: alfanumérico.
+
+    🔴 Até 2026-08-13 exigia só dígito. O Anexo 5 (fonte oficial, ABR Telecom)
+    tem 2656 EOTs cadastradas: 771 só com dígito (ex. "931"), mas 1885 (71%)
+    com uma letra na frente (ex. "D67", da Novacia Telecom) — a maioria real
+    era rejeitada como "layout errado". Aceita `11.0`, que é como o Excel
+    devolve um EOT numérico como número.
+    """
     texto = _limpo(valor)
-    if not texto:
+    if not texto or texto.lower() == "nan":
         return False
     if "." in texto:
         texto = texto.split(".")[0]
-    return texto.isdigit()
+    return texto.isalnum()
 
 
 def _eh_aaaamm(valor) -> bool:
@@ -141,8 +149,8 @@ class ColunaEsperada:
 
 #: A coluna 5 (POI) é de escrita livre e não obrigatória — sem verificação.
 LAYOUT_V2: tuple[ColunaEsperada, ...] = (
-    ColunaEsperada(const.COL_CREDORA, "Credora", "EOT numérica", _eh_eot),
-    ColunaEsperada(const.COL_DEVEDORA, "Devedora", "EOT numérica", _eh_eot),
+    ColunaEsperada(const.COL_CREDORA, "Credora", "EOT (Anexo 5)", _eh_eot),
+    ColunaEsperada(const.COL_DEVEDORA, "Devedora", "EOT (Anexo 5)", _eh_eot),
     ColunaEsperada(const.COL_REFERENCIA, "Referencia", "AAAAMM", _eh_aaaamm),
     ColunaEsperada(const.COL_TRAFEGO, "Tráfego", "AAAAMM", _eh_aaaamm),
     ColunaEsperada(const.COL_POI, "POI", "escrita livre", None),
