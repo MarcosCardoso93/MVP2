@@ -1,0 +1,68 @@
+======================================================================
+EXECUÇÃO
+======================================================================
+robô:       rpa1_captura
+referência: (mês corrente -1)
+início:     2026-08-13 13:56:42
+duração:    19.6s
+desfecho:   OK
+parâmetro:  parâmetros: nenhum — execução completa, como na agenda
+
+======================================================================
+AMBIENTE
+======================================================================
+robô: rpa1_captura
+modo: DEV  (de ENV)
+log: nível INFO (de LOG_LEVEL), diagnose ligado
+competência: 202607  (mês anterior ao corrente)
+banco: SQLite [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db] (de CAMINHO_SQLITE)
+AGI: ambiente [producao] host [10.238.6.120] (de AGI_AMBIENTE) | executável [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
+EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: desligado | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado | download SFTP: desligado
+
+======================================================================
+ETAPA 1/3: arranque   [ok]   3.5s
+======================================================================
+produziu:
+  módulos carregados, banco resolvido
+
+======================================================================
+ETAPA 2/3: captura   [ok]   14.6s
+======================================================================
+entrada:
+  OUTLOOK_ACCOUNT = detrafTBRA
+  pasta de origem = Detraf Despesas
+  DIRETORIO_ENTRADA = C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Entrada
+produziu:
+  E-mails lidos:            72
+  Ignorados pelo filtro:    0
+  Ignorados (já capturados):71
+  Falha no download:        0
+  Falha ao mover:           1
+  
+  Arquivos baixados:        1
+
+======================================================================
+ETAPA 3/3: processamento   [ok]   1.5s
+======================================================================
+entrada:
+  CAMINHO_OPERADORAS = C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras
+  DIRETORIO_QUARENTENA = C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_QUARENTENA
+  arquivos recebidos = da captura
+produziu:
+  Arquivos salvos:          0
+  Reprovados na validação:  1
+  Não identificados:        0
+  Com erro:                 0
+  
+  Reprovados (vão para a quarentena, não para a operadora):
+    RECEITA NACIONAL VIVO - Julho 2026.xlsx (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+
+======================================================================
+LOG COMPLETO
+======================================================================
+C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\logs
+
+Este arquivo é o resumo por etapa. O log tem a sequência completa,
+linha a linha, de tudo o que a execução fez.
