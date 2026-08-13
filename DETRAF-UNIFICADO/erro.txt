@@ -1,148 +1,850 @@
-PS C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado> .\.venv\Scripts\python .\rpa2_validacao_apuracao\main.py --referencia 202603 
-2026-08-12 15:57:54.240 | INFO    |__main__:<module>:126 - [RPA 2] robô: rpa2_validacao_apuracao
-2026-08-12 15:57:54.241 | INFO    |__main__:<module>:126 - [RPA 2] modo: DEV  (de ENV)
-2026-08-12 15:57:54.243 | INFO    |__main__:<module>:126 - [RPA 2] log: nível INFO (de LOG_LEVEL), diagnose ligado
-2026-08-12 15:57:54.243 | INFO    |__main__:<module>:126 - [RPA 2] competência: 202603  (forçada por COMPETENCIA)
-2026-08-12 15:57:54.244 | INFO    |__main__:<module>:126 - [RPA 2] banco: SQLite [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db] (de CAMINHO_SQLITE)
-2026-08-12 15:57:54.245 | INFO    |__main__:<module>:126 - [RPA 2] AGI: ambiente [producao] host [10.238.6.120] (de AGI_AMBIENTE) | executável [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
-2026-08-12 15:57:54.245 | INFO    |__main__:<module>:126 - [RPA 2] EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: desligado | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado | download SFTP: desligado
-2026-08-12 15:57:54.245 | INFO    |__main__:<module>:126 - [RPA 2] parâmetros: referência forçada: 202603
-2026-08-12 15:57:57.079 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
-2026-08-12 15:57:57.080 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db]
-2026-08-12 15:57:57.172 | INFO    |__main__:main:97 - [STEP] Iniciando: run
-2026-08-12 15:57:57.173 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Etapa 1/3 - captação da expectativa Vivo
-2026-08-12 15:57:57.174 | WARNING |src.services.captacao_expectativa:executar:181 - [MODO SEGURO] PERMITIR_DOWNLOAD_SFTP está desligado — nada foi baixado. A validação segue com o que já está em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Expectativa].
-2026-08-12 15:57:57.174 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Origem:                   nenhuma (PERMITIR_DOWNLOAD_SFTP desligado)
-2026-08-12 15:57:57.175 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Período procurado:        202603
-2026-08-12 15:57:57.175 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Arquivos baixados:        0
-2026-08-12 15:57:57.176 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Pasta: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Expectativa
-2026-08-12 15:57:57.176 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] ────────────────────────────────────────────────────────────
-2026-08-12 15:57:57.177 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] PRÓXIMA ETAPA: validação dos arquivos, que LÊ o que a captação acabou de trazer
-2026-08-12 15:57:57.177 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Etapa 2/3 - validação dos arquivos de Detraf
-2026-08-12 15:57:57.180 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_anexo5_processado]
-2026-08-12 15:57:57.255 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_anexo5_processado] carregada | Linhas: 2656 | Colunas: 18
-2026-08-12 15:57:57.256 | INFO    |src.controllers.validacao_detrafs_controller:validar_detrafs:15 - [STEP] Iniciando: ValidacaoDetrafsService.executar
-2026-08-12 15:57:57.256 | INFO    |comum.utils.decoradores:wrapper:22 - Executando a validação dos detrafs...
-2026-08-12 15:57:57.257 | INFO    |src.services.validacao_detrafs:executar:585 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_detrafs
-2026-08-12 15:57:57.257 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os detrafs para validação...
-2026-08-12 15:57:57.258 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando busca de arquivos para o período 202603 no diretório: 'C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras'
-2026-08-12 15:57:57.259 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [ALGAR]
-2026-08-12 15:57:57.261 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 1. Total geral de arquivos encontrados: 2
-2026-08-12 15:57:57.261 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [ALGAR]: 2 arquivo(s) encontrado(s)
-2026-08-12 15:57:57.265 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:151 - Filtro de Histórico concluído para o período 202603.
-2026-08-12 15:57:57.265 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:151 - Arquivos originais recebidos: 2
-2026-08-12 15:57:57.266 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:151 - Arquivos já processados anteriormente (encontrados no JSON): 0
-2026-08-12 15:57:57.266 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:151 - Novos arquivos retornados para execução: 2
-2026-08-12 15:57:57.267 | INFO    |src.services.validacao_detrafs:executar:585 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_detrafs | Tempo gasto: 0.01s
-2026-08-12 15:57:57.267 | INFO    |src.services.validacao_detrafs:executar:586 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_expectativa
-2026-08-12 15:57:57.268 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os arquivos de expectativa para validação...
-2026-08-12 15:57:57.269 | INFO    |comum.utils.decoradores:wrapper:22 - Pasta [Vivo] processada -> Válidos: 2 | Inválidos/Ignorados: 0
-2026-08-12 15:57:57.271 | INFO    |comum.utils.decoradores:wrapper:22 - Pasta [TLF] processada -> Válidos: 2 | Inválidos/Ignorados: 0
-2026-08-12 15:57:57.271 | ERROR   |src.services.validacao_detrafs:_preparar_arquivos_expectativa:250 - [Q21] Sem expectativa Vivo em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Expectativa\MVNO]: não existe. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
-2026-08-12 15:57:57.272 | ERROR   |src.services.validacao_detrafs:_preparar_arquivos_expectativa:250 - [Q21] Sem expectativa Vivo em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Expectativa\Detraf TRP]: não existe. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
-2026-08-12 15:57:57.272 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento de expectativa concluído. Total geral de arquivos válidos: 4
-2026-08-12 15:57:57.276 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:261 - Filtro de Histórico concluído para o período 202603.
-2026-08-12 15:57:57.276 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:261 - Arquivos originais recebidos: 4
-2026-08-12 15:57:57.277 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:261 - Arquivos já processados anteriormente (encontrados no JSON): 0
-2026-08-12 15:57:57.278 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:261 - Novos arquivos retornados para execução: 4
-2026-08-12 15:57:57.278 | INFO    |src.services.validacao_detrafs:executar:586 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_expectativa | Tempo gasto: 0.01s
-2026-08-12 15:57:57.292 | INFO    |src.services.validacao_detrafs:executar:601 - Área de trabalho em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603]: 2 arquivo(s) copiado(s). O insumo original não será tocado.
-2026-08-12 15:57:57.316 | INFO    |src.services.validacao_detrafs:executar:602 - Área de trabalho em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603]: 4 arquivo(s) copiado(s). O insumo original não será tocado.
-2026-08-12 15:57:57.416 | INFO    |src.services.validacao_detrafs:executar:617 - Validando o fluxo BK do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\Vivo-5cf010\DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D.csv
-2026-08-12 15:57:57.426 | INFO    |src.services.validacao_detrafs:executar:617 - Validando o fluxo BK do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\Vivo-5cf010\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D.csv
-2026-08-12 15:57:57.435 | INFO    |src.services.validacao_detrafs:executar:617 - Validando o fluxo BK do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\TLF-048ad4\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D.csv
-2026-08-12 15:57:57.478 | INFO    |src.services.validacao_detrafs:executar:617 - Validando o fluxo BK do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\TLF-048ad4\DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D.csv
-2026-08-12 15:57:57.486 | INFO    |src.services.validacao_detrafs:executar:617 - Validando o fluxo BK do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\Detrafs Recebidos-10fdd3\DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_032026_V02.csv
-2026-08-12 15:57:57.494 | INFO    |src.services.validacao_detrafs:executar:617 - Validando o fluxo BK do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\Detrafs Recebidos-10fdd3\DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02.csv
-2026-08-12 15:57:57.647 | INFO    |src.services.validacao_detrafs:executar:622 - Validando o fluxo LL do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\Vivo-5cf010\DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D.csv
-2026-08-12 15:57:57.653 | INFO    |src.services.validacao_detrafs:executar:622 - Validando o fluxo LL do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\Vivo-5cf010\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D.csv
-2026-08-12 15:57:57.663 | INFO    |src.services.validacao_detrafs:executar:622 - Validando o fluxo LL do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\TLF-048ad4\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D.csv
-2026-08-12 15:57:57.702 | INFO    |src.services.validacao_detrafs:executar:622 - Validando o fluxo LL do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\TLF-048ad4\DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D.csv
-2026-08-12 15:57:57.709 | INFO    |src.services.validacao_detrafs:executar:623 - Validando o fluxo LL do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\Detrafs Recebidos-10fdd3\DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_032026_V02.csv
-2026-08-12 15:57:57.753 | WARNING |src.services.validacao_detrafs:executar:623 - Arquivo [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\Detrafs Recebidos-10fdd3\DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_032026_V02.csv] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
-2026-08-12 15:57:57.754 | INFO    |src.services.validacao_detrafs:executar:623 - Validando o fluxo LL do arquivo: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\Detrafs Recebidos-10fdd3\DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02.csv
-2026-08-12 15:57:57.859 | INFO    |src.services.validacao_detrafs:executar:634 - Validando as colunas do arquivo de detraf: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\Detrafs Recebidos-10fdd3\DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02.csv
-2026-08-12 15:57:57.946 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_detraf_tarifas]
-2026-08-12 15:57:57.952 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_detraf_tarifas] carregada | Linhas: 110 | Colunas: 21
-2026-08-12 15:57:58.250 | INFO    |comum.dominio.validacao_colunas:validar_tudo_detalhado:252 - Validação de tarifas concluída | Total: 8626 | Válidas: 3162 | Inválidas: 5464 | Resultado final: False
-2026-08-12 15:57:58.299 | INFO    |comum.dominio.validacao_colunas:validar_tudo:298 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': False}
-2026-08-12 15:57:58.301 | ERROR   |src.services.validacao_detrafs:executar:634 - Arquivo [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\Detrafs Recebidos-10fdd3\DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02.csv] falhou em uma ou mais validações APÓS ter passado pelo portão do RPA 1 — investigar por que ele chegou à pasta da operadora.
-2026-08-12 15:57:58.302 | INFO    |src.services.validacao_detrafs:executar:641 - Validando as colunas do arquivo de expectativa: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\Vivo-5cf010\DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D.csv
-2026-08-12 15:57:58.352 | INFO    |src.services.validacao_detrafs:_validar_colunas_arquivos:354 - Arquivo [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\Vivo-5cf010\DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D.csv] passou em todas as validações.
-2026-08-12 15:57:58.353 | INFO    |src.services.validacao_detrafs:executar:641 - Validando as colunas do arquivo de expectativa: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\Vivo-5cf010\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D.csv
-2026-08-12 15:57:58.448 | WARNING |src.services.validacao_detrafs:_validar_colunas_arquivos:354 - Arquivo [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\Vivo-5cf010\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D.csv] teve 139 linha(s) movida(s) para [DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D_ERRO.csv] por falha de validação de coluna.
-2026-08-12 15:57:58.449 | INFO    |src.services.validacao_detrafs:executar:641 - Validando as colunas do arquivo de expectativa: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\TLF-048ad4\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D.csv
-2026-08-12 15:57:58.922 | WARNING |src.services.validacao_detrafs:_validar_colunas_arquivos:354 - Arquivo [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\TLF-048ad4\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D.csv] teve 3066 linha(s) movida(s) para [DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D_ERRO.csv] por falha de validação de coluna.
-2026-08-12 15:57:58.924 | INFO    |src.services.validacao_detrafs:executar:641 - Validando as colunas do arquivo de expectativa: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\TLF-048ad4\DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D.csv
-2026-08-12 15:57:58.951 | INFO    |src.services.validacao_detrafs:_validar_colunas_arquivos:354 - Arquivo [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_TEMP\202603\TLF-048ad4\DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D.csv] passou em todas as validações.
-2026-08-12 15:57:58.954 | INFO    |src.services.validacao_detrafs:executar:651 - Iniciando transformação de lote tipo [DETRAF_SUCESSO] com 0 arquivo(s).
-2026-08-12 15:57:58.955 | INFO    |src.services.validacao_detrafs:executar:655 - Iniciando transformação de lote tipo [DETRAF_ERRO] com 2 arquivo(s).
-2026-08-12 15:57:59.007 | INFO    |src.services.validacao_detrafs:executar:659 - Iniciando transformação de lote tipo [EXPECTATIVA_SUCESSO] com 4 arquivo(s).
-2026-08-12 15:57:59.077 | INFO    |src.services.validacao_detrafs:executar:663 - Iniciando transformação de lote tipo [EXPECTATIVA_ERRO] com 0 arquivo(s).
-2026-08-12 15:57:59.078 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - Inserindo 6 registro(s) em [tbl_rpa_log_detraf_despesa_arquivos].
-2026-08-12 15:57:59.094 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - 6 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_arquivos].
-2026-08-12 15:57:59.095 | INFO    |src.services.validacao_detrafs:executar:684 - Renomeando 4 arquivos validados adicionando _EXP
-2026-08-12 15:57:59.099 | INFO    |src.services.validacao_detrafs:executar:684 - Renomeando 2 arquivos inválidos adicionando _ERRO
-2026-08-12 15:57:59.124 | INFO    |src.services.validacao_detrafs:executar:692 - 9 artefato(s) promovido(s) da área de trabalho para as pastas de origem.
-2026-08-12 15:57:59.137 | INFO    |src.services.validacao_detrafs:_salvar_historico_arquivos_processados:466 - Histórico atualizado com sucesso. Lote finalizado com 4 arquivo(s) salvo(s) como 'Válido'.
-2026-08-12 15:57:59.142 | INFO    |src.services.validacao_detrafs:_salvar_historico_arquivos_processados:469 - Histórico atualizado com sucesso. Lote finalizado com 2 arquivo(s) salvo(s) como 'Inválido'.
-2026-08-12 15:57:59.143 | INFO    |src.controllers.validacao_detrafs_controller:validar_detrafs:15 - [STEP] Finalizando: ValidacaoDetrafsService.executar | Tempo gasto: 1.89s
-2026-08-12 15:57:59.143 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Detraf válidos:           0
-2026-08-12 15:57:59.144 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Detraf inválidos:         2
-2026-08-12 15:57:59.144 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Expectativa válidos:      4
-2026-08-12 15:57:59.145 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Expectativa inválidos:    0
-2026-08-12 15:57:59.146 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Recusados (cada um tem um *_RECUSADO.md ao lado):
-2026-08-12 15:57:59.146 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   DETRAT_ALGAR_X_TELEFONICA_BRASIL_SMP_SMP_R_032026_V02.csv
-2026-08-12 15:57:59.147 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   DETRAT_ALGAR_X_TELEFONICA_BRASIL_STFC_STFC_R_032026_V02.csv
-2026-08-12 15:57:59.147 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Pasta: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras
-2026-08-12 15:57:59.149 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] ────────────────────────────────────────────────────────────
-2026-08-12 15:57:59.150 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] PRÓXIMA ETAPA: batimento Detraf × expectativa, que LÊ o que a validação acabou de registrar
-2026-08-12 15:57:59.153 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Etapa 3/3 - batimento Detraf x expectativa
-2026-08-12 15:57:59.156 | INFO    |src.controllers.batimento_detraf_controller:batimento_detraf:10 - [STEP] Iniciando: BatimentoDetrafService.executar
-2026-08-12 15:57:59.156 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando processo de batimento dos arquivos Detraf...
-2026-08-12 15:57:59.157 | INFO    |src.services.batimento_detraf:executar:348 - Preparando os detrafs para validação...
-2026-08-12 15:57:59.158 | INFO    |src.services.batimento_detraf:executar:348 - Iniciando busca de arquivos para o período 202603 na saída da validação: 'C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_SAIDA'
-2026-08-12 15:57:59.160 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [ALGAR]
-2026-08-12 15:57:59.162 | INFO    |src.services.batimento_detraf:executar:348 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 1. Total geral de arquivos encontrados: 0
-2026-08-12 15:57:59.164 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [ALGAR]: 0 arquivo(s) encontrado(s)
-2026-08-12 15:57:59.165 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:135 - Filtro de Histórico concluído para o período 202603.
-2026-08-12 15:57:59.166 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:135 - Arquivos originais recebidos: 0
-2026-08-12 15:57:59.167 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:135 - Arquivos já processados anteriormente (encontrados no JSON): 0
-2026-08-12 15:57:59.167 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:135 - Novos arquivos retornados para execução: 0
-2026-08-12 15:57:59.168 | INFO    |src.services.batimento_detraf:executar:349 - Preparando os arquivos de expectativa para validação...
-2026-08-12 15:57:59.173 | INFO    |src.services.batimento_detraf:executar:349 - Pasta [Vivo] processada -> Válidos: 2 | Inválidos/Ignorados: 0
-2026-08-12 15:57:59.176 | INFO    |src.services.batimento_detraf:executar:349 - Pasta [TLF] processada -> Válidos: 2 | Inválidos/Ignorados: 0
-2026-08-12 15:57:59.177 | ERROR   |src.services.batimento_detraf:_preparar_arquivos_expectativa:329 - [Q21] Sem expectativa Vivo em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Expectativa\MVNO]: não tem nenhum arquivo aprovado pela validação. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
-2026-08-12 15:57:59.178 | ERROR   |src.services.batimento_detraf:_preparar_arquivos_expectativa:329 - [Q21] Sem expectativa Vivo em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Expectativa\Detraf TRP]: não tem nenhum arquivo aprovado pela validação. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
-2026-08-12 15:57:59.180 | INFO    |src.services.batimento_detraf:executar:349 - Mapeamento de expectativa concluído. Total geral de arquivos válidos: 4
-2026-08-12 15:57:59.186 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Filtro de Histórico concluído para o período 202603.
-2026-08-12 15:57:59.187 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Arquivos originais recebidos: 4
-2026-08-12 15:57:59.188 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Arquivos já processados anteriormente (encontrados no JSON): 0
-2026-08-12 15:57:59.188 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Novos arquivos retornados para execução: 4
-2026-08-12 15:57:59.189 | INFO    |src.services.batimento_detraf:executar:363 - Iniciando mapeamento de operadoras para 4 arquivo(s).
-2026-08-12 15:57:59.231 | INFO    |src.services.batimento_detraf:executar:367 - Iniciando a apuração da contestação.
-2026-08-12 15:57:59.232 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=ALGAR | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-12 15:57:59.236 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=ALGAR | Arquivo=DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D_EXP.csv | Linhas originais=53 | Linhas após filtro=52
-2026-08-12 15:57:59.242 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=ALGAR | Arquivo=DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D_EXP.csv | Linhas originais=217 | Linhas após filtro=216
-2026-08-12 15:57:59.264 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=ALGAR | Arquivo=DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D_EXP.csv | Linhas originais=5210 | Linhas após filtro=5209
-2026-08-12 15:57:59.270 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=ALGAR | Arquivo=DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D_EXP.csv | Linhas originais=250 | Linhas após filtro=249
-2026-08-12 15:57:59.272 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=ALGAR | Arquivos válidos=4 | Linhas consolidadas=5726
-2026-08-12 15:57:59.312 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_detraf_mapeamento_descritores]
-2026-08-12 15:57:59.315 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_detraf_mapeamento_descritores] carregada | Linhas: 25 | Colunas: 8
-2026-08-12 15:57:59.324 | WARNING |src.services.criacao_arquivo_contestacao:_comparar_e_persistir:470 - [HU-09] 15 linha(s) com descritor sem remuneração na tabela `tbl_detraf_mapeamento_descritores`: ['NSNI']. Elas ficam sem `remuneracao` e não serão encontradas pelo RPA 3 — confira se falta linha na tabela.
-2026-08-12 15:57:59.390 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 36 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-12 15:57:59.405 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 36 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-12 15:57:59.406 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'ALGAR' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 36
-2026-08-12 15:57:59.408 | INFO    |src.controllers.batimento_detraf_controller:batimento_detraf:10 - [STEP] Finalizando: BatimentoDetrafService.executar | Tempo gasto: 0.25s
-2026-08-12 15:57:59.408 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] Operadoras apuradas:      1
-2026-08-12 15:57:59.409 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] O resultado é a TABELA `tbl_rpa_log_detraf_despesa_contestacao`,
-2026-08-12 15:57:59.409 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] não um arquivo — a Base de Contestação virou tabela em 2026-08-04.
-2026-08-12 15:57:59.410 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] Próximo passo é humano: o analista sinaliza no WebFat o que
-2026-08-12 15:57:59.410 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] contestar e se haverá retenção. Só então o RPA 3 tem o que fazer.
-2026-08-12 15:57:59.411 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] Operadoras: ALGAR
-2026-08-12 15:57:59.411 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] ────────────────────────────────────────────────────────────
-2026-08-12 15:57:59.411 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] Esta é a última etapa da execução.
-2026-08-12 15:57:59.412 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Concluído. Aguardando a decisão do analista no WebFat para o RPA 3 prosseguir.
-2026-08-12 15:57:59.412 | INFO    |__main__:main:97 - [STEP] Finalizando: run | Tempo gasto: 2.24s
-2026-08-12 15:57:59.414 | INFO    |__main__:main:118 - [Diagnóstico] Etapas desta execução em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\logs\NALPE0881WP\rpa2_validacao_apuracao\diagnosticos\2026-08-12_15-57-54.txt].
-2026-08-12 15:57:59.415 | INFO    |__main__:<module>:126 - [RPA 2] Diagnóstico das etapas em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\logs\NALPE0881WP\rpa2_validacao_apuracao\diagnosticos\2026-08-12_15-57-54.txt]
+2026-08-13 11:54:46.831 | ERROR   |src.services.notificacao_operadora:notificar_arquivos_recusados:74 - [RPA 1] Falha ao criar rascunho de resposta para 'EC VIVO FSM 202604.xlsx': Falha ao responder o e-mail '00000000A949F53E017BB44C86E46D56D2D6BB100700F25FC41A3584FC499D024E55DD250D4D00005211FBDF0000137D0D4C70E1CF4091747B97613AB5A60000A35B1B710000': (-2147467260, 'Operação anulada', None, None)
+Traceback (most recent call last):
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\comum\integracoes\outlook.py", line 301, in responder_email
+    reply.Save()
+    └ <COMObject Reply>
+
+  File "<COMObject Reply>", line 2, in Save
+
+pywintypes.com_error: (-2147467260, 'Operação anulada', None, None)
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\main.py", line 118, in <module>
+    raise SystemExit(main())
+                     └ <function main at 0x000001FE9ED014E0>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\main.py", line 94, in main
+    run(pasta_entrada=recorte.pasta_entrada, etapa=recorte.etapa, diagnostico=diagnostico)
+    │                 │       │                    │       │                  └ <comum.config.diagnostico_execucao.DiagnosticoDeExecucao object at 0x000001FEA1555D30>
+    │                 │       │                    │       └ None
+    │                 │       │                    └ Argumentos(referencia=None, operadoras=[], etapa=None, pasta_entrada=None, de_pasta=None, dry_run=False, pausar=False)
+    │                 │       └ None
+    │                 └ Argumentos(referencia=None, operadoras=[], etapa=None, pasta_entrada=None, de_pasta=None, dry_run=False, pausar=False)
+    └ <function run at 0x000001FEA15AAAC0>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\src\main\process_handle.py", line 34, in run
+    controller.processar(
+    │          └ <function ProcessamentoController.processar at 0x000001FEBB0BFD80>
+    └ <src.controllers.processamento_controller.ProcessamentoController object at 0x000001FEBB084C20>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\src\controllers\processamento_controller.py", line 155, in processar
+    self._servico.executar(arquivos)
+    │    │        │        └ [ArquivoParaProcessar(caminho=WindowsPath('C:/RPA/Dtraf/MVP2/MVP2/DETRAF-UNIFICADO/unificado/arquivos/Entrada/9D024E55DD250D4...
+    │    │        └ <function ProcessamentoService.executar at 0x000001FEBB0BF600>
+    │    └ <src.services.processamento_service.ProcessamentoService object at 0x000001FEBB085160>
+    └ <src.controllers.processamento_controller.ProcessamentoController object at 0x000001FEBB084C20>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\src\services\processamento_service.py", line 151, in executar
+    self._notificar_reprovados()
+    │    └ <function ProcessamentoService._notificar_reprovados at 0x000001FEBB0BFA60>
+    └ <src.services.processamento_service.ProcessamentoService object at 0x000001FEBB085160>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\src\services\processamento_service.py", line 588, in _notificar_reprovados
+    sucesso = bool(self._notificar_externo(pacote, recusas))
+                   │    │                  │       └ [ArquivoRecusado(nome='EC VIVO FSM 202604.xlsx', motivos=['o arquivo não pôde ser lido (formato, codificação ou conteúdo corr...
+                   │    │                  └ ArquivoParaProcessar(caminho=WindowsPath('C:/RPA/Dtraf/MVP2/MVP2/DETRAF-UNIFICADO/unificado/arquivos/Entrada/9D024E55DD250D4D...
+                   │    └ <bound method ProcessamentoController._notificar_operadora of <src.controllers.processamento_controller.ProcessamentoControll...
+                   └ <src.services.processamento_service.ProcessamentoService object at 0x000001FEBB085160>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\src\controllers\processamento_controller.py", line 31, in _notificar_operadora
+    return notificar_arquivos_recusados(self._outlook.responder, pacote, recusas)
+           │                            │    │                   │       └ [ArquivoRecusado(nome='EC VIVO FSM 202604.xlsx', motivos=['o arquivo não pôde ser lido (formato, codificação ou conteúdo corr...
+           │                            │    │                   └ ArquivoParaProcessar(caminho=WindowsPath('C:/RPA/Dtraf/MVP2/MVP2/DETRAF-UNIFICADO/unificado/arquivos/Entrada/9D024E55DD250D4D...
+           │                            │    └ <property object at 0x000001FEA15B03B0>
+           │                            └ <src.controllers.processamento_controller.ProcessamentoController object at 0x000001FEBB084C20>
+           └ <function notificar_arquivos_recusados at 0x000001FEA17479C0>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\src\services\notificacao_operadora.py", line 74, in notificar_arquivos_recusados
+    return bool(responder(pacote, corpo, configuration.NOTIFICAR_OPERADORA_ENVIAR))
+                │         │       │      │             └ False
+                │         │       │      └ <module 'comum.config.configuration' from 'C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\comum\\config\\configurat...
+                │         │       └ 'Prezados,\n\nOs arquivos de Detraf abaixo, enviados por sua empresa nesta mensagem, não\npuderam ser processados e estão sen...
+                │         └ ArquivoParaProcessar(caminho=WindowsPath('C:/RPA/Dtraf/MVP2/MVP2/DETRAF-UNIFICADO/unificado/arquivos/Entrada/9D024E55DD250D4D...
+                └ <bound method OutlookController.responder of <src.controllers.outlook_controller.OutlookController object at 0x000001FEBB0855...
+
+> File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\src\controllers\outlook_controller.py", line 234, in responder
+    OutlookService(self._config.account).responder_email(
+    │              │    │       └ 'detrafTBRA'
+    │              │    └ OutlookConfig(account='detrafTBRA', detraf_despesas_folder='Detraf Despesas', processados_folder='PROCESSADOS', dest_root=Win...
+    │              └ <src.controllers.outlook_controller.OutlookController object at 0x000001FEBB085550>
+    └ <class 'comum.integracoes.outlook.OutlookService'>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\comum\integracoes\outlook.py", line 303, in responder_email
+    raise OutlookError(f"Falha ao responder o e-mail '{entry_id}': {exc}") from exc
+          │                                            └ '00000000A949F53E017BB44C86E46D56D2D6BB100700F25FC41A3584FC499D024E55DD250D4D00005211FBDF0000137D0D4C70E1CF4091747B97613AB5A6...
+          └ <class 'comum.integracoes.outlook.OutlookError'>
+
+comum.integracoes.outlook.OutlookError: Falha ao responder o e-mail '00000000A949F53E017BB44C86E46D56D2D6BB100700F25FC41A3584FC499D024E55DD250D4D00005211FBDF0000137D0D4C70E1CF4091747B97613AB5A60000A35B1B710000': (-2147467260, 'Operação anulada', None, None)
+2026-08-13 11:54:46.840 | INFO    |src.services.processamento_service:executar:151 - [RPA 1] E-mail de origem de 'EC VIVO FSM 202604.xlsx': 3 arquivo(s) recusado(s), operadora NÃO notificada.
+2026-08-13 11:54:46.841 | INFO    |src.controllers.outlook_controller:responder:234 - Conectando ao Outlook (conta configurada: 'detrafTBRA')...
+2026-08-13 11:54:46.848 | INFO    |src.controllers.outlook_controller:responder:234 - Conectado ao Outlook com sucesso.
+2026-08-13 11:54:47.103 | ERROR   |src.services.notificacao_operadora:notificar_arquivos_recusados:74 - [RPA 1] Falha ao criar rascunho de resposta para 'EC INTEREDE 202605.xlsx': Falha ao responder o e-mail '00000000A949F53E017BB44C86E46D56D2D6BB100700F25FC41A3584FC499D024E55DD250D4D00005211FBDF0000137D0D4C70E1CF4091747B97613AB5A60000A35B1B720000': (-2147467260, 'Operação anulada', None, None)
+Traceback (most recent call last):
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\comum\integracoes\outlook.py", line 301, in responder_email
+    reply.Save()
+    └ <COMObject Reply>
+
+  File "<COMObject Reply>", line 2, in Save
+
+pywintypes.com_error: (-2147467260, 'Operação anulada', None, None)
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\main.py", line 118, in <module>
+    raise SystemExit(main())
+                     └ <function main at 0x000001FE9ED014E0>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\main.py", line 94, in main
+    run(pasta_entrada=recorte.pasta_entrada, etapa=recorte.etapa, diagnostico=diagnostico)
+    │                 │       │                    │       │                  └ <comum.config.diagnostico_execucao.DiagnosticoDeExecucao object at 0x000001FEA1555D30>
+    │                 │       │                    │       └ None
+    │                 │       │                    └ Argumentos(referencia=None, operadoras=[], etapa=None, pasta_entrada=None, de_pasta=None, dry_run=False, pausar=False)
+    │                 │       └ None
+    │                 └ Argumentos(referencia=None, operadoras=[], etapa=None, pasta_entrada=None, de_pasta=None, dry_run=False, pausar=False)
+    └ <function run at 0x000001FEA15AAAC0>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\src\main\process_handle.py", line 34, in run
+    controller.processar(
+    │          └ <function ProcessamentoController.processar at 0x000001FEBB0BFD80>
+    └ <src.controllers.processamento_controller.ProcessamentoController object at 0x000001FEBB084C20>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\src\controllers\processamento_controller.py", line 155, in processar
+    self._servico.executar(arquivos)
+    │    │        │        └ [ArquivoParaProcessar(caminho=WindowsPath('C:/RPA/Dtraf/MVP2/MVP2/DETRAF-UNIFICADO/unificado/arquivos/Entrada/9D024E55DD250D4...
+    │    │        └ <function ProcessamentoService.executar at 0x000001FEBB0BF600>
+    │    └ <src.services.processamento_service.ProcessamentoService object at 0x000001FEBB085160>
+    └ <src.controllers.processamento_controller.ProcessamentoController object at 0x000001FEBB084C20>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\src\services\processamento_service.py", line 151, in executar
+    self._notificar_reprovados()
+    │    └ <function ProcessamentoService._notificar_reprovados at 0x000001FEBB0BFA60>
+    └ <src.services.processamento_service.ProcessamentoService object at 0x000001FEBB085160>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\src\services\processamento_service.py", line 588, in _notificar_reprovados
+    sucesso = bool(self._notificar_externo(pacote, recusas))
+                   │    │                  │       └ [ArquivoRecusado(nome='EC INTEREDE 202605.xlsx', motivos=['o arquivo não pôde ser lido (formato, codificação ou conteúdo corr...
+                   │    │                  └ ArquivoParaProcessar(caminho=WindowsPath('C:/RPA/Dtraf/MVP2/MVP2/DETRAF-UNIFICADO/unificado/arquivos/Entrada/9D024E55DD250D4D...
+                   │    └ <bound method ProcessamentoController._notificar_operadora of <src.controllers.processamento_controller.ProcessamentoControll...
+                   └ <src.services.processamento_service.ProcessamentoService object at 0x000001FEBB085160>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\src\controllers\processamento_controller.py", line 31, in _notificar_operadora
+    return notificar_arquivos_recusados(self._outlook.responder, pacote, recusas)
+           │                            │    │                   │       └ [ArquivoRecusado(nome='EC INTEREDE 202605.xlsx', motivos=['o arquivo não pôde ser lido (formato, codificação ou conteúdo corr...
+           │                            │    │                   └ ArquivoParaProcessar(caminho=WindowsPath('C:/RPA/Dtraf/MVP2/MVP2/DETRAF-UNIFICADO/unificado/arquivos/Entrada/9D024E55DD250D4D...
+           │                            │    └ <property object at 0x000001FEA15B03B0>
+           │                            └ <src.controllers.processamento_controller.ProcessamentoController object at 0x000001FEBB084C20>
+           └ <function notificar_arquivos_recusados at 0x000001FEA17479C0>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\src\services\notificacao_operadora.py", line 74, in notificar_arquivos_recusados
+    return bool(responder(pacote, corpo, configuration.NOTIFICAR_OPERADORA_ENVIAR))
+                │         │       │      │             └ False
+                │         │       │      └ <module 'comum.config.configuration' from 'C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\comum\\config\\configurat...
+                │         │       └ 'Prezados,\n\nOs arquivos de Detraf abaixo, enviados por sua empresa nesta mensagem, não\npuderam ser processados e estão sen...
+                │         └ ArquivoParaProcessar(caminho=WindowsPath('C:/RPA/Dtraf/MVP2/MVP2/DETRAF-UNIFICADO/unificado/arquivos/Entrada/9D024E55DD250D4D...
+                └ <bound method OutlookController.responder of <src.controllers.outlook_controller.OutlookController object at 0x000001FEBB0855...
+
+> File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\src\controllers\outlook_controller.py", line 234, in responder
+    OutlookService(self._config.account).responder_email(
+    │              │    │       └ 'detrafTBRA'
+    │              │    └ OutlookConfig(account='detrafTBRA', detraf_despesas_folder='Detraf Despesas', processados_folder='PROCESSADOS', dest_root=Win...
+    │              └ <src.controllers.outlook_controller.OutlookController object at 0x000001FEBB085550>
+    └ <class 'comum.integracoes.outlook.OutlookService'>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\comum\integracoes\outlook.py", line 303, in responder_email
+    raise OutlookError(f"Falha ao responder o e-mail '{entry_id}': {exc}") from exc
+          │                                            └ '00000000A949F53E017BB44C86E46D56D2D6BB100700F25FC41A3584FC499D024E55DD250D4D00005211FBDF0000137D0D4C70E1CF4091747B97613AB5A6...
+          └ <class 'comum.integracoes.outlook.OutlookError'>
+
+comum.integracoes.outlook.OutlookError: Falha ao responder o e-mail '00000000A949F53E017BB44C86E46D56D2D6BB100700F25FC41A3584FC499D024E55DD250D4D00005211FBDF0000137D0D4C70E1CF4091747B97613AB5A60000A35B1B720000': (-2147467260, 'Operação anulada', None, None)
+2026-08-13 11:54:47.118 | INFO    |src.services.processamento_service:executar:151 - [RPA 1] E-mail de origem de 'EC INTEREDE 202605.xlsx': 3 arquivo(s) recusado(s), operadora NÃO notificada.
+
+==================================================
+PROCESSAMENTO FINALIZADO
+==================================================
+
+Arquivos processados: 19
+Arquivos reprovados na validação: 94
+Arquivos não identificados: 0
+Arquivos com erro: 0
+
+Claro SMP - Receita - Rede SIP - 07.2026 - Enviado TLF.xlsx (Claro STFC)
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+Agil_Vivo_202607.csv (Agil Telecom)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "B67", "B67", "B67" [0/10 válidos]
+-> operadora notificada: NÃO
+
+Agil_Vivo_SMP_202607.csv (Agil Telecom)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "B67", "B67", "B68" [0/4 válidos]
+-> operadora notificada: NÃO
+
+Ampernet_Vivo_202607.csv (Ampernet)
+-> Coluna 10 (Minutos): os minutos admitem no máximo 1 casa decimal.
+-> operadora notificada: NÃO
+
+Detraf Nova x Vivo SMP 202605.csv (Nova Tecnologia e Telecomunicacoes)
+-> Coluna 3 (Referência): a referência precisa ser 202607 (AAAAMM) em todas as linhas.
+-> operadora notificada: NÃO
+
+Detraf Nova x TLF_011 202605.csv (Nova Tecnologia e Telecomunicacoes)
+-> Coluna 3 (Referência): a referência precisa ser 202607 (AAAAMM) em todas as linhas.
+-> operadora notificada: NÃO
+
+VIVO.xlsx (Tcheturbo Internet Provider)
+-> Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+-> operadora notificada: NÃO
+
+Declaração de Tráfego UFINET x VIVO SMP 07-2026.xlsx (UFINET BRASIL)
+-> Coluna 10 (Minutos): os minutos admitem no máximo 1 casa decimal.
+-> operadora notificada: NÃO
+
+detraf_202607_O51_010.csv (Union)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "O51", "O31", "H90" [0/5 válidos]
+-> operadora notificada: NÃO
+
+detraf_202607_O51_011.csv (Union)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "H90", "H90", "nan" [0/3 válidos]
+-> operadora notificada: NÃO
+
+DETRAF_IDT_TELEFONICA_07-2026_CRED.csv (IDT Brasil)
+-> Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+-> operadora notificada: NÃO
+
+DETRAF_IDT_VIVO_07-2026_CRED.csv (IDT Brasil)
+-> Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+-> operadora notificada: NÃO
+
+expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx (Gigalink)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "B19", "B19", "B19" [0/4 válidos]
+-> operadora notificada: NÃO
+
+expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx (Gigalink)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "B19", "B19", "B19" [0/7 válidos]
+-> operadora notificada: NÃO
+
+DETRAF VMAX x TELEFONICA LDN_202607.xlsx ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+DETRAF VMAX x TELEFONICA SMP_202607.xlsx ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+Declaração de Tráfego G30 x VIVO SMP 07-2026.xls ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+Declaração de Tráfego VOCÊ TELECOM x VIVO SMP_202607.xls ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+DETRAF_FINAL_202607_HOME_TELEFONICA_C_20260804195316_ITX.csv (Claro SMP)
+-> Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+-> operadora notificada: NÃO
+
+DETRAF_FINAL_202607_HOME_VIVO_STFC_C_20260804195317_ITX.csv (Claro SMP)
+-> Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+-> operadora notificada: NÃO
+
+DETRAF_FINAL_202607_HOME_VIVO_C_20260804195317_ITX.csv (Claro SMP)
+-> Colunas 12 a 15 (valores financeiros): os valores financeiros admitem no máximo 2 casas decimais.
+-> operadora notificada: NÃO
+
+expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx (T1 Telecom)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "E39", "E39", "E39" [0/7 válidos]
+-> operadora notificada: NÃO
+
+expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx (T1 Telecom)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "E39", "E39", "E39" [0/4 válidos]
+-> operadora notificada: NÃO
+
+DETRAF-TMCO ( ITELCO X VIVO 07-26).xlsx (Itelco Telecom)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "H35", "H35", "nan" [0/3 válidos]
+-> operadora notificada: NÃO
+
+DETRAF-TMCO-0128-2026-ITELCO-VIVO SMP- RESUMO_EOT -10_202607.xls ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+Declaração de Tráfego DUARTE DIAS x VIVO LD_07-2026.xls ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+Declaração de Tráfego DUARTE DIAS x VIVO SMP_07-2026.xls ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx (LH Telecomunicacoes LTDA)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "N33", "N33", "nan" [0/3 válidos]
+-> operadora notificada: NÃO
+
+expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx (LH Telecomunicacoes LTDA)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "N33", "N33", "N33" [0/4 válidos]
+-> operadora notificada: NÃO
+
+Declaração de Tráfego JP x VIVO LD_07-2026.xls ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+Declaração de Tráfego JP x VIVO SMP_07-2026.xls ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx (Invista Net)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "L40", "L40", "nan" [0/3 válidos]
+-> operadora notificada: NÃO
+
+expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx (Invista Net)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "L40", "L40", "L40" [0/6 válidos]
+-> operadora notificada: NÃO
+
+Declaração de Tráfego FLEXUS x VIVO LD_07-2026.xls ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+Declaração de Tráfego FLEXUS x VIVO SMP_07-2026.xls ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+Declaração de Tráfego BRA x VIVO LD_07-2026.xls ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+Declaração de Tráfego BRA x VIVO SMP_07-2026.xls ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+DETRAF-TMCO-0122-2026-GGNET-VIVO STFC - RESUMO_EOT_200_948_202607.xls ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+DETRAF-TMCO-0123-2026-GGNET-VIVO SMP - RESUMO EOT_044_045_202607.xls ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+BALANCE_ALGAR_X_VIVO_SMP_R_202607_V00.csv (Algar)
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+DETRAT_ALGAR_X_VIVO_SMP_R_202607_V00.csv (Algar)
+-> Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+-> operadora notificada: NÃO
+
+DETRAT_ALGAR_X_VIVO_STFC_R_202607_V00.csv (Algar)
+-> Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+-> operadora notificada: NÃO
+
+DETRAF_ONE_Vivo-Julho-2026.xlsx (One Telecom)
+-> Coluna 10 (Minutos): os minutos admitem no máximo 1 casa decimal.
+-> operadora notificada: NÃO
+
+DETRAF_ONE_Telefonica-GVT-Julho-2026.xlsx ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+DETRAF VIVO - CICLO 072026.csv (Duo Telecom)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "L74", "J07", "J07" [0/103 válidos]
+-> operadora notificada: NÃO
+
+MUNDIVOX_VIVO_202607.csv (Mundivox)
+-> Coluna 10 (Minutos): os minutos admitem no máximo 1 casa decimal.
+-> operadora notificada: NÃO
+
+DETRAF_SOTHIS_X_VIVO_202607.xlsx (Sothis)
+-> Coluna 11 (Tarifa): a tarifa admite no máximo 5 casas decimais e não pode ser zero.
+-> operadora notificada: NÃO
+
+DETRAF_FINAL_202607_HOME_VIVO_C_20260804195236_SMS.csv (Claro STFC)
+-> posição 7 (GH): esperado S, R, N ou D, encontrado "F", "nan", "F" [0/200 válidos]
+-> operadora notificada: NÃO
+
+DETRAF CLARO STFC LD X TELEFONICA 202607.xls (Claro STFC)
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+DETRAF CLARO STFC LD X VIVO SMP 202607.xls (Claro STFC)
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+DETRAF CLARO STFC LD X VIVO STFC 202607.xls (Claro STFC)
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+DETRAF CLARO STFC LC X TELEFONICA 202607.xls ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+DETRAF CLARO STFC LC X VIVO SMP 202607.xls (Claro STFC)
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+DETRAF CLARO STFC LC X VIVO STFC 202607.xls (Claro STFC)
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+D_IPCorp_Telecom_Vivo_-_Fixa_LD_202607.XLS ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+D_IPCorp_Telecom_Vivo_-_Móvel_LC_202607.xls ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+D_IPCorp_Telecom_Vivo_-_Móvel_LD_202607.XLS ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+detraf_072026_credor.xlsx (Xturbo Provedor de Internet EIRELI)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "I55", "I55", "I55" [0/5 válidos]
+-> operadora notificada: NÃO
+
+LYTUX - 07.2026  - VIVO.xlsx (Lytux - PABX Virtual & Telefonia IP)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "E65", "E68", "E66" [0/77 válidos]
+-> operadora notificada: NÃO
+
+NOVACIA - 07.2026 - VIVO.xlsx (Novacia Telecom)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "D67", "D67", "D67" [0/4 válidos]
+-> operadora notificada: NÃO
+
+DETRAF-TMCO-0116-2026-PREDLINK-VIVO SMP - RESUMO_EOT 20-202607.xls ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+Detraf Credora Mundo (EOT A04) x Devedora Vivo (EOT 931) - Agosto.2026.csv (Mundo Telecom)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "A04", "nan" [0/2 válidos]
+-> operadora notificada: NÃO
+
+Detraf Credora Mundo (EOT A04) x Devedora Vivo (EOT 030) - Agosto.2026.csv (Mundo Telecom)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "A04", "A04", "A04" [0/8 válidos]
+-> operadora notificada: NÃO
+
+SISTEL - 07.2026 - VIVO.xlsx (Sistel Fibra)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "G19", "G19", "G19" [0/9 válidos]
+-> operadora notificada: NÃO
+
+SEA - 07.2026 - VIVO.xlsx (Sea Telecom)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "D85", "D85", "D85" [0/4 válidos]
+-> operadora notificada: NÃO
+
+202607 Detraf C SMS SMP Unifique X SMP Telefonica Brasil.xlsx (Unifique)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "L06", "L06", "L05" [0/73 válidos]
+-> operadora notificada: NÃO
+
+RAMAL VIRTUAL - 07.2026  -  VIVO.xlsx (Ramalvirtual Telecomunicacoes)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "F47", "F47", "F47" [0/4 válidos]
+-> operadora notificada: NÃO
+
+ROCKETNET - 07.2026 - VIVO.xlsx (Rocketnet)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "A41", "A41", "A41" [0/11 válidos]
+-> operadora notificada: NÃO
+
+202607 Detraf RS-SC C LD STFC Unifique X STFC Telefonica Brasil.xlsx (Unifique)
+-> Coluna 10 (Minutos): os minutos admitem no máximo 1 casa decimal.
+-> operadora notificada: NÃO
+
+MEGALINK - 07.2026  -  VIVO.xlsx (Megalink Servicos)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "M68", "M68", "M68" [0/10 válidos]
+-> operadora notificada: NÃO
+
+ITANET -  07.2026 - VIVO.xlsx (ITANET)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "A82", "A82", "A82" [0/18 válidos]
+-> operadora notificada: NÃO
+
+FORZA -  07.2026 - VIVO.xlsx (FORZA TELECOMUNICACOES LTDA)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "B47", "B47", "B47" [0/4 válidos]
+-> operadora notificada: NÃO
+
+GMARX - 07.2026 - VIVO.xlsx (Vivo)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "A62", "E46", "C81" [5/22 válidos]
+-> operadora notificada: NÃO
+
+CDI - 07.2026 - VIVO.xlsx (CDI Telecom)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "C61", "C61", "C61" [0/5 válidos]
+-> operadora notificada: NÃO
+
+202607 Detraf RS-SC C LC STFC Unifique X SMP Telefonica Brasil.xlsx (Unifique)
+-> Coluna 10 (Minutos): os minutos admitem no máximo 1 casa decimal.
+-> operadora notificada: NÃO
+
+DETRAT_DATORA_STFC_X_TELEFONICA_BRASIL___STFC_STFC_R_072026_V00.xlsx (Datora)
+-> posição 7 (GH): esperado S, R, N ou D, encontrado "TNENL", "TNENI", "TNENI" [0/200 válidos]
+-> operadora notificada: NÃO
+
+DETRAT_DATORA_STFC_X_TELEFONICA_BRASIL___STFC_STFC_R_072026_V00.csv (Datora)
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+ATLANET - 07.2026 - VIVO.xlsx (Atlanet Telecomunicacoes)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "D58", "D58", "D58" [0/5 válidos]
+-> operadora notificada: NÃO
+
+detraf_202607_VIVO_STFC.csv (FALE SEMPRE)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "E90", "E90", "E90" [0/102 válidos]
+-> operadora notificada: NÃO
+
+detraf_202607_VIVO_SMP.csv (FALE SEMPRE)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "E90", "E90", "E90" [0/200 válidos]
+-> operadora notificada: NÃO
+
+Detraf TVN Vivo_072026.csv (TVN VOZ)
+-> Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+-> operadora notificada: NÃO
+
+Solução Network - VIVO (FIXA) - DETRAF - JULHO 2026.csv (Solucao Network)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "B38", "B38", "B38" [0/9 válidos]
+-> operadora notificada: NÃO
+
+Solução Network - VIVO (MOVEL) - DETRAF - JULHO 2026.csv (Solucao Network)
+-> posição 0 (Credora): esperado EOT numérica, encontrado "B38", "B38", "B38" [0/19 válidos]
+-> operadora notificada: NÃO
+
+EC VIVO - FSM 202602.xlsx ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+EC VIVO FSM 202606.xlsx ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+EC FALE SEMPRE - 202605.xlsx ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+DÉBITOS VIVO.xlsx ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+EC VIVO AGERA 202606.xlsx ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+EC VIVO FSM 202604.xlsx ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+EC VIVO FSM 202605.xlsx ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+EC VIVO FSM 202606.xlsx ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+EC INTEREDE 202605.xlsx ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+EC INTEREDE 202604.xlsx ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+EC INTEREDE 202606.xlsx ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: NÃO
+
+2026-08-13 11:54:47.143 | INFO    |src.services.processamento_service:executar:153 - Resumo — Sucesso: 19 | Reprovados: 94 | Não identificados: 0 | Erros: 0
+2026-08-13 11:54:47.145 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Arquivos salvos:          19
+2026-08-13 11:54:47.145 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Reprovados na validação:  94
+2026-08-13 11:54:47.146 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Não identificados:        0
+2026-08-13 11:54:47.147 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Com erro:                 0
+2026-08-13 11:54:47.147 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Reprovados (vão para a quarentena, não para a operadora):
+2026-08-13 11:54:47.148 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   Claro SMP - Receita - Rede SIP - 07.2026 - Enviado TLF.xlsx (Claro STFC)
+2026-08-13 11:54:47.148 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.149 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.149 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   Agil_Vivo_202607.csv (Agil Telecom)
+2026-08-13 11:54:47.149 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "B67", "B67", "B67" [0/10 válidos]
+2026-08-13 11:54:47.150 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.151 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   Agil_Vivo_SMP_202607.csv (Agil Telecom)
+2026-08-13 11:54:47.151 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "B67", "B67", "B68" [0/4 válidos]
+2026-08-13 11:54:47.152 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.152 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   Ampernet_Vivo_202607.csv (Ampernet)
+2026-08-13 11:54:47.153 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       Coluna 10 (Minutos): os minutos admitem no máximo 1 casa decimal.
+2026-08-13 11:54:47.153 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.153 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   Detraf Nova x Vivo SMP 202605.csv (Nova Tecnologia e Telecomunicacoes)
+2026-08-13 11:54:47.154 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       Coluna 3 (Referência): a referência precisa ser 202607 (AAAAMM) em todas as linhas.
+2026-08-13 11:54:47.154 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.154 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   Detraf Nova x TLF_011 202605.csv (Nova Tecnologia e Telecomunicacoes)
+2026-08-13 11:54:47.155 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       Coluna 3 (Referência): a referência precisa ser 202607 (AAAAMM) em todas as linhas.
+2026-08-13 11:54:47.155 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.155 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   VIVO.xlsx (Tcheturbo Internet Provider)
+2026-08-13 11:54:47.156 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+2026-08-13 11:54:47.156 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.156 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   Declaração de Tráfego UFINET x VIVO SMP 07-2026.xlsx (UFINET BRASIL)
+2026-08-13 11:54:47.157 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       Coluna 10 (Minutos): os minutos admitem no máximo 1 casa decimal.
+2026-08-13 11:54:47.157 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.157 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   detraf_202607_O51_010.csv (Union)
+2026-08-13 11:54:47.157 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "O51", "O31", "H90" [0/5 válidos]
+2026-08-13 11:54:47.158 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.158 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   detraf_202607_O51_011.csv (Union)
+2026-08-13 11:54:47.158 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "H90", "H90", "nan" [0/3 válidos]
+2026-08-13 11:54:47.159 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.159 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAF_IDT_TELEFONICA_07-2026_CRED.csv (IDT Brasil)
+2026-08-13 11:54:47.159 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+2026-08-13 11:54:47.160 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.161 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAF_IDT_VIVO_07-2026_CRED.csv (IDT Brasil)
+2026-08-13 11:54:47.161 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+2026-08-13 11:54:47.162 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.162 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx (Gigalink)
+2026-08-13 11:54:47.163 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "B19", "B19", "B19" [0/4 válidos]
+2026-08-13 11:54:47.163 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.163 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx (Gigalink)
+2026-08-13 11:54:47.164 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "B19", "B19", "B19" [0/7 válidos]
+2026-08-13 11:54:47.164 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.164 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAF VMAX x TELEFONICA LDN_202607.xlsx ((não identificada))
+2026-08-13 11:54:47.164 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.165 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.165 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAF VMAX x TELEFONICA SMP_202607.xlsx ((não identificada))
+2026-08-13 11:54:47.165 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.166 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.166 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   Declaração de Tráfego G30 x VIVO SMP 07-2026.xls ((não identificada))
+2026-08-13 11:54:47.167 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.167 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.167 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   Declaração de Tráfego VOCÊ TELECOM x VIVO SMP_202607.xls ((não identificada))
+2026-08-13 11:54:47.167 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.168 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.168 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAF_FINAL_202607_HOME_TELEFONICA_C_20260804195316_ITX.csv (Claro SMP)
+2026-08-13 11:54:47.168 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+2026-08-13 11:54:47.169 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.169 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAF_FINAL_202607_HOME_VIVO_STFC_C_20260804195317_ITX.csv (Claro SMP)
+2026-08-13 11:54:47.169 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+2026-08-13 11:54:47.169 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.170 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAF_FINAL_202607_HOME_VIVO_C_20260804195317_ITX.csv (Claro SMP)
+2026-08-13 11:54:47.170 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       Colunas 12 a 15 (valores financeiros): os valores financeiros admitem no máximo 2 casas decimais.
+2026-08-13 11:54:47.170 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.171 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx (T1 Telecom)
+2026-08-13 11:54:47.171 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "E39", "E39", "E39" [0/7 válidos]
+2026-08-13 11:54:47.171 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.172 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx (T1 Telecom)
+2026-08-13 11:54:47.172 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "E39", "E39", "E39" [0/4 válidos]
+2026-08-13 11:54:47.173 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.173 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAF-TMCO ( ITELCO X VIVO 07-26).xlsx (Itelco Telecom)
+2026-08-13 11:54:47.173 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "H35", "H35", "nan" [0/3 válidos]
+2026-08-13 11:54:47.174 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.174 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAF-TMCO-0128-2026-ITELCO-VIVO SMP- RESUMO_EOT -10_202607.xls ((não identificada))
+2026-08-13 11:54:47.174 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.175 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.175 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   Declaração de Tráfego DUARTE DIAS x VIVO LD_07-2026.xls ((não identificada))
+2026-08-13 11:54:47.176 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.177 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.177 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   Declaração de Tráfego DUARTE DIAS x VIVO SMP_07-2026.xls ((não identificada))
+2026-08-13 11:54:47.178 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.179 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.179 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx (LH Telecomunicacoes LTDA)
+2026-08-13 11:54:47.179 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "N33", "N33", "nan" [0/3 válidos]
+2026-08-13 11:54:47.180 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.180 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx (LH Telecomunicacoes LTDA)
+2026-08-13 11:54:47.181 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "N33", "N33", "N33" [0/4 válidos]
+2026-08-13 11:54:47.181 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.182 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   Declaração de Tráfego JP x VIVO LD_07-2026.xls ((não identificada))
+2026-08-13 11:54:47.182 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.187 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.187 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   Declaração de Tráfego JP x VIVO SMP_07-2026.xls ((não identificada))
+2026-08-13 11:54:47.188 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.189 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.189 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx (Invista Net)
+2026-08-13 11:54:47.190 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "L40", "L40", "nan" [0/3 válidos]
+2026-08-13 11:54:47.190 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.191 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx (Invista Net)
+2026-08-13 11:54:47.192 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "L40", "L40", "L40" [0/6 válidos]
+2026-08-13 11:54:47.192 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.193 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   Declaração de Tráfego FLEXUS x VIVO LD_07-2026.xls ((não identificada))
+2026-08-13 11:54:47.193 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.195 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.196 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   Declaração de Tráfego FLEXUS x VIVO SMP_07-2026.xls ((não identificada))
+2026-08-13 11:54:47.196 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.197 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.198 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   Declaração de Tráfego BRA x VIVO LD_07-2026.xls ((não identificada))
+2026-08-13 11:54:47.199 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.199 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.200 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   Declaração de Tráfego BRA x VIVO SMP_07-2026.xls ((não identificada))
+2026-08-13 11:54:47.200 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.201 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.201 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAF-TMCO-0122-2026-GGNET-VIVO STFC - RESUMO_EOT_200_948_202607.xls ((não identificada))
+2026-08-13 11:54:47.202 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.203 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.204 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAF-TMCO-0123-2026-GGNET-VIVO SMP - RESUMO EOT_044_045_202607.xls ((não identificada))
+2026-08-13 11:54:47.204 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.205 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.206 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   BALANCE_ALGAR_X_VIVO_SMP_R_202607_V00.csv (Algar)
+2026-08-13 11:54:47.206 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.207 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.207 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAT_ALGAR_X_VIVO_SMP_R_202607_V00.csv (Algar)
+2026-08-13 11:54:47.208 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+2026-08-13 11:54:47.209 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.210 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAT_ALGAR_X_VIVO_STFC_R_202607_V00.csv (Algar)
+2026-08-13 11:54:47.214 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+2026-08-13 11:54:47.215 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.216 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAF_ONE_Vivo-Julho-2026.xlsx (One Telecom)
+2026-08-13 11:54:47.216 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       Coluna 10 (Minutos): os minutos admitem no máximo 1 casa decimal.
+2026-08-13 11:54:47.217 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.218 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAF_ONE_Telefonica-GVT-Julho-2026.xlsx ((não identificada))
+2026-08-13 11:54:47.219 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.220 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.222 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAF VIVO - CICLO 072026.csv (Duo Telecom)
+2026-08-13 11:54:47.223 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "L74", "J07", "J07" [0/103 válidos]
+2026-08-13 11:54:47.223 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.224 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   MUNDIVOX_VIVO_202607.csv (Mundivox)
+2026-08-13 11:54:47.225 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       Coluna 10 (Minutos): os minutos admitem no máximo 1 casa decimal.
+2026-08-13 11:54:47.226 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.227 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAF_SOTHIS_X_VIVO_202607.xlsx (Sothis)
+2026-08-13 11:54:47.229 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       Coluna 11 (Tarifa): a tarifa admite no máximo 5 casas decimais e não pode ser zero.
+2026-08-13 11:54:47.230 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.230 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAF_FINAL_202607_HOME_VIVO_C_20260804195236_SMS.csv (Claro STFC)
+2026-08-13 11:54:47.231 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 7 (GH): esperado S, R, N ou D, encontrado "F", "nan", "F" [0/200 válidos]
+2026-08-13 11:54:47.232 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.232 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAF CLARO STFC LD X TELEFONICA 202607.xls (Claro STFC)
+2026-08-13 11:54:47.232 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.233 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.233 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAF CLARO STFC LD X VIVO SMP 202607.xls (Claro STFC)
+2026-08-13 11:54:47.233 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.234 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.234 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAF CLARO STFC LD X VIVO STFC 202607.xls (Claro STFC)
+2026-08-13 11:54:47.235 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.235 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.235 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAF CLARO STFC LC X TELEFONICA 202607.xls ((não identificada))
+2026-08-13 11:54:47.236 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.236 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.236 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAF CLARO STFC LC X VIVO SMP 202607.xls (Claro STFC)
+2026-08-13 11:54:47.236 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.237 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.237 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAF CLARO STFC LC X VIVO STFC 202607.xls (Claro STFC)
+2026-08-13 11:54:47.237 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.237 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.238 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   D_IPCorp_Telecom_Vivo_-_Fixa_LD_202607.XLS ((não identificada))
+2026-08-13 11:54:47.238 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.239 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.239 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   D_IPCorp_Telecom_Vivo_-_Móvel_LC_202607.xls ((não identificada))
+2026-08-13 11:54:47.240 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.240 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.240 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   D_IPCorp_Telecom_Vivo_-_Móvel_LD_202607.XLS ((não identificada))
+2026-08-13 11:54:47.241 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.241 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.242 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   detraf_072026_credor.xlsx (Xturbo Provedor de Internet EIRELI)
+2026-08-13 11:54:47.242 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "I55", "I55", "I55" [0/5 válidos]
+2026-08-13 11:54:47.243 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.243 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   LYTUX - 07.2026  - VIVO.xlsx (Lytux - PABX Virtual & Telefonia IP)
+2026-08-13 11:54:47.244 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "E65", "E68", "E66" [0/77 válidos]
+2026-08-13 11:54:47.246 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.246 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   NOVACIA - 07.2026 - VIVO.xlsx (Novacia Telecom)
+2026-08-13 11:54:47.247 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "D67", "D67", "D67" [0/4 válidos]
+2026-08-13 11:54:47.249 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.249 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAF-TMCO-0116-2026-PREDLINK-VIVO SMP - RESUMO_EOT 20-202607.xls ((não identificada))
+2026-08-13 11:54:47.251 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.252 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.253 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   Detraf Credora Mundo (EOT A04) x Devedora Vivo (EOT 931) - Agosto.2026.csv (Mundo Telecom)
+2026-08-13 11:54:47.253 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "A04", "nan" [0/2 válidos]
+2026-08-13 11:54:47.254 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.254 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   Detraf Credora Mundo (EOT A04) x Devedora Vivo (EOT 030) - Agosto.2026.csv (Mundo Telecom)
+2026-08-13 11:54:47.255 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "A04", "A04", "A04" [0/8 válidos]
+2026-08-13 11:54:47.255 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.255 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   SISTEL - 07.2026 - VIVO.xlsx (Sistel Fibra)
+2026-08-13 11:54:47.256 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "G19", "G19", "G19" [0/9 válidos]
+2026-08-13 11:54:47.257 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.257 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   SEA - 07.2026 - VIVO.xlsx (Sea Telecom)
+2026-08-13 11:54:47.257 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "D85", "D85", "D85" [0/4 válidos]
+2026-08-13 11:54:47.258 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.258 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   202607 Detraf C SMS SMP Unifique X SMP Telefonica Brasil.xlsx (Unifique)
+2026-08-13 11:54:47.259 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "L06", "L06", "L05" [0/73 válidos]
+2026-08-13 11:54:47.259 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.260 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   RAMAL VIRTUAL - 07.2026  -  VIVO.xlsx (Ramalvirtual Telecomunicacoes)
+2026-08-13 11:54:47.260 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "F47", "F47", "F47" [0/4 válidos]
+2026-08-13 11:54:47.261 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.262 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   ROCKETNET - 07.2026 - VIVO.xlsx (Rocketnet)
+2026-08-13 11:54:47.262 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "A41", "A41", "A41" [0/11 válidos]
+2026-08-13 11:54:47.263 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.263 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   202607 Detraf RS-SC C LD STFC Unifique X STFC Telefonica Brasil.xlsx (Unifique)
+2026-08-13 11:54:47.264 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       Coluna 10 (Minutos): os minutos admitem no máximo 1 casa decimal.
+2026-08-13 11:54:47.264 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.264 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   MEGALINK - 07.2026  -  VIVO.xlsx (Megalink Servicos)
+2026-08-13 11:54:47.264 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "M68", "M68", "M68" [0/10 válidos]
+2026-08-13 11:54:47.265 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.265 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   ITANET -  07.2026 - VIVO.xlsx (ITANET)
+2026-08-13 11:54:47.265 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "A82", "A82", "A82" [0/18 válidos]
+2026-08-13 11:54:47.266 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.266 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   FORZA -  07.2026 - VIVO.xlsx (FORZA TELECOMUNICACOES LTDA)
+2026-08-13 11:54:47.266 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "B47", "B47", "B47" [0/4 válidos]
+2026-08-13 11:54:47.266 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.267 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   GMARX - 07.2026 - VIVO.xlsx (Vivo)
+2026-08-13 11:54:47.267 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "A62", "E46", "C81" [5/22 válidos]
+2026-08-13 11:54:47.267 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.268 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   CDI - 07.2026 - VIVO.xlsx (CDI Telecom)
+2026-08-13 11:54:47.268 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "C61", "C61", "C61" [0/5 válidos]
+2026-08-13 11:54:47.269 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.269 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   202607 Detraf RS-SC C LC STFC Unifique X SMP Telefonica Brasil.xlsx (Unifique)
+2026-08-13 11:54:47.269 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       Coluna 10 (Minutos): os minutos admitem no máximo 1 casa decimal.
+2026-08-13 11:54:47.270 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.270 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAT_DATORA_STFC_X_TELEFONICA_BRASIL___STFC_STFC_R_072026_V00.xlsx (Datora)
+2026-08-13 11:54:47.270 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 7 (GH): esperado S, R, N ou D, encontrado "TNENL", "TNENI", "TNENI" [0/200 válidos]
+2026-08-13 11:54:47.271 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.271 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAT_DATORA_STFC_X_TELEFONICA_BRASIL___STFC_STFC_R_072026_V00.csv (Datora)
+2026-08-13 11:54:47.271 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.271 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.272 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   ATLANET - 07.2026 - VIVO.xlsx (Atlanet Telecomunicacoes)
+2026-08-13 11:54:47.272 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "D58", "D58", "D58" [0/5 válidos]
+2026-08-13 11:54:47.273 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.273 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   detraf_202607_VIVO_STFC.csv (FALE SEMPRE)
+2026-08-13 11:54:47.274 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "E90", "E90", "E90" [0/102 válidos]
+2026-08-13 11:54:47.274 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.274 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   detraf_202607_VIVO_SMP.csv (FALE SEMPRE)
+2026-08-13 11:54:47.275 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "E90", "E90", "E90" [0/200 válidos]
+2026-08-13 11:54:47.275 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.275 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   Detraf TVN Vivo_072026.csv (TVN VOZ)
+2026-08-13 11:54:47.276 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+2026-08-13 11:54:47.276 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.277 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   Solução Network - VIVO (FIXA) - DETRAF - JULHO 2026.csv (Solucao Network)
+2026-08-13 11:54:47.277 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "B38", "B38", "B38" [0/9 válidos]
+2026-08-13 11:54:47.278 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.278 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   Solução Network - VIVO (MOVEL) - DETRAF - JULHO 2026.csv (Solucao Network)
+2026-08-13 11:54:47.278 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       posição 0 (Credora): esperado EOT numérica, encontrado "B38", "B38", "B38" [0/19 válidos]
+2026-08-13 11:54:47.279 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.279 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   EC VIVO - FSM 202602.xlsx ((não identificada))
+2026-08-13 11:54:47.280 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.280 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.280 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   EC VIVO FSM 202606.xlsx ((não identificada))
+2026-08-13 11:54:47.281 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.281 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.281 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   EC FALE SEMPRE - 202605.xlsx ((não identificada))
+2026-08-13 11:54:47.282 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.282 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.282 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DÉBITOS VIVO.xlsx ((não identificada))
+2026-08-13 11:54:47.282 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.283 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.283 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   EC VIVO AGERA 202606.xlsx ((não identificada))
+2026-08-13 11:54:47.284 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.284 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.285 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   EC VIVO FSM 202604.xlsx ((não identificada))
+2026-08-13 11:54:47.285 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.286 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.286 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   EC VIVO FSM 202605.xlsx ((não identificada))
+2026-08-13 11:54:47.286 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.287 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.287 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   EC VIVO FSM 202606.xlsx ((não identificada))
+2026-08-13 11:54:47.288 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.288 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.288 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   EC INTEREDE 202605.xlsx ((não identificada))
+2026-08-13 11:54:47.289 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.289 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.289 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   EC INTEREDE 202604.xlsx ((não identificada))
+2026-08-13 11:54:47.290 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.290 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.290 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   EC INTEREDE 202606.xlsx ((não identificada))
+2026-08-13 11:54:47.291 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-13 11:54:47.291 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: NÃO
+2026-08-13 11:54:47.291 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Pasta: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras
+2026-08-13 11:54:47.292 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] ────────────────────────────────────────────────────────────
+2026-08-13 11:54:47.292 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Esta é a última etapa da execução.
+2026-08-13 11:54:47.293 | INFO    |__main__:main:94 - Aplicação finalizada
+2026-08-13 11:54:47.296 | INFO    |__main__:main:110 - [Diagnóstico] Etapas desta execução em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\logs\NALPE0881WP\rpa1_captura\diagnosticos\2026-08-13_11-53-14.txt].
+2026-08-13 11:54:47.297 | INFO    |__main__:<module>:118 - [RPA 1] Diagnóstico das etapas em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\logs\NALPE0881WP\rpa1_captura\diagnosticos\2026-08-13_11-53-14.txt]

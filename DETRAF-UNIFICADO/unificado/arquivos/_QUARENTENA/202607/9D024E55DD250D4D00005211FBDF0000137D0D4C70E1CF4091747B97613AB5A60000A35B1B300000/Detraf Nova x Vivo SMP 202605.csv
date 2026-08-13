@@ -1,0 +1,5 @@
+EOT Credora;EOT Devedora;Periodo de Referencia;Periodo de Trafego;Ponto de Interconexao;Tipo Relatorio;Descritor de CDR;Grupo Horario;Chamadas;Duracao em Minutos;Tarifa Aplicavel;Valor Liquido;PIS/Cofins;Valor ICMS;Valor Bruto
+774;010;202605;202605;NVA.OCO.01;0;LENL;N;88834;381870,6;0,00610;2329,41;88,24;0,00;2417,65
+774;010;202605;202605;NVA.OCO.01;0;LENL;R;4965;10475,0;0,00427;44,73;1,69;0,00;46,42
+I34;030;202605;202605;NVA.OCO.02;0;LENL;N;23422;89952,7;0,00610;548,71;20,79;0,00;569,50
+I34;030;202605;202605;NVA.OCO.02;0;LENL;R;484;1361,0;0,00427;5,81;0,22;0,00;6,03
