@@ -17,7 +17,10 @@ No banco, este robô registra **só o que o RPA 2 nunca vai ver**: o recusado e 
 que ficou sem operadora. O arquivo válido é registrado pelo RPA 2 — ver 2.8.
 
 ```
- Caixa "Detraf Despesas"
+ Caixa de Entrada
+         │  filtro de negócio (DetrafEmailFilterService)
+         ▼
+ Caixa "Detraf Despesas"   ← o próprio robô organiza (2026-08-13)
          │
          ▼
  ┌─────────────────┐   anexos em DIRETORIO_ENTRADA/{entry_id}/
@@ -61,7 +64,20 @@ vazia e registra no log.
 > A V1 dizia *"varredura diária após o dia 05"*; a V2 removeu a regra e não pôs
 > nada no lugar. O dia 5 é decisão do GP/dev de 2026-08-05, configurável.
 
-### 1.2 Ler a pasta `Detraf Despesas`
+### 1.2 Organizar a Caixa de Entrada
+
+**Onde:** `outlook_controller.organizar_caixa_de_entrada`
+
+🔴 **Passo que faltava, achado em 2026-08-13.** Até aqui o robô só lia
+`Detraf Despesas`, como se algo de fora a alimentasse — mas a Vivo confirmou
+por e-mail que só criou a caixa, nenhuma regra de Outlook. A V2 é explícita:
+é o **robô** quem filtra a Caixa de Entrada e organiza os e-mails nessa
+pasta (HU-01). Lê a Caixa de Entrada de verdade (`fetch_emails_from_inbox`,
+resolvida por `Store.GetDefaultFolder` — não depende do nome de exibição,
+que varia por conta/idioma), aplica o **mesmo** `DetrafEmailFilterService`
+que decide a captura, e move o que passa para `Detraf Despesas`.
+
+### 1.3 Ler a pasta `Detraf Despesas`
 
 **Onde:** `comum/integracoes/outlook.py::fetch_emails_from_folder`
 **Sai:** lista de e-mails, ordenados por data de recebimento
@@ -70,21 +86,23 @@ vazia e registra no log.
 `OutlookError` nomeando `OUTLOOK_ACCOUNT`. O "Novo Outlook" do Windows 11 **não
 expõe COM** e não serve.
 
-### 1.3 Filtrar o que interessa
+### 1.4 Filtrar o que interessa
 
 **Onde:** `services/email_filter_service.py::deve_processar`
 
 Passa o e-mail que **não** contém "CONTESTAÇÃO" no assunto **e** tem anexo
-`.csv`/Excel. O resto é ignorado, com o motivo em `DEBUG`.
+`.csv`/Excel. O resto é ignorado, com o motivo em `DEBUG`. É o **mesmo**
+filtro do passo 1.2 — a organização da Caixa de Entrada usa esta função, não
+uma cópia dela.
 
-### 1.4 Descartar e-mail já capturado
+### 1.5 Descartar e-mail já capturado
 
 **Onde:** `rastreamento.existe_entry_id`
 
 O `entry_id` do Outlook é a chave. É a primeira das duas proteções contra
-recaptura — a segunda é mover o e-mail (1.6).
+recaptura — a segunda é mover o e-mail (1.7).
 
-### 1.5 Baixar os anexos e registrar o rastreamento
+### 1.6 Baixar os anexos e registrar o rastreamento
 
 **Onde:** `outlook.download_attachments`
 **Sai:** arquivos em `DIRETORIO_ENTRADA/{entry_id}/`, e um registro
@@ -100,12 +118,12 @@ visível.
 **Como falha:** falha de download conta no resumo e **não interrompe** os demais
 e-mails.
 
-### 1.6 Mover o e-mail para `PROCESSADOS`
+### 1.7 Mover o e-mail para `PROCESSADOS`
 
 **Onde:** `outlook.move_to_subfolder`
 
 **Como falha:** o e-mail foi capturado mas não movido — vira `ERROR` no log e
-entra no resumo. Não perde dado: o `entry_id` já está rastreado (1.4), então a
+entra no resumo. Não perde dado: o `entry_id` já está rastreado (1.5), então a
 próxima execução o ignora de qualquer forma.
 
 ---

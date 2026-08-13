@@ -135,6 +135,36 @@ class OutlookService:
         )
         return emails
 
+    def fetch_emails_from_inbox(self) -> list[EmailMessage]:
+        """
+        Retorna e-mails da Caixa de Entrada **de verdade** da conta.
+
+        Diferente de `fetch_emails_from_folder`: aqui a pasta é resolvida pelo
+        `Store.GetDefaultFolder`, que não depende do nome de exibição — a Caixa
+        de Entrada aparece como "Inbox" em algumas contas do mesmo perfil e
+        "Caixa de Entrada" em outras, e um nome fixo casaria só uma das duas.
+        """
+        parent = self._ns.Folders(self._account)
+        folder = parent.Store.GetDefaultFolder(6)  # olFolderInbox
+        items = folder.Items
+        items.Sort("[ReceivedTime]", True)
+
+        emails: list[EmailMessage] = []
+        ignorados = 0
+        for item in items:
+            try:
+                if item.Class != 43:  # olMailItem = 43
+                    ignorados += 1
+                    continue
+                emails.append(self._build_email(item))
+            except Exception as exc:
+                ignorados += 1
+                logger.warning(f"Item ignorado ao ler a Caixa de Entrada (não é um e-mail válido?): {exc}")
+        logger.debug(
+            f"Caixa de Entrada: {len(emails)} e-mail(s) lido(s), {ignorados} item(ns) ignorado(s)."
+        )
+        return emails
+
     def get_email_by_entry_id(self, entry_id: str) -> EmailMessage:
         """Busca um email pelo seu EntryID."""
         try:
@@ -413,6 +443,29 @@ class OutlookService:
         except Exception as exc:
             raise OutlookError(
                 f"Não foi possível acessar/criar a pasta '{name}'. Detalhe: {exc}"
+            ) from exc
+
+    def move_to_top_level_folder(self, entry_id: str, folder_name: str) -> None:
+        """
+        Move um e-mail para `folder_name` (pasta de topo, irmã do Inbox).
+
+        Diferente de `move_to_subfolder`: aqui o destino **é** a pasta de topo,
+        não uma subpasta dentro de outra — é o caminho inverso de
+        `fetch_emails_from_folder`, usado para popular a pasta a partir da
+        Caixa de Entrada.
+        """
+        try:
+            item = self._ns.GetItemFromID(entry_id)
+        except Exception as exc:
+            raise OutlookError(f"Email '{entry_id}' não encontrado para mover.") from exc
+
+        target = self._get_or_create_top_level_folder(folder_name)
+        try:
+            item.Move(target)
+            logger.debug(f"E-mail '{entry_id}' movido para '{folder_name}'.")
+        except Exception as exc:
+            raise OutlookError(
+                f"Falha ao mover email '{entry_id}' para '{folder_name}': {exc}"
             ) from exc
 
     # ------------------------------------------------------------------

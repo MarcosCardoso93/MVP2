@@ -1,6 +1,7 @@
 from comum.config.logger_config import logger
 from src.services.expectativa import acusar_expectativa_ausente
 from comum.arquivos.recusa import registrar_recusa
+from comum.dominio.diagnostico_de_recusa import Diagnostico
 from comum.utils.decoradores import log_execucao
 from pathlib import Path
 import pandas as pd
@@ -32,6 +33,24 @@ from comum.dominio.layout_detraf import validar_layout
 from comum.utils.debug import salvar_debug_log
 from src.services.resultado_validacao import TransformadorRelatorioRPA
 from comum.arquivos.gerenciador import renomear_arquivo_com_sufixo
+
+
+def _carregar_para_diagnostico(arquivo: Path) -> pd.DataFrame | None:
+    """
+    Recarrega um arquivo só para as linhas de exemplo do `_RECUSADO.md`.
+
+    Nunca levanta: perder a amostra é aceitável (o `.md` sai sem ela); travar
+    a recusa por causa do diagnóstico não seria — é a mesma regra de
+    `registrar_recusa`, aplicada aqui um passo antes.
+    """
+    try:
+        return carregar_dados(arquivo)
+    except Exception as erro:
+        logger.warning(
+            f"Não foi possível reler [{arquivo}] para a amostra do diagnóstico "
+            f"de recusa: {erro}. O `_RECUSADO.md` sai sem as linhas de exemplo."
+        )
+        return None
 
 
 class ValidacaoDetrafsService:
@@ -356,10 +375,10 @@ class ValidacaoDetrafsService:
                     )
                     continue
 
-                valido = self.validador_colunas.validar_tudo(
+                resultado_colunas = self.validador_colunas.validar_tudo_detalhado(
                     df_filtrado, tipo_arquivo, debug=debug
                 )
-                if valido:
+                if resultado_colunas.conforme:
                     logger.info(
                         f"Arquivo [{arquivo}] passou em todas as validações."
                     )
@@ -375,6 +394,17 @@ class ValidacaoDetrafsService:
                         "que ele chegou à pasta da operadora."
                     )
                     self.arquivos_invalidos.add(arquivo)
+                    # Achado em 2026-08-12: até aqui esta era a ÚNICA recusa de
+                    # Detraf sem `_RECUSADO.md` — o resumo da execução promete
+                    # "cada um tem um *_RECUSADO.md ao lado" para todo item de
+                    # `arquivos_invalidos`, e este caminho nunca gravava nada.
+                    registrar_recusa(
+                        arquivo,
+                        resultado_colunas.diagnostico(
+                            total_colunas=df_filtrado.shape[1]
+                        ),
+                        df_filtrado,
+                    )
             except Exception as erro:
                 logger.excecao(f"Erro ao validar o arquivo [{arquivo}]: {erro}")
                 self.arquivos_invalidos.add(arquivo)
@@ -446,6 +476,24 @@ class ValidacaoDetrafsService:
                         f"Arquivo [{arquivo}] atende ao fluxo {tipo_fluxo} e foi sinalizado como inválido conforme configuração."
                     )
                     self.arquivos_invalidos.add(arquivo)
+                    # Mesmo achado do outro ponto sem `_RECUSADO.md` (2026-08-12):
+                    # `gerar_arquivos=False` nesta chamada (só para Detraf) garante
+                    # que o arquivo em `arquivo` continua intacto, seguro para reler.
+                    registrar_recusa(
+                        arquivo,
+                        Diagnostico(
+                            motivo=(
+                                f"O arquivo tem linha(s) que atendem ao fluxo "
+                                f"{tipo_fluxo} (descritor iniciado e terminado em "
+                                f"'L', serviço STFC) — para arquivo de Detraf "
+                                f"(diferente de expectativa), isso marca o "
+                                f"arquivo **inteiro** como inválido, por decisão "
+                                f"de configuração: tráfegos deste fluxo não são "
+                                f"separados de arquivos de operadora."
+                            )
+                        ),
+                        _carregar_para_diagnostico(arquivo),
+                    )
 
             except Exception as erro:
                 logger.excecao(

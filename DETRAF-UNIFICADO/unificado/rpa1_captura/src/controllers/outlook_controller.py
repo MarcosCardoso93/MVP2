@@ -23,9 +23,17 @@ def _safe_dir_name(entry_id: str) -> str:
 
 class OutlookController:
     """
-    Lê a pasta 'Detraf Despesas' (alimentada por fora do robô), filtra os
-    e-mails relevantes, baixa os anexos e move cada e-mail capturado para a
-    subpasta 'PROCESSADOS' — garantindo que não seja capturado de novo.
+    Organiza a Caixa de Entrada, lê a pasta 'Detraf Despesas' resultante,
+    filtra os e-mails relevantes, baixa os anexos e move cada e-mail
+    capturado para a subpasta 'PROCESSADOS' — garantindo que não seja
+    capturado de novo.
+
+    🔴 Até 2026-08-13 a organização não existia: a classe só lia 'Detraf
+    Despesas', como se algo de fora a alimentasse. A V2 diz o contrário —
+    quem filtra a Caixa de Entrada e organiza os e-mails ali é o próprio
+    robô. Não existe (e não deveria existir) regra de Outlook fazendo isso;
+    a Vivo confirmou que só criou a caixa, nada além. Ver
+    `organizar_caixa_de_entrada`.
     """
 
     def __init__(self) -> None:
@@ -38,11 +46,49 @@ class OutlookController:
         """Só processa a partir do dia configurado (DETRAF_DIA_LIBERACAO)."""
         return datetime.now().day >= self._config.dia_liberacao
 
+    def organizar_caixa_de_entrada(self, outlook: OutlookService) -> None:
+        """
+        Move da Caixa de Entrada para 'Detraf Despesas' os e-mails que atendem
+        ao filtro de negócio (HU-01) — a metade da história que faltava.
+
+        Até 2026-08-13 o robô só lia 'Detraf Despesas', assumindo que algo de
+        fora a alimentava. A V2 diz o contrário: **é o robô** quem filtra a
+        Caixa de Entrada e organiza os e-mails nessa pasta — não existe (e,
+        pelo espec, nunca deveria existir) regra de Outlook ou processo
+        externo fazendo isso. Sem este passo, 'Detraf Despesas' fica vazia
+        para sempre, mesmo com e-mails de despesa chegando na caixa.
+
+        Usa o **mesmo** `DetrafEmailFilterService` que decide, mais adiante, o
+        que é capturado — um e-mail que passaria no filtro de captura mas
+        nunca chega a ser filtrado da Caixa de Entrada é o defeito que isto
+        fecha.
+        """
+        emails = outlook.fetch_emails_from_inbox()
+        movidos = 0
+        for email in emails:
+            if not DetrafEmailFilterService.deve_processar(email):
+                continue
+            try:
+                outlook.move_to_top_level_folder(
+                    email.entry_id, self._config.detraf_despesas_folder
+                )
+                movidos += 1
+            except OutlookError as exc:
+                logger.error(
+                    f"Falha ao mover e-mail '{email.entry_id}' (assunto: "
+                    f"'{email.subject}') da Caixa de Entrada para "
+                    f"'{self._config.detraf_despesas_folder}': {exc}"
+                )
+        logger.info(
+            f"Organização da Caixa de Entrada: {len(emails)} e-mail(s) lido(s), "
+            f"{movidos} movido(s) para '{self._config.detraf_despesas_folder}'."
+        )
+
     def capturar_arquivos(self) -> list[ArquivoParaProcessar]:
         """
-        Executa o fluxo de captura: lê 'Detraf Despesas', filtra, baixa
-        anexos, registra rastreamento e move e-mails capturados para
-        'PROCESSADOS'.
+        Executa o fluxo de captura: organiza a Caixa de Entrada, lê 'Detraf
+        Despesas', filtra, baixa anexos, registra rastreamento e move e-mails
+        capturados para 'PROCESSADOS'.
 
         Returns:
             Lista de arquivos baixados, prontos para o pipeline de
@@ -56,6 +102,7 @@ class OutlookController:
             return []
 
         outlook = OutlookService(self._config.account)
+        self.organizar_caixa_de_entrada(outlook)
         emails = outlook.fetch_emails_from_folder(self._config.detraf_despesas_folder)
         logger.info(f"{len(emails)} e-mail(s) em '{self._config.detraf_despesas_folder}'")
 

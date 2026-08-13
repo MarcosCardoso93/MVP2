@@ -41,8 +41,9 @@ class OutlookConfig:
 
     Attributes:
         account: Conta Outlook (email) a acessar. Ex: detrafTBRA.br@telefonica.com.
-        detraf_despesas_folder: Pasta (já existente, alimentada por fora) de
-            onde o robô lê os e-mails com Detraf de despesa.
+        detraf_despesas_folder: Pasta de onde o robô lê os e-mails com Detraf
+            de despesa — o próprio robô a organiza a partir da Caixa de
+            Entrada (`OutlookController.organizar_caixa_de_entrada`).
         processados_folder: Subpasta dentro de `detraf_despesas_folder` para
             onde os e-mails já capturados são movidos (idempotência).
         dest_root: Pasta local onde baixar os anexos.
