@@ -1,0 +1,80 @@
+======================================================================
+EXECUÇÃO
+======================================================================
+robô:       rpa2_validacao_apuracao
+referência: (mês corrente -1)
+início:     2026-08-13 15:20:56
+duração:    27.2s
+desfecho:   OK
+parâmetro:  parâmetros: nenhum — execução completa, como na agenda
+
+======================================================================
+AMBIENTE
+======================================================================
+robô: rpa2_validacao_apuracao
+modo: DEV  (de ENV)
+log: nível INFO (de LOG_LEVEL), diagnose ligado
+competência: 202607  (mês anterior ao corrente)
+banco: SQLite [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db] (de CAMINHO_SQLITE)
+AGI: ambiente [producao] host [10.238.6.120] (de AGI_AMBIENTE) | executável [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
+EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: desligado | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado | download SFTP: LIGADO
+
+======================================================================
+ETAPA 1/4: arranque   [ok]   3.1s
+======================================================================
+produziu:
+  módulos carregados, banco resolvido
+
+======================================================================
+ETAPA 2/4: expectativa   [ok]   22.6s
+======================================================================
+entrada:
+  origem = SFTP ClickHub
+  destino = C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Expectativa
+produziu:
+  Origem:                   SFTP
+  Período procurado:        202607
+  Arquivos baixados:        0
+  
+  Falhas (1):
+    [SFTP] Não foi possível conectar em BRTLVLTS1739FU:22 como 'ictprd': [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+  -> Confira a rede/VPN até o host e se a credencial ainda vale.
+  -> Nada foi baixado; a pasta de expectativa continua como estava.
+
+======================================================================
+ETAPA 3/4: validacao   [ok]   0.2s
+======================================================================
+entrada:
+  CAMINHO_OPERADORAS = C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras
+  CAMINHO_EXPECTATIVA_DETRAF = C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Expectativa
+produziu:
+  Detraf válidos:           0
+  Detraf inválidos:         0
+  Expectativa válidos:      0
+  Expectativa inválidos:    0
+
+======================================================================
+ETAPA 4/4: batimento   [ok]   1.2s
+======================================================================
+entrada:
+  CAMINHO_OPERADORAS = C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras
+produziu:
+  Operadoras apuradas:      23
+  
+  O resultado é a TABELA `tbl_rpa_log_detraf_despesa_contestacao`,
+  não um arquivo — a Base de Contestação virou tabela em 2026-08-04.
+  
+  Próximo passo é humano: o analista sinaliza no WebFat o que
+  contestar e se haverá retenção. Só então o RPA 3 tem o que fazer.
+  
+  Operadoras: ADYLNET INTERNET PROVIDER, AGIL TELECOM, ALGAR, ATLANET TELECOMUNICACOES, BTT TELECOMUNICACOES S.A, DESKTOP SIGMANET, GGNET TELECOM, GOLDEN LINE TELECOM, INVISTA NET, ITELCO TELECOM, LH TELECOMUNICACOES LTDA, MEGALINK SERVICOS, MEGATELECOM TELECOMUNICACOES S.A, NOVA TECNOLOGIA E TELECOMUNICACOES, OPCAO TELECOM, OPERADORA_NAO_IDENTIFICADA, PREDIALNET, SISTEL FIBRA, T1 TELECOM, TRI TELECOM, UFINET BRASIL, UNIFIQUE, VONARE
+
+======================================================================
+LOG COMPLETO
+======================================================================
+C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\logs
+
+Este arquivo é o resumo por etapa. O log tem a sequência completa,
+linha a linha, de tudo o que a execução fez.
