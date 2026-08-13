@@ -7096,3 +7096,176 @@ comum.integracoes.outlook.OutlookError: Falha ao responder o e-mail '00000000A94
 2026-08-13 13:57:02.161 | INFO    |__main__:main:94 - Aplicação finalizada
 2026-08-13 13:57:02.165 | INFO    |__main__:main:110 - [Diagnóstico] Etapas desta execução em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\logs\NALPE0881WP\rpa1_captura\diagnosticos\2026-08-13_13-56-42.txt].
 2026-08-13 13:57:02.166 | INFO    |__main__:<module>:118 - [RPA 1] Diagnóstico das etapas em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\logs\NALPE0881WP\rpa1_captura\diagnosticos\2026-08-13_13-56-42.txt]
+2026-08-13 14:12:04.713 | INFO    |__main__:<module>:118 - [RPA 1] robô: rpa1_captura
+2026-08-13 14:12:04.713 | INFO    |__main__:<module>:118 - [RPA 1] modo: DEV  (de ENV)
+2026-08-13 14:12:04.714 | INFO    |__main__:<module>:118 - [RPA 1] log: nível INFO (de LOG_LEVEL), diagnose ligado
+2026-08-13 14:12:04.714 | INFO    |__main__:<module>:118 - [RPA 1] competência: 202607  (mês anterior ao corrente)
+2026-08-13 14:12:04.715 | INFO    |__main__:<module>:118 - [RPA 1] banco: SQLite [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db] (de CAMINHO_SQLITE)
+2026-08-13 14:12:04.715 | INFO    |__main__:<module>:118 - [RPA 1] AGI: ambiente [producao] host [10.238.6.120] (de AGI_AMBIENTE) | executável [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
+2026-08-13 14:12:04.716 | INFO    |__main__:<module>:118 - [RPA 1] EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: desligado | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado | download SFTP: desligado
+2026-08-13 14:12:04.716 | INFO    |__main__:<module>:118 - [RPA 1] parâmetros: nenhum — execução completa, como na agenda
+2026-08-13 14:12:06.463 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-13 14:12:06.464 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db]
+2026-08-13 14:12:07.006 | INFO    |__main__:main:94 - Aplicação iniciada
+2026-08-13 14:12:07.007 | INFO    |src.main.process_handle:run:34 - [RPA 1] Etapa 1/2 — captura dos anexos no Outlook (HU-01)
+2026-08-13 14:12:07.008 | INFO    |src.controllers.outlook_controller:capturar_arquivos:104 - Conectando ao Outlook (conta configurada: 'detrafTBRA')...
+2026-08-13 14:12:07.024 | INFO    |src.controllers.outlook_controller:capturar_arquivos:104 - Conectado ao Outlook com sucesso.
+2026-08-13 14:12:07.979 | ERROR   |comum.integracoes.outlook:_build_email:485 - Falha ao enumerar os anexos do e-mail: (-2147467262, 'Não há suporte para esta interface', None, None). 0 de ? anexo(s) descrito(s) — os demais NÃO serão vistos por este robô.
+Traceback (most recent call last):
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\main.py", line 118, in <module>
+    raise SystemExit(main())
+                     └ <function main at 0x000001972A5E14E0>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\main.py", line 94, in main
+    run(pasta_entrada=recorte.pasta_entrada, etapa=recorte.etapa, diagnostico=diagnostico)
+    │                 │       │                    │       │                  └ <comum.config.diagnostico_execucao.DiagnosticoDeExecucao object at 0x000001972B615D30>
+    │                 │       │                    │       └ None
+    │                 │       │                    └ Argumentos(referencia=None, operadoras=[], etapa=None, pasta_entrada=None, de_pasta=None, dry_run=False, pausar=False)
+    │                 │       └ None
+    │                 └ Argumentos(referencia=None, operadoras=[], etapa=None, pasta_entrada=None, de_pasta=None, dry_run=False, pausar=False)
+    └ <function run at 0x000001972B66AAC0>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\src\main\process_handle.py", line 34, in run
+    controller.processar(
+    │          └ <function ProcessamentoController.processar at 0x000001974519FE20>
+    └ <src.controllers.processamento_controller.ProcessamentoController object at 0x000001974513CC20>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\src\controllers\processamento_controller.py", line 104, in processar
+    arquivos = self._outlook.capturar_arquivos()
+               │    └ <property object at 0x000001972B6702C0>
+               └ <src.controllers.processamento_controller.ProcessamentoController object at 0x000001974513CC20>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\src\controllers\outlook_controller.py", line 105, in capturar_arquivos
+    self.organizar_caixa_de_entrada(outlook)
+    │    │                          └ <comum.integracoes.outlook.OutlookService object at 0x000001974513D940>
+    │    └ <function OutlookController.organizar_caixa_de_entrada at 0x000001972C107740>
+    └ <src.controllers.outlook_controller.OutlookController object at 0x000001974513D550>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\src\controllers\outlook_controller.py", line 66, in organizar_caixa_de_entrada
+    emails = outlook.fetch_emails_from_inbox()
+             │       └ <function OutlookService.fetch_emails_from_inbox at 0x000001972C106D40>
+             └ <comum.integracoes.outlook.OutlookService object at 0x000001974513D940>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\comum\integracoes\outlook.py", line 159, in fetch_emails_from_inbox
+    emails.append(self._build_email(item))
+    │      │      │    │            └ <COMObject <unknown>>
+    │      │      │    └ <function OutlookService._build_email at 0x000001972C1074C0>
+    │      │      └ <comum.integracoes.outlook.OutlookService object at 0x000001974513D940>
+    │      └ <method 'append' of 'list' objects>
+    └ [EmailMessage(entry_id='00000000A949F53E017BB44C86E46D56D2D6BB100700F25FC41A3584FC499D024E55DD250D4D00000000010C0000F25FC41A3...
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\comum\integracoes\outlook.py", line 485, in _build_email
+    attachments = self._build_attachments(item)
+                  │    │                  └ <COMObject <unknown>>
+                  │    └ <function OutlookService._build_attachments at 0x000001972C107560>
+                  └ <comum.integracoes.outlook.OutlookService object at 0x000001974513D940>
+
+> File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\comum\integracoes\outlook.py", line 517, in _build_attachments
+    attachments = item.Attachments
+                  └ <COMObject <unknown>>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\.venv\Lib\site-packages\win32com\client\dynamic.py", line 620, in __getattr__
+    ret = self._oleobj_.Invoke(retEntry.dispid, 0, invoke_type, 1)
+          │    │        │      │        │          └ 2
+          │    │        │      │        └ 63509
+          │    │        │      └ MapEntry(dispid=63509, desc=PyFUNCDESC(memid=63509, scodeArray=(), args=(), funckind=4, invkind=2, callconv=4, cParamsOpt=0, ...
+          │    │        └ <method 'Invoke' of 'PyIDispatch' objects>
+          │    └ <PyIDispatch at 0x00000197288CC440 with obj at 0x00000197435C5798>
+          └ <COMObject <unknown>>
+
+pywintypes.com_error: (-2147467262, 'Não há suporte para esta interface', None, None)
+2026-08-13 14:12:07.994 | WARNING |src.controllers.outlook_controller:organizar_caixa_de_entrada:66 - Item ignorado ao ler a Caixa de Entrada (não é um e-mail válido?): (-2147467262, 'Não há suporte para esta interface', None, None)
+2026-08-13 14:12:08.006 | ERROR   |comum.integracoes.outlook:_build_email:485 - Falha ao enumerar os anexos do e-mail: (-2147467262, 'Não há suporte para esta interface', None, None). 0 de ? anexo(s) descrito(s) — os demais NÃO serão vistos por este robô.
+Traceback (most recent call last):
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\main.py", line 118, in <module>
+    raise SystemExit(main())
+                     └ <function main at 0x000001972A5E14E0>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\main.py", line 94, in main
+    run(pasta_entrada=recorte.pasta_entrada, etapa=recorte.etapa, diagnostico=diagnostico)
+    │                 │       │                    │       │                  └ <comum.config.diagnostico_execucao.DiagnosticoDeExecucao object at 0x000001972B615D30>
+    │                 │       │                    │       └ None
+    │                 │       │                    └ Argumentos(referencia=None, operadoras=[], etapa=None, pasta_entrada=None, de_pasta=None, dry_run=False, pausar=False)
+    │                 │       └ None
+    │                 └ Argumentos(referencia=None, operadoras=[], etapa=None, pasta_entrada=None, de_pasta=None, dry_run=False, pausar=False)
+    └ <function run at 0x000001972B66AAC0>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\src\main\process_handle.py", line 34, in run
+    controller.processar(
+    │          └ <function ProcessamentoController.processar at 0x000001974519FE20>
+    └ <src.controllers.processamento_controller.ProcessamentoController object at 0x000001974513CC20>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\src\controllers\processamento_controller.py", line 104, in processar
+    arquivos = self._outlook.capturar_arquivos()
+               │    └ <property object at 0x000001972B6702C0>
+               └ <src.controllers.processamento_controller.ProcessamentoController object at 0x000001974513CC20>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\src\controllers\outlook_controller.py", line 105, in capturar_arquivos
+    self.organizar_caixa_de_entrada(outlook)
+    │    │                          └ <comum.integracoes.outlook.OutlookService object at 0x000001974513D940>
+    │    └ <function OutlookController.organizar_caixa_de_entrada at 0x000001972C107740>
+    └ <src.controllers.outlook_controller.OutlookController object at 0x000001974513D550>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa1_captura\src\controllers\outlook_controller.py", line 66, in organizar_caixa_de_entrada
+    emails = outlook.fetch_emails_from_inbox()
+             │       └ <function OutlookService.fetch_emails_from_inbox at 0x000001972C106D40>
+             └ <comum.integracoes.outlook.OutlookService object at 0x000001974513D940>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\comum\integracoes\outlook.py", line 159, in fetch_emails_from_inbox
+    emails.append(self._build_email(item))
+    │      │      │    │            └ <COMObject <unknown>>
+    │      │      │    └ <function OutlookService._build_email at 0x000001972C1074C0>
+    │      │      └ <comum.integracoes.outlook.OutlookService object at 0x000001974513D940>
+    │      └ <method 'append' of 'list' objects>
+    └ [EmailMessage(entry_id='00000000A949F53E017BB44C86E46D56D2D6BB100700F25FC41A3584FC499D024E55DD250D4D00000000010C0000F25FC41A3...
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\comum\integracoes\outlook.py", line 485, in _build_email
+    attachments = self._build_attachments(item)
+                  │    │                  └ <COMObject <unknown>>
+                  │    └ <function OutlookService._build_attachments at 0x000001972C107560>
+                  └ <comum.integracoes.outlook.OutlookService object at 0x000001974513D940>
+
+> File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\comum\integracoes\outlook.py", line 517, in _build_attachments
+    attachments = item.Attachments
+                  └ <COMObject <unknown>>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\.venv\Lib\site-packages\win32com\client\dynamic.py", line 620, in __getattr__
+    ret = self._oleobj_.Invoke(retEntry.dispid, 0, invoke_type, 1)
+          │    │        │      │        │          └ 2
+          │    │        │      │        └ 63509
+          │    │        │      └ MapEntry(dispid=63509, desc=PyFUNCDESC(memid=63509, scodeArray=(), args=(), funckind=4, invkind=2, callconv=4, cParamsOpt=0, ...
+          │    │        └ <method 'Invoke' of 'PyIDispatch' objects>
+          │    └ <PyIDispatch at 0x00000197288CC350 with obj at 0x00000197435C6C18>
+          └ <COMObject <unknown>>
+
+pywintypes.com_error: (-2147467262, 'Não há suporte para esta interface', None, None)
+2026-08-13 14:12:08.014 | WARNING |src.controllers.outlook_controller:organizar_caixa_de_entrada:66 - Item ignorado ao ler a Caixa de Entrada (não é um e-mail válido?): (-2147467262, 'Não há suporte para esta interface', None, None)
+2026-08-13 14:12:12.131 | INFO    |src.controllers.outlook_controller:capturar_arquivos:105 - Organização da Caixa de Entrada: 82 e-mail(s) lido(s), 0 movido(s) para 'Detraf Despesas'.
+2026-08-13 14:12:16.486 | INFO    |src.controllers.processamento_controller:processar:104 - 72 e-mail(s) em 'Detraf Despesas'
+2026-08-13 14:12:16.560 | INFO    |src.controllers.processamento_controller:processar:104 - Resumo da captura — lidos: 72 | filtrados (ignorados): 0 | já rastreados (ignorados): 72 | falha no download: 0 | falha ao mover p/ PROCESSADOS: 0 | arquivos capturados: 0
+2026-08-13 14:12:16.562 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] E-mails lidos:            72
+2026-08-13 14:12:16.563 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] Ignorados pelo filtro:    0
+2026-08-13 14:12:16.563 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] Ignorados (já capturados):72
+2026-08-13 14:12:16.564 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] Falha no download:        0
+2026-08-13 14:12:16.564 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] Falha ao mover:           0
+2026-08-13 14:12:16.564 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] Arquivos baixados:        0
+2026-08-13 14:12:16.565 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] Pasta: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Entrada
+2026-08-13 14:12:16.565 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] ────────────────────────────────────────────────────────────
+2026-08-13 14:12:16.566 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] PRÓXIMA ETAPA: identificação da operadora e salvamento na árvore
+2026-08-13 14:12:16.566 | INFO    |src.main.process_handle:run:34 - [RPA 1] Etapa 2/2 — identificação da operadora e salvamento (HU-02/HU-03)
+2026-08-13 14:12:16.567 | INFO    |src.controllers.processamento_controller:processar:155 - Iniciando fluxo de processamento
+2026-08-13 14:12:16.567 | INFO    |src.controllers.processamento_controller:processar:155 - Competência: 202607 | Ano: 2026
+2026-08-13 14:12:16.568 | INFO    |src.controllers.processamento_controller:processar:155 - Total de arquivos a processar: 0
+2026-08-13 14:12:16.569 | INFO    |src.services.processamento_service:executar:153 - Resumo — Sucesso: 0 | Reprovados: 0 | Não identificados: 0 | Erros: 0
+2026-08-13 14:12:16.569 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Arquivos salvos:          0
+2026-08-13 14:12:16.570 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Reprovados na validação:  0
+2026-08-13 14:12:16.570 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Não identificados:        0
+2026-08-13 14:12:16.570 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Com erro:                 0
+2026-08-13 14:12:16.571 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Pasta: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras
+2026-08-13 14:12:16.572 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] ────────────────────────────────────────────────────────────
+2026-08-13 14:12:16.572 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Esta é a última etapa da execução.
+2026-08-13 14:12:16.572 | INFO    |__main__:main:94 - Aplicação finalizada
+2026-08-13 14:12:16.575 | INFO    |__main__:main:110 - [Diagnóstico] Etapas desta execução em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\logs\NALPE0881WP\rpa1_captura\diagnosticos\2026-08-13_14-12-04.txt].
+2026-08-13 14:12:16.575 | INFO    |__main__:<module>:118 - [RPA 1] Diagnóstico das etapas em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\logs\NALPE0881WP\rpa1_captura\diagnosticos\2026-08-13_14-12-04.txt]
