@@ -435,8 +435,17 @@ class OutlookService:
                 if folder.Name.lower() == name.lower():
                     logger.debug(f"Pasta '{name}' encontrada em '{parent_folder.Name}'.")
                     return folder
-        except Exception:
-            pass
+        except Exception as exc:
+            # 🔴 2026-08-13: isto engolia o erro e caía direto no "não
+            # encontrada — criando" — que então falhava porque a pasta JÁ
+            # EXISTIA (visto num caso real com 'PROCESSADOS'). O log agora
+            # mostra a causa real da falha ao listar, em vez de mascará-la
+            # como "não encontrada".
+            logger.warning(
+                f"Falha ao listar as subpastas de '{parent_folder.Name}' "
+                f"procurando '{name}': {exc}. Vou tentar criar mesmo assim — "
+                "se ela já existir, o Outlook deve recusar a criação."
+            )
         try:
             logger.info(f"Pasta '{name}' não encontrada em '{parent_folder.Name}' — criando.")
             return parent_folder.Folders.Add(name)

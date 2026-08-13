@@ -5136,3 +5136,13 @@ RuntimeError: conexão recusada
 2026-08-13 13:38:46.865 | INFO    |src.services.verificacao_relatorio:gravar_inconsistencias:260 - [HU-20] Impostos somados do relatório do AGI em 202507 — Vlr. CBS: R$ 88.00 | Vlr. IBS Estadual: R$ 55.00 | Vlr. IBS Municipal: R$ 22.00. **Informativo**: o Encontro de Contas não tem coluna de imposto, então não há comparação (pendência Q6). A V2 (¶367) trata os impostos como informativos até 2027.
 2026-08-13 13:38:46.883 | WARNING |test_verificacao_relatorio:test_a_planilha_de_divergencia_continua_saindo:452 - [HU-20] CLARO: AGI R$ 1,000.00 × EC R$ 1,000.00 — diferença de R$ 0.00.
 2026-08-13 13:38:46.883 | ERROR   |test_verificacao_relatorio:test_a_planilha_de_divergencia_continua_saindo:452 - [HU-20] 1 de 1 operadora(s) divergente(s) em 202507. Detalhe em [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-18\test_a_planilha_de_divergencia0\inconsistencias_202507_20260813_133846.xlsx].
+2026-08-13 14:09:18.081 | INFO    |comum.integracoes.outlook:send_email:341 - E-mail enviado para 'operadora@exemplo.com' — assunto 'Assunto', 0 anexo(s).
+2026-08-13 14:09:18.084 | INFO    |comum.integracoes.outlook:send_email:341 - E-mail enviado para '['a@x.com', 'b@x.com']' — assunto 's', 0 anexo(s).
+2026-08-13 14:09:18.087 | INFO    |comum.integracoes.outlook:send_email:341 - E-mail enviado para 'a@x.com' — assunto 's', 0 anexo(s).
+2026-08-13 14:09:18.090 | INFO    |comum.integracoes.outlook:send_email:341 - E-mail enviado para 'a@x.com' — assunto 's', 0 anexo(s).
+2026-08-13 14:09:18.117 | INFO    |tests.test_outlook_comum:test_anexa_cada_arquivo_antes_de_enviar:110 - E-mail enviado para 'a@x.com' — assunto 's', 2 anexo(s).
+2026-08-13 14:09:18.140 | INFO    |tests.test_outlook_comum:test_envio_sem_anexo_e_valido:154 - E-mail enviado para 'a@x.com' — assunto 's', 0 anexo(s).
+2026-08-13 14:09:18.145 | INFO    |tests.test_outlook_comum:test_rascunho_e_o_default:177 - Resposta salva como rascunho para o e-mail 'ABC123'.
+2026-08-13 14:09:18.149 | INFO    |tests.test_outlook_comum:test_envia_quando_pedido_explicitamente:183 - Resposta enviada para o e-mail 'ABC123'.
+2026-08-13 14:09:18.152 | INFO    |tests.test_outlook_comum:test_assunto_prefixado_e_corpo_preenchido:189 - Resposta salva como rascunho para o e-mail 'ABC123'.
+2026-08-13 14:09:18.156 | INFO    |comum.integracoes.outlook:create_reply_draft:311 - Resposta salva como rascunho para o e-mail 'ABC123'.
