@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portal Triad: Vivo - Produção</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../assets/css/producao.css">
+    <link rel="stylesheet" href="../assets/css/comum.css">
+    <script type="text/javascript" src="../assets/js/AIRAliases.js"></script>
+    <link rel="icon" type="image/x-icon" href="../assets/logo/favicon.ico">
+</head>
+
+<body class="fundo">
+    <!-- Nav -->
+    <ul>
+        <li>
+            <a class="mergin-icons" href="../../../../../index.html">
+                <img class="tri" src="../assets/logo/Triangulo.png" alt="Logo Triad Systems">
+            </a>
+        </li>
+        <li>
+            <a class="mergin-icons" href="../../../../../index.html">
+                <img class="tri" src="../assets/logo/back.png" alt="Voltar para HOME">
+            </a>
+        </li>
+        <li style="float: right">
+            <a class="mergin-icons" href="javascript:void(0);">
+                <img class="vivo" src="../assets/logo/v_1.png" alt="Logo Vivo">
+            </a>
+        </li>
+        <li style="float: right;">
+            <p class="nm-page">PRODUÇÃO</p>
+        </li>
+    </ul>
+
+    <!-- CARDS -->
+
+    <!-- RMG -->
+    <div class="box-1">
+        <div class="card hovercard">
+            <!--ICONE -->
+            <div class="avatar">
+                <img class="tm-image" src="../assets/logo/RMG.png" alt="Logo RMG">
+            </div>
+            <div class="card-body"><br></div>
+            <!-- BOTAO -->
+            <div class="card-footer">
+                <a href="https://brtlvlty0189sl:14100/portal/Portal.html" target="_blank"><button
+                        class="btn homo">ACESSAR</button></a>
+            </div>
+        </div>
+    </div>
+    <!-- RMG DATALOADER -->
+    <div class="box-2">
+        <div class="col-sm-3">
+            <div class="card hovercard">
+                <!--ICONE -->
+                <div class="avatar">
+                    <img class="tm-image" src="../assets/logo/RMG.png" alt="Logo AGI">
+                    <p class="nm-sistema-rmg">DATALOADER</p>
+                </div>
+                <div class="card-body"><br></div>
+                <!-- BOTAO -->
+                <div class="card-footer">
+                    <button class="btn homo"
+                        onclick="air.navigateToURL(new air.URLRequest('https://brtlvlts0189sl:14110/dataloader'), '');">
+                        ACESSAR
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- AGI -->
+    <div class="box-3">
+        <div class="col-sm-3">
+            <div class="card hovercard">
+                <!--ICONE -->
+                <div class="avatar">
+                    <img class="tm-image" src="../assets/logo/AGI.png" alt="Logo AGI">
+                </div>
+                <div class="card-body"><br></div>
+                <!-- BOTAO -->
+                <div class="card-footer">
+                    <a href="http://10.238.6.120:7010/Agi/" target="_blank"><button
+                            class="btn homo">ACESSAR</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+	 <!-- AGI GLVA -->
+    <div class="box-3">
+        <div class="col-sm-3">
+            <div class="card hovercard">
+                <!--ICONE -->
+                <div class="avatar">
+                    <img class="tm-image" src="../assets/logo/AGI_GLVA.png" alt="Logo AGI GLVA">
+                </div>
+                <div class="card-body"><br></div>
+                <!-- BOTAO -->
+                <div class="card-footer">
+                    <a href="http://10.238.6.120:7010/Agi_Garliava/" target="_blank"><button
+                            class="btn homo">ACESSAR</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- TVAS  -->
+    <div class="box-4">
+        <div class="col-sm-3">
+            <div class="card hovercard">
+                <!--ICONE -->
+                <div class="avatar">
+                    <img class="tm-image" src="../assets/logo/T_VAs.png" alt="Logo TVAS">
+                </div>
+                <div class="card-body"><br></div>
+                <!-- BOTAO -->
+                <div class="card-footer">
+                    <a href="http://10.238.58.43/login.jsp" target="_blank"><button
+                            class="btn homo">ACESSAR</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- GCOB ENTRANTE -->
+    <div class="box-5">
+        <div class="col-sm-3">
+            <div class="card hovercard">
+                <!--ICONE -->
+                <div class="avatar">
+                    <img class="tm-image" src="../assets/logo/entrante.png" alt="Logo GCOB Entrante">
+                    <p class="nm-sistema-gcob">ENTRANTE</p>
+                </div>
+                <div class="card-body"><br></div>
+                <!-- BOTAO -->
+                <div class="card-footer">
+                    <a href="http://10.238.7.60:7010/entrante/" target="_blank"><button
+                            class="btn homo">ACESSAR</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- GCOB SAINTE -->
+    <div class="box-6">
+        <div class="col-sm-3">
+            <div class="card hovercard">
+                <!--ICONE -->
+                <div class="avatar">
+                    <img class="tm-image" src="../assets/logo/sainte.png" alt="Logo GCOB Sainte">
+                    <p class="nm-sistema-gcob">SAINTE</p>
+                </div>
+                <div class="card-body"><br></div>
+                <!-- BOTAO -->
+                <div class="card-footer">
+                    <a href="http://10.238.7.60:7020/sainte/" target="_blank"><button
+                            class="btn homo">ACESSAR</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

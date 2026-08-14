@@ -1,0 +1,73 @@
+======================================================================
+EXECUÇÃO
+======================================================================
+robô:       rpa3_contestacao_agi_ec
+referência: (mês corrente -1)
+início:     2026-08-14 11:14:12
+duração:    115.1s
+desfecho:   OK
+parâmetro:  parâmetros: PAUSA entre etapas ligada
+
+======================================================================
+AMBIENTE
+======================================================================
+robô: rpa3_contestacao_agi_ec
+modo: DEV  (de ENV)
+log: nível INFO (de LOG_LEVEL), diagnose ligado
+competência: 202607  (mês anterior ao corrente)
+banco: SQLite [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db] (de CAMINHO_SQLITE)
+AGI: ambiente [producao] host [10.238.6.120] (de AGI_AMBIENTE) | executável [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
+EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: LIGADO | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado | download SFTP: LIGADO
+
+======================================================================
+ETAPA 1/3: arranque   [ok]   1.4s
+======================================================================
+produziu:
+  módulos carregados, banco resolvido
+
+======================================================================
+ETAPA 2/3: artefatos   [ok]   4.8s
+======================================================================
+entrada:
+  operadoras = Adylnet Internet Provider, Agil Telecom, ALGAR, Atlanet Telecomunicacoes, BTT Telecomunicacoes S.A, Desktop Sigmanet, GGNET Telecom, Golden Line Telecom, Invista Net, Itelco Telecom, LH Telecomunicacoes LTDA, Megalink Servicos, Megatelecom Telecomunicacoes S.A, Nova Tecnologia e Telecomunicacoes, Opcao Telecom, Predialnet, Sistel Fibra, T1 Telecom, Tri Telecom, UFINET BRASIL, Unifique, Vonare
+  referencia = 202607
+produziu:
+  Adylnet Internet Provider: gerou artefato | pulos: sem expectativa Vivo; _EXP e carta sem expectativa Vivo
+  Agil Telecom: gerou artefato | pulos: sem expectativa Vivo; _EXP e carta sem expectativa Vivo
+  ALGAR: gerou artefato | pulos: sem expectativa Vivo; _EXP e carta sem expectativa Vivo
+  Atlanet Telecomunicacoes: gerou artefato | pulos: sem expectativa Vivo; _EXP e carta sem expectativa Vivo
+  BTT Telecomunicacoes S.A: gerou artefato | pulos: sem expectativa Vivo; _EXP e carta sem expectativa Vivo
+  Desktop Sigmanet: gerou artefato | pulos: sem expectativa Vivo; _EXP e carta sem expectativa Vivo
+  GGNET Telecom: gerou artefato | pulos: sem expectativa Vivo; _EXP e carta sem expectativa Vivo
+  Golden Line Telecom: gerou artefato | pulos: sem expectativa Vivo; _EXP e carta sem expectativa Vivo
+  Invista Net: gerou artefato | pulos: sem expectativa Vivo; _EXP e carta sem expectativa Vivo
+  Itelco Telecom: gerou artefato | pulos: sem expectativa Vivo; _EXP e carta sem expectativa Vivo
+  LH Telecomunicacoes LTDA: gerou artefato | pulos: sem expectativa Vivo; _EXP e carta sem expectativa Vivo
+  Megalink Servicos: gerou artefato | pulos: sem expectativa Vivo; _EXP e carta sem expectativa Vivo
+  Megatelecom Telecomunicacoes S.A: gerou artefato | pulos: sem expectativa Vivo; _EXP e carta sem expectativa Vivo
+  Nova Tecnologia e Telecomunicacoes: gerou artefato | pulos: sem expectativa Vivo; _EXP e carta sem expectativa Vivo
+  Opcao Telecom: gerou artefato | pulos: sem expectativa Vivo; _EXP e carta sem expectativa Vivo
+  Predialnet: gerou artefato | pulos: sem expectativa Vivo; _EXP e carta sem expectativa Vivo
+  Sistel Fibra: gerou artefato | pulos: sem expectativa Vivo; _EXP e carta sem expectativa Vivo
+  T1 Telecom: gerou artefato | pulos: sem expectativa Vivo; _EXP e carta sem expectativa Vivo
+  Tri Telecom: gerou artefato | pulos: sem expectativa Vivo; _EXP e carta sem expectativa Vivo
+  UFINET BRASIL: gerou artefato | pulos: sem expectativa Vivo; _EXP e carta sem expectativa Vivo
+  Unifique: gerou artefato | pulos: sem expectativa Vivo; _EXP e carta sem expectativa Vivo
+  Vonare: gerou artefato | pulos: sem expectativa Vivo; _EXP e carta sem expectativa Vivo
+
+======================================================================
+ETAPA 3/3: carga   [ok]   105.7s
+======================================================================
+entrada:
+  operadoras com artefato = Adylnet Internet Provider, Agil Telecom, ALGAR, Atlanet Telecomunicacoes, BTT Telecomunicacoes S.A, Desktop Sigmanet, GGNET Telecom, Golden Line Telecom, Invista Net, Itelco Telecom, LH Telecomunicacoes LTDA, Megalink Servicos, Megatelecom Telecomunicacoes S.A, Nova Tecnologia e Telecomunicacoes, Opcao Telecom, Predialnet, Sistel Fibra, T1 Telecom, Tri Telecom, UFINET BRASIL, Unifique, Vonare
+  PERMITIR_UPLOAD_AGI = True
+  DIRETORIO_AGI = C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\aplicacao_agi\Portal AIR\portal_air_vivo.exe
+produziu: (nada — a etapa rodou sem gerar resultado)
+
+======================================================================
+LOG COMPLETO
+======================================================================
+C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\logs
+
+Este arquivo é o resumo por etapa. O log tem a sequência completa,
+linha a linha, de tudo o que a execução fez.

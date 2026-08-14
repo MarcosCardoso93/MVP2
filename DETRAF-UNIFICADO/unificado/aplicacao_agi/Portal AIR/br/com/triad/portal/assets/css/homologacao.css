@@ -1,0 +1,50 @@
+.fundo {
+    background-image: url("../logo/fundo_hml.png");
+    background-size: 120%;
+}
+
+.tm-image-hml {
+    padding: 0;
+}
+
+.box-1 {
+    position: fixed;
+    top: 25%;
+    left: 10%;
+}
+
+.box-2 {
+    position: fixed;
+    top: 25%;
+    left: 28%;
+}
+
+.box-3 {
+    position: fixed;
+    top: 25%;
+    left: 47%;
+}
+
+.box-4 {
+    position: fixed;
+    top: 25%;
+    left: 67%;
+}
+
+.box-5 {
+    position: fixed;
+    top: 65%;
+    left: 8.5%;
+}
+
+.box-6 {
+    position: fixed;
+    top: 65%;
+    left: 28%;
+}
+
+.box-7 {
+    position: fixed;
+    top: 65%;
+    left: 47%;
+}

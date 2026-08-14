@@ -1,315 +1,636 @@
+2026-08-14 11:39:12.127 | INFO    |src.controllers.geracao_agi_controller:atualizar_despesa_contestacao:1066 - [STEP] Finalizando: preparar_atualizacoes_despesa_contestacao | Tempo gasto: 0.02s
+2026-08-14 11:39:12.128 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] A tabela 'tbl_rpa_log_detraf_despesa_contestacao' não tem a(s) coluna(s) vb_contestacao — NÃO gravada(s). As demais seguem normalmente. Um ALTER TABLE resolve; ver pendencias-para-o-cliente.md (Q24).
+2026-08-14 11:39:12.135 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'E39', 'eot_tbra': '045', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TU-RL'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:12.143 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'E39', 'eot_tbra': '948', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TU-RL'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:12.144 | INFO    |comum.dados.repositorio_cache:recarregar_cache_local:375 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-14 11:39:12.149 | INFO    |comum.dados.repositorio_cache:recarregar_cache_local:375 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 0 | Colunas: 19
+2026-08-14 11:39:12.149 | INFO    |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] 0 linha(s) atualizada(s), 2 chave(s) ausente(s).
+2026-08-14 11:39:12.150 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:595 - [STEP] Finalizando: GeracaoAgiController.atualizar_despesa_contestacao | Tempo gasto: 0.04s
+2026-08-14 11:39:12.151 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:633 - [STEP] Iniciando: montar_linhas_ext
+2026-08-14 11:39:12.164 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=E39, tbra=045, referencia=202607, trafego=202607, remuneracao=TU-RL] — tratado como sem contestação.
+2026-08-14 11:39:12.171 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=nan, tbra=nan, referencia=nan, trafego=nan, remuneracao=nan] — tratado como sem contestação.
+2026-08-14 11:39:12.177 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=E39, tbra=948, referencia=202607, trafego=202607, remuneracao=TU-RL] — tratado como sem contestação.
+2026-08-14 11:39:12.181 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-12 EXT] 11 linha(s) montada(s).
+2026-08-14 11:39:12.181 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:633 - [STEP] Finalizando: montar_linhas_ext | Tempo gasto: 0.03s
+2026-08-14 11:39:12.182 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:639 - [STEP] Iniciando: gerar_arquivo_ext
+2026-08-14 11:39:12.200 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-12 EXT] Arquivo gravado em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras\T1 Telecom\2026\202607\AGI\DE_AGI_D_202607_TBRA_X_T1 TELECOM_EXT.xlsx].
+2026-08-14 11:39:12.201 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:639 - [STEP] Finalizando: gerar_arquivo_ext | Tempo gasto: 0.02s
+2026-08-14 11:39:12.202 | WARNING |src.controllers.geracao_agi_controller:_gerar_para_operadora:606 - [RPA 3] T1 Telecom: sem expectativa Vivo — _EXP e carta não serão gerados. Confira a pasta 'Detrafs Enviados' da operadora.
+2026-08-14 11:39:12.202 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:617 - [STEP] Iniciando: GeracaoAgiController.gerar_cont_proc
+2026-08-14 11:39:12.203 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1030 - [STEP] Iniciando: montar_linhas_cont_proc
+2026-08-14 11:39:12.204 | INFO    |src.services.geracao_cont_proc:montar_linhas_cont_proc:224 - [STEP] Iniciando: selecionar_linhas_contestadas
+2026-08-14 11:39:12.211 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=E39, tbra=045, referencia=202607, trafego=202607, remuneracao=TU-RL] — tratado como sem contestação.
+2026-08-14 11:39:12.216 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=E39, tbra=948, referencia=202607, trafego=202607, remuneracao=TU-RL] — tratado como sem contestação.
+2026-08-14 11:39:12.219 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-16 CONT_PROC] Nenhuma combinação com sinal do analista (todas 'sem contestação' apesar da variação).
+2026-08-14 11:39:12.221 | INFO    |src.services.geracao_cont_proc:montar_linhas_cont_proc:224 - [STEP] Finalizando: selecionar_linhas_contestadas | Tempo gasto: 0.02s
+2026-08-14 11:39:12.224 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1030 - [STEP] Finalizando: montar_linhas_cont_proc | Tempo gasto: 0.02s
+2026-08-14 11:39:12.224 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1036 - [STEP] Iniciando: gerar_arquivo_cont_proc
+2026-08-14 11:39:12.225 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-16 CONT_PROC] Nada a gravar (nenhuma linha a contestar).
+2026-08-14 11:39:12.226 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1036 - [STEP] Finalizando: gerar_arquivo_cont_proc | Tempo gasto: 0.0s
+2026-08-14 11:39:12.226 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:617 - [STEP] Finalizando: GeracaoAgiController.gerar_cont_proc | Tempo gasto: 0.02s
+2026-08-14 11:39:12.227 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:558 - [STEP] Iniciando: consolidar_detrafs_operadora
+2026-08-14 11:39:12.228 | INFO    |src.services.consolidacao_contestacao:consolidar_detrafs_operadora:174 - [Consolidação] 2 arquivo(s) encontrado(s) em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras\Tri Telecom\2026\202607\Detrafs Recebidos].
+2026-08-14 11:39:12.233 | INFO    |src.services.consolidacao_contestacao:consolidar_detrafs_operadora:177 - [Consolidação] [202607-C-DETRAF-LC-TRIADE-VIVOMOVEL.csv]: 3 linha(s) -> 3 após remover totais.
+2026-08-14 11:39:12.239 | INFO    |src.services.consolidacao_contestacao:consolidar_detrafs_operadora:177 - [Consolidação] [202607-C-DETRAF-LD-TRIADE-VIVOMOVEL.csv]: 4 linha(s) -> 4 após remover totais.
+2026-08-14 11:39:12.240 | INFO    |src.services.consolidacao_contestacao:consolidar_detrafs_operadora:177 - [Consolidação] Consolidado: 7 linha(s) de 2 arquivo(s).
+2026-08-14 11:39:12.241 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:558 - [STEP] Finalizando: consolidar_detrafs_operadora | Tempo gasto: 0.01s
+2026-08-14 11:39:12.242 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:574 - [STEP] Iniciando: consolidar_expectativa_vivo
+2026-08-14 11:39:12.243 | WARNING |src.services.consolidacao_contestacao:consolidar_expectativa_vivo:207 - Pasta de Detrafs inexistente: [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras\Tri Telecom\2026\202607\Detrafs Enviados]
+2026-08-14 11:39:12.244 | WARNING |comum.utils.decoradores:wrapper:22 - [Consolidação] Nenhum arquivo de expectativa (_D_) em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras\Tri Telecom\2026\202607\Detrafs Enviados].
+2026-08-14 11:39:12.244 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:574 - [STEP] Finalizando: consolidar_expectativa_vivo | Tempo gasto: 0.0s
+2026-08-14 11:39:12.245 | WARNING |src.controllers.geracao_agi_controller:_gerar_todos:269 - [RPA 3] Tri Telecom: sem expectativa Vivo em 202607; a comparação sairá com o lado da Vivo zerado.
+2026-08-14 11:39:12.245 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:586 - [STEP] Iniciando: montar_contest
+2026-08-14 11:39:12.248 | INFO    |src.services.consolidacao_contestacao:montar_contest:385 - [Consolidação] 2 linha(s) com descritor não mapeado — ignoradas na aba Contest (AI/09 §7).
+2026-08-14 11:39:12.272 | INFO    |comum.utils.decoradores:wrapper:22 - [Consolidação] Contest: 2 combinação(ões) analisada(s).
+2026-08-14 11:39:12.272 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:586 - [STEP] Finalizando: montar_contest | Tempo gasto: 0.03s
+2026-08-14 11:39:12.273 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:595 - [STEP] Iniciando: GeracaoAgiController.atualizar_despesa_contestacao
+2026-08-14 11:39:12.273 | INFO    |src.controllers.geracao_agi_controller:atualizar_despesa_contestacao:1066 - [STEP] Iniciando: preparar_atualizacoes_despesa_contestacao
+2026-08-14 11:39:12.279 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=192, tbra=050, referencia=202607, trafego=202607, remuneracao=TU-RL] — tratado como sem contestação.
+2026-08-14 11:39:12.288 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=192, tbra=200, referencia=202607, trafego=202607, remuneracao=TU-RL] — tratado como sem contestação.
+2026-08-14 11:39:12.291 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-19 Despesa Contestação] 2 atualização(ões) preparada(s).
+2026-08-14 11:39:12.292 | INFO    |src.controllers.geracao_agi_controller:atualizar_despesa_contestacao:1066 - [STEP] Finalizando: preparar_atualizacoes_despesa_contestacao | Tempo gasto: 0.02s
+2026-08-14 11:39:12.293 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] A tabela 'tbl_rpa_log_detraf_despesa_contestacao' não tem a(s) coluna(s) vb_contestacao — NÃO gravada(s). As demais seguem normalmente. Um ALTER TABLE resolve; ver pendencias-para-o-cliente.md (Q24).
+2026-08-14 11:39:12.299 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': '192', 'eot_tbra': '050', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TU-RL'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:12.306 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': '192', 'eot_tbra': '200', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TU-RL'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:12.307 | INFO    |comum.dados.repositorio_cache:recarregar_cache_local:375 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-14 11:39:12.311 | INFO    |comum.dados.repositorio_cache:recarregar_cache_local:375 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 0 | Colunas: 19
+2026-08-14 11:39:12.312 | INFO    |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] 0 linha(s) atualizada(s), 2 chave(s) ausente(s).
+2026-08-14 11:39:12.313 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:595 - [STEP] Finalizando: GeracaoAgiController.atualizar_despesa_contestacao | Tempo gasto: 0.04s
+2026-08-14 11:39:12.313 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:633 - [STEP] Iniciando: montar_linhas_ext
+2026-08-14 11:39:12.325 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=192, tbra=050, referencia=202607, trafego=202607, remuneracao=TU-RL] — tratado como sem contestação.
+2026-08-14 11:39:12.331 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=nan, tbra=nan, referencia=nan, trafego=nan, remuneracao=nan] — tratado como sem contestação.
+2026-08-14 11:39:12.338 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=192, tbra=200, referencia=202607, trafego=202607, remuneracao=TU-RL] — tratado como sem contestação.
+2026-08-14 11:39:12.343 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-12 EXT] 7 linha(s) montada(s).
+2026-08-14 11:39:12.344 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:633 - [STEP] Finalizando: montar_linhas_ext | Tempo gasto: 0.03s
+2026-08-14 11:39:12.345 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:639 - [STEP] Iniciando: gerar_arquivo_ext
+2026-08-14 11:39:12.362 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-12 EXT] Arquivo gravado em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras\Tri Telecom\2026\202607\AGI\DE_AGI_D_202607_TBRA_X_TRI TELECOM_EXT.xlsx].
+2026-08-14 11:39:12.363 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:639 - [STEP] Finalizando: gerar_arquivo_ext | Tempo gasto: 0.02s
+2026-08-14 11:39:12.363 | WARNING |src.controllers.geracao_agi_controller:_gerar_para_operadora:606 - [RPA 3] Tri Telecom: sem expectativa Vivo — _EXP e carta não serão gerados. Confira a pasta 'Detrafs Enviados' da operadora.
+2026-08-14 11:39:12.364 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:617 - [STEP] Iniciando: GeracaoAgiController.gerar_cont_proc
+2026-08-14 11:39:12.364 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1030 - [STEP] Iniciando: montar_linhas_cont_proc
+2026-08-14 11:39:12.365 | INFO    |src.services.geracao_cont_proc:montar_linhas_cont_proc:224 - [STEP] Iniciando: selecionar_linhas_contestadas
+2026-08-14 11:39:12.376 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=192, tbra=050, referencia=202607, trafego=202607, remuneracao=TU-RL] — tratado como sem contestação.
+2026-08-14 11:39:12.383 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=192, tbra=200, referencia=202607, trafego=202607, remuneracao=TU-RL] — tratado como sem contestação.
+2026-08-14 11:39:12.385 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-16 CONT_PROC] Nenhuma combinação com sinal do analista (todas 'sem contestação' apesar da variação).
+2026-08-14 11:39:12.388 | INFO    |src.services.geracao_cont_proc:montar_linhas_cont_proc:224 - [STEP] Finalizando: selecionar_linhas_contestadas | Tempo gasto: 0.02s
+2026-08-14 11:39:12.390 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1030 - [STEP] Finalizando: montar_linhas_cont_proc | Tempo gasto: 0.03s
+2026-08-14 11:39:12.391 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1036 - [STEP] Iniciando: gerar_arquivo_cont_proc
+2026-08-14 11:39:12.391 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-16 CONT_PROC] Nada a gravar (nenhuma linha a contestar).
+2026-08-14 11:39:12.392 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1036 - [STEP] Finalizando: gerar_arquivo_cont_proc | Tempo gasto: 0.0s
+2026-08-14 11:39:12.393 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:617 - [STEP] Finalizando: GeracaoAgiController.gerar_cont_proc | Tempo gasto: 0.03s
+2026-08-14 11:39:12.393 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:558 - [STEP] Iniciando: consolidar_detrafs_operadora
+2026-08-14 11:39:12.395 | INFO    |src.services.consolidacao_contestacao:consolidar_detrafs_operadora:174 - [Consolidação] 1 arquivo(s) encontrado(s) em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras\UFINET BRASIL\2026\202607\Detrafs Recebidos].
+2026-08-14 11:39:12.413 | INFO    |src.services.consolidacao_contestacao:consolidar_detrafs_operadora:177 - [Consolidação] [Declaração de Tráfego UFINET x VIVO LDN 07-2026.xlsx]: 5 linha(s) -> 5 após remover totais.
+2026-08-14 11:39:12.414 | INFO    |src.services.consolidacao_contestacao:consolidar_detrafs_operadora:177 - [Consolidação] Consolidado: 5 linha(s) de 1 arquivo(s).
+2026-08-14 11:39:12.415 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:558 - [STEP] Finalizando: consolidar_detrafs_operadora | Tempo gasto: 0.02s
+2026-08-14 11:39:12.415 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:574 - [STEP] Iniciando: consolidar_expectativa_vivo
+2026-08-14 11:39:12.417 | WARNING |src.services.consolidacao_contestacao:consolidar_expectativa_vivo:207 - Pasta de Detrafs inexistente: [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras\UFINET BRASIL\2026\202607\Detrafs Enviados]
+2026-08-14 11:39:12.417 | WARNING |comum.utils.decoradores:wrapper:22 - [Consolidação] Nenhum arquivo de expectativa (_D_) em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras\UFINET BRASIL\2026\202607\Detrafs Enviados].
+2026-08-14 11:39:12.418 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:574 - [STEP] Finalizando: consolidar_expectativa_vivo | Tempo gasto: 0.0s
+2026-08-14 11:39:12.419 | WARNING |src.controllers.geracao_agi_controller:_gerar_todos:269 - [RPA 3] UFINET BRASIL: sem expectativa Vivo em 202607; a comparação sairá com o lado da Vivo zerado.
+2026-08-14 11:39:12.420 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:586 - [STEP] Iniciando: montar_contest
+2026-08-14 11:39:12.423 | INFO    |src.services.consolidacao_contestacao:montar_contest:385 - [Consolidação] 1 linha(s) com descritor não mapeado — ignoradas na aba Contest (AI/09 §7).
+2026-08-14 11:39:12.441 | INFO    |comum.utils.decoradores:wrapper:22 - [Consolidação] Contest: 1 combinação(ões) analisada(s).
+2026-08-14 11:39:12.442 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:586 - [STEP] Finalizando: montar_contest | Tempo gasto: 0.02s
+2026-08-14 11:39:12.442 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:595 - [STEP] Iniciando: GeracaoAgiController.atualizar_despesa_contestacao
+2026-08-14 11:39:12.443 | INFO    |src.controllers.geracao_agi_controller:atualizar_despesa_contestacao:1066 - [STEP] Iniciando: preparar_atualizacoes_despesa_contestacao
+2026-08-14 11:39:12.448 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=125, tbra=011, referencia=202607, trafego=202607, remuneracao=TU-RL] — tratado como sem contestação.
+2026-08-14 11:39:12.451 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-19 Despesa Contestação] 1 atualização(ões) preparada(s).
+2026-08-14 11:39:12.451 | INFO    |src.controllers.geracao_agi_controller:atualizar_despesa_contestacao:1066 - [STEP] Finalizando: preparar_atualizacoes_despesa_contestacao | Tempo gasto: 0.01s
+2026-08-14 11:39:12.452 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] A tabela 'tbl_rpa_log_detraf_despesa_contestacao' não tem a(s) coluna(s) vb_contestacao — NÃO gravada(s). As demais seguem normalmente. Um ALTER TABLE resolve; ver pendencias-para-o-cliente.md (Q24).
+2026-08-14 11:39:12.460 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': '125', 'eot_tbra': '011', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TU-RL'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:12.460 | INFO    |comum.dados.repositorio_cache:recarregar_cache_local:375 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-14 11:39:12.464 | INFO    |comum.dados.repositorio_cache:recarregar_cache_local:375 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 0 | Colunas: 19
+2026-08-14 11:39:12.465 | INFO    |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] 0 linha(s) atualizada(s), 1 chave(s) ausente(s).
+2026-08-14 11:39:12.465 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:595 - [STEP] Finalizando: GeracaoAgiController.atualizar_despesa_contestacao | Tempo gasto: 0.02s
+2026-08-14 11:39:12.466 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:633 - [STEP] Iniciando: montar_linhas_ext
+2026-08-14 11:39:12.478 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=125, tbra=011, referencia=202607, trafego=202607, remuneracao=TU-RL] — tratado como sem contestação.
+2026-08-14 11:39:12.483 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=nan, tbra=nan, referencia=nan, trafego=nan, remuneracao=nan] — tratado como sem contestação.
+2026-08-14 11:39:12.486 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-12 EXT] 5 linha(s) montada(s).
+2026-08-14 11:39:12.487 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:633 - [STEP] Finalizando: montar_linhas_ext | Tempo gasto: 0.02s
+2026-08-14 11:39:12.488 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:639 - [STEP] Iniciando: gerar_arquivo_ext
+2026-08-14 11:39:12.500 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-12 EXT] Arquivo gravado em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras\UFINET BRASIL\2026\202607\AGI\DE_AGI_D_202607_TBRA_X_UFINET BRASIL_EXT.xlsx].
+2026-08-14 11:39:12.500 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:639 - [STEP] Finalizando: gerar_arquivo_ext | Tempo gasto: 0.01s
+2026-08-14 11:39:12.501 | WARNING |src.controllers.geracao_agi_controller:_gerar_para_operadora:606 - [RPA 3] UFINET BRASIL: sem expectativa Vivo — _EXP e carta não serão gerados. Confira a pasta 'Detrafs Enviados' da operadora.
+2026-08-14 11:39:12.501 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:617 - [STEP] Iniciando: GeracaoAgiController.gerar_cont_proc
+2026-08-14 11:39:12.502 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1030 - [STEP] Iniciando: montar_linhas_cont_proc
+2026-08-14 11:39:12.503 | INFO    |src.services.geracao_cont_proc:montar_linhas_cont_proc:224 - [STEP] Iniciando: selecionar_linhas_contestadas
+2026-08-14 11:39:12.511 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=125, tbra=011, referencia=202607, trafego=202607, remuneracao=TU-RL] — tratado como sem contestação.
+2026-08-14 11:39:12.514 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-16 CONT_PROC] Nenhuma combinação com sinal do analista (todas 'sem contestação' apesar da variação).
+2026-08-14 11:39:12.515 | INFO    |src.services.geracao_cont_proc:montar_linhas_cont_proc:224 - [STEP] Finalizando: selecionar_linhas_contestadas | Tempo gasto: 0.01s
+2026-08-14 11:39:12.517 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1030 - [STEP] Finalizando: montar_linhas_cont_proc | Tempo gasto: 0.01s
+2026-08-14 11:39:12.518 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1036 - [STEP] Iniciando: gerar_arquivo_cont_proc
+2026-08-14 11:39:12.518 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-16 CONT_PROC] Nada a gravar (nenhuma linha a contestar).
+2026-08-14 11:39:12.519 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1036 - [STEP] Finalizando: gerar_arquivo_cont_proc | Tempo gasto: 0.0s
+2026-08-14 11:39:12.520 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:617 - [STEP] Finalizando: GeracaoAgiController.gerar_cont_proc | Tempo gasto: 0.02s
+2026-08-14 11:39:12.521 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:558 - [STEP] Iniciando: consolidar_detrafs_operadora
+2026-08-14 11:39:12.522 | INFO    |src.services.consolidacao_contestacao:consolidar_detrafs_operadora:174 - [Consolidação] 1 arquivo(s) encontrado(s) em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras\Unifique\2026\202607\Detrafs Recebidos].
+2026-08-14 11:39:12.544 | INFO    |src.services.consolidacao_contestacao:consolidar_detrafs_operadora:177 - [Consolidação] [202607 Detraf C SMS SMP Unifique X SMP Telefonica Brasil.xlsx]: 73 linha(s) -> 72 após remover totais.
+2026-08-14 11:39:12.545 | INFO    |src.services.consolidacao_contestacao:consolidar_detrafs_operadora:177 - [Consolidação] Consolidado: 72 linha(s) de 1 arquivo(s).
+2026-08-14 11:39:12.545 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:558 - [STEP] Finalizando: consolidar_detrafs_operadora | Tempo gasto: 0.02s
+2026-08-14 11:39:12.546 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:574 - [STEP] Iniciando: consolidar_expectativa_vivo
+2026-08-14 11:39:12.547 | WARNING |src.services.consolidacao_contestacao:consolidar_expectativa_vivo:207 - Pasta de Detrafs inexistente: [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras\Unifique\2026\202607\Detrafs Enviados]
+2026-08-14 11:39:12.548 | WARNING |comum.utils.decoradores:wrapper:22 - [Consolidação] Nenhum arquivo de expectativa (_D_) em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras\Unifique\2026\202607\Detrafs Enviados].
+2026-08-14 11:39:12.548 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:574 - [STEP] Finalizando: consolidar_expectativa_vivo | Tempo gasto: 0.0s
+2026-08-14 11:39:12.549 | WARNING |src.controllers.geracao_agi_controller:_gerar_todos:269 - [RPA 3] Unifique: sem expectativa Vivo em 202607; a comparação sairá com o lado da Vivo zerado.
+2026-08-14 11:39:12.549 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:586 - [STEP] Iniciando: montar_contest
+2026-08-14 11:39:12.551 | INFO    |src.services.consolidacao_contestacao:montar_contest:385 - [Consolidação] 1 linha(s) com descritor não mapeado — ignoradas na aba Contest (AI/09 §7).
+2026-08-14 11:39:12.568 | INFO    |comum.utils.decoradores:wrapper:22 - [Consolidação] Contest: 53 combinação(ões) analisada(s).
+2026-08-14 11:39:12.568 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:586 - [STEP] Finalizando: montar_contest | Tempo gasto: 0.02s
+2026-08-14 11:39:12.569 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:595 - [STEP] Iniciando: GeracaoAgiController.atualizar_despesa_contestacao
+2026-08-14 11:39:12.569 | INFO    |src.controllers.geracao_agi_controller:atualizar_despesa_contestacao:1066 - [STEP] Iniciando: preparar_atualizacoes_despesa_contestacao
+2026-08-14 11:39:12.576 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L05, tbra=010, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.580 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L05, tbra=020, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.586 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L05, tbra=026, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.591 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L05, tbra=003, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.596 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L05, tbra=030, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.601 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L05, tbra=033, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.608 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L05, tbra=036, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.614 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L05, tbra=037, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.620 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L05, tbra=038, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.626 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L05, tbra=039, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.632 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L05, tbra=004, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.638 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L05, tbra=044, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.643 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L05, tbra=045, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.647 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L05, tbra=452, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.653 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L05, tbra=453, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.660 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L05, tbra=454, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.665 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L05, tbra=455, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.672 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L05, tbra=456, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.679 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L05, tbra=457, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.684 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L05, tbra=050, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.692 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L05, tbra=060, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.697 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L05, tbra=064, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.704 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L05, tbra=066, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.710 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L05, tbra=068, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.716 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L05, tbra=070, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.723 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L05, tbra=078, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.729 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L06, tbra=010, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.737 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L06, tbra=020, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.742 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L06, tbra=026, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.748 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L06, tbra=030, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.756 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L06, tbra=033, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.762 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L06, tbra=036, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.769 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L06, tbra=037, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.775 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L06, tbra=039, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.781 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L06, tbra=044, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.789 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L06, tbra=045, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.793 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L06, tbra=453, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.798 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L06, tbra=455, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.802 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L06, tbra=456, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.808 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L06, tbra=457, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.813 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L06, tbra=050, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.819 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L06, tbra=060, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.825 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L06, tbra=064, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.830 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L06, tbra=066, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.835 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L06, tbra=070, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.841 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L07, tbra=010, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.846 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L07, tbra=020, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.851 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L07, tbra=033, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.857 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L07, tbra=044, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.861 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L07, tbra=045, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.866 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=L07, tbra=070, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.873 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=P56, tbra=010, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.879 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=P56, tbra=455, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:12.881 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-19 Despesa Contestação] 53 atualização(ões) preparada(s).
+2026-08-14 11:39:12.882 | INFO    |src.controllers.geracao_agi_controller:atualizar_despesa_contestacao:1066 - [STEP] Finalizando: preparar_atualizacoes_despesa_contestacao | Tempo gasto: 0.31s
+2026-08-14 11:39:12.882 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] A tabela 'tbl_rpa_log_detraf_despesa_contestacao' não tem a(s) coluna(s) vb_contestacao — NÃO gravada(s). As demais seguem normalmente. Um ALTER TABLE resolve; ver pendencias-para-o-cliente.md (Q24).
+2026-08-14 11:39:12.890 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L05', 'eot_tbra': '10', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:12.894 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L05', 'eot_tbra': '20', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:12.899 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L05', 'eot_tbra': '26', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:12.906 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L05', 'eot_tbra': '3', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:12.911 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L05', 'eot_tbra': '30', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:12.916 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L05', 'eot_tbra': '33', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:12.923 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L05', 'eot_tbra': '36', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:12.928 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L05', 'eot_tbra': '37', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:12.933 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L05', 'eot_tbra': '38', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:12.939 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L05', 'eot_tbra': '39', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:12.944 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L05', 'eot_tbra': '4', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:12.948 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L05', 'eot_tbra': '44', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:12.954 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L05', 'eot_tbra': '45', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:12.959 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L05', 'eot_tbra': '452', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:12.964 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L05', 'eot_tbra': '453', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:12.970 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L05', 'eot_tbra': '454', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:12.977 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L05', 'eot_tbra': '455', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:12.981 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L05', 'eot_tbra': '456', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:12.986 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L05', 'eot_tbra': '457', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:12.992 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L05', 'eot_tbra': '50', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:12.996 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L05', 'eot_tbra': '60', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.001 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L05', 'eot_tbra': '64', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.008 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L05', 'eot_tbra': '66', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.013 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L05', 'eot_tbra': '68', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.018 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L05', 'eot_tbra': '70', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.026 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L05', 'eot_tbra': '78', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.030 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L06', 'eot_tbra': '10', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.035 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L06', 'eot_tbra': '20', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.042 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L06', 'eot_tbra': '26', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.046 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L06', 'eot_tbra': '30', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.051 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L06', 'eot_tbra': '33', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.057 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L06', 'eot_tbra': '36', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.062 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L06', 'eot_tbra': '37', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.067 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L06', 'eot_tbra': '39', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.073 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L06', 'eot_tbra': '44', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.078 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L06', 'eot_tbra': '45', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.083 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L06', 'eot_tbra': '453', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.090 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L06', 'eot_tbra': '455', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.095 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L06', 'eot_tbra': '456', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.100 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L06', 'eot_tbra': '457', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.107 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L06', 'eot_tbra': '50', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.112 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L06', 'eot_tbra': '60', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.117 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L06', 'eot_tbra': '64', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.123 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L06', 'eot_tbra': '66', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.128 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L06', 'eot_tbra': '70', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.132 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L07', 'eot_tbra': '10', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.138 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L07', 'eot_tbra': '20', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.142 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L07', 'eot_tbra': '33', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.147 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L07', 'eot_tbra': '44', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.153 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L07', 'eot_tbra': '45', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.158 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'L07', 'eot_tbra': '70', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.164 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'P56', 'eot_tbra': '10', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.170 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': 'P56', 'eot_tbra': '455', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TIS'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:13.171 | INFO    |comum.dados.repositorio_cache:recarregar_cache_local:375 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-14 11:39:13.175 | INFO    |comum.dados.repositorio_cache:recarregar_cache_local:375 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 0 | Colunas: 19
+2026-08-14 11:39:13.176 | INFO    |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] 0 linha(s) atualizada(s), 53 chave(s) ausente(s).
+2026-08-14 11:39:13.176 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:595 - [STEP] Finalizando: GeracaoAgiController.atualizar_despesa_contestacao | Tempo gasto: 0.61s
+2026-08-14 11:39:13.177 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:633 - [STEP] Iniciando: montar_linhas_ext
+2026-08-14 11:39:13.186 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L06, tbra=457, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.192 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L06, tbra=030, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.196 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L05, tbra=452, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.202 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L06, tbra=066, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.208 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L05, tbra=038, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.212 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L06, tbra=050, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.217 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L07, tbra=045, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.223 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L05, tbra=010, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.227 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L06, tbra=070, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.232 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L05, tbra=454, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.237 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L05, tbra=020, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.242 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L05, tbra=070, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.246 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L06, tbra=456, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.251 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L06, tbra=033, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.258 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L06, tbra=044, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.265 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L05, tbra=456, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.271 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L05, tbra=045, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.276 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L06, tbra=060, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.282 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L07, tbra=033, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.288 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L07, tbra=044, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.293 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L05, tbra=004, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.297 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L05, tbra=050, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.304 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L06, tbra=020, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.309 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L05, tbra=060, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.315 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L05, tbra=033, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.321 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L05, tbra=037, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.327 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L05, tbra=078, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.332 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L07, tbra=010, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.338 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L05, tbra=026, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.343 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L05, tbra=453, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.349 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L05, tbra=044, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.357 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L05, tbra=457, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.362 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L06, tbra=026, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.367 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L06, tbra=455, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.373 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L05, tbra=068, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.378 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L05, tbra=030, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.383 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L05, tbra=003, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.390 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L05, tbra=455, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.395 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=P56, tbra=455, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.400 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L06, tbra=039, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.406 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L06, tbra=036, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.412 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L06, tbra=453, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.418 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L07, tbra=070, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.425 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L05, tbra=066, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.430 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L06, tbra=010, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.437 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L05, tbra=036, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.442 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L06, tbra=064, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.448 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L06, tbra=037, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.456 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L07, tbra=020, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.461 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L06, tbra=045, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.466 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L05, tbra=039, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.473 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=P56, tbra=010, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.479 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=L05, tbra=064, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.485 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=nan, tbra=nan, referencia=nan, trafego=nan, remuneracao=nan] — tratado como sem contestação.
+2026-08-14 11:39:13.490 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-12 EXT] 72 linha(s) montada(s).
+2026-08-14 11:39:13.491 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:633 - [STEP] Finalizando: montar_linhas_ext | Tempo gasto: 0.31s
+2026-08-14 11:39:13.492 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:639 - [STEP] Iniciando: gerar_arquivo_ext
+2026-08-14 11:39:13.534 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-12 EXT] Arquivo gravado em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras\Unifique\2026\202607\AGI\DE_AGI_D_202607_TBRA_X_UNIFIQUE_EXT.xlsx].
+2026-08-14 11:39:13.537 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:639 - [STEP] Finalizando: gerar_arquivo_ext | Tempo gasto: 0.05s
+2026-08-14 11:39:13.539 | WARNING |src.controllers.geracao_agi_controller:_gerar_para_operadora:606 - [RPA 3] Unifique: sem expectativa Vivo — _EXP e carta não serão gerados. Confira a pasta 'Detrafs Enviados' da operadora.
+2026-08-14 11:39:13.540 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:617 - [STEP] Iniciando: GeracaoAgiController.gerar_cont_proc
+2026-08-14 11:39:13.541 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1030 - [STEP] Iniciando: montar_linhas_cont_proc
+2026-08-14 11:39:13.542 | INFO    |src.services.geracao_cont_proc:montar_linhas_cont_proc:224 - [STEP] Iniciando: selecionar_linhas_contestadas
+2026-08-14 11:39:13.558 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L05, tbra=010, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.567 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L05, tbra=020, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.578 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L05, tbra=026, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.587 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L05, tbra=003, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.596 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L05, tbra=030, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.612 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L05, tbra=033, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.625 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L05, tbra=036, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.642 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L05, tbra=037, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.654 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L05, tbra=038, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.666 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L05, tbra=039, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.682 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L05, tbra=004, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.694 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L05, tbra=044, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.705 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L05, tbra=045, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.716 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L05, tbra=452, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.725 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L05, tbra=453, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.734 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L05, tbra=454, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.747 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L05, tbra=455, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.760 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L05, tbra=456, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.780 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L05, tbra=457, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.788 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L05, tbra=050, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.796 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L05, tbra=060, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.804 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L05, tbra=064, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.811 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L05, tbra=066, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.826 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L05, tbra=068, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.858 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L05, tbra=070, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.869 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L05, tbra=078, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.879 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L06, tbra=010, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.891 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L06, tbra=020, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.926 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L06, tbra=026, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.940 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L06, tbra=030, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.948 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L06, tbra=033, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:13.982 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L06, tbra=036, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:14.010 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L06, tbra=037, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:14.028 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L06, tbra=039, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:14.039 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L06, tbra=044, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:14.049 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L06, tbra=045, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:14.062 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L06, tbra=453, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:14.075 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L06, tbra=455, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:14.085 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L06, tbra=456, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:14.097 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L06, tbra=457, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:14.107 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L06, tbra=050, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:14.117 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L06, tbra=060, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:14.132 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L06, tbra=064, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:14.140 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L06, tbra=066, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:14.145 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L06, tbra=070, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:14.152 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L07, tbra=010, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:14.158 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L07, tbra=020, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:14.164 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L07, tbra=033, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:14.171 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L07, tbra=044, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:14.177 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L07, tbra=045, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:14.185 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=L07, tbra=070, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:14.194 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=P56, tbra=010, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:14.200 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=P56, tbra=455, referencia=202607, trafego=202607, remuneracao=TIS] — tratado como sem contestação.
+2026-08-14 11:39:14.205 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-16 CONT_PROC] Nenhuma combinação com sinal do analista (todas 'sem contestação' apesar da variação).
+2026-08-14 11:39:14.207 | INFO    |src.services.geracao_cont_proc:montar_linhas_cont_proc:224 - [STEP] Finalizando: selecionar_linhas_contestadas | Tempo gasto: 0.66s
+2026-08-14 11:39:14.209 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1030 - [STEP] Finalizando: montar_linhas_cont_proc | Tempo gasto: 0.67s
+2026-08-14 11:39:14.209 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1036 - [STEP] Iniciando: gerar_arquivo_cont_proc
+2026-08-14 11:39:14.210 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-16 CONT_PROC] Nada a gravar (nenhuma linha a contestar).
+2026-08-14 11:39:14.210 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1036 - [STEP] Finalizando: gerar_arquivo_cont_proc | Tempo gasto: 0.0s
+2026-08-14 11:39:14.211 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:617 - [STEP] Finalizando: GeracaoAgiController.gerar_cont_proc | Tempo gasto: 0.67s
+2026-08-14 11:39:14.211 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:558 - [STEP] Iniciando: consolidar_detrafs_operadora
+2026-08-14 11:39:14.212 | INFO    |src.services.consolidacao_contestacao:consolidar_detrafs_operadora:174 - [Consolidação] 1 arquivo(s) encontrado(s) em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras\Vonare\2026\202607\Detrafs Recebidos].
+2026-08-14 11:39:14.217 | INFO    |src.services.consolidacao_contestacao:consolidar_detrafs_operadora:177 - [Consolidação] [DETRAF_FINAL_202607_VONARE_VIVO_ITX_20260806161630.csv]: 6 linha(s) -> 6 após remover totais.
+2026-08-14 11:39:14.218 | INFO    |src.services.consolidacao_contestacao:consolidar_detrafs_operadora:177 - [Consolidação] Consolidado: 6 linha(s) de 1 arquivo(s).
+2026-08-14 11:39:14.218 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:558 - [STEP] Finalizando: consolidar_detrafs_operadora | Tempo gasto: 0.01s
+2026-08-14 11:39:14.219 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:574 - [STEP] Iniciando: consolidar_expectativa_vivo
+2026-08-14 11:39:14.221 | WARNING |src.services.consolidacao_contestacao:consolidar_expectativa_vivo:207 - Pasta de Detrafs inexistente: [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras\Vonare\2026\202607\Detrafs Enviados]
+2026-08-14 11:39:14.222 | WARNING |comum.utils.decoradores:wrapper:22 - [Consolidação] Nenhum arquivo de expectativa (_D_) em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras\Vonare\2026\202607\Detrafs Enviados].
+2026-08-14 11:39:14.222 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:574 - [STEP] Finalizando: consolidar_expectativa_vivo | Tempo gasto: 0.0s
+2026-08-14 11:39:14.223 | WARNING |src.controllers.geracao_agi_controller:_gerar_todos:269 - [RPA 3] Vonare: sem expectativa Vivo em 202607; a comparação sairá com o lado da Vivo zerado.
+2026-08-14 11:39:14.224 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:586 - [STEP] Iniciando: montar_contest
+2026-08-14 11:39:14.245 | INFO    |comum.utils.decoradores:wrapper:22 - [Consolidação] Contest: 3 combinação(ões) analisada(s).
+2026-08-14 11:39:14.246 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:586 - [STEP] Finalizando: montar_contest | Tempo gasto: 0.02s
+2026-08-14 11:39:14.246 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:595 - [STEP] Iniciando: GeracaoAgiController.atualizar_despesa_contestacao
+2026-08-14 11:39:14.247 | INFO    |src.controllers.geracao_agi_controller:atualizar_despesa_contestacao:1066 - [STEP] Iniciando: preparar_atualizacoes_despesa_contestacao
+2026-08-14 11:39:14.253 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=345, tbra=070, referencia=202607, trafego=202605, remuneracao=TU-RL] — tratado como sem contestação.
+2026-08-14 11:39:14.262 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=345, tbra=070, referencia=202607, trafego=202606, remuneracao=TU-RL] — tratado como sem contestação.
+2026-08-14 11:39:14.268 | INFO    |src.services.encontro_contas:_da_linha:147 - Sinal de contestação não encontrado para [operadora=345, tbra=070, referencia=202607, trafego=202607, remuneracao=TU-RL] — tratado como sem contestação.
+2026-08-14 11:39:14.273 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-19 Despesa Contestação] 3 atualização(ões) preparada(s).
+2026-08-14 11:39:14.274 | INFO    |src.controllers.geracao_agi_controller:atualizar_despesa_contestacao:1066 - [STEP] Finalizando: preparar_atualizacoes_despesa_contestacao | Tempo gasto: 0.03s
+2026-08-14 11:39:14.274 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] A tabela 'tbl_rpa_log_detraf_despesa_contestacao' não tem a(s) coluna(s) vb_contestacao — NÃO gravada(s). As demais seguem normalmente. Um ALTER TABLE resolve; ver pendencias-para-o-cliente.md (Q24).
+2026-08-14 11:39:14.280 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': '345', 'eot_tbra': '70', 'referencia': '202607', 'trafego': '202605', 'remuneracoes': 'TU-RL'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:14.287 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': '345', 'eot_tbra': '70', 'referencia': '202607', 'trafego': '202606', 'remuneracoes': 'TU-RL'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:14.294 | WARNING |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] Chave sem linha correspondente no banco {'eot_operadora': '345', 'eot_tbra': '70', 'referencia': '202607', 'trafego': '202607', 'remuneracoes': 'TU-RL'} — ignorada (a linha-base é inserida pelo Épico 3, B-D20).
+2026-08-14 11:39:14.295 | INFO    |comum.dados.repositorio_cache:recarregar_cache_local:375 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-14 11:39:14.299 | INFO    |comum.dados.repositorio_cache:recarregar_cache_local:375 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 0 | Colunas: 19
+2026-08-14 11:39:14.299 | INFO    |comum.dados.repositorio_tabelas:atualizar_despesa_contestacao:1019 - [HU-19 Despesa Contestação] 0 linha(s) atualizada(s), 3 chave(s) ausente(s).
+2026-08-14 11:39:14.300 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:595 - [STEP] Finalizando: GeracaoAgiController.atualizar_despesa_contestacao | Tempo gasto: 0.05s
+2026-08-14 11:39:14.301 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:633 - [STEP] Iniciando: montar_linhas_ext
+2026-08-14 11:39:14.314 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=345, tbra=070, referencia=202607, trafego=202605, remuneracao=TU-RL] — tratado como sem contestação.
+2026-08-14 11:39:14.322 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=345, tbra=070, referencia=202607, trafego=202606, remuneracao=TU-RL] — tratado como sem contestação.
+2026-08-14 11:39:14.328 | INFO    |src.services.geracao_ext:montar_linhas_ext:133 - Sinal de contestação não encontrado para [operadora=345, tbra=070, referencia=202607, trafego=202607, remuneracao=TU-RL] — tratado como sem contestação.
+2026-08-14 11:39:14.332 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-12 EXT] 6 linha(s) montada(s).
+2026-08-14 11:39:14.333 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:633 - [STEP] Finalizando: montar_linhas_ext | Tempo gasto: 0.03s
+2026-08-14 11:39:14.334 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:639 - [STEP] Iniciando: gerar_arquivo_ext
+2026-08-14 11:39:14.349 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-12 EXT] Arquivo gravado em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras\Vonare\2026\202607\AGI\DE_AGI_D_202607_TBRA_X_VONARE_EXT.xlsx].
+2026-08-14 11:39:14.349 | INFO    |src.controllers.geracao_agi_controller:_gerar_ext:639 - [STEP] Finalizando: gerar_arquivo_ext | Tempo gasto: 0.02s
+2026-08-14 11:39:14.350 | WARNING |src.controllers.geracao_agi_controller:_gerar_para_operadora:606 - [RPA 3] Vonare: sem expectativa Vivo — _EXP e carta não serão gerados. Confira a pasta 'Detrafs Enviados' da operadora.
+2026-08-14 11:39:14.351 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:617 - [STEP] Iniciando: GeracaoAgiController.gerar_cont_proc
+2026-08-14 11:39:14.352 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1030 - [STEP] Iniciando: montar_linhas_cont_proc
+2026-08-14 11:39:14.353 | INFO    |src.services.geracao_cont_proc:montar_linhas_cont_proc:224 - [STEP] Iniciando: selecionar_linhas_contestadas
+2026-08-14 11:39:14.362 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=345, tbra=070, referencia=202607, trafego=202605, remuneracao=TU-RL] — tratado como sem contestação.
+2026-08-14 11:39:14.367 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=345, tbra=070, referencia=202607, trafego=202606, remuneracao=TU-RL] — tratado como sem contestação.
+2026-08-14 11:39:14.373 | INFO    |src.services.geracao_cont_proc:selecionar_linhas_contestadas:144 - Sinal de contestação não encontrado para [operadora=345, tbra=070, referencia=202607, trafego=202607, remuneracao=TU-RL] — tratado como sem contestação.
+2026-08-14 11:39:14.377 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-16 CONT_PROC] Nenhuma combinação com sinal do analista (todas 'sem contestação' apesar da variação).
+2026-08-14 11:39:14.378 | INFO    |src.services.geracao_cont_proc:montar_linhas_cont_proc:224 - [STEP] Finalizando: selecionar_linhas_contestadas | Tempo gasto: 0.03s
+2026-08-14 11:39:14.380 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1030 - [STEP] Finalizando: montar_linhas_cont_proc | Tempo gasto: 0.03s
+2026-08-14 11:39:14.380 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1036 - [STEP] Iniciando: gerar_arquivo_cont_proc
+2026-08-14 11:39:14.381 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-16 CONT_PROC] Nada a gravar (nenhuma linha a contestar).
+2026-08-14 11:39:14.381 | INFO    |src.controllers.geracao_agi_controller:gerar_cont_proc:1036 - [STEP] Finalizando: gerar_arquivo_cont_proc | Tempo gasto: 0.0s
+2026-08-14 11:39:14.382 | INFO    |src.controllers.geracao_agi_controller:_gerar_para_operadora:617 - [STEP] Finalizando: GeracaoAgiController.gerar_cont_proc | Tempo gasto: 0.03s
+2026-08-14 11:39:14.383 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos] 22 operadora(s) em 202607:
+2026-08-14 11:39:14.384 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]   Adylnet Internet Provider EXT
+2026-08-14 11:39:14.385 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: sem expectativa Vivo
+2026-08-14 11:39:14.386 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: _EXP e carta sem expectativa Vivo
+2026-08-14 11:39:14.386 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]   Agil Telecom         EXT
+2026-08-14 11:39:14.387 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: sem expectativa Vivo
+2026-08-14 11:39:14.388 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: _EXP e carta sem expectativa Vivo
+2026-08-14 11:39:14.388 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]   ALGAR                EXT
+2026-08-14 11:39:14.389 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: sem expectativa Vivo
+2026-08-14 11:39:14.390 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: _EXP e carta sem expectativa Vivo
+2026-08-14 11:39:14.390 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]   Atlanet Telecomunicacoes EXT
+2026-08-14 11:39:14.391 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: sem expectativa Vivo
+2026-08-14 11:39:14.392 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: _EXP e carta sem expectativa Vivo
+2026-08-14 11:39:14.392 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]   BTT Telecomunicacoes S.A EXT
+2026-08-14 11:39:14.393 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: sem expectativa Vivo
+2026-08-14 11:39:14.393 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: _EXP e carta sem expectativa Vivo
+2026-08-14 11:39:14.394 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]   Desktop Sigmanet     EXT
+2026-08-14 11:39:14.394 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: sem expectativa Vivo
+2026-08-14 11:39:14.395 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: _EXP e carta sem expectativa Vivo
+2026-08-14 11:39:14.395 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]   GGNET Telecom        EXT
+2026-08-14 11:39:14.396 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: sem expectativa Vivo
+2026-08-14 11:39:14.396 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: _EXP e carta sem expectativa Vivo
+2026-08-14 11:39:14.397 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]   Golden Line Telecom  EXT
+2026-08-14 11:39:14.398 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: sem expectativa Vivo
+2026-08-14 11:39:14.398 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: _EXP e carta sem expectativa Vivo
+2026-08-14 11:39:14.399 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]   Invista Net          EXT
+2026-08-14 11:39:14.399 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: sem expectativa Vivo
+2026-08-14 11:39:14.400 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: _EXP e carta sem expectativa Vivo
+2026-08-14 11:39:14.401 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]   Itelco Telecom       EXT
+2026-08-14 11:39:14.401 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: sem expectativa Vivo
+2026-08-14 11:39:14.402 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: _EXP e carta sem expectativa Vivo
+2026-08-14 11:39:14.402 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]   LH Telecomunicacoes LTDA EXT
+2026-08-14 11:39:14.403 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: sem expectativa Vivo
+2026-08-14 11:39:14.403 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: _EXP e carta sem expectativa Vivo
+2026-08-14 11:39:14.404 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]   Megalink Servicos    EXT
+2026-08-14 11:39:14.405 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: sem expectativa Vivo
+2026-08-14 11:39:14.405 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: _EXP e carta sem expectativa Vivo
+2026-08-14 11:39:14.406 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]   Megatelecom Telecomunicacoes S.A EXT
+2026-08-14 11:39:14.407 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: sem expectativa Vivo
+2026-08-14 11:39:14.408 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: _EXP e carta sem expectativa Vivo
+2026-08-14 11:39:14.408 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]   Nova Tecnologia e Telecomunicacoes EXT
+2026-08-14 11:39:14.409 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: sem expectativa Vivo
+2026-08-14 11:39:14.409 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: _EXP e carta sem expectativa Vivo
+2026-08-14 11:39:14.410 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]   Opcao Telecom        EXT
+2026-08-14 11:39:14.410 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: sem expectativa Vivo
+2026-08-14 11:39:14.411 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: _EXP e carta sem expectativa Vivo
+2026-08-14 11:39:14.411 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]   Predialnet           EXT
+2026-08-14 11:39:14.412 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: sem expectativa Vivo
+2026-08-14 11:39:14.412 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: _EXP e carta sem expectativa Vivo
+2026-08-14 11:39:14.413 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]   Sistel Fibra         EXT
+2026-08-14 11:39:14.414 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: sem expectativa Vivo
+2026-08-14 11:39:14.414 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: _EXP e carta sem expectativa Vivo
+2026-08-14 11:39:14.415 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]   T1 Telecom           EXT
+2026-08-14 11:39:14.415 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: sem expectativa Vivo
+2026-08-14 11:39:14.416 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: _EXP e carta sem expectativa Vivo
+2026-08-14 11:39:14.417 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]   Tri Telecom          EXT
+2026-08-14 11:39:14.417 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: sem expectativa Vivo
+2026-08-14 11:39:14.418 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: _EXP e carta sem expectativa Vivo
+2026-08-14 11:39:14.419 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]   UFINET BRASIL        EXT
+2026-08-14 11:39:14.420 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: sem expectativa Vivo
+2026-08-14 11:39:14.421 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: _EXP e carta sem expectativa Vivo
+2026-08-14 11:39:14.422 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]   Unifique             EXT
+2026-08-14 11:39:14.423 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: sem expectativa Vivo
+2026-08-14 11:39:14.424 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: _EXP e carta sem expectativa Vivo
+2026-08-14 11:39:14.424 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]   Vonare               EXT
+2026-08-14 11:39:14.425 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: sem expectativa Vivo
+2026-08-14 11:39:14.425 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos]                        pulado: _EXP e carta sem expectativa Vivo
+2026-08-14 11:39:14.426 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos] Pasta: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras
+2026-08-14 11:39:14.426 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos] ────────────────────────────────────────────────────────────
+2026-08-14 11:39:14.427 | INFO    |src.controllers.geracao_agi_controller:_pausar_apos_artefatos:530 - [RPA 3 — etapa 1/4: artefatos] PRÓXIMA ETAPA: carga no AGI (HU-17/HU-18) — ESCREVE NO AGI
+2026-08-14 11:39:15.580 | INFO    |src.controllers.geracao_agi_controller:_carregar_no_agi:805 - [STEP] Iniciando: UploadDetrafAGI.executar
+2026-08-14 11:39:33.990 | INFO    |src.services.upload_detraf_agi:executar:216 - [AGI] Aplicativo aberto a partir de [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\aplicacao_agi\Portal AIR\portal_air_vivo.exe].
+2026-08-14 11:43:21.119 | WARNING |comum.integracoes.agi:acessar_ambiente:466 - [AGI] Imagem [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\comum\view\imagens\AGI_CONFIG\bnt_producao_ini.png] não apareceu em 180s.
+2026-08-14 11:43:24.619 | WARNING |comum.integracoes.agi:_click:276 - [AGI] Imagem não encontrada na tela: [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\comum\view\imagens\AGI_CONFIG\bnt_producao_ini.png].
+2026-08-14 11:43:54.699 | INFO    |src.services.upload_detraf_agi:executar:243 - [AGI] Encerrando processo em execução: portal_air_vivo.exe (pid 51952).
+ÊXITO: o processo "portal_air_vivo.exe" com PID 51952 foi finalizado.
+2026-08-14 11:43:55.527 | INFO    |src.services.upload_detraf_agi:executar:243 - [AGI] Encerrando processo em execução: adl.exe (pid 66236).
+ÊXITO: o processo "adl.exe" com PID 66236 foi finalizado.
+2026-08-14 11:43:56.462 | INFO    |src.controllers.geracao_agi_controller:_carregar_no_agi:805 - [STEP] Finalizando: UploadDetrafAGI.executar | Tempo gasto: 280.88s
+2026-08-14 11:43:56.482 | INFO    |src.main.process_handle:run:31 - [STEP] Finalizando: GeracaoAgiController.gerar_artefatos | Tempo gasto: 290.92s
+2026-08-14 11:43:56.483 | INFO    |__main__:main:127 - [STEP] Finalizando: run | Tempo gasto: 290.92s
+2026-08-14 11:43:56.484 | ERROR   |__main__:<module>:164 - [RPA 3] Execução interrompida por erro não tratado — ERRO na etapa 3/3 (carga)
+Traceback (most recent call last):
 
-PS C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado> .\.venv\Scripts\python .\rpa2_validacao_apuracao\main.py
-2026-08-13 15:55:57.972 | INFO    |__main__:<module>:126 - [RPA 2] robô: rpa2_validacao_apuracao
-2026-08-13 15:55:57.974 | INFO    |__main__:<module>:126 - [RPA 2] modo: DEV  (de ENV)
-2026-08-13 15:55:57.974 | INFO    |__main__:<module>:126 - [RPA 2] log: nível INFO (de LOG_LEVEL), diagnose ligado
-2026-08-13 15:55:57.975 | INFO    |__main__:<module>:126 - [RPA 2] competência: 202607  (mês anterior ao corrente)
-2026-08-13 15:55:57.976 | INFO    |__main__:<module>:126 - [RPA 2] banco: SQLite [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db] (de CAMINHO_SQLITE)
-2026-08-13 15:55:57.976 | INFO    |__main__:<module>:126 - [RPA 2] AGI: ambiente [producao] host [10.238.6.120] (de AGI_AMBIENTE) | executável [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
-2026-08-13 15:55:57.976 | INFO    |__main__:<module>:126 - [RPA 2] EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: desligado | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado | download SFTP: LIGADO
-2026-08-13 15:55:57.977 | INFO    |__main__:<module>:126 - [RPA 2] parâmetros: nenhum — execução completa, como na agenda
-2026-08-13 15:56:00.755 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
-2026-08-13 15:56:00.756 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db]
-2026-08-13 15:56:00.850 | INFO    |__main__:main:97 - [STEP] Iniciando: run
-2026-08-13 15:56:00.850 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Etapa 1/3 - captação da expectativa Vivo
-2026-08-13 15:56:00.851 | INFO    |src.controllers.captacao_expectativa_controller:captar_expectativa:15 - [Expectativa] Procurando os arquivos _D de 202607 em 5 pasta(s) de origem.
-2026-08-13 15:56:01.361 | INFO    |src.services.captacao_expectativa:executar:191 - [SFTP] Conectando em ictprd@BRTLVLTS1739FU:22
-2026-08-13 15:56:22.433 | ERROR   |src.controllers.captacao_expectativa_controller:captar_expectativa:15 - [Expectativa] [SFTP] Não foi possível conectar em BRTLVLTS1739FU:22 como 'ictprd': [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
-corretamente após um período de tempo ou a conexão estabelecida falhou
-porque o host conectado não respondeu
-  -> Confira a rede/VPN até o host e se a credencial ainda vale.
-  -> Nada foi baixado; a pasta de expectativa continua como estava.
-2026-08-13 15:56:22.434 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Origem:                   SFTP
-2026-08-13 15:56:22.435 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Período procurado:        202607
-2026-08-13 15:56:22.435 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Arquivos baixados:        0
-2026-08-13 15:56:22.436 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Falhas (1):
-2026-08-13 15:56:22.436 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa]   [SFTP] Não foi possível conectar em BRTLVLTS1739FU:22 como 'ictprd': [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
-2026-08-13 15:56:22.437 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] corretamente após um período de tempo ou a conexão estabelecida falhou
-2026-08-13 15:56:22.437 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] porque o host conectado não respondeu
-2026-08-13 15:56:22.437 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa]   -> Confira a rede/VPN até o host e se a credencial ainda vale.
-2026-08-13 15:56:22.438 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa]   -> Nada foi baixado; a pasta de expectativa continua como estava.
-2026-08-13 15:56:22.438 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Pasta: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Expectativa
-2026-08-13 15:56:22.438 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] ────────────────────────────────────────────────────────────
-2026-08-13 15:56:22.439 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] PRÓXIMA ETAPA: validação dos arquivos, que LÊ o que a captação acabou de trazer
-2026-08-13 15:56:22.440 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Etapa 2/3 - validação dos arquivos de Detraf
-2026-08-13 15:56:22.442 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_anexo5_processado]
-2026-08-13 15:56:22.492 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_anexo5_processado] carregada | Linhas: 2656 | Colunas: 18
-2026-08-13 15:56:22.493 | INFO    |src.controllers.validacao_detrafs_controller:validar_detrafs:15 - [STEP] Iniciando: ValidacaoDetrafsService.executar
-2026-08-13 15:56:22.493 | INFO    |comum.utils.decoradores:wrapper:22 - Executando a validação dos detrafs...
-2026-08-13 15:56:22.494 | INFO    |src.services.validacao_detrafs:executar:633 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_detrafs
-2026-08-13 15:56:22.494 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os detrafs para validação...
-2026-08-13 15:56:22.495 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando busca de arquivos para o período 202607 no diretório: 'C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras'
-2026-08-13 15:56:22.505 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Adylnet Internet Provider]
-2026-08-13 15:56:22.506 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Agil Telecom]
-2026-08-13 15:56:22.507 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [ALGAR]
-2026-08-13 15:56:22.509 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Atlanet Telecomunicacoes]
-2026-08-13 15:56:22.510 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [BTT Telecomunicacoes S.A]
-2026-08-13 15:56:22.512 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Desktop Sigmanet]
-2026-08-13 15:56:22.513 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [GGNET Telecom]
-2026-08-13 15:56:22.514 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Golden Line Telecom]
-2026-08-13 15:56:22.515 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Invista Net]
-2026-08-13 15:56:22.516 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Itelco Telecom]
-2026-08-13 15:56:22.517 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [LH Telecomunicacoes LTDA]
-2026-08-13 15:56:22.519 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Megalink Servicos]
-2026-08-13 15:56:22.519 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Megatelecom Telecomunicacoes S.A]
-2026-08-13 15:56:22.520 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Nova Tecnologia e Telecomunicacoes]
-2026-08-13 15:56:22.522 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Opcao Telecom]
-2026-08-13 15:56:22.523 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Predialnet]
-2026-08-13 15:56:22.524 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Sistel Fibra]
-2026-08-13 15:56:22.525 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [T1 Telecom]
-2026-08-13 15:56:22.527 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Tri Telecom]
-2026-08-13 15:56:22.528 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [UFINET BRASIL]
-2026-08-13 15:56:22.529 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Unifique]
-2026-08-13 15:56:22.530 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Vonare]
-2026-08-13 15:56:22.531 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 22. Total geral de arquivos encontrados: 32
-2026-08-13 15:56:22.532 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Adylnet Internet Provider]: 2 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.532 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Agil Telecom]: 2 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.532 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [ALGAR]: 1 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.533 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Atlanet Telecomunicacoes]: 1 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.533 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [BTT Telecomunicacoes S.A]: 1 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.533 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Desktop Sigmanet]: 2 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.533 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [GGNET Telecom]: 2 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.534 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Golden Line Telecom]: 1 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.534 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Invista Net]: 2 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.534 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Itelco Telecom]: 1 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.535 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [LH Telecomunicacoes LTDA]: 2 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.535 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Megalink Servicos]: 1 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.535 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Megatelecom Telecomunicacoes S.A]: 2 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.536 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Nova Tecnologia e Telecomunicacoes]: 2 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.536 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Opcao Telecom]: 1 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.536 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Predialnet]: 1 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.537 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Sistel Fibra]: 1 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.537 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [T1 Telecom]: 2 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.538 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Tri Telecom]: 2 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.538 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [UFINET BRASIL]: 1 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.538 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Unifique]: 1 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.539 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Vonare]: 1 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.568 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Filtro de Histórico concluído para o período 202607.
-2026-08-13 15:56:22.568 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos originais recebidos: 32
-2026-08-13 15:56:22.569 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos já processados anteriormente (encontrados no JSON): 32
-2026-08-13 15:56:22.569 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Novos arquivos retornados para execução: 0
-2026-08-13 15:56:22.570 | INFO    |src.services.validacao_detrafs:executar:633 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_detrafs | Tempo gasto: 0.08s
-2026-08-13 15:56:22.570 | INFO    |src.services.validacao_detrafs:executar:634 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_expectativa
-2026-08-13 15:56:22.570 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os arquivos de expectativa para validação...
-2026-08-13 15:56:22.572 | INFO    |comum.utils.decoradores:wrapper:22 - Pasta [Vivo] processada -> Válidos: 2 | Inválidos/Ignorados: 0
-2026-08-13 15:56:22.573 | INFO    |comum.utils.decoradores:wrapper:22 - Pasta [TLF] processada -> Válidos: 2 | Inválidos/Ignorados: 0
-2026-08-13 15:56:22.573 | ERROR   |src.services.validacao_detrafs:_preparar_arquivos_expectativa:269 - [Q21] Sem expectativa Vivo em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Expectativa\MVNO]: não existe. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
-2026-08-13 15:56:22.574 | ERROR   |src.services.validacao_detrafs:_preparar_arquivos_expectativa:269 - [Q21] Sem expectativa Vivo em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Expectativa\Detraf TRP]: não existe. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
-2026-08-13 15:56:22.575 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento de expectativa concluído. Total geral de arquivos válidos: 4
-2026-08-13 15:56:22.580 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Filtro de Histórico concluído para o período 202607.
-2026-08-13 15:56:22.580 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Arquivos originais recebidos: 4
-2026-08-13 15:56:22.581 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Arquivos já processados anteriormente (encontrados no JSON): 4
-2026-08-13 15:56:22.581 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Novos arquivos retornados para execução: 0
-2026-08-13 15:56:22.582 | INFO    |src.services.validacao_detrafs:executar:634 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_expectativa | Tempo gasto: 0.01s
-2026-08-13 15:56:22.582 | WARNING |comum.utils.decoradores:wrapper:22 - Nenhum arquivo de detraf encontrado para validação. Verifique os logs anteriores para detalhes.
-2026-08-13 15:56:22.582 | WARNING |comum.utils.decoradores:wrapper:22 - Nenhum arquivo de expectativa encontrado para validação. Verifique os logs anteriores para detalhes.
-2026-08-13 15:56:22.585 | INFO    |src.services.validacao_detrafs:executar:699 - Iniciando transformação de lote tipo [DETRAF_SUCESSO] com 0 arquivo(s).
-2026-08-13 15:56:22.586 | INFO    |src.services.validacao_detrafs:executar:703 - Iniciando transformação de lote tipo [DETRAF_ERRO] com 0 arquivo(s).
-2026-08-13 15:56:22.587 | INFO    |src.services.validacao_detrafs:executar:707 - Iniciando transformação de lote tipo [EXPECTATIVA_SUCESSO] com 0 arquivo(s).
-2026-08-13 15:56:22.588 | INFO    |src.services.validacao_detrafs:executar:711 - Iniciando transformação de lote tipo [EXPECTATIVA_ERRO] com 0 arquivo(s).
-2026-08-13 15:56:22.590 | INFO    |src.services.validacao_detrafs:executar:740 - Nenhum artefato a promover — a etapa não produziu arquivo novo.
-2026-08-13 15:56:22.592 | INFO    |src.services.validacao_detrafs:_salvar_historico_arquivos_processados:514 - Histórico atualizado com sucesso. Lote finalizado com 0 arquivo(s) salvo(s) como 'Válido'.
-2026-08-13 15:56:22.594 | INFO    |src.services.validacao_detrafs:_salvar_historico_arquivos_processados:517 - Histórico atualizado com sucesso. Lote finalizado com 0 arquivo(s) salvo(s) como 'Inválido'.
-2026-08-13 15:56:22.594 | INFO    |src.controllers.validacao_detrafs_controller:validar_detrafs:15 - [STEP] Finalizando: ValidacaoDetrafsService.executar | Tempo gasto: 0.1s
-2026-08-13 15:56:22.595 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Detraf válidos:           0
-2026-08-13 15:56:22.596 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Detraf inválidos:         0
-2026-08-13 15:56:22.596 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Expectativa válidos:      0
-2026-08-13 15:56:22.597 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Expectativa inválidos:    0
-2026-08-13 15:56:22.597 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Pasta: C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras
-2026-08-13 15:56:22.597 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] ────────────────────────────────────────────────────────────
-2026-08-13 15:56:22.598 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] PRÓXIMA ETAPA: batimento Detraf × expectativa, que LÊ o que a validação acabou de registrar
-2026-08-13 15:56:22.598 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Etapa 3/3 - batimento Detraf x expectativa
-2026-08-13 15:56:22.600 | INFO    |src.controllers.batimento_detraf_controller:batimento_detraf:10 - [STEP] Iniciando: BatimentoDetrafService.executar
-2026-08-13 15:56:22.600 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando processo de batimento dos arquivos Detraf...
-2026-08-13 15:56:22.601 | INFO    |src.services.batimento_detraf:executar:348 - Preparando os detrafs para validação...
-2026-08-13 15:56:22.601 | INFO    |src.services.batimento_detraf:executar:348 - Iniciando busca de arquivos para o período 202607 na saída da validação: 'C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_SAIDA'
-2026-08-13 15:56:22.607 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [ALGAR]
-2026-08-13 15:56:22.608 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Adylnet Internet Provider]
-2026-08-13 15:56:22.610 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Agil Telecom]
-2026-08-13 15:56:22.612 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Atlanet Telecomunicacoes]
-2026-08-13 15:56:22.613 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [BTT Telecomunicacoes S.A]
-2026-08-13 15:56:22.614 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Desktop Sigmanet]
-2026-08-13 15:56:22.615 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [GGNET Telecom]
-2026-08-13 15:56:22.616 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Golden Line Telecom]
-2026-08-13 15:56:22.617 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Invista Net]
-2026-08-13 15:56:22.619 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Itelco Telecom]
-2026-08-13 15:56:22.620 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [LH Telecomunicacoes LTDA]
-2026-08-13 15:56:22.623 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Megalink Servicos]
-2026-08-13 15:56:22.630 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Megatelecom Telecomunicacoes S.A]
-2026-08-13 15:56:22.632 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Nova Tecnologia e Telecomunicacoes]
-2026-08-13 15:56:22.634 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Opcao Telecom]
-2026-08-13 15:56:22.636 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Predialnet]
-2026-08-13 15:56:22.639 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Sistel Fibra]
-2026-08-13 15:56:22.641 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [T1 Telecom]
-2026-08-13 15:56:22.644 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Tri Telecom]
-2026-08-13 15:56:22.646 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [UFINET BRASIL]
-2026-08-13 15:56:22.648 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Unifique]
-2026-08-13 15:56:22.649 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Vonare]
-2026-08-13 15:56:22.651 | INFO    |src.services.batimento_detraf:executar:348 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 22. Total geral de arquivos encontrados: 13
-2026-08-13 15:56:22.652 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [ALGAR]: 1 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.653 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Adylnet Internet Provider]: 1 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.653 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Agil Telecom]: 1 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.654 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Atlanet Telecomunicacoes]: 0 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.654 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [BTT Telecomunicacoes S.A]: 0 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.655 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Desktop Sigmanet]: 1 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.656 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [GGNET Telecom]: 1 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.656 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Golden Line Telecom]: 0 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.657 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Invista Net]: 1 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.658 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Itelco Telecom]: 0 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.659 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [LH Telecomunicacoes LTDA]: 1 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.659 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Megalink Servicos]: 0 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.660 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Megatelecom Telecomunicacoes S.A]: 1 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.662 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Nova Tecnologia e Telecomunicacoes]: 1 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.663 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Opcao Telecom]: 0 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.664 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Predialnet]: 0 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.665 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Sistel Fibra]: 0 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.665 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [T1 Telecom]: 1 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.666 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Tri Telecom]: 1 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.666 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [UFINET BRASIL]: 1 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.667 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Unifique]: 1 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.668 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Vonare]: 0 arquivo(s) encontrado(s)
-2026-08-13 15:56:22.682 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:135 - Filtro de Histórico concluído para o período 202607.
-2026-08-13 15:56:22.682 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:135 - Arquivos originais recebidos: 13
-2026-08-13 15:56:22.683 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:135 - Arquivos já processados anteriormente (encontrados no JSON): 0
-2026-08-13 15:56:22.683 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:135 - Novos arquivos retornados para execução: 13
-2026-08-13 15:56:22.683 | INFO    |src.services.batimento_detraf:executar:349 - Preparando os arquivos de expectativa para validação...
-2026-08-13 15:56:22.686 | INFO    |src.services.batimento_detraf:executar:349 - Pasta [Vivo] processada -> Válidos: 2 | Inválidos/Ignorados: 0
-2026-08-13 15:56:22.689 | INFO    |src.services.batimento_detraf:executar:349 - Pasta [TLF] processada -> Válidos: 2 | Inválidos/Ignorados: 0
-2026-08-13 15:56:22.690 | ERROR   |src.services.batimento_detraf:_preparar_arquivos_expectativa:329 - [Q21] Sem expectativa Vivo em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Expectativa\MVNO]: não tem nenhum arquivo aprovado pela validação. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
-2026-08-13 15:56:22.693 | ERROR   |src.services.batimento_detraf:_preparar_arquivos_expectativa:329 - [Q21] Sem expectativa Vivo em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Expectativa\Detraf TRP]: não tem nenhum arquivo aprovado pela validação. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
-2026-08-13 15:56:22.694 | INFO    |src.services.batimento_detraf:executar:349 - Mapeamento de expectativa concluído. Total geral de arquivos válidos: 4
-2026-08-13 15:56:22.699 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Filtro de Histórico concluído para o período 202607.
-2026-08-13 15:56:22.700 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Arquivos originais recebidos: 4
-2026-08-13 15:56:22.700 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Arquivos já processados anteriormente (encontrados no JSON): 0
-2026-08-13 15:56:22.700 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Novos arquivos retornados para execução: 4
-2026-08-13 15:56:22.700 | INFO    |src.services.batimento_detraf:executar:363 - Iniciando mapeamento de operadoras para 4 arquivo(s).
-2026-08-13 15:56:22.716 | INFO    |src.services.batimento_detraf:_mapear_arquivos_por_operadora:196 - EOT não encontrado [ALGAR]
-2026-08-13 15:56:22.716 | ERROR   |src.services.batimento_detraf:executar:363 - Nenhum EOT válido encontrado para o arquivo: DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D_EXP.csv
-2026-08-13 15:56:22.721 | INFO    |src.services.batimento_detraf:_mapear_arquivos_por_operadora:196 - EOT não encontrado [ALGAR]
-2026-08-13 15:56:22.722 | ERROR   |src.services.batimento_detraf:executar:363 - Nenhum EOT válido encontrado para o arquivo: DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D_EXP.csv
-2026-08-13 15:56:22.727 | INFO    |src.services.batimento_detraf:_mapear_arquivos_por_operadora:196 - EOT não encontrado [ALGAR]
-2026-08-13 15:56:22.728 | ERROR   |src.services.batimento_detraf:executar:363 - Nenhum EOT válido encontrado para o arquivo: DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D_EXP.csv
-2026-08-13 15:56:22.733 | INFO    |src.services.batimento_detraf:_mapear_arquivos_por_operadora:196 - EOT não encontrado [ALGAR]
-2026-08-13 15:56:22.734 | ERROR   |src.services.batimento_detraf:executar:363 - Nenhum EOT válido encontrado para o arquivo: DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D_EXP.csv
-2026-08-13 15:56:22.734 | INFO    |src.services.batimento_detraf:executar:367 - Iniciando a apuração da contestação.
-2026-08-13 15:56:22.752 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=LH TELECOMUNICACOES LTDA | Arquivo=expectativa-telefonica-brasil-stfc-c-ldn-202607_EXP.xlsx | Linhas originais=4 | Linhas após filtro=3
-2026-08-13 15:56:22.753 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=LH TELECOMUNICACOES LTDA | Arquivos válidos=1 | Linhas consolidadas=3
-2026-08-13 15:56:22.753 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=LH TELECOMUNICACOES LTDA | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-13 15:56:22.758 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_detraf_mapeamento_descritores]
-2026-08-13 15:56:22.766 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_detraf_mapeamento_descritores] carregada | Linhas: 25 | Colunas: 8
-2026-08-13 15:56:22.808 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-13 15:56:22.821 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-13 15:56:22.821 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'LH TELECOMUNICACOES LTDA' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
-2026-08-13 15:56:22.832 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=INVISTA NET | Arquivo=expectativa-telefonica-brasil-stfc-c-ldn-202607_EXP.xlsx | Linhas originais=6 | Linhas após filtro=5
-2026-08-13 15:56:22.833 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=INVISTA NET | Arquivos válidos=1 | Linhas consolidadas=5
-2026-08-13 15:56:22.834 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=INVISTA NET | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-13 15:56:22.865 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-13 15:56:22.875 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-13 15:56:22.876 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'INVISTA NET' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
-2026-08-13 15:56:22.877 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=PREDIALNET | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-13 15:56:22.878 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=PREDIALNET | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-13 15:56:22.879 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'PREDIALNET'.
-2026-08-13 15:56:22.897 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=UNIFIQUE | Arquivo=202607 Detraf C SMS SMP Unifique X SMP Telefonica Brasil_EXP.xlsx | Linhas originais=73 | Linhas após filtro=71
-2026-08-13 15:56:22.898 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=UNIFIQUE | Arquivos válidos=1 | Linhas consolidadas=71
-2026-08-13 15:56:22.899 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=UNIFIQUE | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-13 15:56:23.032 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 26 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-13 15:56:23.046 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 26 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-13 15:56:23.046 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'UNIFIQUE' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 26
-2026-08-13 15:56:23.050 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=NOVA TECNOLOGIA E TELECOMUNICACOES | Arquivo=Detraf Nova x TLF_011 202607_EXP.csv | Linhas originais=4 | Linhas após filtro=4
-2026-08-13 15:56:23.051 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=NOVA TECNOLOGIA E TELECOMUNICACOES | Arquivos válidos=1 | Linhas consolidadas=4
-2026-08-13 15:56:23.052 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=NOVA TECNOLOGIA E TELECOMUNICACOES | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-13 15:56:23.086 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-13 15:56:23.096 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-13 15:56:23.096 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'NOVA TECNOLOGIA E TELECOMUNICACOES' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
-2026-08-13 15:56:23.101 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=MEGATELECOM TELECOMUNICACOES S.A | Arquivo=202607-C-DETRAF-LD-SAMM-TBRASMP_EXP.csv | Linhas originais=6 | Linhas após filtro=5
-2026-08-13 15:56:23.102 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=MEGATELECOM TELECOMUNICACOES S.A | Arquivos válidos=1 | Linhas consolidadas=5
-2026-08-13 15:56:23.103 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=MEGATELECOM TELECOMUNICACOES S.A | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-13 15:56:23.135 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-13 15:56:23.145 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-13 15:56:23.146 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'MEGATELECOM TELECOMUNICACOES S.A' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
-2026-08-13 15:56:23.154 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=T1 TELECOM | Arquivo=expectativa-telefonica-brasil-stfc-c-ldn-202607_EXP.xlsx | Linhas originais=4 | Linhas após filtro=3
-2026-08-13 15:56:23.154 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=T1 TELECOM | Arquivos válidos=1 | Linhas consolidadas=3
-2026-08-13 15:56:23.155 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=T1 TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-13 15:56:23.187 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-13 15:56:23.197 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-13 15:56:23.198 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'T1 TELECOM' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
-2026-08-13 15:56:23.214 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=UFINET BRASIL | Arquivo=Declaração de Tráfego UFINET x VIVO LDN 07-2026_EXP.xlsx | Linhas originais=5 | Linhas após filtro=4
-2026-08-13 15:56:23.214 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=UFINET BRASIL | Arquivos válidos=1 | Linhas consolidadas=4
-2026-08-13 15:56:23.215 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=UFINET BRASIL | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-13 15:56:23.247 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-13 15:56:23.256 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-13 15:56:23.257 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'UFINET BRASIL' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
-2026-08-13 15:56:23.258 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=ATLANET TELECOMUNICACOES | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-13 15:56:23.258 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=ATLANET TELECOMUNICACOES | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-13 15:56:23.260 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'ATLANET TELECOMUNICACOES'.
-2026-08-13 15:56:23.261 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=SISTEL FIBRA | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-13 15:56:23.262 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=SISTEL FIBRA | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-13 15:56:23.264 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'SISTEL FIBRA'.
-2026-08-13 15:56:23.264 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=ITELCO TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-13 15:56:23.265 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=ITELCO TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-13 15:56:23.267 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'ITELCO TELECOM'.
-2026-08-13 15:56:23.279 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=DESKTOP SIGMANET | Arquivo=layout-telefonica-brasil-stfc-c-ldn-202607_EXP.xlsx | Linhas originais=38 | Linhas após filtro=38
-2026-08-13 15:56:23.280 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=DESKTOP SIGMANET | Arquivos válidos=1 | Linhas consolidadas=38
-2026-08-13 15:56:23.281 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=DESKTOP SIGMANET | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-13 15:56:23.312 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-13 15:56:23.322 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-13 15:56:23.322 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'DESKTOP SIGMANET' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
-2026-08-13 15:56:23.323 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=OPCAO TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-13 15:56:23.325 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=OPCAO TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-13 15:56:23.326 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'OPCAO TELECOM'.
-2026-08-13 15:56:23.327 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=MEGALINK SERVICOS | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-13 15:56:23.328 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=MEGALINK SERVICOS | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-13 15:56:23.330 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'MEGALINK SERVICOS'.
-2026-08-13 15:56:23.335 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=ADYLNET INTERNET PROVIDER | Arquivo=202607-C-DETRAF-LD-ADYLNET-TBRASTFC_EXP.csv | Linhas originais=23 | Linhas após filtro=22
-2026-08-13 15:56:23.336 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=ADYLNET INTERNET PROVIDER | Arquivos válidos=1 | Linhas consolidadas=22
-2026-08-13 15:56:23.336 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=ADYLNET INTERNET PROVIDER | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-13 15:56:23.397 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 10 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-13 15:56:23.407 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 10 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-13 15:56:23.408 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'ADYLNET INTERNET PROVIDER' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 10
-2026-08-13 15:56:23.409 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=GOLDEN LINE TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-13 15:56:23.410 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=GOLDEN LINE TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-13 15:56:23.411 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'GOLDEN LINE TELECOM'.
-2026-08-13 15:56:23.412 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=VONARE | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-13 15:56:23.413 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=VONARE | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-13 15:56:23.415 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'VONARE'.
-2026-08-13 15:56:23.421 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=GGNET TELECOM | Arquivo=DETRAF-TMCO-0122-2026-GGNET-VIVO STFC - RESUMO_EOT_200_948_202607_EXP.csv | Linhas originais=18 | Linhas após filtro=17
-2026-08-13 15:56:23.423 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=GGNET TELECOM | Arquivos válidos=1 | Linhas consolidadas=17
-2026-08-13 15:56:23.424 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=GGNET TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-13 15:56:23.483 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 6 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-13 15:56:23.494 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 6 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-13 15:56:23.494 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'GGNET TELECOM' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 6
-2026-08-13 15:56:23.500 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=ALGAR | Arquivo=RELAM_SMS_ALGAR_X_VIVO_SMP_R_202607_V00_EXP.csv | Linhas originais=375 | Linhas após filtro=307
-2026-08-13 15:56:23.500 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=ALGAR | Arquivos válidos=1 | Linhas consolidadas=307
-2026-08-13 15:56:23.501 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=ALGAR | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-13 15:56:23.614 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 53 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-13 15:56:23.626 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 53 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-13 15:56:23.627 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'ALGAR' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 53
-2026-08-13 15:56:23.628 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=BTT TELECOMUNICACOES S.A | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-13 15:56:23.629 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=BTT TELECOMUNICACOES S.A | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-13 15:56:23.630 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'BTT TELECOMUNICACOES S.A'.
-2026-08-13 15:56:23.634 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=AGIL TELECOM | Arquivo=Agil_Vivo_202607_EXP.csv | Linhas originais=10 | Linhas após filtro=10
-2026-08-13 15:56:23.634 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=AGIL TELECOM | Arquivos válidos=1 | Linhas consolidadas=10
-2026-08-13 15:56:23.635 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=AGIL TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-13 15:56:23.683 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 8 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-13 15:56:23.694 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 8 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-13 15:56:23.694 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'AGIL TELECOM' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 8
-2026-08-13 15:56:23.698 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=TRI TELECOM | Arquivo=202607-C-DETRAF-LD-TRIADE-VIVOMOVEL_EXP.csv | Linhas originais=4 | Linhas após filtro=3
-2026-08-13 15:56:23.699 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=TRI TELECOM | Arquivos válidos=1 | Linhas consolidadas=3
-2026-08-13 15:56:23.700 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=TRI TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-13 15:56:23.732 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-13 15:56:23.743 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-13 15:56:23.743 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'TRI TELECOM' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
-2026-08-13 15:56:23.744 | INFO    |src.controllers.batimento_detraf_controller:batimento_detraf:10 - [STEP] Finalizando: BatimentoDetrafService.executar | Tempo gasto: 1.14s
-2026-08-13 15:56:23.745 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] Operadoras apuradas:      23
-2026-08-13 15:56:23.745 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] O resultado é a TABELA `tbl_rpa_log_detraf_despesa_contestacao`,
-2026-08-13 15:56:23.746 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] não um arquivo — a Base de Contestação virou tabela em 2026-08-04.
-2026-08-13 15:56:23.746 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] Próximo passo é humano: o analista sinaliza no WebFat o que
-2026-08-13 15:56:23.746 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] contestar e se haverá retenção. Só então o RPA 3 tem o que fazer.
-2026-08-13 15:56:23.747 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] Operadoras: ADYLNET INTERNET PROVIDER, AGIL TELECOM, ALGAR, ATLANET TELECOMUNICACOES, BTT TELECOMUNICACOES S.A, DESKTOP SIGMANET, GGNET TELECOM, GOLDEN LINE TELECOM, INVISTA NET, ITELCO TELECOM, LH TELECOMUNICACOES LTDA, MEGALINK SERVICOS, MEGATELECOM TELECOMUNICACOES S.A, NOVA TECNOLOGIA E TELECOMUNICACOES, OPCAO TELECOM, OPERADORA_NAO_IDENTIFICADA, PREDIALNET, SISTEL FIBRA, T1 TELECOM, TRI TELECOM, UFINET BRASIL, UNIFIQUE, VONARE
-2026-08-13 15:56:23.747 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] ────────────────────────────────────────────────────────────
-2026-08-13 15:56:23.747 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] Esta é a última etapa da execução.
-2026-08-13 15:56:23.747 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Concluído. Aguardando a decisão do analista no WebFat para o RPA 3 prosseguir.
-2026-08-13 15:56:23.748 | INFO    |__main__:main:97 - [STEP] Finalizando: run | Tempo gasto: 22.9s
-2026-08-13 15:56:23.749 | INFO    |__main__:main:118 - [Diagnóstico] Etapas desta execução em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\logs\NALPE0881WP\rpa2_validacao_apuracao\diagnosticos\2026-08-13_15-55-57.txt].
-2026-08-13 15:56:23.750 | INFO    |__main__:<module>:126 - [RPA 2] Diagnóstico das etapas em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\logs\NALPE0881WP\rpa2_validacao_apuracao\diagnosticos\2026-08-13_15-55-57.txt]
-PS C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado>                                                         
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\comum\integracoes\agi.py", line 480, in acessar_ambiente
+    self.aguardar_janela(titulo, timeout=30)
+    │    │               └ 'Portal Triad: Vivo - Produção'
+    │    └ <function AGI.aguardar_janela at 0x000002679483D580>
+    └ <comum.integracoes.agi.AGI object at 0x0000026793EEF230>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\comum\integracoes\agi.py", line 424, in aguardar_janela
+    raise AGIError(f"Janela '{nome_janela}' não apareceu em {timeout}s.")
+          │                   │                              └ 30
+          │                   └ 'Portal Triad: Vivo - Produção'
+          └ <class 'comum.integracoes.agi.AGIError'>
+
+comum.integracoes.agi.AGIError: Janela 'Portal Triad: Vivo - Produção' não apareceu em 30s.
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "C:\Program Files\Python313\Lib\runpy.py", line 198, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+           │         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+           │         └ <code object <module> at 0x00000267F4DB5610, file "c:\Users\TBR00841\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\...
+           └ <function _run_code at 0x00000267F4DBCC20>
+  File "C:\Program Files\Python313\Lib\runpy.py", line 88, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+         └ <code object <module> at 0x00000267F4DB5610, file "c:\Users\TBR00841\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\...
+
+  File "c:\Users\TBR00841\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\launcher/../..\debugpy\__main__.py", line 71, in <module>
+    cli.main()
+    │   └ <function main at 0x00000267F5F0C860>
+    └ <module 'debugpy.server.cli' from 'c:\\Users\\TBR00841\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\l...
+
+  File "c:\Users\TBR00841\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\launcher/../..\debugpy/..\debugpy\server\cli.py", line 542, in main
+    run()
+    └ <function run_file at 0x00000267F5F0C5E0>
+
+  File "c:\Users\TBR00841\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\launcher/../..\debugpy/..\debugpy\server\cli.py", line 361, in run_file
+    runpy.run_path(target, run_name="__main__")
+    │     │        └ 'C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\rpa3_contestacao_agi_ec\\main.py'
+    │     └ <function run_path at 0x00000267F5AD3D80>
+    └ <module '_pydevd_bundle.pydevd_runpy' from 'c:\\Users\\TBR00841\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\b...
+
+  File "c:\Users\TBR00841\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 310, in run_path
+    return _run_module_code(code, init_globals, run_name, pkg_name=pkg_name, script_name=fname)
+           │                │     │             │                  │                     └ 'C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\rpa3_contestacao_agi_ec\\main.py'
+           │                │     │             │                  └ ''
+           │                │     │             └ '__main__'
+           │                │     └ None
+           │                └ <code object <module> at 0x00000267F603F2C0, file "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa3_contestacao_agi_ec\...
+           └ <function _run_module_code at 0x00000267F5AD39C0>
+
+  File "c:\Users\TBR00841\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 127, in _run_module_code
+    _run_code(code, mod_globals, init_globals, mod_name, mod_spec, pkg_name, script_name)
+    │         │     │            │             │         │         │         └ 'C:\\RPA\\Dtraf\\MVP2\\MVP2\\DETRAF-UNIFICADO\\unificado\\rpa3_contestacao_agi_ec\\main.py'
+    │         │     │            │             │         │         └ ''
+    │         │     │            │             │         └ None
+    │         │     │            │             └ '__main__'
+    │         │     │            └ None
+    │         │     └ {'__name__': '__main__', '__doc__': 'RPA 3 — Contestação, Carga no AGI e Encontro de Contas.\n\nPonto de entrada do robô. Nen...
+    │         └ <code object <module> at 0x00000267F603F2C0, file "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa3_contestacao_agi_ec\...
+    └ <function _run_code at 0x00000267F5AD3560>
+
+  File "c:\Users\TBR00841\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 118, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': 'RPA 3 — Contestação, Carga no AGI e Encontro de Contas.\n\nPonto de entrada do robô. Nen...
+         └ <code object <module> at 0x00000267F603F2C0, file "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa3_contestacao_agi_ec\...
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa3_contestacao_agi_ec\main.py", line 164, in <module>
+    raise SystemExit(main())
+                     └ <function main at 0x00000267F687CEA0>
+
+> File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa3_contestacao_agi_ec\main.py", line 127, in main
+    operadoras_com_erro = run(
+                          └ <function run at 0x00000267F6D8B600>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\comum\utils\decoradores.py", line 22, in wrapper
+    return func(*args, **kwargs)
+           │     │       └ {'operadoras': [], 'referencia': None, 'etapa': None, 'diagnostico': <comum.config.diagnostico_execucao.DiagnosticoDeExecucao...
+           │     └ ()
+           └ <function run at 0x00000267F6D8AA20>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa3_contestacao_agi_ec\src\main\process_handle.py", line 31, in run
+    resultados = GeracaoAgiController().gerar_artefatos(
+                 └ <class 'src.controllers.geracao_agi_controller.GeracaoAgiController'>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\comum\utils\decoradores.py", line 22, in wrapper
+    return func(*args, **kwargs)
+           │     │       └ {'operadoras': None, 'referencia': None, 'etapa': None, 'diagnostico': <comum.config.diagnostico_execucao.DiagnosticoDeExecuc...
+           │     └ (<src.controllers.geracao_agi_controller.GeracaoAgiController object at 0x000002679143DA90>,)
+           └ <function GeracaoAgiController.gerar_artefatos at 0x000002679148AFC0>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa3_contestacao_agi_ec\src\controllers\geracao_agi_controller.py", line 321, in gerar_artefatos
+    self._carregar_no_agi(
+    │    └ <function GeracaoAgiController._carregar_no_agi at 0x000002679148B600>
+    └ <src.controllers.geracao_agi_controller.GeracaoAgiController object at 0x000002679143DA90>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa3_contestacao_agi_ec\src\controllers\geracao_agi_controller.py", line 805, in _carregar_no_agi
+    self.uploader_detraf.executar(
+    │    └ <property object at 0x000002679148CF90>
+    └ <src.controllers.geracao_agi_controller.GeracaoAgiController object at 0x000002679143DA90>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\comum\utils\decoradores.py", line 22, in wrapper
+    return func(*args, **kwargs)
+           │     │       └ {'desde': 1786718345.5683286}
+           │     └ (<src.services.upload_detraf_agi.UploadDetrafAGI object at 0x0000026793EEF0E0>, ['Adylnet Internet Provider', 'Agil Telecom',...
+           └ <function UploadDetrafAGI.executar at 0x000002679483E340>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa3_contestacao_agi_ec\src\services\upload_detraf_agi.py", line 218, in executar
+    self.agi.acessar_ambiente()
+    │    │   └ <function AGI.acessar_ambiente at 0x000002679483D6C0>
+    │    └ <comum.integracoes.agi.AGI object at 0x0000026793EEF230>
+    └ <src.services.upload_detraf_agi.UploadDetrafAGI object at 0x0000026793EEF0E0>
+
+  File "C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\comum\integracoes\agi.py", line 482, in acessar_ambiente
+    raise AGIError(
+          └ <class 'comum.integracoes.agi.AGIError'>
+
+comum.integracoes.agi.AGIError: Pedi o ambiente 'producao' e a janela 'Portal Triad: Vivo - Produção' não apareceu — o robô pode ter entrado no ambiente errado. Nada foi feito no AGI. (Janela 'Portal Triad: Vivo - Produção' não apareceu em 30s.)
+2026-08-14 11:43:56.512 | INFO    |__main__:main:149 - [Diagnóstico] Etapas desta execução em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\logs\NALPE0881WP\rpa3_contestacao_agi_ec\diagnosticos\2026-08-14_11-38-57.txt].
+2026-08-14 11:43:56.513 | INFO    |__main__:<module>:164 - [RPA 3] Diagnóstico das etapas em [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\logs\NALPE0881WP\rpa3_contestacao_agi_ec\diagnosticos\2026-08-14_11-38-57.txt]
