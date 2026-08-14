@@ -1,0 +1,23 @@
+RPA1 — Captura
+Lê a Caixa de Entrada do Outlook, organiza os e-mails de Detraf, identifica a operadora pelo EOT e salva os arquivos na árvore de pastas.
+
+
+.venv\Scripts\python rpa1_captura\main.py
+RPA2 — Validação/Apuração
+Busca a expectativa da Vivo (SFTP ClickHub), valida os arquivos das operadoras (layout, tarifa), compara os dois lados e grava o resultado na tabela de contestação — pra o analista decidir no WebFat.
+
+
+.venv\Scripts\python rpa2_validacao_apuracao\main.py
+(pra testar sem SFTP: --etapa expectativa --de-pasta CAMINHO)
+
+RPA3 — Contestação/AGI/EC
+Só age depois que o analista sinaliza no WebFat. Gera os arquivos da contestação (extrato, carta numerada, etc.), sobe no AGI, manda e-mail pra operadora e confere o relatório final.
+
+
+.venv\Scripts\python rpa3_contestacao_agi_ec\main.py
+RPA4 — Retificação
+Só entra em ação quando a Vivo recupera um tráfego que tinha contestado no mês anterior — lança esse evento de "Recuperação" no AGI. Se não houver recuperação no mês, ele termina com sucesso e zero processos (isso é o esperado, não erro). Ação irreversível no AGI, por isso merece cuidado extra.
+
+
+.venv\Scripts\python rpa4_retificacao\main.py --referencia 202507 --dry-run
+(sempre teste com --dry-run primeiro nesse — ele não desfaz o que grava no AGI)
