@@ -1,1 +1,5 @@
-.venv\Scripts\python -c "from src.services.upload_contestacao_agi import UploadContestacaoAGI; UploadContestacaoAGI().executar(['ALGAR'], '202603')
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    from src.services.upload_contestacao_agi import UploadContestacaoAGI; UploadContestacaoAGI().executar(['ALGAR'], '202603')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'src'

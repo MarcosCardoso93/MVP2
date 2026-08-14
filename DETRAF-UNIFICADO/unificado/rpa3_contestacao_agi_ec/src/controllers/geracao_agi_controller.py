@@ -802,9 +802,7 @@ class GeracaoAgiController:
             logger.info("[RPA 3] Nenhum artefato gerado — nada a carregar no AGI.")
             return
 
-        self.uploader_detraf.executar(
-            operadoras, referencia, raiz_operadoras, desde=inicio_da_execucao
-        )
+        self.uploader_detraf.executar(operadoras, referencia, raiz_operadoras, desde=inicio_da_execucao)
         self.uploader_contestacao.executar(operadoras, referencia, raiz_operadoras)
 
     # ------------------------------------------------------------------
