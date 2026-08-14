@@ -1,5 +1,2 @@
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-    from src.services.upload_contestacao_agi import UploadContestacaoAGI; UploadContestacaoAGI().executar(['ALGAR'], '202603')
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-ModuleNotFoundError: No module named 'src'
+PERMITIR_UPLOAD_AGI=true
+.venv\Scripts\python -c "import sys; sys.path.insert(0, 'rpa3_contestacao_agi_ec'); from src.services.upload_contestacao_agi import UploadContestacaoAGI; UploadContestacaoAGI().executar(['ALGAR'], '202603')"
