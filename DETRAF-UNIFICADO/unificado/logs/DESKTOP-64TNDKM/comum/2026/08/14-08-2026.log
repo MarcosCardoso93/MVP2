@@ -3831,3 +3831,180 @@ RuntimeError: conexão recusada
 2026-08-14 09:41:22.120 | INFO    |src.services.verificacao_relatorio:gravar_inconsistencias:260 - [HU-20] Impostos somados do relatório do AGI em 202507 — Vlr. CBS: R$ 88.00 | Vlr. IBS Estadual: R$ 55.00 | Vlr. IBS Municipal: R$ 22.00. **Informativo**: o Encontro de Contas não tem coluna de imposto, então não há comparação (pendência Q6). A V2 (¶367) trata os impostos como informativos até 2027.
 2026-08-14 09:41:22.128 | WARNING |test_verificacao_relatorio:test_a_planilha_de_divergencia_continua_saindo:452 - [HU-20] CLARO: AGI R$ 1,000.00 × EC R$ 1,000.00 — diferença de R$ 0.00.
 2026-08-14 09:41:22.129 | ERROR   |test_verificacao_relatorio:test_a_planilha_de_divergencia_continua_saindo:452 - [HU-20] 1 de 1 operadora(s) divergente(s) em 202507. Detalhe em [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-21\test_a_planilha_de_divergencia0\inconsistencias_202507_20260814_094122.xlsx].
+2026-08-14 15:43:58.146 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-14 15:43:58.147 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\BTIMES~1\AppData\Local\Temp\detraf_rpa4_teste_s5q9la7s\TABELAS_DETRAF_TESTE.db]
+2026-08-14 15:43:58.609 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-14 15:43:58.609 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\BTIMES~1\AppData\Local\Temp\detraf_rpa4_teste_s5q9la7s\TABELAS_DETRAF_TESTE.db]
+2026-08-14 15:43:58.612 | INFO    |test_deteccao_recuperacao:test_pega_apenas_a_variacao_negativa:37 - [HU-21] Processando 202507: procuro recuperações na contestação de 202506.
+2026-08-14 15:43:58.612 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-14 15:43:58.616 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 4 | Colunas: 19
+2026-08-14 15:43:58.623 | INFO    |src.services.deteccao_recuperacao:detectar:85 - [HU-21] 2 linha(s) com tráfego recuperado em 202506.
+2026-08-14 15:43:58.639 | INFO    |test_deteccao_recuperacao:test_pega_apenas_a_variacao_negativa:37 - [HU-21] Recuperação: CLARO (EOT 021) ref 202506 tráfego 202506: 1000.0 min, R$ 100.0
+2026-08-14 15:43:58.640 | INFO    |test_deteccao_recuperacao:test_pega_apenas_a_variacao_negativa:37 - [HU-21] Recuperação: CLARO (EOT 021) ref 202506 tráfego 202505: 100.0 min, R$ 20.0
+2026-08-14 15:43:58.648 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-14 15:43:58.648 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\BTIMES~1\AppData\Local\Temp\detraf_rpa4_teste_s5q9la7s\TABELAS_DETRAF_TESTE.db]
+2026-08-14 15:43:58.651 | INFO    |test_deteccao_recuperacao:test_ignora_o_que_ja_foi_marcado:49 - [HU-21] Processando 202507: procuro recuperações na contestação de 202506.
+2026-08-14 15:43:58.651 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-14 15:43:58.655 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 4 | Colunas: 19
+2026-08-14 15:43:58.658 | INFO    |src.services.deteccao_recuperacao:detectar:85 - [HU-21] 2 linha(s) com tráfego recuperado em 202506.
+2026-08-14 15:43:58.659 | INFO    |test_deteccao_recuperacao:test_ignora_o_que_ja_foi_marcado:49 - [HU-21] Recuperação: CLARO (EOT 021) ref 202506 tráfego 202506: 1000.0 min, R$ 100.0
+2026-08-14 15:43:58.659 | INFO    |test_deteccao_recuperacao:test_ignora_o_que_ja_foi_marcado:49 - [HU-21] Recuperação: CLARO (EOT 021) ref 202506 tráfego 202505: 100.0 min, R$ 20.0
+2026-08-14 15:43:58.666 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-14 15:43:58.667 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\BTIMES~1\AppData\Local\Temp\detraf_rpa4_teste_s5q9la7s\TABELAS_DETRAF_TESTE.db]
+2026-08-14 15:43:58.669 | INFO    |test_deteccao_recuperacao:test_mes_sem_recuperacao_devolve_lista_vazia:55 - [HU-21] Processando 209912: procuro recuperações na contestação de 209911.
+2026-08-14 15:43:58.670 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-14 15:43:58.675 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 4 | Colunas: 19
+2026-08-14 15:43:58.677 | INFO    |src.services.deteccao_recuperacao:detectar:85 - [HU-21] Nenhum tráfego recuperado em 209911.
+2026-08-14 15:43:58.687 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-14 15:43:58.687 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\BTIMES~1\AppData\Local\Temp\detraf_rpa4_teste_s5q9la7s\TABELAS_DETRAF_TESTE.db]
+2026-08-14 15:43:58.689 | INFO    |test_deteccao_recuperacao:test_procura_no_mes_anterior_ao_de_processamento:64 - [HU-21] Processando 202506: procuro recuperações na contestação de 202505.
+2026-08-14 15:43:58.690 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-14 15:43:58.693 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 4 | Colunas: 19
+2026-08-14 15:43:58.695 | INFO    |src.services.deteccao_recuperacao:detectar:85 - [HU-21] Nenhum tráfego recuperado em 202505.
+2026-08-14 15:43:58.703 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-14 15:43:58.703 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\BTIMES~1\AppData\Local\Temp\detraf_rpa4_teste_s5q9la7s\TABELAS_DETRAF_TESTE.db]
+2026-08-14 15:43:58.705 | INFO    |test_deteccao_recuperacao:test_minutos_e_valor_vem_absolutos:73 - [HU-21] Processando 202507: procuro recuperações na contestação de 202506.
+2026-08-14 15:43:58.705 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-14 15:43:58.709 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 4 | Colunas: 19
+2026-08-14 15:43:58.712 | INFO    |src.services.deteccao_recuperacao:detectar:85 - [HU-21] 2 linha(s) com tráfego recuperado em 202506.
+2026-08-14 15:43:58.712 | INFO    |test_deteccao_recuperacao:test_minutos_e_valor_vem_absolutos:73 - [HU-21] Recuperação: CLARO (EOT 021) ref 202506 tráfego 202506: 1000.0 min, R$ 100.0
+2026-08-14 15:43:58.713 | INFO    |test_deteccao_recuperacao:test_minutos_e_valor_vem_absolutos:73 - [HU-21] Recuperação: CLARO (EOT 021) ref 202506 tráfego 202505: 100.0 min, R$ 20.0
+2026-08-14 15:43:58.721 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-14 15:43:58.721 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\BTIMES~1\AppData\Local\Temp\detraf_rpa4_teste_s5q9la7s\TABELAS_DETRAF_TESTE.db]
+2026-08-14 15:43:58.723 | INFO    |test_deteccao_recuperacao:test_traz_as_quatro_chaves_do_cruzamento:87 - [HU-21] Processando 202507: procuro recuperações na contestação de 202506.
+2026-08-14 15:43:58.724 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-14 15:43:58.727 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 4 | Colunas: 19
+2026-08-14 15:43:58.731 | INFO    |src.services.deteccao_recuperacao:detectar:85 - [HU-21] 2 linha(s) com tráfego recuperado em 202506.
+2026-08-14 15:43:58.731 | INFO    |test_deteccao_recuperacao:test_traz_as_quatro_chaves_do_cruzamento:87 - [HU-21] Recuperação: CLARO (EOT 021) ref 202506 tráfego 202506: 1000.0 min, R$ 100.0
+2026-08-14 15:43:58.732 | INFO    |test_deteccao_recuperacao:test_traz_as_quatro_chaves_do_cruzamento:87 - [HU-21] Recuperação: CLARO (EOT 021) ref 202506 tráfego 202505: 100.0 min, R$ 20.0
+2026-08-14 15:43:58.741 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-14 15:43:58.741 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\BTIMES~1\AppData\Local\Temp\detraf_rpa4_teste_s5q9la7s\TABELAS_DETRAF_TESTE.db]
+2026-08-14 15:43:58.743 | INFO    |test_deteccao_recuperacao:test_ja_vem_com_os_valores_do_evento_calculados:99 - [HU-21] Processando 202507: procuro recuperações na contestação de 202506.
+2026-08-14 15:43:58.744 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-14 15:43:58.747 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 4 | Colunas: 19
+2026-08-14 15:43:58.750 | INFO    |src.services.deteccao_recuperacao:detectar:85 - [HU-21] 2 linha(s) com tráfego recuperado em 202506.
+2026-08-14 15:43:58.751 | INFO    |test_deteccao_recuperacao:test_ja_vem_com_os_valores_do_evento_calculados:99 - [HU-21] Recuperação: CLARO (EOT 021) ref 202506 tráfego 202506: 1000.0 min, R$ 100.0
+2026-08-14 15:43:58.751 | INFO    |test_deteccao_recuperacao:test_ja_vem_com_os_valores_do_evento_calculados:99 - [HU-21] Recuperação: CLARO (EOT 021) ref 202506 tráfego 202505: 100.0 min, R$ 20.0
+2026-08-14 15:43:58.759 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-14 15:43:58.759 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\BTIMES~1\AppData\Local\Temp\detraf_rpa4_teste_s5q9la7s\TABELAS_DETRAF_TESTE.db]
+2026-08-14 15:43:58.761 | INFO    |test_deteccao_recuperacao:test_marcar_tira_a_linha_da_proxima_deteccao:110 - [HU-21] Processando 202507: procuro recuperações na contestação de 202506.
+2026-08-14 15:43:58.762 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-14 15:43:58.765 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 4 | Colunas: 19
+2026-08-14 15:43:58.769 | INFO    |src.services.deteccao_recuperacao:detectar:85 - [HU-21] 2 linha(s) com tráfego recuperado em 202506.
+2026-08-14 15:43:58.769 | INFO    |test_deteccao_recuperacao:test_marcar_tira_a_linha_da_proxima_deteccao:110 - [HU-21] Recuperação: CLARO (EOT 021) ref 202506 tráfego 202506: 1000.0 min, R$ 100.0
+2026-08-14 15:43:58.770 | INFO    |test_deteccao_recuperacao:test_marcar_tira_a_linha_da_proxima_deteccao:110 - [HU-21] Recuperação: CLARO (EOT 021) ref 202506 tráfego 202505: 100.0 min, R$ 20.0
+2026-08-14 15:43:58.795 | INFO    |comum.dados.repositorio_tabelas:marcar_retificacao_no_agi:1245 - 1 linha(s) atualizada(s) em [tbl_rpa_log_detraf_despesa_contestacao].
+2026-08-14 15:43:58.796 | INFO    |comum.dados.repositorio_cache:recarregar_cache_local:375 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-14 15:43:58.800 | INFO    |comum.dados.repositorio_cache:recarregar_cache_local:375 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 4 | Colunas: 19
+2026-08-14 15:43:58.802 | INFO    |test_deteccao_recuperacao:test_marcar_tira_a_linha_da_proxima_deteccao:115 - [HU-21] Processando 202507: procuro recuperações na contestação de 202506.
+2026-08-14 15:43:58.806 | INFO    |src.services.deteccao_recuperacao:detectar:85 - [HU-21] 1 linha(s) com tráfego recuperado em 202506.
+2026-08-14 15:43:58.806 | INFO    |test_deteccao_recuperacao:test_marcar_tira_a_linha_da_proxima_deteccao:115 - [HU-21] Recuperação: CLARO (EOT 021) ref 202506 tráfego 202505: 100.0 min, R$ 20.0
+2026-08-14 15:43:58.814 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-14 15:43:58.815 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\BTIMES~1\AppData\Local\Temp\detraf_rpa4_teste_s5q9la7s\TABELAS_DETRAF_TESTE.db]
+2026-08-14 15:43:58.819 | INFO    |comum.dados.repositorio_tabelas:marcar_retificacao_no_agi:1245 - 0 linha(s) atualizada(s) em [tbl_rpa_log_detraf_despesa_contestacao].
+2026-08-14 15:43:58.820 | WARNING |test_deteccao_recuperacao:test_marcar_id_inexistente_avisa_e_nao_quebra:123 - [HU-21] Nenhuma linha de id 9999 foi marcada — ela será reprocessada na próxima execução, e o evento no AGI seria lançado de novo.
+2026-08-14 15:43:58.828 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-14 15:43:58.828 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\BTIMES~1\AppData\Local\Temp\detraf_rpa4_teste_s5q9la7s\TABELAS_DETRAF_TESTE.db]
+2026-08-14 15:43:58.830 | INFO    |test_orquestracao:test_desligado_nao_abre_o_agi:67 - [STEP] Iniciando: RetificacaoController.retificar
+2026-08-14 15:43:58.831 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Processando 202507: procuro recuperações na contestação de 202506.
+2026-08-14 15:43:58.831 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-14 15:43:58.834 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 4 | Colunas: 19
+2026-08-14 15:43:58.837 | INFO    |src.services.deteccao_recuperacao:detectar:85 - [HU-21] 2 linha(s) com tráfego recuperado em 202506.
+2026-08-14 15:43:58.837 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: CLARO (EOT 021) ref 202506 tráfego 202506: 1000.0 min, R$ 100.0
+2026-08-14 15:43:58.838 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: CLARO (EOT 021) ref 202506 tráfego 202505: 100.0 min, R$ 20.0
+2026-08-14 15:43:58.838 | WARNING |comum.utils.decoradores:wrapper:22 - [RPA 4] PERMITIR_ACESSO_AGI está desligado — as 2 recuperação(ões) acima foram calculadas e NÃO foram lançadas. É o modo de conferência.
+2026-08-14 15:43:58.839 | INFO    |test_orquestracao:test_desligado_nao_abre_o_agi:67 - [STEP] Finalizando: RetificacaoController.retificar | Tempo gasto: 0.01s
+2026-08-14 15:43:58.844 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-14 15:43:58.845 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\BTIMES~1\AppData\Local\Temp\detraf_rpa4_teste_s5q9la7s\TABELAS_DETRAF_TESTE.db]
+2026-08-14 15:43:58.847 | INFO    |test_orquestracao:test_desligado_diz_no_log_quantas_deixou_de_lancar:82 - [STEP] Iniciando: RetificacaoController.retificar
+2026-08-14 15:43:58.847 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Processando 202507: procuro recuperações na contestação de 202506.
+2026-08-14 15:43:58.847 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-14 15:43:58.850 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 4 | Colunas: 19
+2026-08-14 15:43:58.853 | INFO    |src.services.deteccao_recuperacao:detectar:85 - [HU-21] 2 linha(s) com tráfego recuperado em 202506.
+2026-08-14 15:43:58.853 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: CLARO (EOT 021) ref 202506 tráfego 202506: 1000.0 min, R$ 100.0
+2026-08-14 15:43:58.853 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: CLARO (EOT 021) ref 202506 tráfego 202505: 100.0 min, R$ 20.0
+2026-08-14 15:43:58.853 | WARNING |comum.utils.decoradores:wrapper:22 - [RPA 4] PERMITIR_ACESSO_AGI está desligado — as 2 recuperação(ões) acima foram calculadas e NÃO foram lançadas. É o modo de conferência.
+2026-08-14 15:43:58.854 | INFO    |test_orquestracao:test_desligado_diz_no_log_quantas_deixou_de_lancar:82 - [STEP] Finalizando: RetificacaoController.retificar | Tempo gasto: 0.01s
+2026-08-14 15:43:58.859 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-14 15:43:58.859 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\BTIMES~1\AppData\Local\Temp\detraf_rpa4_teste_s5q9la7s\TABELAS_DETRAF_TESTE.db]
+2026-08-14 15:43:58.861 | INFO    |test_orquestracao:test_lanca_e_marca_cada_recuperacao:93 - [STEP] Iniciando: RetificacaoController.retificar
+2026-08-14 15:43:58.862 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Processando 202507: procuro recuperações na contestação de 202506.
+2026-08-14 15:43:58.862 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-14 15:43:58.864 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 4 | Colunas: 19
+2026-08-14 15:43:58.867 | INFO    |src.services.deteccao_recuperacao:detectar:85 - [HU-21] 2 linha(s) com tráfego recuperado em 202506.
+2026-08-14 15:43:58.867 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: CLARO (EOT 021) ref 202506 tráfego 202506: 1000.0 min, R$ 100.0
+2026-08-14 15:43:58.868 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: CLARO (EOT 021) ref 202506 tráfego 202505: 100.0 min, R$ 20.0
+2026-08-14 15:43:58.873 | INFO    |comum.dados.repositorio_tabelas:marcar_retificacao_no_agi:1245 - 1 linha(s) atualizada(s) em [tbl_rpa_log_detraf_despesa_contestacao].
+2026-08-14 15:43:58.873 | INFO    |comum.dados.repositorio_cache:recarregar_cache_local:375 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-14 15:43:58.875 | INFO    |comum.dados.repositorio_cache:recarregar_cache_local:375 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 4 | Colunas: 19
+2026-08-14 15:43:58.879 | INFO    |comum.dados.repositorio_tabelas:marcar_retificacao_no_agi:1245 - 1 linha(s) atualizada(s) em [tbl_rpa_log_detraf_despesa_contestacao].
+2026-08-14 15:43:58.880 | INFO    |comum.dados.repositorio_cache:recarregar_cache_local:375 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-14 15:43:58.882 | INFO    |comum.dados.repositorio_cache:recarregar_cache_local:375 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 4 | Colunas: 19
+2026-08-14 15:43:58.882 | INFO    |test_orquestracao:test_lanca_e_marca_cada_recuperacao:93 - [STEP] Finalizando: RetificacaoController.retificar | Tempo gasto: 0.02s
+2026-08-14 15:43:58.882 | INFO    |test_orquestracao:test_lanca_e_marca_cada_recuperacao:100 - [HU-21] Processando 202507: procuro recuperações na contestação de 202506.
+2026-08-14 15:43:58.885 | INFO    |src.services.deteccao_recuperacao:detectar:85 - [HU-21] Nenhum tráfego recuperado em 202506.
+2026-08-14 15:43:58.892 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-14 15:43:58.893 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\BTIMES~1\AppData\Local\Temp\detraf_rpa4_teste_s5q9la7s\TABELAS_DETRAF_TESTE.db]
+2026-08-14 15:43:58.895 | INFO    |test_orquestracao:test_o_que_falha_nao_e_marcado:111 - [STEP] Iniciando: RetificacaoController.retificar
+2026-08-14 15:43:58.895 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Processando 202507: procuro recuperações na contestação de 202506.
+2026-08-14 15:43:58.895 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-14 15:43:58.899 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 4 | Colunas: 19
+2026-08-14 15:43:58.902 | INFO    |src.services.deteccao_recuperacao:detectar:85 - [HU-21] 2 linha(s) com tráfego recuperado em 202506.
+2026-08-14 15:43:58.903 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: CLARO (EOT 021) ref 202506 tráfego 202506: 1000.0 min, R$ 100.0
+2026-08-14 15:43:58.903 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: CLARO (EOT 021) ref 202506 tráfego 202505: 100.0 min, R$ 20.0
+2026-08-14 15:43:58.908 | INFO    |comum.dados.repositorio_tabelas:marcar_retificacao_no_agi:1245 - 1 linha(s) atualizada(s) em [tbl_rpa_log_detraf_despesa_contestacao].
+2026-08-14 15:43:58.908 | INFO    |comum.dados.repositorio_cache:recarregar_cache_local:375 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-14 15:43:58.910 | INFO    |comum.dados.repositorio_cache:recarregar_cache_local:375 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 4 | Colunas: 19
+2026-08-14 15:43:58.910 | INFO    |test_orquestracao:test_o_que_falha_nao_e_marcado:111 - [STEP] Finalizando: RetificacaoController.retificar | Tempo gasto: 0.02s
+2026-08-14 15:43:58.910 | INFO    |test_orquestracao:test_o_que_falha_nao_e_marcado:117 - [HU-21] Processando 202507: procuro recuperações na contestação de 202506.
+2026-08-14 15:43:58.912 | INFO    |src.services.deteccao_recuperacao:detectar:85 - [HU-21] 1 linha(s) com tráfego recuperado em 202506.
+2026-08-14 15:43:58.913 | INFO    |test_orquestracao:test_o_que_falha_nao_e_marcado:117 - [HU-21] Recuperação: CLARO (EOT 021) ref 202506 tráfego 202505: 100.0 min, R$ 20.0
+2026-08-14 15:43:58.918 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-14 15:43:58.919 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\BTIMES~1\AppData\Local\Temp\detraf_rpa4_teste_s5q9la7s\TABELAS_DETRAF_TESTE.db]
+2026-08-14 15:43:58.920 | INFO    |test_orquestracao:test_uma_falha_nao_derruba_as_demais:126 - [STEP] Iniciando: RetificacaoController.retificar
+2026-08-14 15:43:58.921 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Processando 202507: procuro recuperações na contestação de 202506.
+2026-08-14 15:43:58.921 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-14 15:43:58.924 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 4 | Colunas: 19
+2026-08-14 15:43:58.926 | INFO    |src.services.deteccao_recuperacao:detectar:85 - [HU-21] 2 linha(s) com tráfego recuperado em 202506.
+2026-08-14 15:43:58.927 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: CLARO (EOT 021) ref 202506 tráfego 202506: 1000.0 min, R$ 100.0
+2026-08-14 15:43:58.927 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: CLARO (EOT 021) ref 202506 tráfego 202505: 100.0 min, R$ 20.0
+2026-08-14 15:43:58.938 | INFO    |comum.dados.repositorio_tabelas:marcar_retificacao_no_agi:1245 - 1 linha(s) atualizada(s) em [tbl_rpa_log_detraf_despesa_contestacao].
+2026-08-14 15:43:58.938 | INFO    |comum.dados.repositorio_cache:recarregar_cache_local:375 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-14 15:43:58.940 | INFO    |comum.dados.repositorio_cache:recarregar_cache_local:375 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 4 | Colunas: 19
+2026-08-14 15:43:58.941 | INFO    |test_orquestracao:test_uma_falha_nao_derruba_as_demais:126 - [STEP] Finalizando: RetificacaoController.retificar | Tempo gasto: 0.02s
+2026-08-14 15:43:58.947 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-14 15:43:58.947 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\BTIMES~1\AppData\Local\Temp\detraf_rpa4_teste_s5q9la7s\TABELAS_DETRAF_TESTE.db]
+2026-08-14 15:43:58.949 | INFO    |test_orquestracao:test_a_sessao_do_agi_e_fechada_mesmo_com_erro:134 - [STEP] Iniciando: RetificacaoController.retificar
+2026-08-14 15:43:58.950 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Processando 202507: procuro recuperações na contestação de 202506.
+2026-08-14 15:43:58.950 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-14 15:43:58.955 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 4 | Colunas: 19
+2026-08-14 15:43:58.957 | INFO    |src.services.deteccao_recuperacao:detectar:85 - [HU-21] 2 linha(s) com tráfego recuperado em 202506.
+2026-08-14 15:43:58.958 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: CLARO (EOT 021) ref 202506 tráfego 202506: 1000.0 min, R$ 100.0
+2026-08-14 15:43:58.959 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: CLARO (EOT 021) ref 202506 tráfego 202505: 100.0 min, R$ 20.0
+2026-08-14 15:43:58.959 | INFO    |test_orquestracao:test_a_sessao_do_agi_e_fechada_mesmo_com_erro:134 - [STEP] Finalizando: RetificacaoController.retificar | Tempo gasto: 0.01s
+2026-08-14 15:43:58.965 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-14 15:43:58.965 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\BTIMES~1\AppData\Local\Temp\detraf_rpa4_teste_s5q9la7s\TABELAS_DETRAF_TESTE.db]
+2026-08-14 15:43:58.966 | INFO    |test_orquestracao:test_mes_sem_recuperacao_nao_abre_o_agi:147 - [STEP] Iniciando: RetificacaoController.retificar
+2026-08-14 15:43:58.967 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Processando 209912: procuro recuperações na contestação de 209911.
+2026-08-14 15:43:58.968 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-14 15:43:58.971 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 4 | Colunas: 19
+2026-08-14 15:43:58.973 | INFO    |src.services.deteccao_recuperacao:detectar:85 - [HU-21] Nenhum tráfego recuperado em 209911.
+2026-08-14 15:43:58.973 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 4] Nada a retificar. Num mês sem recuperação este é o resultado certo, e não uma falha.
+2026-08-14 15:43:58.973 | INFO    |test_orquestracao:test_mes_sem_recuperacao_nao_abre_o_agi:147 - [STEP] Finalizando: RetificacaoController.retificar | Tempo gasto: 0.01s
+2026-08-14 15:43:58.980 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-14 15:43:58.981 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\BTIMES~1\AppData\Local\Temp\detraf_rpa4_teste_s5q9la7s\TABELAS_DETRAF_TESTE.db]
+2026-08-14 15:43:58.983 | INFO    |test_orquestracao:test_so_deteccao_nao_abre_o_agi:159 - [STEP] Iniciando: RetificacaoController.retificar
+2026-08-14 15:43:58.983 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Processando 202507: procuro recuperações na contestação de 202506.
+2026-08-14 15:43:58.984 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-14 15:43:58.988 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 4 | Colunas: 19
+2026-08-14 15:43:58.991 | INFO    |src.services.deteccao_recuperacao:detectar:85 - [HU-21] 2 linha(s) com tráfego recuperado em 202506.
+2026-08-14 15:43:58.991 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: CLARO (EOT 021) ref 202506 tráfego 202506: 1000.0 min, R$ 100.0
+2026-08-14 15:43:58.991 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: CLARO (EOT 021) ref 202506 tráfego 202505: 100.0 min, R$ 20.0
+2026-08-14 15:43:58.991 | INFO    |src.controllers.retificacao_controller:retificar:62 - [RPA 4] Etapa 'retificacao' pulada por --etapa=deteccao.
+2026-08-14 15:43:58.992 | INFO    |test_orquestracao:test_so_deteccao_nao_abre_o_agi:159 - [STEP] Finalizando: RetificacaoController.retificar | Tempo gasto: 0.01s
+2026-08-14 15:43:59.002 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-14 15:43:59.002 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\BTIMES~1\AppData\Local\Temp\detraf_rpa4_teste_s5q9la7s\TABELAS_DETRAF_TESTE.db]
+2026-08-14 15:43:59.005 | INFO    |test_orquestracao:test_so_retificacao_nao_tem_o_que_lancar:173 - [STEP] Iniciando: RetificacaoController.retificar
+2026-08-14 15:43:59.005 | INFO    |src.controllers.retificacao_controller:retificar:48 - [RPA 4] Etapa 'deteccao' pulada por --etapa=retificacao.
+2026-08-14 15:43:59.005 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 4] Nada a retificar. Num mês sem recuperação este é o resultado certo, e não uma falha.
+2026-08-14 15:43:59.006 | INFO    |test_orquestracao:test_so_retificacao_nao_tem_o_que_lancar:173 - [STEP] Finalizando: RetificacaoController.retificar | Tempo gasto: 0.0s

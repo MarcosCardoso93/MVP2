@@ -23,6 +23,7 @@ from comum.config import configuration
 from comum.config.logger_config import logger
 from comum.dominio.retificacao import ProcessoNaoIdentificado, achar_id_processo
 from comum.integracoes.agi import AGI, AGIError
+from comum.utils import pausa
 
 #: Nome do CSV que a grid exporta a cada iteração.
 NOME_CSV_EXPORTADO = "contestacao_exportada.csv"
@@ -104,6 +105,23 @@ class RetificacaoAgiService:
             # que dá para desistir sem consequência.
             self.agi.validar_processo_selecionado(resultado.id_processo)
 
+            # 🔴 2026-08-14: parada só pra testar navegação/seleção de
+            # processo — dá pra conferir na tela que o processo certo abriu,
+            # antes do lançamento irreversível. Com `--pausar` desligado (o
+            # normal em produção) isto não pausa nada — ver `pausa.pausar`.
+            pausa.pausar(
+                titulo="RPA 4 — HU-21: lançamento da Recuperação no AGI",
+                linhas=[
+                    f"Processo selecionado e validado: {resultado.id_processo}",
+                    recuperacao.descrever(),
+                    "",
+                    "Confira na tela se é este o processo certo antes de continuar.",
+                ],
+                proxima_etapa=(
+                    "lançar o evento de Recuperação — IRREVERSÍVEL, sem desfazer"
+                ),
+            )
+
             self.agi.lancar_evento_recuperacao(recuperacao.valores_evento)
             resultado.lancado = True
 
@@ -112,6 +130,11 @@ class RetificacaoAgiService:
             logger.error(
                 f"[HU-21] {recuperacao.descrever()} — não retificada: {erro}"
             )
+        except pausa.ExecucaoCanceladaPeloOperador:
+            # Não é falha de processo — é decisão humana, e vale para a
+            # execução inteira, não só para esta recuperação. Repassa, em vez
+            # de tratar como "erro inesperado" e seguir para a próxima.
+            raise
         except Exception as erro:  # noqa: BLE001 - um processo não derruba os outros
             resultado.erro = str(erro)
             logger.excecao(

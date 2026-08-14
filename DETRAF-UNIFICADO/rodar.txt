@@ -30,3 +30,29 @@ PERMITIR_UPLOAD_AGI=true
 (sem --pausar, roda igual a antes — a parada só existe se você pedir)
 
 Limitação: a parada é uma vez antes do lote inteiro, não uma por operadora — ao clicar "Continuar" ele sobe todas as pendentes seguidas.
+
+RPA3 — testar SÓ a navegação da Contestação (HU-18), isolada do Detraf (HU-17)
+As duas telas não têm nada em comum (imagens diferentes) — testar uma não valida a outra. Usa o CONT_PROC que já existe em disco pra ALGAR/202603, sem precisar rodar o RPA3 inteiro.
+
+PERMITIR_UPLOAD_AGI=true
+.venv\Scripts\python -c "import sys; sys.path.insert(0, 'rpa3_contestacao_agi_ec'); from src.services.upload_contestacao_agi import UploadContestacaoAGI; UploadContestacaoAGI().executar(['ALGAR'], '202603')"
+
+Mesma lógica: abre o AGI, loga, navega até "Contestação > Gerenciar" e para antes de subir/salvar. Cancele pra não gravar nada.
+
+RPA4 — testar a navegação, parando antes do lançamento (irreversível)
+Mesma ideia dos outros: o robô abre o AGI, loga, filtra, exporta, seleciona e VALIDA o processo (confirma na tela que é o certo) — e para exatamente aí, antes do lançamento do evento de Recuperação, que não tem como desfazer.
+
+PERMITIR_ACESSO_AGI=true
+.venv\Scripts\python rpa4_retificacao\main.py --referencia 202507 --pausar
+
+Atenção: só chega a abrir o AGI se existir recuperação de verdade pra essa referência (variação negativa contestada no mês anterior). Sem isso, ele reporta "0 processos" e nunca toca no AGI — não é falha, é o esperado.
+
+RPA4 — testar login + navegação + exportação da grid (real, sem sintético)
+Não precisa de recuperação nenhuma cadastrada — abre o AGI, loga, vai até "Contestação > Gerenciar", filtra por período e exporta a grid real pra CSV. Só leitura, nada é gravado.
+
+.venv\Scripts\python -c "import sys; sys.path.insert(0, 'rpa4_retificacao'); from src.services.retificacao_agi import RetificacaoAgiService, pasta_de_trabalho; s = RetificacaoAgiService(); s.abrir_sessao(); s.agi.filtrar_por_periodo(); print(s.agi.exportar_grid_csv(pasta_de_trabalho() / 'teste_exportacao.csv')); s.fechar_sessao()"
+
+RPA4 — testar o cruzamento EOT+Referência+Tráfego+Valor (lógica pura, sem AGI)
+Fabrica um CSV local no formato que o AGI exportaria e confere se acha a linha certa — inclusive o caso real de duas linhas quase iguais, distinguidas só pelo valor.
+
+.venv\Scripts\python testar_rpa4_cruzamento.py
