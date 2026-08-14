@@ -21,3 +21,12 @@ Só entra em ação quando a Vivo recupera um tráfego que tinha contestado no m
 
 .venv\Scripts\python rpa4_retificacao\main.py --referencia 202507 --dry-run
 (sempre teste com --dry-run primeiro nesse — ele não desfaz o que grava no AGI)
+
+RPA3 — testar o mapeamento de tela do AGI, sem subir nada de verdade
+O robô entra no AGI, loga de verdade e navega até a tela certa (Detraf > Importar Dados, ou Contestação > Gerenciar) — e PARA aí, com uma caixa mostrando o que está pendente pra subir. Só depois de clicar "Continuar" ele sobe de verdade. Se cancelar, nada é gravado e o AGI fecha limpo.
+
+PERMITIR_UPLOAD_AGI=true
+.venv\Scripts\python rpa3_contestacao_agi_ec\main.py --pausar
+(sem --pausar, roda igual a antes — a parada só existe se você pedir)
+
+Limitação: a parada é uma vez antes do lote inteiro, não uma por operadora — ao clicar "Continuar" ele sobe todas as pendentes seguidas.

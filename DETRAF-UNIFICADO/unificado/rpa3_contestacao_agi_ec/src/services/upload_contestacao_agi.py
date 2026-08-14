@@ -37,6 +37,7 @@ from comum.arquivos import estrutura_pastas as ep
 from comum.config import configuration
 from comum.config.logger_config import logger
 from comum.dados.repositorio_tabelas import RepositorioTabelas
+from comum.utils import pausa
 from comum.utils.decoradores import log_execucao
 from comum.integracoes.agi import AGI, AGIError, RAIZ_IMAGENS
 from src.services.upload_detraf_agi import capturar_evidencia_sucesso
@@ -140,6 +141,25 @@ class UploadContestacaoAGI:
             self.agi.acessar_ambiente()
             self.agi.login()
             self.navegar_contestacao_gerenciar()
+
+            # 🔴 2026-08-14: parada só pra testar o mapeamento de tela — login e
+            # navegação já aconteceram de verdade, mas nada foi gravado ainda.
+            # Com `--pausar` desligado (o normal em produção) isto não pausa
+            # nada — ver `pausa.pausar`.
+            pausa.pausar(
+                titulo="RPA 3 — HU-18: upload do CONT_PROC no AGI",
+                linhas=[
+                    "Login e navegação até 'Contestação > Gerenciar' concluídos — "
+                    "confira na tela se o AGI abriu no lugar certo.",
+                    "",
+                    f"{len(pendencias)} arquivo(s) pendente(s) de upload:",
+                    *(f"  {operadora}: {caminho.name}" for operadora, caminho in pendencias),
+                ],
+                proxima_etapa=(
+                    "upload + clique em Salvar, um por um — ESCREVE NO AGI DE "
+                    "PRODUÇÃO, sem desfazer"
+                ),
+            )
 
             for operadora, caminho in pendencias:
                 try:

@@ -66,6 +66,7 @@ from comum.arquivos import estrutura_pastas as ep
 from comum.config import configuration
 from comum.config import constantes as const
 from comum.config.logger_config import logger
+from comum.utils import pausa
 from comum.utils.decoradores import log_execucao
 from comum.integracoes.agi import AGI, AGIError, RAIZ_IMAGENS
 
@@ -217,6 +218,26 @@ class UploadDetrafAGI:
             self.agi.acessar_ambiente()
             self.agi.login()
             self.navegar_importar_dados()
+
+            # 🔴 2026-08-14: parada só pra testar o mapeamento de tela — login e
+            # navegação já aconteceram de verdade, mas nada foi gravado ainda.
+            # Com `--pausar` desligado (o normal em produção) isto não pausa
+            # nada — ver `pausa.pausar`.
+            pausa.pausar(
+                titulo="RPA 3 — HU-17: upload de EXT/INT no AGI",
+                linhas=[
+                    "Login e navegação até 'Detraf > Importar Dados' concluídos — "
+                    "confira na tela se o AGI abriu no lugar certo.",
+                    "",
+                    f"{len(pendencias)} arquivo(s) pendente(s) de upload:",
+                    *(f"  {operadora}: {caminho.name}" for operadora, caminho in pendencias),
+                ],
+                proxima_etapa=(
+                    "upload de cada arquivo, um por um — ESCREVE NO AGI DE "
+                    "PRODUÇÃO, sem desfazer"
+                ),
+            )
+
             self.subir(pendencias)
         finally:
             self.agi.fechar()
