@@ -1,3 +1,3 @@
-[Environment]::SetEnvironmentVariable("CLICKHUB_SFTP_HOST", "valor_aqui", "Machine")
-[Environment]::SetEnvironmentVariable("CLICKHUB_SFTP_USER", "valor_aqui", "Machine")
-[Environment]::SetEnvironmentVariable("CLICKHUB_SFTP_PASSWORD", "valor_aqui", "Machine")
+[Environment]::SetEnvironmentVariable("CLICKHUB_SFTP_HOST", "BRTLVLTS1739FU", "Machine")
+[Environment]::SetEnvironmentVariable("CLICKHUB_SFTP_USER", "ictprd", "Machine")
+[Environment]::SetEnvironmentVariable("CLICKHUB_SFTP_PASSWORD", "vivo@2023", "Machine")
