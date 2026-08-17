@@ -369,6 +369,29 @@ class BatimentoDetrafService:
             arquivos_expectativa_mapeados,
         )
 
+        # 🔴 2026-08-17: faltava isto. `_preparar_arquivos_detrafs` e
+        # `_preparar_arquivos_expectativa` FILTRAM pelo histórico
+        # (`filtrar_arquivos_novos`), mas nada aqui GRAVAVA o resultado — ao
+        # contrário da validação, que registra em
+        # `_salvar_historico_arquivos_processados`. Sem isso, toda reexecução
+        # no mesmo mês via os mesmos arquivos de `_SAIDA` como "novos" e
+        # reinseria a mesma contestação em `tbl_rpa_log_detraf_despesa_contestacao`
+        # — visto de verdade em 2026-08-17, duas rodadas seguidas duplicando as
+        # 23 operadoras apuradas.
+        arquivos_processados = [
+            arquivo
+            for arquivos in arquivos_detraf_mapeados.values()
+            for arquivo in arquivos
+        ] + [
+            arquivo
+            for arquivos in arquivos_expectativa_mapeados.values()
+            for arquivo in arquivos
+        ]
+        if arquivos_processados:
+            self.historico_rpa.registrar_arquivos(
+                lista_caminhos=arquivos_processados, status_valido=True
+            )
+
         operadoras = sorted(
             set(arquivos_detraf_mapeados) | set(arquivos_expectativa_mapeados)
         )

@@ -1,0 +1,987 @@
+2026-08-17 17:21:21.074 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-17 17:21:21.091 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\BTIMES~1\AppData\Local\Temp\detraf_rpa2_teste_yi_fca6j\TABELAS_DETRAF_TESTE.db]
+2026-08-17 17:21:21.640 | WARNING |src.services.captacao_expectativa:executar:181 - [MODO SEGURO] PERMITIR_DOWNLOAD_SFTP está desligado — nada foi baixado. A validação segue com o que já está em [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-24\test_desligado_nao_conecta0\Expectativa].
+2026-08-17 17:21:21.645 | WARNING |src.services.captacao_expectativa:executar:181 - [MODO SEGURO] PERMITIR_DOWNLOAD_SFTP está desligado — nada foi baixado. A validação segue com o que já está em [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-24\test_desligado_avisa_no_log0\Expectativa].
+2026-08-17 17:21:21.651 | INFO    |test_captacao_expectativa:test_de_pasta_funciona_com_o_switch_desligado:147 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:21.652 | INFO    |src.services.captacao_expectativa:executar:191 - [Expectativa] Origem simulada em disco: [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-24\test_de_pasta_funciona_com_o_s0\origem]
+2026-08-17 17:21:21.653 | INFO    |src.services.captacao_expectativa:_origens_de:218 - [Expectativa] A origem é um diretório plano — o destino de cada arquivo sai do nome dele.
+2026-08-17 17:21:21.654 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-24\test_de_pasta_funciona_com_o_s0\origem -> pelo nome: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.657 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Vivo/DETRAF_202603_VIVO_D.csv
+2026-08-17 17:21:21.662 | INFO    |test_captacao_expectativa:test_cada_origem_cai_na_subpasta_certa:163 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:21.662 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_SMS_ITF -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.663 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_VIVO -> Vivo: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.664 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Vivo/A_202603_D.csv
+2026-08-17 17:21:21.664 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TELEFONICA -> TLF: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.666 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: TLF/B_202603_D.csv
+2026-08-17 17:21:21.666 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/MVNO/NEXTEL/DESMP -> MVNO: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.667 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: MVNO/C_202603_D.csv
+2026-08-17 17:21:21.668 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TRP -> Detraf TRP: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.669 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Detraf TRP/D_202603_D.csv
+2026-08-17 17:21:21.675 | INFO    |test_captacao_expectativa:test_as_duas_origens_da_vivo_caem_na_mesma_pasta:177 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:21.676 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_SMS_ITF -> Vivo: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.677 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Vivo/SMS_202603_D.csv
+2026-08-17 17:21:21.677 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_VIVO -> Vivo: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.678 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Vivo/VIVO_202603_D.csv
+2026-08-17 17:21:21.678 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TELEFONICA -> TLF: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.679 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/MVNO/NEXTEL/DESMP -> MVNO: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.679 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TRP -> Detraf TRP: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.687 | INFO    |test_captacao_expectativa:test_pasta_remota_indisponivel_nao_derruba_as_outras:207 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:21.687 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_SMS_ITF -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.688 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_VIVO -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.688 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TELEFONICA -> TLF: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.689 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: TLF/B_202603_D.csv
+2026-08-17 17:21:21.689 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/MVNO/NEXTEL/DESMP -> MVNO: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.690 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TRP -> Detraf TRP: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.696 | INFO    |test_captacao_expectativa:test_falha_num_arquivo_nao_derruba_os_demais:224 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:21.696 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_SMS_ITF -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.696 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_VIVO -> Vivo: 2 de 2 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.697 | ERROR   |src.services.captacao_expectativa:executar:199 - [Expectativa] Falhou [A_202603_D.csv]: disco cheio
+2026-08-17 17:21:21.698 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Vivo/B_202603_D.csv
+2026-08-17 17:21:21.698 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TELEFONICA -> TLF: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.699 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/MVNO/NEXTEL/DESMP -> MVNO: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.699 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TRP -> Detraf TRP: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.705 | INFO    |test_captacao_expectativa:test_a_sessao_e_fechada_mesmo_sem_nada_para_baixar:232 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:21.705 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_SMS_ITF -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.706 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_VIVO -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.706 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TELEFONICA -> TLF: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.706 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/MVNO/NEXTEL/DESMP -> MVNO: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.706 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TRP -> Detraf TRP: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.706 | WARNING |test_captacao_expectativa:test_a_sessao_e_fechada_mesmo_sem_nada_para_baixar:232 - [Expectativa] Nenhum arquivo _D de 202603 foi trazido. A validação vai seguir com o que já estiver na pasta — confira se o período está certo antes de tratar como defeito.
+2026-08-17 17:21:21.711 | INFO    |test_captacao_expectativa:test_nada_encontrado_avisa_sem_falhar:241 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:21.711 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_SMS_ITF -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.712 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_VIVO -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.712 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TELEFONICA -> TLF: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.712 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/MVNO/NEXTEL/DESMP -> MVNO: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.712 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TRP -> Detraf TRP: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.713 | WARNING |test_captacao_expectativa:test_nada_encontrado_avisa_sem_falhar:241 - [Expectativa] Nenhum arquivo _D de 202603 foi trazido. A validação vai seguir com o que já estiver na pasta — confira se o período está certo antes de tratar como defeito.
+2026-08-17 17:21:21.718 | INFO    |test_captacao_expectativa:test_referencia_explicita_manda:255 - [Expectativa] Procurando os arquivos _D de 202601 em 5 pasta(s) de origem.
+2026-08-17 17:21:21.718 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_SMS_ITF -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.718 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_VIVO -> Vivo: 1 de 2 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.720 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Vivo/A_202601_D.csv
+2026-08-17 17:21:21.720 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TELEFONICA -> TLF: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.720 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/MVNO/NEXTEL/DESMP -> MVNO: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.721 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TRP -> Detraf TRP: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.726 | INFO    |test_captacao_expectativa:test_sem_referencia_usa_a_competencia_do_ambiente:269 - [Expectativa] Procurando os arquivos _D de 202507 em 5 pasta(s) de origem.
+2026-08-17 17:21:21.726 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_SMS_ITF -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.727 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_VIVO -> Vivo: 1 de 2 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.728 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Vivo/A_202507_D.csv
+2026-08-17 17:21:21.728 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TELEFONICA -> TLF: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.728 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/MVNO/NEXTEL/DESMP -> MVNO: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.729 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TRP -> Detraf TRP: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.738 | INFO    |test_captacao_expectativa:test_pasta_plana_roteia_pelo_nome:290 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:21.739 | INFO    |src.services.captacao_expectativa:executar:191 - [Expectativa] Origem simulada em disco: [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-24\test_pasta_plana_roteia_pelo_n0\origem]
+2026-08-17 17:21:21.740 | INFO    |src.services.captacao_expectativa:_origens_de:218 - [Expectativa] A origem é um diretório plano — o destino de cada arquivo sai do nome dele.
+2026-08-17 17:21:21.740 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-24\test_pasta_plana_roteia_pelo_n0\origem -> pelo nome: 2 de 3 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.742 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Vivo/A_202603_SMP_VIVO_D.csv
+2026-08-17 17:21:21.744 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: TLF/B_202603_STF_TLF_D.csv
+2026-08-17 17:21:21.750 | INFO    |test_captacao_expectativa:test_arquivo_sem_pasta_no_nome_falha_dizendo:310 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:21.750 | INFO    |src.services.captacao_expectativa:executar:191 - [Expectativa] Origem simulada em disco: [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-24\test_arquivo_sem_pasta_no_nome0\origem]
+2026-08-17 17:21:21.751 | INFO    |src.services.captacao_expectativa:_origens_de:218 - [Expectativa] A origem é um diretório plano — o destino de cada arquivo sai do nome dele.
+2026-08-17 17:21:21.752 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-24\test_arquivo_sem_pasta_no_nome0\origem -> pelo nome: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.752 | ERROR   |src.services.captacao_expectativa:executar:199 - [Expectativa] Não sei em qual pasta [SEM_PASTA_202603_D.csv] entra — nenhuma de ['Vivo', 'TLF', 'MVNO', 'Detraf TRP'] aparece no nome. Não foi copiado.
+2026-08-17 17:21:21.752 | WARNING |test_captacao_expectativa:test_arquivo_sem_pasta_no_nome_falha_dizendo:310 - [Expectativa] Nenhum arquivo _D de 202603 foi trazido. A validação vai seguir com o que já estiver na pasta — confira se o período está certo antes de tratar como defeito.
+2026-08-17 17:21:21.759 | INFO    |test_captacao_expectativa:test_le_da_subpasta_quando_a_arvore_esta_espelhada:324 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:21.760 | INFO    |src.services.captacao_expectativa:executar:191 - [Expectativa] Origem simulada em disco: [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-24\test_le_da_subpasta_quando_a_a0\origem]
+2026-08-17 17:21:21.761 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_VIVO -> Vivo: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.762 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Vivo/V_202603_D.csv
+2026-08-17 17:21:21.768 | INFO    |test_captacao_expectativa:test_pasta_inexistente_falha_com_o_motivo:333 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:21.768 | ERROR   |test_captacao_expectativa:test_pasta_inexistente_falha_com_o_motivo:333 - [Expectativa] [--de-pasta] O diretório [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-24\test_pasta_inexistente_falha_c0\nao_existe] não existe.
+2026-08-17 17:21:21.774 | INFO    |test_captacao_expectativa:test_o_resumo_diz_a_origem_e_o_periodo:343 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:21.775 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_SMS_ITF -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.775 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_VIVO -> Vivo: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.777 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Vivo/A_202603_D.csv
+2026-08-17 17:21:21.777 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TELEFONICA -> TLF: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.777 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/MVNO/NEXTEL/DESMP -> MVNO: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.777 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TRP -> Detraf TRP: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:21.789 | ERROR   |test_criacao_arquivo_contestacao:test_valor_ilegivel_vira_zero:54 - [coluna numérica] 1 valor(es) não puderam ser convertidos para número e viraram ZERO: ['abc']. A causa mais comum é separador de milhar ('1.234,56'), que a V2 não define para estes campos. Um valor zerado aqui vira diferença inventada na contestação — confira o arquivo antes de aceitar a apuração.
+2026-08-17 17:21:21.793 | ERROR   |test_criacao_arquivo_contestacao:test_separador_de_milhar_vira_zero:78 - [coluna numérica] 1 valor(es) não puderam ser convertidos para número e viraram ZERO: ['1.234,56']. A causa mais comum é separador de milhar ('1.234,56'), que a V2 não define para estes campos. Um valor zerado aqui vira diferença inventada na contestação — confira o arquivo antes de aceitar a apuração.
+2026-08-17 17:21:21.797 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_anexo5_processado]
+2026-08-17 17:21:21.801 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_anexo5_processado] carregada | Linhas: 4 | Colunas: 6
+2026-08-17 17:21:21.804 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_detraf_mapeamento_descritores]
+2026-08-17 17:21:21.806 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_detraf_mapeamento_descritores] carregada | Linhas: 4 | Colunas: 5
+2026-08-17 17:21:21.918 | ERROR   |test_criacao_arquivo_contestacao:_converter:287 - [R$_Bruto (coluna 15)] 1 valor(es) não puderam ser convertidos para número e viraram ZERO: ['1.234,56']. A causa mais comum é separador de milhar ('1.234,56'), que a V2 não define para estes campos. Um valor zerado aqui vira diferença inventada na contestação — confira o arquivo antes de aceitar a apuração.
+2026-08-17 17:21:21.924 | ERROR   |test_criacao_arquivo_contestacao:_converter:287 - [R$_Bruto (coluna 15)] 2 valor(es) não puderam ser convertidos para número e viraram ZERO: ['1.234,56', '2.000,00']. A causa mais comum é separador de milhar ('1.234,56'), que a V2 não define para estes campos. Um valor zerado aqui vira diferença inventada na contestação — confira o arquivo antes de aceitar a apuração.
+2026-08-17 17:21:21.934 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-17 17:21:21.934 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\BTIMES~1\AppData\Local\Temp\detraf_rpa2_teste_yi_fca6j\TABELAS_DETRAF_TESTE.db]
+2026-08-17 17:21:21.945 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-17 17:21:21.945 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\BTIMES~1\AppData\Local\Temp\detraf_rpa2_teste_yi_fca6j\TABELAS_DETRAF_TESTE.db]
+2026-08-17 17:21:21.958 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-17 17:21:21.959 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\BTIMES~1\AppData\Local\Temp\detraf_rpa2_teste_yi_fca6j\TABELAS_DETRAF_TESTE.db]
+2026-08-17 17:21:21.967 | WARNING |test_criacao_arquivo_contestacao:test_descritor_fora_do_catalogo_e_nomeado_no_log:385 - [HU-09] 1 linha(s) com descritor sem remuneração na tabela `tbl_detraf_mapeamento_descritores`: ['XXZ']. Elas ficam sem `remuneracao` e não serão encontradas pelo RPA 3 — confira se falta linha na tabela.
+2026-08-17 17:21:22.045 | INFO    |test_limpeza_e_resultado:test_falha_de_leitura_vira_registro_nao_validado:147 - Iniciando transformação de lote tipo [DETRAF_SUCESSO] com 1 arquivo(s).
+2026-08-17 17:21:22.046 | ERROR   |test_limpeza_e_resultado:test_falha_de_leitura_vira_registro_nao_validado:147 - [DETRAF_SUCESSO] Não foi possível ler o arquivo [inexistente.csv]: O arquivo não foi encontrado: C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-24\test_falha_de_leitura_vira_reg0\inexistente.csv — registrando como não validado (ERR_LEITURA_ARQUIVO), sem volumetria.
+2026-08-17 17:21:22.055 | INFO    |test_limpeza_e_resultado:test_volumetria_nula_nao_zerada_quando_a_leitura_falha:158 - Iniciando transformação de lote tipo [DETRAF_SUCESSO] com 1 arquivo(s).
+2026-08-17 17:21:22.056 | ERROR   |test_limpeza_e_resultado:test_volumetria_nula_nao_zerada_quando_a_leitura_falha:158 - [DETRAF_SUCESSO] Não foi possível ler o arquivo [inexistente.csv]: O arquivo não foi encontrado: C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-24\test_volumetria_nula_nao_zerad0\inexistente.csv — registrando como não validado (ERR_LEITURA_ARQUIVO), sem volumetria.
+2026-08-17 17:21:22.082 | INFO    |test_limpeza_e_resultado:test_arquivo_valido_entra_como_validado:169 - Iniciando transformação de lote tipo [DETRAF_SUCESSO] com 1 arquivo(s).
+2026-08-17 17:21:22.102 | INFO    |test_limpeza_e_resultado:test_lote_de_erro_recebe_codigo:179 - Iniciando transformação de lote tipo [EXPECTATIVA_ERRO] com 1 arquivo(s).
+2026-08-17 17:21:22.117 | INFO    |test_limpeza_e_resultado:test_tipo_de_lote_desconhecido_e_ignorado_com_aviso:188 - Iniciando transformação de lote tipo [TIPO_INVENTADO] com 1 arquivo(s).
+2026-08-17 17:21:22.117 | WARNING |test_limpeza_e_resultado:test_tipo_de_lote_desconhecido_e_ignorado_com_aviso:188 - Tipo de lote desconhecido: TIPO_INVENTADO. Ignorando arquivo.
+2026-08-17 17:21:22.125 | INFO    |test_limpeza_e_resultado:test_um_arquivo_ruim_nao_impede_os_demais:198 - Iniciando transformação de lote tipo [DETRAF_SUCESSO] com 2 arquivo(s).
+2026-08-17 17:21:22.126 | ERROR   |test_limpeza_e_resultado:test_um_arquivo_ruim_nao_impede_os_demais:198 - [DETRAF_SUCESSO] Não foi possível ler o arquivo [inexistente.csv]: O arquivo não foi encontrado: C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-24\test_um_arquivo_ruim_nao_imped0\inexistente.csv — registrando como não validado (ERR_LEITURA_ARQUIVO), sem volumetria.
+2026-08-17 17:21:22.145 | INFO    |test_limpeza_e_resultado:test_cada_tipo_de_lote_vira_um_valor_do_enum:253 - Iniciando transformação de lote tipo [DETRAF_SUCESSO] com 1 arquivo(s).
+2026-08-17 17:21:22.163 | INFO    |test_limpeza_e_resultado:test_cada_tipo_de_lote_vira_um_valor_do_enum:253 - Iniciando transformação de lote tipo [DETRAF_ERRO] com 1 arquivo(s).
+2026-08-17 17:21:22.180 | INFO    |test_limpeza_e_resultado:test_cada_tipo_de_lote_vira_um_valor_do_enum:253 - Iniciando transformação de lote tipo [EXPECTATIVA_SUCESSO] com 1 arquivo(s).
+2026-08-17 17:21:22.194 | INFO    |test_limpeza_e_resultado:test_cada_tipo_de_lote_vira_um_valor_do_enum:253 - Iniciando transformação de lote tipo [EXPECTATIVA_ERRO] com 1 arquivo(s).
+2026-08-17 17:21:22.211 | INFO    |test_limpeza_e_resultado:test_detraf_reprovado_nao_vira_erro:269 - Iniciando transformação de lote tipo [DETRAF_ERRO] com 1 arquivo(s).
+2026-08-17 17:21:22.280 | INFO    |test_nao_responde_mais_email:test_continua_renomeando_o_invalido_para_erro:62 - Renomeando 1 arquivos inválidos adicionando _ERRO
+2026-08-17 17:21:22.290 | INFO    |test_varredura_de_arquivos:test_expectativa_none_acusa_a_variavel:46 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_expectativa
+2026-08-17 17:21:22.290 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os arquivos de expectativa para validação...
+2026-08-17 17:21:22.291 | INFO    |test_varredura_de_arquivos:test_expectativa_none_acusa_a_variavel:46 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_expectativa | Tempo gasto: 0.0s
+2026-08-17 17:21:22.297 | INFO    |test_varredura_de_arquivos:test_expectativa_none_tambem_no_batimento:55 - Preparando os arquivos de expectativa para validação...
+2026-08-17 17:21:22.305 | INFO    |test_varredura_de_arquivos:test_raiz_apontando_para_lugar_inexistente_e_erro:65 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_expectativa
+2026-08-17 17:21:22.305 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os arquivos de expectativa para validação...
+2026-08-17 17:21:22.306 | INFO    |test_varredura_de_arquivos:test_raiz_apontando_para_lugar_inexistente_e_erro:65 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_expectativa | Tempo gasto: 0.0s
+2026-08-17 17:21:22.314 | INFO    |test_varredura_de_arquivos:test_encontra_o_arquivo_na_subpasta_correta:81 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_detrafs
+2026-08-17 17:21:22.314 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os detrafs para validação...
+2026-08-17 17:21:22.315 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando busca de arquivos para o período 202507 no diretório: 'C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-24\test_encontra_o_arquivo_na_sub0\Operadoras'
+2026-08-17 17:21:22.316 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [CLARO]
+2026-08-17 17:21:22.316 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 1. Total geral de arquivos encontrados: 1
+2026-08-17 17:21:22.317 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [CLARO]: 1 arquivo(s) encontrado(s)
+2026-08-17 17:21:22.318 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Filtro de Histórico concluído para o período 202507.
+2026-08-17 17:21:22.318 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos originais recebidos: 1
+2026-08-17 17:21:22.318 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 17:21:22.319 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Novos arquivos retornados para execução: 1
+2026-08-17 17:21:22.319 | INFO    |test_varredura_de_arquivos:test_encontra_o_arquivo_na_subpasta_correta:81 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_detrafs | Tempo gasto: 0.01s
+2026-08-17 17:21:22.328 | INFO    |test_varredura_de_arquivos:test_arquivo_fora_da_subpasta_nao_conta:94 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_detrafs
+2026-08-17 17:21:22.328 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os detrafs para validação...
+2026-08-17 17:21:22.328 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando busca de arquivos para o período 202507 no diretório: 'C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-24\test_arquivo_fora_da_subpasta_0\Operadoras'
+2026-08-17 17:21:22.329 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 0. Total geral de arquivos encontrados: 0
+2026-08-17 17:21:22.329 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Filtro de Histórico concluído para o período 202507.
+2026-08-17 17:21:22.330 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos originais recebidos: 0
+2026-08-17 17:21:22.330 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 17:21:22.330 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Novos arquivos retornados para execução: 0
+2026-08-17 17:21:22.330 | INFO    |test_varredura_de_arquivos:test_arquivo_fora_da_subpasta_nao_conta:94 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_detrafs | Tempo gasto: 0.0s
+2026-08-17 17:21:22.338 | INFO    |test_varredura_de_arquivos:test_operadora_sem_o_mes_e_registrada_como_sem_detraf:100 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_detrafs
+2026-08-17 17:21:22.338 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os detrafs para validação...
+2026-08-17 17:21:22.339 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando busca de arquivos para o período 202507 no diretório: 'C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-24\test_operadora_sem_o_mes_e_reg0\Operadoras'
+2026-08-17 17:21:22.340 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 0. Total geral de arquivos encontrados: 0
+2026-08-17 17:21:22.340 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Filtro de Histórico concluído para o período 202507.
+2026-08-17 17:21:22.340 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos originais recebidos: 0
+2026-08-17 17:21:22.340 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 17:21:22.341 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Novos arquivos retornados para execução: 0
+2026-08-17 17:21:22.341 | INFO    |test_varredura_de_arquivos:test_operadora_sem_o_mes_e_registrada_como_sem_detraf:100 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_detrafs | Tempo gasto: 0.0s
+2026-08-17 17:21:22.351 | INFO    |test_varredura_de_arquivos:test_extensao_nao_permitida_e_ignorada:111 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_detrafs
+2026-08-17 17:21:22.351 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os detrafs para validação...
+2026-08-17 17:21:22.351 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando busca de arquivos para o período 202507 no diretório: 'C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-24\test_extensao_nao_permitida_e_0\Operadoras'
+2026-08-17 17:21:22.353 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [CLARO]
+2026-08-17 17:21:22.354 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 1. Total geral de arquivos encontrados: 0
+2026-08-17 17:21:22.354 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [CLARO]: 0 arquivo(s) encontrado(s)
+2026-08-17 17:21:22.355 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Filtro de Histórico concluído para o período 202507.
+2026-08-17 17:21:22.355 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos originais recebidos: 0
+2026-08-17 17:21:22.355 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 17:21:22.355 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Novos arquivos retornados para execução: 0
+2026-08-17 17:21:22.356 | INFO    |test_varredura_de_arquivos:test_extensao_nao_permitida_e_ignorada:111 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_detrafs | Tempo gasto: 0.01s
+2026-08-17 17:21:22.364 | INFO    |test_varredura_de_arquivos:test_raiz_vazia_devolve_lista_vazia_sem_erro:115 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_detrafs
+2026-08-17 17:21:22.365 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os detrafs para validação...
+2026-08-17 17:21:22.365 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando busca de arquivos para o período 202507 no diretório: 'C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-24\test_raiz_vazia_devolve_lista_0\Operadoras'
+2026-08-17 17:21:22.367 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 0. Total geral de arquivos encontrados: 0
+2026-08-17 17:21:22.368 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Filtro de Histórico concluído para o período 202507.
+2026-08-17 17:21:22.368 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos originais recebidos: 0
+2026-08-17 17:21:22.368 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 17:21:22.368 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Novos arquivos retornados para execução: 0
+2026-08-17 17:21:22.369 | INFO    |test_varredura_de_arquivos:test_raiz_vazia_devolve_lista_vazia_sem_erro:115 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_detrafs | Tempo gasto: 0.01s
+2026-08-17 17:21:22.382 | INFO    |test_varredura_de_arquivos:test_varre_todas_as_operadoras:121 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_detrafs
+2026-08-17 17:21:22.383 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os detrafs para validação...
+2026-08-17 17:21:22.383 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando busca de arquivos para o período 202507 no diretório: 'C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-24\test_varre_todas_as_operadoras0\Operadoras'
+2026-08-17 17:21:22.384 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [ALGAR]
+2026-08-17 17:21:22.385 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [CLARO]
+2026-08-17 17:21:22.385 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 2. Total geral de arquivos encontrados: 2
+2026-08-17 17:21:22.386 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [ALGAR]: 1 arquivo(s) encontrado(s)
+2026-08-17 17:21:22.386 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [CLARO]: 1 arquivo(s) encontrado(s)
+2026-08-17 17:21:22.388 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Filtro de Histórico concluído para o período 202507.
+2026-08-17 17:21:22.389 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos originais recebidos: 2
+2026-08-17 17:21:22.389 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 17:21:22.389 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Novos arquivos retornados para execução: 2
+2026-08-17 17:21:22.390 | INFO    |test_varredura_de_arquivos:test_varre_todas_as_operadoras:121 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_detrafs | Tempo gasto: 0.01s
+2026-08-17 17:21:22.396 | INFO    |test_varredura_de_arquivos:test_agrupa_pelo_eot_credora:145 - Iniciando mapeamento de operadoras para 1 arquivo(s).
+2026-08-17 17:21:22.407 | INFO    |test_varredura_de_arquivos:test_arquivo_de_zero_byte_vai_para_nao_identificada:166 - Iniciando mapeamento de operadoras para 1 arquivo(s).
+2026-08-17 17:21:22.408 | WARNING |comum.arquivos.gerenciador:carregar_dados:120 - Nenhum separador reconhecido nas primeiras 20 linhas de [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-24\test_arquivo_de_zero_byte_vai_0\vazio.csv] — assumindo ';'. Se o arquivo usar outro, ele será lido como coluna única e reprovado na validação.
+2026-08-17 17:21:22.410 | ERROR   |test_varredura_de_arquivos:test_arquivo_de_zero_byte_vai_para_nao_identificada:166 - Erro crítico ao tentar mapear operadora do arquivo vazio.csv: Erro ao processar a leitura do arquivo C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-24\test_arquivo_de_zero_byte_vai_0\vazio.csv: No columns to parse from file
+Traceback (most recent call last):
+  File "C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\comum\arquivos\gerenciador.py", line 121, in carregar_dados
+    df = pd.read_csv(
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\io\parsers\readers.py", line 873, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\io\parsers\readers.py", line 300, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\io\parsers\readers.py", line 1645, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\io\parsers\readers.py", line 1922, in _make_engine
+    return mapping[engine](f, **self.options)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 95, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 575, in pandas._libs.parsers.TextReader.__cinit__
+pandas.errors.EmptyDataError: No columns to parse from file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pytest\__main__.py", line 9, in <module>
+    raise SystemExit(_console_main())
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\config\__init__.py", line 253, in _console_main
+    code = _main(prog=_get_prog_name(sys.argv))
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\config\__init__.py", line 229, in _main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\main.py", line 377, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\main.py", line 330, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\main.py", line 384, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\main.py", line 408, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\runner.py", line 118, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\runner.py", line 139, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\runner.py", line 249, in call_and_report
+    call = CallInfo.from_call(
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\runner.py", line 361, in from_call
+    result: TResult | None = func()
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\runner.py", line 250, in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\runner.py", line 184, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\python.py", line 1707, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\python.py", line 167, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa2_validacao_apuracao\tests\test_varredura_de_arquivos.py", line 166, in test_arquivo_de_zero_byte_vai_para_nao_identificada
+    mapa = batimento._mapear_arquivos_por_operadora([caminho])
+> File "C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa2_validacao_apuracao\src\services\batimento_detraf.py", line 175, in _mapear_arquivos_por_operadora
+    df = carregar_dados(caminho_arq)
+  File "C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\comum\arquivos\gerenciador.py", line 160, in carregar_dados
+    raise RuntimeError(
+RuntimeError: Erro ao processar a leitura do arquivo C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-24\test_arquivo_de_zero_byte_vai_0\vazio.csv: No columns to parse from file
+2026-08-17 17:21:22.436 | INFO    |test_varredura_de_arquivos:test_eot_desconhecida_vai_para_nao_identificada:181 - Iniciando mapeamento de operadoras para 1 arquivo(s).
+2026-08-17 17:21:22.441 | INFO    |src.services.batimento_detraf:_mapear_arquivos_por_operadora:196 - EOT não encontrado [999]
+2026-08-17 17:21:22.442 | ERROR   |test_varredura_de_arquivos:test_eot_desconhecida_vai_para_nao_identificada:181 - Nenhum EOT válido encontrado para o arquivo: desconhecida.csv
+2026-08-17 17:21:22.447 | INFO    |test_varredura_de_arquivos:test_pasta_inexistente_e_acusada_pelo_nome:214 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_expectativa
+2026-08-17 17:21:22.448 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os arquivos de expectativa para validação...
+2026-08-17 17:21:22.448 | ERROR   |src.services.validacao_detrafs:_preparar_arquivos_expectativa:269 - [Q21] Sem expectativa Vivo em [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-24\test_pasta_inexistente_e_acusa0\Expectativa\VIVO SP]: não existe. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
+2026-08-17 17:21:22.448 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento de expectativa concluído. Total geral de arquivos válidos: 0
+2026-08-17 17:21:22.449 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Filtro de Histórico concluído para o período 202507.
+2026-08-17 17:21:22.449 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Arquivos originais recebidos: 0
+2026-08-17 17:21:22.449 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 17:21:22.449 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Novos arquivos retornados para execução: 0
+2026-08-17 17:21:22.449 | INFO    |test_varredura_de_arquivos:test_pasta_inexistente_e_acusada_pelo_nome:214 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_expectativa | Tempo gasto: 0.0s
+2026-08-17 17:21:22.456 | INFO    |test_varredura_de_arquivos:test_pasta_existente_mas_sem_arquivo_valido_tambem_acusa:229 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_expectativa
+2026-08-17 17:21:22.457 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os arquivos de expectativa para validação...
+2026-08-17 17:21:22.457 | INFO    |comum.utils.decoradores:wrapper:22 - Pasta [VIVO SP] processada -> Válidos: 0 | Inválidos/Ignorados: 1
+2026-08-17 17:21:22.458 | ERROR   |src.services.validacao_detrafs:_preparar_arquivos_expectativa:263 - [Q21] Sem expectativa Vivo em [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-24\test_pasta_existente_mas_sem_a0\Expectativa\VIVO SP]: existe, mas nenhum dos 1 arquivo(s) passou nos filtros. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
+2026-08-17 17:21:22.458 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento de expectativa concluído. Total geral de arquivos válidos: 0
+2026-08-17 17:21:22.458 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Filtro de Histórico concluído para o período 202507.
+2026-08-17 17:21:22.459 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Arquivos originais recebidos: 0
+2026-08-17 17:21:22.459 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 17:21:22.459 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Novos arquivos retornados para execução: 0
+2026-08-17 17:21:22.460 | INFO    |test_varredura_de_arquivos:test_pasta_existente_mas_sem_arquivo_valido_tambem_acusa:229 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_expectativa | Tempo gasto: 0.0s
+2026-08-17 17:21:22.465 | INFO    |test_varredura_de_arquivos:test_o_batimento_acusa_do_mesmo_jeito:246 - Preparando os arquivos de expectativa para validação...
+2026-08-17 17:21:22.466 | ERROR   |src.services.batimento_detraf:_preparar_arquivos_expectativa:329 - [Q21] Sem expectativa Vivo em [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-24\test_o_batimento_acusa_do_mesm0\Expectativa\VIVO SP]: não tem nenhum arquivo aprovado pela validação. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
+2026-08-17 17:21:22.466 | INFO    |test_varredura_de_arquivos:test_o_batimento_acusa_do_mesmo_jeito:246 - Mapeamento de expectativa concluído. Total geral de arquivos válidos: 0
+2026-08-17 17:21:22.466 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Filtro de Histórico concluído para o período 202507.
+2026-08-17 17:21:22.466 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Arquivos originais recebidos: 0
+2026-08-17 17:21:22.466 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 17:21:22.467 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Novos arquivos retornados para execução: 0
+2026-08-17 17:21:22.474 | INFO    |test_varredura_de_arquivos:test_pasta_com_arquivo_valido_nao_acusa:257 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_expectativa
+2026-08-17 17:21:22.474 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os arquivos de expectativa para validação...
+2026-08-17 17:21:22.475 | INFO    |comum.utils.decoradores:wrapper:22 - Pasta [VIVO SP] processada -> Válidos: 1 | Inválidos/Ignorados: 0
+2026-08-17 17:21:22.475 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento de expectativa concluído. Total geral de arquivos válidos: 1
+2026-08-17 17:21:22.476 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Filtro de Histórico concluído para o período 202507.
+2026-08-17 17:21:22.476 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Arquivos originais recebidos: 1
+2026-08-17 17:21:22.476 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 17:21:22.477 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Novos arquivos retornados para execução: 1
+2026-08-17 17:21:22.477 | INFO    |test_varredura_de_arquivos:test_pasta_com_arquivo_valido_nao_acusa:257 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_expectativa | Tempo gasto: 0.0s
+2026-08-17 17:21:22.484 | INFO    |test_varredura_de_arquivos:test_grava_o_motivo_ao_lado_do_arquivo:286 - [Layout] Motivo da recusa gravado em [DETRAF_D_CLARO_202507_RECUSADO.md].
+2026-08-17 17:21:22.494 | INFO    |test_varredura_de_arquivos:test_o_diagnostico_traz_as_linhas_do_arquivo:296 - [Layout] Motivo da recusa gravado em [DETRAF_D_CLARO_202507_RECUSADO.md].
+2026-08-17 17:21:22.501 | INFO    |test_varredura_de_arquivos:test_o_diagnostico_cita_a_n3_para_a_expectativa:309 - [Layout] Motivo da recusa gravado em [DETRAF_D_CLARO_202507_RECUSADO.md].
+2026-08-17 17:21:22.508 | WARNING |test_varredura_de_arquivos:test_falha_ao_gravar_nao_derruba_a_validacao:327 - [Layout] Não foi possível gravar o diagnóstico da recusa em [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-24\test_falha_ao_gravar_nao_derru0\DETRAF_D_CLARO_202507_RECUSADO.md]: pasta somente leitura. O motivo continua no log.
+2026-08-17 17:21:33.876 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-17 17:21:33.876 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\BTIMES~1\AppData\Local\Temp\detraf_rpa2_teste_l_l2idxz\TABELAS_DETRAF_TESTE.db]
+2026-08-17 17:21:34.243 | WARNING |src.services.captacao_expectativa:executar:181 - [MODO SEGURO] PERMITIR_DOWNLOAD_SFTP está desligado — nada foi baixado. A validação segue com o que já está em [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-25\test_desligado_nao_conecta0\Expectativa].
+2026-08-17 17:21:34.248 | WARNING |src.services.captacao_expectativa:executar:181 - [MODO SEGURO] PERMITIR_DOWNLOAD_SFTP está desligado — nada foi baixado. A validação segue com o que já está em [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-25\test_desligado_avisa_no_log0\Expectativa].
+2026-08-17 17:21:34.255 | INFO    |test_captacao_expectativa:test_de_pasta_funciona_com_o_switch_desligado:147 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:34.255 | INFO    |src.services.captacao_expectativa:executar:191 - [Expectativa] Origem simulada em disco: [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-25\test_de_pasta_funciona_com_o_s0\origem]
+2026-08-17 17:21:34.256 | INFO    |src.services.captacao_expectativa:_origens_de:218 - [Expectativa] A origem é um diretório plano — o destino de cada arquivo sai do nome dele.
+2026-08-17 17:21:34.257 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-25\test_de_pasta_funciona_com_o_s0\origem -> pelo nome: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.261 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Vivo/DETRAF_202603_VIVO_D.csv
+2026-08-17 17:21:34.266 | INFO    |test_captacao_expectativa:test_cada_origem_cai_na_subpasta_certa:163 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:34.266 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_SMS_ITF -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.266 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_VIVO -> Vivo: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.267 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Vivo/A_202603_D.csv
+2026-08-17 17:21:34.268 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TELEFONICA -> TLF: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.268 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: TLF/B_202603_D.csv
+2026-08-17 17:21:34.269 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/MVNO/NEXTEL/DESMP -> MVNO: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.270 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: MVNO/C_202603_D.csv
+2026-08-17 17:21:34.270 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TRP -> Detraf TRP: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.271 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Detraf TRP/D_202603_D.csv
+2026-08-17 17:21:34.277 | INFO    |test_captacao_expectativa:test_as_duas_origens_da_vivo_caem_na_mesma_pasta:177 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:34.277 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_SMS_ITF -> Vivo: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.278 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Vivo/SMS_202603_D.csv
+2026-08-17 17:21:34.279 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_VIVO -> Vivo: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.279 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Vivo/VIVO_202603_D.csv
+2026-08-17 17:21:34.280 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TELEFONICA -> TLF: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.280 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/MVNO/NEXTEL/DESMP -> MVNO: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.280 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TRP -> Detraf TRP: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.287 | INFO    |test_captacao_expectativa:test_pasta_remota_indisponivel_nao_derruba_as_outras:207 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:34.288 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_SMS_ITF -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.288 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_VIVO -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.288 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TELEFONICA -> TLF: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.289 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: TLF/B_202603_D.csv
+2026-08-17 17:21:34.290 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/MVNO/NEXTEL/DESMP -> MVNO: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.290 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TRP -> Detraf TRP: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.295 | INFO    |test_captacao_expectativa:test_falha_num_arquivo_nao_derruba_os_demais:224 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:34.295 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_SMS_ITF -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.295 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_VIVO -> Vivo: 2 de 2 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.295 | ERROR   |src.services.captacao_expectativa:executar:199 - [Expectativa] Falhou [A_202603_D.csv]: disco cheio
+2026-08-17 17:21:34.297 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Vivo/B_202603_D.csv
+2026-08-17 17:21:34.297 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TELEFONICA -> TLF: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.297 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/MVNO/NEXTEL/DESMP -> MVNO: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.297 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TRP -> Detraf TRP: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.302 | INFO    |test_captacao_expectativa:test_a_sessao_e_fechada_mesmo_sem_nada_para_baixar:232 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:34.302 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_SMS_ITF -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.303 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_VIVO -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.303 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TELEFONICA -> TLF: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.303 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/MVNO/NEXTEL/DESMP -> MVNO: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.303 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TRP -> Detraf TRP: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.303 | WARNING |test_captacao_expectativa:test_a_sessao_e_fechada_mesmo_sem_nada_para_baixar:232 - [Expectativa] Nenhum arquivo _D de 202603 foi trazido. A validação vai seguir com o que já estiver na pasta — confira se o período está certo antes de tratar como defeito.
+2026-08-17 17:21:34.309 | INFO    |test_captacao_expectativa:test_nada_encontrado_avisa_sem_falhar:241 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:34.309 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_SMS_ITF -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.309 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_VIVO -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.309 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TELEFONICA -> TLF: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.310 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/MVNO/NEXTEL/DESMP -> MVNO: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.310 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TRP -> Detraf TRP: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.310 | WARNING |test_captacao_expectativa:test_nada_encontrado_avisa_sem_falhar:241 - [Expectativa] Nenhum arquivo _D de 202603 foi trazido. A validação vai seguir com o que já estiver na pasta — confira se o período está certo antes de tratar como defeito.
+2026-08-17 17:21:34.315 | INFO    |test_captacao_expectativa:test_referencia_explicita_manda:255 - [Expectativa] Procurando os arquivos _D de 202601 em 5 pasta(s) de origem.
+2026-08-17 17:21:34.316 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_SMS_ITF -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.316 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_VIVO -> Vivo: 1 de 2 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.317 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Vivo/A_202601_D.csv
+2026-08-17 17:21:34.318 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TELEFONICA -> TLF: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.318 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/MVNO/NEXTEL/DESMP -> MVNO: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.318 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TRP -> Detraf TRP: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.324 | INFO    |test_captacao_expectativa:test_sem_referencia_usa_a_competencia_do_ambiente:269 - [Expectativa] Procurando os arquivos _D de 202507 em 5 pasta(s) de origem.
+2026-08-17 17:21:34.325 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_SMS_ITF -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.325 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_VIVO -> Vivo: 1 de 2 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.327 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Vivo/A_202507_D.csv
+2026-08-17 17:21:34.327 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TELEFONICA -> TLF: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.327 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/MVNO/NEXTEL/DESMP -> MVNO: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.327 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TRP -> Detraf TRP: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.335 | INFO    |test_captacao_expectativa:test_pasta_plana_roteia_pelo_nome:290 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:34.336 | INFO    |src.services.captacao_expectativa:executar:191 - [Expectativa] Origem simulada em disco: [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-25\test_pasta_plana_roteia_pelo_n0\origem]
+2026-08-17 17:21:34.337 | INFO    |src.services.captacao_expectativa:_origens_de:218 - [Expectativa] A origem é um diretório plano — o destino de cada arquivo sai do nome dele.
+2026-08-17 17:21:34.338 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-25\test_pasta_plana_roteia_pelo_n0\origem -> pelo nome: 2 de 3 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.340 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Vivo/A_202603_SMP_VIVO_D.csv
+2026-08-17 17:21:34.343 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: TLF/B_202603_STF_TLF_D.csv
+2026-08-17 17:21:34.355 | INFO    |test_captacao_expectativa:test_arquivo_sem_pasta_no_nome_falha_dizendo:310 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:34.355 | INFO    |src.services.captacao_expectativa:executar:191 - [Expectativa] Origem simulada em disco: [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-25\test_arquivo_sem_pasta_no_nome0\origem]
+2026-08-17 17:21:34.356 | INFO    |src.services.captacao_expectativa:_origens_de:218 - [Expectativa] A origem é um diretório plano — o destino de cada arquivo sai do nome dele.
+2026-08-17 17:21:34.357 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-25\test_arquivo_sem_pasta_no_nome0\origem -> pelo nome: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.357 | ERROR   |src.services.captacao_expectativa:executar:199 - [Expectativa] Não sei em qual pasta [SEM_PASTA_202603_D.csv] entra — nenhuma de ['Vivo', 'TLF', 'MVNO', 'Detraf TRP'] aparece no nome. Não foi copiado.
+2026-08-17 17:21:34.357 | WARNING |test_captacao_expectativa:test_arquivo_sem_pasta_no_nome_falha_dizendo:310 - [Expectativa] Nenhum arquivo _D de 202603 foi trazido. A validação vai seguir com o que já estiver na pasta — confira se o período está certo antes de tratar como defeito.
+2026-08-17 17:21:34.363 | INFO    |test_captacao_expectativa:test_le_da_subpasta_quando_a_arvore_esta_espelhada:324 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:34.363 | INFO    |src.services.captacao_expectativa:executar:191 - [Expectativa] Origem simulada em disco: [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-25\test_le_da_subpasta_quando_a_a0\origem]
+2026-08-17 17:21:34.364 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_VIVO -> Vivo: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.366 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Vivo/V_202603_D.csv
+2026-08-17 17:21:34.371 | INFO    |test_captacao_expectativa:test_pasta_inexistente_falha_com_o_motivo:333 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:34.372 | ERROR   |test_captacao_expectativa:test_pasta_inexistente_falha_com_o_motivo:333 - [Expectativa] [--de-pasta] O diretório [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-25\test_pasta_inexistente_falha_c0\nao_existe] não existe.
+2026-08-17 17:21:34.377 | INFO    |test_captacao_expectativa:test_o_resumo_diz_a_origem_e_o_periodo:343 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:34.377 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_SMS_ITF -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.378 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_VIVO -> Vivo: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.379 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Vivo/A_202603_D.csv
+2026-08-17 17:21:34.379 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TELEFONICA -> TLF: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.379 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/MVNO/NEXTEL/DESMP -> MVNO: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.379 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TRP -> Detraf TRP: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:34.389 | ERROR   |test_criacao_arquivo_contestacao:test_valor_ilegivel_vira_zero:54 - [coluna numérica] 1 valor(es) não puderam ser convertidos para número e viraram ZERO: ['abc']. A causa mais comum é separador de milhar ('1.234,56'), que a V2 não define para estes campos. Um valor zerado aqui vira diferença inventada na contestação — confira o arquivo antes de aceitar a apuração.
+2026-08-17 17:21:34.393 | ERROR   |test_criacao_arquivo_contestacao:test_separador_de_milhar_vira_zero:78 - [coluna numérica] 1 valor(es) não puderam ser convertidos para número e viraram ZERO: ['1.234,56']. A causa mais comum é separador de milhar ('1.234,56'), que a V2 não define para estes campos. Um valor zerado aqui vira diferença inventada na contestação — confira o arquivo antes de aceitar a apuração.
+2026-08-17 17:21:34.397 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_anexo5_processado]
+2026-08-17 17:21:34.400 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_anexo5_processado] carregada | Linhas: 4 | Colunas: 6
+2026-08-17 17:21:34.404 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_detraf_mapeamento_descritores]
+2026-08-17 17:21:34.406 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_detraf_mapeamento_descritores] carregada | Linhas: 4 | Colunas: 5
+2026-08-17 17:21:34.511 | ERROR   |test_criacao_arquivo_contestacao:_converter:287 - [R$_Bruto (coluna 15)] 1 valor(es) não puderam ser convertidos para número e viraram ZERO: ['1.234,56']. A causa mais comum é separador de milhar ('1.234,56'), que a V2 não define para estes campos. Um valor zerado aqui vira diferença inventada na contestação — confira o arquivo antes de aceitar a apuração.
+2026-08-17 17:21:34.516 | ERROR   |test_criacao_arquivo_contestacao:_converter:287 - [R$_Bruto (coluna 15)] 2 valor(es) não puderam ser convertidos para número e viraram ZERO: ['1.234,56', '2.000,00']. A causa mais comum é separador de milhar ('1.234,56'), que a V2 não define para estes campos. Um valor zerado aqui vira diferença inventada na contestação — confira o arquivo antes de aceitar a apuração.
+2026-08-17 17:21:34.526 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-17 17:21:34.526 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\BTIMES~1\AppData\Local\Temp\detraf_rpa2_teste_l_l2idxz\TABELAS_DETRAF_TESTE.db]
+2026-08-17 17:21:34.538 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-17 17:21:34.539 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\BTIMES~1\AppData\Local\Temp\detraf_rpa2_teste_l_l2idxz\TABELAS_DETRAF_TESTE.db]
+2026-08-17 17:21:34.553 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-17 17:21:34.553 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\BTIMES~1\AppData\Local\Temp\detraf_rpa2_teste_l_l2idxz\TABELAS_DETRAF_TESTE.db]
+2026-08-17 17:21:34.562 | WARNING |test_criacao_arquivo_contestacao:test_descritor_fora_do_catalogo_e_nomeado_no_log:385 - [HU-09] 1 linha(s) com descritor sem remuneração na tabela `tbl_detraf_mapeamento_descritores`: ['XXZ']. Elas ficam sem `remuneracao` e não serão encontradas pelo RPA 3 — confira se falta linha na tabela.
+2026-08-17 17:21:34.633 | INFO    |test_limpeza_e_resultado:test_falha_de_leitura_vira_registro_nao_validado:147 - Iniciando transformação de lote tipo [DETRAF_SUCESSO] com 1 arquivo(s).
+2026-08-17 17:21:34.633 | ERROR   |test_limpeza_e_resultado:test_falha_de_leitura_vira_registro_nao_validado:147 - [DETRAF_SUCESSO] Não foi possível ler o arquivo [inexistente.csv]: O arquivo não foi encontrado: C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-25\test_falha_de_leitura_vira_reg0\inexistente.csv — registrando como não validado (ERR_LEITURA_ARQUIVO), sem volumetria.
+2026-08-17 17:21:34.640 | INFO    |test_limpeza_e_resultado:test_volumetria_nula_nao_zerada_quando_a_leitura_falha:158 - Iniciando transformação de lote tipo [DETRAF_SUCESSO] com 1 arquivo(s).
+2026-08-17 17:21:34.640 | ERROR   |test_limpeza_e_resultado:test_volumetria_nula_nao_zerada_quando_a_leitura_falha:158 - [DETRAF_SUCESSO] Não foi possível ler o arquivo [inexistente.csv]: O arquivo não foi encontrado: C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-25\test_volumetria_nula_nao_zerad0\inexistente.csv — registrando como não validado (ERR_LEITURA_ARQUIVO), sem volumetria.
+2026-08-17 17:21:34.663 | INFO    |test_limpeza_e_resultado:test_arquivo_valido_entra_como_validado:169 - Iniciando transformação de lote tipo [DETRAF_SUCESSO] com 1 arquivo(s).
+2026-08-17 17:21:34.681 | INFO    |test_limpeza_e_resultado:test_lote_de_erro_recebe_codigo:179 - Iniciando transformação de lote tipo [EXPECTATIVA_ERRO] com 1 arquivo(s).
+2026-08-17 17:21:34.695 | INFO    |test_limpeza_e_resultado:test_tipo_de_lote_desconhecido_e_ignorado_com_aviso:188 - Iniciando transformação de lote tipo [TIPO_INVENTADO] com 1 arquivo(s).
+2026-08-17 17:21:34.695 | WARNING |test_limpeza_e_resultado:test_tipo_de_lote_desconhecido_e_ignorado_com_aviso:188 - Tipo de lote desconhecido: TIPO_INVENTADO. Ignorando arquivo.
+2026-08-17 17:21:34.700 | INFO    |test_limpeza_e_resultado:test_um_arquivo_ruim_nao_impede_os_demais:198 - Iniciando transformação de lote tipo [DETRAF_SUCESSO] com 2 arquivo(s).
+2026-08-17 17:21:34.701 | ERROR   |test_limpeza_e_resultado:test_um_arquivo_ruim_nao_impede_os_demais:198 - [DETRAF_SUCESSO] Não foi possível ler o arquivo [inexistente.csv]: O arquivo não foi encontrado: C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-25\test_um_arquivo_ruim_nao_imped0\inexistente.csv — registrando como não validado (ERR_LEITURA_ARQUIVO), sem volumetria.
+2026-08-17 17:21:34.715 | INFO    |test_limpeza_e_resultado:test_cada_tipo_de_lote_vira_um_valor_do_enum:253 - Iniciando transformação de lote tipo [DETRAF_SUCESSO] com 1 arquivo(s).
+2026-08-17 17:21:34.733 | INFO    |test_limpeza_e_resultado:test_cada_tipo_de_lote_vira_um_valor_do_enum:253 - Iniciando transformação de lote tipo [DETRAF_ERRO] com 1 arquivo(s).
+2026-08-17 17:21:34.749 | INFO    |test_limpeza_e_resultado:test_cada_tipo_de_lote_vira_um_valor_do_enum:253 - Iniciando transformação de lote tipo [EXPECTATIVA_SUCESSO] com 1 arquivo(s).
+2026-08-17 17:21:34.762 | INFO    |test_limpeza_e_resultado:test_cada_tipo_de_lote_vira_um_valor_do_enum:253 - Iniciando transformação de lote tipo [EXPECTATIVA_ERRO] com 1 arquivo(s).
+2026-08-17 17:21:34.775 | INFO    |test_limpeza_e_resultado:test_detraf_reprovado_nao_vira_erro:269 - Iniciando transformação de lote tipo [DETRAF_ERRO] com 1 arquivo(s).
+2026-08-17 17:21:34.818 | INFO    |test_nao_responde_mais_email:test_continua_renomeando_o_invalido_para_erro:62 - Renomeando 1 arquivos inválidos adicionando _ERRO
+2026-08-17 17:21:34.826 | INFO    |test_varredura_de_arquivos:test_expectativa_none_acusa_a_variavel:46 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_expectativa
+2026-08-17 17:21:34.827 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os arquivos de expectativa para validação...
+2026-08-17 17:21:34.827 | INFO    |test_varredura_de_arquivos:test_expectativa_none_acusa_a_variavel:46 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_expectativa | Tempo gasto: 0.0s
+2026-08-17 17:21:34.832 | INFO    |test_varredura_de_arquivos:test_expectativa_none_tambem_no_batimento:55 - Preparando os arquivos de expectativa para validação...
+2026-08-17 17:21:34.856 | INFO    |test_varredura_de_arquivos:test_raiz_apontando_para_lugar_inexistente_e_erro:65 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_expectativa
+2026-08-17 17:21:34.857 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os arquivos de expectativa para validação...
+2026-08-17 17:21:34.858 | INFO    |test_varredura_de_arquivos:test_raiz_apontando_para_lugar_inexistente_e_erro:65 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_expectativa | Tempo gasto: 0.0s
+2026-08-17 17:21:34.871 | INFO    |test_varredura_de_arquivos:test_encontra_o_arquivo_na_subpasta_correta:81 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_detrafs
+2026-08-17 17:21:34.872 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os detrafs para validação...
+2026-08-17 17:21:34.873 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando busca de arquivos para o período 202507 no diretório: 'C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-25\test_encontra_o_arquivo_na_sub0\Operadoras'
+2026-08-17 17:21:34.874 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [CLARO]
+2026-08-17 17:21:34.875 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 1. Total geral de arquivos encontrados: 1
+2026-08-17 17:21:34.875 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [CLARO]: 1 arquivo(s) encontrado(s)
+2026-08-17 17:21:34.877 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Filtro de Histórico concluído para o período 202507.
+2026-08-17 17:21:34.877 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos originais recebidos: 1
+2026-08-17 17:21:34.877 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 17:21:34.878 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Novos arquivos retornados para execução: 1
+2026-08-17 17:21:34.878 | INFO    |test_varredura_de_arquivos:test_encontra_o_arquivo_na_subpasta_correta:81 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_detrafs | Tempo gasto: 0.01s
+2026-08-17 17:21:34.888 | INFO    |test_varredura_de_arquivos:test_arquivo_fora_da_subpasta_nao_conta:94 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_detrafs
+2026-08-17 17:21:34.889 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os detrafs para validação...
+2026-08-17 17:21:34.889 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando busca de arquivos para o período 202507 no diretório: 'C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-25\test_arquivo_fora_da_subpasta_0\Operadoras'
+2026-08-17 17:21:34.890 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 0. Total geral de arquivos encontrados: 0
+2026-08-17 17:21:34.890 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Filtro de Histórico concluído para o período 202507.
+2026-08-17 17:21:34.890 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos originais recebidos: 0
+2026-08-17 17:21:34.890 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 17:21:34.891 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Novos arquivos retornados para execução: 0
+2026-08-17 17:21:34.891 | INFO    |test_varredura_de_arquivos:test_arquivo_fora_da_subpasta_nao_conta:94 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_detrafs | Tempo gasto: 0.0s
+2026-08-17 17:21:34.899 | INFO    |test_varredura_de_arquivos:test_operadora_sem_o_mes_e_registrada_como_sem_detraf:100 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_detrafs
+2026-08-17 17:21:34.899 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os detrafs para validação...
+2026-08-17 17:21:34.899 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando busca de arquivos para o período 202507 no diretório: 'C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-25\test_operadora_sem_o_mes_e_reg0\Operadoras'
+2026-08-17 17:21:34.901 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 0. Total geral de arquivos encontrados: 0
+2026-08-17 17:21:34.901 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Filtro de Histórico concluído para o período 202507.
+2026-08-17 17:21:34.901 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos originais recebidos: 0
+2026-08-17 17:21:34.902 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 17:21:34.902 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Novos arquivos retornados para execução: 0
+2026-08-17 17:21:34.902 | INFO    |test_varredura_de_arquivos:test_operadora_sem_o_mes_e_registrada_como_sem_detraf:100 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_detrafs | Tempo gasto: 0.0s
+2026-08-17 17:21:34.913 | INFO    |test_varredura_de_arquivos:test_extensao_nao_permitida_e_ignorada:111 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_detrafs
+2026-08-17 17:21:34.914 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os detrafs para validação...
+2026-08-17 17:21:34.914 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando busca de arquivos para o período 202507 no diretório: 'C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-25\test_extensao_nao_permitida_e_0\Operadoras'
+2026-08-17 17:21:34.915 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [CLARO]
+2026-08-17 17:21:34.916 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 1. Total geral de arquivos encontrados: 0
+2026-08-17 17:21:34.916 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [CLARO]: 0 arquivo(s) encontrado(s)
+2026-08-17 17:21:34.916 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Filtro de Histórico concluído para o período 202507.
+2026-08-17 17:21:34.917 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos originais recebidos: 0
+2026-08-17 17:21:34.917 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 17:21:34.918 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Novos arquivos retornados para execução: 0
+2026-08-17 17:21:34.918 | INFO    |test_varredura_de_arquivos:test_extensao_nao_permitida_e_ignorada:111 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_detrafs | Tempo gasto: 0.0s
+2026-08-17 17:21:34.927 | INFO    |test_varredura_de_arquivos:test_raiz_vazia_devolve_lista_vazia_sem_erro:115 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_detrafs
+2026-08-17 17:21:34.927 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os detrafs para validação...
+2026-08-17 17:21:34.927 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando busca de arquivos para o período 202507 no diretório: 'C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-25\test_raiz_vazia_devolve_lista_0\Operadoras'
+2026-08-17 17:21:34.928 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 0. Total geral de arquivos encontrados: 0
+2026-08-17 17:21:34.928 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Filtro de Histórico concluído para o período 202507.
+2026-08-17 17:21:34.929 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos originais recebidos: 0
+2026-08-17 17:21:34.929 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 17:21:34.929 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Novos arquivos retornados para execução: 0
+2026-08-17 17:21:34.929 | INFO    |test_varredura_de_arquivos:test_raiz_vazia_devolve_lista_vazia_sem_erro:115 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_detrafs | Tempo gasto: 0.0s
+2026-08-17 17:21:34.938 | INFO    |test_varredura_de_arquivos:test_varre_todas_as_operadoras:121 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_detrafs
+2026-08-17 17:21:34.938 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os detrafs para validação...
+2026-08-17 17:21:34.939 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando busca de arquivos para o período 202507 no diretório: 'C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-25\test_varre_todas_as_operadoras0\Operadoras'
+2026-08-17 17:21:34.940 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [ALGAR]
+2026-08-17 17:21:34.940 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [CLARO]
+2026-08-17 17:21:34.941 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 2. Total geral de arquivos encontrados: 2
+2026-08-17 17:21:34.941 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [ALGAR]: 1 arquivo(s) encontrado(s)
+2026-08-17 17:21:34.941 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [CLARO]: 1 arquivo(s) encontrado(s)
+2026-08-17 17:21:34.942 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Filtro de Histórico concluído para o período 202507.
+2026-08-17 17:21:34.942 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos originais recebidos: 2
+2026-08-17 17:21:34.943 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 17:21:34.943 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Novos arquivos retornados para execução: 2
+2026-08-17 17:21:34.943 | INFO    |test_varredura_de_arquivos:test_varre_todas_as_operadoras:121 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_detrafs | Tempo gasto: 0.0s
+2026-08-17 17:21:34.949 | INFO    |test_varredura_de_arquivos:test_agrupa_pelo_eot_credora:145 - Iniciando mapeamento de operadoras para 1 arquivo(s).
+2026-08-17 17:21:34.961 | INFO    |test_varredura_de_arquivos:test_arquivo_de_zero_byte_vai_para_nao_identificada:166 - Iniciando mapeamento de operadoras para 1 arquivo(s).
+2026-08-17 17:21:34.962 | WARNING |comum.arquivos.gerenciador:carregar_dados:120 - Nenhum separador reconhecido nas primeiras 20 linhas de [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-25\test_arquivo_de_zero_byte_vai_0\vazio.csv] — assumindo ';'. Se o arquivo usar outro, ele será lido como coluna única e reprovado na validação.
+2026-08-17 17:21:34.963 | ERROR   |test_varredura_de_arquivos:test_arquivo_de_zero_byte_vai_para_nao_identificada:166 - Erro crítico ao tentar mapear operadora do arquivo vazio.csv: Erro ao processar a leitura do arquivo C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-25\test_arquivo_de_zero_byte_vai_0\vazio.csv: No columns to parse from file
+Traceback (most recent call last):
+  File "C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\comum\arquivos\gerenciador.py", line 121, in carregar_dados
+    df = pd.read_csv(
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\io\parsers\readers.py", line 873, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\io\parsers\readers.py", line 300, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\io\parsers\readers.py", line 1645, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\io\parsers\readers.py", line 1922, in _make_engine
+    return mapping[engine](f, **self.options)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 95, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 575, in pandas._libs.parsers.TextReader.__cinit__
+pandas.errors.EmptyDataError: No columns to parse from file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pytest\__main__.py", line 9, in <module>
+    raise SystemExit(_console_main())
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\config\__init__.py", line 253, in _console_main
+    code = _main(prog=_get_prog_name(sys.argv))
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\config\__init__.py", line 229, in _main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\main.py", line 377, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\main.py", line 330, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\main.py", line 384, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\main.py", line 408, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\runner.py", line 118, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\runner.py", line 139, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\runner.py", line 249, in call_and_report
+    call = CallInfo.from_call(
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\runner.py", line 361, in from_call
+    result: TResult | None = func()
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\runner.py", line 250, in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\runner.py", line 184, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\python.py", line 1707, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\python.py", line 167, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa2_validacao_apuracao\tests\test_varredura_de_arquivos.py", line 166, in test_arquivo_de_zero_byte_vai_para_nao_identificada
+    mapa = batimento._mapear_arquivos_por_operadora([caminho])
+> File "C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa2_validacao_apuracao\src\services\batimento_detraf.py", line 175, in _mapear_arquivos_por_operadora
+    df = carregar_dados(caminho_arq)
+  File "C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\comum\arquivos\gerenciador.py", line 160, in carregar_dados
+    raise RuntimeError(
+RuntimeError: Erro ao processar a leitura do arquivo C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-25\test_arquivo_de_zero_byte_vai_0\vazio.csv: No columns to parse from file
+2026-08-17 17:21:34.988 | INFO    |test_varredura_de_arquivos:test_eot_desconhecida_vai_para_nao_identificada:181 - Iniciando mapeamento de operadoras para 1 arquivo(s).
+2026-08-17 17:21:34.991 | INFO    |src.services.batimento_detraf:_mapear_arquivos_por_operadora:196 - EOT não encontrado [999]
+2026-08-17 17:21:34.991 | ERROR   |test_varredura_de_arquivos:test_eot_desconhecida_vai_para_nao_identificada:181 - Nenhum EOT válido encontrado para o arquivo: desconhecida.csv
+2026-08-17 17:21:34.996 | INFO    |test_varredura_de_arquivos:test_pasta_inexistente_e_acusada_pelo_nome:214 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_expectativa
+2026-08-17 17:21:34.997 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os arquivos de expectativa para validação...
+2026-08-17 17:21:34.997 | ERROR   |src.services.validacao_detrafs:_preparar_arquivos_expectativa:269 - [Q21] Sem expectativa Vivo em [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-25\test_pasta_inexistente_e_acusa0\Expectativa\VIVO SP]: não existe. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
+2026-08-17 17:21:34.997 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento de expectativa concluído. Total geral de arquivos válidos: 0
+2026-08-17 17:21:34.998 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Filtro de Histórico concluído para o período 202507.
+2026-08-17 17:21:34.998 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Arquivos originais recebidos: 0
+2026-08-17 17:21:34.998 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 17:21:34.998 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Novos arquivos retornados para execução: 0
+2026-08-17 17:21:34.998 | INFO    |test_varredura_de_arquivos:test_pasta_inexistente_e_acusada_pelo_nome:214 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_expectativa | Tempo gasto: 0.0s
+2026-08-17 17:21:35.005 | INFO    |test_varredura_de_arquivos:test_pasta_existente_mas_sem_arquivo_valido_tambem_acusa:229 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_expectativa
+2026-08-17 17:21:35.005 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os arquivos de expectativa para validação...
+2026-08-17 17:21:35.006 | INFO    |comum.utils.decoradores:wrapper:22 - Pasta [VIVO SP] processada -> Válidos: 0 | Inválidos/Ignorados: 1
+2026-08-17 17:21:35.006 | ERROR   |src.services.validacao_detrafs:_preparar_arquivos_expectativa:263 - [Q21] Sem expectativa Vivo em [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-25\test_pasta_existente_mas_sem_a0\Expectativa\VIVO SP]: existe, mas nenhum dos 1 arquivo(s) passou nos filtros. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
+2026-08-17 17:21:35.006 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento de expectativa concluído. Total geral de arquivos válidos: 0
+2026-08-17 17:21:35.007 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Filtro de Histórico concluído para o período 202507.
+2026-08-17 17:21:35.007 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Arquivos originais recebidos: 0
+2026-08-17 17:21:35.007 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 17:21:35.007 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Novos arquivos retornados para execução: 0
+2026-08-17 17:21:35.007 | INFO    |test_varredura_de_arquivos:test_pasta_existente_mas_sem_arquivo_valido_tambem_acusa:229 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_expectativa | Tempo gasto: 0.0s
+2026-08-17 17:21:35.013 | INFO    |test_varredura_de_arquivos:test_o_batimento_acusa_do_mesmo_jeito:246 - Preparando os arquivos de expectativa para validação...
+2026-08-17 17:21:35.013 | ERROR   |src.services.batimento_detraf:_preparar_arquivos_expectativa:329 - [Q21] Sem expectativa Vivo em [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-25\test_o_batimento_acusa_do_mesm0\Expectativa\VIVO SP]: não tem nenhum arquivo aprovado pela validação. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
+2026-08-17 17:21:35.014 | INFO    |test_varredura_de_arquivos:test_o_batimento_acusa_do_mesmo_jeito:246 - Mapeamento de expectativa concluído. Total geral de arquivos válidos: 0
+2026-08-17 17:21:35.014 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Filtro de Histórico concluído para o período 202507.
+2026-08-17 17:21:35.014 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Arquivos originais recebidos: 0
+2026-08-17 17:21:35.014 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 17:21:35.014 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Novos arquivos retornados para execução: 0
+2026-08-17 17:21:35.021 | INFO    |test_varredura_de_arquivos:test_pasta_com_arquivo_valido_nao_acusa:257 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_expectativa
+2026-08-17 17:21:35.021 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os arquivos de expectativa para validação...
+2026-08-17 17:21:35.022 | INFO    |comum.utils.decoradores:wrapper:22 - Pasta [VIVO SP] processada -> Válidos: 1 | Inválidos/Ignorados: 0
+2026-08-17 17:21:35.022 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento de expectativa concluído. Total geral de arquivos válidos: 1
+2026-08-17 17:21:35.023 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Filtro de Histórico concluído para o período 202507.
+2026-08-17 17:21:35.023 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Arquivos originais recebidos: 1
+2026-08-17 17:21:35.023 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 17:21:35.024 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Novos arquivos retornados para execução: 1
+2026-08-17 17:21:35.024 | INFO    |test_varredura_de_arquivos:test_pasta_com_arquivo_valido_nao_acusa:257 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_expectativa | Tempo gasto: 0.0s
+2026-08-17 17:21:35.031 | INFO    |test_varredura_de_arquivos:test_grava_o_motivo_ao_lado_do_arquivo:286 - [Layout] Motivo da recusa gravado em [DETRAF_D_CLARO_202507_RECUSADO.md].
+2026-08-17 17:21:35.040 | INFO    |test_varredura_de_arquivos:test_o_diagnostico_traz_as_linhas_do_arquivo:296 - [Layout] Motivo da recusa gravado em [DETRAF_D_CLARO_202507_RECUSADO.md].
+2026-08-17 17:21:35.048 | INFO    |test_varredura_de_arquivos:test_o_diagnostico_cita_a_n3_para_a_expectativa:309 - [Layout] Motivo da recusa gravado em [DETRAF_D_CLARO_202507_RECUSADO.md].
+2026-08-17 17:21:35.057 | WARNING |test_varredura_de_arquivos:test_falha_ao_gravar_nao_derruba_a_validacao:327 - [Layout] Não foi possível gravar o diagnóstico da recusa em [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-25\test_falha_ao_gravar_nao_derru0\DETRAF_D_CLARO_202507_RECUSADO.md]: pasta somente leitura. O motivo continua no log.
+2026-08-17 17:21:47.073 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-17 17:21:47.073 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\BTIMES~1\AppData\Local\Temp\detraf_rpa2_teste_f62xeldj\TABELAS_DETRAF_TESTE.db]
+2026-08-17 17:21:47.411 | WARNING |src.services.captacao_expectativa:executar:181 - [MODO SEGURO] PERMITIR_DOWNLOAD_SFTP está desligado — nada foi baixado. A validação segue com o que já está em [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-26\test_desligado_nao_conecta0\Expectativa].
+2026-08-17 17:21:47.420 | WARNING |src.services.captacao_expectativa:executar:181 - [MODO SEGURO] PERMITIR_DOWNLOAD_SFTP está desligado — nada foi baixado. A validação segue com o que já está em [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-26\test_desligado_avisa_no_log0\Expectativa].
+2026-08-17 17:21:47.426 | INFO    |test_captacao_expectativa:test_de_pasta_funciona_com_o_switch_desligado:147 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:47.427 | INFO    |src.services.captacao_expectativa:executar:191 - [Expectativa] Origem simulada em disco: [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-26\test_de_pasta_funciona_com_o_s0\origem]
+2026-08-17 17:21:47.427 | INFO    |src.services.captacao_expectativa:_origens_de:218 - [Expectativa] A origem é um diretório plano — o destino de cada arquivo sai do nome dele.
+2026-08-17 17:21:47.428 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-26\test_de_pasta_funciona_com_o_s0\origem -> pelo nome: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.432 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Vivo/DETRAF_202603_VIVO_D.csv
+2026-08-17 17:21:47.437 | INFO    |test_captacao_expectativa:test_cada_origem_cai_na_subpasta_certa:163 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:47.438 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_SMS_ITF -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.438 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_VIVO -> Vivo: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.439 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Vivo/A_202603_D.csv
+2026-08-17 17:21:47.440 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TELEFONICA -> TLF: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.441 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: TLF/B_202603_D.csv
+2026-08-17 17:21:47.441 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/MVNO/NEXTEL/DESMP -> MVNO: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.442 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: MVNO/C_202603_D.csv
+2026-08-17 17:21:47.442 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TRP -> Detraf TRP: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.443 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Detraf TRP/D_202603_D.csv
+2026-08-17 17:21:47.449 | INFO    |test_captacao_expectativa:test_as_duas_origens_da_vivo_caem_na_mesma_pasta:177 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:47.449 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_SMS_ITF -> Vivo: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.450 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Vivo/SMS_202603_D.csv
+2026-08-17 17:21:47.451 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_VIVO -> Vivo: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.452 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Vivo/VIVO_202603_D.csv
+2026-08-17 17:21:47.452 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TELEFONICA -> TLF: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.453 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/MVNO/NEXTEL/DESMP -> MVNO: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.453 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TRP -> Detraf TRP: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.462 | INFO    |test_captacao_expectativa:test_pasta_remota_indisponivel_nao_derruba_as_outras:207 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:47.463 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_SMS_ITF -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.463 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_VIVO -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.463 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TELEFONICA -> TLF: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.464 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: TLF/B_202603_D.csv
+2026-08-17 17:21:47.464 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/MVNO/NEXTEL/DESMP -> MVNO: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.465 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TRP -> Detraf TRP: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.470 | INFO    |test_captacao_expectativa:test_falha_num_arquivo_nao_derruba_os_demais:224 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:47.471 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_SMS_ITF -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.471 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_VIVO -> Vivo: 2 de 2 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.471 | ERROR   |src.services.captacao_expectativa:executar:199 - [Expectativa] Falhou [A_202603_D.csv]: disco cheio
+2026-08-17 17:21:47.472 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Vivo/B_202603_D.csv
+2026-08-17 17:21:47.473 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TELEFONICA -> TLF: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.473 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/MVNO/NEXTEL/DESMP -> MVNO: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.473 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TRP -> Detraf TRP: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.478 | INFO    |test_captacao_expectativa:test_a_sessao_e_fechada_mesmo_sem_nada_para_baixar:232 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:47.478 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_SMS_ITF -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.479 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_VIVO -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.479 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TELEFONICA -> TLF: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.479 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/MVNO/NEXTEL/DESMP -> MVNO: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.479 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TRP -> Detraf TRP: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.480 | WARNING |test_captacao_expectativa:test_a_sessao_e_fechada_mesmo_sem_nada_para_baixar:232 - [Expectativa] Nenhum arquivo _D de 202603 foi trazido. A validação vai seguir com o que já estiver na pasta — confira se o período está certo antes de tratar como defeito.
+2026-08-17 17:21:47.484 | INFO    |test_captacao_expectativa:test_nada_encontrado_avisa_sem_falhar:241 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:47.484 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_SMS_ITF -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.485 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_VIVO -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.485 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TELEFONICA -> TLF: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.486 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/MVNO/NEXTEL/DESMP -> MVNO: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.486 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TRP -> Detraf TRP: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.487 | WARNING |test_captacao_expectativa:test_nada_encontrado_avisa_sem_falhar:241 - [Expectativa] Nenhum arquivo _D de 202603 foi trazido. A validação vai seguir com o que já estiver na pasta — confira se o período está certo antes de tratar como defeito.
+2026-08-17 17:21:47.492 | INFO    |test_captacao_expectativa:test_referencia_explicita_manda:255 - [Expectativa] Procurando os arquivos _D de 202601 em 5 pasta(s) de origem.
+2026-08-17 17:21:47.492 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_SMS_ITF -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.493 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_VIVO -> Vivo: 1 de 2 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.494 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Vivo/A_202601_D.csv
+2026-08-17 17:21:47.494 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TELEFONICA -> TLF: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.494 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/MVNO/NEXTEL/DESMP -> MVNO: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.495 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TRP -> Detraf TRP: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.500 | INFO    |test_captacao_expectativa:test_sem_referencia_usa_a_competencia_do_ambiente:269 - [Expectativa] Procurando os arquivos _D de 202507 em 5 pasta(s) de origem.
+2026-08-17 17:21:47.500 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_SMS_ITF -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.501 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_VIVO -> Vivo: 1 de 2 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.502 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Vivo/A_202507_D.csv
+2026-08-17 17:21:47.503 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TELEFONICA -> TLF: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.503 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/MVNO/NEXTEL/DESMP -> MVNO: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.503 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TRP -> Detraf TRP: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.512 | INFO    |test_captacao_expectativa:test_pasta_plana_roteia_pelo_nome:290 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:47.513 | INFO    |src.services.captacao_expectativa:executar:191 - [Expectativa] Origem simulada em disco: [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-26\test_pasta_plana_roteia_pelo_n0\origem]
+2026-08-17 17:21:47.514 | INFO    |src.services.captacao_expectativa:_origens_de:218 - [Expectativa] A origem é um diretório plano — o destino de cada arquivo sai do nome dele.
+2026-08-17 17:21:47.514 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-26\test_pasta_plana_roteia_pelo_n0\origem -> pelo nome: 2 de 3 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.516 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Vivo/A_202603_SMP_VIVO_D.csv
+2026-08-17 17:21:47.517 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: TLF/B_202603_STF_TLF_D.csv
+2026-08-17 17:21:47.525 | INFO    |test_captacao_expectativa:test_arquivo_sem_pasta_no_nome_falha_dizendo:310 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:47.525 | INFO    |src.services.captacao_expectativa:executar:191 - [Expectativa] Origem simulada em disco: [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-26\test_arquivo_sem_pasta_no_nome0\origem]
+2026-08-17 17:21:47.526 | INFO    |src.services.captacao_expectativa:_origens_de:218 - [Expectativa] A origem é um diretório plano — o destino de cada arquivo sai do nome dele.
+2026-08-17 17:21:47.526 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-26\test_arquivo_sem_pasta_no_nome0\origem -> pelo nome: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.526 | ERROR   |src.services.captacao_expectativa:executar:199 - [Expectativa] Não sei em qual pasta [SEM_PASTA_202603_D.csv] entra — nenhuma de ['Vivo', 'TLF', 'MVNO', 'Detraf TRP'] aparece no nome. Não foi copiado.
+2026-08-17 17:21:47.527 | WARNING |test_captacao_expectativa:test_arquivo_sem_pasta_no_nome_falha_dizendo:310 - [Expectativa] Nenhum arquivo _D de 202603 foi trazido. A validação vai seguir com o que já estiver na pasta — confira se o período está certo antes de tratar como defeito.
+2026-08-17 17:21:47.533 | INFO    |test_captacao_expectativa:test_le_da_subpasta_quando_a_arvore_esta_espelhada:324 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:47.534 | INFO    |src.services.captacao_expectativa:executar:191 - [Expectativa] Origem simulada em disco: [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-26\test_le_da_subpasta_quando_a_a0\origem]
+2026-08-17 17:21:47.535 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_VIVO -> Vivo: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.537 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Vivo/V_202603_D.csv
+2026-08-17 17:21:47.542 | INFO    |test_captacao_expectativa:test_pasta_inexistente_falha_com_o_motivo:333 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:47.543 | ERROR   |test_captacao_expectativa:test_pasta_inexistente_falha_com_o_motivo:333 - [Expectativa] [--de-pasta] O diretório [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-26\test_pasta_inexistente_falha_c0\nao_existe] não existe.
+2026-08-17 17:21:47.548 | INFO    |test_captacao_expectativa:test_o_resumo_diz_a_origem_e_o_periodo:343 - [Expectativa] Procurando os arquivos _D de 202603 em 5 pasta(s) de origem.
+2026-08-17 17:21:47.548 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_SMS_ITF -> Vivo: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.548 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_VIVO -> Vivo: 1 de 1 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.550 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] Baixado: Vivo/A_202603_D.csv
+2026-08-17 17:21:47.550 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TELEFONICA -> TLF: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.550 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/MVNO/NEXTEL/DESMP -> MVNO: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.550 | INFO    |src.services.captacao_expectativa:executar:199 - [Expectativa] /interfaces/GERACAO_DETRAF_TRP -> Detraf TRP: 0 de 0 arquivo(s) casam com o filtro.
+2026-08-17 17:21:47.564 | ERROR   |test_criacao_arquivo_contestacao:test_valor_ilegivel_vira_zero:54 - [coluna numérica] 1 valor(es) não puderam ser convertidos para número e viraram ZERO: ['abc']. A causa mais comum é separador de milhar ('1.234,56'), que a V2 não define para estes campos. Um valor zerado aqui vira diferença inventada na contestação — confira o arquivo antes de aceitar a apuração.
+2026-08-17 17:21:47.569 | ERROR   |test_criacao_arquivo_contestacao:test_separador_de_milhar_vira_zero:78 - [coluna numérica] 1 valor(es) não puderam ser convertidos para número e viraram ZERO: ['1.234,56']. A causa mais comum é separador de milhar ('1.234,56'), que a V2 não define para estes campos. Um valor zerado aqui vira diferença inventada na contestação — confira o arquivo antes de aceitar a apuração.
+2026-08-17 17:21:47.574 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_anexo5_processado]
+2026-08-17 17:21:47.577 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_anexo5_processado] carregada | Linhas: 4 | Colunas: 6
+2026-08-17 17:21:47.580 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_detraf_mapeamento_descritores]
+2026-08-17 17:21:47.582 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_detraf_mapeamento_descritores] carregada | Linhas: 4 | Colunas: 5
+2026-08-17 17:21:47.679 | ERROR   |test_criacao_arquivo_contestacao:_converter:287 - [R$_Bruto (coluna 15)] 1 valor(es) não puderam ser convertidos para número e viraram ZERO: ['1.234,56']. A causa mais comum é separador de milhar ('1.234,56'), que a V2 não define para estes campos. Um valor zerado aqui vira diferença inventada na contestação — confira o arquivo antes de aceitar a apuração.
+2026-08-17 17:21:47.684 | ERROR   |test_criacao_arquivo_contestacao:_converter:287 - [R$_Bruto (coluna 15)] 2 valor(es) não puderam ser convertidos para número e viraram ZERO: ['1.234,56', '2.000,00']. A causa mais comum é separador de milhar ('1.234,56'), que a V2 não define para estes campos. Um valor zerado aqui vira diferença inventada na contestação — confira o arquivo antes de aceitar a apuração.
+2026-08-17 17:21:47.699 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-17 17:21:47.699 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\BTIMES~1\AppData\Local\Temp\detraf_rpa2_teste_f62xeldj\TABELAS_DETRAF_TESTE.db]
+2026-08-17 17:21:47.710 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-17 17:21:47.711 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\BTIMES~1\AppData\Local\Temp\detraf_rpa2_teste_f62xeldj\TABELAS_DETRAF_TESTE.db]
+2026-08-17 17:21:47.725 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-17 17:21:47.725 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\BTIMES~1\AppData\Local\Temp\detraf_rpa2_teste_f62xeldj\TABELAS_DETRAF_TESTE.db]
+2026-08-17 17:21:47.733 | WARNING |test_criacao_arquivo_contestacao:test_descritor_fora_do_catalogo_e_nomeado_no_log:385 - [HU-09] 1 linha(s) com descritor sem remuneração na tabela `tbl_detraf_mapeamento_descritores`: ['XXZ']. Elas ficam sem `remuneracao` e não serão encontradas pelo RPA 3 — confira se falta linha na tabela.
+2026-08-17 17:21:47.800 | INFO    |test_limpeza_e_resultado:test_falha_de_leitura_vira_registro_nao_validado:147 - Iniciando transformação de lote tipo [DETRAF_SUCESSO] com 1 arquivo(s).
+2026-08-17 17:21:47.800 | ERROR   |test_limpeza_e_resultado:test_falha_de_leitura_vira_registro_nao_validado:147 - [DETRAF_SUCESSO] Não foi possível ler o arquivo [inexistente.csv]: O arquivo não foi encontrado: C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-26\test_falha_de_leitura_vira_reg0\inexistente.csv — registrando como não validado (ERR_LEITURA_ARQUIVO), sem volumetria.
+2026-08-17 17:21:47.807 | INFO    |test_limpeza_e_resultado:test_volumetria_nula_nao_zerada_quando_a_leitura_falha:158 - Iniciando transformação de lote tipo [DETRAF_SUCESSO] com 1 arquivo(s).
+2026-08-17 17:21:47.808 | ERROR   |test_limpeza_e_resultado:test_volumetria_nula_nao_zerada_quando_a_leitura_falha:158 - [DETRAF_SUCESSO] Não foi possível ler o arquivo [inexistente.csv]: O arquivo não foi encontrado: C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-26\test_volumetria_nula_nao_zerad0\inexistente.csv — registrando como não validado (ERR_LEITURA_ARQUIVO), sem volumetria.
+2026-08-17 17:21:47.832 | INFO    |test_limpeza_e_resultado:test_arquivo_valido_entra_como_validado:169 - Iniciando transformação de lote tipo [DETRAF_SUCESSO] com 1 arquivo(s).
+2026-08-17 17:21:47.850 | INFO    |test_limpeza_e_resultado:test_lote_de_erro_recebe_codigo:179 - Iniciando transformação de lote tipo [EXPECTATIVA_ERRO] com 1 arquivo(s).
+2026-08-17 17:21:47.863 | INFO    |test_limpeza_e_resultado:test_tipo_de_lote_desconhecido_e_ignorado_com_aviso:188 - Iniciando transformação de lote tipo [TIPO_INVENTADO] com 1 arquivo(s).
+2026-08-17 17:21:47.864 | WARNING |test_limpeza_e_resultado:test_tipo_de_lote_desconhecido_e_ignorado_com_aviso:188 - Tipo de lote desconhecido: TIPO_INVENTADO. Ignorando arquivo.
+2026-08-17 17:21:47.871 | INFO    |test_limpeza_e_resultado:test_um_arquivo_ruim_nao_impede_os_demais:198 - Iniciando transformação de lote tipo [DETRAF_SUCESSO] com 2 arquivo(s).
+2026-08-17 17:21:47.872 | ERROR   |test_limpeza_e_resultado:test_um_arquivo_ruim_nao_impede_os_demais:198 - [DETRAF_SUCESSO] Não foi possível ler o arquivo [inexistente.csv]: O arquivo não foi encontrado: C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-26\test_um_arquivo_ruim_nao_imped0\inexistente.csv — registrando como não validado (ERR_LEITURA_ARQUIVO), sem volumetria.
+2026-08-17 17:21:47.890 | INFO    |test_limpeza_e_resultado:test_cada_tipo_de_lote_vira_um_valor_do_enum:253 - Iniciando transformação de lote tipo [DETRAF_SUCESSO] com 1 arquivo(s).
+2026-08-17 17:21:47.909 | INFO    |test_limpeza_e_resultado:test_cada_tipo_de_lote_vira_um_valor_do_enum:253 - Iniciando transformação de lote tipo [DETRAF_ERRO] com 1 arquivo(s).
+2026-08-17 17:21:47.923 | INFO    |test_limpeza_e_resultado:test_cada_tipo_de_lote_vira_um_valor_do_enum:253 - Iniciando transformação de lote tipo [EXPECTATIVA_SUCESSO] com 1 arquivo(s).
+2026-08-17 17:21:47.934 | INFO    |test_limpeza_e_resultado:test_cada_tipo_de_lote_vira_um_valor_do_enum:253 - Iniciando transformação de lote tipo [EXPECTATIVA_ERRO] com 1 arquivo(s).
+2026-08-17 17:21:47.946 | INFO    |test_limpeza_e_resultado:test_detraf_reprovado_nao_vira_erro:269 - Iniciando transformação de lote tipo [DETRAF_ERRO] com 1 arquivo(s).
+2026-08-17 17:21:47.985 | INFO    |test_nao_responde_mais_email:test_continua_renomeando_o_invalido_para_erro:62 - Renomeando 1 arquivos inválidos adicionando _ERRO
+2026-08-17 17:21:47.992 | INFO    |test_varredura_de_arquivos:test_expectativa_none_acusa_a_variavel:46 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_expectativa
+2026-08-17 17:21:47.992 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os arquivos de expectativa para validação...
+2026-08-17 17:21:47.993 | INFO    |test_varredura_de_arquivos:test_expectativa_none_acusa_a_variavel:46 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_expectativa | Tempo gasto: 0.0s
+2026-08-17 17:21:47.996 | INFO    |test_varredura_de_arquivos:test_expectativa_none_tambem_no_batimento:55 - Preparando os arquivos de expectativa para validação...
+2026-08-17 17:21:48.019 | INFO    |test_varredura_de_arquivos:test_raiz_apontando_para_lugar_inexistente_e_erro:65 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_expectativa
+2026-08-17 17:21:48.020 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os arquivos de expectativa para validação...
+2026-08-17 17:21:48.021 | INFO    |test_varredura_de_arquivos:test_raiz_apontando_para_lugar_inexistente_e_erro:65 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_expectativa | Tempo gasto: 0.0s
+2026-08-17 17:21:48.031 | INFO    |test_varredura_de_arquivos:test_encontra_o_arquivo_na_subpasta_correta:81 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_detrafs
+2026-08-17 17:21:48.032 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os detrafs para validação...
+2026-08-17 17:21:48.032 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando busca de arquivos para o período 202507 no diretório: 'C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-26\test_encontra_o_arquivo_na_sub0\Operadoras'
+2026-08-17 17:21:48.033 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [CLARO]
+2026-08-17 17:21:48.034 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 1. Total geral de arquivos encontrados: 1
+2026-08-17 17:21:48.035 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [CLARO]: 1 arquivo(s) encontrado(s)
+2026-08-17 17:21:48.036 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Filtro de Histórico concluído para o período 202507.
+2026-08-17 17:21:48.036 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos originais recebidos: 1
+2026-08-17 17:21:48.037 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 17:21:48.038 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Novos arquivos retornados para execução: 1
+2026-08-17 17:21:48.038 | INFO    |test_varredura_de_arquivos:test_encontra_o_arquivo_na_subpasta_correta:81 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_detrafs | Tempo gasto: 0.01s
+2026-08-17 17:21:48.049 | INFO    |test_varredura_de_arquivos:test_arquivo_fora_da_subpasta_nao_conta:94 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_detrafs
+2026-08-17 17:21:48.050 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os detrafs para validação...
+2026-08-17 17:21:48.050 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando busca de arquivos para o período 202507 no diretório: 'C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-26\test_arquivo_fora_da_subpasta_0\Operadoras'
+2026-08-17 17:21:48.051 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 0. Total geral de arquivos encontrados: 0
+2026-08-17 17:21:48.052 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Filtro de Histórico concluído para o período 202507.
+2026-08-17 17:21:48.052 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos originais recebidos: 0
+2026-08-17 17:21:48.053 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 17:21:48.053 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Novos arquivos retornados para execução: 0
+2026-08-17 17:21:48.054 | INFO    |test_varredura_de_arquivos:test_arquivo_fora_da_subpasta_nao_conta:94 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_detrafs | Tempo gasto: 0.0s
+2026-08-17 17:21:48.065 | INFO    |test_varredura_de_arquivos:test_operadora_sem_o_mes_e_registrada_como_sem_detraf:100 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_detrafs
+2026-08-17 17:21:48.066 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os detrafs para validação...
+2026-08-17 17:21:48.066 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando busca de arquivos para o período 202507 no diretório: 'C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-26\test_operadora_sem_o_mes_e_reg0\Operadoras'
+2026-08-17 17:21:48.067 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 0. Total geral de arquivos encontrados: 0
+2026-08-17 17:21:48.068 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Filtro de Histórico concluído para o período 202507.
+2026-08-17 17:21:48.069 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos originais recebidos: 0
+2026-08-17 17:21:48.069 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 17:21:48.069 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Novos arquivos retornados para execução: 0
+2026-08-17 17:21:48.070 | INFO    |test_varredura_de_arquivos:test_operadora_sem_o_mes_e_registrada_como_sem_detraf:100 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_detrafs | Tempo gasto: 0.0s
+2026-08-17 17:21:48.080 | INFO    |test_varredura_de_arquivos:test_extensao_nao_permitida_e_ignorada:111 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_detrafs
+2026-08-17 17:21:48.080 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os detrafs para validação...
+2026-08-17 17:21:48.081 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando busca de arquivos para o período 202507 no diretório: 'C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-26\test_extensao_nao_permitida_e_0\Operadoras'
+2026-08-17 17:21:48.082 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [CLARO]
+2026-08-17 17:21:48.082 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 1. Total geral de arquivos encontrados: 0
+2026-08-17 17:21:48.083 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [CLARO]: 0 arquivo(s) encontrado(s)
+2026-08-17 17:21:48.083 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Filtro de Histórico concluído para o período 202507.
+2026-08-17 17:21:48.083 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos originais recebidos: 0
+2026-08-17 17:21:48.083 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 17:21:48.084 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Novos arquivos retornados para execução: 0
+2026-08-17 17:21:48.084 | INFO    |test_varredura_de_arquivos:test_extensao_nao_permitida_e_ignorada:111 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_detrafs | Tempo gasto: 0.0s
+2026-08-17 17:21:48.091 | INFO    |test_varredura_de_arquivos:test_raiz_vazia_devolve_lista_vazia_sem_erro:115 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_detrafs
+2026-08-17 17:21:48.091 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os detrafs para validação...
+2026-08-17 17:21:48.092 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando busca de arquivos para o período 202507 no diretório: 'C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-26\test_raiz_vazia_devolve_lista_0\Operadoras'
+2026-08-17 17:21:48.092 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 0. Total geral de arquivos encontrados: 0
+2026-08-17 17:21:48.093 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Filtro de Histórico concluído para o período 202507.
+2026-08-17 17:21:48.093 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos originais recebidos: 0
+2026-08-17 17:21:48.093 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 17:21:48.093 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Novos arquivos retornados para execução: 0
+2026-08-17 17:21:48.094 | INFO    |test_varredura_de_arquivos:test_raiz_vazia_devolve_lista_vazia_sem_erro:115 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_detrafs | Tempo gasto: 0.0s
+2026-08-17 17:21:48.106 | INFO    |test_varredura_de_arquivos:test_varre_todas_as_operadoras:121 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_detrafs
+2026-08-17 17:21:48.107 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os detrafs para validação...
+2026-08-17 17:21:48.107 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando busca de arquivos para o período 202507 no diretório: 'C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-26\test_varre_todas_as_operadoras0\Operadoras'
+2026-08-17 17:21:48.108 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [ALGAR]
+2026-08-17 17:21:48.109 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [CLARO]
+2026-08-17 17:21:48.110 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 2. Total geral de arquivos encontrados: 2
+2026-08-17 17:21:48.110 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [ALGAR]: 1 arquivo(s) encontrado(s)
+2026-08-17 17:21:48.111 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [CLARO]: 1 arquivo(s) encontrado(s)
+2026-08-17 17:21:48.112 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Filtro de Histórico concluído para o período 202507.
+2026-08-17 17:21:48.113 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos originais recebidos: 2
+2026-08-17 17:21:48.113 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 17:21:48.113 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Novos arquivos retornados para execução: 2
+2026-08-17 17:21:48.113 | INFO    |test_varredura_de_arquivos:test_varre_todas_as_operadoras:121 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_detrafs | Tempo gasto: 0.01s
+2026-08-17 17:21:48.122 | INFO    |test_varredura_de_arquivos:test_agrupa_pelo_eot_credora:145 - Iniciando mapeamento de operadoras para 1 arquivo(s).
+2026-08-17 17:21:48.131 | INFO    |test_varredura_de_arquivos:test_arquivo_de_zero_byte_vai_para_nao_identificada:166 - Iniciando mapeamento de operadoras para 1 arquivo(s).
+2026-08-17 17:21:48.131 | WARNING |comum.arquivos.gerenciador:carregar_dados:120 - Nenhum separador reconhecido nas primeiras 20 linhas de [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-26\test_arquivo_de_zero_byte_vai_0\vazio.csv] — assumindo ';'. Se o arquivo usar outro, ele será lido como coluna única e reprovado na validação.
+2026-08-17 17:21:48.132 | ERROR   |test_varredura_de_arquivos:test_arquivo_de_zero_byte_vai_para_nao_identificada:166 - Erro crítico ao tentar mapear operadora do arquivo vazio.csv: Erro ao processar a leitura do arquivo C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-26\test_arquivo_de_zero_byte_vai_0\vazio.csv: No columns to parse from file
+Traceback (most recent call last):
+  File "C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\comum\arquivos\gerenciador.py", line 121, in carregar_dados
+    df = pd.read_csv(
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\io\parsers\readers.py", line 873, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\io\parsers\readers.py", line 300, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\io\parsers\readers.py", line 1645, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\io\parsers\readers.py", line 1922, in _make_engine
+    return mapping[engine](f, **self.options)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 95, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 575, in pandas._libs.parsers.TextReader.__cinit__
+pandas.errors.EmptyDataError: No columns to parse from file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pytest\__main__.py", line 9, in <module>
+    raise SystemExit(_console_main())
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\config\__init__.py", line 253, in _console_main
+    code = _main(prog=_get_prog_name(sys.argv))
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\config\__init__.py", line 229, in _main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\main.py", line 377, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\main.py", line 330, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\main.py", line 384, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\main.py", line 408, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\runner.py", line 118, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\runner.py", line 139, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\runner.py", line 249, in call_and_report
+    call = CallInfo.from_call(
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\runner.py", line 361, in from_call
+    result: TResult | None = func()
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\runner.py", line 250, in <lambda>
+    lambda: runtest_hook(item=item, **kwds),
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\runner.py", line 184, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\python.py", line 1707, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "C:\Users\Btime Soluções\AppData\Local\Programs\Python\Python314\Lib\site-packages\_pytest\python.py", line 167, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa2_validacao_apuracao\tests\test_varredura_de_arquivos.py", line 166, in test_arquivo_de_zero_byte_vai_para_nao_identificada
+    mapa = batimento._mapear_arquivos_por_operadora([caminho])
+> File "C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\rpa2_validacao_apuracao\src\services\batimento_detraf.py", line 175, in _mapear_arquivos_por_operadora
+    df = carregar_dados(caminho_arq)
+  File "C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\comum\arquivos\gerenciador.py", line 160, in carregar_dados
+    raise RuntimeError(
+RuntimeError: Erro ao processar a leitura do arquivo C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-26\test_arquivo_de_zero_byte_vai_0\vazio.csv: No columns to parse from file
+2026-08-17 17:21:48.177 | INFO    |test_varredura_de_arquivos:test_eot_desconhecida_vai_para_nao_identificada:181 - Iniciando mapeamento de operadoras para 1 arquivo(s).
+2026-08-17 17:21:48.182 | INFO    |src.services.batimento_detraf:_mapear_arquivos_por_operadora:196 - EOT não encontrado [999]
+2026-08-17 17:21:48.183 | ERROR   |test_varredura_de_arquivos:test_eot_desconhecida_vai_para_nao_identificada:181 - Nenhum EOT válido encontrado para o arquivo: desconhecida.csv
+2026-08-17 17:21:48.191 | INFO    |test_varredura_de_arquivos:test_pasta_inexistente_e_acusada_pelo_nome:214 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_expectativa
+2026-08-17 17:21:48.192 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os arquivos de expectativa para validação...
+2026-08-17 17:21:48.192 | ERROR   |src.services.validacao_detrafs:_preparar_arquivos_expectativa:269 - [Q21] Sem expectativa Vivo em [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-26\test_pasta_inexistente_e_acusa0\Expectativa\VIVO SP]: não existe. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
+2026-08-17 17:21:48.193 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento de expectativa concluído. Total geral de arquivos válidos: 0
+2026-08-17 17:21:48.193 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Filtro de Histórico concluído para o período 202507.
+2026-08-17 17:21:48.194 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Arquivos originais recebidos: 0
+2026-08-17 17:21:48.194 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 17:21:48.194 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Novos arquivos retornados para execução: 0
+2026-08-17 17:21:48.194 | INFO    |test_varredura_de_arquivos:test_pasta_inexistente_e_acusada_pelo_nome:214 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_expectativa | Tempo gasto: 0.0s
+2026-08-17 17:21:48.204 | INFO    |test_varredura_de_arquivos:test_pasta_existente_mas_sem_arquivo_valido_tambem_acusa:229 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_expectativa
+2026-08-17 17:21:48.204 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os arquivos de expectativa para validação...
+2026-08-17 17:21:48.205 | INFO    |comum.utils.decoradores:wrapper:22 - Pasta [VIVO SP] processada -> Válidos: 0 | Inválidos/Ignorados: 1
+2026-08-17 17:21:48.206 | ERROR   |src.services.validacao_detrafs:_preparar_arquivos_expectativa:263 - [Q21] Sem expectativa Vivo em [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-26\test_pasta_existente_mas_sem_a0\Expectativa\VIVO SP]: existe, mas nenhum dos 1 arquivo(s) passou nos filtros. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
+2026-08-17 17:21:48.206 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento de expectativa concluído. Total geral de arquivos válidos: 0
+2026-08-17 17:21:48.206 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Filtro de Histórico concluído para o período 202507.
+2026-08-17 17:21:48.206 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Arquivos originais recebidos: 0
+2026-08-17 17:21:48.207 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 17:21:48.207 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Novos arquivos retornados para execução: 0
+2026-08-17 17:21:48.207 | INFO    |test_varredura_de_arquivos:test_pasta_existente_mas_sem_arquivo_valido_tambem_acusa:229 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_expectativa | Tempo gasto: 0.0s
+2026-08-17 17:21:48.213 | INFO    |test_varredura_de_arquivos:test_o_batimento_acusa_do_mesmo_jeito:246 - Preparando os arquivos de expectativa para validação...
+2026-08-17 17:21:48.214 | ERROR   |src.services.batimento_detraf:_preparar_arquivos_expectativa:329 - [Q21] Sem expectativa Vivo em [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-26\test_o_batimento_acusa_do_mesm0\Expectativa\VIVO SP]: não tem nenhum arquivo aprovado pela validação. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
+2026-08-17 17:21:48.214 | INFO    |test_varredura_de_arquivos:test_o_batimento_acusa_do_mesmo_jeito:246 - Mapeamento de expectativa concluído. Total geral de arquivos válidos: 0
+2026-08-17 17:21:48.214 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Filtro de Histórico concluído para o período 202507.
+2026-08-17 17:21:48.215 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Arquivos originais recebidos: 0
+2026-08-17 17:21:48.215 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 17:21:48.215 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Novos arquivos retornados para execução: 0
+2026-08-17 17:21:48.225 | INFO    |test_varredura_de_arquivos:test_pasta_com_arquivo_valido_nao_acusa:257 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_expectativa
+2026-08-17 17:21:48.225 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os arquivos de expectativa para validação...
+2026-08-17 17:21:48.226 | INFO    |comum.utils.decoradores:wrapper:22 - Pasta [VIVO SP] processada -> Válidos: 1 | Inválidos/Ignorados: 0
+2026-08-17 17:21:48.226 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento de expectativa concluído. Total geral de arquivos válidos: 1
+2026-08-17 17:21:48.227 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Filtro de Histórico concluído para o período 202507.
+2026-08-17 17:21:48.227 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Arquivos originais recebidos: 1
+2026-08-17 17:21:48.228 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 17:21:48.228 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Novos arquivos retornados para execução: 1
+2026-08-17 17:21:48.228 | INFO    |test_varredura_de_arquivos:test_pasta_com_arquivo_valido_nao_acusa:257 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_expectativa | Tempo gasto: 0.0s
+2026-08-17 17:21:48.237 | INFO    |test_varredura_de_arquivos:test_grava_o_motivo_ao_lado_do_arquivo:286 - [Layout] Motivo da recusa gravado em [DETRAF_D_CLARO_202507_RECUSADO.md].
+2026-08-17 17:21:48.244 | INFO    |test_varredura_de_arquivos:test_o_diagnostico_traz_as_linhas_do_arquivo:296 - [Layout] Motivo da recusa gravado em [DETRAF_D_CLARO_202507_RECUSADO.md].
+2026-08-17 17:21:48.252 | INFO    |test_varredura_de_arquivos:test_o_diagnostico_cita_a_n3_para_a_expectativa:309 - [Layout] Motivo da recusa gravado em [DETRAF_D_CLARO_202507_RECUSADO.md].
+2026-08-17 17:21:48.260 | WARNING |test_varredura_de_arquivos:test_falha_ao_gravar_nao_derruba_a_validacao:327 - [Layout] Não foi possível gravar o diagnóstico da recusa em [C:\Users\Btime Soluções\AppData\Local\Temp\pytest-of-Btime Soluções\pytest-26\test_falha_ao_gravar_nao_derru0\DETRAF_D_CLARO_202507_RECUSADO.md]: pasta somente leitura. O motivo continua no log.
