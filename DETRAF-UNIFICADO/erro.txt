@@ -1,247 +1,668 @@
-Windows PowerShell
-Copyright (C) Microsoft Corporation. All rights reserved.
+D4D00005211FBDF0000137D0D4C70E1CF4091747B97613AB5A600009FFAF1240000' capturado mas não movido para 'PROCESSADOS': Não foi possível acessar/criar a pasta 'PROCESSADOS'. Detalhe: (-2147352567, 'Exception occurred.', (4096, 'Microsoft Outlook', 'Não é possível criar a pasta.', None, 0, -2147352567), None)
+2026-08-17 16:39:51.628 | INFO    |src.controllers.outlook_controller:capturar_arquivos:134 - E-mail '00000000A949F53E017BB44C86E46D56D2D6BB100700F25FC41A3584FC499D024E55DD250D4D00005211FBDF0000137D0D4C70E1CF4091747B97613AB5A600009FFAF1250000': 1 anexo(s) baixado(s) para 'C:\RPA\rpa_vivo_mvp2\arquivos\Entrada\9D024E55DD250D4D00005211FBDF0000137D0D4C70E1CF4091747B97613AB5A600009FFAF1250000'.
+2026-08-17 16:39:51.694 | INFO    |comum.integracoes.outlook:move_to_subfolder:188 - Pasta 'PROCESSADOS' não encontrada em 'Detraf Despesas' — criando. 
+2026-08-17 16:39:51.955 | ERROR   |src.controllers.processamento_controller:processar:104 - E-mail '00000000A949F53E017BB44C86E46D56D2D6BB100700F25FC41A3584FC499D024E55DD250D4D00005211FBDF0000137D0D4C70E1CF4091747B97613AB5A600009FFAF1250000' capturado mas não movido para 'PROCESSADOS': Não foi possível acessar/criar a pasta 'PROCESSADOS'. Detalhe: (-2147352567, 'Exception occurred.', (4096, 'Microsoft Outlook', 'Não é possível criar a pasta.', None, 0, -2147352567), None)
+2026-08-17 16:39:52.092 | INFO    |src.controllers.outlook_controller:capturar_arquivos:134 - E-mail '00000000A949F53E017BB44C86E46D56D2D6BB100700F25FC41A3584FC499D024E55DD250D4D00005211FBDF0000137D0D4C70E1CF4091747B97613AB5A600009FFAF1260000': 1 anexo(s) baixado(s) para 'C:\RPA\rpa_vivo_mvp2\arquivos\Entrada\9D024E55DD250D4D00005211FBDF0000137D0D4C70E1CF4091747B97613AB5A600009FFAF1260000'.
+2026-08-17 16:39:52.153 | INFO    |comum.integracoes.outlook:move_to_subfolder:188 - Pasta 'PROCESSADOS' não encontrada em 'Detraf Despesas' — criando. 
+2026-08-17 16:39:52.378 | ERROR   |src.controllers.processamento_controller:processar:104 - E-mail '00000000A949F53E017BB44C86E46D56D2D6BB100700F25FC41A3584FC499D024E55DD250D4D00005211FBDF0000137D0D4C70E1CF4091747B97613AB5A600009FFAF1260000' capturado mas não movido para 'PROCESSADOS': Não foi possível acessar/criar a pasta 'PROCESSADOS'. Detalhe: (-2147352567, 'Exception occurred.', (4096, 'Microsoft Outlook', 'Não é possível criar a pasta.', None, 0, -2147352567), None)
+2026-08-17 16:39:52.498 | INFO    |src.controllers.outlook_controller:capturar_arquivos:134 - E-mail '00000000A949F53E017BB44C86E46D56D2D6BB100700F25FC41A3584FC499D024E55DD250D4D00005211FBDF0000137D0D4C70E1CF4091747B97613AB5A600009FFAF1270000': 1 anexo(s) ignorado(s) por extensão não permitida — logo.png
+2026-08-17 16:39:52.499 | INFO    |src.controllers.outlook_controller:capturar_arquivos:134 - E-mail '00000000A949F53E017BB44C86E46D56D2D6BB100700F25FC41A3584FC499D024E55DD250D4D00005211FBDF0000137D0D4C70E1CF4091747B97613AB5A600009FFAF1270000': 1 anexo(s) baixado(s) para 'C:\RPA\rpa_vivo_mvp2\arquivos\Entrada\9D024E55DD250D4D00005211FBDF0000137D0D4C70E1CF4091747B97613AB5A600009FFAF1270000'.
+2026-08-17 16:39:52.545 | INFO    |comum.integracoes.outlook:move_to_subfolder:188 - Pasta 'PROCESSADOS' não encontrada em 'Detraf Despesas' — criando. 
+2026-08-17 16:39:52.773 | ERROR   |src.controllers.processamento_controller:processar:104 - E-mail '00000000A949F53E017BB44C86E46D56D2D6BB100700F25FC41A3584FC499D024E55DD250D4D00005211FBDF0000137D0D4C70E1CF4091747B97613AB5A600009FFAF1270000' capturado mas não movido para 'PROCESSADOS': Não foi possível acessar/criar a pasta 'PROCESSADOS'. Detalhe: (-2147352567, 'Exception occurred.', (4096, 'Microsoft Outlook', 'Não é possível criar a pasta.', None, 0, -2147352567), None)
+2026-08-17 16:39:52.903 | INFO    |src.controllers.processamento_controller:processar:104 - Resumo da captura — lidos: 78 | filtrados (ignorados): 0 | já rastreados (ignorados): 72 | falha no download: 0 | falha ao mover p/ PROCESSADOS: 5 | arquivos capturados: 7
+2026-08-17 16:39:52.910 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] E-mails lidos:            78 
+2026-08-17 16:39:52.911 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] Ignorados pelo filtro:    0
+2026-08-17 16:39:52.921 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] Ignorados (já capturados):72 
+2026-08-17 16:39:52.938 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] Falha no download:        0 
+2026-08-17 16:39:52.939 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] Falha ao mover:           5
+2026-08-17 16:39:52.941 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] Arquivos baixados:        7
+2026-08-17 16:39:52.981 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] Pasta: C:\RPA\rpa_vivo_mvp2\arquivos\Entrada 
+2026-08-17 16:39:52.996 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] ────────────────────────────────────────────────────────────
+2026-08-17 16:39:53.023 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] PRÓXIMA ETAPA: identificação da operadora e salvamento na árvore
+2026-08-17 16:39:53.042 | INFO    |src.main.process_handle:run:34 - [RPA 1] Etapa 2/2 — identificação da operadora e salvamento (HU-02/HU-03) 
+2026-08-17 16:39:53.044 | INFO    |src.controllers.processamento_controller:processar:155 - Iniciando fluxo de processamento
+2026-08-17 16:39:53.047 | INFO    |src.controllers.processamento_controller:processar:155 - Competência: 202607 | Ano: 2026
+2026-08-17 16:39:53.048 | INFO    |src.controllers.processamento_controller:processar:155 - Total de arquivos a processar: 7
+2026-08-17 16:39:53.106 | WARNING |src.services.processamento_service:_processar_arquivo:261 - [RPA 1] Não foi possível ler [Encontro_Contas_Detraf_OI_SATELEFONICA_FIXA_202607.xls]: Erro ao processar a leitura do arquivo C:\RPA\rpa_vivo_mvp2\arquivos\Entrada\9D024E55DD250D4D00005211FBDF0000137D0D4C70E1CF4091747B97613AB5A600009FFAF1220000\Encontro_Contas_Detraf_OI_SATELEFONICA_FIXA_202607.xls: File is not a zip file
+2026-08-17 16:39:53.108 | WARNING |src.services.operadora_service:obter_operadora:157 - Falha ao extrair EOT de 'Encontro_Contas_Detraf_OI_SATELEFONICA_FIXA_202607.xls': openpyxl does not support the old .xls file format, please use xlrd to read this file, or convert it to the more recent .xlsx file format.
+2026-08-17 16:39:53.110 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_anexo5_processado]
+2026-08-17 16:39:53.190 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_anexo5_processado] carregada | Linhas: 2656 | Colunas: 18 
+2026-08-17 16:39:53.199 | INFO    |src.services.operadora_service:obter_operadora:169 - Nome Fantasia não encontrado para o texto [cleartech] 
+2026-08-17 16:39:53.200 | WARNING |src.services.processamento_service:_reprovar:509 - Operadora não identificada para 'Encontro_Contas_Detraf_OI_SATELEFONICA_FIXA_202607.xls' (eot='None', dominio='cleartech.com.br', texto_busca='cleartech')
+2026-08-17 16:39:53.234 | INFO    |src.services.processamento_service:_reprovar:533 - [Layout] Motivo da recusa gravado em [Encontro_Contas_Detraf_OI_SATELEFONICA_FIXA_202607_RECUSADO.md].
+2026-08-17 16:39:53.256 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - Inserindo 1 registro(s) em [tbl_rpa_log_detraf_despesa_arquivos]. 
+2026-08-17 16:39:53.328 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - 1 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_arquivos]. 
+2026-08-17 16:39:53.330 | WARNING |src.services.processamento_service:_processar_arquivo:264 - [RPA 1] 'Encontro_Contas_Detraf_OI_SATELEFONICA_FIXA_202607.xls' REPROVADO na 
+validação — quarentena em [C:\RPA\rpa_vivo_mvp2\arquivos\_QUARENTENA\202607\9D024E55DD250D4D00005211FBDF0000137D0D4C70E1CF4091747B97613AB5A600009FFAF1220000].
+2026-08-17 16:39:53.362 | WARNING |src.services.processamento_service:_processar_arquivo:261 - [RPA 1] Não foi possível ler [Encontro_Contas_Detraf_OI_SATELEFONICA_MOVEL_202607.xls]: Erro ao processar a leitura do arquivo C:\RPA\rpa_vivo_mvp2\arquivos\Entrada\9D024E55DD250D4D00005211FBDF0000137D0D4C70E1CF4091747B97613AB5A600009FFAF1230000\Encontro_Contas_Detraf_OI_SATELEFONICA_MOVEL_202607.xls: File is not a zip file
+2026-08-17 16:39:53.391 | WARNING |src.services.operadora_service:obter_operadora:157 - Falha ao extrair EOT de 'Encontro_Contas_Detraf_OI_SATELEFONICA_MOVEL_202607.xls': openpyxl does not support the old .xls file format, please use xlrd to read this file, or convert it to the more recent .xlsx file format.
+2026-08-17 16:39:53.413 | INFO    |src.services.operadora_service:obter_operadora:169 - Nome Fantasia não encontrado para o texto [cleartech] 
+2026-08-17 16:39:53.414 | WARNING |src.services.processamento_service:_reprovar:509 - Operadora não identificada para 'Encontro_Contas_Detraf_OI_SATELEFONICA_MOVEL_202607.xls' (eot='None', dominio='cleartech.com.br', texto_busca='cleartech')
+2026-08-17 16:39:53.479 | INFO    |src.services.processamento_service:_reprovar:533 - [Layout] Motivo da recusa gravado em [Encontro_Contas_Detraf_OI_SATELEFONICA_MOVEL_202607_RECUSADO.md].
+2026-08-17 16:39:53.484 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - Inserindo 1 registro(s) em [tbl_rpa_log_detraf_despesa_arquivos]. 
+2026-08-17 16:39:53.556 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - 1 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_arquivos]. 
+2026-08-17 16:39:53.558 | WARNING |src.services.processamento_service:_processar_arquivo:264 - [RPA 1] 'Encontro_Contas_Detraf_OI_SATELEFONICA_MOVEL_202607.xls' REPROVADO na validação — quarentena em [C:\RPA\rpa_vivo_mvp2\arquivos\_QUARENTENA\202607\9D024E55DD250D4D00005211FBDF0000137D0D4C70E1CF4091747B97613AB5A600009FFAF1230000].
+2026-08-17 16:39:53.601 | INFO    |comum.dominio.validacao_colunas:validar_tudo_detalhado:249 - DataFrame reprovado na validação da Coluna 2 (EOT Vivo). Encontrados códigos 
+de operadoras que não correspondem aos nomes fantasia da Vivo.
+2026-08-17 16:39:53.643 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_detraf_tarifas] 
+2026-08-17 16:39:53.672 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_detraf_tarifas] carregada | Linhas: 110 | Colunas: 21 
+2026-08-17 16:39:53.736 | INFO    |comum.dominio.validacao_colunas:validar_tudo_detalhado:265 - DataFrame reprovado na validação da Coluna 3 (Referência). Esperado apenas: 202607
+2026-08-17 16:39:53.750 | INFO    |comum.dominio.validacao_colunas:validar_tudo_detalhado:266 - DataFrame reprovado na validação da Coluna 4 (Tráfego). Valores permitidos: {'202605', '202606', '202607'}
+2026-08-17 16:39:53.768 | INFO    |src.services.processamento_service:_validar:482 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': False, 'v_col3': False, 'v_col4': False, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}
+2026-08-17 16:39:53.787 | WARNING |src.services.processamento_service:_processar_arquivo:262 - Arquivo [DETRAF_FINAL_VIVO_202605_N_VIVO_SIGNET_STF_C_ENV.csv] rejeitado: regras de coluna não atendidas.
+  Coluna 2 (EOT da Vivo): a coluna da devedora traz EOT que não corresponde a nenhum nome fantasia da Vivo.
+  Coluna 3 (Referência): a referência precisa ser 202607 (AAAAMM) em todas as linhas.
+  Coluna 4 (Tráfego): o mês de tráfego precisa ser um de 202605, 202606, 202607.
+2026-08-17 16:39:53.855 | INFO    |src.services.processamento_service:_reprovar:533 - [Layout] Motivo da recusa gravado em [DETRAF_FINAL_VIVO_202605_N_VIVO_SIGNET_STF_C_ENV_RECUSADO.md].
+2026-08-17 16:39:53.877 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - Inserindo 1 registro(s) em [tbl_rpa_log_detraf_despesa_arquivos]. 
+2026-08-17 16:39:53.941 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - 1 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_arquivos]. 
+2026-08-17 16:39:53.943 | WARNING |src.services.processamento_service:_processar_arquivo:264 - [RPA 1] 'DETRAF_FINAL_VIVO_202605_N_VIVO_SIGNET_STF_C_ENV.csv' REPROVADO na validação — quarentena em [C:\RPA\rpa_vivo_mvp2\arquivos\_QUARENTENA\202607\9D024E55DD250D4D00005211FBDF0000137D0D4C70E1CF4091747B97613AB5A600009FFAF1240000].
+2026-08-17 16:39:53.976 | INFO    |comum.dominio.validacao_colunas:validar_tudo_detalhado:249 - DataFrame reprovado na validação da Coluna 2 (EOT Vivo). Encontrados códigos 
+de operadoras que não correspondem aos nomes fantasia da Vivo.
+2026-08-17 16:39:54.012 | INFO    |comum.dominio.validacao_colunas:validar_tudo_detalhado:265 - DataFrame reprovado na validação da Coluna 3 (Referência). Esperado apenas: 202607
+2026-08-17 16:39:54.044 | INFO    |src.services.processamento_service:_validar:482 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': False, 'v_col3': False, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}
+2026-08-17 16:39:54.052 | WARNING |src.services.processamento_service:_processar_arquivo:262 - Arquivo [DETRAF_FINAL_VIVO_202606_N_VIVO_SIGNET_STF_C_ENV.csv] rejeitado: regras de coluna não atendidas.
+  Coluna 2 (EOT da Vivo): a coluna da devedora traz EOT que não corresponde a nenhum nome fantasia da Vivo.
+  Coluna 3 (Referência): a referência precisa ser 202607 (AAAAMM) em todas as linhas.
+2026-08-17 16:39:54.071 | INFO    |src.services.processamento_service:_reprovar:533 - [Layout] Motivo da recusa gravado em [DETRAF_FINAL_VIVO_202606_N_VIVO_SIGNET_STF_C_ENV_RECUSADO.md].
+2026-08-17 16:39:54.119 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - Inserindo 1 registro(s) em [tbl_rpa_log_detraf_despesa_arquivos]. 
+2026-08-17 16:39:54.429 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - 1 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_arquivos]. 
+2026-08-17 16:39:54.431 | WARNING |src.services.processamento_service:_processar_arquivo:264 - [RPA 1] 'DETRAF_FINAL_VIVO_202606_N_VIVO_SIGNET_STF_C_ENV.csv' REPROVADO na validação — quarentena em [C:\RPA\rpa_vivo_mvp2\arquivos\_QUARENTENA\202607\9D024E55DD250D4D00005211FBDF0000137D0D4C70E1CF4091747B97613AB5A600009FFAF1240000].
+2026-08-17 16:39:54.525 | INFO    |src.services.processamento_service:_validar:482 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}
+2026-08-17 16:39:54.536 | INFO    |src.services.processamento_service:executar:145 - Processado com sucesso: DETRAF_FINAL_202607_VONARE_VIVO_ITX_20260806161630.csv (operadora identificada via 'eot')
+2026-08-17 16:39:54.638 | WARNING |src.services.processamento_service:_processar_arquivo:261 - [RPA 1] Não foi possível ler [EC VIVO FSM 202607.xlsx]: Erro ao processar a leitura do arquivo C:\RPA\rpa_vivo_mvp2\arquivos\Entrada\9D024E55DD250D4D00005211FBDF0000137D0D4C70E1CF4091747B97613AB5A600009FFAF1260000\EC VIVO FSM 202607.xlsx: expected string or bytes-like object, got 'float'
+2026-08-17 16:39:54.685 | INFO    |src.services.operadora_service:obter_operadora:169 - Nome Fantasia não encontrado para o texto [/o=exchangelabs/ou=exchange administrative group (fydibohf23spdlt)/cn=recipients/cn=59e9b6fcd2e44a1b86ded45ef583b5c2-5e9e7dcd-14]
+2026-08-17 16:39:54.687 | WARNING |src.services.processamento_service:_reprovar:509 - Operadora não identificada para 'EC VIVO FSM 202607.xlsx' (eot='None', dominio='/o=exchangelabs/ou=exchange administrative group (fydibohf23spdlt)/cn=recipients/cn=59e9b6fcd2e44a1b86ded45ef583b5c2-5e9e7dcd-14', texto_busca='/o=exchangelabs/ou=exchange administrative group (fydibohf23spdlt)/cn=recipients/cn=59e9b6fcd2e44a1b86ded45ef583b5c2-5e9e7dcd-14')
+2026-08-17 16:39:54.716 | INFO    |src.services.processamento_service:_reprovar:533 - [Layout] Motivo da recusa gravado em [EC VIVO FSM 202607_RECUSADO.md]. 
+2026-08-17 16:39:54.732 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - Inserindo 1 registro(s) em [tbl_rpa_log_detraf_despesa_arquivos]. 
+2026-08-17 16:39:54.795 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - 1 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_arquivos]. 
+2026-08-17 16:39:54.798 | WARNING |src.services.processamento_service:_processar_arquivo:264 - [RPA 1] 'EC VIVO FSM 202607.xlsx' REPROVADO na validação — quarentena em [C:\RPA\rpa_vivo_mvp2\arquivos\_QUARENTENA\202607\9D024E55DD250D4D00005211FBDF0000137D0D4C70E1CF4091747B97613AB5A600009FFAF1260000].
+2026-08-17 16:39:54.809 | WARNING |src.services.processamento_service:_processar_arquivo:262 - Arquivo [DETRAF_FINAL_202607_HOME_VIVO_C_20260700000000_ROA.csv] rejeitado: layout fora do padrão da V2.
+  posição 2 (Referencia): esperado AAAAMM, encontrado "VIVO", "VIVO", "VIVO" [0/27 válidos]
+  posição 3 (Tráfego): esperado AAAAMM, encontrado "022", "493", "490" [0/27 válidos]
+  posição 5 (Rel): esperado 0, 1 ou vazio, encontrado "202607", "202607", "202607" [0/27 válidos]
+  posição 7 (GH): esperado S, R, N ou D, encontrado "0", "0", "0" [0/27 válidos]
+2026-08-17 16:39:54.817 | INFO    |src.services.operadora_service:obter_operadora:159 - Nome Fantasia não encontrado para o EOT [RoamingNacional] 
+2026-08-17 16:39:54.861 | INFO    |src.services.processamento_service:_reprovar:533 - [Layout] Motivo da recusa gravado em [DETRAF_FINAL_202607_HOME_VIVO_C_20260700000000_ROA_RECUSADO.md].
+2026-08-17 16:39:54.871 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - Inserindo 1 registro(s) em [tbl_rpa_log_detraf_despesa_arquivos]. 
+2026-08-17 16:39:54.941 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - 1 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_arquivos]. 
+2026-08-17 16:39:54.943 | WARNING |src.services.processamento_service:_processar_arquivo:264 - [RPA 1] 'DETRAF_FINAL_202607_HOME_VIVO_C_20260700000000_ROA.csv' REPROVADO na 
+validação — quarentena em [C:\RPA\rpa_vivo_mvp2\arquivos\_QUARENTENA\202607\9D024E55DD250D4D00005211FBDF0000137D0D4C70E1CF4091747B97613AB5A600009FFAF1270000].
+2026-08-17 16:39:54.974 | INFO    |src.controllers.outlook_controller:responder:234 - Conectando ao Outlook (conta configurada: 'detrafTBRA')... 
+2026-08-17 16:39:54.993 | INFO    |src.controllers.outlook_controller:responder:234 - Conectado ao Outlook com sucesso. 
+2026-08-17 16:40:00.568 | INFO    |src.controllers.outlook_controller:responder:234 - Resposta salva como rascunho para o e-mail '00000000A949F53E017BB44C86E46D56D2D6BB100700F25FC41A3584FC499D024E55DD250D4D00005211FBDF0000137D0D4C70E1CF4091747B97613AB5A600009FFAF1220000'.
+2026-08-17 16:40:00.580 | INFO    |src.services.notificacao_operadora:notificar_arquivos_recusados:74 - [RPA 1] Resposta criada como rascunho para o e-mail de origem de 'Encontro_Contas_Detraf_OI_SATELEFONICA_FIXA_202607.xls'.
+2026-08-17 16:40:00.582 | INFO    |src.services.processamento_service:executar:151 - [RPA 1] E-mail de origem de 'Encontro_Contas_Detraf_OI_SATELEFONICA_FIXA_202607.xls': 1 
+arquivo(s) recusado(s), operadora notificada.
+2026-08-17 16:40:00.825 | INFO    |src.controllers.outlook_controller:responder:234 - Conectando ao Outlook (conta configurada: 'detrafTBRA')... 
+2026-08-17 16:40:00.866 | INFO    |src.controllers.outlook_controller:responder:234 - Conectado ao Outlook com sucesso. 
+2026-08-17 16:40:01.093 | INFO    |src.controllers.outlook_controller:responder:234 - Resposta salva como rascunho para o e-mail '00000000A949F53E017BB44C86E46D56D2D6BB100700F25FC41A3584FC499D024E55DD250D4D00005211FBDF0000137D0D4C70E1CF4091747B97613AB5A600009FFAF1230000'.
+2026-08-17 16:40:01.104 | INFO    |src.services.notificacao_operadora:notificar_arquivos_recusados:74 - [RPA 1] Resposta criada como rascunho para o e-mail de origem de 'Encontro_Contas_Detraf_OI_SATELEFONICA_MOVEL_202607.xls'.
+2026-08-17 16:40:01.116 | INFO    |src.services.processamento_service:executar:151 - [RPA 1] E-mail de origem de 'Encontro_Contas_Detraf_OI_SATELEFONICA_MOVEL_202607.xls': 1 arquivo(s) recusado(s), operadora notificada.
+2026-08-17 16:40:01.151 | INFO    |src.controllers.outlook_controller:responder:234 - Conectando ao Outlook (conta configurada: 'detrafTBRA')... 
+2026-08-17 16:40:01.230 | INFO    |src.controllers.outlook_controller:responder:234 - Conectado ao Outlook com sucesso. 
+2026-08-17 16:40:01.677 | INFO    |src.controllers.outlook_controller:responder:234 - Resposta salva como rascunho para o e-mail '00000000A949F53E017BB44C86E46D56D2D6BB100700F25FC41A3584FC499D024E55DD250D4D00005211FBDF0000137D0D4C70E1CF4091747B97613AB5A600009FFAF1240000'.
+2026-08-17 16:40:01.683 | INFO    |src.services.notificacao_operadora:notificar_arquivos_recusados:74 - [RPA 1] Resposta criada como rascunho para o e-mail de origem de 'DETRAF_FINAL_VIVO_202605_N_VIVO_SIGNET_STF_C_ENV.csv'.
+2026-08-17 16:40:01.686 | INFO    |src.services.processamento_service:executar:151 - [RPA 1] E-mail de origem de 'DETRAF_FINAL_VIVO_202605_N_VIVO_SIGNET_STF_C_ENV.csv': 2 arquivo(s) recusado(s), operadora notificada.
+2026-08-17 16:40:01.699 | INFO    |src.controllers.outlook_controller:responder:234 - Conectando ao Outlook (conta configurada: 'detrafTBRA')... 
+2026-08-17 16:40:01.726 | INFO    |src.controllers.outlook_controller:responder:234 - Conectado ao Outlook com sucesso. 
+2026-08-17 16:40:03.193 | INFO    |src.controllers.outlook_controller:responder:234 - Resposta salva como rascunho para o e-mail '00000000A949F53E017BB44C86E46D56D2D6BB100700F25FC41A3584FC499D024E55DD250D4D00005211FBDF0000137D0D4C70E1CF4091747B97613AB5A600009FFAF1260000'.
+2026-08-17 16:40:03.199 | INFO    |src.services.notificacao_operadora:notificar_arquivos_recusados:74 - [RPA 1] Resposta criada como rascunho para o e-mail de origem de 'EC 
+VIVO FSM 202607.xlsx'.
+2026-08-17 16:40:03.200 | INFO    |src.services.processamento_service:executar:151 - [RPA 1] E-mail de origem de 'EC VIVO FSM 202607.xlsx': 1 arquivo(s) recusado(s), operadora notificada.
+2026-08-17 16:40:03.203 | INFO    |src.controllers.outlook_controller:responder:234 - Conectando ao Outlook (conta configurada: 'detrafTBRA')...
+2026-08-17 16:40:03.228 | INFO    |src.controllers.outlook_controller:responder:234 - Conectado ao Outlook com sucesso. 
+2026-08-17 16:40:03.432 | INFO    |src.controllers.outlook_controller:responder:234 - Resposta salva como rascunho para o e-mail '00000000A949F53E017BB44C86E46D56D2D6BB100700F25FC41A3584FC499D024E55DD250D4D00005211FBDF0000137D0D4C70E1CF4091747B97613AB5A600009FFAF1270000'.
+2026-08-17 16:40:03.442 | INFO    |src.services.notificacao_operadora:notificar_arquivos_recusados:74 - [RPA 1] Resposta criada como rascunho para o e-mail de origem de 'DETRAF_FINAL_202607_HOME_VIVO_C_20260700000000_ROA.csv'.
+2026-08-17 16:40:03.454 | INFO    |src.services.processamento_service:executar:151 - [RPA 1] E-mail de origem de 'DETRAF_FINAL_202607_HOME_VIVO_C_20260700000000_ROA.csv': 1 
+arquivo(s) recusado(s), operadora notificada.
 
-PS C:\RPA\rpa_vivo_mvp2>  & 'c:\RPA\rpa_vivo_mvp2\.venv\Scripts\python.exe' 'c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\launcher' '60675' '--' 'C:\RPA\rpa_vivo_mvp2\rpa1_captura\main.py'
-2026-08-17 15:33:08.212 | INFO    |__main__:<module>:118 - [RPA 1] robô: rpa1_captura 
-2026-08-17 15:33:08.215 | INFO    |__main__:<module>:118 - [RPA 1] modo: DEV  (de ENV)
-2026-08-17 15:33:08.216 | INFO    |__main__:<module>:118 - [RPA 1] log: nível INFO (de LOG_LEVEL), diagnose ligado
-2026-08-17 15:33:08.216 | INFO    |__main__:<module>:118 - [RPA 1] competência: 202607  (mês anterior ao corrente)
-2026-08-17 15:33:08.217 | INFO    |__main__:<module>:118 - [RPA 1] banco: SQLite [C:\RPA\rpa_vivo_mvp2\banco_de_dados\TABELAS_DETRAF_espelho.db] (de CAMINHO_SQLITE)
-2026-08-17 15:33:08.217 | INFO    |__main__:<module>:118 - [RPA 1] AGI: ambiente [producao] host [10.238.6.120] (de AGI_AMBIENTE) | executável [C:\RPA\rpa_vivo_mvp2\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
-2026-08-17 15:33:08.218 | INFO    |__main__:<module>:118 - [RPA 1] EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: LIGADO | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado | download SFTP: LIGADO
-2026-08-17 15:33:08.218 | INFO    |__main__:<module>:118 - [RPA 1] parâmetros: nenhum — execução completa, como na agenda
-2026-08-17 15:33:19.360 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev] 
-2026-08-17 15:33:19.361 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\RPA\rpa_vivo_mvp2\banco_de_dados\TABELAS_DETRAF_espelho.db] 
-2026-08-17 15:33:22.684 | INFO    |__main__:main:94 - Aplicação iniciada 
-2026-08-17 15:33:22.686 | INFO    |src.main.process_handle:run:34 - [RPA 1] Etapa 1/2 — captura dos anexos no Outlook (HU-01) 
-2026-08-17 15:33:22.691 | INFO    |src.controllers.outlook_controller:capturar_arquivos:104 - Conectando ao Outlook (conta configurada: 'detrafTBRA #detrafTBRA.br@telefonica.com')...
-2026-08-17 15:33:22.789 | INFO    |src.controllers.outlook_controller:capturar_arquivos:104 - Conectado ao Outlook com sucesso. 
-2026-08-17 15:33:22.835 | ERROR   |__main__:<module>:118 - [RPA 1] Execução interrompida por erro não tratado — ERRO na etapa 2/2 (captura) 
-Traceback (most recent call last):
+==================================================
+PROCESSAMENTO FINALIZADO
+================================================== 
 
-  File "C:\Users\atacadoadmin\AppData\Local\Programs\Python\Python314\Lib\runpy.py", line 198, in _run_module_as_main
-    return _run_code(code, main_globals, None,
-           │         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
-           │         └ <code object <module> at 0x000001E3AAE7A1F0, file "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-...
-           └ <function _run_code at 0x000001E3AB470D50>
-  File "C:\Users\atacadoadmin\AppData\Local\Programs\Python\Python314\Lib\runpy.py", line 88, in _run_code
-    exec(code, run_globals)
-         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
-         └ <code object <module> at 0x000001E3AAE7A1F0, file "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-...
-
-  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\launcher/../..\debugpy\__main__.py", line 71, in <module>
-    cli.main()
-    │   └ <function main at 0x000001E3AF5EB8A0>
-    └ <module 'debugpy.server.cli' from 'c:\\Users\\atacadoadmin\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundle...
-
-  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\launcher/../..\debugpy/..\debugpy\server\cli.py", line 542, in main
-    run()
-    └ <function run_file at 0x000001E3AF5EB5E0>
-
-  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\launcher/../..\debugpy/..\debugpy\server\cli.py", line 361, in run_file
-    runpy.run_path(target, run_name="__main__")
-    │     │        └ 'C:\\RPA\\rpa_vivo_mvp2\\rpa1_captura\\main.py'
-    │     └ <function run_path at 0x000001E3ADFD6F00>
-    └ <module '_pydevd_bundle.pydevd_runpy' from 'c:\\Users\\atacadoadmin\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x6...
-
-  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 310, in run_path
-    return _run_module_code(code, init_globals, run_name, pkg_name=pkg_name, script_name=fname)
-           │                │     │             │                  │                     └ 'C:\\RPA\\rpa_vivo_mvp2\\rpa1_captura\\main.py'
-           │                │     │             │                  └ ''
-           │                │     │             └ '__main__'
-           │                │     └ None
-           │                └ <code object <module> at 0x000001E3AD5C0740, file "C:\RPA\rpa_vivo_mvp2\rpa1_captura\main.py", line 1>
-           └ <function _run_module_code at 0x000001E3ADFD6AE0>
-
-  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 127, in _run_module_code
-    _run_code(code, mod_globals, init_globals, mod_name, mod_spec, pkg_name, script_name)
-    │         │     │            │             │         │         │         └ 'C:\\RPA\\rpa_vivo_mvp2\\rpa1_captura\\main.py'
-    │         │     │            │             │         │         └ ''
-    │         │     │            │             │         └ None
-    │         │     │            │             └ '__main__'
-    │         │     │            └ None
-    │         │     └ {'__name__': '__main__', '__doc__': 'RPA 1 — Captura de Arquivos das Operadoras.\n\nPonto de entrada do robô. Nenhum dos proj...
-    │         └ <code object <module> at 0x000001E3AD5C0740, file "C:\RPA\rpa_vivo_mvp2\rpa1_captura\main.py", line 1>
-    └ <function _run_code at 0x000001E3ADFD6610>
-
-  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 118, in _run_code
-    exec(code, run_globals)
-         │     └ {'__name__': '__main__', '__doc__': 'RPA 1 — Captura de Arquivos das Operadoras.\n\nPonto de entrada do robô. Nenhum dos proj...
-         └ <code object <module> at 0x000001E3AD5C0740, file "C:\RPA\rpa_vivo_mvp2\rpa1_captura\main.py", line 1>
-
-  File "C:\RPA\rpa_vivo_mvp2\rpa1_captura\main.py", line 118, in <module>
-    raise SystemExit(main())
-                     └ <function main at 0x000001E3AF50AFB0>
-
-> File "C:\RPA\rpa_vivo_mvp2\rpa1_captura\main.py", line 94, in main
-    run(pasta_entrada=recorte.pasta_entrada, etapa=recorte.etapa, diagnostico=diagnostico)
-    │                 │       │                    │       │                  └ <comum.config.diagnostico_execucao.DiagnosticoDeExecucao object at 0x000001E3B0CC4980>       
-    │                 │       │                    │       └ None
-    │                 │       │                    └ Argumentos(referencia=None, operadoras=[], etapa=None, pasta_entrada=None, de_pasta=None, dry_run=False, pausar=False)  
-    │                 │       └ None
-    │                 └ Argumentos(referencia=None, operadoras=[], etapa=None, pasta_entrada=None, de_pasta=None, dry_run=False, pausar=False)
-    └ <function run at 0x000001E3B0CC1380>
-
-  File "C:\RPA\rpa_vivo_mvp2\rpa1_captura\src\main\process_handle.py", line 34, in run
-    controller.processar(
-    │          └ <function ProcessamentoController.processar at 0x000001E3B4EB31C0>
-    └ <src.controllers.processamento_controller.ProcessamentoController object at 0x000001E3B4D27230>
-
-  File "C:\RPA\rpa_vivo_mvp2\rpa1_captura\src\controllers\processamento_controller.py", line 104, in processar
-    arquivos = self._outlook.capturar_arquivos()
-               │    └ <property object at 0x000001E3B0C9AB10>
-               └ <src.controllers.processamento_controller.ProcessamentoController object at 0x000001E3B4D27230>
-
-  File "C:\RPA\rpa_vivo_mvp2\rpa1_captura\src\controllers\outlook_controller.py", line 105, in capturar_arquivos
-    self.organizar_caixa_de_entrada(outlook)
-    │    │                          └ <comum.integracoes.outlook.OutlookService object at 0x000001E3B4D27B60>
-    │    └ <function OutlookController.organizar_caixa_de_entrada at 0x000001E3AF456400>
-    └ <src.controllers.outlook_controller.OutlookController object at 0x000001E3B4D27770>
-
-  File "C:\RPA\rpa_vivo_mvp2\rpa1_captura\src\controllers\outlook_controller.py", line 66, in organizar_caixa_de_entrada
-    emails = outlook.fetch_emails_from_inbox()
-             │       └ <function OutlookService.fetch_emails_from_inbox at 0x000001E3AF454A90>
-             └ <comum.integracoes.outlook.OutlookService object at 0x000001E3B4D27B60>
-
-  File "C:\RPA\rpa_vivo_mvp2\comum\integracoes\outlook.py", line 147, in fetch_emails_from_inbox
-    parent = self._ns.Folders(self._account)
-             │    │           │    └ 'detrafTBRA #detrafTBRA.br@telefonica.com'
-             │    │           └ <comum.integracoes.outlook.OutlookService object at 0x000001E3B4D27B60>
-             │    └ <COMObject GetNamespace>
-             └ <comum.integracoes.outlook.OutlookService object at 0x000001E3B4D27B60>
-  File "c:\RPA\rpa_vivo_mvp2\.venv\Lib\site-packages\win32com\client\dynamic.py", line 214, in __call__
-    │    │        │       │         │    │         └ None
-    │    │        │       │         └ <COMObject <unknown>>
-    │    │        │       └ (0, 0, 3, 1, 'detrafTBRA #detrafTBRA.br@telefonica.com')
-    │    │        └ <method 'Invoke' of 'PyIDispatch' objects>
-    │    └ <PyIDispatch at 0x000001E3AA970BB0 with obj at 0x000001E3AEF2DE08>
-    └ <COMObject <unknown>>
-
-pywintypes.com_error: (-2147352567, 'Exception occurred.', (4096, 'Microsoft Outlook', 'Falha na operação tentada. Objeto não encontrado.', None, 0, -2147221233), None)     
-2026-08-17 15:33:23.143 | INFO    |__main__:main:110 - [Diagnóstico] Etapas desta execução em [C:\RPA\rpa_vivo_mvp2\logs\BRTAZBGY0015CO\rpa1_captura\diagnosticos\2026-08-17_15-33-08.txt].
-2026-08-17 15:33:23.151 | INFO    |__main__:<module>:118 - [RPA 1] Diagnóstico das etapas em [C:\RPA\rpa_vivo_mvp2\logs\BRTAZBGY0015CO\rpa1_captura\diagnosticos\2026-08-17_15-33-08.txt]
-PS C:\RPA\rpa_vivo_mvp2> c:\RPA\rpa_vivo_mvp2\.venv\Scripts\activate
-PS C:\RPA\rpa_vivo_mvp2> ^C
-PS C:\RPA\rpa_vivo_mvp2>
-PS C:\RPA\rpa_vivo_mvp2>  c:; cd 'c:\RPA\rpa_vivo_mvp2'; & 'c:\RPA\rpa_vivo_mvp2\.venv\Scripts\python.exe' 'c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\launcher' '60803' '--' 'C:\RPA\rpa_vivo_mvp2\rpa1_captura\main.py' 
-2026-08-17 15:34:51.871 | INFO    |__main__:<module>:118 - [RPA 1] robô: rpa1_captura 
-2026-08-17 15:34:51.872 | INFO    |__main__:<module>:118 - [RPA 1] modo: DEV  (de ENV) 
-2026-08-17 15:34:51.874 | INFO    |__main__:<module>:118 - [RPA 1] log: nível INFO (de LOG_LEVEL), diagnose ligado
-2026-08-17 15:34:51.875 | INFO    |__main__:<module>:118 - [RPA 1] competência: 202607  (mês anterior ao corrente)
-2026-08-17 15:34:51.876 | INFO    |__main__:<module>:118 - [RPA 1] banco: SQLite [C:\RPA\rpa_vivo_mvp2\banco_de_dados\TABELAS_DETRAF_espelho.db] (de CAMINHO_SQLITE)
-2026-08-17 15:34:51.880 | INFO    |__main__:<module>:118 - [RPA 1] AGI: ambiente [producao] host [10.238.6.120] (de AGI_AMBIENTE) | executável [C:\RPA\rpa_vivo_mvp2\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
-2026-08-17 15:34:51.946 | INFO    |__main__:<module>:118 - [RPA 1] EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: LIGADO | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado | download SFTP: LIGADO
-2026-08-17 15:34:51.950 | INFO    |__main__:<module>:118 - [RPA 1] parâmetros: nenhum — execução completa, como na agenda 
-2026-08-17 15:34:55.036 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev] 
-2026-08-17 15:34:55.039 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\RPA\rpa_vivo_mvp2\banco_de_dados\TABELAS_DETRAF_espelho.db] 
-2026-08-17 15:34:55.835 | INFO    |__main__:main:94 - Aplicação iniciada 
-2026-08-17 15:34:55.836 | INFO    |src.main.process_handle:run:34 - [RPA 1] Etapa 1/2 — captura dos anexos no Outlook (HU-01) 
-2026-08-17 15:34:55.837 | INFO    |src.controllers.outlook_controller:capturar_arquivos:104 - Conectando ao Outlook (conta configurada: 'detrafTBRA #detrafTBRA.br@telefonica.com')...
-2026-08-17 15:34:55.858 | INFO    |src.controllers.outlook_controller:capturar_arquivos:104 - Conectado ao Outlook com sucesso. 
-2026-08-17 15:34:55.943 | ERROR   |__main__:<module>:118 - [RPA 1] Execução interrompida por erro não tratado — ERRO na etapa 2/2 (captura) 
-Traceback (most recent call last):
-
-  File "C:\Users\atacadoadmin\AppData\Local\Programs\Python\Python314\Lib\runpy.py", line 198, in _run_module_as_main
-    return _run_code(code, main_globals, None,
-           │         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
-           │         └ <code object <module> at 0x000001F50C4E9E90, file "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-...
-           └ <function _run_code at 0x000001F50C9605C0>
-  File "C:\Users\atacadoadmin\AppData\Local\Programs\Python\Python314\Lib\runpy.py", line 88, in _run_code
-    exec(code, run_globals)
-         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
-         └ <code object <module> at 0x000001F50C4E9E90, file "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-...
-
-  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\launcher/../..\debugpy\__main__.py", line 71, in <module>
-    cli.main()
-    │   └ <function main at 0x000001F50FAA2400>
-    └ <module 'debugpy.server.cli' from 'c:\\Users\\atacadoadmin\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundle...
-
-  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\launcher/../..\debugpy/..\debugpy\server\cli.py", line 542, in main
-    run()
-    └ <function run_file at 0x000001F50FAA2140>
-
-  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\launcher/../..\debugpy/..\debugpy\server\cli.py", line 361, in run_file
-    runpy.run_path(target, run_name="__main__")
-    │     │        └ 'C:\\RPA\\rpa_vivo_mvp2\\rpa1_captura\\main.py'
-    │     └ <function run_path at 0x000001F50EE65590>
-    └ <module '_pydevd_bundle.pydevd_runpy' from 'c:\\Users\\atacadoadmin\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x6...
-
-  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 310, in run_path
-    return _run_module_code(code, init_globals, run_name, pkg_name=pkg_name, script_name=fname)
-           │                │     │             │                  │                     └ 'C:\\RPA\\rpa_vivo_mvp2\\rpa1_captura\\main.py'
-           │                │     │             │                  └ ''
-           │                │     │             └ '__main__'
-           │                │     └ None
-           │                └ <code object <module> at 0x000001F50F1964D0, file "C:\RPA\rpa_vivo_mvp2\rpa1_captura\main.py", line 1>
-           └ <function _run_module_code at 0x000001F50EE65170>
-
-  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 127, in _run_module_code
-    _run_code(code, mod_globals, init_globals, mod_name, mod_spec, pkg_name, script_name)
-    │         │     │            │             │         │         │         └ 'C:\\RPA\\rpa_vivo_mvp2\\rpa1_captura\\main.py'
-    │         │     │            │             │         │         └ ''
-    │         │     │            │             │         └ None
-    │         │     │            │             └ '__main__'
-    │         │     │            └ None
-    │         │     └ {'__name__': '__main__', '__doc__': 'RPA 1 — Captura de Arquivos das Operadoras.\n\nPonto de entrada do robô. Nenhum dos proj...
-    │         └ <code object <module> at 0x000001F50F1964D0, file "C:\RPA\rpa_vivo_mvp2\rpa1_captura\main.py", line 1>
-    └ <function _run_code at 0x000001F50EE64CA0>
-
-  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 118, in _run_code
-    exec(code, run_globals)
-         │     └ {'__name__': '__main__', '__doc__': 'RPA 1 — Captura de Arquivos das Operadoras.\n\nPonto de entrada do robô. Nenhum dos proj...
-         └ <code object <module> at 0x000001F50F1964D0, file "C:\RPA\rpa_vivo_mvp2\rpa1_captura\main.py", line 1>
-
-  File "C:\RPA\rpa_vivo_mvp2\rpa1_captura\main.py", line 118, in <module>
-    raise SystemExit(main())
-                     └ <function main at 0x000001F50FC01BC0>
-
-> File "C:\RPA\rpa_vivo_mvp2\rpa1_captura\main.py", line 94, in main
-    run(pasta_entrada=recorte.pasta_entrada, etapa=recorte.etapa, diagnostico=diagnostico)
-    │                 │       │                    │       │                  └ <comum.config.diagnostico_execucao.DiagnosticoDeExecucao object at 0x000001F50FF31E80>       
-    │                 │       │                    │       └ None
-    │                 │       │                    └ Argumentos(referencia=None, operadoras=[], etapa=None, pasta_entrada=None, de_pasta=None, dry_run=False, pausar=False)  
-    │                 │       └ None
-    │                 └ Argumentos(referencia=None, operadoras=[], etapa=None, pasta_entrada=None, de_pasta=None, dry_run=False, pausar=False)
-    └ <function run at 0x000001F50FF8F270>
-
-  File "C:\RPA\rpa_vivo_mvp2\rpa1_captura\src\main\process_handle.py", line 34, in run
-    controller.processar(
-    │          └ <function ProcessamentoController.processar at 0x000001F5156000F0>
-    └ <src.controllers.processamento_controller.ProcessamentoController object at 0x000001F5155E81A0>
-
-  File "C:\RPA\rpa_vivo_mvp2\rpa1_captura\src\controllers\processamento_controller.py", line 104, in processar
-    arquivos = self._outlook.capturar_arquivos()
-               │    └ <property object at 0x000001F50FF91E40>
-               └ <src.controllers.processamento_controller.ProcessamentoController object at 0x000001F5155E81A0>
-
-  File "C:\RPA\rpa_vivo_mvp2\rpa1_captura\src\controllers\outlook_controller.py", line 105, in capturar_arquivos
-    self.organizar_caixa_de_entrada(outlook)
-    │    │                          └ <comum.integracoes.outlook.OutlookService object at 0x000001F5155E8AD0>
-    │    └ <function OutlookController.organizar_caixa_de_entrada at 0x000001F51012BCC0>
-    └ <src.controllers.outlook_controller.OutlookController object at 0x000001F5155E86E0>
-
-  File "C:\RPA\rpa_vivo_mvp2\rpa1_captura\src\controllers\outlook_controller.py", line 66, in organizar_caixa_de_entrada
-    emails = outlook.fetch_emails_from_inbox()
-             │       └ <function OutlookService.fetch_emails_from_inbox at 0x000001F51012A350>
-             └ <comum.integracoes.outlook.OutlookService object at 0x000001F5155E8AD0>
-
-  File "C:\RPA\rpa_vivo_mvp2\comum\integracoes\outlook.py", line 147, in fetch_emails_from_inbox
-    parent = self._ns.Folders(self._account)
-             │    │           │    └ 'detrafTBRA #detrafTBRA.br@telefonica.com'
-             │    │           └ <comum.integracoes.outlook.OutlookService object at 0x000001F5155E8AD0>
-             │    └ <COMObject GetNamespace>
-             └ <comum.integracoes.outlook.OutlookService object at 0x000001F5155E8AD0>
+Arquivos processados: 1 
+Arquivos reprovados na validação: 6
+Arquivos não identificados: 0 
+Arquivos com erro: 0
  
-  File "c:\RPA\rpa_vivo_mvp2\.venv\Lib\site-packages\win32com\client\dynamic.py", line 214, in __call__
-    self._oleobj_.Invoke(*allArgs), self._olerepr_.defaultDispatchName, None
-    │    │        │       │         │    │         └ None
-    │    │        │       │         │    └ <win32com.client.build.LazyDispatchItem object at 0x000001F51551F890>
-    │    │        │       │         └ <COMObject <unknown>>
-    │    │        │       └ (0, 0, 3, 1, 'detrafTBRA #detrafTBRA.br@telefonica.com')
-    │    │        └ <method 'Invoke' of 'PyIDispatch' objects>
-    │    └ <PyIDispatch at 0x000001F50C1AD580 with obj at 0x000001F50F1A6368>
-    └ <COMObject <unknown>>
+Encontro_Contas_Detraf_OI_SATELEFONICA_FIXA_202607.xls ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: sim
 
-pywintypes.com_error: (-2147352567, 'Exception occurred.', (4096, 'Microsoft Outlook', 'Falha na operação tentada. Objeto não encontrado.', None, 0, -2147221233), None)     
-2026-08-17 15:34:56.474 | INFO    |__main__:main:110 - [Diagnóstico] Etapas desta execução em [C:\RPA\rpa_vivo_mvp2\logs\BRTAZBGY0015CO\rpa1_captura\diagnosticos\2026-08-17_15-34-51.txt].
-2026-08-17 15:34:56.530 | INFO    |__main__:<module>:118 - [RPA 1] Diagnóstico das etapas em [C:\RPA\rpa_vivo_mvp2\logs\BRTAZBGY0015CO\rpa1_captura\diagnosticos\2026-08-17_15-34-51.txt]
+Encontro_Contas_Detraf_OI_SATELEFONICA_MOVEL_202607.xls ((não identificada))
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: sim 
+
+DETRAF_FINAL_VIVO_202605_N_VIVO_SIGNET_STF_C_ENV.csv (Vivo)
+-> Coluna 2 (EOT da Vivo): a coluna da devedora traz EOT que não corresponde a nenhum nome fantasia da Vivo.
+-> operadora notificada: sim 
+
+DETRAF_FINAL_VIVO_202606_N_VIVO_SIGNET_STF_C_ENV.csv (Vivo)
+-> Coluna 2 (EOT da Vivo): a coluna da devedora traz EOT que não corresponde a nenhum nome fantasia da Vivo. 
+-> operadora notificada: sim 
+
+EC VIVO FSM 202607.xlsx ((não identificada)) 
+-> o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+-> operadora notificada: sim
+
+DETRAF_FINAL_202607_HOME_VIVO_C_20260700000000_ROA.csv (Claro STFC)
+-> posição 2 (Referencia): esperado AAAAMM, encontrado "VIVO", "VIVO", "VIVO" [0/27 válidos]
+-> operadora notificada: sim
+
+2026-08-17 16:40:03.638 | INFO    |src.services.processamento_service:executar:153 - Resumo — Sucesso: 1 | Reprovados: 6 | Não identificados: 0 | Erros: 0
+2026-08-17 16:40:03.639 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Arquivos salvos:          1      
+2026-08-17 16:40:03.640 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Reprovados na validação:  6 
+2026-08-17 16:40:03.666 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Não identificados:        0 
+2026-08-17 16:40:03.667 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Com erro:                 0      
+2026-08-17 16:40:03.669 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Reprovados (vão para a quarentena, não para a operadora):
+2026-08-17 16:40:03.698 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   Encontro_Contas_Detraf_OI_SATELEFONICA_FIXA_202607.xls ((não identificada))
+2026-08-17 16:40:03.701 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-17 16:40:03.714 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: sim 
+2026-08-17 16:40:03.727 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   Encontro_Contas_Detraf_OI_SATELEFONICA_MOVEL_202607.xls ((não identificada))
+2026-08-17 16:40:03.757 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-17 16:40:03.774 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: sim 
+2026-08-17 16:40:03.788 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAF_FINAL_VIVO_202605_N_VIVO_SIGNET_STF_C_ENV.csv (Vivo)
+2026-08-17 16:40:03.842 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       Coluna 2 (EOT da Vivo): a coluna da devedora traz EOT que não corresponde a nenhum nome fantasia da Vivo.
+2026-08-17 16:40:03.862 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: sim 
+2026-08-17 16:40:03.878 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   DETRAF_FINAL_VIVO_202606_N_VIVO_SIGNET_STF_C_ENV.csv (Vivo)
+2026-08-17 16:40:03.893 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       Coluna 2 (EOT da Vivo): a coluna da devedora traz EOT que não corresponde a nenhum nome fantasia da Vivo.
+2026-08-17 16:40:03.914 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: sim 
+2026-08-17 16:40:03.937 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]   EC VIVO FSM 202607.xlsx ((não identificada))
+2026-08-17 16:40:03.960 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+2026-08-17 16:40:03.977 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: sim 
+_20260700000000_ROA.csv (Claro STFC)
+erado AAAAMM, encontrado "VIVO", "VIVO", "VIVO" [0/27 válidos]
+2026-08-17 16:40:04.044 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento]       operadora notificada: sim  
+2026-08-17 16:40:04.074 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Pasta: C:\RPA\rpa_vivo_mvp2\arquivos\Operadoras
+2026-08-17 16:40:04.078 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] ────────────────────────────────────────────────────────────
+2026-08-17 16:40:04.093 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Esta é a última etapa da execução.
+2026-08-17 16:40:04.108 | INFO    |__main__:main:94 - Aplicação finalizada
+2026-08-17 16:40:04.151 | INFO    |__main__:main:110 - [Diagnóstico] Etapas desta execução em [C:\RPA\rpa_vivo_mvp2\logs\BRTAZBGY0015CO\rpa1_captura\diagnosticos\2026-08-17_16-39-16.txt].
+2026-08-17 16:40:04.165 | INFO    |__main__:<module>:118 - [RPA 1] Diagnóstico das etapas em [C:\RPA\rpa_vivo_mvp2\logs\BRTAZBGY0015CO\rpa1_captura\diagnosticos\2026-08-17_16-39-16.txt]
+PS C:\RPA\rpa_vivo_mvp2>
+PS C:\RPA\rpa_vivo_mvp2>  c:; cd 'c:\RPA\rpa_vivo_mvp2'; & 'c:\RPA\rpa_vivo_mvp2\.venv\Scripts\python.exe' 'c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\launcher' '59965' '--' 'C:\RPA\rpa_vivo_mvp2\rpa2_validacao_apuracao\main.py' 
+2026-08-17 16:41:21.744 | INFO    |__main__:<module>:126 - [RPA 2] robô: rpa2_validacao_apuracao 
+2026-08-17 16:41:21.752 | INFO    |__main__:<module>:126 - [RPA 2] modo: DEV  (de ENV) 
+2026-08-17 16:41:21.755 | INFO    |__main__:<module>:126 - [RPA 2] log: nível INFO (de LOG_LEVEL), diagnose ligado
+2026-08-17 16:41:21.757 | INFO    |__main__:<module>:126 - [RPA 2] competência: 202607  (mês anterior ao corrente)
+2026-08-17 16:41:21.758 | INFO    |__main__:<module>:126 - [RPA 2] banco: SQLite [C:\RPA\rpa_vivo_mvp2\banco_de_dados\TABELAS_DETRAF_espelho.db] (de CAMINHO_SQLITE)
+2026-08-17 16:41:21.758 | INFO    |__main__:<module>:126 - [RPA 2] AGI: ambiente [producao] host [10.238.6.120] (de AGI_AMBIENTE) | executável [C:\RPA\rpa_vivo_mvp2\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
+2026-08-17 16:41:21.760 | INFO    |__main__:<module>:126 - [RPA 2] EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: LIGADO | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado | download SFTP: LIGADO
+2026-08-17 16:41:21.763 | INFO    |__main__:<module>:126 - [RPA 2] parâmetros: nenhum — execução completa, como na agenda 
+2026-08-17 16:41:24.207 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev] 
+2026-08-17 16:41:24.209 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\RPA\rpa_vivo_mvp2\banco_de_dados\TABELAS_DETRAF_espelho.db] 
+2026-08-17 16:41:24.409 | INFO    |__main__:main:97 - [STEP] Iniciando: run 
+2026-08-17 16:41:24.415 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Etapa 1/3 - captação da expectativa Vivo 
+2026-08-17 16:41:24.419 | INFO    |src.controllers.captacao_expectativa_controller:captar_expectativa:15 - [Expectativa] Procurando os arquivos _D de 202607 em 5 pasta(s) de origem.
+2026-08-17 16:41:26.743 | ERROR   |src.controllers.captacao_expectativa_controller:captar_expectativa:15 - [Expectativa] [SFTP] Faltam credenciais no ambiente: CLICKHUB_SFTP_HOST, CLICKHUB_SFTP_USER, CLICKHUB_SFTP_PASSWORD.
+  -> Elas são variáveis de ambiente da máquina, não do `.env` do repositório.
+  -> Para testar SEM SFTP, o RPA 2 aceita `main.py --etapa expectativa --de-pasta CAMINHO`: ele lê de um diretório local aplicando os mesmos filtros.
+2026-08-17 16:41:26.745 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Origem:                   SFTP 
+2026-08-17 16:41:26.746 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Período procurado:        202607
+2026-08-17 16:41:26.747 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Arquivos baixados:        0
+2026-08-17 16:41:26.748 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Falhas (1):
+2026-08-17 16:41:26.749 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa]   [SFTP] Faltam credenciais no ambiente: CLICKHUB_SFTP_HOST, CLICKHUB_SFTP_USER, CLICKHUB_SFTP_PASSWORD.
+2026-08-17 16:41:26.761 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa]   -> Elas são variáveis de ambiente da máquina, não do `.env` do repositório.
+2026-08-17 16:41:26.777 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa]   -> Para testar SEM SFTP, o RPA 2 aceita `main.py --etapa expectativa --de-pasta CAMINHO`: ele lê de um diretório local aplicando os mesmos filtros.
+2026-08-17 16:41:26.793 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Pasta: C:\RPA\rpa_vivo_mvp2\arquivos\Expectativa 
+2026-08-17 16:41:26.800 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] ────────────────────────────────────────────────────────────2026-08-17 16:41:26.801 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] PRÓXIMA ETAPA: validação dos arquivos, que LÊ o que a captação acabou de trazer
+2026-08-17 16:41:26.802 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Etapa 2/3 - validação dos arquivos de Detraf
+2026-08-17 16:41:26.920 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_anexo5_processado] 
+2026-08-17 16:41:26.956 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_anexo5_processado] carregada | Linhas: 2656 | Colunas: 18 
+2026-08-17 16:41:26.959 | INFO    |src.controllers.validacao_detrafs_controller:validar_detrafs:15 - [STEP] Iniciando: ValidacaoDetrafsService.executar 
+2026-08-17 16:41:26.960 | INFO    |comum.utils.decoradores:wrapper:22 - Executando a validação dos detrafs...
+2026-08-17 16:41:26.961 | INFO    |src.services.validacao_detrafs:executar:633 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_detrafs
+2026-08-17 16:41:26.961 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os detrafs para validação...
+2026-08-17 16:41:26.962 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando busca de arquivos para o período 202607 no diretório: 'C:\RPA\rpa_vivo_mvp2\arquivos\Operadoras'
+2026-08-17 16:41:26.972 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Adylnet Internet Provider] 
+2026-08-17 16:41:27.000 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Agil Telecom] 
+2026-08-17 16:41:27.018 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [ALGAR] 
+2026-08-17 16:41:27.040 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Atlanet Telecomunicacoes] 
+2026-08-17 16:41:27.041 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [BTT Telecomunicacoes S.A]
+2026-08-17 16:41:27.053 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Desktop Sigmanet] 
+2026-08-17 16:41:27.054 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [GGNET Telecom]
+2026-08-17 16:41:27.066 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Golden Line Telecom] 
+2026-08-17 16:41:27.081 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Invista Net] 
+2026-08-17 16:41:27.082 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Itelco Telecom]
+2026-08-17 16:41:27.095 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [LH Telecomunicacoes LTDA] 
+2026-08-17 16:41:27.120 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Megalink Servicos] 
+2026-08-17 16:41:27.136 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Megatelecom Telecomunicacoes S.A] 
+2026-08-17 16:41:27.144 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Nova Tecnologia e Telecomunicacoes]
+2026-08-17 16:41:27.151 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Opcao Telecom] 
+2026-08-17 16:41:27.160 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Predialnet]
+2026-08-17 16:41:27.191 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Sistel Fibra] 
+2026-08-17 16:41:27.193 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [T1 Telecom]
+2026-08-17 16:41:27.198 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Tri Telecom]
+2026-08-17 16:41:27.204 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [UFINET BRASIL] 
+2026-08-17 16:41:27.227 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Unifique] 
+2026-08-17 16:41:27.252 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Vonare] 
+2026-08-17 16:41:27.253 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 22. Total geral de arquivos encontrados: 32
+2026-08-17 16:41:27.262 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Adylnet Internet Provider]: 2 arquivo(s) encontrado(s) 
+2026-08-17 16:41:27.282 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Agil Telecom]: 2 arquivo(s) encontrado(s) 
+2026-08-17 16:41:27.295 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [ALGAR]: 1 arquivo(s) encontrado(s) 
+2026-08-17 16:41:27.300 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Atlanet Telecomunicacoes]: 1 arquivo(s) encontrado(s)
+2026-08-17 16:41:27.307 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [BTT Telecomunicacoes S.A]: 1 arquivo(s) encontrado(s) 
+2026-08-17 16:41:27.316 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Desktop Sigmanet]: 2 arquivo(s) encontrado(s) 
+2026-08-17 16:41:27.342 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [GGNET Telecom]: 2 arquivo(s) encontrado(s) 
+2026-08-17 16:41:27.346 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Golden Line Telecom]: 1 arquivo(s) encontrado(s)
+2026-08-17 16:41:27.348 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Invista Net]: 2 arquivo(s) encontrado(s) 
+2026-08-17 16:41:27.387 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Itelco Telecom]: 1 arquivo(s) encontrado(s) 
+2026-08-17 16:41:27.389 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [LH Telecomunicacoes LTDA]: 2 arquivo(s) encontrado(s)
+2026-08-17 16:41:27.420 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Megalink Servicos]: 1 arquivo(s) encontrado(s) 
+2026-08-17 16:41:27.421 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Megatelecom Telecomunicacoes S.A]: 2 arquivo(s) encontrado(s)
+2026-08-17 16:41:27.428 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Nova Tecnologia e Telecomunicacoes]: 2 arquivo(s) encontrado(s) 
+2026-08-17 16:41:27.431 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Opcao Telecom]: 1 arquivo(s) encontrado(s)
+2026-08-17 16:41:27.434 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Predialnet]: 1 arquivo(s) encontrado(s)
+2026-08-17 16:41:27.435 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Sistel Fibra]: 1 arquivo(s) encontrado(s)
+2026-08-17 16:41:27.436 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [T1 Telecom]: 2 arquivo(s) encontrado(s)
+2026-08-17 16:41:27.437 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Tri Telecom]: 2 arquivo(s) encontrado(s) 
+2026-08-17 16:41:27.441 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [UFINET BRASIL]: 1 arquivo(s) encontrado(s)
+2026-08-17 16:41:27.461 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Unifique]: 1 arquivo(s) encontrado(s) 
+2026-08-17 16:41:27.470 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Vonare]: 1 arquivo(s) encontrado(s) 
+2026-08-17 16:41:27.533 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Filtro de Histórico concluído para o período 202607. 
+2026-08-17 16:41:27.541 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos originais recebidos: 32 
+2026-08-17 16:41:27.543 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 16:41:27.549 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Novos arquivos retornados para execução: 32
+2026-08-17 16:41:27.550 | INFO    |src.services.validacao_detrafs:executar:633 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_detrafs | Tempo gasto: 0.59s 
+2026-08-17 16:41:27.554 | INFO    |src.services.validacao_detrafs:executar:634 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_expectativa
+2026-08-17 16:41:27.558 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os arquivos de expectativa para validação... 
+2026-08-17 16:41:27.563 | INFO    |comum.utils.decoradores:wrapper:22 - Pasta [Vivo] processada -> Válidos: 2 | Inválidos/Ignorados: 0
+2026-08-17 16:41:27.580 | INFO    |comum.utils.decoradores:wrapper:22 - Pasta [TLF] processada -> Válidos: 2 | Inválidos/Ignorados: 0 
+2026-08-17 16:41:27.586 | ERROR   |src.services.validacao_detrafs:_preparar_arquivos_expectativa:269 - [Q21] Sem expectativa Vivo em [C:\RPA\rpa_vivo_mvp2\arquivos\Expectativa\MVNO]: não existe. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
+2026-08-17 16:41:27.757 | ERROR   |src.services.validacao_detrafs:_preparar_arquivos_expectativa:269 - [Q21] Sem expectativa Vivo em [C:\RPA\rpa_vivo_mvp2\arquivos\Expectativa\Detraf TRP]: não existe. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
+2026-08-17 16:41:27.815 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento de expectativa concluído. Total geral de arquivos válidos: 4 
+2026-08-17 16:41:27.841 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Filtro de Histórico concluído para o período 202607. 
+2026-08-17 16:41:27.858 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Arquivos originais recebidos: 4 
+2026-08-17 16:41:27.887 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Arquivos já processados anteriormente (encontrados no JSON): 0 
+2026-08-17 16:41:27.890 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Novos arquivos retornados para execução: 4
+2026-08-17 16:41:27.895 | INFO    |src.services.validacao_detrafs:executar:634 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_expectativa | Tempo gasto: 0.34s
+2026-08-17 16:41:28.801 | INFO    |src.services.validacao_detrafs:executar:649 - Área de trabalho em [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607]: 32 arquivo(s) copiado(s). 
+O insumo original não será tocado.
+2026-08-17 16:41:28.923 | INFO    |src.services.validacao_detrafs:executar:650 - Área de trabalho em [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607]: 4 arquivo(s) copiado(s). O insumo original não será tocado.
+2026-08-17 16:41:29.809 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Vivo-f0acc5\DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D.csv
+2026-08-17 16:41:29.821 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Vivo-f0acc5\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D.csv
+2026-08-17 16:41:29.843 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\TLF-143db5\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D.csv
+2026-08-17 16:41:29.939 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\TLF-143db5\DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D.csv
+2026-08-17 16:41:29.954 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-5dea2a\202607-C-DETRAF-LC-ADYLNET-TBRASMP.csv
+2026-08-17 16:41:29.971 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-5dea2a\202607-C-DETRAF-LD-ADYLNET-TBRASTFC.csv
+2026-08-17 16:41:30.015 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-9c11c5\Agil_Vivo_202607.csv
+2026-08-17 16:41:30.057 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-9c11c5\Agil_Vivo_SMP_202607.csv
+2026-08-17 16:41:30.108 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-721d61\RELAM_SMS_ALGAR_X_VIVO_SMP_R_202607_V00.csv
+2026-08-17 16:41:30.135 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-9f9c95\ATLANET - 07.2026 - VIVO.xlsx
+2026-08-17 16:41:30.172 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-d4a19a\20260806103500_655_030_detraf_203.csv
+2026-08-17 16:41:30.213 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-fcd027\layout-telefonica-brasil-smp-c-vc1-202607.xlsx
+2026-08-17 16:41:30.247 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-fcd027\layout-telefonica-brasil-stfc-c-ldn-202607.xlsx
+2026-08-17 16:41:30.290 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-5080c5\DETRAF-TMCO-0122-2026-GGNET-VIVO STFC - RESUMO_EOT_200_948_202607.csv
+2026-08-17 16:41:30.314 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-5080c5\DETRAF-TMCO-0123-2026-GGNET-VIVO SMP - RESUMO EOT_044_045_202607.csv
+2026-08-17 16:41:30.324 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-f34750\Detraf_GLT912XVivo020_202607.xlsx
+2026-08-17 16:41:30.352 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-bec494\expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx
+2026-08-17 16:41:30.370 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-bec494\expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx
+2026-08-17 16:41:30.401 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-0eef6a\DETRAF-TMCO ( ITELCO X VIVO 07-26).xlsx
+2026-08-17 16:41:30.437 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-9500fc\expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx
+2026-08-17 16:41:30.476 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-9500fc\expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx
+2026-08-17 16:41:30.514 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-0069f4\MEGALINK - 07.2026  -  VIVO.xlsx
+2026-08-17 16:41:30.595 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-3c0b51\202607-C-DETRAF-LC-SAMM-TBRASMP.csv
+2026-08-17 16:41:30.608 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-3c0b51\202607-C-DETRAF-LD-SAMM-TBRASMP.csv
+2026-08-17 16:41:30.647 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-f38ede\Detraf Nova x TLF_011 202607.csv
+2026-08-17 16:41:30.664 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-f38ede\Detraf Nova x Vivo SMP 202607.csv
+2026-08-17 16:41:30.691 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-eeb7fe\Opcao_Telefonica_Brasil_S_A__202607.csv
+2026-08-17 16:41:30.702 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-5b3b37\DETRAF-TMCO-0116-2026-PREDLINK-VIVO SMP - RESUMO_EOT 20-202607.csv
+2026-08-17 16:41:30.729 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-e0aae2\SISTEL - 07.2026 - VIVO.xlsx
+2026-08-17 16:41:30.803 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-d1d125\expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx
+2026-08-17 16:41:30.850 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-d1d125\expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx
+2026-08-17 16:41:30.876 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-351de0\202607-C-DETRAF-LC-TRIADE-VIVOMOVEL.csv
+2026-08-17 16:41:30.905 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-351de0\202607-C-DETRAF-LD-TRIADE-VIVOMOVEL.csv
+2026-08-17 16:41:30.918 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-ac55dd\Declaração de Tráfego UFINET x VIVO LDN 07-2026.xlsx
+2026-08-17 16:41:30.983 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-3c7a44\202607 Detraf C SMS SMP Unifique X SMP Telefonica Brasil.xlsx
+2026-08-17 16:41:31.018 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-37a531\DETRAF_FINAL_202607_VONARE_VIVO_ITX_20260806161630.csv
+2026-08-17 16:41:31.032 | INFO    |src.services.validacao_detrafs:executar:670 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Vivo-f0acc5\DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D.csv
+2026-08-17 16:41:31.049 | INFO    |src.services.validacao_detrafs:executar:670 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Vivo-f0acc5\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D.csv
+2026-08-17 16:41:31.077 | INFO    |src.services.validacao_detrafs:executar:670 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\TLF-143db5\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D.csv
+2026-08-17 16:41:31.178 | INFO    |src.services.validacao_detrafs:executar:670 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\TLF-143db5\DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D.csv
+2026-08-17 16:41:31.200 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-5dea2a\202607-C-DETRAF-LC-ADYLNET-TBRASMP.csv
+2026-08-17 16:41:31.231 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-5dea2a\202607-C-DETRAF-LC-ADYLNET-TBRASMP.csv] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
+2026-08-17 16:41:31.244 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [202607-C-DETRAF-LC-ADYLNET-TBRASMP_RECUSADO.md].2026-08-17 16:41:31.247 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-5dea2a\202607-C-DETRAF-LD-ADYLNET-TBRASTFC.csv
+2026-08-17 16:41:31.261 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-9c11c5\Agil_Vivo_202607.csv
+2026-08-17 16:41:31.280 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-9c11c5\Agil_Vivo_SMP_202607.csv
+2026-08-17 16:41:31.317 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-9c11c5\Agil_Vivo_SMP_202607.csv] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
+2026-08-17 16:41:31.340 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [Agil_Vivo_SMP_202607_RECUSADO.md]. 
+2026-08-17 16:41:31.348 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-721d61\RELAM_SMS_ALGAR_X_VIVO_SMP_R_202607_V00.csv
+2026-08-17 16:41:31.382 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-9f9c95\ATLANET - 07.2026 - VIVO.xlsx
+2026-08-17 16:41:31.620 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-9f9c95\ATLANET - 07.2026 - VIVO.xlsx] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
+2026-08-17 16:41:32.113 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [ATLANET - 07.2026 - VIVO_RECUSADO.md]. 
+2026-08-17 16:41:32.114 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-d4a19a\20260806103500_655_030_detraf_203.csv
+2026-08-17 16:41:32.147 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-d4a19a\20260806103500_655_030_detraf_203.csv] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
+2026-08-17 16:41:32.158 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [20260806103500_655_030_detraf_203_RECUSADO.md]. 
+2026-08-17 16:41:32.160 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-fcd027\layout-telefonica-brasil-smp-c-vc1-202607.xlsx
+2026-08-17 16:41:32.210 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-fcd027\layout-telefonica-brasil-smp-c-vc1-202607.xlsx] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
+2026-08-17 16:41:32.240 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [layout-telefonica-brasil-smp-c-vc1-202607_RECUSADO.md].
+2026-08-17 16:41:32.252 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-fcd027\layout-telefonica-brasil-stfc-c-ldn-202607.xlsx
+2026-08-17 16:41:32.282 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-5080c5\DETRAF-TMCO-0122-2026-GGNET-VIVO STFC - RESUMO_EOT_200_948_202607.csv
+2026-08-17 16:41:32.301 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-5080c5\DETRAF-TMCO-0123-2026-GGNET-VIVO SMP - RESUMO EOT_044_045_202607.csv
+2026-08-17 16:41:32.329 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-5080c5\DETRAF-TMCO-0123-2026-GGNET-VIVO SMP - RESUMO EOT_044_045_202607.csv] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
+2026-08-17 16:41:32.337 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [DETRAF-TMCO-0123-2026-GGNET-VIVO SMP - RESUMO EOT_044_045_202607_RECUSADO.md].
+2026-08-17 16:41:32.351 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-f34750\Detraf_GLT912XVivo020_202607.xlsx
+2026-08-17 16:41:32.397 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-f34750\Detraf_GLT912XVivo020_202607.xlsx] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
+2026-08-17 16:41:32.428 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [Detraf_GLT912XVivo020_202607_RECUSADO.md]. 
+2026-08-17 16:41:32.440 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-bec494\expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx
+2026-08-17 16:41:32.486 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-bec494\expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
+2026-08-17 16:41:32.504 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [expectativa-telefonica-brasil-smp-c-vc1-202607_RECUSADO.md].
+2026-08-17 16:41:32.521 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-bec494\expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx
+2026-08-17 16:41:32.545 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-0eef6a\DETRAF-TMCO ( ITELCO X VIVO 07-26).xlsx
+2026-08-17 16:41:32.590 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-0eef6a\DETRAF-TMCO ( ITELCO X VIVO 07-26).xlsx] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
+2026-08-17 16:41:32.642 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [DETRAF-TMCO ( ITELCO X VIVO 07-26)_RECUSADO.md].2026-08-17 16:41:32.645 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-9500fc\expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx
+2026-08-17 16:41:32.674 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-9500fc\expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
+2026-08-17 16:41:32.696 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [expectativa-telefonica-brasil-smp-c-vc1-202607_RECUSADO.md].
+2026-08-17 16:41:32.705 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-9500fc\expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx
+2026-08-17 16:41:32.769 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-0069f4\MEGALINK - 07.2026  -  VIVO.xlsx
+2026-08-17 16:41:32.837 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-0069f4\MEGALINK - 07.2026  -  VIVO.xlsx] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
+2026-08-17 16:41:32.858 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [MEGALINK - 07.2026  -  VIVO_RECUSADO.md]. 
+2026-08-17 16:41:32.861 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-3c0b51\202607-C-DETRAF-LC-SAMM-TBRASMP.csv
+2026-08-17 16:41:32.892 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-3c0b51\202607-C-DETRAF-LC-SAMM-TBRASMP.csv] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
+2026-08-17 16:41:32.922 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [202607-C-DETRAF-LC-SAMM-TBRASMP_RECUSADO.md]. 
+2026-08-17 16:41:32.935 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-3c0b51\202607-C-DETRAF-LD-SAMM-TBRASMP.csv
+2026-08-17 16:41:32.960 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-f38ede\Detraf Nova x TLF_011 202607.csv
+2026-08-17 16:41:32.973 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-f38ede\Detraf Nova x Vivo SMP 202607.csv
+2026-08-17 16:41:33.012 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-f38ede\Detraf Nova x Vivo SMP 202607.csv] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
+2026-08-17 16:41:33.027 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [Detraf Nova x Vivo SMP 202607_RECUSADO.md]. 
+2026-08-17 16:41:33.048 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-eeb7fe\Opcao_Telefonica_Brasil_S_A__202607.csv
+2026-08-17 16:41:33.075 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-eeb7fe\Opcao_Telefonica_Brasil_S_A__202607.csv] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
+2026-08-17 16:41:33.091 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [Opcao_Telefonica_Brasil_S_A__202607_RECUSADO.md].
+2026-08-17 16:41:33.369 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-5b3b37\DETRAF-TMCO-0116-2026-PREDLINK-VIVO SMP - RESUMO_EOT 20-202607.csv
+2026-08-17 16:41:33.415 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-5b3b37\DETRAF-TMCO-0116-2026-PREDLINK-VIVO SMP - RESUMO_EOT 20-202607.csv] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
+2026-08-17 16:41:33.453 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [DETRAF-TMCO-0116-2026-PREDLINK-VIVO SMP - RESUMO_EOT 20-202607_RECUSADO.md].
+2026-08-17 16:41:33.473 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-e0aae2\SISTEL - 07.2026 - VIVO.xlsx
+2026-08-17 16:41:33.521 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-e0aae2\SISTEL - 07.2026 - VIVO.xlsx] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
+2026-08-17 16:41:33.570 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [SISTEL - 07.2026 - VIVO_RECUSADO.md]. 
+2026-08-17 16:41:33.587 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-d1d125\expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx
+2026-08-17 16:41:33.640 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-d1d125\expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
+2026-08-17 16:41:33.664 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [expectativa-telefonica-brasil-smp-c-vc1-202607_RECUSADO.md].
+2026-08-17 16:41:33.669 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-d1d125\expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx
+2026-08-17 16:41:33.708 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-351de0\202607-C-DETRAF-LC-TRIADE-VIVOMOVEL.csv
+2026-08-17 16:41:33.728 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-351de0\202607-C-DETRAF-LC-TRIADE-VIVOMOVEL.csv] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
+2026-08-17 16:41:33.743 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [202607-C-DETRAF-LC-TRIADE-VIVOMOVEL_RECUSADO.md].
+2026-08-17 16:41:33.753 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-351de0\202607-C-DETRAF-LD-TRIADE-VIVOMOVEL.csv
+2026-08-17 16:41:33.763 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-ac55dd\Declaração de Tráfego UFINET x VIVO LDN 07-2026.xlsx
+2026-08-17 16:41:33.803 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-3c7a44\202607 Detraf C SMS SMP Unifique X SMP Telefonica Brasil.xlsx
+2026-08-17 16:41:33.837 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-37a531\DETRAF_FINAL_202607_VONARE_VIVO_ITX_20260806161630.csv
+2026-08-17 16:41:33.862 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-37a531\DETRAF_FINAL_202607_VONARE_VIVO_ITX_20260806161630.csv] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
+2026-08-17 16:41:33.892 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [DETRAF_FINAL_202607_VONARE_VIVO_ITX_20260806161630_RECUSADO.md].
+2026-08-17 16:41:34.226 | INFO    |src.services.validacao_detrafs:executar:682 - Validando as colunas do arquivo de detraf: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-5dea2a\202607-C-DETRAF-LD-ADYLNET-TBRASTFC.csv
+2026-08-17 16:41:34.282 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_detraf_tarifas] 
+2026-08-17 16:41:34.287 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_detraf_tarifas] carregada | Linhas: 110 | Colunas: 21 
+2026-08-17 16:41:34.345 | INFO    |src.services.validacao_detrafs:_validar_colunas_arquivos:378 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}  
+2026-08-17 16:41:34.347 | INFO    |src.services.validacao_detrafs:executar:682 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-5dea2a\202607-C-DETRAF-LD-ADYLNET-TBRASTFC.csv] passou em todas as validações.
+2026-08-17 16:41:34.348 | INFO    |src.services.validacao_detrafs:executar:682 - Validando as colunas do arquivo de detraf: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-9c11c5\Agil_Vivo_202607.csv
+2026-08-17 16:41:34.449 | INFO    |src.services.validacao_detrafs:_validar_colunas_arquivos:378 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}  
+2026-08-17 16:41:34.458 | INFO    |src.services.validacao_detrafs:executar:682 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-9c11c5\Agil_Vivo_202607.csv] passou em todas as validações.
+2026-08-17 16:41:34.462 | INFO    |src.services.validacao_detrafs:executar:682 - Validando as colunas do arquivo de detraf: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-721d61\RELAM_SMS_ALGAR_X_VIVO_SMP_R_202607_V00.csv
+2026-08-17 16:41:34.515 | INFO    |src.services.validacao_detrafs:_validar_colunas_arquivos:378 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}  
+2026-08-17 16:41:34.516 | INFO    |src.services.validacao_detrafs:executar:682 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-721d61\RELAM_SMS_ALGAR_X_VIVO_SMP_R_202607_V00.csv] passou em todas as validações.
+2026-08-17 16:41:34.518 | INFO    |src.services.validacao_detrafs:executar:682 - Validando as colunas do arquivo de detraf: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-fcd027\layout-telefonica-brasil-stfc-c-ldn-202607.xlsx
+2026-08-17 16:41:34.611 | INFO    |src.services.validacao_detrafs:_validar_colunas_arquivos:378 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}  
+2026-08-17 16:41:34.613 | INFO    |src.services.validacao_detrafs:executar:682 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-fcd027\layout-telefonica-brasil-stfc-c-ldn-202607.xlsx] passou em todas as validações.
+2026-08-17 16:41:34.615 | INFO    |src.services.validacao_detrafs:executar:682 - Validando as colunas do arquivo de detraf: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-5080c5\DETRAF-TMCO-0122-2026-GGNET-VIVO STFC - RESUMO_EOT_200_948_202607.csv
+2026-08-17 16:41:34.707 | INFO    |src.services.validacao_detrafs:_validar_colunas_arquivos:378 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}  
+2026-08-17 16:41:34.709 | INFO    |src.services.validacao_detrafs:executar:682 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-5080c5\DETRAF-TMCO-0122-2026-GGNET-VIVO STFC - RESUMO_EOT_200_948_202607.csv] passou em todas as validações.
+2026-08-17 16:41:34.710 | INFO    |src.services.validacao_detrafs:executar:682 - Validando as colunas do arquivo de detraf: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-bec494\expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx
+2026-08-17 16:41:34.798 | INFO    |src.services.validacao_detrafs:_validar_colunas_arquivos:378 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}  
+2026-08-17 16:41:34.800 | INFO    |src.services.validacao_detrafs:executar:682 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-bec494\expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx] passou em todas as validações.
+2026-08-17 16:41:34.801 | INFO    |src.services.validacao_detrafs:executar:682 - Validando as colunas do arquivo de detraf: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-9500fc\expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx
+2026-08-17 16:41:34.875 | INFO    |src.services.validacao_detrafs:_validar_colunas_arquivos:378 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}  
+2026-08-17 16:41:34.876 | INFO    |src.services.validacao_detrafs:executar:682 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-9500fc\expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx] passou em todas as validações.
+2026-08-17 16:41:34.877 | INFO    |src.services.validacao_detrafs:executar:682 - Validando as colunas do arquivo de detraf: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-3c0b51\202607-C-DETRAF-LD-SAMM-TBRASMP.csv
+2026-08-17 16:41:34.957 | INFO    |src.services.validacao_detrafs:_validar_colunas_arquivos:378 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}  
+2026-08-17 16:41:34.959 | INFO    |src.services.validacao_detrafs:executar:682 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-3c0b51\202607-C-DETRAF-LD-SAMM-TBRASMP.csv] passou em todas as validações.
+2026-08-17 16:41:34.960 | INFO    |src.services.validacao_detrafs:executar:682 - Validando as colunas do arquivo de detraf: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-f38ede\Detraf Nova x TLF_011 202607.csv
+2026-08-17 16:41:35.067 | INFO    |src.services.validacao_detrafs:_validar_colunas_arquivos:378 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}  
+2026-08-17 16:41:35.069 | INFO    |src.services.validacao_detrafs:executar:682 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-f38ede\Detraf Nova x TLF_011 202607.csv] passou em todas as validações.
+2026-08-17 16:41:35.070 | INFO    |src.services.validacao_detrafs:executar:682 - Validando as colunas do arquivo de detraf: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-d1d125\expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx
+2026-08-17 16:41:35.162 | INFO    |src.services.validacao_detrafs:_validar_colunas_arquivos:378 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}  
+2026-08-17 16:41:35.163 | INFO    |src.services.validacao_detrafs:executar:682 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-d1d125\expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx] passou em todas as validações.
+2026-08-17 16:41:35.165 | INFO    |src.services.validacao_detrafs:executar:682 - Validando as colunas do arquivo de detraf: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-351de0\202607-C-DETRAF-LD-TRIADE-VIVOMOVEL.csv
+2026-08-17 16:41:35.232 | INFO    |src.services.validacao_detrafs:_validar_colunas_arquivos:378 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}  
+2026-08-17 16:41:35.234 | INFO    |src.services.validacao_detrafs:executar:682 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-351de0\202607-C-DETRAF-LD-TRIADE-VIVOMOVEL.csv] passou em todas as validações.
+2026-08-17 16:41:35.234 | INFO    |src.services.validacao_detrafs:executar:682 - Validando as colunas do arquivo de detraf: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-ac55dd\Declaração de Tráfego UFINET x VIVO LDN 07-2026.xlsx
+2026-08-17 16:41:35.323 | INFO    |src.services.validacao_detrafs:_validar_colunas_arquivos:378 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}  
+2026-08-17 16:41:35.325 | INFO    |src.services.validacao_detrafs:executar:682 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-ac55dd\Declaração de Tráfego UFINET x VIVO LDN 07-2026.xlsx] passou em todas as validações.
+2026-08-17 16:41:35.325 | INFO    |src.services.validacao_detrafs:executar:682 - Validando as colunas do arquivo de detraf: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-3c7a44\202607 Detraf C SMS SMP Unifique X SMP Telefonica Brasil.xlsx
+2026-08-17 16:41:35.396 | INFO    |src.services.validacao_detrafs:_validar_colunas_arquivos:378 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}  
+2026-08-17 16:41:35.400 | INFO    |src.services.validacao_detrafs:executar:682 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-3c7a44\202607 Detraf C SMS SMP Unifique X SMP Telefonica Brasil.xlsx] passou em todas as validações.
+2026-08-17 16:41:35.401 | INFO    |src.services.validacao_detrafs:executar:689 - Validando as colunas do arquivo de expectativa: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Vivo-f0acc5\DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D.csv
+2026-08-17 16:41:35.524 | WARNING |src.services.validacao_detrafs:_validar_colunas_arquivos:373 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Vivo-f0acc5\DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D.csv] teve 52 linha(s) movida(s) para [DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D_ERRO.csv] por falha de validação de coluna.
+2026-08-17 16:41:35.527 | INFO    |src.services.validacao_detrafs:executar:689 - Validando as colunas do arquivo de expectativa: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Vivo-f0acc5\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D.csv
+2026-08-17 16:41:35.748 | WARNING |src.services.validacao_detrafs:_validar_colunas_arquivos:373 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Vivo-f0acc5\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D.csv] teve 355 linha(s) movida(s) para [DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D_ERRO.csv] por falha de validação de coluna.
+2026-08-17 16:41:35.752 | INFO    |src.services.validacao_detrafs:executar:689 - Validando as colunas do arquivo de expectativa: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\TLF-143db5\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D.csv
+2026-08-17 16:41:36.430 | WARNING |src.services.validacao_detrafs:_validar_colunas_arquivos:373 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\TLF-143db5\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D.csv] teve 8275 linha(s) movida(s) para [DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D_ERRO.csv] por falha de validação de coluna.
+2026-08-17 16:41:36.434 | INFO    |src.services.validacao_detrafs:executar:689 - Validando as colunas do arquivo de expectativa: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\TLF-143db5\DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D.csv
+2026-08-17 16:41:36.498 | WARNING |src.services.validacao_detrafs:_validar_colunas_arquivos:373 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\TLF-143db5\DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D.csv] teve 249 linha(s) movida(s) para [DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D_ERRO.csv] por falha de validação de coluna.
+2026-08-17 16:41:36.507 | INFO    |src.services.validacao_detrafs:executar:699 - Iniciando transformação de lote tipo [DETRAF_SUCESSO] com 13 arquivo(s). 
+2026-08-17 16:41:36.751 | INFO    |src.services.validacao_detrafs:executar:703 - Iniciando transformação de lote tipo [DETRAF_ERRO] com 19 arquivo(s). 
+2026-08-17 16:41:37.079 | INFO    |src.services.validacao_detrafs:executar:707 - Iniciando transformação de lote tipo [EXPECTATIVA_SUCESSO] com 4 arquivo(s). 
+2026-08-17 16:41:37.185 | INFO    |src.services.validacao_detrafs:executar:711 - Iniciando transformação de lote tipo [EXPECTATIVA_ERRO] com 0 arquivo(s). 
+2026-08-17 16:41:37.189 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - Inserindo 36 registro(s) em [tbl_rpa_log_detraf_despesa_arquivos]. 
+2026-08-17 16:41:37.236 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - 36 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_arquivos]. 
+2026-08-17 16:41:37.245 | INFO    |src.services.validacao_detrafs:executar:732 - Renomeando 17 arquivos validados adicionando _EXP 
+2026-08-17 16:41:37.258 | INFO    |src.services.validacao_detrafs:executar:732 - Renomeando 19 arquivos inválidos adicionando _ERRO 
+2026-08-17 16:41:37.914 | INFO    |src.services.validacao_detrafs:executar:740 - 59 artefato(s) promovido(s) da área de trabalho para as pastas de origem. 
+2026-08-17 16:41:38.151 | INFO    |src.services.validacao_detrafs:_salvar_historico_arquivos_processados:514 - Histórico atualizado com sucesso. Lote finalizado com 17 arquivo(s) salvo(s) como 'Válido'.
+2026-08-17 16:41:38.368 | INFO    |src.services.validacao_detrafs:_salvar_historico_arquivos_processados:517 - Histórico atualizado com sucesso. Lote finalizado com 19 arquivo(s) salvo(s) como 'Inválido'.
+2026-08-17 16:41:38.373 | INFO    |src.controllers.validacao_detrafs_controller:validar_detrafs:15 - [STEP] Finalizando: ValidacaoDetrafsService.executar | Tempo gasto: 11.41s
+2026-08-17 16:41:38.375 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Detraf válidos:           13
+2026-08-17 16:41:38.376 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Detraf inválidos:         19
+2026-08-17 16:41:38.379 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Expectativa válidos:      4
+2026-08-17 16:41:38.385 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Expectativa inválidos:    0 
+2026-08-17 16:41:38.392 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Recusados (cada um tem um *_RECUSADO.md ao lado): 
+2026-08-17 16:41:38.416 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   MEGALINK - 07.2026  -  VIVO.xlsx 
+2026-08-17 16:41:38.422 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   DETRAF-TMCO ( ITELCO X VIVO 07-26).xlsx 
+2026-08-17 16:41:38.443 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   202607-C-DETRAF-LC-TRIADE-VIVOMOVEL.csv 
+2026-08-17 16:41:38.460 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   DETRAF_FINAL_202607_VONARE_VIVO_ITX_20260806161630.csv 
+2026-08-17 16:41:38.477 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   202607-C-DETRAF-LC-SAMM-TBRASMP.csv
+2026-08-17 16:41:38.488 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   DETRAF-TMCO-0123-2026-GGNET-VIVO SMP - RESUMO EOT_044_045_202607.csv 
+2026-08-17 16:41:38.489 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   DETRAF-TMCO-0116-2026-PREDLINK-VIVO SMP - RESUMO_EOT 20-202607.csv      
+2026-08-17 16:41:38.502 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   202607-C-DETRAF-LC-ADYLNET-TBRASMP.csv 
+2026-08-17 16:41:38.516 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx 
+2026-08-17 16:41:38.537 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   Agil_Vivo_SMP_202607.csv 
+2026-08-17 16:41:38.539 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   ATLANET - 07.2026 - VIVO.xlsx
+2026-08-17 16:41:38.540 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx
+2026-08-17 16:41:38.547 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx 
+2026-08-17 16:41:38.570 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   20260806103500_655_030_detraf_203.csv 
+2026-08-17 16:41:38.571 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   SISTEL - 07.2026 - VIVO.xlsx
+2026-08-17 16:41:38.576 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   Opcao_Telefonica_Brasil_S_A__202607.csv
+2026-08-17 16:41:38.581 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   Detraf_GLT912XVivo020_202607.xlsx 
+2026-08-17 16:41:38.594 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   Detraf Nova x Vivo SMP 202607.csv 
+2026-08-17 16:41:38.598 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   layout-telefonica-brasil-smp-c-vc1-202607.xlsx
+2026-08-17 16:41:38.600 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Pasta: C:\RPA\rpa_vivo_mvp2\arquivos\Operadoras 
+2026-08-17 16:41:38.611 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] ──────────────────────────────────────────────────────────── 
+2026-08-17 16:41:38.623 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] PRÓXIMA ETAPA: batimento Detraf × expectativa, que LÊ o que a validação acabou de registrar
+2026-08-17 16:41:38.630 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Etapa 3/3 - batimento Detraf x expectativa 
+2026-08-17 16:41:38.675 | INFO    |src.controllers.batimento_detraf_controller:batimento_detraf:10 - [STEP] Iniciando: BatimentoDetrafService.executar 
+2026-08-17 16:41:38.680 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando processo de batimento dos arquivos Detraf... 
+2026-08-17 16:41:38.683 | INFO    |src.services.batimento_detraf:executar:348 - Preparando os detrafs para validação...
+2026-08-17 16:41:38.684 | INFO    |src.services.batimento_detraf:executar:348 - Iniciando busca de arquivos para o período 202607 na saída da validação: 'C:\RPA\rpa_vivo_mvp2\arquivos\_SAIDA'
+2026-08-17 16:41:38.689 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [ALGAR] 
+2026-08-17 16:41:38.691 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Adylnet Internet Provider]
+2026-08-17 16:41:38.693 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Agil Telecom]
+2026-08-17 16:41:38.695 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Atlanet Telecomunicacoes]
+2026-08-17 16:41:38.707 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [BTT Telecomunicacoes S.A] 
+2026-08-17 16:41:38.745 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Desktop Sigmanet] 
+2026-08-17 16:41:38.747 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [GGNET Telecom]
+2026-08-17 16:41:38.749 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Golden Line Telecom]
+2026-08-17 16:41:38.750 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Invista Net]
+2026-08-17 16:41:38.753 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Itelco Telecom] 
+2026-08-17 16:41:38.758 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [LH Telecomunicacoes LTDA]
+2026-08-17 16:41:38.766 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Megalink Servicos] 
+2026-08-17 16:41:38.776 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Megatelecom Telecomunicacoes S.A] 
+2026-08-17 16:41:38.782 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Nova Tecnologia e Telecomunicacoes]
+2026-08-17 16:41:38.784 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Opcao Telecom] 
+2026-08-17 16:41:38.786 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Predialnet]
+2026-08-17 16:41:38.798 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Sistel Fibra] 
+2026-08-17 16:41:38.811 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [T1 Telecom] 
+2026-08-17 16:41:38.819 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Tri Telecom]
+2026-08-17 16:41:38.825 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [UFINET BRASIL] 
+2026-08-17 16:41:38.841 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Unifique] 
+2026-08-17 16:41:38.850 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Vonare] 
+2026-08-17 16:41:38.855 | INFO    |src.services.batimento_detraf:executar:348 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 22. Total geral 
+de arquivos encontrados: 13
+2026-08-17 16:41:38.874 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [ALGAR]: 1 arquivo(s) encontrado(s) 
+2026-08-17 16:41:38.887 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Adylnet Internet Provider]: 1 arquivo(s) encontrado(s) 
+2026-08-17 16:41:38.889 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Agil Telecom]: 1 arquivo(s) encontrado(s)
+2026-08-17 16:41:38.896 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Atlanet Telecomunicacoes]: 0 arquivo(s) encontrado(s)
+2026-08-17 16:41:38.898 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [BTT Telecomunicacoes S.A]: 0 arquivo(s) encontrado(s) 
+2026-08-17 16:41:38.900 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Desktop Sigmanet]: 1 arquivo(s) encontrado(s)
+2026-08-17 16:41:38.902 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [GGNET Telecom]: 1 arquivo(s) encontrado(s)
+2026-08-17 16:41:38.903 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Golden Line Telecom]: 0 arquivo(s) encontrado(s)
+2026-08-17 16:41:38.903 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Invista Net]: 1 arquivo(s) encontrado(s)
+2026-08-17 16:41:38.906 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Itelco Telecom]: 0 arquivo(s) encontrado(s)
+2026-08-17 16:41:38.910 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [LH Telecomunicacoes LTDA]: 1 arquivo(s) encontrado(s) 
+2026-08-17 16:41:38.919 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Megalink Servicos]: 0 arquivo(s) encontrado(s) 
+2026-08-17 16:41:38.944 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Megatelecom Telecomunicacoes S.A]: 1 arquivo(s) encontrado(s) 
+2026-08-17 16:41:38.947 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Nova Tecnologia e Telecomunicacoes]: 1 arquivo(s) encontrado(s)
+2026-08-17 16:41:38.950 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Opcao Telecom]: 0 arquivo(s) encontrado(s)
+2026-08-17 16:41:38.951 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Predialnet]: 0 arquivo(s) encontrado(s) 
+2026-08-17 16:41:38.957 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Sistel Fibra]: 0 arquivo(s) encontrado(s)
+2026-08-17 16:41:38.965 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [T1 Telecom]: 1 arquivo(s) encontrado(s) 
+2026-08-17 16:41:38.996 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Tri Telecom]: 1 arquivo(s) encontrado(s) 
+2026-08-17 16:41:38.997 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [UFINET BRASIL]: 1 arquivo(s) encontrado(s)
+2026-08-17 16:41:38.999 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Unifique]: 1 arquivo(s) encontrado(s)
+2026-08-17 16:41:39.001 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Vonare]: 0 arquivo(s) encontrado(s)
+2026-08-17 16:41:39.038 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:135 - Filtro de Histórico concluído para o período 202607. 
+2026-08-17 16:41:39.052 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:135 - Arquivos originais recebidos: 13 
+2026-08-17 16:41:39.054 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:135 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 16:41:39.055 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:135 - Novos arquivos retornados para execução: 13
+2026-08-17 16:41:39.056 | INFO    |src.services.batimento_detraf:executar:349 - Preparando os arquivos de expectativa para validação...
+2026-08-17 16:41:39.063 | INFO    |src.services.batimento_detraf:executar:349 - Pasta [Vivo] processada -> Válidos: 2 | Inválidos/Ignorados: 0 
+2026-08-17 16:41:39.081 | INFO    |src.services.batimento_detraf:executar:349 - Pasta [TLF] processada -> Válidos: 2 | Inválidos/Ignorados: 0 
+2026-08-17 16:41:39.090 | ERROR   |src.services.batimento_detraf:_preparar_arquivos_expectativa:329 - [Q21] Sem expectativa Vivo em [C:\RPA\rpa_vivo_mvp2\arquivos\Expectativa\MVNO]: não tem nenhum arquivo aprovado pela validação. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
+2026-08-17 16:41:39.100 | ERROR   |src.services.batimento_detraf:_preparar_arquivos_expectativa:329 - [Q21] Sem expectativa Vivo em [C:\RPA\rpa_vivo_mvp2\arquivos\Expectativa\Detraf TRP]: não tem nenhum arquivo aprovado pela validação. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
+2026-08-17 16:41:39.111 | INFO    |src.services.batimento_detraf:executar:349 - Mapeamento de expectativa concluído. Total geral de arquivos válidos: 4 
+2026-08-17 16:41:39.145 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Filtro de Histórico concluído para o período 202607. 
+2026-08-17 16:41:39.150 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Arquivos originais recebidos: 4 
+2026-08-17 16:41:39.155 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 16:41:39.156 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Novos arquivos retornados para execução: 4
+2026-08-17 16:41:39.157 | INFO    |src.services.batimento_detraf:executar:363 - Iniciando mapeamento de operadoras para 4 arquivo(s).
+2026-08-17 16:41:39.178 | INFO    |src.services.batimento_detraf:_mapear_arquivos_por_operadora:196 - EOT não encontrado [ALGAR] 
+2026-08-17 16:41:39.180 | ERROR   |src.services.batimento_detraf:executar:363 - Nenhum EOT válido encontrado para o arquivo: DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D_EXP.csv
+2026-08-17 16:41:39.201 | INFO    |src.services.batimento_detraf:_mapear_arquivos_por_operadora:196 - EOT não encontrado [ALGAR] 
+2026-08-17 16:41:39.204 | ERROR   |src.services.batimento_detraf:executar:363 - Nenhum EOT válido encontrado para o arquivo: DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D_EXP.csv
+2026-08-17 16:41:39.215 | INFO    |src.services.batimento_detraf:_mapear_arquivos_por_operadora:196 - EOT não encontrado [ALGAR] 
+2026-08-17 16:41:39.232 | ERROR   |src.services.batimento_detraf:executar:363 - Nenhum EOT válido encontrado para o arquivo: DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D_EXP.csv
+2026-08-17 16:41:39.242 | INFO    |src.services.batimento_detraf:_mapear_arquivos_por_operadora:196 - EOT não encontrado [ALGAR] 
+2026-08-17 16:41:39.261 | ERROR   |src.services.batimento_detraf:executar:363 - Nenhum EOT válido encontrado para o arquivo: DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D_EXP.csv
+2026-08-17 16:41:39.293 | INFO    |src.services.batimento_detraf:executar:367 - Iniciando a apuração da contestação. 
+2026-08-17 16:41:39.380 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=UFINET BRASIL | Arquivo=Declaração de Tráfego UFINET 
+x VIVO LDN 07-2026_EXP.xlsx | Linhas originais=5 | Linhas após filtro=4
+2026-08-17 16:41:39.382 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=UFINET BRASIL | Arquivos válidos=1 | Linhas consolidadas=4
+2026-08-17 16:41:39.383 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=UFINET BRASIL | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 16:41:39.390 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_detraf_mapeamento_descritores] 
+2026-08-17 16:41:39.392 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_detraf_mapeamento_descritores] carregada | Linhas: 25 | Colunas: 8
+2026-08-17 16:41:39.479 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
+2026-08-17 16:41:39.525 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 16:41:39.528 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'UFINET BRASIL' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
+2026-08-17 16:41:39.529 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=VONARE | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 16:41:39.531 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=VONARE | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 16:41:39.539 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'VONARE'.2026-08-17 16:41:39.559 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=SISTEL FIBRA | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 16:41:39.569 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=SISTEL FIBRA | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 16:41:39.575 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'SISTEL FIBRA'.
+2026-08-17 16:41:39.650 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=UNIFIQUE | Arquivo=202607 Detraf C SMS SMP Unifique X SMP Telefonica Brasil_EXP.xlsx | Linhas originais=73 | Linhas após filtro=71
+2026-08-17 16:41:39.652 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=UNIFIQUE | Arquivos válidos=1 | Linhas 
+consolidadas=71
+2026-08-17 16:41:39.654 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=UNIFIQUE | Arquivos válidos=0 | Linhas 
+consolidadas=0
+2026-08-17 16:41:39.848 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 26 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
+2026-08-17 16:41:39.877 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 26 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].
+2026-08-17 16:41:39.885 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'UNIFIQUE' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 26
+2026-08-17 16:41:39.904 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=AGIL TELECOM | Arquivo=Agil_Vivo_202607_EXP.csv | Linhas originais=10 | Linhas após filtro=10
+2026-08-17 16:41:39.925 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=AGIL TELECOM | Arquivos válidos=1 | Linhas consolidadas=10
+2026-08-17 16:41:39.927 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=AGIL TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 16:41:40.023 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 8 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
+2026-08-17 16:41:40.104 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 8 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 16:41:40.106 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'AGIL TELECOM' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 8
+2026-08-17 16:41:40.116 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=ADYLNET INTERNET PROVIDER | Arquivo=202607-C-DETRAF-LD-ADYLNET-TBRASTFC_EXP.csv | Linhas originais=23 | Linhas após filtro=22
+2026-08-17 16:41:40.129 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=ADYLNET INTERNET PROVIDER | Arquivos válidos=1 | Linhas consolidadas=22
+2026-08-17 16:41:40.130 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=ADYLNET INTERNET PROVIDER | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 16:41:40.268 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 10 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
+2026-08-17 16:41:40.345 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 10 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].
+2026-08-17 16:41:40.352 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'ADYLNET INTERNET PROVIDER' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 10
+2026-08-17 16:41:40.354 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=PREDIALNET | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 16:41:40.357 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=PREDIALNET | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 16:41:40.361 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'PREDIALNET'.
+2026-08-17 16:41:40.424 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=OPCAO TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 16:41:40.427 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=OPCAO TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 16:41:40.451 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'OPCAO TELECOM'.
+2026-08-17 16:41:40.531 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=LH TELECOMUNICACOES LTDA | Arquivo=expectativa-telefonica-brasil-stfc-c-ldn-202607_EXP.xlsx | Linhas originais=4 | Linhas após filtro=3
+2026-08-17 16:41:40.535 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=LH TELECOMUNICACOES LTDA | Arquivos válidos=1 | Linhas consolidadas=3
+2026-08-17 16:41:40.537 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=LH TELECOMUNICACOES LTDA | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 16:41:40.628 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
+2026-08-17 16:41:40.662 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 16:41:40.671 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'LH TELECOMUNICACOES LTDA' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
+2026-08-17 16:41:40.684 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=MEGATELECOM TELECOMUNICACOES S.A | Arquivo=202607-C-DETRAF-LD-SAMM-TBRASMP_EXP.csv | Linhas originais=6 | Linhas após filtro=5
+2026-08-17 16:41:40.694 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=MEGATELECOM TELECOMUNICACOES S.A | Arquivos válidos=1 | Linhas consolidadas=5
+2026-08-17 16:41:40.705 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=MEGATELECOM TELECOMUNICACOES S.A | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 16:41:40.791 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
+2026-08-17 16:41:41.089 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 16:41:41.097 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'MEGATELECOM TELECOMUNICACOES S.A' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
+2026-08-17 16:41:41.134 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=ALGAR | Arquivo=RELAM_SMS_ALGAR_X_VIVO_SMP_R_202607_V00_EXP.csv | Linhas originais=375 | Linhas após filtro=307
+2026-08-17 16:41:41.136 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=ALGAR | Arquivos válidos=1 | Linhas consolidadas=307
+2026-08-17 16:41:41.159 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=ALGAR | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 16:41:41.386 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 53 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
+2026-08-17 16:41:41.421 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 53 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].
+2026-08-17 16:41:41.424 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'ALGAR' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 53
+2026-08-17 16:41:41.426 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=GOLDEN LINE TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 16:41:41.430 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=GOLDEN LINE TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 16:41:41.435 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'GOLDEN LINE TELECOM'.
+2026-08-17 16:41:41.490 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=INVISTA NET | Arquivo=expectativa-telefonica-brasil-stfc-c-ldn-202607_EXP.xlsx | Linhas originais=6 | Linhas após filtro=5
+2026-08-17 16:41:41.509 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=INVISTA NET | Arquivos válidos=1 | Linhas consolidadas=5
+2026-08-17 16:41:41.511 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=INVISTA NET | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 16:41:41.605 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
+2026-08-17 16:41:41.635 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 16:41:41.640 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'INVISTA NET' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
+2026-08-17 16:41:41.656 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=NOVA TECNOLOGIA E TELECOMUNICACOES | Arquivo=Detraf Nova x TLF_011 202607_EXP.csv | Linhas originais=4 | Linhas após filtro=4
+2026-08-17 16:41:41.666 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=NOVA TECNOLOGIA E TELECOMUNICACOES | Arquivos válidos=1 | Linhas consolidadas=4
+2026-08-17 16:41:41.670 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=NOVA TECNOLOGIA E TELECOMUNICACOES | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 16:41:41.761 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
+2026-08-17 16:41:41.802 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 16:41:41.805 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'NOVA TECNOLOGIA E TELECOMUNICACOES' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
+2026-08-17 16:41:41.815 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=TRI TELECOM | Arquivo=202607-C-DETRAF-LD-TRIADE-VIVOMOVEL_EXP.csv | Linhas originais=4 | Linhas após filtro=3
+2026-08-17 16:41:41.818 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=TRI TELECOM | Arquivos válidos=1 | Linhas consolidadas=3
+2026-08-17 16:41:41.820 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=TRI TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 16:41:41.899 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
+2026-08-17 16:41:41.961 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 16:41:41.964 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'TRI TELECOM' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
+2026-08-17 16:41:41.966 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=BTT TELECOMUNICACOES S.A | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 16:41:41.967 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=BTT TELECOMUNICACOES S.A | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 16:41:41.972 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'BTT TELECOMUNICACOES S.A'.
+2026-08-17 16:41:41.974 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=ITELCO TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 16:41:41.975 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=ITELCO TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 16:41:41.980 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'ITELCO TELECOM'.
+2026-08-17 16:41:41.991 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=MEGALINK SERVICOS | Arquivos válidos=0 
+| Linhas consolidadas=0
+2026-08-17 16:41:41.994 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=MEGALINK SERVICOS | Arquivos válidos=0 
+| Linhas consolidadas=0
+2026-08-17 16:41:42.021 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'MEGALINK SERVICOS'.
+2026-08-17 16:41:42.126 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=T1 TELECOM | Arquivo=expectativa-telefonica-brasil-stfc-c-ldn-202607_EXP.xlsx | Linhas originais=4 | Linhas após filtro=3
+2026-08-17 16:41:42.128 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=T1 TELECOM | Arquivos válidos=1 | Linhas consolidadas=3
+2026-08-17 16:41:42.129 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=T1 TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 16:41:42.205 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
+2026-08-17 16:41:42.245 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 16:41:42.253 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'T1 TELECOM' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
+2026-08-17 16:41:42.263 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=GGNET TELECOM | Arquivo=DETRAF-TMCO-0122-2026-GGNET-VIVO STFC - RESUMO_EOT_200_948_202607_EXP.csv | Linhas originais=18 | Linhas após filtro=17
+2026-08-17 16:41:42.275 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=GGNET TELECOM | Arquivos válidos=1 | Linhas consolidadas=17
+2026-08-17 16:41:42.281 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=GGNET TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 16:41:42.397 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 6 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
+2026-08-17 16:41:42.435 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 6 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 16:41:42.438 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'GGNET TELECOM' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 6
+2026-08-17 16:41:42.488 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=DESKTOP SIGMANET | Arquivo=layout-telefonica-brasil-stfc-c-ldn-202607_EXP.xlsx | Linhas originais=38 | Linhas após filtro=38
+2026-08-17 16:41:42.489 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=DESKTOP SIGMANET | Arquivos válidos=1 | Linhas consolidadas=38
+2026-08-17 16:41:42.490 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=DESKTOP SIGMANET | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 16:41:42.559 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
+2026-08-17 16:41:42.601 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 16:41:42.610 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'DESKTOP SIGMANET' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
+2026-08-17 16:41:42.613 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=ATLANET TELECOMUNICACOES | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 16:41:42.614 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=ATLANET TELECOMUNICACOES | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 16:41:42.618 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'ATLANET 
+TELECOMUNICACOES'.
+2026-08-17 16:41:42.625 | INFO    |src.controllers.batimento_detraf_controller:batimento_detraf:10 - [STEP] Finalizando: BatimentoDetrafService.executar | Tempo gasto: 3.95s2026-08-17 16:41:42.646 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] Operadoras apuradas:      23 
+2026-08-17 16:41:42.659 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] O resultado é a TABELA `tbl_rpa_log_detraf_despesa_contestacao`, 
+2026-08-17 16:41:42.669 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] não um arquivo — a Base de Contestação virou tabela em 2026-08-04. 
+2026-08-17 16:41:42.674 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] Próximo passo é humano: o analista sinaliza no WebFat o que
+2026-08-17 16:41:42.690 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] contestar e se haverá retenção. Só então o RPA 3 tem o que fazer. 
+2026-08-17 16:41:42.716 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] Operadoras: ADYLNET INTERNET PROVIDER, AGIL TELECOM, ALGAR, ATLANET TELECOMUNICACOES, BTT TELECOMUNICACOES S.A, DESKTOP SIGMANET, GGNET TELECOM, GOLDEN LINE TELECOM, INVISTA NET, ITELCO TELECOM, LH TELECOMUNICACOES LTDA, MEGALINK SERVICOS, MEGATELECOM TELECOMUNICACOES S.A, NOVA TECNOLOGIA E TELECOMUNICACOES, OPCAO TELECOM, OPERADORA_NAO_IDENTIFICADA, PREDIALNET, SISTEL FIBRA, T1 TELECOM, TRI TELECOM, UFINET BRASIL, 
+UNIFIQUE, VONARE
+2026-08-17 16:41:42.718 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] ────────────────────────────────────────────────────────────
+2026-08-17 16:41:42.722 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] Esta é a última etapa da execução.
+2026-08-17 16:41:42.733 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Concluído. Aguardando a decisão do analista no WebFat para o RPA 3 prosseguir. 
+2026-08-17 16:41:42.753 | INFO    |__main__:main:97 - [STEP] Finalizando: run | Tempo gasto: 18.34s 
+2026-08-17 16:41:42.769 | INFO    |__main__:main:118 - [Diagnóstico] Etapas desta execução em [C:\RPA\rpa_vivo_mvp2\logs\BRTAZBGY0015CO\rpa2_validacao_apuracao\diagnosticos\2026-08-17_16-41-21.txt].
+2026-08-17 16:41:42.814 | INFO    |__main__:<module>:126 - [RPA 2] Diagnóstico das etapas em [C:\RPA\rpa_vivo_mvp2\logs\BRTAZBGY0015CO\rpa2_validacao_apuracao\diagnosticos\2026-08-17_16-41-21.txt]
