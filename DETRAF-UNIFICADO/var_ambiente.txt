@@ -11,3 +11,6 @@
 echo $env:CLICKHUB_SFTP_HOST
 echo $env:CLICKHUB_SFTP_USER
 echo $env:CLICKHUB_SFTP_PASSWORD
+
+
+.venv\Scripts\python.exe -c "from comum.integracoes.outlook import OutlookService; from comum.config.configuration import OUTLOOK_ACCOUNT; s = OutlookService(OUTLOOK_ACCOUNT); f = s._get_or_create_top_level_folder('Detraf Despesas'); print('Pasta encontrada:', repr(f.Name)); print('Subpastas dentro dela:'); [print(' -', repr(f.Folders.Item(i).Name)) for i in range(1, f.Folders.Count+1)]"
