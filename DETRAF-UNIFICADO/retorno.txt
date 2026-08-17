@@ -1,665 +1,334 @@
-2026-08-17 16:41:30.608 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-3c0b51\202607-C-DETRAF-LD-SAMM-TBRASMP.csv
-2026-08-17 16:41:30.647 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-f38ede\Detraf Nova x TLF_011 202607.csv
-2026-08-17 16:41:30.664 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-f38ede\Detraf Nova x Vivo SMP 202607.csv
-2026-08-17 16:41:30.691 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-eeb7fe\Opcao_Telefonica_Brasil_S_A__202607.csv
-2026-08-17 16:41:30.702 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-5b3b37\DETRAF-TMCO-0116-2026-PREDLINK-VIVO SMP - RESUMO_EOT 20-202607.csv
-2026-08-17 16:41:30.729 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-e0aae2\SISTEL - 07.2026 - VIVO.xlsx
-2026-08-17 16:41:30.803 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-d1d125\expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx
-2026-08-17 16:41:30.850 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-d1d125\expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx
-2026-08-17 16:41:30.876 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-351de0\202607-C-DETRAF-LC-TRIADE-VIVOMOVEL.csv
-2026-08-17 16:41:30.905 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-351de0\202607-C-DETRAF-LD-TRIADE-VIVOMOVEL.csv
-2026-08-17 16:41:30.918 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-ac55dd\Declaração de Tráfego UFINET x VIVO LDN 07-2026.xlsx
-2026-08-17 16:41:30.983 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-3c7a44\202607 Detraf C SMS SMP Unifique X SMP Telefonica Brasil.xlsx
-2026-08-17 16:41:31.018 | INFO    |src.services.validacao_detrafs:executar:665 - Validando o fluxo BK do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-37a531\DETRAF_FINAL_202607_VONARE_VIVO_ITX_20260806161630.csv
-2026-08-17 16:41:31.032 | INFO    |src.services.validacao_detrafs:executar:670 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Vivo-f0acc5\DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D.csv
-2026-08-17 16:41:31.049 | INFO    |src.services.validacao_detrafs:executar:670 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Vivo-f0acc5\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D.csv
-2026-08-17 16:41:31.077 | INFO    |src.services.validacao_detrafs:executar:670 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\TLF-143db5\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D.csv
-2026-08-17 16:41:31.178 | INFO    |src.services.validacao_detrafs:executar:670 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\TLF-143db5\DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D.csv
-2026-08-17 16:41:31.200 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-5dea2a\202607-C-DETRAF-LC-ADYLNET-TBRASMP.csv
-2026-08-17 16:41:31.231 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-5dea2a\202607-C-DETRAF-LC-ADYLNET-TBRASMP.csv] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
-2026-08-17 16:41:31.244 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [202607-C-DETRAF-LC-ADYLNET-TBRASMP_RECUSADO.md].2026-08-17 16:41:31.247 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-5dea2a\202607-C-DETRAF-LD-ADYLNET-TBRASTFC.csv
-2026-08-17 16:41:31.261 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-9c11c5\Agil_Vivo_202607.csv
-2026-08-17 16:41:31.280 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-9c11c5\Agil_Vivo_SMP_202607.csv
-2026-08-17 16:41:31.317 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-9c11c5\Agil_Vivo_SMP_202607.csv] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
-2026-08-17 16:41:31.340 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [Agil_Vivo_SMP_202607_RECUSADO.md]. 
-2026-08-17 16:41:31.348 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-721d61\RELAM_SMS_ALGAR_X_VIVO_SMP_R_202607_V00.csv
-2026-08-17 16:41:31.382 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-9f9c95\ATLANET - 07.2026 - VIVO.xlsx
-2026-08-17 16:41:31.620 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-9f9c95\ATLANET - 07.2026 - VIVO.xlsx] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
-2026-08-17 16:41:32.113 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [ATLANET - 07.2026 - VIVO_RECUSADO.md]. 
-2026-08-17 16:41:32.114 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-d4a19a\20260806103500_655_030_detraf_203.csv
-2026-08-17 16:41:32.147 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-d4a19a\20260806103500_655_030_detraf_203.csv] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
-2026-08-17 16:41:32.158 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [20260806103500_655_030_detraf_203_RECUSADO.md]. 
-2026-08-17 16:41:32.160 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-fcd027\layout-telefonica-brasil-smp-c-vc1-202607.xlsx
-2026-08-17 16:41:32.210 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-fcd027\layout-telefonica-brasil-smp-c-vc1-202607.xlsx] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
-2026-08-17 16:41:32.240 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [layout-telefonica-brasil-smp-c-vc1-202607_RECUSADO.md].
-2026-08-17 16:41:32.252 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-fcd027\layout-telefonica-brasil-stfc-c-ldn-202607.xlsx
-2026-08-17 16:41:32.282 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-5080c5\DETRAF-TMCO-0122-2026-GGNET-VIVO STFC - RESUMO_EOT_200_948_202607.csv
-2026-08-17 16:41:32.301 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-5080c5\DETRAF-TMCO-0123-2026-GGNET-VIVO SMP - RESUMO EOT_044_045_202607.csv
-2026-08-17 16:41:32.329 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-5080c5\DETRAF-TMCO-0123-2026-GGNET-VIVO SMP - RESUMO EOT_044_045_202607.csv] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
-2026-08-17 16:41:32.337 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [DETRAF-TMCO-0123-2026-GGNET-VIVO SMP - RESUMO EOT_044_045_202607_RECUSADO.md].
-2026-08-17 16:41:32.351 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-f34750\Detraf_GLT912XVivo020_202607.xlsx
-2026-08-17 16:41:32.397 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-f34750\Detraf_GLT912XVivo020_202607.xlsx] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
-2026-08-17 16:41:32.428 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [Detraf_GLT912XVivo020_202607_RECUSADO.md]. 
-2026-08-17 16:41:32.440 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-bec494\expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx
-2026-08-17 16:41:32.486 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-bec494\expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
-2026-08-17 16:41:32.504 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [expectativa-telefonica-brasil-smp-c-vc1-202607_RECUSADO.md].
-2026-08-17 16:41:32.521 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-bec494\expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx
-2026-08-17 16:41:32.545 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-0eef6a\DETRAF-TMCO ( ITELCO X VIVO 07-26).xlsx
-2026-08-17 16:41:32.590 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-0eef6a\DETRAF-TMCO ( ITELCO X VIVO 07-26).xlsx] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
-2026-08-17 16:41:32.642 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [DETRAF-TMCO ( ITELCO X VIVO 07-26)_RECUSADO.md].2026-08-17 16:41:32.645 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-9500fc\expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx
-2026-08-17 16:41:32.674 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-9500fc\expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
-2026-08-17 16:41:32.696 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [expectativa-telefonica-brasil-smp-c-vc1-202607_RECUSADO.md].
-2026-08-17 16:41:32.705 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-9500fc\expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx
-2026-08-17 16:41:32.769 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-0069f4\MEGALINK - 07.2026  -  VIVO.xlsx
-2026-08-17 16:41:32.837 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-0069f4\MEGALINK - 07.2026  -  VIVO.xlsx] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
-2026-08-17 16:41:32.858 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [MEGALINK - 07.2026  -  VIVO_RECUSADO.md]. 
-2026-08-17 16:41:32.861 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-3c0b51\202607-C-DETRAF-LC-SAMM-TBRASMP.csv
-2026-08-17 16:41:32.892 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-3c0b51\202607-C-DETRAF-LC-SAMM-TBRASMP.csv] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
-2026-08-17 16:41:32.922 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [202607-C-DETRAF-LC-SAMM-TBRASMP_RECUSADO.md]. 
-2026-08-17 16:41:32.935 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-3c0b51\202607-C-DETRAF-LD-SAMM-TBRASMP.csv
-2026-08-17 16:41:32.960 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-f38ede\Detraf Nova x TLF_011 202607.csv
-2026-08-17 16:41:32.973 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-f38ede\Detraf Nova x Vivo SMP 202607.csv
-2026-08-17 16:41:33.012 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-f38ede\Detraf Nova x Vivo SMP 202607.csv] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
-2026-08-17 16:41:33.027 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [Detraf Nova x Vivo SMP 202607_RECUSADO.md]. 
-2026-08-17 16:41:33.048 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-eeb7fe\Opcao_Telefonica_Brasil_S_A__202607.csv
-2026-08-17 16:41:33.075 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-eeb7fe\Opcao_Telefonica_Brasil_S_A__202607.csv] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
-2026-08-17 16:41:33.091 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [Opcao_Telefonica_Brasil_S_A__202607_RECUSADO.md].
-2026-08-17 16:41:33.369 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-5b3b37\DETRAF-TMCO-0116-2026-PREDLINK-VIVO SMP - RESUMO_EOT 20-202607.csv
-2026-08-17 16:41:33.415 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-5b3b37\DETRAF-TMCO-0116-2026-PREDLINK-VIVO SMP - RESUMO_EOT 20-202607.csv] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
-2026-08-17 16:41:33.453 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [DETRAF-TMCO-0116-2026-PREDLINK-VIVO SMP - RESUMO_EOT 20-202607_RECUSADO.md].
-2026-08-17 16:41:33.473 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-e0aae2\SISTEL - 07.2026 - VIVO.xlsx
-2026-08-17 16:41:33.521 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-e0aae2\SISTEL - 07.2026 - VIVO.xlsx] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
-2026-08-17 16:41:33.570 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [SISTEL - 07.2026 - VIVO_RECUSADO.md]. 
-2026-08-17 16:41:33.587 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-d1d125\expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx
-2026-08-17 16:41:33.640 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-d1d125\expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
-2026-08-17 16:41:33.664 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [expectativa-telefonica-brasil-smp-c-vc1-202607_RECUSADO.md].
-2026-08-17 16:41:33.669 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-d1d125\expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx
-2026-08-17 16:41:33.708 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-351de0\202607-C-DETRAF-LC-TRIADE-VIVOMOVEL.csv
-2026-08-17 16:41:33.728 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-351de0\202607-C-DETRAF-LC-TRIADE-VIVOMOVEL.csv] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
-2026-08-17 16:41:33.743 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [202607-C-DETRAF-LC-TRIADE-VIVOMOVEL_RECUSADO.md].
-2026-08-17 16:41:33.753 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-351de0\202607-C-DETRAF-LD-TRIADE-VIVOMOVEL.csv
-2026-08-17 16:41:33.763 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-ac55dd\Declaração de Tráfego UFINET x VIVO LDN 07-2026.xlsx
-2026-08-17 16:41:33.803 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-3c7a44\202607 Detraf C SMS SMP Unifique X SMP Telefonica Brasil.xlsx
-2026-08-17 16:41:33.837 | INFO    |src.services.validacao_detrafs:executar:671 - Validando o fluxo LL do arquivo: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-37a531\DETRAF_FINAL_202607_VONARE_VIVO_ITX_20260806161630.csv
-2026-08-17 16:41:33.862 | WARNING |src.services.validacao_detrafs:executar:671 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-37a531\DETRAF_FINAL_202607_VONARE_VIVO_ITX_20260806161630.csv] atende ao fluxo LL e foi sinalizado como inválido conforme configuração.
-2026-08-17 16:41:33.892 | INFO    |src.services.validacao_detrafs:_validar_fluxo:482 - [Layout] Motivo da recusa gravado em [DETRAF_FINAL_202607_VONARE_VIVO_ITX_20260806161630_RECUSADO.md].
-2026-08-17 16:41:34.226 | INFO    |src.services.validacao_detrafs:executar:682 - Validando as colunas do arquivo de detraf: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-5dea2a\202607-C-DETRAF-LD-ADYLNET-TBRASTFC.csv
-2026-08-17 16:41:34.282 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_detraf_tarifas] 
-2026-08-17 16:41:34.287 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_detraf_tarifas] carregada | Linhas: 110 | Colunas: 21 
-2026-08-17 16:41:34.345 | INFO    |src.services.validacao_detrafs:_validar_colunas_arquivos:378 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}  
-2026-08-17 16:41:34.347 | INFO    |src.services.validacao_detrafs:executar:682 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-5dea2a\202607-C-DETRAF-LD-ADYLNET-TBRASTFC.csv] passou em todas as validações.
-2026-08-17 16:41:34.348 | INFO    |src.services.validacao_detrafs:executar:682 - Validando as colunas do arquivo de detraf: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-9c11c5\Agil_Vivo_202607.csv
-2026-08-17 16:41:34.449 | INFO    |src.services.validacao_detrafs:_validar_colunas_arquivos:378 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}  
-2026-08-17 16:41:34.458 | INFO    |src.services.validacao_detrafs:executar:682 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-9c11c5\Agil_Vivo_202607.csv] passou em todas as validações.
-2026-08-17 16:41:34.462 | INFO    |src.services.validacao_detrafs:executar:682 - Validando as colunas do arquivo de detraf: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-721d61\RELAM_SMS_ALGAR_X_VIVO_SMP_R_202607_V00.csv
-2026-08-17 16:41:34.515 | INFO    |src.services.validacao_detrafs:_validar_colunas_arquivos:378 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}  
-2026-08-17 16:41:34.516 | INFO    |src.services.validacao_detrafs:executar:682 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-721d61\RELAM_SMS_ALGAR_X_VIVO_SMP_R_202607_V00.csv] passou em todas as validações.
-2026-08-17 16:41:34.518 | INFO    |src.services.validacao_detrafs:executar:682 - Validando as colunas do arquivo de detraf: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-fcd027\layout-telefonica-brasil-stfc-c-ldn-202607.xlsx
-2026-08-17 16:41:34.611 | INFO    |src.services.validacao_detrafs:_validar_colunas_arquivos:378 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}  
-2026-08-17 16:41:34.613 | INFO    |src.services.validacao_detrafs:executar:682 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-fcd027\layout-telefonica-brasil-stfc-c-ldn-202607.xlsx] passou em todas as validações.
-2026-08-17 16:41:34.615 | INFO    |src.services.validacao_detrafs:executar:682 - Validando as colunas do arquivo de detraf: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-5080c5\DETRAF-TMCO-0122-2026-GGNET-VIVO STFC - RESUMO_EOT_200_948_202607.csv
-2026-08-17 16:41:34.707 | INFO    |src.services.validacao_detrafs:_validar_colunas_arquivos:378 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}  
-2026-08-17 16:41:34.709 | INFO    |src.services.validacao_detrafs:executar:682 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-5080c5\DETRAF-TMCO-0122-2026-GGNET-VIVO STFC - RESUMO_EOT_200_948_202607.csv] passou em todas as validações.
-2026-08-17 16:41:34.710 | INFO    |src.services.validacao_detrafs:executar:682 - Validando as colunas do arquivo de detraf: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-bec494\expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx
-2026-08-17 16:41:34.798 | INFO    |src.services.validacao_detrafs:_validar_colunas_arquivos:378 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}  
-2026-08-17 16:41:34.800 | INFO    |src.services.validacao_detrafs:executar:682 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-bec494\expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx] passou em todas as validações.
-2026-08-17 16:41:34.801 | INFO    |src.services.validacao_detrafs:executar:682 - Validando as colunas do arquivo de detraf: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-9500fc\expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx
-2026-08-17 16:41:34.875 | INFO    |src.services.validacao_detrafs:_validar_colunas_arquivos:378 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}  
-2026-08-17 16:41:34.876 | INFO    |src.services.validacao_detrafs:executar:682 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-9500fc\expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx] passou em todas as validações.
-2026-08-17 16:41:34.877 | INFO    |src.services.validacao_detrafs:executar:682 - Validando as colunas do arquivo de detraf: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-3c0b51\202607-C-DETRAF-LD-SAMM-TBRASMP.csv
-2026-08-17 16:41:34.957 | INFO    |src.services.validacao_detrafs:_validar_colunas_arquivos:378 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}  
-2026-08-17 16:41:34.959 | INFO    |src.services.validacao_detrafs:executar:682 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-3c0b51\202607-C-DETRAF-LD-SAMM-TBRASMP.csv] passou em todas as validações.
-2026-08-17 16:41:34.960 | INFO    |src.services.validacao_detrafs:executar:682 - Validando as colunas do arquivo de detraf: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-f38ede\Detraf Nova x TLF_011 202607.csv
-2026-08-17 16:41:35.067 | INFO    |src.services.validacao_detrafs:_validar_colunas_arquivos:378 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}  
-2026-08-17 16:41:35.069 | INFO    |src.services.validacao_detrafs:executar:682 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-f38ede\Detraf Nova x TLF_011 202607.csv] passou em todas as validações.
-2026-08-17 16:41:35.070 | INFO    |src.services.validacao_detrafs:executar:682 - Validando as colunas do arquivo de detraf: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-d1d125\expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx
-2026-08-17 16:41:35.162 | INFO    |src.services.validacao_detrafs:_validar_colunas_arquivos:378 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}  
-2026-08-17 16:41:35.163 | INFO    |src.services.validacao_detrafs:executar:682 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-d1d125\expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx] passou em todas as validações.
-2026-08-17 16:41:35.165 | INFO    |src.services.validacao_detrafs:executar:682 - Validando as colunas do arquivo de detraf: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-351de0\202607-C-DETRAF-LD-TRIADE-VIVOMOVEL.csv
-2026-08-17 16:41:35.232 | INFO    |src.services.validacao_detrafs:_validar_colunas_arquivos:378 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}  
-2026-08-17 16:41:35.234 | INFO    |src.services.validacao_detrafs:executar:682 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-351de0\202607-C-DETRAF-LD-TRIADE-VIVOMOVEL.csv] passou em todas as validações.
-2026-08-17 16:41:35.234 | INFO    |src.services.validacao_detrafs:executar:682 - Validando as colunas do arquivo de detraf: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-ac55dd\Declaração de Tráfego UFINET x VIVO LDN 07-2026.xlsx
-2026-08-17 16:41:35.323 | INFO    |src.services.validacao_detrafs:_validar_colunas_arquivos:378 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}  
-2026-08-17 16:41:35.325 | INFO    |src.services.validacao_detrafs:executar:682 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-ac55dd\Declaração de Tráfego UFINET x VIVO LDN 07-2026.xlsx] passou em todas as validações.
-2026-08-17 16:41:35.325 | INFO    |src.services.validacao_detrafs:executar:682 - Validando as colunas do arquivo de detraf: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-3c7a44\202607 Detraf C SMS SMP Unifique X SMP Telefonica Brasil.xlsx
-2026-08-17 16:41:35.396 | INFO    |src.services.validacao_detrafs:_validar_colunas_arquivos:378 - Resultado das validações para o arquivo do tipo 'detraf': {'v_col1_2': True, 'v_col2_vivo': True, 'v_col3': True, 'v_col4': True, 'v_col8': True, 'v_col9': True, 'v_col10': True, 'v_col11': True, 'v_col12_15': True, 'v_tarifas_remuneradas': True}  
-2026-08-17 16:41:35.400 | INFO    |src.services.validacao_detrafs:executar:682 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Detrafs Recebidos-3c7a44\202607 Detraf C SMS SMP Unifique X SMP Telefonica Brasil.xlsx] passou em todas as validações.
-2026-08-17 16:41:35.401 | INFO    |src.services.validacao_detrafs:executar:689 - Validando as colunas do arquivo de expectativa: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Vivo-f0acc5\DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D.csv
-2026-08-17 16:41:35.524 | WARNING |src.services.validacao_detrafs:_validar_colunas_arquivos:373 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Vivo-f0acc5\DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D.csv] teve 52 linha(s) movida(s) para [DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D_ERRO.csv] por falha de validação de coluna.
-2026-08-17 16:41:35.527 | INFO    |src.services.validacao_detrafs:executar:689 - Validando as colunas do arquivo de expectativa: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Vivo-f0acc5\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D.csv
-2026-08-17 16:41:35.748 | WARNING |src.services.validacao_detrafs:_validar_colunas_arquivos:373 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\Vivo-f0acc5\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D.csv] teve 355 linha(s) movida(s) para [DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D_ERRO.csv] por falha de validação de coluna.
-2026-08-17 16:41:35.752 | INFO    |src.services.validacao_detrafs:executar:689 - Validando as colunas do arquivo de expectativa: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\TLF-143db5\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D.csv
-2026-08-17 16:41:36.430 | WARNING |src.services.validacao_detrafs:_validar_colunas_arquivos:373 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\TLF-143db5\DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D.csv] teve 8275 linha(s) movida(s) para [DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D_ERRO.csv] por falha de validação de coluna.
-2026-08-17 16:41:36.434 | INFO    |src.services.validacao_detrafs:executar:689 - Validando as colunas do arquivo de expectativa: C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\TLF-143db5\DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D.csv
-2026-08-17 16:41:36.498 | WARNING |src.services.validacao_detrafs:_validar_colunas_arquivos:373 - Arquivo [C:\RPA\rpa_vivo_mvp2\arquivos\_TEMP\202607\TLF-143db5\DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D.csv] teve 249 linha(s) movida(s) para [DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D_ERRO.csv] por falha de validação de coluna.
-2026-08-17 16:41:36.507 | INFO    |src.services.validacao_detrafs:executar:699 - Iniciando transformação de lote tipo [DETRAF_SUCESSO] com 13 arquivo(s). 
-2026-08-17 16:41:36.751 | INFO    |src.services.validacao_detrafs:executar:703 - Iniciando transformação de lote tipo [DETRAF_ERRO] com 19 arquivo(s). 
-2026-08-17 16:41:37.079 | INFO    |src.services.validacao_detrafs:executar:707 - Iniciando transformação de lote tipo [EXPECTATIVA_SUCESSO] com 4 arquivo(s). 
-2026-08-17 16:41:37.185 | INFO    |src.services.validacao_detrafs:executar:711 - Iniciando transformação de lote tipo [EXPECTATIVA_ERRO] com 0 arquivo(s). 
-2026-08-17 16:41:37.189 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - Inserindo 36 registro(s) em [tbl_rpa_log_detraf_despesa_arquivos]. 
-2026-08-17 16:41:37.236 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_despesa:262 - 36 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_arquivos]. 
-2026-08-17 16:41:37.245 | INFO    |src.services.validacao_detrafs:executar:732 - Renomeando 17 arquivos validados adicionando _EXP 
-2026-08-17 16:41:37.258 | INFO    |src.services.validacao_detrafs:executar:732 - Renomeando 19 arquivos inválidos adicionando _ERRO 
-2026-08-17 16:41:37.914 | INFO    |src.services.validacao_detrafs:executar:740 - 59 artefato(s) promovido(s) da área de trabalho para as pastas de origem. 
-2026-08-17 16:41:38.151 | INFO    |src.services.validacao_detrafs:_salvar_historico_arquivos_processados:514 - Histórico atualizado com sucesso. Lote finalizado com 17 arquivo(s) salvo(s) como 'Válido'.
-2026-08-17 16:41:38.368 | INFO    |src.services.validacao_detrafs:_salvar_historico_arquivos_processados:517 - Histórico atualizado com sucesso. Lote finalizado com 19 arquivo(s) salvo(s) como 'Inválido'.
-2026-08-17 16:41:38.373 | INFO    |src.controllers.validacao_detrafs_controller:validar_detrafs:15 - [STEP] Finalizando: ValidacaoDetrafsService.executar | Tempo gasto: 11.41s
-2026-08-17 16:41:38.375 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Detraf válidos:           13
-2026-08-17 16:41:38.376 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Detraf inválidos:         19
-2026-08-17 16:41:38.379 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Expectativa válidos:      4
-2026-08-17 16:41:38.385 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Expectativa inválidos:    0 
-2026-08-17 16:41:38.392 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Recusados (cada um tem um *_RECUSADO.md ao lado): 
-2026-08-17 16:41:38.416 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   MEGALINK - 07.2026  -  VIVO.xlsx 
-2026-08-17 16:41:38.422 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   DETRAF-TMCO ( ITELCO X VIVO 07-26).xlsx 
-2026-08-17 16:41:38.443 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   202607-C-DETRAF-LC-TRIADE-VIVOMOVEL.csv 
-2026-08-17 16:41:38.460 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   DETRAF_FINAL_202607_VONARE_VIVO_ITX_20260806161630.csv 
-2026-08-17 16:41:38.477 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   202607-C-DETRAF-LC-SAMM-TBRASMP.csv
-2026-08-17 16:41:38.488 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   DETRAF-TMCO-0123-2026-GGNET-VIVO SMP - RESUMO EOT_044_045_202607.csv 
-2026-08-17 16:41:38.489 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   DETRAF-TMCO-0116-2026-PREDLINK-VIVO SMP - RESUMO_EOT 20-202607.csv      
-2026-08-17 16:41:38.502 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   202607-C-DETRAF-LC-ADYLNET-TBRASMP.csv 
-2026-08-17 16:41:38.516 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx 
-2026-08-17 16:41:38.537 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   Agil_Vivo_SMP_202607.csv 
-2026-08-17 16:41:38.539 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   ATLANET - 07.2026 - VIVO.xlsx
-2026-08-17 16:41:38.540 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx
-2026-08-17 16:41:38.547 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx 
-2026-08-17 16:41:38.570 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   20260806103500_655_030_detraf_203.csv 
-2026-08-17 16:41:38.571 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   SISTEL - 07.2026 - VIVO.xlsx
-2026-08-17 16:41:38.576 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   Opcao_Telefonica_Brasil_S_A__202607.csv
-2026-08-17 16:41:38.581 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   Detraf_GLT912XVivo020_202607.xlsx 
-2026-08-17 16:41:38.594 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   Detraf Nova x Vivo SMP 202607.csv 
-2026-08-17 16:41:38.598 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação]   layout-telefonica-brasil-smp-c-vc1-202607.xlsx
-2026-08-17 16:41:38.600 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Pasta: C:\RPA\rpa_vivo_mvp2\arquivos\Operadoras 
-2026-08-17 16:41:38.611 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] ──────────────────────────────────────────────────────────── 
-2026-08-17 16:41:38.623 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] PRÓXIMA ETAPA: batimento Detraf × expectativa, que LÊ o que a validação acabou de registrar
-2026-08-17 16:41:38.630 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Etapa 3/3 - batimento Detraf x expectativa 
-2026-08-17 16:41:38.675 | INFO    |src.controllers.batimento_detraf_controller:batimento_detraf:10 - [STEP] Iniciando: BatimentoDetrafService.executar 
-2026-08-17 16:41:38.680 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando processo de batimento dos arquivos Detraf... 
-2026-08-17 16:41:38.683 | INFO    |src.services.batimento_detraf:executar:348 - Preparando os detrafs para validação...
-2026-08-17 16:41:38.684 | INFO    |src.services.batimento_detraf:executar:348 - Iniciando busca de arquivos para o período 202607 na saída da validação: 'C:\RPA\rpa_vivo_mvp2\arquivos\_SAIDA'
-2026-08-17 16:41:38.689 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [ALGAR] 
-2026-08-17 16:41:38.691 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Adylnet Internet Provider]
-2026-08-17 16:41:38.693 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Agil Telecom]
-2026-08-17 16:41:38.695 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Atlanet Telecomunicacoes]
-2026-08-17 16:41:38.707 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [BTT Telecomunicacoes S.A] 
-2026-08-17 16:41:38.745 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Desktop Sigmanet] 
-2026-08-17 16:41:38.747 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [GGNET Telecom]
-2026-08-17 16:41:38.749 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Golden Line Telecom]
-2026-08-17 16:41:38.750 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Invista Net]
-2026-08-17 16:41:38.753 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Itelco Telecom] 
-2026-08-17 16:41:38.758 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [LH Telecomunicacoes LTDA]
-2026-08-17 16:41:38.766 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Megalink Servicos] 
-2026-08-17 16:41:38.776 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Megatelecom Telecomunicacoes S.A] 
-2026-08-17 16:41:38.782 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Nova Tecnologia e Telecomunicacoes]
-2026-08-17 16:41:38.784 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Opcao Telecom] 
-2026-08-17 16:41:38.786 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Predialnet]
-2026-08-17 16:41:38.798 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Sistel Fibra] 
-2026-08-17 16:41:38.811 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [T1 Telecom] 
-2026-08-17 16:41:38.819 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Tri Telecom]
-2026-08-17 16:41:38.825 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [UFINET BRASIL] 
-2026-08-17 16:41:38.841 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Unifique] 
-2026-08-17 16:41:38.850 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Vonare] 
-2026-08-17 16:41:38.855 | INFO    |src.services.batimento_detraf:executar:348 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 22. Total geral 
-de arquivos encontrados: 13
-2026-08-17 16:41:38.874 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [ALGAR]: 1 arquivo(s) encontrado(s) 
-2026-08-17 16:41:38.887 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Adylnet Internet Provider]: 1 arquivo(s) encontrado(s) 
-2026-08-17 16:41:38.889 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Agil Telecom]: 1 arquivo(s) encontrado(s)
-2026-08-17 16:41:38.896 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Atlanet Telecomunicacoes]: 0 arquivo(s) encontrado(s)
-2026-08-17 16:41:38.898 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [BTT Telecomunicacoes S.A]: 0 arquivo(s) encontrado(s) 
-2026-08-17 16:41:38.900 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Desktop Sigmanet]: 1 arquivo(s) encontrado(s)
-2026-08-17 16:41:38.902 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [GGNET Telecom]: 1 arquivo(s) encontrado(s)
-2026-08-17 16:41:38.903 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Golden Line Telecom]: 0 arquivo(s) encontrado(s)
-2026-08-17 16:41:38.903 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Invista Net]: 1 arquivo(s) encontrado(s)
-2026-08-17 16:41:38.906 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Itelco Telecom]: 0 arquivo(s) encontrado(s)
-2026-08-17 16:41:38.910 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [LH Telecomunicacoes LTDA]: 1 arquivo(s) encontrado(s) 
-2026-08-17 16:41:38.919 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Megalink Servicos]: 0 arquivo(s) encontrado(s) 
-2026-08-17 16:41:38.944 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Megatelecom Telecomunicacoes S.A]: 1 arquivo(s) encontrado(s) 
-2026-08-17 16:41:38.947 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Nova Tecnologia e Telecomunicacoes]: 1 arquivo(s) encontrado(s)
-2026-08-17 16:41:38.950 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Opcao Telecom]: 0 arquivo(s) encontrado(s)
-2026-08-17 16:41:38.951 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Predialnet]: 0 arquivo(s) encontrado(s) 
-2026-08-17 16:41:38.957 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Sistel Fibra]: 0 arquivo(s) encontrado(s)
-2026-08-17 16:41:38.965 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [T1 Telecom]: 1 arquivo(s) encontrado(s) 
-2026-08-17 16:41:38.996 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Tri Telecom]: 1 arquivo(s) encontrado(s) 
-2026-08-17 16:41:38.997 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [UFINET BRASIL]: 1 arquivo(s) encontrado(s)
-2026-08-17 16:41:38.999 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Unifique]: 1 arquivo(s) encontrado(s)
-2026-08-17 16:41:39.001 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Vonare]: 0 arquivo(s) encontrado(s)
-2026-08-17 16:41:39.038 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:135 - Filtro de Histórico concluído para o período 202607. 
-2026-08-17 16:41:39.052 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:135 - Arquivos originais recebidos: 13 
-2026-08-17 16:41:39.054 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:135 - Arquivos já processados anteriormente (encontrados no JSON): 0
-2026-08-17 16:41:39.055 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:135 - Novos arquivos retornados para execução: 13
-2026-08-17 16:41:39.056 | INFO    |src.services.batimento_detraf:executar:349 - Preparando os arquivos de expectativa para validação...
-2026-08-17 16:41:39.063 | INFO    |src.services.batimento_detraf:executar:349 - Pasta [Vivo] processada -> Válidos: 2 | Inválidos/Ignorados: 0 
-2026-08-17 16:41:39.081 | INFO    |src.services.batimento_detraf:executar:349 - Pasta [TLF] processada -> Válidos: 2 | Inválidos/Ignorados: 0 
-2026-08-17 16:41:39.090 | ERROR   |src.services.batimento_detraf:_preparar_arquivos_expectativa:329 - [Q21] Sem expectativa Vivo em [C:\RPA\rpa_vivo_mvp2\arquivos\Expectativa\MVNO]: não tem nenhum arquivo aprovado pela validação. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
-2026-08-17 16:41:39.100 | ERROR   |src.services.batimento_detraf:_preparar_arquivos_expectativa:329 - [Q21] Sem expectativa Vivo em [C:\RPA\rpa_vivo_mvp2\arquivos\Expectativa\Detraf TRP]: não tem nenhum arquivo aprovado pela validação. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
-2026-08-17 16:41:39.111 | INFO    |src.services.batimento_detraf:executar:349 - Mapeamento de expectativa concluído. Total geral de arquivos válidos: 4 
-2026-08-17 16:41:39.145 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Filtro de Histórico concluído para o período 202607. 
-2026-08-17 16:41:39.150 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Arquivos originais recebidos: 4 
-2026-08-17 16:41:39.155 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Arquivos já processados anteriormente (encontrados no JSON): 0
-2026-08-17 16:41:39.156 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Novos arquivos retornados para execução: 4
-2026-08-17 16:41:39.157 | INFO    |src.services.batimento_detraf:executar:363 - Iniciando mapeamento de operadoras para 4 arquivo(s).
-2026-08-17 16:41:39.178 | INFO    |src.services.batimento_detraf:_mapear_arquivos_por_operadora:196 - EOT não encontrado [ALGAR] 
-2026-08-17 16:41:39.180 | ERROR   |src.services.batimento_detraf:executar:363 - Nenhum EOT válido encontrado para o arquivo: DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D_EXP.csv
-2026-08-17 16:41:39.201 | INFO    |src.services.batimento_detraf:_mapear_arquivos_por_operadora:196 - EOT não encontrado [ALGAR] 
-2026-08-17 16:41:39.204 | ERROR   |src.services.batimento_detraf:executar:363 - Nenhum EOT válido encontrado para o arquivo: DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D_EXP.csv
-2026-08-17 16:41:39.215 | INFO    |src.services.batimento_detraf:_mapear_arquivos_por_operadora:196 - EOT não encontrado [ALGAR] 
-2026-08-17 16:41:39.232 | ERROR   |src.services.batimento_detraf:executar:363 - Nenhum EOT válido encontrado para o arquivo: DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D_EXP.csv
-2026-08-17 16:41:39.242 | INFO    |src.services.batimento_detraf:_mapear_arquivos_por_operadora:196 - EOT não encontrado [ALGAR] 
-2026-08-17 16:41:39.261 | ERROR   |src.services.batimento_detraf:executar:363 - Nenhum EOT válido encontrado para o arquivo: DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D_EXP.csv
-2026-08-17 16:41:39.293 | INFO    |src.services.batimento_detraf:executar:367 - Iniciando a apuração da contestação. 
-2026-08-17 16:41:39.380 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=UFINET BRASIL | Arquivo=Declaração de Tráfego UFINET 
-x VIVO LDN 07-2026_EXP.xlsx | Linhas originais=5 | Linhas após filtro=4
-2026-08-17 16:41:39.382 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=UFINET BRASIL | Arquivos válidos=1 | Linhas consolidadas=4
-2026-08-17 16:41:39.383 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=UFINET BRASIL | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 16:41:39.390 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_detraf_mapeamento_descritores] 
-2026-08-17 16:41:39.392 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_detraf_mapeamento_descritores] carregada | Linhas: 25 | Colunas: 8
-2026-08-17 16:41:39.479 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
-2026-08-17 16:41:39.525 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 16:41:39.528 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'UFINET BRASIL' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
-2026-08-17 16:41:39.529 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=VONARE | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 16:41:39.531 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=VONARE | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 16:41:39.539 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'VONARE'.2026-08-17 16:41:39.559 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=SISTEL FIBRA | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 16:41:39.569 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=SISTEL FIBRA | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 16:41:39.575 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'SISTEL FIBRA'.
-2026-08-17 16:41:39.650 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=UNIFIQUE | Arquivo=202607 Detraf C SMS SMP Unifique X SMP Telefonica Brasil_EXP.xlsx | Linhas originais=73 | Linhas após filtro=71
-2026-08-17 16:41:39.652 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=UNIFIQUE | Arquivos válidos=1 | Linhas 
-consolidadas=71
-2026-08-17 16:41:39.654 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=UNIFIQUE | Arquivos válidos=0 | Linhas 
-consolidadas=0
-2026-08-17 16:41:39.848 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 26 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
-2026-08-17 16:41:39.877 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 26 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-17 16:41:39.885 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'UNIFIQUE' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 26
-2026-08-17 16:41:39.904 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=AGIL TELECOM | Arquivo=Agil_Vivo_202607_EXP.csv | Linhas originais=10 | Linhas após filtro=10
-2026-08-17 16:41:39.925 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=AGIL TELECOM | Arquivos válidos=1 | Linhas consolidadas=10
-2026-08-17 16:41:39.927 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=AGIL TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 16:41:40.023 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 8 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
-2026-08-17 16:41:40.104 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 8 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 16:41:40.106 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'AGIL TELECOM' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 8
-2026-08-17 16:41:40.116 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=ADYLNET INTERNET PROVIDER | Arquivo=202607-C-DETRAF-LD-ADYLNET-TBRASTFC_EXP.csv | Linhas originais=23 | Linhas após filtro=22
-2026-08-17 16:41:40.129 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=ADYLNET INTERNET PROVIDER | Arquivos válidos=1 | Linhas consolidadas=22
-2026-08-17 16:41:40.130 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=ADYLNET INTERNET PROVIDER | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 16:41:40.268 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 10 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
-2026-08-17 16:41:40.345 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 10 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-17 16:41:40.352 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'ADYLNET INTERNET PROVIDER' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 10
-2026-08-17 16:41:40.354 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=PREDIALNET | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 16:41:40.357 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=PREDIALNET | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 16:41:40.361 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'PREDIALNET'.
-2026-08-17 16:41:40.424 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=OPCAO TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 16:41:40.427 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=OPCAO TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 16:41:40.451 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'OPCAO TELECOM'.
-2026-08-17 16:41:40.531 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=LH TELECOMUNICACOES LTDA | Arquivo=expectativa-telefonica-brasil-stfc-c-ldn-202607_EXP.xlsx | Linhas originais=4 | Linhas após filtro=3
-2026-08-17 16:41:40.535 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=LH TELECOMUNICACOES LTDA | Arquivos válidos=1 | Linhas consolidadas=3
-2026-08-17 16:41:40.537 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=LH TELECOMUNICACOES LTDA | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 16:41:40.628 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
-2026-08-17 16:41:40.662 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 16:41:40.671 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'LH TELECOMUNICACOES LTDA' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
-2026-08-17 16:41:40.684 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=MEGATELECOM TELECOMUNICACOES S.A | Arquivo=202607-C-DETRAF-LD-SAMM-TBRASMP_EXP.csv | Linhas originais=6 | Linhas após filtro=5
-2026-08-17 16:41:40.694 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=MEGATELECOM TELECOMUNICACOES S.A | Arquivos válidos=1 | Linhas consolidadas=5
-2026-08-17 16:41:40.705 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=MEGATELECOM TELECOMUNICACOES S.A | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 16:41:40.791 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
-2026-08-17 16:41:41.089 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 16:41:41.097 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'MEGATELECOM TELECOMUNICACOES S.A' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
-2026-08-17 16:41:41.134 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=ALGAR | Arquivo=RELAM_SMS_ALGAR_X_VIVO_SMP_R_202607_V00_EXP.csv | Linhas originais=375 | Linhas após filtro=307
-2026-08-17 16:41:41.136 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=ALGAR | Arquivos válidos=1 | Linhas consolidadas=307
-2026-08-17 16:41:41.159 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=ALGAR | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 16:41:41.386 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 53 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
-2026-08-17 16:41:41.421 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 53 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-17 16:41:41.424 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'ALGAR' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 53
-2026-08-17 16:41:41.426 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=GOLDEN LINE TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 16:41:41.430 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=GOLDEN LINE TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 16:41:41.435 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'GOLDEN LINE TELECOM'.
-2026-08-17 16:41:41.490 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=INVISTA NET | Arquivo=expectativa-telefonica-brasil-stfc-c-ldn-202607_EXP.xlsx | Linhas originais=6 | Linhas após filtro=5
-2026-08-17 16:41:41.509 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=INVISTA NET | Arquivos válidos=1 | Linhas consolidadas=5
-2026-08-17 16:41:41.511 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=INVISTA NET | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 16:41:41.605 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
-2026-08-17 16:41:41.635 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 16:41:41.640 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'INVISTA NET' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
-2026-08-17 16:41:41.656 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=NOVA TECNOLOGIA E TELECOMUNICACOES | Arquivo=Detraf Nova x TLF_011 202607_EXP.csv | Linhas originais=4 | Linhas após filtro=4
-2026-08-17 16:41:41.666 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=NOVA TECNOLOGIA E TELECOMUNICACOES | Arquivos válidos=1 | Linhas consolidadas=4
-2026-08-17 16:41:41.670 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=NOVA TECNOLOGIA E TELECOMUNICACOES | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 16:41:41.761 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
-2026-08-17 16:41:41.802 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 16:41:41.805 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'NOVA TECNOLOGIA E TELECOMUNICACOES' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
-2026-08-17 16:41:41.815 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=TRI TELECOM | Arquivo=202607-C-DETRAF-LD-TRIADE-VIVOMOVEL_EXP.csv | Linhas originais=4 | Linhas após filtro=3
-2026-08-17 16:41:41.818 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=TRI TELECOM | Arquivos válidos=1 | Linhas consolidadas=3
-2026-08-17 16:41:41.820 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=TRI TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 16:41:41.899 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
-2026-08-17 16:41:41.961 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 16:41:41.964 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'TRI TELECOM' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
-2026-08-17 16:41:41.966 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=BTT TELECOMUNICACOES S.A | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 16:41:41.967 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=BTT TELECOMUNICACOES S.A | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 16:41:41.972 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'BTT TELECOMUNICACOES S.A'.
-2026-08-17 16:41:41.974 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=ITELCO TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 16:41:41.975 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=ITELCO TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 16:41:41.980 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'ITELCO TELECOM'.
-2026-08-17 16:41:41.991 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=MEGALINK SERVICOS | Arquivos válidos=0 
-| Linhas consolidadas=0
-2026-08-17 16:41:41.994 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=MEGALINK SERVICOS | Arquivos válidos=0 
-| Linhas consolidadas=0
-2026-08-17 16:41:42.021 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'MEGALINK SERVICOS'.
-2026-08-17 16:41:42.126 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=T1 TELECOM | Arquivo=expectativa-telefonica-brasil-stfc-c-ldn-202607_EXP.xlsx | Linhas originais=4 | Linhas após filtro=3
-2026-08-17 16:41:42.128 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=T1 TELECOM | Arquivos válidos=1 | Linhas consolidadas=3
-2026-08-17 16:41:42.129 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=T1 TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 16:41:42.205 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
-2026-08-17 16:41:42.245 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 16:41:42.253 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'T1 TELECOM' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
-2026-08-17 16:41:42.263 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=GGNET TELECOM | Arquivo=DETRAF-TMCO-0122-2026-GGNET-VIVO STFC - RESUMO_EOT_200_948_202607_EXP.csv | Linhas originais=18 | Linhas após filtro=17
-2026-08-17 16:41:42.275 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=GGNET TELECOM | Arquivos válidos=1 | Linhas consolidadas=17
-2026-08-17 16:41:42.281 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=GGNET TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 16:41:42.397 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 6 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
-2026-08-17 16:41:42.435 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 6 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 16:41:42.438 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'GGNET TELECOM' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 6
-2026-08-17 16:41:42.488 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=DESKTOP SIGMANET | Arquivo=layout-telefonica-brasil-stfc-c-ldn-202607_EXP.xlsx | Linhas originais=38 | Linhas após filtro=38
-2026-08-17 16:41:42.489 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=DESKTOP SIGMANET | Arquivos válidos=1 | Linhas consolidadas=38
-2026-08-17 16:41:42.490 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=DESKTOP SIGMANET | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 16:41:42.559 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
-2026-08-17 16:41:42.601 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 16:41:42.610 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'DESKTOP SIGMANET' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
-2026-08-17 16:41:42.613 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=ATLANET TELECOMUNICACOES | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 16:41:42.614 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=ATLANET TELECOMUNICACOES | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 16:41:42.618 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'ATLANET 
-TELECOMUNICACOES'.
-2026-08-17 16:41:42.625 | INFO    |src.controllers.batimento_detraf_controller:batimento_detraf:10 - [STEP] Finalizando: BatimentoDetrafService.executar | Tempo gasto: 3.95s2026-08-17 16:41:42.646 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] Operadoras apuradas:      23 
-2026-08-17 16:41:42.669 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] não um arquivo — a Base de Contestação virou tabela em 2026-08-04.       
-2026-08-17 16:41:42.690 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] contestar e se haverá retenção. Só então o RPA 3 tem o que fazer.        
-2026-08-17 16:41:42.716 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] Operadoras: ADYLNET INTERNET PROVIDER, AGIL TELECOM, ALGAR, ATLANET TELECOMUNICACOES, BTT TELECOMUNICACOES S.A, DESKTOP SIGMANET, GGNET TELECOM, GOLDEN LINE TELECOM, INVISTA NET, ITELCO TELECOM, LH TELECOMUNICACOES LTDA, MEGALINK SERVICOS, MEGATELECOM TELECOMUNICACOES S.A, NOVA TECNOLOGIA E TELECOMUNICACOES, OPCAO TELECOM, OPERADORA_NAO_IDENTIFICADA, PREDIALNET, SISTEL FIBRA, T1 TELECOM, TRI TELECOM, UFINET BRASIL, 
-UNIFIQUE, VONARE
-2026-08-17 16:41:42.718 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] ────────────────────────────────────────────────────────────
-2026-08-17 16:41:42.722 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] Esta é a última etapa da execução.
-2026-08-17 16:41:42.733 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Concluído. Aguardando a decisão do analista no WebFat para o RPA 3 prosseguir.
-2026-08-17 16:41:42.753 | INFO    |__main__:main:97 - [STEP] Finalizando: run | Tempo gasto: 18.34s
-2026-08-17 16:41:42.769 | INFO    |__main__:main:118 - [Diagnóstico] Etapas desta execução em [C:\RPA\rpa_vivo_mvp2\logs\BRTAZBGY0015CO\rpa2_validacao_apuracao\diagnosticos\2026-08-17_16-41-21.txt].
-2026-08-17 16:41:42.814 | INFO    |__main__:<module>:126 - [RPA 2] Diagnóstico das etapas em [C:\RPA\rpa_vivo_mvp2\logs\BRTAZBGY0015CO\rpa2_validacao_apuracao\diagnosticos\2026-08-17_16-41-21.txt]
-PS C:\RPA\rpa_vivo_mvp2>
-PS C:\RPA\rpa_vivo_mvp2>  c:; cd 'c:\RPA\rpa_vivo_mvp2'; & 'c:\RPA\rpa_vivo_mvp2\.venv\Scripts\python.exe' 'c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\launcher' '54675' '--' 'C:\RPA\rpa_vivo_mvp2\rpa2_validacao_apuracao\main.py' 
-2026-08-17 17:13:49.367 | INFO    |__main__:<module>:126 - [RPA 2] robô: rpa2_validacao_apuracao 
-2026-08-17 17:13:49.369 | INFO    |__main__:<module>:126 - [RPA 2] modo: DEV  (de ENV) 
-2026-08-17 17:13:49.371 | INFO    |__main__:<module>:126 - [RPA 2] log: nível INFO (de LOG_LEVEL), diagnose ligado
-2026-08-17 17:13:49.373 | INFO    |__main__:<module>:126 - [RPA 2] competência: 202607  (mês anterior ao corrente)
-2026-08-17 17:13:49.375 | INFO    |__main__:<module>:126 - [RPA 2] banco: SQLite [C:\RPA\rpa_vivo_mvp2\banco_de_dados\TABELAS_DETRAF_espelho.db] (de CAMINHO_SQLITE)
-2026-08-17 17:13:49.379 | INFO    |__main__:<module>:126 - [RPA 2] AGI: ambiente [producao] host [10.238.6.120] (de AGI_AMBIENTE) | executável [C:\RPA\rpa_vivo_mvp2\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
-2026-08-17 17:13:49.387 | INFO    |__main__:<module>:126 - [RPA 2] EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: LIGADO | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado | download SFTP: LIGADO
-2026-08-17 17:13:49.395 | INFO    |__main__:<module>:126 - [RPA 2] parâmetros: nenhum — execução completa, como na agenda 
-2026-08-17 17:13:53.177 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev] 
-2026-08-17 17:13:53.178 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\RPA\rpa_vivo_mvp2\banco_de_dados\TABELAS_DETRAF_espelho.db] 
-2026-08-17 17:13:53.317 | INFO    |__main__:main:97 - [STEP] Iniciando: run 
-2026-08-17 17:13:53.317 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Etapa 1/3 - captação da expectativa Vivo 
-2026-08-17 17:13:53.318 | INFO    |src.controllers.captacao_expectativa_controller:captar_expectativa:15 - [Expectativa] Procurando os arquivos _D de 202607 em 5 pasta(s) de origem.
-2026-08-17 17:13:53.890 | ERROR   |src.controllers.captacao_expectativa_controller:captar_expectativa:15 - [Expectativa] [SFTP] Faltam credenciais no ambiente: CLICKHUB_SFTP_HOST, CLICKHUB_SFTP_USER, CLICKHUB_SFTP_PASSWORD.
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\RPA\rpa_vivo_mvp2> (Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& c:\RPA\rpa_vivo_mvp2\.venv\Scripts\Activate.ps1)
+(.venv) PS C:\RPA\rpa_vivo_mvp2>  & 'c:\RPA\rpa_vivo_mvp2\.venv\Scripts\python.exe' 'c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\launcher' '57113' '--' 'C:\RPA\rpa_vivo_mvp2\.env'
+Traceback (most recent call last): 
+  File "C:\Users\atacadoadmin\AppData\Local\Programs\Python\Python314\Lib\runpy.py", line 198, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+                     "__main__", mod_spec)
+  File "C:\Users\atacadoadmin\AppData\Local\Programs\Python\Python314\Lib\runpy.py", line 88, in _run_code
+    exec(code, run_globals)
+    ~~~~^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\launcher/../..\debugpy\__main__.py", line 71, in <module>
+    cli.main()
+    ~~~~~~~~^^
+  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\launcher/../..\debugpy/..\debugpy\server\cli.py", line 542, in main
+    run()
+    ~~~^^
+_file
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 309, in run_path
+    code, fname = _get_code_from_file(run_name, path_name)
+                  ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 283, in _get_code_from_file
+    code = compile(f.read(), fname, "exec")
+  File "C:\RPA\rpa_vivo_mvp2\.env", line 63
+    SENHA_BD=1oFo8fSO7fAPZhyx
+             ^
+SyntaxError: invalid decimal literal
+(.venv) PS C:\RPA\rpa_vivo_mvp2> ^C
+(.venv) PS C:\RPA\rpa_vivo_mvp2>
+(.venv) PS C:\RPA\rpa_vivo_mvp2>  c:; cd 'c:\RPA\rpa_vivo_mvp2'; & 'c:\RPA\rpa_vivo_mvp2\.venv\Scripts\python.exe' 'c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\launcher' '57191' '--' 'C:\RPA\rpa_vivo_mvp2\rpa2_validacao_apuracao\main.py' 
+2026-08-17 17:42:25.787 | INFO    |__main__:<module>:126 - [RPA 2] robô: rpa2_validacao_apuracao 
+2026-08-17 17:42:25.789 | INFO    |__main__:<module>:126 - [RPA 2] modo: DEV  (de ENV) 
+2026-08-17 17:42:25.791 | INFO    |__main__:<module>:126 - [RPA 2] log: nível INFO (de LOG_LEVEL), diagnose ligado
+2026-08-17 17:42:25.792 | INFO    |__main__:<module>:126 - [RPA 2] competência: 202607  (mês anterior ao corrente)
+2026-08-17 17:42:25.793 | INFO    |__main__:<module>:126 - [RPA 2] banco: SQLite [C:\RPA\rpa_vivo_mvp2\banco_de_dados\TABELAS_DETRAF_espelho.db] (de CAMINHO_SQLITE)
+2026-08-17 17:42:25.794 | INFO    |__main__:<module>:126 - [RPA 2] AGI: ambiente [producao] host [10.238.6.120] (de AGI_AMBIENTE) | executável [C:\RPA\rpa_vivo_mvp2\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
+2026-08-17 17:42:25.811 | INFO    |__main__:<module>:126 - [RPA 2] EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: LIGADO | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado | download SFTP: LIGADO
+2026-08-17 17:42:25.826 | INFO    |__main__:<module>:126 - [RPA 2] parâmetros: nenhum — execução completa, como na agenda 
+2026-08-17 17:42:28.430 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev] 
+2026-08-17 17:42:28.433 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\RPA\rpa_vivo_mvp2\banco_de_dados\TABELAS_DETRAF_espelho.db] 
+2026-08-17 17:42:28.545 | INFO    |__main__:main:97 - [STEP] Iniciando: run 
+2026-08-17 17:42:28.548 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Etapa 1/3 - captação da expectativa Vivo 
+2026-08-17 17:42:28.549 | INFO    |src.controllers.captacao_expectativa_controller:captar_expectativa:15 - [Expectativa] Procurando os arquivos _D de 202607 em 5 pasta(s) de origem.
+2026-08-17 17:42:29.086 | ERROR   |src.controllers.captacao_expectativa_controller:captar_expectativa:15 - [Expectativa] [SFTP] Faltam credenciais no ambiente: CLICKHUB_SFTP_HOST.
   -> Elas são variáveis de ambiente da máquina, não do `.env` do repositório.
   -> Para testar SEM SFTP, o RPA 2 aceita `main.py --etapa expectativa --de-pasta CAMINHO`: ele lê de um diretório local aplicando os mesmos filtros.
-2026-08-17 17:13:53.892 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Origem:                   SFTP 
-2026-08-17 17:13:53.893 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Período procurado:        202607
-2026-08-17 17:13:53.894 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Arquivos baixados:        0
-2026-08-17 17:13:53.895 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Falhas (1):
-2026-08-17 17:13:53.897 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa]   [SFTP] Faltam credenciais no ambiente: CLICKHUB_SFTP_HOST, CLICKHUB_SFTP_USER, CLICKHUB_SFTP_PASSWORD.
-2026-08-17 17:13:53.908 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa]   -> Elas são variáveis de ambiente da máquina, não do `.env` do repositório.
-2026-08-17 17:13:53.916 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa]   -> Para testar SEM SFTP, o RPA 2 aceita `main.py --etapa expectativa --de-pasta CAMINHO`: ele lê de um diretório local aplicando os mesmos filtros.
-2026-08-17 17:13:53.920 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Pasta: C:\RPA\rpa_vivo_mvp2\arquivos\Expectativa
-2026-08-17 17:13:53.921 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] ────────────────────────────────────────────────────────────2026-08-17 17:13:53.923 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] PRÓXIMA ETAPA: validação dos arquivos, que LÊ o que a captação acabou de trazer
-2026-08-17 17:13:53.926 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Etapa 2/3 - validação dos arquivos de Detraf 
-2026-08-17 17:13:53.930 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_anexo5_processado]
-2026-08-17 17:13:53.993 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_anexo5_processado] carregada | Linhas: 2656 | Colunas: 18 
-2026-08-17 17:13:53.998 | INFO    |src.controllers.validacao_detrafs_controller:validar_detrafs:15 - [STEP] Iniciando: ValidacaoDetrafsService.executar 
-2026-08-17 17:13:54.003 | INFO    |comum.utils.decoradores:wrapper:22 - Executando a validação dos detrafs...
-2026-08-17 17:13:54.010 | INFO    |src.services.validacao_detrafs:executar:633 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_detrafs 
-2026-08-17 17:13:54.031 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os detrafs para validação... 
-2026-08-17 17:13:54.072 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando busca de arquivos para o período 202607 no diretório: 'C:\RPA\rpa_vivo_mvp2\arquivos\Operadoras'
-2026-08-17 17:13:54.147 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Adylnet Internet Provider] 
-2026-08-17 17:13:54.159 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Agil Telecom] 
-2026-08-17 17:13:54.178 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [ALGAR] 
-2026-08-17 17:13:54.195 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Atlanet Telecomunicacoes] 
-2026-08-17 17:13:54.207 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [BTT Telecomunicacoes S.A] 
-2026-08-17 17:13:54.211 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Desktop Sigmanet]
-2026-08-17 17:13:54.216 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [GGNET Telecom] 
-2026-08-17 17:13:54.289 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Golden Line Telecom] 
-2026-08-17 17:13:54.354 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Invista Net] 
-2026-08-17 17:13:54.365 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Itelco Telecom] 
-2026-08-17 17:13:54.390 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [LH Telecomunicacoes LTDA] 
-2026-08-17 17:13:54.487 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Megalink Servicos] 
-2026-08-17 17:13:54.502 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Megatelecom Telecomunicacoes S.A] 
-2026-08-17 17:13:54.507 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Nova Tecnologia e Telecomunicacoes]
-2026-08-17 17:13:54.516 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Opcao Telecom] 
-2026-08-17 17:13:54.525 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Predialnet] 
-2026-08-17 17:13:54.544 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Sistel Fibra] 
-2026-08-17 17:13:54.550 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [T1 Telecom] 
-2026-08-17 17:13:54.557 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Tri Telecom]
-2026-08-17 17:13:54.563 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [UFINET BRASIL] 
-2026-08-17 17:13:54.575 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Unifique] 
-2026-08-17 17:13:54.582 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Vonare]
-2026-08-17 17:13:54.588 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 22. Total geral de arquivos encontrados: 32
-2026-08-17 17:13:54.629 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Adylnet Internet Provider]: 2 arquivo(s) encontrado(s) 
-2026-08-17 17:13:54.645 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Agil Telecom]: 2 arquivo(s) encontrado(s) 
-2026-08-17 17:13:54.646 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [ALGAR]: 1 arquivo(s) encontrado(s)
-2026-08-17 17:13:54.647 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Atlanet Telecomunicacoes]: 1 arquivo(s) encontrado(s)
-2026-08-17 17:13:54.650 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [BTT Telecomunicacoes S.A]: 1 arquivo(s) encontrado(s)
-2026-08-17 17:13:54.658 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Desktop Sigmanet]: 2 arquivo(s) encontrado(s) 
-2026-08-17 17:13:54.674 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [GGNET Telecom]: 2 arquivo(s) encontrado(s) 
-2026-08-17 17:13:54.675 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Golden Line Telecom]: 1 arquivo(s) encontrado(s)
-2026-08-17 17:13:54.677 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Invista Net]: 2 arquivo(s) encontrado(s)
-2026-08-17 17:13:54.677 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Itelco Telecom]: 1 arquivo(s) encontrado(s)
-2026-08-17 17:13:54.703 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [LH Telecomunicacoes LTDA]: 2 arquivo(s) encontrado(s) 
-2026-08-17 17:13:54.720 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Megalink Servicos]: 1 arquivo(s) encontrado(s) 
-2026-08-17 17:13:54.732 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Megatelecom Telecomunicacoes S.A]: 2 arquivo(s) encontrado(s) 
-2026-08-17 17:13:54.751 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Nova Tecnologia e Telecomunicacoes]: 2 arquivo(s) encontrado(s) 
-2026-08-17 17:13:54.799 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Opcao Telecom]: 1 arquivo(s) encontrado(s) 
-2026-08-17 17:13:54.826 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Predialnet]: 1 arquivo(s) encontrado(s) 
-2026-08-17 17:13:54.921 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Sistel Fibra]: 1 arquivo(s) encontrado(s) 
-2026-08-17 17:13:54.963 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [T1 Telecom]: 2 arquivo(s) encontrado(s) 
-2026-08-17 17:13:54.982 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Tri Telecom]: 2 arquivo(s) encontrado(s) 
-2026-08-17 17:13:54.986 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [UFINET BRASIL]: 1 arquivo(s) encontrado(s) 
-2026-08-17 17:13:55.237 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Unifique]: 1 arquivo(s) encontrado(s) 
-2026-08-17 17:13:55.239 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Vonare]: 1 arquivo(s) encontrado(s)
-2026-08-17 17:13:55.274 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Filtro de Histórico concluído para o período 202607. 
-2026-08-17 17:13:55.275 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos originais recebidos: 32 
-2026-08-17 17:13:55.288 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos já processados anteriormente (encontrados no JSON): 32
-2026-08-17 17:13:55.289 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Novos arquivos retornados para execução: 0
-2026-08-17 17:13:55.290 | INFO    |src.services.validacao_detrafs:executar:633 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_detrafs | Tempo gasto: 1.28s 
-2026-08-17 17:13:55.291 | INFO    |src.services.validacao_detrafs:executar:634 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_expectativa
-2026-08-17 17:13:55.293 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os arquivos de expectativa para validação...
-2026-08-17 17:13:55.303 | INFO    |comum.utils.decoradores:wrapper:22 - Pasta [Vivo] processada -> Válidos: 2 | Inválidos/Ignorados: 0 
-2026-08-17 17:13:55.318 | INFO    |comum.utils.decoradores:wrapper:22 - Pasta [TLF] processada -> Válidos: 2 | Inválidos/Ignorados: 0 
-2026-08-17 17:13:55.323 | ERROR   |src.services.validacao_detrafs:_preparar_arquivos_expectativa:269 - [Q21] Sem expectativa Vivo em [C:\RPA\rpa_vivo_mvp2\arquivos\Expectativa\MVNO]: não existe. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
-2026-08-17 17:13:55.326 | ERROR   |src.services.validacao_detrafs:_preparar_arquivos_expectativa:269 - [Q21] Sem expectativa Vivo em [C:\RPA\rpa_vivo_mvp2\arquivos\Expectativa\Detraf TRP]: não existe. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
-2026-08-17 17:13:55.338 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento de expectativa concluído. Total geral de arquivos válidos: 4 
-2026-08-17 17:13:55.350 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Filtro de Histórico concluído para o período 202607. 
-2026-08-17 17:13:55.352 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Arquivos originais recebidos: 4
-2026-08-17 17:13:55.355 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Arquivos já processados anteriormente (encontrados no JSON): 4        
-2026-08-17 17:13:55.410 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Novos arquivos retornados para execução: 0 
-2026-08-17 17:13:55.414 | INFO    |src.services.validacao_detrafs:executar:634 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_expectativa | Tempo gasto: 0.12s
-2026-08-17 17:13:55.417 | WARNING |comum.utils.decoradores:wrapper:22 - Nenhum arquivo de detraf encontrado para validação. Verifique os logs anteriores para detalhes. 
-2026-08-17 17:13:55.421 | WARNING |comum.utils.decoradores:wrapper:22 - Nenhum arquivo de expectativa encontrado para validação. Verifique os logs anteriores para detalhes. 
-2026-08-17 17:13:55.447 | INFO    |src.services.validacao_detrafs:executar:699 - Iniciando transformação de lote tipo [DETRAF_SUCESSO] com 0 arquivo(s). 
-2026-08-17 17:13:55.449 | INFO    |src.services.validacao_detrafs:executar:703 - Iniciando transformação de lote tipo [DETRAF_ERRO] com 0 arquivo(s). 
-2026-08-17 17:13:55.462 | INFO    |src.services.validacao_detrafs:executar:707 - Iniciando transformação de lote tipo [EXPECTATIVA_SUCESSO] com 0 arquivo(s).
-2026-08-17 17:13:55.464 | INFO    |src.services.validacao_detrafs:executar:711 - Iniciando transformação de lote tipo [EXPECTATIVA_ERRO] com 0 arquivo(s). 
-2026-08-17 17:13:55.485 | INFO    |src.services.validacao_detrafs:executar:740 - Nenhum artefato a promover — a etapa não produziu arquivo novo. 
-2026-08-17 17:13:55.502 | INFO    |src.services.validacao_detrafs:_salvar_historico_arquivos_processados:514 - Histórico atualizado com sucesso. Lote finalizado com 0 arquivo(s) salvo(s) como 'Válido'.
-2026-08-17 17:13:55.509 | INFO    |src.services.validacao_detrafs:_salvar_historico_arquivos_processados:517 - Histórico atualizado com sucesso. Lote finalizado com 0 arquivo(s) salvo(s) como 'Inválido'.
-2026-08-17 17:13:55.523 | INFO    |src.controllers.validacao_detrafs_controller:validar_detrafs:15 - [STEP] Finalizando: ValidacaoDetrafsService.executar | Tempo gasto: 1.53s
-2026-08-17 17:13:55.532 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Detraf válidos:           0 
-2026-08-17 17:13:55.535 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Detraf inválidos:         0
-2026-08-17 17:13:55.540 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Expectativa válidos:      0 
-2026-08-17 17:13:55.552 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Expectativa inválidos:    0 
-2026-08-17 17:13:55.563 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Pasta: C:\RPA\rpa_vivo_mvp2\arquivos\Operadoras 
-2026-08-17 17:13:55.569 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] ────────────────────────────────────────────────────────────
-2026-08-17 17:13:55.581 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] PRÓXIMA ETAPA: batimento Detraf × expectativa, que LÊ o que a validação acabou de registrar
-2026-08-17 17:13:55.624 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Etapa 3/3 - batimento Detraf x expectativa 
-2026-08-17 17:13:55.690 | INFO    |src.controllers.batimento_detraf_controller:batimento_detraf:10 - [STEP] Iniciando: BatimentoDetrafService.executar 
-2026-08-17 17:13:55.694 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando processo de batimento dos arquivos Detraf... 
-2026-08-17 17:13:55.696 | INFO    |src.services.batimento_detraf:executar:348 - Preparando os detrafs para validação...
-2026-08-17 17:13:55.700 | INFO    |src.services.batimento_detraf:executar:348 - Iniciando busca de arquivos para o período 202607 na saída da validação: 'C:\RPA\rpa_vivo_mvp2\arquivos\_SAIDA'
-2026-08-17 17:13:55.713 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [ALGAR] 
-2026-08-17 17:13:55.723 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Adylnet Internet Provider] 
-2026-08-17 17:13:55.729 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Agil Telecom]
-2026-08-17 17:13:55.733 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Atlanet Telecomunicacoes] 
-2026-08-17 17:13:55.735 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [BTT Telecomunicacoes S.A]
-2026-08-17 17:13:55.746 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Desktop Sigmanet] 
-2026-08-17 17:13:55.754 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [GGNET Telecom]
-2026-08-17 17:13:55.759 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Golden Line Telecom]
-2026-08-17 17:13:55.773 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Invista Net] 
-2026-08-17 17:13:55.779 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Itelco Telecom] 
-2026-08-17 17:13:55.812 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [LH Telecomunicacoes LTDA] 
-2026-08-17 17:13:55.837 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Megalink Servicos] 
-2026-08-17 17:13:55.859 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Megatelecom Telecomunicacoes S.A] 
-2026-08-17 17:13:55.863 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Nova Tecnologia e Telecomunicacoes] 
-2026-08-17 17:13:55.880 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Opcao Telecom] 
-2026-08-17 17:13:55.905 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Predialnet] 
-2026-08-17 17:13:55.909 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Sistel Fibra]
-2026-08-17 17:13:55.915 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [T1 Telecom] 
-2026-08-17 17:13:55.927 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Tri Telecom] 
-2026-08-17 17:13:55.935 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [UFINET BRASIL] 
-2026-08-17 17:13:55.937 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Unifique]
-2026-08-17 17:13:55.939 | INFO    |src.services.batimento_detraf:executar:348 - Varrendo arquivos da operadora: [Vonare]
-2026-08-17 17:13:55.947 | INFO    |src.services.batimento_detraf:executar:348 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 22. Total geral 
+2026-08-17 17:42:29.097 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Origem:                   SFTP 
+2026-08-17 17:42:29.103 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Período procurado:        202607
+2026-08-17 17:42:29.112 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Arquivos baixados:        0 
+2026-08-17 17:42:29.120 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Falhas (1): 
+2026-08-17 17:42:29.141 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa]   [SFTP] Faltam credenciais no ambiente: CLICKHUB_SFTP_HOST.2026-08-17 17:42:29.148 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa]   -> Elas são variáveis de ambiente da máquina, não do `.env` do repositório.
+2026-08-17 17:42:29.223 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa]   -> Para testar SEM SFTP, o RPA 2 aceita `main.py --etapa expectativa --de-pasta CAMINHO`: ele lê de um diretório local aplicando os mesmos filtros.
+2026-08-17 17:42:29.228 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] Pasta: C:\RPA\rpa_vivo_mvp2\arquivos\Expectativa
+2026-08-17 17:42:29.230 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] ────────────────────────────────────────────────────────────2026-08-17 17:42:29.232 | INFO    |src.main.process_handle:run:73 - [RPA 2 — etapa 1/3: captação da expectativa] PRÓXIMA ETAPA: validação dos arquivos, que LÊ o que a captação acabou de trazer
+2026-08-17 17:42:29.235 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Etapa 2/3 - validação dos arquivos de Detraf
+2026-08-17 17:42:29.256 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_anexo5_processado] 
+2026-08-17 17:42:29.300 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_anexo5_processado] carregada | Linhas: 2656 | Colunas: 18 
+2026-08-17 17:42:29.305 | INFO    |src.controllers.validacao_detrafs_controller:validar_detrafs:15 - [STEP] Iniciando: ValidacaoDetrafsService.executar 
+2026-08-17 17:42:29.306 | INFO    |comum.utils.decoradores:wrapper:22 - Executando a validação dos detrafs...
+2026-08-17 17:42:29.330 | INFO    |src.services.validacao_detrafs:executar:633 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_detrafs 
+2026-08-17 17:42:29.334 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os detrafs para validação...
+2026-08-17 17:42:29.339 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando busca de arquivos para o período 202607 no diretório: 'C:\RPA\rpa_vivo_mvp2\arquivos\Operadoras'
+2026-08-17 17:42:29.373 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Adylnet Internet Provider] 
+2026-08-17 17:42:29.398 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Agil Telecom] 
+2026-08-17 17:42:29.412 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [ALGAR] 
+2026-08-17 17:42:29.415 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Atlanet Telecomunicacoes] 
+2026-08-17 17:42:29.417 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [BTT Telecomunicacoes S.A]
+2026-08-17 17:42:29.423 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Desktop Sigmanet] 
+2026-08-17 17:42:29.441 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [GGNET Telecom] 
+2026-08-17 17:42:29.448 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Golden Line Telecom] 
+2026-08-17 17:42:29.449 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Invista Net]
+2026-08-17 17:42:29.472 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Itelco Telecom] 
+2026-08-17 17:42:29.474 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [LH Telecomunicacoes LTDA]
+2026-08-17 17:42:29.477 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Megalink Servicos] 
+2026-08-17 17:42:29.483 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Megatelecom Telecomunicacoes S.A]
+2026-08-17 17:42:29.497 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Nova Tecnologia e Telecomunicacoes] 
+2026-08-17 17:42:29.502 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Opcao Telecom] 
+2026-08-17 17:42:29.508 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Predialnet] 
+2026-08-17 17:42:29.522 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Sistel Fibra] 
+2026-08-17 17:42:29.539 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [T1 Telecom] 
+2026-08-17 17:42:29.558 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Tri Telecom] 
+2026-08-17 17:42:29.564 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [UFINET BRASIL]
+2026-08-17 17:42:29.570 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Unifique] 
+2026-08-17 17:42:29.571 | INFO    |comum.utils.decoradores:wrapper:22 - Varrendo arquivos da operadora: [Vonare]
+2026-08-17 17:42:29.578 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 22. Total geral de arquivos encontrados: 32
+2026-08-17 17:42:29.588 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Adylnet Internet Provider]: 2 arquivo(s) encontrado(s) 
+2026-08-17 17:42:29.593 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Agil Telecom]: 2 arquivo(s) encontrado(s)
+2026-08-17 17:42:29.597 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [ALGAR]: 1 arquivo(s) encontrado(s) 
+2026-08-17 17:42:29.600 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Atlanet Telecomunicacoes]: 1 arquivo(s) encontrado(s)
+2026-08-17 17:42:29.604 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [BTT Telecomunicacoes S.A]: 1 arquivo(s) encontrado(s)
+2026-08-17 17:42:29.608 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Desktop Sigmanet]: 2 arquivo(s) encontrado(s)
+2026-08-17 17:42:29.611 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [GGNET Telecom]: 2 arquivo(s) encontrado(s)
+2026-08-17 17:42:29.615 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Golden Line Telecom]: 1 arquivo(s) encontrado(s)
+2026-08-17 17:42:29.619 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Invista Net]: 2 arquivo(s) encontrado(s) 
+2026-08-17 17:42:29.622 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Itelco Telecom]: 1 arquivo(s) encontrado(s)
+2026-08-17 17:42:29.626 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [LH Telecomunicacoes LTDA]: 2 arquivo(s) encontrado(s)
+2026-08-17 17:42:29.629 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Megalink Servicos]: 1 arquivo(s) encontrado(s)
+2026-08-17 17:42:29.633 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Megatelecom Telecomunicacoes S.A]: 2 arquivo(s) encontrado(s) 
+2026-08-17 17:42:29.637 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Nova Tecnologia e Telecomunicacoes]: 2 arquivo(s) encontrado(s)
+2026-08-17 17:42:29.640 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Opcao Telecom]: 1 arquivo(s) encontrado(s)
+2026-08-17 17:42:29.643 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Predialnet]: 1 arquivo(s) encontrado(s)
+2026-08-17 17:42:29.648 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Sistel Fibra]: 1 arquivo(s) encontrado(s) 
+2026-08-17 17:42:29.651 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [T1 Telecom]: 2 arquivo(s) encontrado(s)
+2026-08-17 17:42:29.654 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Tri Telecom]: 2 arquivo(s) encontrado(s)
+2026-08-17 17:42:29.658 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [UFINET BRASIL]: 1 arquivo(s) encontrado(s)
+2026-08-17 17:42:29.661 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Unifique]: 1 arquivo(s) encontrado(s)
+2026-08-17 17:42:29.665 | INFO    |comum.utils.decoradores:wrapper:22 - -> Operadora [Vonare]: 1 arquivo(s) encontrado(s) 
+2026-08-17 17:42:29.688 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Filtro de Histórico concluído para o período 202607. 
+2026-08-17 17:42:29.825 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos originais recebidos: 32 
+2026-08-17 17:42:29.844 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Arquivos já processados anteriormente (encontrados no JSON): 32 
+2026-08-17 17:42:29.846 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_detrafs:170 - Novos arquivos retornados para execução: 0 
+2026-08-17 17:42:29.848 | INFO    |src.services.validacao_detrafs:executar:633 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_detrafs | Tempo gasto: 0.52s 
+2026-08-17 17:42:29.870 | INFO    |src.services.validacao_detrafs:executar:634 - [STEP] Iniciando: ValidacaoDetrafsService._preparar_arquivos_expectativa 
+2026-08-17 17:42:29.878 | INFO    |comum.utils.decoradores:wrapper:22 - Preparando os arquivos de expectativa para validação...
+2026-08-17 17:42:29.889 | INFO    |comum.utils.decoradores:wrapper:22 - Pasta [Vivo] processada -> Válidos: 2 | Inválidos/Ignorados: 0 
+2026-08-17 17:42:29.916 | INFO    |comum.utils.decoradores:wrapper:22 - Pasta [TLF] processada -> Válidos: 2 | Inválidos/Ignorados: 0 
+2026-08-17 17:42:29.950 | ERROR   |src.services.validacao_detrafs:_preparar_arquivos_expectativa:269 - [Q21] Sem expectativa Vivo em [C:\RPA\rpa_vivo_mvp2\arquivos\Expectativa\MVNO]: não existe. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
+2026-08-17 17:42:29.979 | ERROR   |src.services.validacao_detrafs:_preparar_arquivos_expectativa:269 - [Q21] Sem expectativa Vivo em [C:\RPA\rpa_vivo_mvp2\arquivos\Expectativa\Detraf TRP]: não existe. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
+2026-08-17 17:42:29.998 | INFO    |comum.utils.decoradores:wrapper:22 - Mapeamento de expectativa concluído. Total geral de arquivos válidos: 4 
+2026-08-17 17:42:30.012 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Filtro de Histórico concluído para o período 202607. 
+2026-08-17 17:42:30.022 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Arquivos originais recebidos: 4 
+2026-08-17 17:42:30.044 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Arquivos já processados anteriormente (encontrados no JSON): 4 
+2026-08-17 17:42:30.062 | INFO    |src.services.validacao_detrafs:_preparar_arquivos_expectativa:280 - Novos arquivos retornados para execução: 0 
+2026-08-17 17:42:30.083 | INFO    |src.services.validacao_detrafs:executar:634 - [STEP] Finalizando: ValidacaoDetrafsService._preparar_arquivos_expectativa | Tempo gasto: 0.21s
+2026-08-17 17:42:30.088 | WARNING |comum.utils.decoradores:wrapper:22 - Nenhum arquivo de detraf encontrado para validação. Verifique os logs anteriores para detalhes.      
+2026-08-17 17:42:30.089 | WARNING |comum.utils.decoradores:wrapper:22 - Nenhum arquivo de expectativa encontrado para validação. Verifique os logs anteriores para detalhes. 
+2026-08-17 17:42:30.092 | INFO    |src.services.validacao_detrafs:executar:699 - Iniciando transformação de lote tipo [DETRAF_SUCESSO] com 0 arquivo(s). 
+2026-08-17 17:42:30.102 | INFO    |src.services.validacao_detrafs:executar:703 - Iniciando transformação de lote tipo [DETRAF_ERRO] com 0 arquivo(s). 
+2026-08-17 17:42:30.118 | INFO    |src.services.validacao_detrafs:executar:707 - Iniciando transformação de lote tipo [EXPECTATIVA_SUCESSO] com 0 arquivo(s). 
+2026-08-17 17:42:30.135 | INFO    |src.services.validacao_detrafs:executar:711 - Iniciando transformação de lote tipo [EXPECTATIVA_ERRO] com 0 arquivo(s). 
+2026-08-17 17:42:30.179 | INFO    |src.services.validacao_detrafs:executar:740 - Nenhum artefato a promover — a etapa não produziu arquivo novo. 
+2026-08-17 17:42:30.269 | INFO    |src.services.validacao_detrafs:_salvar_historico_arquivos_processados:514 - Histórico atualizado com sucesso. Lote finalizado com 0 arquivo(s) salvo(s) como 'Válido'.
+2026-08-17 17:42:30.276 | INFO    |src.services.validacao_detrafs:_salvar_historico_arquivos_processados:517 - Histórico atualizado com sucesso. Lote finalizado com 0 arquivo(s) salvo(s) como 'Inválido'.
+2026-08-17 17:42:30.296 | INFO    |src.controllers.validacao_detrafs_controller:validar_detrafs:15 - [STEP] Finalizando: ValidacaoDetrafsService.executar | Tempo gasto: 0.99s
+2026-08-17 17:42:30.299 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Detraf válidos:           0
+2026-08-17 17:42:30.312 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Detraf inválidos:         0 
+2026-08-17 17:42:30.327 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Expectativa válidos:      0 
+2026-08-17 17:42:30.400 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Expectativa inválidos:    0 
+2026-08-17 17:42:30.406 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] Pasta: C:\RPA\rpa_vivo_mvp2\arquivos\Operadoras 
+2026-08-17 17:42:30.408 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] ────────────────────────────────────────────────────────────
+2026-08-17 17:42:30.419 | INFO    |src.main.process_handle:run:99 - [RPA 2 — etapa 2/3: validação] PRÓXIMA ETAPA: batimento Detraf × expectativa, que LÊ o que a validação acabou de registrar
+2026-08-17 17:42:30.434 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Etapa 3/3 - batimento Detraf x expectativa 
+2026-08-17 17:42:30.509 | INFO    |src.controllers.batimento_detraf_controller:batimento_detraf:10 - [STEP] Iniciando: BatimentoDetrafService.executar 
+2026-08-17 17:42:30.512 | INFO    |comum.utils.decoradores:wrapper:22 - Iniciando processo de batimento dos arquivos Detraf... 
+2026-08-17 17:42:30.513 | INFO    |src.services.batimento_detraf:executar:347 - Preparando os detrafs para validação...
+2026-08-17 17:42:30.514 | INFO    |src.services.batimento_detraf:executar:347 - Iniciando busca de arquivos para o período 202607 na saída da validação: 'C:\RPA\rpa_vivo_mvp2\arquivos\_SAIDA'
+2026-08-17 17:42:30.525 | INFO    |src.services.batimento_detraf:executar:347 - Varrendo arquivos da operadora: [ALGAR] 
+2026-08-17 17:42:30.736 | INFO    |src.services.batimento_detraf:executar:347 - Varrendo arquivos da operadora: [Adylnet Internet Provider] 
+2026-08-17 17:42:30.756 | INFO    |src.services.batimento_detraf:executar:347 - Varrendo arquivos da operadora: [Agil Telecom] 
+2026-08-17 17:42:30.793 | INFO    |src.services.batimento_detraf:executar:347 - Varrendo arquivos da operadora: [Atlanet Telecomunicacoes] 
+2026-08-17 17:42:30.823 | INFO    |src.services.batimento_detraf:executar:347 - Varrendo arquivos da operadora: [BTT Telecomunicacoes S.A] 
+2026-08-17 17:42:30.828 | INFO    |src.services.batimento_detraf:executar:347 - Varrendo arquivos da operadora: [Desktop Sigmanet]
+2026-08-17 17:42:30.844 | INFO    |src.services.batimento_detraf:executar:347 - Varrendo arquivos da operadora: [GGNET Telecom] 
+2026-08-17 17:42:30.891 | INFO    |src.services.batimento_detraf:executar:347 - Varrendo arquivos da operadora: [Golden Line Telecom] 
+2026-08-17 17:42:30.898 | INFO    |src.services.batimento_detraf:executar:347 - Varrendo arquivos da operadora: [Invista Net] 
+2026-08-17 17:42:30.920 | INFO    |src.services.batimento_detraf:executar:347 - Varrendo arquivos da operadora: [Itelco Telecom] 
+2026-08-17 17:42:30.922 | INFO    |src.services.batimento_detraf:executar:347 - Varrendo arquivos da operadora: [LH Telecomunicacoes LTDA] 
+2026-08-17 17:42:30.932 | INFO    |src.services.batimento_detraf:executar:347 - Varrendo arquivos da operadora: [Megalink Servicos] 
+2026-08-17 17:42:30.941 | INFO    |src.services.batimento_detraf:executar:347 - Varrendo arquivos da operadora: [Megatelecom Telecomunicacoes S.A] 
+2026-08-17 17:42:30.947 | INFO    |src.services.batimento_detraf:executar:347 - Varrendo arquivos da operadora: [Nova Tecnologia e Telecomunicacoes]
+2026-08-17 17:42:30.951 | INFO    |src.services.batimento_detraf:executar:347 - Varrendo arquivos da operadora: [Opcao Telecom] 
+2026-08-17 17:42:30.966 | INFO    |src.services.batimento_detraf:executar:347 - Varrendo arquivos da operadora: [Predialnet] 
+2026-08-17 17:42:30.976 | INFO    |src.services.batimento_detraf:executar:347 - Varrendo arquivos da operadora: [Sistel Fibra]
+2026-08-17 17:42:30.978 | INFO    |src.services.batimento_detraf:executar:347 - Varrendo arquivos da operadora: [T1 Telecom]
+2026-08-17 17:42:30.980 | INFO    |src.services.batimento_detraf:executar:347 - Varrendo arquivos da operadora: [Tri Telecom]
+2026-08-17 17:42:30.985 | INFO    |src.services.batimento_detraf:executar:347 - Varrendo arquivos da operadora: [UFINET BRASIL] 
+2026-08-17 17:42:30.991 | INFO    |src.services.batimento_detraf:executar:347 - Varrendo arquivos da operadora: [Unifique]
+2026-08-17 17:42:31.008 | INFO    |src.services.batimento_detraf:executar:347 - Varrendo arquivos da operadora: [Vonare] 
+2026-08-17 17:42:31.027 | INFO    |src.services.batimento_detraf:executar:347 - Mapeamento concluído com sucesso. Total de operadoras processadas com dados: 22. Total geral 
 de arquivos encontrados: 13
-2026-08-17 17:13:55.972 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [ALGAR]: 1 arquivo(s) encontrado(s) 
-2026-08-17 17:13:55.982 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Adylnet Internet Provider]: 1 arquivo(s) encontrado(s) 
-2026-08-17 17:13:55.984 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Agil Telecom]: 1 arquivo(s) encontrado(s)
-2026-08-17 17:13:55.999 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Atlanet Telecomunicacoes]: 0 arquivo(s) encontrado(s) 
-2026-08-17 17:13:56.006 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [BTT Telecomunicacoes S.A]: 0 arquivo(s) encontrado(s)
-2026-08-17 17:13:56.008 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Desktop Sigmanet]: 1 arquivo(s) encontrado(s)
-2026-08-17 17:13:56.011 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [GGNET Telecom]: 1 arquivo(s) encontrado(s)
-2026-08-17 17:13:56.063 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Golden Line Telecom]: 0 arquivo(s) encontrado(s) 
-2026-08-17 17:13:56.105 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Invista Net]: 1 arquivo(s) encontrado(s) 
-2026-08-17 17:13:56.128 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Itelco Telecom]: 0 arquivo(s) encontrado(s) 
-2026-08-17 17:13:56.135 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [LH Telecomunicacoes LTDA]: 1 arquivo(s) encontrado(s) 
-2026-08-17 17:13:56.143 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Megalink Servicos]: 0 arquivo(s) encontrado(s) 
-2026-08-17 17:13:56.150 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Megatelecom Telecomunicacoes S.A]: 1 arquivo(s) encontrado(s)
-2026-08-17 17:13:56.157 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Nova Tecnologia e Telecomunicacoes]: 1 arquivo(s) encontrado(s) 
-2026-08-17 17:13:56.172 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Opcao Telecom]: 0 arquivo(s) encontrado(s) 
-2026-08-17 17:13:56.185 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Predialnet]: 0 arquivo(s) encontrado(s) 
-2026-08-17 17:13:56.218 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Sistel Fibra]: 0 arquivo(s) encontrado(s) 
-2026-08-17 17:13:56.242 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [T1 Telecom]: 1 arquivo(s) encontrado(s) 
-2026-08-17 17:13:56.243 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Tri Telecom]: 1 arquivo(s) encontrado(s)
-2026-08-17 17:13:56.260 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [UFINET BRASIL]: 1 arquivo(s) encontrado(s) 
-2026-08-17 17:13:56.264 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Unifique]: 1 arquivo(s) encontrado(s) 
-2026-08-17 17:13:56.269 | INFO    |src.services.batimento_detraf:executar:348 - -> Operadora [Vonare]: 0 arquivo(s) encontrado(s)
-2026-08-17 17:13:56.335 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:135 - Filtro de Histórico concluído para o período 202607. 
-2026-08-17 17:13:56.336 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:135 - Arquivos originais recebidos: 13 
-2026-08-17 17:13:56.336 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:135 - Arquivos já processados anteriormente (encontrados no JSON): 0
-2026-08-17 17:13:56.342 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:135 - Novos arquivos retornados para execução: 13
-2026-08-17 17:13:56.344 | INFO    |src.services.batimento_detraf:executar:349 - Preparando os arquivos de expectativa para validação... 
-2026-08-17 17:13:56.347 | INFO    |src.services.batimento_detraf:executar:349 - Pasta [Vivo] processada -> Válidos: 2 | Inválidos/Ignorados: 0
-2026-08-17 17:13:56.360 | INFO    |src.services.batimento_detraf:executar:349 - Pasta [TLF] processada -> Válidos: 2 | Inválidos/Ignorados: 0 
-2026-08-17 17:13:56.375 | ERROR   |src.services.batimento_detraf:_preparar_arquivos_expectativa:329 - [Q21] Sem expectativa Vivo em [C:\RPA\rpa_vivo_mvp2\arquivos\Expectativa\MVNO]: não tem nenhum arquivo aprovado pela validação. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
-2026-08-17 17:13:56.402 | ERROR   |src.services.batimento_detraf:_preparar_arquivos_expectativa:329 - [Q21] Sem expectativa Vivo em [C:\RPA\rpa_vivo_mvp2\arquivos\Expectativa\Detraf TRP]: não tem nenhum arquivo aprovado pela validação. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
-2026-08-17 17:13:56.489 | INFO    |src.services.batimento_detraf:executar:349 - Mapeamento de expectativa concluído. Total geral de arquivos válidos: 4 
-2026-08-17 17:13:56.497 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Filtro de Histórico concluído para o período 202607. 
-2026-08-17 17:13:56.498 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Arquivos originais recebidos: 4
-2026-08-17 17:13:56.500 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Arquivos já processados anteriormente (encontrados no JSON): 0
-2026-08-17 17:13:56.501 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:343 - Novos arquivos retornados para execução: 4
-2026-08-17 17:13:56.509 | INFO    |src.services.batimento_detraf:executar:363 - Iniciando mapeamento de operadoras para 4 arquivo(s). 
-2026-08-17 17:13:56.554 | INFO    |src.services.batimento_detraf:_mapear_arquivos_por_operadora:196 - EOT não encontrado [ALGAR] 
-2026-08-17 17:13:56.570 | ERROR   |src.services.batimento_detraf:executar:363 - Nenhum EOT válido encontrado para o arquivo: DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D_EXP.csv
-2026-08-17 17:13:56.580 | INFO    |src.services.batimento_detraf:_mapear_arquivos_por_operadora:196 - EOT não encontrado [ALGAR] 
-2026-08-17 17:13:56.586 | ERROR   |src.services.batimento_detraf:executar:363 - Nenhum EOT válido encontrado para o arquivo: DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D_EXP.csv
-2026-08-17 17:13:56.620 | INFO    |src.services.batimento_detraf:_mapear_arquivos_por_operadora:196 - EOT não encontrado [ALGAR] 
-2026-08-17 17:13:56.674 | ERROR   |src.services.batimento_detraf:executar:363 - Nenhum EOT válido encontrado para o arquivo: DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D_EXP.csv
-2026-08-17 17:13:56.702 | INFO    |src.services.batimento_detraf:_mapear_arquivos_por_operadora:196 - EOT não encontrado [ALGAR] 
-2026-08-17 17:13:56.734 | ERROR   |src.services.batimento_detraf:executar:363 - Nenhum EOT válido encontrado para o arquivo: DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D_EXP.csv
-2026-08-17 17:13:56.775 | INFO    |src.services.batimento_detraf:executar:367 - Iniciando a apuração da contestação. 
-2026-08-17 17:13:56.820 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=MEGALINK SERVICOS | Arquivos válidos=0 
-| Linhas consolidadas=0
-2026-08-17 17:13:56.843 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=MEGALINK SERVICOS | Arquivos válidos=0 
-| Linhas consolidadas=0
-2026-08-17 17:13:56.885 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'MEGALINK SERVICOS'.
-2026-08-17 17:13:56.960 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=UFINET BRASIL | Arquivo=Declaração de Tráfego UFINET 
-x VIVO LDN 07-2026_EXP.xlsx | Linhas originais=5 | Linhas após filtro=4
-2026-08-17 17:13:56.965 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=UFINET BRASIL | Arquivos válidos=1 | Linhas consolidadas=4
-2026-08-17 17:13:56.974 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=UFINET BRASIL | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 17:13:56.992 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_detraf_mapeamento_descritores] 
-2026-08-17 17:13:57.000 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_detraf_mapeamento_descritores] carregada | Linhas: 25 | Colunas: 8 
-2026-08-17 17:13:57.101 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
-2026-08-17 17:13:57.145 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 17:13:57.153 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'UFINET BRASIL' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
-2026-08-17 17:13:57.189 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=DESKTOP SIGMANET | Arquivo=layout-telefonica-brasil-stfc-c-ldn-202607_EXP.xlsx | Linhas originais=38 | Linhas após filtro=38
-2026-08-17 17:13:57.193 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=DESKTOP SIGMANET | Arquivos válidos=1 | Linhas consolidadas=38
-2026-08-17 17:13:57.195 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=DESKTOP SIGMANET | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 17:13:57.267 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
-2026-08-17 17:13:57.342 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 17:13:57.352 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'DESKTOP SIGMANET' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
-2026-08-17 17:13:57.356 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=ATLANET TELECOMUNICACOES | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 17:13:57.375 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=ATLANET TELECOMUNICACOES | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 17:13:57.442 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'ATLANET 
+2026-08-17 17:42:31.037 | INFO    |src.services.batimento_detraf:executar:347 - -> Operadora [ALGAR]: 1 arquivo(s) encontrado(s)
+2026-08-17 17:42:31.038 | INFO    |src.services.batimento_detraf:executar:347 - -> Operadora [Adylnet Internet Provider]: 1 arquivo(s) encontrado(s)
+2026-08-17 17:42:31.039 | INFO    |src.services.batimento_detraf:executar:347 - -> Operadora [Agil Telecom]: 1 arquivo(s) encontrado(s)
+2026-08-17 17:42:31.042 | INFO    |src.services.batimento_detraf:executar:347 - -> Operadora [Atlanet Telecomunicacoes]: 0 arquivo(s) encontrado(s) 
+2026-08-17 17:42:31.043 | INFO    |src.services.batimento_detraf:executar:347 - -> Operadora [BTT Telecomunicacoes S.A]: 0 arquivo(s) encontrado(s)
+2026-08-17 17:42:31.044 | INFO    |src.services.batimento_detraf:executar:347 - -> Operadora [Desktop Sigmanet]: 1 arquivo(s) encontrado(s)
+2026-08-17 17:42:31.045 | INFO    |src.services.batimento_detraf:executar:347 - -> Operadora [GGNET Telecom]: 1 arquivo(s) encontrado(s)
+2026-08-17 17:42:31.049 | INFO    |src.services.batimento_detraf:executar:347 - -> Operadora [Golden Line Telecom]: 0 arquivo(s) encontrado(s)
+2026-08-17 17:42:31.067 | INFO    |src.services.batimento_detraf:executar:347 - -> Operadora [Invista Net]: 1 arquivo(s) encontrado(s) 
+2026-08-17 17:42:31.068 | INFO    |src.services.batimento_detraf:executar:347 - -> Operadora [Itelco Telecom]: 0 arquivo(s) encontrado(s)
+2026-08-17 17:42:31.069 | INFO    |src.services.batimento_detraf:executar:347 - -> Operadora [LH Telecomunicacoes LTDA]: 1 arquivo(s) encontrado(s) 
+2026-08-17 17:42:31.071 | INFO    |src.services.batimento_detraf:executar:347 - -> Operadora [Megalink Servicos]: 0 arquivo(s) encontrado(s)
+2026-08-17 17:42:31.073 | INFO    |src.services.batimento_detraf:executar:347 - -> Operadora [Megatelecom Telecomunicacoes S.A]: 1 arquivo(s) encontrado(s)
+2026-08-17 17:42:31.075 | INFO    |src.services.batimento_detraf:executar:347 - -> Operadora [Nova Tecnologia e Telecomunicacoes]: 1 arquivo(s) encontrado(s)
+2026-08-17 17:42:31.079 | INFO    |src.services.batimento_detraf:executar:347 - -> Operadora [Opcao Telecom]: 0 arquivo(s) encontrado(s) 
+2026-08-17 17:42:31.085 | INFO    |src.services.batimento_detraf:executar:347 - -> Operadora [Predialnet]: 0 arquivo(s) encontrado(s)
+2026-08-17 17:42:31.096 | INFO    |src.services.batimento_detraf:executar:347 - -> Operadora [Sistel Fibra]: 0 arquivo(s) encontrado(s) 
+2026-08-17 17:42:31.099 | INFO    |src.services.batimento_detraf:executar:347 - -> Operadora [T1 Telecom]: 1 arquivo(s) encontrado(s)
+2026-08-17 17:42:31.103 | INFO    |src.services.batimento_detraf:executar:347 - -> Operadora [Tri Telecom]: 1 arquivo(s) encontrado(s)
+2026-08-17 17:42:31.105 | INFO    |src.services.batimento_detraf:executar:347 - -> Operadora [UFINET BRASIL]: 1 arquivo(s) encontrado(s) 
+2026-08-17 17:42:31.114 | INFO    |src.services.batimento_detraf:executar:347 - -> Operadora [Unifique]: 1 arquivo(s) encontrado(s)
+2026-08-17 17:42:31.128 | INFO    |src.services.batimento_detraf:executar:347 - -> Operadora [Vonare]: 0 arquivo(s) encontrado(s) 
+2026-08-17 17:42:31.139 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:134 - Filtro de Histórico concluído para o período 202607. 
+2026-08-17 17:42:31.148 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:134 - Arquivos originais recebidos: 13
+2026-08-17 17:42:31.160 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:134 - Arquivos já processados anteriormente (encontrados no JSON): 0 
+2026-08-17 17:42:31.172 | INFO    |src.services.batimento_detraf:_preparar_arquivos_detrafs:134 - Novos arquivos retornados para execução: 13 
+2026-08-17 17:42:31.174 | INFO    |src.services.batimento_detraf:executar:348 - Preparando os arquivos de expectativa para validação...
+2026-08-17 17:42:31.178 | INFO    |src.services.batimento_detraf:executar:348 - Pasta [Vivo] processada -> Válidos: 2 | Inválidos/Ignorados: 0
+2026-08-17 17:42:31.187 | INFO    |src.services.batimento_detraf:executar:348 - Pasta [TLF] processada -> Válidos: 2 | Inválidos/Ignorados: 0 
+2026-08-17 17:42:31.204 | ERROR   |src.services.batimento_detraf:_preparar_arquivos_expectativa:328 - [Q21] Sem expectativa Vivo em [C:\RPA\rpa_vivo_mvp2\arquivos\Expectativa\MVNO]: não tem nenhum arquivo aprovado pela validação. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
+2026-08-17 17:42:31.226 | ERROR   |src.services.batimento_detraf:_preparar_arquivos_expectativa:328 - [Q21] Sem expectativa Vivo em [C:\RPA\rpa_vivo_mvp2\arquivos\Expectativa\Detraf TRP]: não tem nenhum arquivo aprovado pela validação. As operadoras desta pasta ficam sem comparação — a variação daria 100% e elas seriam contestadas indevidamente. Confira o conteúdo da pasta antes de considerar a apuração deste mês concluída.
+2026-08-17 17:42:31.237 | INFO    |src.services.batimento_detraf:executar:348 - Mapeamento de expectativa concluído. Total geral de arquivos válidos: 4 
+2026-08-17 17:42:31.253 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:342 - Filtro de Histórico concluído para o período 202607. 
+2026-08-17 17:42:31.258 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:342 - Arquivos originais recebidos: 4 
+2026-08-17 17:42:31.267 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:342 - Arquivos já processados anteriormente (encontrados no JSON): 0
+2026-08-17 17:42:31.282 | INFO    |src.services.batimento_detraf:_preparar_arquivos_expectativa:342 - Novos arquivos retornados para execução: 4 
+2026-08-17 17:42:31.286 | INFO    |src.services.batimento_detraf:executar:362 - Iniciando mapeamento de operadoras para 4 arquivo(s).
+2026-08-17 17:42:31.321 | INFO    |src.services.batimento_detraf:_mapear_arquivos_por_operadora:195 - EOT não encontrado [ALGAR] 
+2026-08-17 17:42:31.327 | ERROR   |src.services.batimento_detraf:executar:362 - Nenhum EOT válido encontrado para o arquivo: DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D_EXP.csv
+2026-08-17 17:42:31.349 | INFO    |src.services.batimento_detraf:_mapear_arquivos_por_operadora:195 - EOT não encontrado [ALGAR] 
+2026-08-17 17:42:31.354 | ERROR   |src.services.batimento_detraf:executar:362 - Nenhum EOT válido encontrado para o arquivo: DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D_EXP.csv
+2026-08-17 17:42:31.391 | INFO    |src.services.batimento_detraf:_mapear_arquivos_por_operadora:195 - EOT não encontrado [ALGAR] 
+2026-08-17 17:42:31.409 | ERROR   |src.services.batimento_detraf:executar:362 - Nenhum EOT válido encontrado para o arquivo: DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D_EXP.csv
+2026-08-17 17:42:31.461 | INFO    |src.services.batimento_detraf:_mapear_arquivos_por_operadora:195 - EOT não encontrado [ALGAR] 
+2026-08-17 17:42:31.509 | ERROR   |src.services.batimento_detraf:executar:362 - Nenhum EOT válido encontrado para o arquivo: DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D_EXP.csv
+2026-08-17 17:42:31.539 | INFO    |src.services.batimento_detraf:executar:366 - Iniciando a apuração da contestação. 
+2026-08-17 17:42:31.543 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=BTT TELECOMUNICACOES S.A | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 17:42:31.558 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=BTT TELECOMUNICACOES S.A | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 17:42:31.588 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'BTT TELECOMUNICACOES S.A'.
+2026-08-17 17:42:31.591 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=VONARE | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 17:42:31.593 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=VONARE | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 17:42:31.618 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'VONARE'.2026-08-17 17:42:31.620 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=ATLANET TELECOMUNICACOES | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 17:42:31.623 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=ATLANET TELECOMUNICACOES | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 17:42:31.633 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'ATLANET 
 TELECOMUNICACOES'.
-2026-08-17 17:13:57.445 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=OPCAO TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 17:13:57.452 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=OPCAO TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 17:13:57.470 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'OPCAO TELECOM'.
-2026-08-17 17:13:57.514 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=INVISTA NET | Arquivo=expectativa-telefonica-brasil-stfc-c-ldn-202607_EXP.xlsx | Linhas originais=6 | Linhas após filtro=5
-2026-08-17 17:13:57.739 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=INVISTA NET | Arquivos válidos=1 | Linhas consolidadas=5
-2026-08-17 17:13:57.752 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=INVISTA NET | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 17:13:57.862 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
-2026-08-17 17:13:57.910 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 17:13:57.917 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'INVISTA NET' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
-2026-08-17 17:13:57.931 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=ADYLNET INTERNET PROVIDER | Arquivo=202607-C-DETRAF-LD-ADYLNET-TBRASTFC_EXP.csv | Linhas originais=23 | Linhas após filtro=22
-2026-08-17 17:13:57.945 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=ADYLNET INTERNET PROVIDER | Arquivos válidos=1 | Linhas consolidadas=22
-2026-08-17 17:13:57.947 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=ADYLNET INTERNET PROVIDER | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 17:13:58.078 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 10 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
-2026-08-17 17:13:58.173 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 10 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-17 17:13:58.176 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'ADYLNET INTERNET PROVIDER' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 10
-2026-08-17 17:13:58.226 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=UNIFIQUE | Arquivo=202607 Detraf C SMS SMP Unifique X SMP Telefonica Brasil_EXP.xlsx | Linhas originais=73 | Linhas após filtro=71
-2026-08-17 17:13:58.230 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=UNIFIQUE | Arquivos válidos=1 | Linhas 
+2026-08-17 17:42:31.654 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=OPCAO TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 17:42:31.664 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=OPCAO TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 17:42:31.696 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'OPCAO TELECOM'.
+2026-08-17 17:42:31.717 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=TRI TELECOM | Arquivo=202607-C-DETRAF-LD-TRIADE-VIVOMOVEL_EXP.csv | Linhas originais=4 | Linhas após filtro=3
+2026-08-17 17:42:31.729 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=TRI TELECOM | Arquivos válidos=1 | Linhas consolidadas=3
+2026-08-17 17:42:31.741 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=TRI TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 17:42:31.801 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_detraf_mapeamento_descritores] 
+2026-08-17 17:42:31.805 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_detraf_mapeamento_descritores] carregada | Linhas: 25 | Colunas: 8 
+2026-08-17 17:42:31.890 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
+2026-08-17 17:42:31.932 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 17:42:31.937 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'TRI TELECOM' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
+2026-08-17 17:42:31.940 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=PREDIALNET | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 17:42:31.943 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=PREDIALNET | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 17:42:31.948 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'PREDIALNET'.
+2026-08-17 17:42:31.973 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=ALGAR | Arquivo=RELAM_SMS_ALGAR_X_VIVO_SMP_R_202607_V00_EXP.csv | Linhas originais=375 | Linhas após filtro=307
+2026-08-17 17:42:31.990 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=ALGAR | Arquivos válidos=1 | Linhas consolidadas=307
+2026-08-17 17:42:32.026 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=ALGAR | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 17:42:32.233 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 53 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
+2026-08-17 17:42:32.277 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 53 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].
+2026-08-17 17:42:32.280 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'ALGAR' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 53
+2026-08-17 17:42:32.303 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=GGNET TELECOM | Arquivo=DETRAF-TMCO-0122-2026-GGNET-VIVO STFC - RESUMO_EOT_200_948_202607_EXP.csv | Linhas originais=18 | Linhas após filtro=17
+2026-08-17 17:42:32.309 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=GGNET TELECOM | Arquivos válidos=1 | Linhas consolidadas=17
+2026-08-17 17:42:32.311 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=GGNET TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 17:42:32.398 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 6 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
+2026-08-17 17:42:32.455 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 6 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 17:42:32.458 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'GGNET TELECOM' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 6
+2026-08-17 17:42:32.515 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=UNIFIQUE | Arquivo=202607 Detraf C SMS SMP Unifique X SMP Telefonica Brasil_EXP.xlsx | Linhas originais=73 | Linhas após filtro=71
+2026-08-17 17:42:32.521 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=UNIFIQUE | Arquivos válidos=1 | Linhas 
 consolidadas=71
-2026-08-17 17:13:58.233 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=UNIFIQUE | Arquivos válidos=0 | Linhas 
+2026-08-17 17:42:32.522 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=UNIFIQUE | Arquivos válidos=0 | Linhas 
 consolidadas=0
-2026-08-17 17:13:58.454 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 26 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
-2026-08-17 17:13:58.554 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 26 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-17 17:13:58.557 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'UNIFIQUE' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 26
-2026-08-17 17:13:58.574 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=T1 TELECOM | Arquivo=expectativa-telefonica-brasil-stfc-c-ldn-202607_EXP.xlsx | Linhas originais=4 | Linhas após filtro=3
-2026-08-17 17:13:58.590 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=T1 TELECOM | Arquivos válidos=1 | Linhas consolidadas=3
-2026-08-17 17:13:58.592 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=T1 TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 17:13:58.682 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
-2026-08-17 17:13:58.726 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 17:13:58.728 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'T1 TELECOM' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
-2026-08-17 17:13:58.745 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=LH TELECOMUNICACOES LTDA | Arquivo=expectativa-telefonica-brasil-stfc-c-ldn-202607_EXP.xlsx | Linhas originais=4 | Linhas após filtro=3
-2026-08-17 17:13:58.748 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=LH TELECOMUNICACOES LTDA | Arquivos válidos=1 | Linhas consolidadas=3
-2026-08-17 17:13:58.755 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=LH TELECOMUNICACOES LTDA | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 17:13:58.825 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
-2026-08-17 17:13:58.867 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 17:13:58.877 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'LH TELECOMUNICACOES LTDA' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
-2026-08-17 17:13:58.890 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=TRI TELECOM | Arquivo=202607-C-DETRAF-LD-TRIADE-VIVOMOVEL_EXP.csv | Linhas originais=4 | Linhas após filtro=3
-2026-08-17 17:13:58.891 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=TRI TELECOM | Arquivos válidos=1 | Linhas consolidadas=3
-2026-08-17 17:13:58.893 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=TRI TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 17:13:58.969 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
-2026-08-17 17:13:59.036 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 17:13:59.039 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'TRI TELECOM' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
-2026-08-17 17:13:59.049 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=AGIL TELECOM | Arquivo=Agil_Vivo_202607_EXP.csv | Linhas originais=10 | Linhas após filtro=10
-2026-08-17 17:13:59.056 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=AGIL TELECOM | Arquivos válidos=1 | Linhas consolidadas=10
-2026-08-17 17:13:59.064 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=AGIL TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 17:13:59.193 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 8 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
-2026-08-17 17:13:59.236 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 8 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 17:13:59.238 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'AGIL TELECOM' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 8
-2026-08-17 17:13:59.247 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=GGNET TELECOM | Arquivo=DETRAF-TMCO-0122-2026-GGNET-VIVO STFC - RESUMO_EOT_200_948_202607_EXP.csv | Linhas originais=18 | Linhas após filtro=17
-2026-08-17 17:13:59.251 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=GGNET TELECOM | Arquivos válidos=1 | Linhas consolidadas=17
-2026-08-17 17:13:59.264 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=GGNET TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 17:13:59.365 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 6 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
-2026-08-17 17:13:59.416 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 6 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 17:13:59.427 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'GGNET TELECOM' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 6
-2026-08-17 17:13:59.433 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=VONARE | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 17:13:59.454 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=VONARE | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 17:13:59.471 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'VONARE'.2026-08-17 17:13:59.490 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=SISTEL FIBRA | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 17:13:59.515 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=SISTEL FIBRA | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 17:13:59.532 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'SISTEL FIBRA'.
-2026-08-17 17:13:59.536 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=PREDIALNET | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 17:13:59.559 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=PREDIALNET | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 17:13:59.574 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'PREDIALNET'.
-2026-08-17 17:13:59.665 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=NOVA TECNOLOGIA E TELECOMUNICACOES | Arquivo=Detraf Nova x TLF_011 202607_EXP.csv | Linhas originais=4 | Linhas após filtro=4
-2026-08-17 17:13:59.685 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=NOVA TECNOLOGIA E TELECOMUNICACOES | Arquivos válidos=1 | Linhas consolidadas=4
-2026-08-17 17:13:59.689 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=NOVA TECNOLOGIA E TELECOMUNICACOES | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 17:13:59.774 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
-2026-08-17 17:13:59.828 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 17:13:59.832 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'NOVA TECNOLOGIA E TELECOMUNICACOES' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
-2026-08-17 17:13:59.834 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=GOLDEN LINE TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 17:13:59.835 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=GOLDEN LINE TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 17:13:59.839 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'GOLDEN LINE TELECOM'.
-2026-08-17 17:13:59.853 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=BTT TELECOMUNICACOES S.A | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 17:13:59.855 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=BTT TELECOMUNICACOES S.A | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 17:13:59.860 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'BTT TELECOMUNICACOES S.A'.
-2026-08-17 17:13:59.885 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=ALGAR | Arquivo=RELAM_SMS_ALGAR_X_VIVO_SMP_R_202607_V00_EXP.csv | Linhas originais=375 | Linhas após filtro=307
-2026-08-17 17:13:59.904 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=ALGAR | Arquivos válidos=1 | Linhas consolidadas=307
-2026-08-17 17:13:59.908 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=ALGAR | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 17:14:00.123 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 53 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
-2026-08-17 17:14:00.202 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 53 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].
-2026-08-17 17:14:00.221 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'ALGAR' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 53
-2026-08-17 17:14:00.239 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=MEGATELECOM TELECOMUNICACOES S.A | Arquivo=202607-C-DETRAF-LD-SAMM-TBRASMP_EXP.csv | Linhas originais=6 | Linhas após filtro=5
-2026-08-17 17:14:00.250 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=MEGATELECOM TELECOMUNICACOES S.A | Arquivos válidos=1 | Linhas consolidadas=5
-2026-08-17 17:14:00.253 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=MEGATELECOM TELECOMUNICACOES S.A | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 17:14:00.601 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
-2026-08-17 17:14:00.651 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 17:14:00.765 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'MEGATELECOM TELECOMUNICACOES S.A' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
-2026-08-17 17:14:00.843 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=ITELCO TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 17:14:00.883 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=ITELCO TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
-2026-08-17 17:14:00.922 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'ITELCO TELECOM'.
-2026-08-17 17:14:00.950 | INFO    |src.controllers.batimento_detraf_controller:batimento_detraf:10 - [STEP] Finalizando: BatimentoDetrafService.executar | Tempo gasto: 5.26s2026-08-17 17:14:00.977 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] Operadoras apuradas:      23 
-2026-08-17 17:14:00.995 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] O resultado é a TABELA `tbl_rpa_log_detraf_despesa_contestacao`, 
-2026-08-17 17:14:00.997 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] não um arquivo — a Base de Contestação virou tabela em 2026-08-04.       
-2026-08-17 17:14:00.998 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] Próximo passo é humano: o analista sinaliza no WebFat o que
-2026-08-17 17:14:00.999 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] contestar e se haverá retenção. Só então o RPA 3 tem o que fazer.        
-2026-08-17 17:14:01.000 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] Operadoras: ADYLNET INTERNET PROVIDER, AGIL TELECOM, ALGAR, ATLANET TELECOMUNICACOES, BTT TELECOMUNICACOES S.A, DESKTOP SIGMANET, GGNET TELECOM, GOLDEN LINE TELECOM, INVISTA NET, ITELCO TELECOM, LH TELECOMUNICACOES LTDA, MEGALINK SERVICOS, MEGATELECOM TELECOMUNICACOES S.A, NOVA TECNOLOGIA E TELECOMUNICACOES, OPCAO TELECOM, OPERADORA_NAO_IDENTIFICADA, PREDIALNET, SISTEL FIBRA, T1 TELECOM, TRI TELECOM, UFINET BRASIL, 
+2026-08-17 17:42:32.710 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 26 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
+2026-08-17 17:42:32.761 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 26 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].
+2026-08-17 17:42:32.764 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'UNIFIQUE' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 26
+2026-08-17 17:42:32.767 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=MEGALINK SERVICOS | Arquivos válidos=0 
+| Linhas consolidadas=0
+2026-08-17 17:42:32.768 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=MEGALINK SERVICOS | Arquivos válidos=0 
+| Linhas consolidadas=0
+2026-08-17 17:42:32.772 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'MEGALINK SERVICOS'.
+2026-08-17 17:42:32.795 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=T1 TELECOM | Arquivo=expectativa-telefonica-brasil-stfc-c-ldn-202607_EXP.xlsx | Linhas originais=4 | Linhas após filtro=3
+2026-08-17 17:42:32.797 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=T1 TELECOM | Arquivos válidos=1 | Linhas consolidadas=3
+2026-08-17 17:42:32.800 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=T1 TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 17:42:32.890 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
+2026-08-17 17:42:32.926 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 17:42:32.927 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'T1 TELECOM' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
+2026-08-17 17:42:32.936 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=MEGATELECOM TELECOMUNICACOES S.A | Arquivo=202607-C-DETRAF-LD-SAMM-TBRASMP_EXP.csv | Linhas originais=6 | Linhas após filtro=5
+2026-08-17 17:42:32.937 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=MEGATELECOM TELECOMUNICACOES S.A | Arquivos válidos=1 | Linhas consolidadas=5
+2026-08-17 17:42:32.952 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=MEGATELECOM TELECOMUNICACOES S.A | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 17:42:33.039 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
+2026-08-17 17:42:33.244 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 17:42:33.246 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'MEGATELECOM TELECOMUNICACOES S.A' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
+2026-08-17 17:42:33.260 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=NOVA TECNOLOGIA E TELECOMUNICACOES | Arquivo=Detraf Nova x TLF_011 202607_EXP.csv | Linhas originais=4 | Linhas após filtro=4
+2026-08-17 17:42:33.277 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=NOVA TECNOLOGIA E TELECOMUNICACOES | Arquivos válidos=1 | Linhas consolidadas=4
+2026-08-17 17:42:33.300 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=NOVA TECNOLOGIA E TELECOMUNICACOES | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 17:42:33.398 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
+2026-08-17 17:42:33.438 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 17:42:33.444 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'NOVA TECNOLOGIA E TELECOMUNICACOES' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
+2026-08-17 17:42:33.446 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=ITELCO TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 17:42:33.447 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=ITELCO TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 17:42:33.453 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'ITELCO TELECOM'.
+2026-08-17 17:42:33.457 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=GOLDEN LINE TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 17:42:33.469 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=GOLDEN LINE TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 17:42:33.482 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'GOLDEN LINE TELECOM'.
+2026-08-17 17:42:33.500 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=INVISTA NET | Arquivo=expectativa-telefonica-brasil-stfc-c-ldn-202607_EXP.xlsx | Linhas originais=6 | Linhas após filtro=5
+2026-08-17 17:42:33.510 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=INVISTA NET | Arquivos válidos=1 | Linhas consolidadas=5
+2026-08-17 17:42:33.514 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=INVISTA NET | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 17:42:33.594 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
+2026-08-17 17:42:33.628 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 17:42:33.629 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'INVISTA NET' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
+2026-08-17 17:42:33.655 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=DESKTOP SIGMANET | Arquivo=layout-telefonica-brasil-stfc-c-ldn-202607_EXP.xlsx | Linhas originais=38 | Linhas após filtro=38
+2026-08-17 17:42:33.665 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=DESKTOP SIGMANET | Arquivos válidos=1 | Linhas consolidadas=38
+2026-08-17 17:42:33.667 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=DESKTOP SIGMANET | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 17:42:33.746 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
+2026-08-17 17:42:33.873 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 17:42:33.876 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'DESKTOP SIGMANET' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
+2026-08-17 17:42:33.892 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=LH TELECOMUNICACOES LTDA | Arquivo=expectativa-telefonica-brasil-stfc-c-ldn-202607_EXP.xlsx | Linhas originais=4 | Linhas após filtro=3
+2026-08-17 17:42:33.895 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=LH TELECOMUNICACOES LTDA | Arquivos válidos=1 | Linhas consolidadas=3
+2026-08-17 17:42:33.896 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=LH TELECOMUNICACOES LTDA | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 17:42:33.977 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
+2026-08-17 17:42:34.015 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 17:42:34.020 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'LH TELECOMUNICACOES LTDA' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
+2026-08-17 17:42:34.050 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=UFINET BRASIL | Arquivo=Declaração de Tráfego UFINET 
+x VIVO LDN 07-2026_EXP.xlsx | Linhas originais=5 | Linhas após filtro=4
+2026-08-17 17:42:34.057 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=UFINET BRASIL | Arquivos válidos=1 | Linhas consolidadas=4
+2026-08-17 17:42:34.059 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=UFINET BRASIL | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 17:42:34.140 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 2 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
+2026-08-17 17:42:34.178 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 2 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 17:42:34.187 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'UFINET BRASIL' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 2
+2026-08-17 17:42:34.193 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=SISTEL FIBRA | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 17:42:34.196 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=SISTEL FIBRA | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 17:42:34.202 | WARNING |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Nenhum dado para gerar aba Contest da operadora 'SISTEL FIBRA'.
+2026-08-17 17:42:34.210 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=ADYLNET INTERNET PROVIDER | Arquivo=202607-C-DETRAF-LD-ADYLNET-TBRASTFC_EXP.csv | Linhas originais=23 | Linhas após filtro=22
+2026-08-17 17:42:34.228 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=ADYLNET INTERNET PROVIDER | Arquivos válidos=1 | Linhas consolidadas=22
+2026-08-17 17:42:34.233 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=ADYLNET INTERNET PROVIDER | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 17:42:34.384 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 10 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
+2026-08-17 17:42:34.483 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 10 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].
+2026-08-17 17:42:34.486 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'ADYLNET INTERNET PROVIDER' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 10
+2026-08-17 17:42:34.495 | INFO    |src.services.criacao_arquivo_contestacao:_consolidar_arquivos:78 - [DEBUG] Operadora=AGIL TELECOM | Arquivo=Agil_Vivo_202607_EXP.csv | Linhas originais=10 | Linhas após filtro=10
+2026-08-17 17:42:34.499 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:555 - [DEBUG] Operadora=AGIL TELECOM | Arquivos válidos=1 | Linhas consolidadas=10
+2026-08-17 17:42:34.509 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:561 - [DEBUG] Operadora=AGIL TELECOM | Arquivos válidos=0 | Linhas consolidadas=0
+2026-08-17 17:42:34.622 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - Inserindo 8 registro(s) em [tbl_rpa_log_detraf_despesa_contestacao]. 
+2026-08-17 17:42:34.686 | INFO    |comum.dados.repositorio_cache:salvar_dados_tabela_contestacao:266 - 8 registro(s) persistidos em [tbl_rpa_log_detraf_despesa_contestacao].2026-08-17 17:42:34.688 | INFO    |src.services.criacao_arquivo_contestacao:_organizar_arquivos_por_operadora:567 - Contestação de 'AGIL TELECOM' gravada em tbl_rpa_log_detraf_despesa_contestacao | Linhas: 8
+2026-08-17 17:42:34.748 | INFO    |src.services.batimento_detraf:executar:390 - Histórico atualizado com sucesso. Lote finalizado com 17 arquivo(s) salvo(s) como 'Válido'. 
+2026-08-17 17:42:34.752 | INFO    |src.controllers.batimento_detraf_controller:batimento_detraf:10 - [STEP] Finalizando: BatimentoDetrafService.executar | Tempo gasto: 4.24s2026-08-17 17:42:34.754 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] Operadoras apuradas:      23
+2026-08-17 17:42:34.755 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] O resultado é a TABELA `tbl_rpa_log_detraf_despesa_contestacao`,
+2026-08-17 17:42:34.759 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] não um arquivo — a Base de Contestação virou tabela em 2026-08-04.       
+2026-08-17 17:42:34.760 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] Próximo passo é humano: o analista sinaliza no WebFat o que
+2026-08-17 17:42:34.778 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] contestar e se haverá retenção. Só então o RPA 3 tem o que fazer. 
+2026-08-17 17:42:34.782 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] Operadoras: ADYLNET INTERNET PROVIDER, AGIL TELECOM, ALGAR, ATLANET TELECOMUNICACOES, BTT TELECOMUNICACOES S.A, DESKTOP SIGMANET, GGNET TELECOM, GOLDEN LINE TELECOM, INVISTA NET, ITELCO TELECOM, LH TELECOMUNICACOES LTDA, MEGALINK SERVICOS, MEGATELECOM TELECOMUNICACOES S.A, NOVA TECNOLOGIA E TELECOMUNICACOES, OPCAO TELECOM, OPERADORA_NAO_IDENTIFICADA, PREDIALNET, SISTEL FIBRA, T1 TELECOM, TRI TELECOM, UFINET BRASIL, 
 UNIFIQUE, VONARE
-2026-08-17 17:14:01.010 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] ──────────────────────────────────────────────────────────── 
-2026-08-17 17:14:01.026 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] Esta é a última etapa da execução. 
-2026-08-17 17:14:01.028 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Concluído. Aguardando a decisão do analista no WebFat para o RPA 3 prosseguir.
-2026-08-17 17:14:01.029 | INFO    |__main__:main:97 - [STEP] Finalizando: run | Tempo gasto: 7.71s
-2026-08-17 17:14:01.035 | INFO    |__main__:main:118 - [Diagnóstico] Etapas desta execução em [C:\RPA\rpa_vivo_mvp2\logs\BRTAZBGY0015CO\rpa2_validacao_apuracao\diagnosticos\2026-08-17_17-13-49.txt].
-2026-08-17 17:14:01.053 | INFO    |__main__:<module>:126 - [RPA 2] Diagnóstico das etapas em [C:\RPA\rpa_vivo_mvp2\logs\BRTAZBGY0015CO\rpa2_validacao_apuracao\diagnosticos\2026-08-17_17-13-49.txt]
+2026-08-17 17:42:34.793 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] ──────────────────────────────────────────────────────────── 
+2026-08-17 17:42:34.797 | INFO    |src.main.process_handle:run:132 - [RPA 2 — etapa 3/3: batimento] Esta é a última etapa da execução.
+2026-08-17 17:42:34.805 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 2] Concluído. Aguardando a decisão do analista no WebFat para o RPA 3 prosseguir. 
+2026-08-17 17:42:34.813 | INFO    |__main__:main:97 - [STEP] Finalizando: run | Tempo gasto: 6.27s 
+2026-08-17 17:42:34.820 | INFO    |__main__:main:118 - [Diagnóstico] Etapas desta execução em [C:\RPA\rpa_vivo_mvp2\logs\BRTAZBGY0015CO\rpa2_validacao_apuracao\diagnosticos\2026-08-17_17-42-25.txt].
+2026-08-17 17:42:34.825 | INFO    |__main__:<module>:126 - [RPA 2] Diagnóstico das etapas em [C:\RPA\rpa_vivo_mvp2\logs\BRTAZBGY0015CO\rpa2_validacao_apuracao\diagnosticos\2026-08-17_17-42-25.txt]

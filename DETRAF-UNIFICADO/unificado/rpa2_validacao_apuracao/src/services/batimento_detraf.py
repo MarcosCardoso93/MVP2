@@ -18,7 +18,7 @@ from src.services.criacao_arquivo_contestacao import CriacaoArquivoContestacao
 from comum.dados.repositorio_tabelas import bd_tabelas
 from comum.arquivos.gerenciador import carregar_dados
 import pandas as pd
-
+#asassaas
 
 class BatimentoDetrafService:
     def __init__(self):
