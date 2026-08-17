@@ -1,0 +1,42 @@
+======================================================================
+EXECUÇÃO
+======================================================================
+robô:       rpa4_retificacao
+referência: 202606
+início:     2026-08-10 14:17:34
+duração:    1.5s
+desfecho:   OK
+parâmetro:  parâmetros: referência forçada: 202606; DRY-RUN: todos os efeitos externos desligados
+
+======================================================================
+AMBIENTE
+======================================================================
+robô: rpa4_retificacao
+modo: DEV  (de ENV)
+log: nível INFO (de LOG_LEVEL), diagnose ligado
+competência: 202606  (forçada por COMPETENCIA)
+banco: SQLite [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db] (de CAMINHO_SQLITE)
+AGI: ambiente [producao] host [10.238.6.120] (de AGI_AMBIENTE) | executável [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
+EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: desligado | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado
+
+======================================================================
+ETAPA 1/2: arranque   [ok]   1.5s
+======================================================================
+produziu:
+  módulos carregados, banco resolvido
+
+======================================================================
+ETAPA 2/2: deteccao   [ok]   0.0s
+======================================================================
+entrada:
+  referencia = 202606
+produziu:
+  0 recuperação(ões) identificada(s)
+
+======================================================================
+LOG COMPLETO
+======================================================================
+C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\logs
+
+Este arquivo é o resumo por etapa. O log tem a sequência completa,
+linha a linha, de tudo o que a execução fez.

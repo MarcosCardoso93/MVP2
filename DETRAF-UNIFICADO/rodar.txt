@@ -1,0 +1,58 @@
+RPA1 — Captura
+Lê a Caixa de Entrada do Outlook, organiza os e-mails de Detraf, identifica a operadora pelo EOT e salva os arquivos na árvore de pastas.
+
+
+.venv\Scripts\python rpa1_captura\main.py
+RPA2 — Validação/Apuração
+Busca a expectativa da Vivo (SFTP ClickHub), valida os arquivos das operadoras (layout, tarifa), compara os dois lados e grava o resultado na tabela de contestação — pra o analista decidir no WebFat.
+
+
+.venv\Scripts\python rpa2_validacao_apuracao\main.py
+(pra testar sem SFTP: --etapa expectativa --de-pasta CAMINHO)
+
+RPA3 — Contestação/AGI/EC
+Só age depois que o analista sinaliza no WebFat. Gera os arquivos da contestação (extrato, carta numerada, etc.), sobe no AGI, manda e-mail pra operadora e confere o relatório final.
+
+
+.venv\Scripts\python rpa3_contestacao_agi_ec\main.py
+RPA4 — Retificação
+Só entra em ação quando a Vivo recupera um tráfego que tinha contestado no mês anterior — lança esse evento de "Recuperação" no AGI. Se não houver recuperação no mês, ele termina com sucesso e zero processos (isso é o esperado, não erro). Ação irreversível no AGI, por isso merece cuidado extra.
+
+
+.venv\Scripts\python rpa4_retificacao\main.py --referencia 202507 --dry-run
+(sempre teste com --dry-run primeiro nesse — ele não desfaz o que grava no AGI)
+
+RPA3 — testar o mapeamento de tela do AGI, sem subir nada de verdade
+O robô entra no AGI, loga de verdade e navega até a tela certa (Detraf > Importar Dados, ou Contestação > Gerenciar) — e PARA aí, com uma caixa mostrando o que está pendente pra subir. Só depois de clicar "Continuar" ele sobe de verdade. Se cancelar, nada é gravado e o AGI fecha limpo.
+
+PERMITIR_UPLOAD_AGI=true
+.venv\Scripts\python rpa3_contestacao_agi_ec\main.py --pausar
+(sem --pausar, roda igual a antes — a parada só existe se você pedir)
+
+Limitação: a parada é uma vez antes do lote inteiro, não uma por operadora — ao clicar "Continuar" ele sobe todas as pendentes seguidas.
+
+RPA3 — testar SÓ a navegação da Contestação (HU-18), isolada do Detraf (HU-17)
+As duas telas não têm nada em comum (imagens diferentes) — testar uma não valida a outra. Usa o CONT_PROC que já existe em disco pra ALGAR/202603, sem precisar rodar o RPA3 inteiro.
+
+PERMITIR_UPLOAD_AGI=true
+.venv\Scripts\python -c "import sys; sys.path.insert(0, 'rpa3_contestacao_agi_ec'); from src.services.upload_contestacao_agi import UploadContestacaoAGI; UploadContestacaoAGI().executar(['ALGAR'], '202603')"
+
+Mesma lógica: abre o AGI, loga, navega até "Contestação > Gerenciar" e para antes de subir/salvar. Cancele pra não gravar nada.
+
+RPA4 — testar a navegação, parando antes do lançamento (irreversível)
+Mesma ideia dos outros: o robô abre o AGI, loga, filtra, exporta, seleciona e VALIDA o processo (confirma na tela que é o certo) — e para exatamente aí, antes do lançamento do evento de Recuperação, que não tem como desfazer.
+
+PERMITIR_ACESSO_AGI=true
+.venv\Scripts\python rpa4_retificacao\main.py --referencia 202507 --pausar
+
+Atenção: só chega a abrir o AGI se existir recuperação de verdade pra essa referência (variação negativa contestada no mês anterior). Sem isso, ele reporta "0 processos" e nunca toca no AGI — não é falha, é o esperado.
+
+RPA4 — testar login + navegação + exportação da grid (real, sem sintético)
+Não precisa de recuperação nenhuma cadastrada — abre o AGI, loga, vai até "Contestação > Gerenciar", filtra por período e exporta a grid real pra CSV. Só leitura, nada é gravado.
+
+.venv\Scripts\python -c "import sys; sys.path.insert(0, 'rpa4_retificacao'); from src.services.retificacao_agi import RetificacaoAgiService, pasta_de_trabalho; s = RetificacaoAgiService(); s.abrir_sessao(); s.agi.filtrar_por_periodo(); print(s.agi.exportar_grid_csv(pasta_de_trabalho() / 'teste_exportacao.csv')); s.fechar_sessao()"
+
+RPA4 — testar o cruzamento EOT+Referência+Tráfego+Valor (lógica pura, sem AGI)
+Fabrica um CSV local no formato que o AGI exportaria e confere se acha a linha certa — inclusive o caso real de duas linhas quase iguais, distinguidas só pelo valor.
+
+.venv\Scripts\python testar_rpa4_cruzamento.py

@@ -1,0 +1,135 @@
+2026-08-10 14:17:34.288 | INFO    |__main__:<module>:133 - [RPA 4] robô: rpa4_retificacao
+2026-08-10 14:17:34.289 | INFO    |__main__:<module>:133 - [RPA 4] modo: DEV  (de ENV)
+2026-08-10 14:17:34.289 | INFO    |__main__:<module>:133 - [RPA 4] log: nível INFO (de LOG_LEVEL), diagnose ligado
+2026-08-10 14:17:34.289 | INFO    |__main__:<module>:133 - [RPA 4] competência: 202606  (forçada por COMPETENCIA)
+2026-08-10 14:17:34.289 | INFO    |__main__:<module>:133 - [RPA 4] banco: SQLite [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db] (de CAMINHO_SQLITE)
+2026-08-10 14:17:34.289 | INFO    |__main__:<module>:133 - [RPA 4] AGI: ambiente [producao] host [10.238.6.120] (de AGI_AMBIENTE) | executável [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
+2026-08-10 14:17:34.289 | INFO    |__main__:<module>:133 - [RPA 4] EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: desligado | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado
+2026-08-10 14:17:34.289 | INFO    |__main__:<module>:133 - [RPA 4] parâmetros: referência forçada: 202606; DRY-RUN: todos os efeitos externos desligados
+2026-08-10 14:17:35.223 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-10 14:17:35.224 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db]
+2026-08-10 14:17:35.766 | INFO    |__main__:main:106 - [STEP] Iniciando: run
+2026-08-10 14:17:35.766 | INFO    |src.main.process_handle:run:18 - [STEP] Iniciando: RetificacaoController.retificar
+2026-08-10 14:17:35.767 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Processando 202606: procuro recuperações na contestação de 202605.
+2026-08-10 14:17:35.767 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-10 14:17:35.781 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 36 | Colunas: 19
+2026-08-10 14:17:35.790 | INFO    |src.services.deteccao_recuperacao:detectar:85 - [HU-21] Nenhum tráfego recuperado em 202605.
+2026-08-10 14:17:35.790 | INFO    |comum.utils.decoradores:wrapper:22 - [RPA 4] Nada a retificar. Num mês sem recuperação este é o resultado certo, e não uma falha.
+2026-08-10 14:17:35.790 | INFO    |src.main.process_handle:run:18 - [STEP] Finalizando: RetificacaoController.retificar | Tempo gasto: 0.02s
+2026-08-10 14:17:35.790 | INFO    |__main__:main:106 - [STEP] Finalizando: run | Tempo gasto: 0.02s
+2026-08-10 14:17:35.791 | INFO    |__main__:main:118 - [Diagnóstico] Etapas desta execução em [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\logs\LAPTOP-IKOLPRTI\rpa4_retificacao\diagnosticos\2026-08-10_14-17-34.txt].
+2026-08-10 14:17:35.792 | INFO    |__main__:<module>:133 - [RPA 4] Diagnóstico das etapas em [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\logs\LAPTOP-IKOLPRTI\rpa4_retificacao\diagnosticos\2026-08-10_14-17-34.txt]
+2026-08-10 14:17:43.987 | INFO    |__main__:<module>:133 - [RPA 4] robô: rpa4_retificacao
+2026-08-10 14:17:43.987 | INFO    |__main__:<module>:133 - [RPA 4] modo: DEV  (de ENV)
+2026-08-10 14:17:43.988 | INFO    |__main__:<module>:133 - [RPA 4] log: nível INFO (de LOG_LEVEL), diagnose ligado
+2026-08-10 14:17:43.988 | INFO    |__main__:<module>:133 - [RPA 4] competência: 202604  (forçada por COMPETENCIA)
+2026-08-10 14:17:43.988 | INFO    |__main__:<module>:133 - [RPA 4] banco: SQLite [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db] (de CAMINHO_SQLITE)
+2026-08-10 14:17:43.988 | INFO    |__main__:<module>:133 - [RPA 4] AGI: ambiente [producao] host [10.238.6.120] (de AGI_AMBIENTE) | executável [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
+2026-08-10 14:17:43.988 | INFO    |__main__:<module>:133 - [RPA 4] EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: desligado | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado
+2026-08-10 14:17:43.988 | INFO    |__main__:<module>:133 - [RPA 4] parâmetros: referência forçada: 202604; DRY-RUN: todos os efeitos externos desligados
+2026-08-10 14:17:44.387 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-10 14:17:44.387 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db]
+2026-08-10 14:17:44.643 | INFO    |__main__:main:106 - [STEP] Iniciando: run
+2026-08-10 14:17:44.643 | INFO    |src.main.process_handle:run:18 - [STEP] Iniciando: RetificacaoController.retificar
+2026-08-10 14:17:44.643 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Processando 202604: procuro recuperações na contestação de 202603.
+2026-08-10 14:17:44.643 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-10 14:17:44.646 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 36 | Colunas: 19
+2026-08-10 14:17:44.651 | INFO    |src.services.deteccao_recuperacao:detectar:85 - [HU-21] 32 linha(s) com tráfego recuperado em 202603.
+2026-08-10 14:17:44.651 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 025) ref 202603 tráfego 202601: 409534.6 min, R$ 2624.88
+2026-08-10 14:17:44.651 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 025) ref 202603 tráfego 202601: 10486.6 min, R$ 46.57
+2026-08-10 14:17:44.651 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 025) ref 202603 tráfego 202602: 465076.3 min, R$ 2970.4
+2026-08-10 14:17:44.651 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 025) ref 202603 tráfego 202602: 9513.9 min, R$ 41.82
+2026-08-10 14:17:44.651 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 025) ref 202603 tráfego 202603: 2746937.6 min, R$ 17342.34
+2026-08-10 14:17:44.651 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 143) ref 202603 tráfego 202603: 73454.8 min, R$ 323.96
+2026-08-10 14:17:44.652 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 012) ref 202603 tráfego 202603: 29.9 min, R$ 0.52
+2026-08-10 14:17:44.652 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 012) ref 202603 tráfego 202603: 0.5 min, R$ 0.01
+2026-08-10 14:17:44.652 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 012) ref 202603 tráfego 202602: 287.2 min, R$ 2.33
+2026-08-10 14:17:44.652 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 012) ref 202603 tráfego 202602: 20.4 min, R$ 0.16
+2026-08-10 14:17:44.652 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 012) ref 202603 tráfego 202603: 4776.4 min, R$ 38.980000000000004
+2026-08-10 14:17:44.652 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 012) ref 202603 tráfego 202603: 1407.6 min, R$ 11.44
+2026-08-10 14:17:44.652 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 012) ref 202603 tráfego 202603: 234.4 min, R$ 1.88
+2026-08-10 14:17:44.652 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 012) ref 202603 tráfego 202603: 4.2 min, R$ 0.03
+2026-08-10 14:17:44.652 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 012) ref 202603 tráfego 202602: 307.6 min, R$ 1.9100000000000001
+2026-08-10 14:17:44.652 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 012) ref 202603 tráfego 202603: 6295.8 min, R$ 39.6
+2026-08-10 14:17:44.652 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 012) ref 202603 tráfego 202603: 96.4 min, R$ 0.4
+2026-08-10 14:17:44.652 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 048) ref 202603 tráfego 202602: 786.0 min, R$ 5.31
+2026-08-10 14:17:44.653 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 048) ref 202603 tráfego 202602: 204.9 min, R$ 1.3800000000000001
+2026-08-10 14:17:44.653 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 048) ref 202603 tráfego 202602: 35.3 min, R$ 0.24
+2026-08-10 14:17:44.653 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 048) ref 202603 tráfego 202602: 10.3 min, R$ 0.06999999999999999
+2026-08-10 14:17:44.653 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 048) ref 202603 tráfego 202603: 510.9 min, R$ 3.49
+2026-08-10 14:17:44.653 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 048) ref 202603 tráfego 202603: 93.30000000000001 min, R$ 0.64
+2026-08-10 14:17:44.653 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 048) ref 202603 tráfego 202603: 27.9 min, R$ 0.19
+2026-08-10 14:17:44.653 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 034) ref 202603 tráfego 202602: 50.800000000000004 min, R$ 0.8
+2026-08-10 14:17:44.653 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 034) ref 202603 tráfego 202603: 294135.39999999997 min, R$ 4721.47
+2026-08-10 14:17:44.653 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 034) ref 202603 tráfego 202603: 43598.899999999994 min, R$ 502.05999999999995
+2026-08-10 14:17:44.653 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 143) ref 202603 tráfego 202602: 192830.7 min, R$ 1205.73
+2026-08-10 14:17:44.653 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 317) ref 202603 tráfego 202602: 3824.9 min, R$ 16.740000000000002
+2026-08-10 14:17:44.653 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 143) ref 202603 tráfego 202603: 3557495.7 min, R$ 22386.77
+2026-08-10 14:17:44.653 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 143) ref 202603 tráfego 202603: 70001.6 min, R$ 308.05
+2026-08-10 14:17:44.653 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 143) ref 202603 tráfego 202603: 713.9 min, R$ 4.5
+2026-08-10 14:17:44.654 | WARNING |comum.utils.decoradores:wrapper:22 - [RPA 4] PERMITIR_ACESSO_AGI está desligado — as 32 recuperação(ões) acima foram calculadas e NÃO foram lançadas. É o modo de conferência.
+2026-08-10 14:17:44.654 | INFO    |src.main.process_handle:run:18 - [STEP] Finalizando: RetificacaoController.retificar | Tempo gasto: 0.01s
+2026-08-10 14:17:44.654 | INFO    |__main__:main:106 - [STEP] Finalizando: run | Tempo gasto: 0.01s
+2026-08-10 14:17:44.655 | INFO    |__main__:main:118 - [Diagnóstico] Etapas desta execução em [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\logs\LAPTOP-IKOLPRTI\rpa4_retificacao\diagnosticos\2026-08-10_14-17-43.txt].
+2026-08-10 14:17:44.655 | INFO    |__main__:<module>:133 - [RPA 4] Diagnóstico das etapas em [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\logs\LAPTOP-IKOLPRTI\rpa4_retificacao\diagnosticos\2026-08-10_14-17-43.txt]
+2026-08-10 14:24:15.139 | INFO    |comum.config.diagnostico:verificar_banco:376 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-10 14:24:15.139 | INFO    |comum.config.diagnostico:verificar_banco:376 - Utilizando SQLite local [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db]
+2026-08-10 14:24:44.631 | INFO    |comum.config.diagnostico:verificar_banco:376 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-10 14:24:44.631 | INFO    |comum.config.diagnostico:verificar_banco:376 - Utilizando SQLite local [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db]
+2026-08-10 14:25:28.787 | INFO    |__main__:<module>:133 - [RPA 4] robô: rpa4_retificacao
+2026-08-10 14:25:28.787 | INFO    |__main__:<module>:133 - [RPA 4] modo: DEV  (de ENV)
+2026-08-10 14:25:28.787 | INFO    |__main__:<module>:133 - [RPA 4] log: nível INFO (de LOG_LEVEL), diagnose ligado
+2026-08-10 14:25:28.787 | INFO    |__main__:<module>:133 - [RPA 4] competência: 202604  (forçada por COMPETENCIA)
+2026-08-10 14:25:28.787 | INFO    |__main__:<module>:133 - [RPA 4] banco: SQLite [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db] (de CAMINHO_SQLITE)
+2026-08-10 14:25:28.787 | INFO    |__main__:<module>:133 - [RPA 4] AGI: ambiente [producao] host [10.238.6.120] (de AGI_AMBIENTE) | executável [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
+2026-08-10 14:25:28.787 | INFO    |__main__:<module>:133 - [RPA 4] EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: desligado | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado
+2026-08-10 14:25:28.787 | INFO    |__main__:<module>:133 - [RPA 4] parâmetros: referência forçada: 202604; DRY-RUN: todos os efeitos externos desligados
+2026-08-10 14:25:29.185 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-10 14:25:29.185 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db]
+2026-08-10 14:25:29.428 | INFO    |__main__:main:106 - [STEP] Iniciando: run
+2026-08-10 14:25:29.429 | INFO    |src.main.process_handle:run:18 - [STEP] Iniciando: RetificacaoController.retificar
+2026-08-10 14:25:29.429 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Processando 202604: procuro recuperações na contestação de 202603.
+2026-08-10 14:25:29.429 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Carregando tabela [tbl_rpa_log_detraf_despesa_contestacao]
+2026-08-10 14:25:29.433 | INFO    |comum.dados.repositorio_cache:obter_tabela:214 - Tabela [tbl_rpa_log_detraf_despesa_contestacao] carregada | Linhas: 36 | Colunas: 19
+2026-08-10 14:25:29.436 | INFO    |src.services.deteccao_recuperacao:detectar:85 - [HU-21] 32 linha(s) com tráfego recuperado em 202603.
+2026-08-10 14:25:29.436 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 025) ref 202603 tráfego 202601: 409534.6 min, R$ 2624.88
+2026-08-10 14:25:29.437 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 025) ref 202603 tráfego 202601: 10486.6 min, R$ 46.57
+2026-08-10 14:25:29.437 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 025) ref 202603 tráfego 202602: 465076.3 min, R$ 2970.4
+2026-08-10 14:25:29.437 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 025) ref 202603 tráfego 202602: 9513.9 min, R$ 41.82
+2026-08-10 14:25:29.437 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 025) ref 202603 tráfego 202603: 2746937.6 min, R$ 17342.34
+2026-08-10 14:25:29.437 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 143) ref 202603 tráfego 202603: 73454.8 min, R$ 323.96
+2026-08-10 14:25:29.437 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 012) ref 202603 tráfego 202603: 29.9 min, R$ 0.52
+2026-08-10 14:25:29.437 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 012) ref 202603 tráfego 202603: 0.5 min, R$ 0.01
+2026-08-10 14:25:29.437 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 012) ref 202603 tráfego 202602: 287.2 min, R$ 2.33
+2026-08-10 14:25:29.437 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 012) ref 202603 tráfego 202602: 20.4 min, R$ 0.16
+2026-08-10 14:25:29.437 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 012) ref 202603 tráfego 202603: 4776.4 min, R$ 38.980000000000004
+2026-08-10 14:25:29.437 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 012) ref 202603 tráfego 202603: 1407.6 min, R$ 11.44
+2026-08-10 14:25:29.437 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 012) ref 202603 tráfego 202603: 234.4 min, R$ 1.88
+2026-08-10 14:25:29.437 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 012) ref 202603 tráfego 202603: 4.2 min, R$ 0.03
+2026-08-10 14:25:29.437 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 012) ref 202603 tráfego 202602: 307.6 min, R$ 1.9100000000000001
+2026-08-10 14:25:29.438 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 012) ref 202603 tráfego 202603: 6295.8 min, R$ 39.6
+2026-08-10 14:25:29.438 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 012) ref 202603 tráfego 202603: 96.4 min, R$ 0.4
+2026-08-10 14:25:29.438 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 048) ref 202603 tráfego 202602: 786.0 min, R$ 5.31
+2026-08-10 14:25:29.438 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 048) ref 202603 tráfego 202602: 204.9 min, R$ 1.3800000000000001
+2026-08-10 14:25:29.438 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 048) ref 202603 tráfego 202602: 35.3 min, R$ 0.24
+2026-08-10 14:25:29.438 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 048) ref 202603 tráfego 202602: 10.3 min, R$ 0.06999999999999999
+2026-08-10 14:25:29.438 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 048) ref 202603 tráfego 202603: 510.9 min, R$ 3.49
+2026-08-10 14:25:29.438 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 048) ref 202603 tráfego 202603: 93.30000000000001 min, R$ 0.64
+2026-08-10 14:25:29.438 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 048) ref 202603 tráfego 202603: 27.9 min, R$ 0.19
+2026-08-10 14:25:29.438 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 034) ref 202603 tráfego 202602: 50.800000000000004 min, R$ 0.8
+2026-08-10 14:25:29.438 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 034) ref 202603 tráfego 202603: 294135.39999999997 min, R$ 4721.47
+2026-08-10 14:25:29.438 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 034) ref 202603 tráfego 202603: 43598.899999999994 min, R$ 502.05999999999995
+2026-08-10 14:25:29.438 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 143) ref 202603 tráfego 202602: 192830.7 min, R$ 1205.73
+2026-08-10 14:25:29.438 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 317) ref 202603 tráfego 202602: 3824.9 min, R$ 16.740000000000002
+2026-08-10 14:25:29.439 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 143) ref 202603 tráfego 202603: 3557495.7 min, R$ 22386.77
+2026-08-10 14:25:29.439 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 143) ref 202603 tráfego 202603: 70001.6 min, R$ 308.05
+2026-08-10 14:25:29.439 | INFO    |src.controllers.retificacao_controller:retificar:50 - [HU-21] Recuperação: ALGAR (EOT 143) ref 202603 tráfego 202603: 713.9 min, R$ 4.5
+2026-08-10 14:25:29.439 | WARNING |comum.utils.decoradores:wrapper:22 - [RPA 4] PERMITIR_ACESSO_AGI está desligado — as 32 recuperação(ões) acima foram calculadas e NÃO foram lançadas. É o modo de conferência.
+2026-08-10 14:25:29.439 | INFO    |src.main.process_handle:run:18 - [STEP] Finalizando: RetificacaoController.retificar | Tempo gasto: 0.01s
+2026-08-10 14:25:29.439 | INFO    |__main__:main:106 - [STEP] Finalizando: run | Tempo gasto: 0.01s
+2026-08-10 14:25:29.440 | INFO    |__main__:main:118 - [Diagnóstico] Etapas desta execução em [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\logs\LAPTOP-IKOLPRTI\rpa4_retificacao\diagnosticos\2026-08-10_14-25-28.txt].
+2026-08-10 14:25:29.440 | INFO    |__main__:<module>:133 - [RPA 4] Diagnóstico das etapas em [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\logs\LAPTOP-IKOLPRTI\rpa4_retificacao\diagnosticos\2026-08-10_14-25-28.txt]
+2026-08-10 15:12:17.880 | INFO    |comum.config.diagnostico:verificar_banco:376 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-10 15:12:17.880 | INFO    |comum.config.diagnostico:verificar_banco:376 - Utilizando SQLite local [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db]
+2026-08-10 16:52:39.550 | INFO    |comum.config.diagnostico:verificar_banco:376 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-10 16:52:39.551 | INFO    |comum.config.diagnostico:verificar_banco:376 - Utilizando SQLite local [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db]

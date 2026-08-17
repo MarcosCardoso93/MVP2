@@ -1,0 +1,303 @@
+from __future__ import annotations
+
+import os
+from typing import Optional
+
+import pandas as pd
+from loguru import logger
+from sqlalchemy import create_engine
+from sqlalchemy.engine import Engine
+
+from src.config.configuration import (
+    CAMINHO_SQLITE_DEV,
+    DATABASE_RPA,
+    HOST_BD_RPA,
+    PORT_BD_RPA,
+    SENHA_BD,
+    USUARIO_BD,
+)
+
+TABELAS_CACHE: list[str] = [
+    "tbl_anexo5_processado",
+    "tbl_detraf_tarifas",
+    "tbl_detraf_mapeamento_descritores",
+]
+
+
+class RepositorioCache:
+    """
+    Classe responsável por:
+
+    - Gerenciar conexão com banco
+    - Carregar tabelas em memória
+    - Disponibilizar DataFrames cacheados
+    - Reutilizar cache durante toda execução
+
+    As tabelas são carregadas apenas uma vez.
+    """
+
+    _instance: Optional["RepositorioCache"] = None
+    _engine: Optional[Engine] = None
+
+    def __new__(cls) -> "RepositorioCache":
+        """
+        Implementa padrão Singleton.
+        """
+
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+
+        return cls._instance
+
+    def __init__(self) -> None:
+        """
+        Inicializa o repositório de cache.
+        """
+
+        if hasattr(self, "_inicializado"):
+            return
+
+        self._inicializado = True
+
+        self.engine: Engine = self._obter_engine()
+
+        self.tabelas: dict[str, pd.DataFrame] = {}
+
+        self._carregar_tabelas()
+
+    @classmethod
+    def _obter_engine(cls) -> Engine:
+        """
+        Cria e reutiliza a engine do banco.
+        """
+
+        if cls._engine is not None:
+            return cls._engine
+
+        env: str = os.getenv("ENV", "dev").lower()
+
+        logger.info(f"Inicializando conexão banco ambiente [{env}]")
+
+        if env == "dev":
+
+            caminho_banco: str = CAMINHO_SQLITE_DEV
+
+            logger.info(f"Utilizando SQLite local [{caminho_banco}]")
+
+            cls._engine = create_engine(f"sqlite:///{caminho_banco}")
+
+            return cls._engine
+
+        logger.info((f"Conectando MySQL " f"[{HOST_BD_RPA}:{PORT_BD_RPA}]"))
+
+        cls._engine = create_engine(
+            (
+                f"mysql+pymysql://"
+                f"{USUARIO_BD}:{SENHA_BD}"
+                f"@{HOST_BD_RPA}:{PORT_BD_RPA}"
+                f"/{DATABASE_RPA}"
+            ),
+            pool_pre_ping=True,
+        )
+
+        return cls._engine
+
+    def _carregar_tabelas(self) -> None:
+        """
+        Carrega todas as tabelas configuradas
+        em memória.
+
+        Levanta exceção caso alguma tabela
+        não possa ser carregada.
+        """
+
+        logger.info("Iniciando carregamento tabelas em memória")
+
+        for nome_tabela in TABELAS_CACHE:
+
+            self.tabelas[nome_tabela] = self._carregar_tabela(nome_tabela=nome_tabela)
+
+        logger.info("Todas as tabelas foram carregadas com sucesso")
+
+    def _carregar_tabela(self, nome_tabela: str) -> pd.DataFrame:
+        """
+        Carrega uma tabela completa para memória.
+
+        Args:
+            nome_tabela:
+                Nome da tabela no banco.
+
+        Returns:
+            DataFrame contendo toda tabela.
+
+        Raises:
+            RuntimeError:
+                Caso ocorra erro ao carregar.
+        """
+
+        logger.info(f"Carregando tabela [{nome_tabela}]")
+
+        try:
+
+            df: pd.DataFrame = pd.read_sql(
+                sql=f"SELECT * FROM {nome_tabela}", con=self.engine
+            )
+
+            logger.info(
+                (
+                    f"Tabela [{nome_tabela}] carregada "
+                    f"com sucesso | "
+                    f"Linhas: {len(df)} | "
+                    f"Colunas: {len(df.columns)}"
+                )
+            )
+
+            return df
+
+        except Exception as erro:
+
+            mensagem_erro: str = f"Erro ao carregar tabela " f"[{nome_tabela}]: {erro}"
+
+            logger.error(mensagem_erro)
+
+            raise RuntimeError(mensagem_erro) from erro
+
+    def obter_tabela(self, nome_tabela: str) -> pd.DataFrame:
+        """
+        Retorna uma tabela carregada em memória.
+
+        Args:
+            nome_tabela:
+                Nome da tabela desejada.
+
+        Returns:
+            DataFrame da tabela.
+
+        Raises:
+            KeyError:
+                Caso tabela não exista no cache.
+        """
+
+        if nome_tabela not in self.tabelas:
+
+            raise KeyError((f"Tabela [{nome_tabela}] " f"não encontrada no cache"))
+
+        return self.tabelas[nome_tabela]
+
+    def _atualizar_cache_local(
+        self, nome_tabela: str, df_novos_dados: pd.DataFrame
+    ) -> None:
+        """
+        Atualiza o cache em memória RAM concatenando os novos dados inseridos
+        ao DataFrame já existente, evitando um novo SELECT no banco de dados.
+        """
+        if df_novos_dados is None or df_novos_dados.empty:
+            return
+
+        logger.info(f"Sincronizando cache em memória para a tabela [{nome_tabela}].")
+
+        # 1. Se a tabela já existir no cache, concatena os dados novos ao final dela
+        if nome_tabela in self.tabelas:
+            self.tabelas[nome_tabela] = pd.concat(
+                [self.tabelas[nome_tabela], df_novos_dados], ignore_index=True
+            )
+        else:
+            # 2. Se for uma tabela nova que não estava no cache original, inicializa ela com uma cópia dos dados
+            self.tabelas[nome_tabela] = df_novos_dados.copy()
+
+        logger.info(
+            f"Cache da tabela [{nome_tabela}] atualizado com sucesso. "
+            f"Total atual em memória: {len(self.tabelas[nome_tabela])} linhas."
+        )
+
+    def salvar_dados_tabela_despesa(self, df_consolidado: pd.DataFrame) -> None:
+        """
+        Insere o DataFrame consolidado de resultados diretamente na tabela
+        'tbl_detraf_despesa_arquivos' utilizando a conexão ativa da Engine.
+
+        Garante alta performance em lotes e proteção contra falhas de I/O.
+        """
+        # 1. Validação de segurança: Impede chamadas desnecessárias se não houver dados
+        if df_consolidado is None or df_consolidado.empty:
+            logger.info(
+                "Nenhum registro encontrado para inserção na tabela [tbl_detraf_despesa_arquivos]."
+            )
+            return
+
+        nome_tabela = "tbl_detraf_despesa_arquivos"
+        total_linhas = len(df_consolidado)
+
+        logger.info(
+            f"Iniciando a inserção de {total_linhas} registro(s) na tabela [{nome_tabela}]."
+        )
+
+        try:
+            # 2. Execução da escrita blindada em banco de dados
+            df_consolidado.to_sql(
+                name=nome_tabela,
+                con=self.engine,
+                if_exists="append",  # Mantém o histórico e adiciona os novos dados ao final
+                index=False,  # Ignora o índice do Pandas (permite que o 'id' PK auto-increment do banco funcione)
+                chunksize=1000,  # Fraciona em blocos de 1000 para mitigar estouro de memória/timeout
+            )
+
+            logger.info(
+                f"Sucesso: {total_linhas} registro(s) foram persistidos com êxito na "
+                f"tabela original [{nome_tabela}]."
+            )
+
+        except Exception as erro:
+            mensagem_erro = (
+                f"Falha crítica ao tentar inserir o lote de dados na tabela [{nome_tabela}]. "
+                f"Motivo do banco: {erro}"
+            )
+            logger.error(mensagem_erro)
+
+            # Levanta uma exceção tratada para interromper a esteira do RPA de forma segura
+            raise RuntimeError(mensagem_erro) from erro
+
+    def salvar_dados_tabela_contestacao(self, df_contestacao: pd.DataFrame) -> None:
+        """
+        Insere o DataFrame de análise de contestação (aba Contest, H9/H10)
+        diretamente na tabela 'tbl_rpa_log_detraf_despesa_contestacao'.
+
+        Schema conforme 'DOCS/Outros arquivos auxiliares/Tabelas para o RPA
+        alimentar o Webfat - despesa.xlsx' (aba 'Contestação'). As colunas
+        'id' (AI PK) e 'created_at' (default do banco) não são enviadas.
+        """
+        if df_contestacao is None or df_contestacao.empty:
+            logger.info(
+                "Nenhum registro encontrado para inserção na tabela "
+                "[tbl_rpa_log_detraf_despesa_contestacao]."
+            )
+            return
+
+        nome_tabela = "tbl_rpa_log_detraf_despesa_contestacao"
+        total_linhas = len(df_contestacao)
+
+        logger.info(
+            f"Iniciando a inserção de {total_linhas} registro(s) na tabela [{nome_tabela}]."
+        )
+
+        try:
+            df_contestacao.to_sql(
+                name=nome_tabela,
+                con=self.engine,
+                if_exists="append",
+                index=False,
+                chunksize=1000,
+            )
+
+            logger.info(
+                f"Sucesso: {total_linhas} registro(s) foram persistidos com êxito na "
+                f"tabela [{nome_tabela}]."
+            )
+
+        except Exception as erro:
+            mensagem_erro = (
+                f"Falha crítica ao tentar inserir o lote de dados na tabela [{nome_tabela}]. "
+                f"Motivo do banco: {erro}"
+            )
+            logger.error(mensagem_erro)
+
+            raise RuntimeError(mensagem_erro) from erro

@@ -1,0 +1,11 @@
+<application xmlns="http://ns.adobe.com/air/application/1.5.3">
+    <id>br.com.triad.portal</id>
+    <version>1.5.3</version>
+    <filename>Portal AIR</filename>
+    <initialWindow>
+        <content>index.html</content>
+        <visible>true</visible>
+        <width>700</width>
+        <height>650</height>
+    </initialWindow>
+</application>

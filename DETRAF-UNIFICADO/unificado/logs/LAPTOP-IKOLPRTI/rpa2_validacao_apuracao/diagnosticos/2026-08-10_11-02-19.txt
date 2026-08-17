@@ -1,0 +1,54 @@
+======================================================================
+EXECUÇÃO
+======================================================================
+robô:       rpa2_validacao_apuracao
+referência: (mês corrente -1)
+início:     2026-08-10 11:02:19
+duração:    0.6s
+desfecho:   OK
+parâmetro:  parâmetros: apenas a etapa: validacao
+
+======================================================================
+AMBIENTE
+======================================================================
+robô: rpa2_validacao_apuracao
+modo: DEV  (de ENV)
+log: nível INFO (de LOG_LEVEL), diagnose ligado
+competência: 202603  (forçada por COMPETENCIA)
+banco: SQLite [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db] (de CAMINHO_SQLITE)
+AGI: ambiente [producao] host [10.238.6.120] (de AGI_AMBIENTE) | executável [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
+EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: desligado | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado
+
+======================================================================
+ETAPA 1/3: arranque   [ok]   0.6s
+======================================================================
+produziu:
+  módulos carregados, banco resolvido
+
+======================================================================
+ETAPA 2/3: validacao   [ok]   0.0s
+======================================================================
+entrada:
+  CAMINHO_OPERADORAS = C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\arquivos\Operadoras
+  CAMINHO_EXPECTATIVA_DETRAF = C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\arquivos\Expectativa
+produziu:
+  Detraf válidos:           0
+  Detraf inválidos:         0
+  Expectativa válidos:      0
+  Expectativa inválidos:    0
+  
+  Operadoras sem Detraf no mês (1):
+    MEGATELECOM
+
+======================================================================
+ETAPA 3/3: batimento   [pulada]   0.0s
+======================================================================
+motivo: pulada por --etapa=validacao
+
+======================================================================
+LOG COMPLETO
+======================================================================
+C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\logs
+
+Este arquivo é o resumo por etapa. O log tem a sequência completa,
+linha a linha, de tudo o que a execução fez.

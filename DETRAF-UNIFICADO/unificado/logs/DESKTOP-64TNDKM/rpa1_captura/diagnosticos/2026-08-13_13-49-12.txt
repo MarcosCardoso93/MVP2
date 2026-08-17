@@ -1,0 +1,297 @@
+======================================================================
+EXECUÇÃO
+======================================================================
+robô:       rpa1_captura
+referência: (mês corrente -1)
+início:     2026-08-13 13:49:12
+duração:    12.3s
+desfecho:   OK
+parâmetro:  parâmetros: apenas a etapa: processamento
+
+======================================================================
+AMBIENTE
+======================================================================
+robô: rpa1_captura
+modo: DEV  (de ENV)
+log: nível INFO (de LOG_LEVEL), diagnose ligado
+competência: 202607  (mês anterior ao corrente)
+banco: SQLite [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db] (de CAMINHO_SQLITE)
+AGI: ambiente [producao] host [10.238.6.120] (de AGI_AMBIENTE) | executável [C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
+EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: desligado | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado | download SFTP: desligado
+
+======================================================================
+ETAPA 1/3: arranque   [ok]   1.0s
+======================================================================
+produziu:
+  módulos carregados, banco resolvido
+
+======================================================================
+ETAPA 2/3: captura   [pulada]   0.0s
+======================================================================
+motivo: pulada — os arquivos vêm de DIRETORIO_ENTRADA, e o remetente de cada um, do rastreamento da captura anterior.
+
+======================================================================
+ETAPA 3/3: processamento   [ok]   11.2s
+======================================================================
+entrada:
+  CAMINHO_OPERADORAS = C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\Operadoras
+  DIRETORIO_QUARENTENA = C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\arquivos\_QUARENTENA
+  arquivos recebidos = varredura da entrada
+produziu:
+  Arquivos salvos:          32
+  Reprovados na validação:  81
+  Não identificados:        0
+  Com erro:                 0
+  
+  Reprovados (vão para a quarentena, não para a operadora):
+    Claro SMP - Receita - Rede SIP - 07.2026 - Enviado TLF.xlsx (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    Ampernet_Vivo_202607.csv (Ampernet)
+        Coluna 10 (Minutos): os minutos admitem no máximo 1 casa decimal.
+        operadora notificada: NÃO
+    Detraf Nova x TLF_011 202605.csv (Nova Tecnologia e Telecomunicacoes)
+        Coluna 3 (Referência): a referência precisa ser 202607 (AAAAMM) em todas as linhas.
+        operadora notificada: NÃO
+    Detraf Nova x Vivo SMP 202605.csv (Nova Tecnologia e Telecomunicacoes)
+        Coluna 3 (Referência): a referência precisa ser 202607 (AAAAMM) em todas as linhas.
+        operadora notificada: NÃO
+    VIVO.xlsx (Tcheturbo Internet Provider)
+        Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+        operadora notificada: NÃO
+    Declaração de Tráfego UFINET x VIVO SMP 07-2026.xlsx (UFINET BRASIL)
+        Coluna 10 (Minutos): os minutos admitem no máximo 1 casa decimal.
+        operadora notificada: NÃO
+    detraf_202607_O51_010.csv (Union)
+        posição 9 (Minutos): esperado número, encontrado "279.377,05", "4.276,35", "nan" [2/5 válidos]
+        operadora notificada: NÃO
+    detraf_202607_O51_011.csv (Union)
+        posição 9 (Minutos): esperado número, encontrado "167.921,31", "3.128,81", "nan" [0/3 válidos]
+        operadora notificada: NÃO
+    DETRAF_IDT_TELEFONICA_07-2026_CRED.csv (IDT Brasil)
+        Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+        operadora notificada: NÃO
+    DETRAF_IDT_VIVO_07-2026_CRED.csv (IDT Brasil)
+        Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+        operadora notificada: NÃO
+    expectativa-telefonica-brasil-smp-c-vc1-202607.xlsx (Gigalink)
+        posição 9 (Minutos): esperado número, encontrado "72,370.7", "6,291.4", "nan" [1/4 válidos]
+        operadora notificada: NÃO
+    expectativa-telefonica-brasil-stfc-c-ldn-202607.xlsx (Gigalink)
+        Coluna 10 (Minutos): os minutos admitem no máximo 1 casa decimal.
+        operadora notificada: NÃO
+    DETRAF VMAX x TELEFONICA LDN_202607.xlsx (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    DETRAF VMAX x TELEFONICA SMP_202607.xlsx (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    Declaração de Tráfego G30 x VIVO SMP 07-2026.xls (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    Declaração de Tráfego VOCÊ TELECOM x VIVO SMP_202607.xls (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    DETRAF_FINAL_202607_HOME_TELEFONICA_C_20260804195316_ITX.csv (Claro SMP)
+        Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+        operadora notificada: NÃO
+    DETRAF_FINAL_202607_HOME_VIVO_STFC_C_20260804195317_ITX.csv (Claro SMP)
+        Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+        operadora notificada: NÃO
+    DETRAF_FINAL_202607_HOME_VIVO_C_20260804195317_ITX.csv (Claro SMP)
+        Colunas 12 a 15 (valores financeiros): os valores financeiros admitem no máximo 2 casas decimais.
+        operadora notificada: NÃO
+    DETRAF-TMCO-0128-2026-ITELCO-VIVO SMP- RESUMO_EOT -10_202607.xls (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    Declaração de Tráfego DUARTE DIAS x VIVO LD_07-2026.xls (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    Declaração de Tráfego DUARTE DIAS x VIVO SMP_07-2026.xls (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    Declaração de Tráfego JP x VIVO LD_07-2026.xls (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    Declaração de Tráfego JP x VIVO SMP_07-2026.xls (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    Declaração de Tráfego FLEXUS x VIVO LD_07-2026.xls (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    Declaração de Tráfego FLEXUS x VIVO SMP_07-2026.xls (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    Declaração de Tráfego BRA x VIVO LD_07-2026.xls (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    Declaração de Tráfego BRA x VIVO SMP_07-2026.xls (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    DETRAF-TMCO-0122-2026-GGNET-VIVO STFC - RESUMO_EOT_200_948_202607.xls (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    DETRAF-TMCO-0123-2026-GGNET-VIVO SMP - RESUMO EOT_044_045_202607.xls (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    BALANCE_ALGAR_X_VIVO_SMP_R_202607_V00.csv (Algar)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    DETRAT_ALGAR_X_VIVO_SMP_R_202607_V00.csv (Algar)
+        Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+        operadora notificada: NÃO
+    DETRAT_ALGAR_X_VIVO_STFC_R_202607_V00.csv (Algar)
+        Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+        operadora notificada: NÃO
+    DETRAF_ONE_Telefonica-GVT-Julho-2026.xlsx (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    DETRAF_ONE_Vivo-Julho-2026.xlsx (One Telecom)
+        Coluna 10 (Minutos): os minutos admitem no máximo 1 casa decimal.
+        operadora notificada: NÃO
+    DETRAF VIVO - CICLO 072026.csv (Duo Telecom)
+        Coluna 10 (Minutos): os minutos admitem no máximo 1 casa decimal.
+        operadora notificada: NÃO
+    MUNDIVOX_VIVO_202607.csv (Mundivox)
+        Coluna 10 (Minutos): os minutos admitem no máximo 1 casa decimal.
+        operadora notificada: NÃO
+    DETRAF_SOTHIS_X_VIVO_202607.xlsx (Sothis)
+        Coluna 11 (Tarifa): a tarifa admite no máximo 5 casas decimais e não pode ser zero.
+        operadora notificada: NÃO
+    DETRAF_FINAL_202607_HOME_VIVO_C_20260804195236_SMS.csv (Claro STFC)
+        posição 7 (GH): esperado S, R, N ou D, encontrado "F", "nan", "F" [0/200 válidos]
+        operadora notificada: NÃO
+    DETRAF CLARO STFC LD X TELEFONICA 202607.xls (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    DETRAF CLARO STFC LD X VIVO SMP 202607.xls (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    DETRAF CLARO STFC LD X VIVO STFC 202607.xls (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    DETRAF CLARO STFC LC X TELEFONICA 202607.xls (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    DETRAF CLARO STFC LC X VIVO SMP 202607.xls (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    DETRAF CLARO STFC LC X VIVO STFC 202607.xls (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    D_IPCorp_Telecom_Vivo_-_Fixa_LD_202607.XLS (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    D_IPCorp_Telecom_Vivo_-_Móvel_LC_202607.xls (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    D_IPCorp_Telecom_Vivo_-_Móvel_LD_202607.XLS (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    detraf_072026_credor.xlsx (Xturbo Provedor de Internet EIRELI)
+        posição 1 (Devedora): esperado EOT (Anexo 5), encontrado "Xturbo Provedor de Internet EIRELI", "Xturbo Provedor de Internet EIRELI", "Xturbo Provedor de Internet EIRELI" [0/5 válidos]
+        operadora notificada: NÃO
+    LYTUX - 07.2026  - VIVO.xlsx (Lytux - PABX Virtual & Telefonia IP)
+        Coluna 10 (Minutos): os minutos admitem no máximo 1 casa decimal.
+        operadora notificada: NÃO
+    NOVACIA - 07.2026 - VIVO.xlsx (Novacia Telecom)
+        Coluna 2 (EOT da Vivo): a coluna da devedora traz EOT que não corresponde a nenhum nome fantasia da Vivo.
+        operadora notificada: NÃO
+    DETRAF-TMCO-0116-2026-PREDLINK-VIVO SMP - RESUMO_EOT 20-202607.xls (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    Detraf Credora Mundo (EOT A04) x Devedora Vivo (EOT 030) - Agosto.2026.csv (Mundo Telecom)
+        Colunas 12 a 15 (valores financeiros): os valores financeiros admitem no máximo 2 casas decimais.
+        operadora notificada: NÃO
+    Detraf Credora Mundo (EOT A04) x Devedora Vivo (EOT 931) - Agosto.2026.csv (Mundo Telecom)
+        Colunas 12 a 15 (valores financeiros): os valores financeiros admitem no máximo 2 casas decimais.
+        operadora notificada: NÃO
+    SEA - 07.2026 - VIVO.xlsx (Sea Telecom)
+        Coluna 10 (Minutos): os minutos admitem no máximo 1 casa decimal.
+        operadora notificada: NÃO
+    RAMAL VIRTUAL - 07.2026  -  VIVO.xlsx (Ramalvirtual Telecomunicacoes)
+        Coluna 10 (Minutos): os minutos admitem no máximo 1 casa decimal.
+        operadora notificada: NÃO
+    ROCKETNET - 07.2026 - VIVO.xlsx (Rocketnet)
+        Coluna 3 (Referência): a referência precisa ser 202607 (AAAAMM) em todas as linhas.
+        operadora notificada: NÃO
+    202607 Detraf RS-SC C LD STFC Unifique X STFC Telefonica Brasil.xlsx (Unifique)
+        Coluna 10 (Minutos): os minutos admitem no máximo 1 casa decimal.
+        operadora notificada: NÃO
+    ITANET -  07.2026 - VIVO.xlsx (ITANET)
+        Coluna 10 (Minutos): os minutos admitem no máximo 1 casa decimal.
+        operadora notificada: NÃO
+    FORZA -  07.2026 - VIVO.xlsx (FORZA TELECOMUNICACOES LTDA)
+        Coluna 10 (Minutos): os minutos admitem no máximo 1 casa decimal.
+        operadora notificada: NÃO
+    GMARX - 07.2026 - VIVO.xlsx (Vivo)
+        Coluna 2 (EOT da Vivo): a coluna da devedora traz EOT que não corresponde a nenhum nome fantasia da Vivo.
+        operadora notificada: NÃO
+    CDI - 07.2026 - VIVO.xlsx (CDI Telecom)
+        Coluna 10 (Minutos): os minutos admitem no máximo 1 casa decimal.
+        operadora notificada: NÃO
+    202607 Detraf RS-SC C LC STFC Unifique X SMP Telefonica Brasil.xlsx (Unifique)
+        Coluna 10 (Minutos): os minutos admitem no máximo 1 casa decimal.
+        operadora notificada: NÃO
+    DETRAT_DATORA_STFC_X_TELEFONICA_BRASIL___STFC_STFC_R_072026_V00.csv (Datora)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    DETRAT_DATORA_STFC_X_TELEFONICA_BRASIL___STFC_STFC_R_072026_V00.xlsx (Datora)
+        posição 7 (GH): esperado S, R, N ou D, encontrado "TNENL", "TNENI", "TNENI" [0/200 válidos]
+        operadora notificada: NÃO
+    detraf_202607_VIVO_SMP.csv (FALE SEMPRE)
+        Coluna 10 (Minutos): os minutos admitem no máximo 1 casa decimal.
+        operadora notificada: NÃO
+    detraf_202607_VIVO_STFC.csv (FALE SEMPRE)
+        Coluna 10 (Minutos): os minutos admitem no máximo 1 casa decimal.
+        operadora notificada: NÃO
+    Detraf TVN Vivo_072026.csv (TVN VOZ)
+        Tarifas remuneradas: há linhas cuja tarifa não corresponde à tarifa regulada vigente para a região, o grupo horário e o mês de tráfego da linha.
+        operadora notificada: NÃO
+    Solução Network - VIVO (FIXA) - DETRAF - JULHO 2026.csv (Solucao Network)
+        Coluna 11 (Tarifa): a tarifa admite no máximo 5 casas decimais e não pode ser zero.
+        operadora notificada: NÃO
+    Solução Network - VIVO (MOVEL) - DETRAF - JULHO 2026.csv (Solucao Network)
+        Coluna 11 (Tarifa): a tarifa admite no máximo 5 casas decimais e não pode ser zero.
+        operadora notificada: NÃO
+    DÉBITOS VIVO.xlsx (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    EC FALE SEMPRE - 202605.xlsx (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    EC VIVO - FSM 202602.xlsx (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    EC VIVO FSM 202606.xlsx (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    EC VIVO AGERA 202606.xlsx (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    EC VIVO FSM 202604.xlsx (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    EC VIVO FSM 202605.xlsx (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    EC VIVO FSM 202606.xlsx (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    EC INTEREDE 202604.xlsx (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    EC INTEREDE 202605.xlsx (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+    EC INTEREDE 202606.xlsx (Claro STFC)
+        o arquivo não pôde ser lido (formato, codificação ou conteúdo corrompido).
+        operadora notificada: NÃO
+
+======================================================================
+LOG COMPLETO
+======================================================================
+C:\projetos\MVP2\MVP2\MVP2\DETRAF-UNIFICADO\unificado\logs
+
+Este arquivo é o resumo por etapa. O log tem a sequência completa,
+linha a linha, de tudo o que a execução fez.

@@ -1,0 +1,59 @@
+======================================================================
+EXECUÇÃO
+======================================================================
+robô:       rpa2_validacao_apuracao
+referência: (mês corrente -1)
+início:     2026-08-10 16:50:48
+duração:    0.6s
+desfecho:   OK
+parâmetro:  parâmetros: apenas a etapa: expectativa; origem simulada em disco: Insumos/Expectativa
+
+======================================================================
+AMBIENTE
+======================================================================
+robô: rpa2_validacao_apuracao
+modo: DEV  (de ENV)
+log: nível INFO (de LOG_LEVEL), diagnose ligado
+competência: 202603  (forçada por COMPETENCIA)
+banco: SQLite [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db] (de CAMINHO_SQLITE)
+AGI: ambiente [producao] host [10.238.6.120] (de AGI_AMBIENTE) | executável [C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
+EFEITOS EXTERNOS -> e-mail: desligado | upload AGI: desligado | acesso AGI: desligado | e-mail à operadora (RPA 1): desligado | download SFTP: desligado
+
+======================================================================
+ETAPA 1/4: arranque   [ok]   0.6s
+======================================================================
+produziu:
+  módulos carregados, banco resolvido
+
+======================================================================
+ETAPA 2/4: expectativa   [ok]   0.0s
+======================================================================
+entrada:
+  origem = Insumos/Expectativa
+  destino = C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\arquivos\Expectativa
+produziu:
+  Origem:                   disco [Insumos\Expectativa]
+  Período procurado:        202603
+  Arquivos baixados:        4
+    TLF/DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_TLF_D.csv
+    TLF/DETRAF_FINAL_VIVO_202603_T_ALGAR_STF_TLF_D.csv
+    Vivo/DETRAF_FINAL_VIVO_202603_N_ALGAR_SMP_VIVO_D.csv
+    Vivo/DETRAF_FINAL_VIVO_202603_N_ALGAR_STF_VIVO_D.csv
+
+======================================================================
+ETAPA 3/4: validacao   [pulada]   0.0s
+======================================================================
+motivo: pulada por --etapa=expectativa. O batimento lê o que ela registrou: se não rodou neste mês, o resultado sai vazio — e não é defeito.
+
+======================================================================
+ETAPA 4/4: batimento   [pulada]   0.0s
+======================================================================
+motivo: pulada por --etapa=expectativa
+
+======================================================================
+LOG COMPLETO
+======================================================================
+C:\Users\btime\Desktop\Projetos\detraf unificado\DETRAF-UNIFICADO\unificado\logs
+
+Este arquivo é o resumo por etapa. O log tem a sequência completa,
+linha a linha, de tudo o que a execução fez.

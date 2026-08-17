@@ -1,0 +1,59 @@
+2026-08-04 12:12:37.931 | WARNING |test_envio_email_contestacao:test_pasta_inexistente_devolve_nada_sem_levantar:70 - [HU-15] Pasta de contestações não encontrada para OPERADORA_SEM_PASTA/202507: [C:\Users\btime\AppData\Local\Temp\pytest-of-btime\pytest-279\test_pasta_inexistente_devolve0\Operadoras\OPERADORA_SEM_PASTA\2025\202507\Contestações].
+2026-08-04 12:12:37.935 | WARNING |test_envio_email_contestacao:test_env_de_outro_mes_nao_e_confundido:81 - [HU-15] Arquivo _ENV não encontrado: [C:\Users\btime\AppData\Local\Temp\pytest-of-btime\pytest-279\test_env_de_outro_mes_nao_e_co0\Operadoras\CLARO\2025\202507\Contestações\Base Contestação_CLARO_202507_ENV.xlsx].
+2026-08-04 12:12:37.935 | WARNING |test_envio_email_contestacao:test_env_de_outro_mes_nao_e_confundido:81 - [HU-15] Carta CT não encontrada em [C:\Users\btime\AppData\Local\Temp\pytest-of-btime\pytest-279\test_env_de_outro_mes_nao_e_co0\Operadoras\CLARO\2025\202507\Contestações].
+2026-08-04 12:12:37.942 | WARNING |test_envio_email_contestacao:test_duas_cartas_usa_a_mais_recente:98 - [HU-15] 2 cartas em [C:\Users\btime\AppData\Local\Temp\pytest-of-btime\pytest-279\test_duas_cartas_usa_a_mais_re0\Operadoras\CLARO\2025\202507\Contestações] para CLARO/202507 — usando a mais recente: [CT - 364.docx].
+2026-08-04 12:12:37.943 | WARNING |test_envio_email_contestacao:test_destinatarios_bloqueado_na_q16:107 - [HU-15] Contatos de 'CLARO' indisponíveis: a tabela de contatos do WebFat ainda não foi informada pelo cliente (pendência Q16).
+2026-08-04 12:12:37.943 | WARNING |test_envio_email_contestacao:test_busca_de_sinalizadas_nao_devolve_nada_sem_controle_de_reenvio:110 - [HU-15] Busca de contestações sinalizadas ainda não ligada: falta a coluna que marca o e-mail como enviado, sem a qual não há proteção contra reenvio.
+2026-08-04 12:12:37.948 | INFO    |test_envio_email_contestacao:test_sem_destinatario_nao_envia_e_acusa:122 - [STEP] Iniciando: enviar_contestacao
+2026-08-04 12:12:37.948 | WARNING |src.services.envio_email_contestacao:enviar_contestacao:192 - [HU-15] Contatos de 'CLARO' indisponíveis: a tabela de contatos do WebFat ainda não foi informada pelo cliente (pendência Q16).
+2026-08-04 12:12:37.949 | INFO    |test_envio_email_contestacao:test_sem_destinatario_nao_envia_e_acusa:122 - [STEP] Finalizando: enviar_contestacao | Tempo gasto: 0.0s
+2026-08-04 12:12:37.953 | INFO    |test_envio_email_contestacao:test_falta_de_anexo_e_nomeada_no_erro:133 - [STEP] Iniciando: enviar_contestacao
+2026-08-04 12:12:37.953 | WARNING |src.services.envio_email_contestacao:enviar_contestacao:193 - [HU-15] Arquivo _ENV não encontrado: [C:\Users\btime\AppData\Local\Temp\pytest-of-btime\pytest-279\test_falta_de_anexo_e_nomeada_0\Operadoras\CLARO\2025\202507\Contestações\Base Contestação_CLARO_202507_ENV.xlsx].
+2026-08-04 12:12:37.954 | WARNING |src.services.envio_email_contestacao:enviar_contestacao:193 - [HU-15] Carta CT não encontrada em [C:\Users\btime\AppData\Local\Temp\pytest-of-btime\pytest-279\test_falta_de_anexo_e_nomeada_0\Operadoras\CLARO\2025\202507\Contestações].
+2026-08-04 12:12:37.955 | INFO    |test_envio_email_contestacao:test_falta_de_anexo_e_nomeada_no_erro:133 - [STEP] Finalizando: enviar_contestacao | Tempo gasto: 0.0s
+2026-08-04 12:12:37.961 | INFO    |test_envio_email_contestacao:test_kill_switch_desligado_monta_e_nao_envia:144 - [STEP] Iniciando: enviar_contestacao
+2026-08-04 12:12:37.961 | INFO    |comum.utils.decoradores:wrapper:22 - [MODO SEGURO] PERMITIR_ENVIO_EMAIL=false — e-mail montado e não enviado: 'CONTESTAÇÃO_TBRA|CLARO_202507' para ['op@exemplo.com'], anexos [CT - 363.docx, Base Contestação_CLARO_202507_ENV.xlsx].
+2026-08-04 12:12:37.961 | INFO    |test_envio_email_contestacao:test_kill_switch_desligado_monta_e_nao_envia:144 - [STEP] Finalizando: enviar_contestacao | Tempo gasto: 0.0s
+2026-08-04 12:12:37.966 | INFO    |test_envio_email_contestacao:test_com_tudo_pronto_envia_carta_e_env:155 - [STEP] Iniciando: enviar_contestacao
+2026-08-04 12:12:37.966 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-15] Contestação de CLARO/202507 enviada para ['op@exemplo.com'].
+2026-08-04 12:12:37.966 | INFO    |test_envio_email_contestacao:test_com_tudo_pronto_envia_carta_e_env:155 - [STEP] Finalizando: enviar_contestacao | Tempo gasto: 0.0s
+2026-08-04 12:12:37.985 | INFO    |test_upload_agi:test_operadora_sem_pasta_nao_quebra:76 - [HU-17] Sem pasta AGI para INEXISTENTE/202507: [C:\Users\btime\AppData\Local\Temp\pytest-of-btime\pytest-279\test_operadora_sem_pasta_nao_q0\Operadoras\INEXISTENTE\2025\202507\AGI].
+2026-08-04 12:12:37.990 | INFO    |test_upload_agi:test_arquivo_de_outro_tipo_na_pasta_e_ignorado:81 - [HU-17] Nenhum EXT/INT em [C:\Users\btime\AppData\Local\Temp\pytest-of-btime\pytest-279\test_arquivo_de_outro_tipo_na_0\Operadoras\CLARO\2025\202507\AGI].
+2026-08-04 12:12:38.007 | INFO    |test_upload_agi:test_a_carta_e_o_env_da_mesma_pasta_nao_entram:108 - [HU-18] Nenhum CONT_PROC_MASCARA em [C:\Users\btime\AppData\Local\Temp\pytest-of-btime\pytest-279\test_a_carta_e_o_env_da_mesma_0\Operadoras\CLARO\2025\202507\Contestações].
+2026-08-04 12:12:38.012 | INFO    |test_upload_agi:test_hu17_nao_abre_o_agi_com_o_switch_desligado:117 - [STEP] Iniciando: UploadDetrafAGI.executar
+2026-08-04 12:12:38.012 | INFO    |comum.utils.decoradores:wrapper:22 - [MODO SEGURO] PERMITIR_UPLOAD_AGI=false — 2 arquivo(s) pendente(s), nada enviado ao AGI:
+2026-08-04 12:12:38.013 | INFO    |comum.utils.decoradores:wrapper:22 -   CLARO: DE_AGI_D_202507_TBRA_X_CLARO_EXT.txt
+2026-08-04 12:12:38.013 | INFO    |comum.utils.decoradores:wrapper:22 -   CLARO: DE_AGI_D_202507_TBRA_X_CLARO_INT.txt
+2026-08-04 12:12:38.013 | INFO    |test_upload_agi:test_hu17_nao_abre_o_agi_com_o_switch_desligado:117 - [STEP] Finalizando: UploadDetrafAGI.executar | Tempo gasto: 0.0s
+2026-08-04 12:12:38.016 | INFO    |test_upload_agi:test_hu18_nao_abre_o_agi_com_o_switch_desligado:128 - [STEP] Iniciando: UploadContestacaoAGI.executar
+2026-08-04 12:12:38.017 | INFO    |comum.utils.decoradores:wrapper:22 - [MODO SEGURO] PERMITIR_UPLOAD_AGI=false — 1 arquivo(s) de contestação pendente(s), nada enviado ao AGI:
+2026-08-04 12:12:38.017 | INFO    |comum.utils.decoradores:wrapper:22 -   CLARO: CONT_PROC_MASCARA_CLARO_202507.xlsx
+2026-08-04 12:12:38.017 | INFO    |test_upload_agi:test_hu18_nao_abre_o_agi_com_o_switch_desligado:128 - [STEP] Finalizando: UploadContestacaoAGI.executar | Tempo gasto: 0.0s
+2026-08-04 12:12:38.020 | INFO    |test_upload_agi:test_sem_pendencia_o_agi_nao_e_aberto_nem_com_o_switch_ligado:138 - [STEP] Iniciando: UploadDetrafAGI.executar
+2026-08-04 12:12:38.020 | INFO    |src.services.upload_detraf_agi:executar:158 - [HU-17] Sem pasta AGI para CLARO/202507: [C:\Users\btime\AppData\Local\Temp\pytest-of-btime\pytest-279\test_sem_pendencia_o_agi_nao_e0\Operadoras\CLARO\2025\202507\AGI].
+2026-08-04 12:12:38.020 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-17] Nada pendente em EXT/INT; nada a fazer.
+2026-08-04 12:12:38.020 | INFO    |test_upload_agi:test_sem_pendencia_o_agi_nao_e_aberto_nem_com_o_switch_ligado:138 - [STEP] Finalizando: UploadDetrafAGI.executar | Tempo gasto: 0.0s
+2026-08-04 12:12:38.021 | WARNING |test_upload_agi:test_sem_diretorio_configurado_nao_grava_e_nao_quebra:147 - [HU-17] DIRETORIO_EVIDENCIAS não configurado — evidência não capturada.
+2026-08-04 12:12:38.024 | WARNING |test_upload_agi:test_falha_na_captura_nao_derruba_o_upload:158 - [HU-17] Falha ao capturar evidência em [C:\Users\btime\AppData\Local\Temp\pytest-of-btime\pytest-279\test_falha_na_captura_nao_derr0\evidencias\evidencia_arquivo_20260804_121238.png]: sem display
+2026-08-04 14:05:26.931 | INFO    |test_upload_agi:test_operadora_sem_pasta_nao_quebra:76 - [HU-17] Sem pasta AGI para INEXISTENTE/202507: [C:\Users\btime\AppData\Local\Temp\pytest-of-btime\pytest-289\test_operadora_sem_pasta_nao_q0\Operadoras\INEXISTENTE\2025\202507\AGI].
+2026-08-04 14:05:26.936 | INFO    |test_upload_agi:test_arquivo_de_outro_tipo_na_pasta_e_ignorado:81 - [HU-17] Nenhum EXT/INT em [C:\Users\btime\AppData\Local\Temp\pytest-of-btime\pytest-289\test_arquivo_de_outro_tipo_na_0\Operadoras\CLARO\2025\202507\AGI].
+2026-08-04 14:05:27.357 | INFO    |test_upload_agi:test_le_da_mesma_pasta_em_que_a_hu16_grava:118 - [STEP] Iniciando: gerar_arquivo_cont_proc
+2026-08-04 14:05:27.571 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-16 CONT_PROC] Arquivo gravado em [C:\Users\btime\AppData\Local\Temp\pytest-of-btime\pytest-289\test_le_da_mesma_pasta_em_que_0\Operadoras\CLARO\2025\202507\AGI\CONT_PROC_MASCARA_CLARO_202507.xlsx].
+2026-08-04 14:05:27.571 | INFO    |test_upload_agi:test_le_da_mesma_pasta_em_que_a_hu16_grava:118 - [STEP] Finalizando: gerar_arquivo_cont_proc | Tempo gasto: 0.21s
+2026-08-04 14:05:27.578 | INFO    |test_upload_agi:test_o_ext_e_o_int_da_mesma_pasta_nao_entram:136 - [HU-18] Nenhum CONT_PROC_MASCARA em [C:\Users\btime\AppData\Local\Temp\pytest-of-btime\pytest-289\test_o_ext_e_o_int_da_mesma_pa0\Operadoras\CLARO\2025\202507\AGI].
+2026-08-04 14:05:27.583 | INFO    |test_upload_agi:test_a_carta_e_o_env_nao_entram:144 - [HU-18] Sem pasta AGI para CLARO/202507: [C:\Users\btime\AppData\Local\Temp\pytest-of-btime\pytest-289\test_a_carta_e_o_env_nao_entra0\Operadoras\CLARO\2025\202507\AGI].
+2026-08-04 14:05:27.587 | INFO    |test_upload_agi:test_hu17_nao_abre_o_agi_com_o_switch_desligado:153 - [STEP] Iniciando: UploadDetrafAGI.executar
+2026-08-04 14:05:27.588 | INFO    |comum.utils.decoradores:wrapper:22 - [MODO SEGURO] PERMITIR_UPLOAD_AGI=false — 2 arquivo(s) pendente(s), nada enviado ao AGI:
+2026-08-04 14:05:27.588 | INFO    |comum.utils.decoradores:wrapper:22 -   CLARO: DE_AGI_D_202507_TBRA_X_CLARO_EXT.txt
+2026-08-04 14:05:27.588 | INFO    |comum.utils.decoradores:wrapper:22 -   CLARO: DE_AGI_D_202507_TBRA_X_CLARO_INT.txt
+2026-08-04 14:05:27.589 | INFO    |test_upload_agi:test_hu17_nao_abre_o_agi_com_o_switch_desligado:153 - [STEP] Finalizando: UploadDetrafAGI.executar | Tempo gasto: 0.0s
+2026-08-04 14:05:27.593 | INFO    |test_upload_agi:test_hu18_nao_abre_o_agi_com_o_switch_desligado:164 - [STEP] Iniciando: UploadContestacaoAGI.executar
+2026-08-04 14:05:27.593 | INFO    |src.services.upload_contestacao_agi:executar:114 - [HU-18] Sem pasta AGI para CLARO/202507: [C:\Users\btime\AppData\Local\Temp\pytest-of-btime\pytest-289\test_hu18_nao_abre_o_agi_com_o0\Operadoras\CLARO\2025\202507\AGI].
+2026-08-04 14:05:27.593 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-18] Nenhum CONT_PROC_MASCARA pendente; nada a fazer.
+2026-08-04 14:05:27.593 | INFO    |test_upload_agi:test_hu18_nao_abre_o_agi_com_o_switch_desligado:164 - [STEP] Finalizando: UploadContestacaoAGI.executar | Tempo gasto: 0.0s
+2026-08-04 14:05:27.595 | INFO    |test_upload_agi:test_sem_pendencia_o_agi_nao_e_aberto_nem_com_o_switch_ligado:174 - [STEP] Iniciando: UploadDetrafAGI.executar
+2026-08-04 14:05:27.596 | INFO    |src.services.upload_detraf_agi:executar:158 - [HU-17] Sem pasta AGI para CLARO/202507: [C:\Users\btime\AppData\Local\Temp\pytest-of-btime\pytest-289\test_sem_pendencia_o_agi_nao_e0\Operadoras\CLARO\2025\202507\AGI].
+2026-08-04 14:05:27.596 | INFO    |comum.utils.decoradores:wrapper:22 - [HU-17] Nada pendente em EXT/INT; nada a fazer.
+2026-08-04 14:05:27.596 | INFO    |test_upload_agi:test_sem_pendencia_o_agi_nao_e_aberto_nem_com_o_switch_ligado:174 - [STEP] Finalizando: UploadDetrafAGI.executar | Tempo gasto: 0.0s
+2026-08-04 14:05:27.598 | WARNING |test_upload_agi:test_sem_diretorio_configurado_nao_grava_e_nao_quebra:183 - [HU-17] DIRETORIO_EVIDENCIAS não configurado — evidência não capturada.
+2026-08-04 14:05:27.601 | WARNING |test_upload_agi:test_falha_na_captura_nao_derruba_o_upload:194 - [HU-17] Falha ao capturar evidência em [C:\Users\btime\AppData\Local\Temp\pytest-of-btime\pytest-289\test_falha_na_captura_nao_derr0\evidencias\evidencia_arquivo_20260804_140527.png]: sem display

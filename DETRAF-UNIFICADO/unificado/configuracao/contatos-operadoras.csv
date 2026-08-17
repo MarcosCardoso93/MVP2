@@ -1,0 +1,66 @@
+# Contatos das operadoras para o e-mail de contestação (HU-15).
+#
+# ⚠️ ARQUIVO MODELO — os endereços abaixo são fictícios. Substitua pelos reais
+# antes de ligar PERMITIR_ENVIO_EMAIL.
+#
+# Aponte para cá no .env:
+#     CAMINHO_CONTATOS_OPERADORAS=configuracao/contatos-operadoras.csv
+#
+# ---------------------------------------------------------------------------
+# Por que este arquivo existe
+#
+# A V2 (¶136) manda buscar os destinatários "na tabela de contatos do WebFat",
+# mas a expressão NÃO OCORRE uma única vez no documento normativo — o nome vem
+# da V1, e nenhuma tabela de contatos aparece no schema `webfat`. É a pendência
+# Q16, aberta com o cliente.
+#
+# Até ela ser respondida, os contatos saem daqui. Quando a tabela existir, o
+# que muda é o corpo de `envio_email_contestacao.buscar_destinatarios` — por
+# isso a leitura ficou isolada nela.
+#
+# ---------------------------------------------------------------------------
+# Formato
+#
+#     operadora;para;cc
+#
+# - `operadora` é o nome da PASTA da operadora no compartilhamento. A busca
+#   ignora maiúsculas e espaços nas pontas.
+# - `para` e `cc` aceitam vários endereços separados por VÍRGULA.
+# - A linha `*` é a CÓPIA FIXA: o que estiver nela entra em Cc de TODOS os
+#   envios. Serve para o endereço interno que acompanha todo o processo.
+# - Linha em branco e linha começando com `#` são ignoradas.
+#
+# O formato antigo de uma coluna só (`operadora;emails`) continua valendo — ele
+# é lido como `para`.
+#
+# ---------------------------------------------------------------------------
+# Três garantias, fixadas em teste
+#
+# 1. A cópia fixa NUNCA vai para o `para`, mesmo escrita na coluna errada. A
+#    operadora não pode ver um endereço interno da Vivo entre os destinatários.
+# 2. Endereço repetido em `para` e `cc` não duplica.
+# 3. Sem ninguém em `para`, o envio é RECUSADO. Mandar a contestação só para a
+#    cópia interna seria pior que não mandar — pareceria enviada.
+#
+# ---------------------------------------------------------------------------
+# 🔴 Antes de preencher com dados reais
+#
+# Com este arquivo preenchido E `PERMITIR_ENVIO_EMAIL=true`, o robô envia de
+# verdade para as operadoras. É o único efeito deste repositório que chega a
+# alguém de fora da Vivo, e não tem desfazer.
+#
+# Valide primeiro com os endereços apontando para uma caixa INTERNA.
+# ---------------------------------------------------------------------------
+
+operadora;para;cc
+
+# --- Exemplos, para copiar o formato. Apague ao preencher os reais. ---------
+
+# Duas pessoas em Para, uma em cópia:
+EXEMPLO OPERADORA A;contestacao@exemplo-a.com.br,fiscal@exemplo-a.com.br;gestor@exemplo-a.com.br
+
+# Uma pessoa só, sem cópia (o `;` final é opcional):
+EXEMPLO OPERADORA B;interconexao@exemplo-b.com.br;
+
+# Cópia fixa do processo — entra em Cc de todos os envios:
+*;;copia-interna@telefonica.com

@@ -1,0 +1,6 @@
+Credora;Devedora;"Período de referência";"Período de tráfego";POI;Tipo;Descritor;GH;"Quantidade de chamadas";Duração;Tarifa;"Valor líquido";Pis/Cofins;ICMS;"Valor Bruto";CN
+O51;010;202607;202607;OI;0;LENL;N;185;683,70;0,00000;0,00;0,00;0,00;0,00;21
+O31;010;202607;202607;OI;0;LENL;R;4;6,70;0,00000;0,00;0,00;0,00;0,00;61
+H90;010;202607;202607;SPO.IB;0;LENL;N;65884;279.377,05;0,00610;1.704,20;62,19;0,00;1.766,39;11
+H90;010;202607;202607;SPO.IB;0;LENL;R;2218;4.276,35;0,00427;18,26;0,67;0,00;18,93;11
+;;;;;;;;;;;1.722,46;;;1.785,32;

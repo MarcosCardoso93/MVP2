@@ -1,0 +1,4 @@
+Credora;Devedora;Referencia;Trafego;POI;Rel;Descritor;Grupo Horario;Chamadas;Minutos;Tarifa;Valor Liquido;PIS/COFINS;ICMS;Valor Bruto
+192;050;202607;202607;PAE.TRD.01;00;LENL;N;672;1560,8;0,00608;9,49;0,36;0;9,85
+192;050;202607;202607;PAE.TRD.01;00;LENL;R;38;65,6;0,00425;0,28;0,01;0;0,29
+;;;;;01;;;710;1626,4;;9,77;0,37;0;10,14

@@ -1,0 +1,16 @@
+.fundo {
+	background-image: url("../logo/fundo_portal.png");
+	background-size: 120%;
+}
+
+.box-1 {
+	position: fixed;
+	top: 25%;
+	left: 25%;
+}
+
+.box-2 {
+	position: fixed;
+	top: 25%;
+	left: 55%;
+}

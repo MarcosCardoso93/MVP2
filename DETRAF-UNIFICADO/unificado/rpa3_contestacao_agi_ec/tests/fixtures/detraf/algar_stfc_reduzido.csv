@@ -1,0 +1,5 @@
+cd_eot_bil;cd_eot_rel;mes_ref;mes_traf;poi;tipo_relatorio;descritor;grupo_horario;qtde;minutos;tarifa;valor_liq;valor_piscofins;valor_icms;valor_total;valor_total_real;OPERATOR_TYPE;cd_eot
+12;11;202603;202603;ULAX_1204;0;2NENI;N;194;230,1;0,00787;1,81;0,06;0;1,87;0;F;356
+12;11;202603;202603;SPO_10156;0;2NENI;S;11;15,6;0,00787;0,11;0;0;0,11;0;F;143
+12;11;202603;202603;ULAX_1204;0;2NENI;D;4;2;0,00787;0,01;0;0;0,01;0;F;913
+12;11;202603;202603;ULAX_4113;1;2NENI;N;217;427,4;0,00787;3,37;0,12;0;3,49;0;F;674
