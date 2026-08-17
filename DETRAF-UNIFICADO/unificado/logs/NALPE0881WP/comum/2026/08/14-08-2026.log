@@ -1,0 +1,12 @@
+2026-08-14 15:36:46.593 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [dev]
+2026-08-14 15:36:46.594 | INFO    |comum.dados.repositorio_cache:__init__:77 - Utilizando SQLite local [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\banco_de_dados\TABELAS_DETRAF_espelho.db]
+2026-08-14 15:36:47.203 | INFO    |__main__:<module>:1 - [STEP] Iniciando: UploadContestacaoAGI.executar
+2026-08-14 15:36:54.054 | INFO    |src.services.upload_contestacao_agi:executar:139 - [AGI] Aplicativo aberto a partir de [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\aplicacao_agi\Portal AIR\portal_air_vivo.exe].
+2026-08-14 15:37:04.818 | INFO    |src.services.upload_contestacao_agi:executar:142 - [AGI] Login enviado.
+2026-08-14 15:37:23.988 | WARNING |src.services.upload_contestacao_agi:navegar_contestacao_gerenciar:212 - [AGI] Imagem [C:\RPA\Dtraf\MVP2\MVP2\DETRAF-UNIFICADO\unificado\comum\view\imagens\AGI_Upload_Contestacao\bnt_submenu_gerenciar.png] não apareceu em 15s.
+2026-08-14 15:37:25.163 | INFO    |src.services.upload_contestacao_agi:executar:149 - [RPA 3 — HU-18: upload do CONT_PROC no AGI] Login e navegação até 'Contestação > Gerenciar' concluídos — confira na tela se o AGI abriu no lugar certo.
+2026-08-14 15:37:25.163 | INFO    |src.services.upload_contestacao_agi:executar:149 - [RPA 3 — HU-18: upload do CONT_PROC no AGI] 1 arquivo(s) pendente(s) de upload:
+2026-08-14 15:37:25.164 | INFO    |src.services.upload_contestacao_agi:executar:149 - [RPA 3 — HU-18: upload do CONT_PROC no AGI]   ALGAR: CONT_PROC_MASCARA_ALGAR_202603.xlsx
+2026-08-14 15:37:25.165 | INFO    |src.services.upload_contestacao_agi:executar:149 - [RPA 3 — HU-18: upload do CONT_PROC no AGI] ────────────────────────────────────────────────────────────
+2026-08-14 15:37:25.165 | INFO    |src.services.upload_contestacao_agi:executar:149 - [RPA 3 — HU-18: upload do CONT_PROC no AGI] PRÓXIMA ETAPA: upload + clique em Salvar, um por um — ESCREVE NO AGI DE PRODUÇÃO, sem desfazer
+2026-08-14 15:37:59.534 | INFO    |__main__:<module>:1 - [STEP] Finalizando: UploadContestacaoAGI.executar | Tempo gasto: 72.33s
