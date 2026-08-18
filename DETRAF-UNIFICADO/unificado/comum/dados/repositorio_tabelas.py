@@ -78,6 +78,10 @@ class RepositorioTabelas:
     def tbl_contestacao(self) -> pd.DataFrame:
         return self.cache.obter_tabela(tabelas.LOG_DESPESA_CONTESTACAO)
 
+    @property
+    def tbl_detraf_destinatarios(self) -> pd.DataFrame:
+        return self.cache.obter_tabela(tabelas.DESTINATARIOS)
+
     # ------------------------------------------------------------------
     # Caches derivados (idem — resolvidos no primeiro acesso)
     # ------------------------------------------------------------------
@@ -1255,6 +1259,65 @@ class RepositorioTabelas:
                 f"seria lançado de novo."
             )
         return atualizadas
+
+
+    # --- Q16 (HU-15): resolvida em 2026-08-18, tbl_detraf_destinatarios
+    def obter_contatos_operadora(
+        self, operadora: str, produto: str = "Detraf"
+    ) -> dict[str, list[str]]:
+        """
+        Contatos de e-mail da operadora para a HU-15, filtrados por ``produto``.
+
+        Fonte: ``tbl_detraf_destinatarios`` (banco WebFat) — substitui o CSV que
+        servia de ponte para a pendência Q16 até o cliente confirmar a tabela em
+        2026-08-18. Uma linha vale para uma ou mais operadoras: a coluna
+        ``operadora`` lista os nomes fantasia separados por vírgula (ex.:
+        ``"ADVANCE_TELECOM, ADVANCE_TELECOMUNICACOES_LTDA"``), e cada linha traz
+        **um** e-mail e um ``tipo_destinatario`` (``"PARA"`` ou ``"CC"``).
+
+        A tabela serve outros produtos do WebFat além do Detraf — daí o filtro.
+
+        Args:
+            operadora: Nome fantasia a buscar — comparado sem diferenciar
+                maiúsculas/espaços contra cada alias da coluna ``operadora``.
+            produto: Filtro da coluna ``produto``.
+
+        Returns:
+            ``{"para": [...], "copia": [...]}`` — listas vazias se a operadora
+            não tiver contato cadastrado para o produto informado.
+        """
+        tabela = self.tbl_detraf_destinatarios
+        do_produto = tabela[
+            tabela["produto"].astype(str).str.strip().str.casefold()
+            == produto.strip().casefold()
+        ]
+
+        chave = operadora.strip().casefold()
+        para: list[str] = []
+        copia: list[str] = []
+
+        for _, linha in do_produto.iterrows():
+            operadora_bruta = linha["operadora"]
+            if pd.isna(operadora_bruta):
+                continue
+
+            aliases = {
+                alias.strip().casefold() for alias in str(operadora_bruta).split(",")
+            }
+            if chave not in aliases:
+                continue
+
+            email = linha["email"]
+            if pd.isna(email) or not str(email).strip():
+                continue
+            email = str(email).strip()
+
+            eh_para = str(linha["tipo_destinatario"]).strip().casefold() == "para"
+            destino = para if eh_para else copia
+            if email not in destino:
+                destino.append(email)
+
+        return {"para": para, "copia": copia}
 
 
 # ---------------------------------------------------------------------------

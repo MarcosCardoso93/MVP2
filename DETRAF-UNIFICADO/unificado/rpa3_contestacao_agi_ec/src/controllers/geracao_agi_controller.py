@@ -352,9 +352,7 @@ class GeracaoAgiController:
                 "email",
                 {
                     "PERMITIR_ENVIO_EMAIL": str(configuration.PERMITIR_ENVIO_EMAIL),
-                    "CAMINHO_CONTATOS_OPERADORAS": str(
-                        configuration.CAMINHO_CONTATOS_OPERADORAS
-                    ),
+                    "FONTE_CONTATOS": "tbl_detraf_destinatarios (banco webfat)",
                 },
             ) as atual:
                 self._enviar_emails(resultados, referencia, raiz_operadoras)
@@ -374,12 +372,7 @@ class GeracaoAgiController:
                        else "desligado — o e-mail foi montado e registrado, "
                             "não enviado."),
                     "",
-                    "Contatos: "
-                    + (
-                        str(configuration.CAMINHO_CONTATOS_OPERADORAS)
-                        if configuration.CAMINHO_CONTATOS_OPERADORAS
-                        else "não configurados (pendência Q16) — nada é enviado"
-                    ),
+                    "Contatos: tbl_detraf_destinatarios (banco webfat, produto Detraf)",
                 ],
                 proxima_etapa=self._descrever_proxima("verificacao", etapa),
             )
@@ -945,12 +938,6 @@ class GeracaoAgiController:
                 f"pelo RPA 2 (bloqueio B-D20). **Não é defeito deste robô.**"
             )
 
-        if not configuration.CAMINHO_CONTATOS_OPERADORAS:
-            relatorio.observar(
-                "CAMINHO_CONTATOS_OPERADORAS não configurado: a HU-15 não "
-                "envia e-mail (pendência Q16)."
-            )
-
         relatorio.gravar()
 
     @staticmethod
@@ -991,14 +978,6 @@ class GeracaoAgiController:
             logger.error(
                 f"[RPA 3] {len(com_erro)} operadora(s) com erro: "
                 f"{', '.join(r.operadora for r in com_erro)}."
-            )
-
-        if not configuration.CAMINHO_CONTATOS_OPERADORAS:
-            logger.warning(
-                "[RPA 3] HU-15 sem destinatários: a tabela de contatos do WebFat "
-                "continua sem resposta do cliente (pendência Q16). A ponte é "
-                "apontar CAMINHO_CONTATOS_OPERADORAS para um CSV "
-                "`operadora;emails`."
             )
 
     # ------------------------------------------------------------------

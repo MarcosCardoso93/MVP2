@@ -25,16 +25,17 @@ O envio em si é da camada comum (`comum/integracoes/outlook.py`), que absorveu 
 
 ## O que continua pendente
 
-Duas pontas dependem do banco e **não executam**:
+Uma ponta depende do banco e **não executa**:
 
-- `buscar_destinatarios` — a "tabela de contatos do WebFat" é citada na V2 sem
-  nome de tabela nem de coluna. É a pendência **Q16**, ainda aberta com o cliente.
-  Desde 2026-08-05 há uma **ponte**: os contatos podem vir de um CSV apontado por
-  ``CAMINHO_CONTATOS_OPERADORAS``. ⚠️ Com esse arquivo preenchido **e**
-  ``PERMITIR_ENVIO_EMAIL=true``, o robô passa a enviar de verdade — o kill-switch
-  é a única proteção que sobra.
 - `buscar_contestacoes_sinalizadas` — falta a coluna que marca "e-mail já
   enviado", para não reenviar.
+
+`buscar_destinatarios` **não é mais pendência**: a Q16 foi resolvida pelo
+cliente em 2026-08-18 — a "tabela de contatos do WebFat" citada na V2 é
+``tbl_detraf_destinatarios``. Os contatos por operadora vêm de lá agora
+(`comum.dados.repositorio_tabelas.bd_tabelas.obter_contatos_operadora`). O CSV
+que servia de ponte (``CAMINHO_CONTATOS_OPERADORAS``) continua opcional só para
+a **cópia fixa** — ver `_copia_fixa`, abaixo.
 
 ⚠️ O TODO do original dizia que *"não existe hoje nenhuma tabela/coluna mapeada"*
 para o gatilho do analista. **Isso está desatualizado:** o gatilho é
@@ -55,6 +56,7 @@ from comum.arquivos import nomenclatura as nom
 from comum.config import configuration
 from comum.config import constantes as const
 from comum.config.logger_config import logger
+from comum.dados.repositorio_tabelas import bd_tabelas
 from comum.utils.decoradores import log_execucao
 
 # Texto exato da V2 (parágrafos 278-283).
@@ -158,93 +160,77 @@ def buscar_destinatarios(operadora: str) -> Destinatarios:
     """
     Contatos da operadora para o envio da contestação.
 
-    **Ponte decidida em 2026-08-05 (Q16).** A V2 (parágrafo 136) cita "a tabela de
-    contatos do WebFat" sem dar nome de tabela nem de coluna, e nenhum dos sete
-    projetos de origem chegou a consultá-la — a pergunta continua aberta com o
-    cliente. Até a tabela existir, os contatos vêm de um arquivo apontado por
-    ``CAMINHO_CONTATOS_OPERADORAS``.
+    **Q16 resolvida em 2026-08-18.** A V2 (parágrafo 136) cita "a tabela de
+    contatos do WebFat" sem dar nome — o cliente confirmou que é
+    ``tbl_detraf_destinatarios``, filtrada por ``produto = 'Detraf'`` (a tabela
+    serve outros produtos do WebFat também). A consulta mora em
+    `comum.dados.repositorio_tabelas.RepositorioTabelas.obter_contatos_operadora`,
+    reaproveitável por qualquer RPA — esta função só traduz o resultado para
+    `Destinatarios` e soma a cópia fixa.
 
-    ## O formato veio do processo real (2026-08-05)
+    ## Cópia fixa — o que a tabela não modela
 
     Um print do e-mail de contestação em composição, embutido no `.docx`
-    normativo, mostrou como isso é feito hoje à mão — e que a primeira versão
-    desta ponte não daria conta:
+    normativo, mostrou um endereço em Cc que **não é da operadora** e se repete
+    em todos os envios — cópia fixa do processo. `tbl_detraf_destinatarios` não
+    tem uma linha equivalente (ela é só ``{operadora, email, tipo}``), então essa
+    parte **continua** vindo do CSV opcional de ``CAMINHO_CONTATOS_OPERADORAS``,
+    linha ``*`` — ver `_copia_fixa`. Sem o arquivo configurado, o e-mail sai
+    normalmente, só sem essa cópia extra.
 
-    - **dois ou mais destinatários** por operadora;
-    - **Cc além do Para**, e não a mesma coisa;
-    - **um endereço em cópia que não é da operadora**, repetido em todos os
-      envios — cópia fixa do processo.
-
-    Formato (CSV, ``;``, uma operadora por linha, cabeçalho opcional)::
-
-        operadora;para;cc
-        CLARO;contestacao@claro.com.br,fiscal@claro.com.br;gestor@claro.com.br
-        TIM;interconexao@tim.com.br;
-        *;;atacado@exemplo.com.br
-
-    A linha ``*`` é a **cópia fixa**: o que estiver nela entra em Cc de **todos**
-    os envios. É a forma de expressar o endereço interno que aparece em cópia em
-    todo e-mail do processo.
-
-    ⚠️ **Compatível com o formato anterior** (``operadora;emails``): uma linha
-    com uma coluna só de e-mails continua sendo lida como `Para`.
-
-    A busca é **case-insensitive** e ignora espaços — o nome da operadora vem da
-    pasta no compartilhamento, e a grafia varia.
-
-    Sem o arquivo configurado, sem a operadora nele ou sem endereço em `Para`, o
-    comportamento anterior se mantém: `enviar_contestacao` recusa o envio em vez
-    de mandar e-mail para lugar nenhum.
-
-    Quando a tabela do WebFat for informada, o que muda é **o corpo desta
-    função** — por isso a leitura fica isolada aqui.
+    Sem destinatário em `Para` (operadora ausente da tabela, ou só com linhas
+    `CC`), `enviar_contestacao` recusa o envio em vez de mandar e-mail para
+    lugar nenhum.
     """
 
-    caminho = configuration.CAMINHO_CONTATOS_OPERADORAS
+    contatos = bd_tabelas.obter_contatos_operadora(operadora)
+    para = contatos["para"]
 
-    if caminho is None:
+    if not para:
         logger.warning(
-            f"[HU-15] Contatos de '{operadora}' indisponíveis: a tabela de contatos "
-            f"do WebFat ainda não foi informada pelo cliente (pendência Q16), e "
-            f"CAMINHO_CONTATOS_OPERADORAS não está configurado."
+            f"[HU-15] '{operadora}' não tem destinatário em Para em "
+            f"tbl_detraf_destinatarios (produto Detraf). O e-mail da "
+            f"contestação não será enviado."
         )
         return Destinatarios()
+
+    copia = _sem_repetir(contatos["copia"] + _copia_fixa(), exceto=para)
+
+    logger.info(
+        f"[HU-15] {operadora}: {len(para)} destinatário(s), {len(copia)} em cópia."
+    )
+    return Destinatarios(para=list(para), copia=copia)
+
+
+def _copia_fixa() -> list[str]:
+    """
+    Endereço(s) que entram em Cc de **todo** envio — não modelado em
+    ``tbl_detraf_destinatarios`` (ver docstring de `buscar_destinatarios`).
+
+    Opcional: só existe se ``CAMINHO_CONTATOS_OPERADORAS`` continuar apontando
+    para um CSV com a linha ``*;;email`` (formato de `_ler_contatos`). Sem o
+    arquivo configurado, devolve lista vazia sem erro — a cópia fixa é um
+    extra, não um requisito para o envio principal funcionar.
+    """
+    caminho = configuration.CAMINHO_CONTATOS_OPERADORAS
+    if caminho is None:
+        return []
 
     if not Path(caminho).is_file():
-        logger.error(
-            f"[HU-15] Arquivo de contatos não encontrado em [{caminho}]. Nenhum "
-            f"e-mail será enviado — confira CAMINHO_CONTATOS_OPERADORAS."
+        logger.warning(
+            f"[HU-15] CAMINHO_CONTATOS_OPERADORAS aponta para [{caminho}], que "
+            f"não existe — cópia fixa não aplicada nesta execução."
         )
-        return Destinatarios()
+        return []
 
     try:
         contatos = _ler_contatos(Path(caminho))
     except OSError as erro:
-        logger.excecao(f"[HU-15] Falha ao ler o arquivo de contatos [{caminho}]: {erro}")
-        return Destinatarios()
+        logger.warning(f"[HU-15] Falha ao ler a cópia fixa em [{caminho}]: {erro}")
+        return []
 
-    da_operadora = contatos.get(operadora.strip().casefold(), Destinatarios())
-    copia_fixa = contatos.get(COPIA_FIXA, Destinatarios())
-
-    # A cópia fixa entra em Cc mesmo quando ela foi escrita na coluna `para` —
-    # quem edita o arquivo à mão vai pôr o endereço onde parecer natural, e o
-    # sentido dela é sempre "em cópia".
-    copia = _sem_repetir(
-        da_operadora.copia + copia_fixa.para + copia_fixa.copia, exceto=da_operadora.para
-    )
-
-    if not da_operadora.para:
-        logger.warning(
-            f"[HU-15] '{operadora}' não tem destinatário em [{caminho}]. O e-mail "
-            f"da contestação não será enviado (pendência Q16)."
-        )
-        return Destinatarios()
-
-    logger.info(
-        f"[HU-15] {operadora}: {len(da_operadora.para)} destinatário(s), "
-        f"{len(copia)} em cópia."
-    )
-    return Destinatarios(para=list(da_operadora.para), copia=copia)
+    fixa = contatos.get(COPIA_FIXA, Destinatarios())
+    return list(fixa.para) + list(fixa.copia)
 
 
 def _sem_repetir(emails: list[str], exceto: list[str]) -> list[str]:

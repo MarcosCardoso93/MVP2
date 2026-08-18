@@ -46,6 +46,13 @@ ANEXO5: str = "tbl_anexo5_processado"
 TARIFAS: str = "tbl_detraf_tarifas"
 MAPEAMENTO_DESCRITORES: str = "tbl_detraf_mapeamento_descritores"
 
+#: Contatos das operadoras para a HU-15 (envio do e-mail de contestação).
+#: Resolve a pendência Q16 — confirmada pelo cliente em 2026-08-18. Uma linha
+#: por destinatário; a coluna `operadora` pode listar mais de um nome fantasia
+#: separado por vírgula, e `produto` precisa ser filtrado para `'Detraf'` (a
+#: tabela também serve outros produtos do WebFat).
+DESTINATARIOS: str = "tbl_detraf_destinatarios"
+
 # ---------------------------------------------------------------------------
 # Tabelas de log (escrita)
 # ---------------------------------------------------------------------------
@@ -111,7 +118,12 @@ CACHE_RPA1: list[str] = [ANEXO5]
 
 CACHE_RPA2: list[str] = [ANEXO5, TARIFAS, MAPEAMENTO_DESCRITORES]
 
-CACHE_RPA3: list[str] = [ANEXO5, MAPEAMENTO_DESCRITORES, LOG_DESPESA_CONTESTACAO]
+CACHE_RPA3: list[str] = [
+    ANEXO5,
+    MAPEAMENTO_DESCRITORES,
+    LOG_DESPESA_CONTESTACAO,
+    DESTINATARIOS,
+]
 
 #: O RPA 4 (HU-21) lê e escreve **uma** tabela: a da contestação. Ele não
 #: consulta Anexo 5 nem tarifas — o que precisa saber da operadora (nome e EOT)

@@ -31,6 +31,20 @@ def anexos_prontos(pasta_contestacoes: Path) -> tuple[Path, Path]:
     return carta, env
 
 
+@pytest.fixture()
+def mock_contatos_bd(monkeypatch):
+    """Substitui a consulta a `tbl_detraf_destinatarios` por um resultado fixo."""
+
+    def _definir(para=None, copia=None):
+        resultado = {"para": list(para or []), "copia": list(copia or [])}
+        monkeypatch.setattr(
+            envio.bd_tabelas, "obter_contatos_operadora", lambda *a, **k: resultado
+        )
+        return resultado
+
+    return _definir
+
+
 class _OutlookFalso:
     def __init__(self):
         self.enviados: list[dict] = []
@@ -127,42 +141,32 @@ class TestLocalizacaoDosAnexos:
 class TestPendenciasBloqueadas:
     """As pontas que dependem do banco devolvem vazio — de propósito."""
 
-    def test_sem_arquivo_de_contatos_a_q16_continua_bloqueando(self, monkeypatch):
-        monkeypatch.setattr(configuration, "CAMINHO_CONTATOS_OPERADORAS", None)
+    def test_operadora_sem_linha_na_tabela_nao_envia(self, mock_contatos_bd):
+        """Q16 resolvida (2026-08-18): a fonte agora é o banco, não mais o CSV."""
+        mock_contatos_bd(para=[], copia=[])
 
-        assert envio.buscar_destinatarios("CLARO").para == []
+        assert envio.buscar_destinatarios("ALGAR").para == []
 
     def test_busca_de_sinalizadas_nao_devolve_nada_sem_controle_de_reenvio(self):
         assert envio.buscar_contestacoes_sinalizadas() == []
 
 
-class TestContatosPorArquivo:
+class TestContatosPorBanco:
     """
-    Ponte da Q16, decidida em 2026-08-05 — os contatos saem de um CSV até a
-    "tabela de contatos do WebFat" (V2 ¶136) ser informada.
+    Q16 resolvida em 2026-08-18 — os contatos por operadora vêm de
+    `tbl_detraf_destinatarios` (banco webfat, produto Detraf), via
+    `bd_tabelas.obter_contatos_operadora`. `envio_email_contestacao` só traduz o
+    resultado para `Destinatarios`; a normalização de nome (case/espaço) e o
+    split por vírgula da coluna `operadora` moram na camada de dados
+    (`comum.dados.repositorio_tabelas`), cobertos em separado.
 
-    ⚠️ Com o arquivo preenchido **e** `PERMITIR_ENVIO_EMAIL=true`, o robô envia de
-    verdade. O kill-switch passa a ser a única proteção.
+    ⚠️ Com destinatário em `Para` **e** `PERMITIR_ENVIO_EMAIL=true`, o robô envia
+    de verdade. O kill-switch é a única proteção.
     """
 
-    @pytest.fixture()
-    def contatos(self, tmp_path, monkeypatch):
-        def _escrever(conteudo: str):
-            caminho = tmp_path / "contatos.csv"
-            caminho.write_text(conteudo, encoding="utf-8")
-            monkeypatch.setattr(
-                configuration, "CAMINHO_CONTATOS_OPERADORAS", caminho
-            )
-            return caminho
-
-        return _escrever
-
-    def test_le_os_emails_da_operadora(self, contatos):
-        contatos(
-            """operadora;emails
-CLARO;contestacao@claro.com.br,faturamento@claro.com.br
-TIM;interconexao@tim.com.br
-"""
+    def test_le_os_emails_da_operadora(self, mock_contatos_bd):
+        mock_contatos_bd(
+            para=["contestacao@claro.com.br", "faturamento@claro.com.br"]
         )
 
         assert envio.buscar_destinatarios("CLARO").para == [
@@ -170,50 +174,19 @@ TIM;interconexao@tim.com.br
             "faturamento@claro.com.br",
         ]
 
-    def test_a_grafia_da_pasta_nao_precisa_bater(self, contatos):
-        """O nome vem da pasta no compartilhamento, e a grafia varia."""
-        contatos("CLARO;contestacao@claro.com.br\n")
-
-        assert envio.buscar_destinatarios("  claro ").para == ["contestacao@claro.com.br"]
-
-    def test_comentario_e_linha_em_branco_sao_ignorados(self, contatos):
-        """O arquivo é editado à mão por quem opera."""
-        contatos(
-            """# contatos revisados em 2026-08
-
-CLARO;contestacao@claro.com.br
-"""
-        )
-
-        assert envio.buscar_destinatarios("CLARO").para == ["contestacao@claro.com.br"]
-
-    def test_operadora_ausente_no_arquivo_nao_envia(self, contatos, caplog):
-        contatos("CLARO;contestacao@claro.com.br\n")
+    def test_operadora_ausente_no_banco_nao_envia(self, mock_contatos_bd, caplog):
+        mock_contatos_bd(para=[])
 
         with caplog.at_level("WARNING"):
             assert envio.buscar_destinatarios("ALGAR").para == []
 
-        assert "ALGAR" in caplog.text and "Q16" in caplog.text
-
-    def test_arquivo_configurado_mas_inexistente_e_erro(self, tmp_path, monkeypatch, caplog):
-        """
-        Difere de "não configurado": alguém apontou para um lugar, e o lugar não
-        existe. Passar isso como aviso esconderia um caminho errado no `.env`.
-        """
-        monkeypatch.setattr(
-            configuration, "CAMINHO_CONTATOS_OPERADORAS", tmp_path / "nao-existe.csv"
-        )
-
-        with caplog.at_level("ERROR"):
-            assert envio.buscar_destinatarios("CLARO").para == []
-
-        assert "CAMINHO_CONTATOS_OPERADORAS" in caplog.text
+        assert "ALGAR" in caplog.text
 
     def test_com_contato_e_kill_switch_ligado_o_envio_acontece(
-        self, contatos, raiz_operadoras, anexos_prontos, monkeypatch
+        self, mock_contatos_bd, raiz_operadoras, anexos_prontos, monkeypatch
     ):
-        """O caminho que a ponte destrava — de ponta a ponta."""
-        contatos("CLARO;contestacao@claro.com.br\n")
+        """De ponta a ponta: banco -> Destinatarios -> Outlook."""
+        mock_contatos_bd(para=["contestacao@claro.com.br"])
         monkeypatch.setattr(configuration, "PERMITIR_ENVIO_EMAIL", True)
         outlook = _OutlookFalso()
 
@@ -227,8 +200,11 @@ class TestEnvio:
     def test_sem_destinatario_nao_envia_e_acusa(
         self, raiz_operadoras, anexos_prontos, monkeypatch
     ):
-        """Q16 aberta ⇒ sem contato. Melhor falhar do que enviar para ninguém."""
+        """Operadora sem contato em tbl_detraf_destinatarios ⇒ recusa, não manda pra ninguém."""
         monkeypatch.setattr(configuration, "PERMITIR_ENVIO_EMAIL", True)
+        monkeypatch.setattr(
+            envio, "buscar_destinatarios", lambda op: envio.Destinatarios()
+        )
         outlook = _OutlookFalso()
 
         with pytest.raises(envio.EnvioEmailContestacaoIncompleto, match="destinatários"):
@@ -282,22 +258,52 @@ class TestEnvio:
         assert enviado["anexos"] == list(anexos_prontos)
 
 
-class TestParaCopiaECopiaFixa:
+class TestParaECopiaPorBanco:
     """
-    O formato do CSV veio do processo real (2026-08-05).
+    Para/Cc vêm de `tbl_detraf_destinatarios` — `tipo_destinatario` distingue
+    os dois. O split e o dedup de "mesmo e-mail em Para e Cc" moram na camada
+    de dados (`comum.dados.repositorio_tabelas.obter_contatos_operadora`); aqui
+    testa-se só que `buscar_destinatarios` repassa a distinção sem embaralhar.
+    """
+
+    def test_para_e_cc_sao_separados(self, mock_contatos_bd):
+        mock_contatos_bd(
+            para=["contestacao@claro.com.br", "fiscal@claro.com.br"],
+            copia=["gestor@claro.com.br"],
+        )
+
+        destinatarios = envio.buscar_destinatarios("CLARO")
+
+        assert destinatarios.para == ["contestacao@claro.com.br", "fiscal@claro.com.br"]
+        assert destinatarios.copia == ["gestor@claro.com.br"]
+
+    def test_endereco_em_cc_que_tambem_esta_no_para_nao_duplica(self, mock_contatos_bd):
+        """Alguém cadastrado como PARA e CC ao mesmo tempo — o Para prevalece."""
+        mock_contatos_bd(
+            para=["contestacao@claro.com.br"],
+            copia=["contestacao@claro.com.br", "gestor@claro.com.br"],
+        )
+
+        destinatarios = envio.buscar_destinatarios("CLARO")
+
+        assert destinatarios.para == ["contestacao@claro.com.br"]
+        assert destinatarios.copia == ["gestor@claro.com.br"]
+
+
+class TestCopiaFixa:
+    """
+    A cópia fixa não tem equivalente em `tbl_detraf_destinatarios` — continua
+    vindo do CSV opcional de `CAMINHO_CONTATOS_OPERADORAS`, linha `*`.
 
     Um print do e-mail de contestação em composição, embutido no `.docx`
-    normativo, mostrou o que a primeira versão desta ponte não daria conta:
-    **Para com dois contatos, Cc com mais dois**, e um dos endereços em cópia
-    **não é da operadora** — é uma cópia fixa que se repete em todos os envios.
-
-    Sem isso, ou a cópia fixa some (e alguém deixa de ser avisado), ou vai para
-    o `Para` — e a operadora vê um endereço interno da Vivo entre os
-    destinatários diretos.
+    normativo, mostrou o endereço interno que aparece em Cc de todo envio, e
+    que não é da operadora. Sem isso, ou a cópia fixa some (e alguém deixa de
+    ser avisado), ou vai para o `Para` — e a operadora vê um endereço interno
+    da Vivo entre os destinatários diretos.
     """
 
     @pytest.fixture()
-    def contatos(self, tmp_path, monkeypatch):
+    def copia_fixa_csv(self, tmp_path, monkeypatch):
         def _escrever(conteudo: str):
             caminho = tmp_path / "contatos.csv"
             caminho.write_text(conteudo, encoding="utf-8")
@@ -306,82 +312,87 @@ class TestParaCopiaECopiaFixa:
 
         return _escrever
 
-    def test_para_e_cc_sao_separados(self, contatos):
-        contatos(
-            """operadora;para;cc
-CLARO;contestacao@claro.com.br,fiscal@claro.com.br;gestor@claro.com.br
-"""
-        )
+    def test_sem_arquivo_configurado_nao_aplica_nem_falha(self, mock_contatos_bd, monkeypatch):
+        mock_contatos_bd(para=["contestacao@claro.com.br"])
+        monkeypatch.setattr(configuration, "CAMINHO_CONTATOS_OPERADORAS", None)
 
-        destinatarios = envio.buscar_destinatarios("CLARO")
+        assert envio.buscar_destinatarios("CLARO").copia == []
 
-        assert destinatarios.para == ["contestacao@claro.com.br", "fiscal@claro.com.br"]
-        assert destinatarios.copia == ["gestor@claro.com.br"]
-
-    def test_a_copia_fixa_entra_em_todos(self, contatos):
-        """O endereço interno que aparece em Cc de todo e-mail do processo."""
-        contatos(
-            """CLARO;contestacao@claro.com.br;
-TIM;interconexao@tim.com.br;
-*;;atacado@exemplo.com.br
-"""
-        )
+    def test_a_copia_fixa_entra_em_todos(self, mock_contatos_bd, copia_fixa_csv):
+        mock_contatos_bd(para=["contestacao@claro.com.br"])
+        copia_fixa_csv("*;;atacado@exemplo.com.br\n")
 
         assert envio.buscar_destinatarios("CLARO").copia == ["atacado@exemplo.com.br"]
-        assert envio.buscar_destinatarios("TIM").copia == ["atacado@exemplo.com.br"]
 
-    def test_a_copia_fixa_nunca_vai_para_o_para(self, contatos):
+    def test_a_copia_fixa_nunca_vai_para_o_para(self, mock_contatos_bd, copia_fixa_csv):
         """
         A operadora não pode ver um endereço interno da Vivo entre os
         destinatários diretos. Mesmo escrito na coluna `para` da linha `*`, o
         sentido da cópia fixa é sempre "em cópia".
         """
-        contatos(
-            """CLARO;contestacao@claro.com.br;
-*;atacado@exemplo.com.br;
-"""
-        )
+        mock_contatos_bd(para=["contestacao@claro.com.br"])
+        copia_fixa_csv("*;atacado@exemplo.com.br;\n")
 
         destinatarios = envio.buscar_destinatarios("CLARO")
 
         assert destinatarios.para == ["contestacao@claro.com.br"]
         assert destinatarios.copia == ["atacado@exemplo.com.br"]
 
-    def test_o_formato_antigo_de_uma_coluna_continua_valendo(self, contatos):
-        """Compatibilidade: `operadora;emails` era o formato da primeira ponte."""
-        contatos("CLARO;contestacao@claro.com.br,fiscal@claro.com.br\n")
+    def test_comentario_e_linha_em_branco_sao_ignorados(self, mock_contatos_bd, copia_fixa_csv):
+        """O arquivo é editado à mão por quem opera."""
+        mock_contatos_bd(para=["contestacao@claro.com.br"])
+        copia_fixa_csv(
+            """# revisado em 2026-08
 
-        destinatarios = envio.buscar_destinatarios("CLARO")
+*;;atacado@exemplo.com.br
+"""
+        )
 
-        assert len(destinatarios.para) == 2
-        assert destinatarios.copia == []
+        assert envio.buscar_destinatarios("CLARO").copia == ["atacado@exemplo.com.br"]
 
-    def test_endereco_repetido_em_para_e_cc_nao_duplica(self, contatos):
+    def test_endereco_repetido_nao_duplica(self, mock_contatos_bd, copia_fixa_csv):
         """Receber o mesmo e-mail duas vezes é ruído, não redundância útil."""
-        contatos("CLARO;contestacao@claro.com.br;contestacao@claro.com.br\n")
+        mock_contatos_bd(para=["contestacao@claro.com.br"])
+        copia_fixa_csv("*;;atacado@exemplo.com.br,atacado@exemplo.com.br\n")
 
-        destinatarios = envio.buscar_destinatarios("CLARO")
+        assert envio.buscar_destinatarios("CLARO").copia == ["atacado@exemplo.com.br"]
+
+    def test_arquivo_configurado_mas_inexistente_nao_bloqueia_o_envio(
+        self, mock_contatos_bd, tmp_path, monkeypatch, caplog
+    ):
+        """
+        Diferente do CSV antigo (obrigatório): a cópia fixa é um extra. Um
+        caminho errado no `.env` vira aviso, não impede o envio principal.
+        """
+        mock_contatos_bd(para=["contestacao@claro.com.br"])
+        monkeypatch.setattr(
+            configuration, "CAMINHO_CONTATOS_OPERADORAS", tmp_path / "nao-existe.csv"
+        )
+
+        with caplog.at_level("WARNING"):
+            destinatarios = envio.buscar_destinatarios("CLARO")
 
         assert destinatarios.para == ["contestacao@claro.com.br"]
         assert destinatarios.copia == []
+        assert "CAMINHO_CONTATOS_OPERADORAS" in caplog.text
 
-    def test_so_copia_fixa_nao_basta_para_enviar(self, contatos):
+    def test_so_copia_fixa_nao_basta_para_enviar(self, mock_contatos_bd, copia_fixa_csv):
         """
-        Sem ninguém em `Para`, não há e-mail: mandar a contestação só para a
-        cópia interna seria pior do que não mandar — pareceria enviada.
+        Sem ninguém em `Para` (vindo do banco), não há e-mail: mandar a
+        contestação só para a cópia interna seria pior do que não mandar.
         """
-        contatos("*;;atacado@exemplo.com.br\n")
+        mock_contatos_bd(para=[])
+        copia_fixa_csv("*;;atacado@exemplo.com.br\n")
 
         assert bool(envio.buscar_destinatarios("CLARO")) is False
 
     def test_o_cc_chega_ao_outlook(
-        self, contatos, raiz_operadoras, anexos_prontos, monkeypatch
+        self, mock_contatos_bd, copia_fixa_csv, raiz_operadoras, anexos_prontos, monkeypatch
     ):
-        contatos(
-            """CLARO;contestacao@claro.com.br;gestor@claro.com.br
-*;;atacado@exemplo.com.br
-"""
+        mock_contatos_bd(
+            para=["contestacao@claro.com.br"], copia=["gestor@claro.com.br"]
         )
+        copia_fixa_csv("*;;atacado@exemplo.com.br\n")
         monkeypatch.setattr(configuration, "PERMITIR_ENVIO_EMAIL", True)
         outlook = _OutlookFalso()
 

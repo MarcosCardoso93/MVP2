@@ -141,6 +141,29 @@ def _criar_e_popular_sqlite(caminho_db: Path) -> None:
         contestacao=_CONTESTACAO,
     )
 
+    # `tbl_detraf_destinatarios` (Q16, HU-15) não faz parte das cinco tabelas de
+    # `criar_banco_de_teste` — fica de fora do DDL_CONFIRMADO/TODAS (que é lista
+    # branca de ESCRITA, e esta tabela é só leitura). Criada vazia aqui, direto:
+    # o suficiente para `bd_tabelas.obter_contatos_operadora` não estourar nos
+    # testes de orquestração que não mockam `buscar_destinatarios`.
+    conexao = sqlite3.connect(str(caminho_db))
+    try:
+        conexao.execute(
+            """
+            CREATE TABLE tbl_detraf_destinatarios (
+                id INTEGER PRIMARY KEY,
+                email TEXT,
+                nome TEXT,
+                tipo_destinatario TEXT,
+                operadora TEXT,
+                produto TEXT
+            )
+            """
+        )
+        conexao.commit()
+    finally:
+        conexao.close()
+
 
 # Popula o banco-modelo na importação do conftest (antes de qualquer teste rodar).
 _criar_e_popular_sqlite(_CAMINHO_DB_MODELO)
