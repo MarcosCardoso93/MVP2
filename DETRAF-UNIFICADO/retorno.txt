@@ -1,1 +1,118 @@
-.venv\Scripts\python.exe -c "from sqlalchemy import create_engine, text; from comum.config.configuration import HOST_BD_RPA, PORT_BD_RPA, DATABASE_RPA, USUARIO_BD, SENHA_BD; e = create_engine(f'mysql+pymysql://{USUARIO_BD}:{SENHA_BD}@{HOST_BD_RPA}:{PORT_BD_RPA}/{DATABASE_RPA}'); c = e.connect(); print('COLUNAS:'); [print(' -', r) for r in c.execute(text('DESCRIBE tbl_detraf_destinatarios'))]; print(); print('AMOSTRA:'); [print(r) for r in c.execute(text('SELECT * FROM tbl_detraf_destinatarios LIMIT 5'))]"
+  Using cached pytweening-1.2.0-py3-none-any.whl
+Collecting pyscreeze>=0.1.21 (from PyAutoGUI==0.9.54->-r requirements.txt (line 22)) 
+  Using cached pyscreeze-1.0.1-py3-none-any.whl
+Collecting mouseinfo (from PyAutoGUI==0.9.54->-r requirements.txt (line 22)) 
+  Using cached mouseinfo-0.1.3-py3-none-any.whl
+Collecting pyrect (from PyGetWindow==0.0.9->-r requirements.txt (line 23)) 
+  Using cached pyrect-0.2.0-py2.py3-none-any.whl
+Collecting comtypes (from pywinauto==0.6.9->-r requirements.txt (line 24)) 
+  Using cached comtypes-1.4.16-py3-none-any.whl.metadata (7.8 kB) 
+Collecting bcrypt>=3.2 (from paramiko==5.0.0->-r requirements.txt (line 32)) 
+  Downloading bcrypt-5.0.0-cp39-abi3-win_amd64.whl.metadata (10 kB) 
+Collecting cryptography>=3.3 (from paramiko==5.0.0->-r requirements.txt (line 32)) 
+  Using cached cryptography-50.0.0-cp311-abi3-win_amd64.whl.metadata (4.3 kB) 
+Collecting invoke>=2.0 (from paramiko==5.0.0->-r requirements.txt (line 32)) 
+  Downloading invoke-3.0.3-py3-none-any.whl.metadata (3.2 kB) 
+Collecting pynacl>=1.5 (from paramiko==5.0.0->-r requirements.txt (line 32)) 
+  Downloading pynacl-1.6.2-cp38-abi3-win_amd64.whl.metadata (10 kB) 
+Collecting cffi>=2.0.0 (from cryptography>=3.3->paramiko==5.0.0->-r requirements.txt (line 32)) 
+  Using cached cffi-2.1.1-cp314-cp314-win_amd64.whl.metadata (2.6 kB) 
+Collecting pycparser (from cffi>=2.0.0->cryptography>=3.3->paramiko==5.0.0->-r requirements.txt (line 32)) 
+  Using cached pycparser-3.0-py3-none-any.whl.metadata (8.2 kB) 
+Collecting pyperclip (from mouseinfo->PyAutoGUI==0.9.54->-r requirements.txt (line 22)) 
+  Using cached pyperclip-1.11.0-py3-none-any.whl.metadata (2.4 kB) 
+Using cached loguru-0.7.3-py3-none-any.whl (61 kB) 
+Using cached numpy-2.5.1-cp314-cp314-win_amd64.whl (12.6 MB) 
+Using cached openpyxl-3.1.5-py2.py3-none-any.whl (250 kB) 
+Using cached pandas-3.0.5-cp314-cp314-win_amd64.whl (10.0 MB) 
+Downloading pymysql-1.2.0-py3-none-any.whl (45 kB) 
+Using cached pytest-9.1.1-py3-none-any.whl (386 kB) 
+Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB) 
+Downloading python_docx-1.2.0-py3-none-any.whl (252 kB) 
+Using cached python_dotenv-1.2.2-py3-none-any.whl (22 kB) 
+Using cached pywin32-312-cp314-cp314-win_amd64.whl (7.0 MB) 
+Downloading sqlalchemy-2.0.51-cp314-cp314-win_amd64.whl (2.1 MB) 
+   ---------------------------------------- 2.1/2.1 MB 8.2 MB/s  0:00:00
+Using cached opencv_python-5.0.0.93-cp37-abi3-win_amd64.whl (44.0 MB) 
+Downloading pillow-12.3.0-cp314-cp314-win_amd64.whl (7.2 MB) 
+   ---------------------------------------- 7.2/7.2 MB 42.4 MB/s  0:00:00
+Using cached psutil-7.2.2-cp37-abi3-win_amd64.whl (137 kB) 
+Using cached pywinauto-0.6.9-py2.py3-none-any.whl (363 kB) 
+Downloading paramiko-5.0.0-py3-none-any.whl (208 kB) 
+Using cached pluggy-1.6.0-py3-none-any.whl (20 kB) 
+Downloading bcrypt-5.0.0-cp39-abi3-win_amd64.whl (150 kB) 
+Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB) 
+Using cached cryptography-50.0.0-cp311-abi3-win_amd64.whl (3.8 MB) 
+Using cached cffi-2.1.1-cp314-cp314-win_amd64.whl (187 kB) 
+Downloading greenlet-3.5.5-cp314-cp314-win_amd64.whl (327 kB) 
+Using cached iniconfig-2.3.0-py3-none-any.whl (7.5 kB) 
+Downloading invoke-3.0.3-py3-none-any.whl (160 kB) 
+Downloading lxml-6.1.1-cp314-cp314-win_amd64.whl (4.1 MB) 
+   ---------------------------------------- 4.1/4.1 MB 30.7 MB/s  0:00:00
+Using cached packaging-26.3-py3-none-any.whl (129 kB) 
+Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB) 
+   ---------------------------------------- 1.3/1.3 MB 12.1 MB/s  0:00:00
+Downloading pynacl-1.6.2-cp38-abi3-win_amd64.whl (239 kB) 
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB) 
+Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB) 
+Using cached win32_setctime-1.2.0-py3-none-any.whl (4.1 kB) 
+Using cached et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
+Using cached pycparser-3.0-py3-none-any.whl (48 kB)
+Using cached pymsgbox-2.0.1-py3-none-any.whl (10.0 kB)
+Using cached pyperclip-1.11.0-py3-none-any.whl (11 kB)
+Using cached tzdata-2026.3-py2.py3-none-any.whl (348 kB)
+Installing collected packages: pytweening, pyscreeze, pyrect, pyperclip, win32-setctime, tzdata, typing_extensions, six, pywin32, python-dotenv, PyMySQL, pymsgbox, pygments, PyGetWindow, pycp
+arser, psutil, pluggy, pillow, packaging, numpy, mouseinfo, lxml, invoke, iniconfig, greenlet, et-xmlfile, comtypes, colorama, bcrypt, SQLAlchemy, pywinauto, python-docx, python-dateutil, pyt
+est, PyAutoGUI, openpyxl, opencv-python, loguru, cffi, pynacl, pandas, cryptography, paramiko
+Successfully installed PyAutoGUI-0.9.54 PyGetWindow-0.0.9 PyMySQL-1.2.0 SQLAlchemy-2.0.51 bcrypt-5.0.0 cffi-2.1.1 colorama-0.4.6 comtypes-1.4.16 cryptography-50.0.0 et-xmlfile-2.0.0 greenlet-
+3.5.5 iniconfig-2.3.0 invoke-3.0.3 loguru-0.7.3 lxml-6.1.1 mouseinfo-0.1.3 numpy-2.5.1 opencv-python-5.0.0.93 openpyxl-3.1.5 packaging-26.3 pandas-3.0.5 paramiko-5.0.0 pillow-12.3.0 pluggy-1.
+6.0 psutil-7.2.2 pycparser-3.0 pygments-2.21.0 pymsgbox-2.0.1 pynacl-1.6.2 pyperclip-1.11.0 pyrect-0.2.0 pyscreeze-1.0.1 pytest-9.1.1 python-dateutil-2.9.0.post0 python-docx-1.2.0 python-dote
+1.2.0
+
+[notice] A new release of pip is available: 25.3 -> 26.2.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+(.venv) PS C:\RPA\rpa_vivo_mvp2> python.exe -m pip install --upgrade pip
+Requirement already satisfied: pip in c:\rpa\rpa_vivo_mvp2\.venv\lib\site-packages (25.3)
+Collecting pip
+  Downloading pip-26.2.1-py3-none-any.whl.metadata (4.6 kB)
+Downloading pip-26.2.1-py3-none-any.whl (1.8 MB)
+   ---------------------------------------- 1.8/1.8 MB 24.3 MB/s  0:00:00
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 25.3
+    Uninstalling pip-25.3:
+      Successfully uninstalled pip-25.3
+Successfully installed pip-26.2.1
+(.venv) PS C:\RPA\rpa_vivo_mvp2>
+ *  History restored 
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\RPA\rpa_vivo_mvp2> echo $en(Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& c:\RPA\rpa_vivo_mvp2\.venv\Scripts\Activate.ps1)
+(.venv) PS C:\RPA\rpa_vivo_mvp2> echo $env:CLICKHUB_SFTP_HOST 
+BRTLVLTS1739FU 
+(.venv) PS C:\RPA\rpa_vivo_mvp2>  
+ *  History restored 
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\RPA\rpa_vivo_mvp2> .venv\Scripts\python.exe -c "from sqlalchemy import create_engine, text; from comum.config.configuration import HOST_BD_RPA, PORT_BD_RPA, DATABASE_RPA, USUARIO_BD, SENHA_BD; e = create_engine(f'mysql+pymysql://{USUARIO_BD}:{SENHA_BD}@{HOST_BD_RPA}:{PORT_BD_RPA}/{DATABASE_RPA}'); c = e.connect(); print('COLUNAS:'); [print(' -', r) for r in c.execute(text('DESCRIBE tbl_detraf_destinatarios'))]; print(); print('AMOSTRA:'); [print(r) for r in c.execute(text('SELECT * FROM tbl_detraf_destinatarios LIMIT 5'))]"
+>>
+COLUNAS: 
+ - ('id', 'int', 'NO', 'PRI', None, 'auto_increment')        
+ - ('email', 'varchar(100)', 'YES', '', None, '')
+ - ('nome', 'varchar(200)', 'YES', '', None, '')
+ - ('tipo_destinatario', 'varchar(50)', 'YES', '', None, '')
+ - ('operadora', 'varchar(900)', 'YES', '', None, '')
+ - ('created_at', 'datetime', 'YES', '', None, '')
+ - ('created_by', 'varchar(100)', 'YES', '', None, '')
+ - ('updated_at', 'datetime', 'YES', '', None, '')
+ - ('updated_by', 'varchar(100)', 'YES', '', None, '')
+ - ('produto', 'varchar(255)', 'YES', '', None, '')
+
+AMOSTRA:
+(5, 'patricia@amw.net.br', 'Patricia', 'PARA', 'AMW_TECNOLOGIA', datetime.datetime(2025, 12, 3, 20, 53, 26), 'importação_xlsx', datetime.datetime(2026, 7, 6, 19, 20, 4), 'sistema', 'Detraf') 
+(6, 'andrey@amw.net.br', 'Andrey', 'PARA', 'AMW_TECNOLOGIA', datetime.datetime(2025, 12, 3, 20, 53, 26), 'importação_xlsx', datetime.datetime(2026, 7, 6, 19, 20, 13), 'sistema', 'Detraf')    
+(7, 'renata.cervantes@55pbx.com', 'Renata', 'PARA', '55_TELECOM', datetime.datetime(2025, 12, 3, 20, 53, 26), 'importação_xlsx', datetime.datetime(2026, 5, 27, 19, 59), 'sistema', 'Detraf')  
+(8, 'felipe.neri@tmco.com.br', 'Felipe Neri', 'PARA', '8BR', datetime.datetime(2025, 12, 3, 20, 53, 26), 'importação_xlsx', datetime.datetime(2025, 12, 3, 20, 53, 26), None, 'Detraf')        
+(9, 'financeiro@advancetelecom.com.br', 'Financeiro', 'PARA', 'ADVANCE_TELECOM, ADVANCE_TELECOMUNICACOES_LTDA', datetime.datetime(2025, 12, 3, 20, 53, 26), 'importação_xlsx', datetime.datetime(2026, 5, 6, 18, 37, 22), 'sistema', 'Detraf')
