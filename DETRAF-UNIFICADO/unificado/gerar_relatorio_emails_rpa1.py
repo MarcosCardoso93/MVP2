@@ -29,7 +29,7 @@ import argparse
 import json
 import sys
 from dataclasses import dataclass, field
-from datetime import datetime
+from datetime import date, datetime
 from pathlib import Path
 
 _RAIZ = Path(__file__).resolve().parent
@@ -54,6 +54,16 @@ class LinhaRelatorio:
     arquivo: str = ""
     status_arquivo: str = ""
     detalhe: str = ""
+
+
+def _para_data(valor) -> date | None:
+    """Extrai só a data (sem hora/fuso) de um `ReceivedTime` do COM."""
+    if not valor:
+        return None
+    try:
+        return date(valor.year, valor.month, valor.day)
+    except AttributeError:
+        return None
 
 
 def _formatar_data(valor) -> str:
@@ -140,7 +150,14 @@ def _localizar_arquivo(nome_arquivo: str) -> tuple[str, str]:
     return "Não encontrado (ainda não processado nesta máquina, ou já removido)", ""
 
 
-def montar_linhas() -> list[LinhaRelatorio]:
+def montar_linhas(
+    desde: date | None = None, ate: date | None = None
+) -> list[LinhaRelatorio]:
+    """
+    Args:
+        desde: Só inclui e-mails recebidos a partir desta data (inclusive).
+        ate: Só inclui e-mails recebidos até esta data (inclusive).
+    """
     config = OutlookConfig.from_configuration()
     outlook = OutlookService(config.account)
     rastreamento = _carregar_rastreamento()
@@ -164,6 +181,7 @@ def montar_linhas() -> list[LinhaRelatorio]:
                 entry_id = item.EntryID
                 assunto = item.Subject or ""
                 remetente = item.SenderEmailAddress or ""
+                data_recebimento = _para_data(item.ReceivedTime)
                 recebido_em = _formatar_data(item.ReceivedTime)
             except Exception as erro:  # noqa: BLE001 — item exótico, não trava o relatório
                 linhas.append(LinhaRelatorio(
@@ -172,6 +190,11 @@ def montar_linhas() -> list[LinhaRelatorio]:
                     recebido_em="",
                     situacao_email=f"Erro ao ler: {erro}",
                 ))
+                continue
+
+            if desde and data_recebimento and data_recebimento < desde:
+                continue
+            if ate and data_recebimento and data_recebimento > ate:
                 continue
 
             arquivos = rastreamento.get(entry_id, [])
@@ -255,20 +278,50 @@ def gerar_planilha(linhas: list[LinhaRelatorio], caminho_saida: Path) -> None:
     livro.save(caminho_saida)
 
 
+def _tipo_data(texto: str) -> date:
+    try:
+        return datetime.strptime(texto, "%Y-%m-%d").date()
+    except ValueError as erro:
+        raise argparse.ArgumentTypeError(
+            f"'{texto}' não é uma data válida — use AAAA-MM-DD."
+        ) from erro
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
-        "--saida", type=Path,
-        default=Path(f"relatorio_emails_rpa1_{datetime.now():%Y%m%d_%H%M%S}.xlsx"),
-        help="Caminho do .xlsx de saída.",
+        "--desde", type=_tipo_data, default=None,
+        help="Só inclui e-mails recebidos a partir desta data (AAAA-MM-DD).",
+    )
+    parser.add_argument(
+        "--ate", type=_tipo_data, default=None,
+        help="Só inclui e-mails recebidos até esta data (AAAA-MM-DD).",
+    )
+    parser.add_argument(
+        "--saida", type=Path, default=None,
+        help="Caminho do .xlsx de saída. Padrão: nome gerado com a data/período.",
     )
     args = parser.parse_args()
 
+    saida = args.saida
+    if saida is None:
+        sufixo_periodo = ""
+        if args.desde or args.ate:
+            sufixo_periodo = f"_{args.desde or 'inicio'}_a_{args.ate or 'hoje'}"
+        saida = Path(
+            f"relatorio_emails_rpa1_{datetime.now():%Y%m%d_%H%M%S}{sufixo_periodo}.xlsx"
+        )
+
+    if args.desde and args.ate and args.desde > args.ate:
+        parser.error("--desde não pode ser depois de --ate.")
+
     print("Conectando ao Outlook e lendo 'Detraf Despesas' + 'PROCESSADOS'...")
-    linhas = montar_linhas()
-    print(f"{len(linhas)} linha(s) montada(s). Gravando em {args.saida}...")
-    gerar_planilha(linhas, args.saida)
-    print(f"Pronto: {args.saida.resolve()}")
+    if args.desde or args.ate:
+        print(f"Filtrando por período: {args.desde or '(sem início)'} a {args.ate or '(sem fim)'}.")
+    linhas = montar_linhas(desde=args.desde, ate=args.ate)
+    print(f"{len(linhas)} linha(s) montada(s). Gravando em {saida}...")
+    gerar_planilha(linhas, saida)
+    print(f"Pronto: {saida.resolve()}")
     return 0
 
 
