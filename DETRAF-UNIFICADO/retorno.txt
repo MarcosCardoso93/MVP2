@@ -1,1 +1,59 @@
-CAMINHO_EXPECTATIVA_DETRAF=\\10.128.223.33\arquivos_detraf$\DETRAF_EXPECTATIVA_VIVO
+Traceback (most recent call last): 
+  File "C:\RPA\rpa_vivo_mvp2\comum\integracoes\outlook.py", line 451, in _get_or_create_subfolder 
+    return parent_folder.Folders.Add(name)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "<COMObject <unknown>>", line 2, in Add 
+pywintypes.com_error: (-2147352567, 'Exception occurred.', (4096, 'Microsoft Outlook', 'Não é possível criar a pasta.', None, 0, -2147352567), None)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last): 
+  File "C:\Users\atacadoadmin\AppData\Local\Programs\Python\Python314\Lib\runpy.py", line 198, in _run_module_as_main 
+    return _run_code(code, main_globals, None,
+                     "__main__", mod_spec)
+  File "C:\Users\atacadoadmin\AppData\Local\Programs\Python\Python314\Lib\runpy.py", line 88, in _run_code 
+    exec(code, run_globals)
+    ~~~~^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\launcher/../..\debugpy\__main__.py", line 71, in <module> 
+    cli.main()
+    ~~~~~~~~^^
+  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\launcher/../..\debugpy/..\debugpy\server\cli.py", line 542, in main
+    run()
+    ~~~^^
+  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\launcher/../..\debugpy/..\debugpy\server\cli.py", line 361, in run_file
+    runpy.run_path(target, run_name="__main__")
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 310, in run_path
+    return _run_module_code(code, init_globals, run_name, pkg_name=pkg_name, script_name=fname)
+  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 127, in _run_module_code
+PS C:\RPA\rpa_vivo_mvp2> .\.venv\Scripts\python.exe .\gerar_relatorio_emails_rpa1.py
+Conectando ao Outlook e lendo 'Detraf Despesas' + 'PROCESSADOS'... 
+2026-08-20 17:32:45.486 | INFO    |__main__:montar_linhas:162 - Conectando ao Outlook (conta configurada: 'detrafTBRA')... 
+2026-08-20 17:32:45.520 | INFO    |__main__:montar_linhas:162 - Conectado ao Outlook com sucesso. 
+2026-08-20 17:32:45.572 | INFO    |__main__:montar_linhas:168 - Pasta 'PROCESSADOS' não encontrada em 'Detraf Despesas' — criando. 
+Traceback (most recent call last): 
+  File "C:\RPA\rpa_vivo_mvp2\comum\integracoes\outlook.py", line 451, in _get_or_create_subfolder
+    return parent_folder.Folders.Add(name)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "<COMObject <unknown>>", line 2, in Add
+pywintypes.com_error: (-2147352567, 'Exception occurred.', (4096, 'Microsoft Outlook', 'Não é possível criar a pasta.', None, 0, -2147352567), None) 
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\RPA\rpa_vivo_mvp2\gerar_relatorio_emails_rpa1.py", line 329, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "C:\RPA\rpa_vivo_mvp2\gerar_relatorio_emails_rpa1.py", line 321, in main
+    linhas = montar_linhas(desde=args.desde, ate=args.ate)
+  File "C:\RPA\rpa_vivo_mvp2\gerar_relatorio_emails_rpa1.py", line 168, in montar_linhas
+    pasta_processados = outlook._get_or_create_subfolder(  # noqa: SLF001
+        pasta_detraf, config.processados_folder
+    )
+  File "C:\RPA\rpa_vivo_mvp2\comum\integracoes\outlook.py", line 453, in _get_or_create_subfolder 
+    raise OutlookError(
+        f"Não foi possível acessar/criar a pasta '{name}'. Detalhe: {exc}"
+    ) from exc
+comum.integracoes.outlook.OutlookError: Não foi possível acessar/criar a pasta 'PROCESSADOS'. Detalhe: (-2147352567, 'Exception occurred.', (4096, 'Microsoft Outlook', 'Não 
+é possível criar a pasta.', None, 0, -2147352567), None)
+PS C:\RPA\rpa_vivo_mvp2>  
