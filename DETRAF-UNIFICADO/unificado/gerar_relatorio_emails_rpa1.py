@@ -28,6 +28,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+import time
 from dataclasses import dataclass, field
 from datetime import date, datetime
 from pathlib import Path
@@ -150,6 +151,32 @@ def _localizar_arquivo(nome_arquivo: str) -> tuple[str, str]:
     return "Não encontrado (ainda não processado nesta máquina, ou já removido)", ""
 
 
+def _buscar_subpasta_sem_criar(parent_folder, nome: str, tentativas: int = 3):
+    """
+    Procura uma subpasta pelo nome (case-insensitive) — **nunca cria**.
+
+    Script de leitura não deve ter efeito colateral de criar pasta no
+    Outlook; isso é papel do robô, não de um relatório de conferência. A
+    listagem de `Folders` às vezes não mostra uma subpasta que existe de
+    verdade (visto antes com "PROCESSADOS" — some sozinho depois de um
+    tempo, provável atraso de sincronização do cache do Exchange) — por
+    isso tenta de novo algumas vezes antes de desistir, em vez de assumir
+    que "não encontrada na primeira vez" significa "não existe".
+
+    Returns:
+        A subpasta, ou `None` se não achou depois de todas as tentativas.
+    """
+    for tentativa in range(1, tentativas + 1):
+        for i in range(1, parent_folder.Folders.Count + 1):
+            pasta = parent_folder.Folders.Item(i)
+            if pasta.Name.lower() == nome.lower():
+                return pasta
+        if tentativa < tentativas:
+            print(f"[aviso] pasta '{nome}' não apareceu na tentativa {tentativa} — tentando de novo...")
+            time.sleep(2)
+    return None
+
+
 def montar_linhas(
     desde: date | None = None, ate: date | None = None
 ) -> list[LinhaRelatorio]:
@@ -165,9 +192,13 @@ def montar_linhas(
     pasta_detraf = outlook._get_or_create_top_level_folder(  # noqa: SLF001 — script de diagnóstico
         config.detraf_despesas_folder
     )
-    pasta_processados = outlook._get_or_create_subfolder(  # noqa: SLF001
-        pasta_detraf, config.processados_folder
-    )
+    pasta_processados = _buscar_subpasta_sem_criar(pasta_detraf, config.processados_folder)
+    if pasta_processados is None:
+        print(
+            f"[aviso] pasta '{config.processados_folder}' não encontrada dentro de "
+            f"'{config.detraf_despesas_folder}' — relatório vai sair sem os e-mails já "
+            "capturados. Rode de novo em alguns minutos."
+        )
 
     linhas: list[LinhaRelatorio] = []
 
@@ -222,9 +253,10 @@ def montar_linhas(
                 ))
 
     # E-mails já capturados (movidos pra PROCESSADOS em alguma execução).
-    _processar_pasta(pasta_processados, situacao_quando_sem_rastreamento=(
-        "Em PROCESSADOS mas sem registro de rastreamento (verificar)"
-    ))
+    if pasta_processados is not None:
+        _processar_pasta(pasta_processados, situacao_quando_sem_rastreamento=(
+            "Em PROCESSADOS mas sem registro de rastreamento (verificar)"
+        ))
 
     # E-mails que ainda estão em "Detraf Despesas" — nunca foram capturados
     # (não passaram no filtro de negócio), ou já estavam rastreados de uma
