@@ -1,0 +1,26 @@
+
+RPA1 — sequência de ações
+
+Vasculha os e-mails na Caixa de Entrada do Outlook.
+Filtra e move os que batem no critério de Detraf para a pasta "Detraf Despesas".
+Lê os e-mails dessa pasta e baixa os anexos.
+Ignora anexo com extensão não permitida e e-mail já capturado antes.
+Move o e-mail para a subpasta "PROCESSADOS".
+Identifica a operadora do arquivo pelo EOT (ou pelo domínio do remetente, se falhar).
+Valida o layout/colunas do arquivo.
+Se aprovado → salva na árvore de pastas por operadora/ano/mês.
+Se reprovado → move para quarentena, com o motivo registrado.
+Grava no banco só os reprovados/não identificados — o aprovado ainda não entra aqui.
+Notifica a operadora (rascunho) sobre os arquivos recusados.
+
+
+RPA2 — sequência de ações
+
+Baixa via SFTP os arquivos de expectativa da Vivo (4 pastas: Vivo, TLF, MVNO, Detraf TRP).
+Valida o layout/colunas dos arquivos das operadoras e da expectativa.
+Renomeia aprovado com _EXP, reprovado com _ERRO.
+Grava no banco os arquivos processados — é aqui que o registro do arquivo aprovado do RPA1 aparece.
+Compara o lado da operadora com o lado da Vivo, por EOT e período.
+Calcula a variação.
+Grava o resultado na tabela de contestação.
+Fim do robô — aguarda o analista sinalizar no WebFat
