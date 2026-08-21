@@ -1,4 +1,4 @@
-"""Confirma se o ajuste de registro suprimiu o alerta de segurança do Outlook.
+"""Teste isolado da vigília do alerta de segurança do Outlook.
 
 Só leitura — não move, não baixa, não altera nada na caixa. Conecta no
 Outlook e lê `SenderEmailAddress` de alguns e-mails da Caixa de Entrada,
@@ -7,18 +7,27 @@ que é exatamente a ação que dispara o alerta:
     "Progr. tentando acessar inform. de endereço de email armazenados no
     Outlook."
 
-Serve para testar o ajuste de registro
-(``HKCU\\Software\\Policies\\Microsoft\\Office\\16.0\\Outlook\\Security``)
-em segundos, sem precisar rodar o RPA1 inteiro (que move e-mails e baixa
-anexo — não é o ideal pra um teste repetido).
+O ajuste de registro (``Policies\\...\\16.0\\Outlook\\Security``) não
+suprimiu o alerta — descartada também a hipótese de política de domínio
+(confirmado via ``rsop.msc``, sem nenhuma política de Outlook aplicada).
+Suspeita atual: builds recentes do Outlook (Click-to-Run) deixaram de
+respeitar o valor "aprovar automaticamente" para este guard específico.
+
+Por isso este script agora **testa o clique automático** (o mesmo
+mecanismo de ``comum/integracoes/outlook_alerta_seguranca.py`` — processo
+separado, clique por mensagem direta ao controle, sem mover o mouse de
+verdade) — só aqui, num script que não move nem baixa nada, antes de
+reintegrar ao RPA1.
 
 Uso::
 
     python testar_alerta_registro.py
 
-Se o alerta aparecer, o registro não pegou (confira o caminho, o tipo
-DWORD, e se o Outlook foi reaberto por completo depois do ajuste). Se não
-aparecer e a lista de e-mails for impressa, o registro funcionou.
+O que observar: se o alerta aparecer na tela e for clicado sozinho (sem
+você precisar tocar em nada) e a lista de e-mails aparecer no final, a
+automação funcionou. Se alguma janela estranha abrir na tela (algo além do
+próprio alerta sendo clicado), pare com Ctrl+C imediatamente e me avise —
+é o mesmo tipo de sintoma do incidente anterior.
 """
 
 from __future__ import annotations
@@ -34,33 +43,36 @@ import pythoncom
 import win32com.client
 
 from comum.config import configuration
+from comum.integracoes.outlook_alerta_seguranca import vigiar_alerta_seguranca
 
 
 def main() -> int:
     print(f"Conectando ao Outlook (conta: '{configuration.OUTLOOK_ACCOUNT}')...")
-    pythoncom.CoInitialize()
-    app = win32com.client.Dispatch("Outlook.Application")
-    ns = app.GetNamespace("MAPI")
+    print("Vigília do alerta ligada — se ele aparecer, deve ser clicado sozinho.\n")
 
-    parent = ns.Folders(configuration.OUTLOOK_ACCOUNT)
-    inbox = parent.Store.GetDefaultFolder(6)  # olFolderInbox
-    items = inbox.Items
-    items.Sort("[ReceivedTime]", True)
+    with vigiar_alerta_seguranca():
+        pythoncom.CoInitialize()
+        app = win32com.client.Dispatch("Outlook.Application")
+        ns = app.GetNamespace("MAPI")
 
-    total = min(5, items.Count)
-    print(f"Lendo o remetente dos {total} e-mail(s) mais recente(s) da Caixa de Entrada...")
-    print("(se o alerta aparecer agora, é aqui que ele apareceria)\n")
+        parent = ns.Folders(configuration.OUTLOOK_ACCOUNT)
+        inbox = parent.Store.GetDefaultFolder(6)  # olFolderInbox
+        items = inbox.Items
+        items.Sort("[ReceivedTime]", True)
 
-    for i in range(1, total + 1):
-        item = items.Item(i)
-        try:
-            if item.Class != 43:  # olMailItem
-                continue
-            print(f"  {i}. assunto='{item.Subject}' remetente='{item.SenderEmailAddress}'")
-        except Exception as erro:
-            print(f"  {i}. (falha ao ler: {erro})")
+        total = min(5, items.Count)
+        print(f"Lendo o remetente dos {total} e-mail(s) mais recente(s) da Caixa de Entrada...")
 
-    print("\nSe você leu esta linha sem nenhum alerta ter aparecido na tela, o registro funcionou.")
+        for i in range(1, total + 1):
+            item = items.Item(i)
+            try:
+                if item.Class != 43:  # olMailItem
+                    continue
+                print(f"  {i}. assunto='{item.Subject}' remetente='{item.SenderEmailAddress}'")
+            except Exception as erro:
+                print(f"  {i}. (falha ao ler: {erro})")
+
+    print("\nTerminou sem precisar de clique manual? A automação funcionou.")
     return 0
 
 
