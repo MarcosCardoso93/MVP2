@@ -37,26 +37,6 @@ from contextlib import contextmanager
 from typing import Iterator
 
 _TITULO_JANELA = "Microsoft Outlook"
-#: Trecho de "endereço" sem o "ç" — evita depender de acento/encoding.
-_TRECHO_ESPERADO = "endere"
-
-
-def _e_o_alerta_certo(janela) -> bool:
-    """
-    Confere que é o alerta de acesso a endereço, não outra janela com o mesmo título.
-
-    🔴 2026-08-21: era `janela.children_texts()`, que não existe no
-    `DialogWrapper` desta versão do pywinauto — a chamada estourava
-    `AttributeError`, engolido pelo `except` abaixo, e a função sempre
-    devolvia `False` sem erro visível. `.texts()` é o método real: devolve o
-    texto da própria janela e de todos os descendentes.
-    """
-    try:
-        textos = " ".join(janela.texts()).lower()
-    except Exception as erro:
-        print(f"[vigia-outlook] Falha ao ler o texto da janela (ignorando): {erro}")
-        return False
-    return _TRECHO_ESPERADO in textos
 
 
 def _tentar_prolongar_acesso(janela) -> None:
@@ -79,26 +59,35 @@ def _tentar_clicar_permitir() -> bool:
     num processo separado (`multiprocessing`, método `spawn` no Windows), que
     reimporta o módulo do zero — mantendo o import pesado só onde é de fato
     usado evita puxá-lo também no processo principal, que não precisa dele.
+
+    🔴 2026-08-21: existem **duas** janelas com título 'Microsoft Outlook' e
+    classe '#32770' ao mesmo tempo — uma delas parece ser algo interno do
+    Outlook, sempre presente, sem conteúdo visível; a outra é o alerta de
+    verdade, só quando está na tela. `Desktop.window()` (singular) exige
+    exatamente 1 resultado e estourava `ElementAmbiguousError` a cada
+    tentativa — sem nunca chegar a procurar o botão. Por isso troquei para
+    `.windows()` (plural) e desambiguo pela única coisa que realmente
+    diferencia as duas: só o alerta de verdade tem um botão 'Permitir'.
     """
     from pywinauto import Desktop
-    from pywinauto.findwindows import ElementNotFoundError
 
-    try:
-        janela = Desktop(backend="win32").window(
-            title=_TITULO_JANELA, class_name="#32770"
-        )
-        if not janela.exists(timeout=0.3):
-            return False
-    except ElementNotFoundError:
-        return False
+    candidatas = Desktop(backend="win32").windows(
+        title=_TITULO_JANELA, class_name="#32770"
+    )
+    for janela in candidatas:
+        try:
+            botao = janela.child_window(title="Permitir", class_name="Button")
+            if not botao.exists(timeout=0.2):
+                continue
+        except Exception:
+            continue
 
-    if not _e_o_alerta_certo(janela):
-        return False
+        _tentar_prolongar_acesso(janela)
+        botao.click_input()
+        print("[vigia-outlook] Alerta de acesso a endereço apareceu — 'Permitir' clicado.")
+        return True
 
-    _tentar_prolongar_acesso(janela)
-    janela.child_window(title="Permitir", class_name="Button").click_input()
-    print("[vigia-outlook] Alerta de acesso a endereço apareceu — 'Permitir' clicado.")
-    return True
+    return False
 
 
 def _vigiar(parar, intervalo: float) -> None:
