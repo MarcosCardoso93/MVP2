@@ -43,10 +43,11 @@ def _tentar_prolongar_acesso(janela) -> None:
     """Marca 'Permitir acesso por' e escolhe a maior duração, se os controles existirem."""
     try:
         caixa = janela.child_window(title="Permitir acesso por", class_name="Button")
-        if not caixa.get_toggle_state():
-            caixa.click_input()
+        if caixa.exists(timeout=0.2) and not caixa.get_toggle_state():
+            caixa.check()
         combo = janela.child_window(class_name="ComboBox")
-        combo.select(combo.item_count() - 1)
+        if combo.exists(timeout=0.2):
+            combo.select(combo.item_count() - 1)
     except Exception:
         pass
 
@@ -60,19 +61,29 @@ def _tentar_clicar_permitir() -> bool:
     reimporta o módulo do zero — mantendo o import pesado só onde é de fato
     usado evita puxá-lo também no processo principal, que não precisa dele.
 
-    🔴 2026-08-21: existem **duas** janelas com título 'Microsoft Outlook' e
-    classe '#32770' ao mesmo tempo — uma delas parece ser algo interno do
-    Outlook, sempre presente, sem conteúdo visível; a outra é o alerta de
-    verdade, só quando está na tela. `Desktop.window()` (singular) exige
-    exatamente 1 resultado e estourava `ElementAmbiguousError` a cada
-    tentativa — sem nunca chegar a procurar o botão. Por isso troquei para
-    `.windows()` (plural) e desambiguo pela única coisa que realmente
-    diferencia as duas: só o alerta de verdade tem um botão 'Permitir'.
+    🔴 2026-08-21 (achado 1): existem **duas** janelas com título 'Microsoft
+    Outlook' e classe '#32770' ao mesmo tempo — uma delas parece ser algo
+    interno do Outlook, sempre presente, sem conteúdo visível; a outra é o
+    alerta de verdade, só quando está na tela. `Desktop.window()` (singular)
+    exige exatamente 1 resultado e estourava `ElementAmbiguousError` a cada
+    tentativa — sem nunca chegar a procurar o botão. Troquei para
+    `.windows()` (plural, com `visible_only=True` para já descartar a
+    fantasma) e desambiguo pela única coisa que diferencia as duas de
+    verdade: só o alerta real tem um botão 'Permitir'.
+
+    🔴 2026-08-21 (achado 2, mais grave): a primeira correção usava
+    `.click_input()`, que **move o cursor de verdade e simula um clique
+    físico** na posição calculada da tela. Isso rodou contra a produção e
+    abriu janelas indesejadas repetidamente — a suspeita é que, para a
+    janela fantasma (sem conteúdo real), essa posição vinha errada/fora da
+    tela, e o clique "físico" acabou em outro lugar do desktop. `.click()`
+    manda a mensagem de clique direto pro controle (via handle), sem mexer
+    no cursor nem depender de coordenada de tela — não tem esse risco.
     """
     from pywinauto import Desktop
 
     candidatas = Desktop(backend="win32").windows(
-        title=_TITULO_JANELA, class_name="#32770"
+        title=_TITULO_JANELA, class_name="#32770", visible_only=True
     )
     for janela in candidatas:
         try:
@@ -83,7 +94,7 @@ def _tentar_clicar_permitir() -> bool:
             continue
 
         _tentar_prolongar_acesso(janela)
-        botao.click_input()
+        botao.click()
         print("[vigia-outlook] Alerta de acesso a endereço apareceu — 'Permitir' clicado.")
         return True
 

@@ -11,7 +11,6 @@ from src.models.dto.registro_rastreamento import RegistroRastreamento
 from src.models.repository.rastreamento_repository import RastreamentoRepository
 from src.services.email_filter_service import DetrafEmailFilterService
 from comum.integracoes.outlook import OutlookError, OutlookService
-from comum.integracoes.outlook_alerta_seguranca import vigiar_alerta_seguranca
 
 _INVALID_DIR_CHARS = re.compile(r'[\\/:*?"<>|]')
 
@@ -108,75 +107,70 @@ class OutlookController:
         total_falha_download = 0
         total_falha_mover = 0
 
-        # A vigília do alerta de segurança do Outlook cobre todo este trecho —
-        # é aqui que ele conecta e lê a caixa via COM, o momento em que o
-        # alerta "Progr. tentando acessar inform. de endereço..." normalmente
-        # aparece. Fora deste `with`, a thread já está parada.
-        with vigiar_alerta_seguranca():
-            outlook = OutlookService(self._config.account)
-            self.organizar_caixa_de_entrada(outlook)
-            emails = outlook.fetch_emails_from_folder(self._config.detraf_despesas_folder)
-            logger.info(f"{len(emails)} e-mail(s) em '{self._config.detraf_despesas_folder}'")
+        outlook = OutlookService(self._config.account)
+        self.organizar_caixa_de_entrada(outlook)
+        emails = outlook.fetch_emails_from_folder(self._config.detraf_despesas_folder)
+        logger.info(f"{len(emails)} e-mail(s) em '{self._config.detraf_despesas_folder}'")
 
-            for email in emails:
-                if not DetrafEmailFilterService.deve_processar(email):
-                    total_filtrados += 1
-                    logger.debug(
-                        f"E-mail '{email.entry_id}' (assunto: '{email.subject}', "
-                        f"remetente: '{email.sender_email}') não passou no filtro de negócio "
-                        "(contém 'CONTESTAÇÃO' e/ou não tem anexo excel/csv) — ignorado."
-                    )
-                    continue
+        for email in emails:
+            if not DetrafEmailFilterService.deve_processar(email):
+                total_filtrados += 1
+                logger.debug(
+                    f"E-mail '{email.entry_id}' (assunto: '{email.subject}', "
+                    f"remetente: '{email.sender_email}') não passou no filtro de negócio "
+                    "(contém 'CONTESTAÇÃO' e/ou não tem anexo excel/csv) — ignorado."
+                )
+                continue
 
-                if self._rastreamento.existe_entry_id(email.entry_id):
-                    total_ja_rastreados += 1
-                    logger.debug(
-                        f"E-mail '{email.entry_id}' (assunto: '{email.subject}') já rastreado — pulando."
-                    )
-                    continue
+            if self._rastreamento.existe_entry_id(email.entry_id):
+                total_ja_rastreados += 1
+                logger.debug(
+                    f"E-mail '{email.entry_id}' (assunto: '{email.subject}') já rastreado — pulando."
+                )
+                continue
 
-                dest_folder = self._config.dest_root / _safe_dir_name(email.entry_id)
-                try:
-                    caminhos = outlook.download_attachments(email.entry_id, dest_folder)
-                except OutlookError as exc:
-                    total_falha_download += 1
-                    logger.error(f"Falha ao baixar anexos de '{email.entry_id}': {exc}")
-                    continue
+            dest_folder = self._config.dest_root / _safe_dir_name(email.entry_id)
+            try:
+                caminhos = outlook.download_attachments(email.entry_id, dest_folder)
+            except OutlookError as exc:
+                total_falha_download += 1
+                logger.error(f"Falha ao baixar anexos de '{email.entry_id}': {exc}")
+                continue
 
-                for caminho in caminhos:
-                    self._rastreamento.registrar(RegistroRastreamento(
-                        caminho_arquivo=str(caminho),
-                        entry_id=email.entry_id,
-                        subject=email.subject,
-                        sender_email=email.sender_email,
-                        received_at=email.received_at.isoformat() if email.received_at else None,
-                    ))
-                    arquivos.append(ArquivoParaProcessar(
-                        caminho=caminho,
-                        sender_email=email.sender_email,
-                        entry_id=email.entry_id,
-                        subject=email.subject or "",
-                        received_at=(
-                            email.received_at.isoformat() if email.received_at else ""
-                        ),
-                    ))
+            for caminho in caminhos:
+                self._rastreamento.registrar(RegistroRastreamento(
+                    caminho_arquivo=str(caminho),
+                    entry_id=email.entry_id,
+                    subject=email.subject,
+                    sender_email=email.sender_email,
+                    received_at=email.received_at.isoformat() if email.received_at else None,
+                ))
+                arquivos.append(ArquivoParaProcessar(
+                    caminho=caminho,
+                    sender_email=email.sender_email,
+                    entry_id=email.entry_id,
+                    subject=email.subject or "",
+                    received_at=(
+                        email.received_at.isoformat() if email.received_at else ""
+                    ),
+                ))
 
-                try:
-                    outlook.move_to_subfolder(
-                        email.entry_id,
-                        self._config.detraf_despesas_folder,
-                        self._config.processados_folder,
-                    )
-                    logger.info(
-                        f"E-mail '{email.entry_id}' capturado e movido para "
-                        f"'{self._config.processados_folder}'."
-                    )
-                except OutlookError as exc:
-                    total_falha_mover += 1
-                    logger.error(
-                        f"E-mail '{email.entry_id}' capturado mas não movido para "
-                        f"'{self._config.processados_folder}': {exc}"
-                    )
+            try:
+                outlook.move_to_subfolder(
+                    email.entry_id,
+                    self._config.detraf_despesas_folder,
+                    self._config.processados_folder,
+                )
+                logger.info(
+                    f"E-mail '{email.entry_id}' capturado e movido para "
+                    f"'{self._config.processados_folder}'."
+                )
+            except OutlookError as exc:
+                total_falha_mover += 1
+                logger.error(
+                    f"E-mail '{email.entry_id}' capturado mas não movido para "
+                    f"'{self._config.processados_folder}': {exc}"
+                )
 
         logger.info(
             "Resumo da captura — "
