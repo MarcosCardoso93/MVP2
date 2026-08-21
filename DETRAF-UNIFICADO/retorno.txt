@@ -1,29 +1,287 @@
-HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\Outlook\Security
 
+PS C:\RPA\rpa_vivo_mvp2> (Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& c:\RPA\rpa_vivo_mvp2\.venv\Scripts\Activate.ps1)
+(.venv) PS C:\RPA\rpa_vivo_mvp2>  & 'c:\RPA\rpa_vivo_mvp2\.venv\Scripts\python.exe' 'c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\launcher' '63441' '--' 'C:\RPA\rpa_vivo_mvp2\rpa1_captura\main.py'
+2026-08-21 16:02:00.834 | INFO    |__main__:<module>:118 - [RPA 1] robô: rpa1_captura 
+2026-08-21 16:02:00.851 | INFO    |__main__:<module>:118 - [RPA 1] modo: PROD  (de ENV)
+2026-08-21 16:02:00.852 | INFO    |__main__:<module>:118 - [RPA 1] log: nível INFO (de LOG_LEVEL), diagnose desligado
+2026-08-21 16:02:00.852 | INFO    |__main__:<module>:118 - [RPA 1] competência: 202607  (mês anterior ao corrente)
+2026-08-21 16:02:00.853 | INFO    |__main__:<module>:118 - [RPA 1] banco: MySQL [10.124.66.77:3306/webfat] usuário [btime_prod], senha definida
+2026-08-21 16:02:00.854 | INFO    |__main__:<module>:118 - [RPA 1] AGI: ambiente [producao] host [10.238.6.120] (de AGI_AMBIENTE) | executável [C:\RPA\rpa_vivo_mvp2\aplicacao_agi\Portal AIR\portal_air_vivo.exe]
+2026-08-21 16:02:00.854 | INFO    |__main__:<module>:118 - [RPA 1] EFEITOS EXTERNOS -> e-mail: LIGADO | upload AGI: LIGADO | acesso AGI: desligado | e-mail à operadora (RPA 
+1): desligado | download SFTP: LIGADO
+2026-08-21 16:02:00.855 | INFO    |__main__:<module>:118 - [RPA 1] parâmetros: nenhum — execução completa, como na agenda
+2026-08-21 16:02:19.136 | INFO    |comum.dados.repositorio_cache:__init__:77 - Inicializando conexão com o banco no ambiente [prod] 
+2026-08-21 16:02:19.142 | INFO    |comum.dados.repositorio_cache:__init__:77 - Conectando ao MySQL [10.124.66.77:3306] 
+2026-08-21 16:02:22.935 | INFO    |__main__:main:94 - Aplicação iniciada 
+2026-08-21 16:02:22.958 | INFO    |src.main.process_handle:run:34 - [RPA 1] Etapa 1/2 — captura dos anexos no Outlook (HU-01)
+2026-08-21 16:02:22.959 | INFO    |src.controllers.outlook_controller:capturar_arquivos:104 - Conectando ao Outlook (conta configurada: 'detrafTBRA')... 
+2026-08-21 16:02:35.526 | INFO    |src.controllers.outlook_controller:capturar_arquivos:104 - Conectado ao Outlook com sucesso. 
+2026-08-21 16:07:11.777 | ERROR   |comum.integracoes.outlook:_build_email:485 - Falha ao enumerar os anexos do e-mail: (-2147467262, 'No such interface supported', None, None). 0 de ? anexo(s) descrito(s) — os demais NÃO serão vistos por este robô.
+Traceback (most recent call last):
 
-Passo a passo:
+  File "C:\Users\atacadoadmin\AppData\Local\Programs\Python\Python314\Lib\runpy.py", line 198, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+           │         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+           │         └ <code object <module> at 0x00000271DF2B9E90, file "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-...
+           └ <function _run_code at 0x00000271DF5E05C0>
+  File "C:\Users\atacadoadmin\AppData\Local\Programs\Python\Python314\Lib\runpy.py", line 88, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+         └ <code object <module> at 0x00000271DF2B9E90, file "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-...
 
-Confirme a versão do Outlook (Ajuda → Conta do Office → Sobre o Outlook). Outlook 2016/2019/2021/365 = versão 16.0 (é a mais comum hoje — sigo com ela abaixo).
+  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\launcher/../..\debugpy\__main__.py", line 71, in <module>
+    cli.main()
+    │   └ <function main at 0x00000271E2786820>
+    └ <module 'debugpy.server.cli' from 'c:\\Users\\atacadoadmin\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundle...
 
-Abra o regedit.
+  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\launcher/../..\debugpy/..\debugpy\server\cli.py", line 542, in main
+    run()
+    └ <function run_file at 0x00000271E2786560>
 
-Navegue (ou crie, se não existir) o caminho:
+  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\launcher/../..\debugpy/..\debugpy\server\cli.py", line 361, in run_file
+    runpy.run_path(target, run_name="__main__")
+    │     │        └ 'C:\\RPA\\rpa_vivo_mvp2\\rpa1_captura\\main.py'
+    │     └ <function run_path at 0x00000271E1B45590>
+    └ <module '_pydevd_bundle.pydevd_runpy' from 'c:\\Users\\atacadoadmin\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x6...
 
+  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 310, in run_path
+    return _run_module_code(code, init_globals, run_name, pkg_name=pkg_name, script_name=fname)
+           │                │     │             │                  │                     └ 'C:\\RPA\\rpa_vivo_mvp2\\rpa1_captura\\main.py'
+           │                │     │             │                  └ ''
+           │                │     │             └ '__main__'
+           │                │     └ None
+           │                └ <code object <module> at 0x00000271DFE1D8B0, file "C:\RPA\rpa_vivo_mvp2\rpa1_captura\main.py", line 1>
+           └ <function _run_module_code at 0x00000271E1B45170>
 
-HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\Outlook\Security
-Se as pastas Policies, Office, 16.0, Outlook ou Security não existirem, clique direito → Novo → Chave, uma de cada vez, até montar o caminho completo.
+  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 127, in _run_module_code
+    _run_code(code, mod_globals, init_globals, mod_name, mod_spec, pkg_name, script_name)
+    │         │     │            │             │         │         │         └ 'C:\\RPA\\rpa_vivo_mvp2\\rpa1_captura\\main.py'
+    │         │     │            │             │         │         └ ''
+    │         │     │            │             │         └ None
+    │         │     │            │             └ '__main__'
+    │         │     │            └ None
+    │         │     └ {'__name__': '__main__', '__doc__': 'RPA 1 — Captura de Arquivos das Operadoras.\n\nPonto de entrada do robô. Nenhum dos proj...
+    │         └ <code object <module> at 0x00000271DFE1D8B0, file "C:\RPA\rpa_vivo_mvp2\rpa1_captura\main.py", line 1>
+    └ <function _run_code at 0x00000271E1B44CA0>
 
-Dentro de Security, crie os seguintes valores DWORD (32 bits), todos com dado 2 (= "Aprovar automaticamente"):
+  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 118, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': 'RPA 1 — Captura de Arquivos das Operadoras.\n\nPonto de entrada do robô. Nenhum dos proj...
+         └ <code object <module> at 0x00000271DFE1D8B0, file "C:\RPA\rpa_vivo_mvp2\rpa1_captura\main.py", line 1>
 
-Nome do valor	O que controla
-PromptOOMAddressBookAccess	acesso à agenda de endereços — é o mais provável de ser esse alerta
-PromptOOMAddressInformationAccess	ler remetente/e-mail de um item (o robô faz isso o tempo todo)
-PromptOOMSend	enviar/responder e-mail
-PromptOOMSaveAs	salvar anexo em disco (SaveAsFile — usado no download)
-PromptOOMMeetingTaskRequestResponse	(não deve ser usado aqui, mas não faz mal deixar coberto)
-Feche o Outlook completamente — confira no Gerenciador de Tarefas se não sobrou nenhum OUTLOOK.EXE rodando (o Outlook às vezes minimiza para a bandeja e mantém o processo vivo).
+  File "C:\RPA\rpa_vivo_mvp2\rpa1_captura\main.py", line 118, in <module>
+    raise SystemExit(main())
+                     └ <function main at 0x00000271E29CA090>
 
-Abra o Outlook de novo e rode o robô. O alerta deve parar de aparecer nas ações cobertas pelos valores acima.
+  File "C:\RPA\rpa_vivo_mvp2\rpa1_captura\main.py", line 94, in main
+    run(pasta_entrada=recorte.pasta_entrada, etapa=recorte.etapa, diagnostico=diagnostico)
+    │                 │       │                    │       │                  └ <comum.config.diagnostico_execucao.DiagnosticoDeExecucao object at 0x00000271E2D11E80>       
+    │                 │       │                    │       └ None
+    │                 │       │                    └ Argumentos(referencia=None, operadoras=[], etapa=None, pasta_entrada=None, de_pasta=None, dry_run=False, pausar=False)  
+    │                 │       └ None
+    │                 └ Argumentos(referencia=None, operadoras=[], etapa=None, pasta_entrada=None, de_pasta=None, dry_run=False, pausar=False)
+    └ <function run at 0x00000271E2D6F690>
 
-Se não funcionar: significa que existe uma política de domínio (GPO) da empresa reforçando esses mesmos valores por cima — nesse caso nenhum ajuste local se sobrepõe, e aí sim seria inevitável falar com o IT. Pra confirmar isso sem abrir chamado, rode rsop.msc e veja em "Configuração do Usuário → Modelos Administrativos → Microsoft Outlook → Segurança" se algum desses itens aparece como definido por GPO (ficaria cinza/bloqueado). Se estiver tudo em branco lá, o ajuste no registro deve pegar.
+  File "C:\RPA\rpa_vivo_mvp2\rpa1_captura\src\main\process_handle.py", line 34, in run
+    controller.processar(
+    │          └ <function ProcessamentoController.processar at 0x00000271E893A1F0>
+    └ <src.controllers.processamento_controller.ProcessamentoController object at 0x00000271E88D5BE0>
 
+  File "C:\RPA\rpa_vivo_mvp2\rpa1_captura\src\controllers\processamento_controller.py", line 104, in processar
+    arquivos = self._outlook.capturar_arquivos()
+               │    └ <property object at 0x00000271E2D72390>
+               └ <src.controllers.processamento_controller.ProcessamentoController object at 0x00000271E88D5BE0>
+
+  File "C:\RPA\rpa_vivo_mvp2\rpa1_captura\src\controllers\outlook_controller.py", line 105, in capturar_arquivos
+    self.organizar_caixa_de_entrada(outlook)
+    │    │                          └ <comum.integracoes.outlook.OutlookService object at 0x00000271E88D6510>
+    │    └ <function OutlookController.organizar_caixa_de_entrada at 0x00000271E2F10250>
+    └ <src.controllers.outlook_controller.OutlookController object at 0x00000271E88D6120>
+
+  File "C:\RPA\rpa_vivo_mvp2\rpa1_captura\src\controllers\outlook_controller.py", line 66, in organizar_caixa_de_entrada
+    emails = outlook.fetch_emails_from_inbox()
+             │       └ <function OutlookService.fetch_emails_from_inbox at 0x00000271E2F0A820>
+             └ <comum.integracoes.outlook.OutlookService object at 0x00000271E88D6510>
+
+  File "C:\RPA\rpa_vivo_mvp2\comum\integracoes\outlook.py", line 159, in fetch_emails_from_inbox
+    emails.append(self._build_email(item))
+    │      │      │    │            └ <COMObject <unknown>>
+    │      │      │    └ <function OutlookService._build_email at 0x00000271E2F0B8A0>
+    │      │      └ <comum.integracoes.outlook.OutlookService object at 0x00000271E88D6510>
+    │      └ <method 'append' of 'list' objects>
+    └ [EmailMessage(entry_id='00000000A949F53E017BB44C86E46D56D2D6BB100700F25FC41A3584FC499D024E55DD250D4D00000000010C0000F25FC41A3...
+ 
+  File "C:\RPA\rpa_vivo_mvp2\comum\integracoes\outlook.py", line 485, in _build_email
+    attachments = self._build_attachments(item)
+                  │    │                  └ <COMObject <unknown>>
+                  │    └ <function OutlookService._build_attachments at 0x00000271E2F0BA00>
+                  └ <comum.integracoes.outlook.OutlookService object at 0x00000271E88D6510>
+
+> File "C:\RPA\rpa_vivo_mvp2\comum\integracoes\outlook.py", line 517, in _build_attachments
+    attachments = item.Attachments
+                  └ <COMObject <unknown>>
+
+  File "c:\RPA\rpa_vivo_mvp2\.venv\Lib\site-packages\win32com\client\dynamic.py", line 620, in __getattr__
+    ret = self._oleobj_.Invoke(retEntry.dispid, 0, invoke_type, 1)
+          │    │        │      │        │          └ 2
+          │    │        │      │        └ 63509
+          │    │        │      └ MapEntry(dispid=63509, desc=PyFUNCDESC(memid=63509, scodeArray=(), args=(), funckind=4, invkind=2, callconv=4, cParamsOpt=0, ...
+          │    │        └ <method 'Invoke' of 'PyIDispatch' objects>
+          │    └ <PyIDispatch at 0x00000271E6414900 with obj at 0x00000271E6528588>
+          └ <COMObject <unknown>>
+
+pywintypes.com_error: (-2147467262, 'No such interface supported', None, None)
+2026-08-21 16:07:12.551 | WARNING |src.controllers.outlook_controller:organizar_caixa_de_entrada:66 - Item ignorado ao ler a Caixa de Entrada (não é um e-mail válido?): (-2147467262, 'No such interface supported', None, None)
+2026-08-21 16:07:12.599 | ERROR   |comum.integracoes.outlook:_build_email:485 - Falha ao enumerar os anexos do e-mail: (-2147467262, 'No such interface supported', None, None). 0 de ? anexo(s) descrito(s) — os demais NÃO serão vistos por este robô.
+Traceback (most recent call last):
+
+  File "C:\Users\atacadoadmin\AppData\Local\Programs\Python\Python314\Lib\runpy.py", line 198, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+           │         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+           │         └ <code object <module> at 0x00000271DF2B9E90, file "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-...
+           └ <function _run_code at 0x00000271DF5E05C0>
+  File "C:\Users\atacadoadmin\AppData\Local\Programs\Python\Python314\Lib\runpy.py", line 88, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+         └ <code object <module> at 0x00000271DF2B9E90, file "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-...
+
+  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\launcher/../..\debugpy\__main__.py", line 71, in <module>
+    cli.main()
+    │   └ <function main at 0x00000271E2786820>
+    └ <module 'debugpy.server.cli' from 'c:\\Users\\atacadoadmin\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundle...
+
+  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\launcher/../..\debugpy/..\debugpy\server\cli.py", line 542, in main
+    run()
+    └ <function run_file at 0x00000271E2786560>
+
+  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\launcher/../..\debugpy/..\debugpy\server\cli.py", line 361, in run_file
+    runpy.run_path(target, run_name="__main__")
+    │     │        └ 'C:\\RPA\\rpa_vivo_mvp2\\rpa1_captura\\main.py'
+    │     └ <function run_path at 0x00000271E1B45590>
+    └ <module '_pydevd_bundle.pydevd_runpy' from 'c:\\Users\\atacadoadmin\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x6...
+
+  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 310, in run_path
+    return _run_module_code(code, init_globals, run_name, pkg_name=pkg_name, script_name=fname)
+           │                │     │             │                  │                     └ 'C:\\RPA\\rpa_vivo_mvp2\\rpa1_captura\\main.py'
+           │                │     │             │                  └ ''
+           │                │     │             └ '__main__'
+           │                │     └ None
+           │                └ <code object <module> at 0x00000271DFE1D8B0, file "C:\RPA\rpa_vivo_mvp2\rpa1_captura\main.py", line 1>
+           └ <function _run_module_code at 0x00000271E1B45170>
+
+  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 127, in _run_module_code
+    _run_code(code, mod_globals, init_globals, mod_name, mod_spec, pkg_name, script_name)
+    │         │     │            │             │         │         │         └ 'C:\\RPA\\rpa_vivo_mvp2\\rpa1_captura\\main.py'
+    │         │     │            │             │         │         └ ''
+    │         │     │            │             │         └ None
+    │         │     │            │             └ '__main__'
+    │         │     │            └ None
+    │         │     └ {'__name__': '__main__', '__doc__': 'RPA 1 — Captura de Arquivos das Operadoras.\n\nPonto de entrada do robô. Nenhum dos proj...
+    │         └ <code object <module> at 0x00000271DFE1D8B0, file "C:\RPA\rpa_vivo_mvp2\rpa1_captura\main.py", line 1>
+    └ <function _run_code at 0x00000271E1B44CA0>
+
+  File "c:\Users\atacadoadmin\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy\_vendored\pydevd\_pydevd_bundle\pydevd_runpy.py", line 118, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': 'RPA 1 — Captura de Arquivos das Operadoras.\n\nPonto de entrada do robô. Nenhum dos proj...
+         └ <code object <module> at 0x00000271DFE1D8B0, file "C:\RPA\rpa_vivo_mvp2\rpa1_captura\main.py", line 1>
+
+  File "C:\RPA\rpa_vivo_mvp2\rpa1_captura\main.py", line 118, in <module>
+    raise SystemExit(main())
+                     └ <function main at 0x00000271E29CA090>
+
+  File "C:\RPA\rpa_vivo_mvp2\rpa1_captura\main.py", line 94, in main
+    run(pasta_entrada=recorte.pasta_entrada, etapa=recorte.etapa, diagnostico=diagnostico)
+    │                 │       │                    │       │                  └ <comum.config.diagnostico_execucao.DiagnosticoDeExecucao object at 0x00000271E2D11E80>       
+    │                 │       │                    │       └ None
+    │                 │       │                    └ Argumentos(referencia=None, operadoras=[], etapa=None, pasta_entrada=None, de_pasta=None, dry_run=False, pausar=False)  
+    │                 │       └ None
+    │                 └ Argumentos(referencia=None, operadoras=[], etapa=None, pasta_entrada=None, de_pasta=None, dry_run=False, pausar=False)
+    └ <function run at 0x00000271E2D6F690>
+
+  File "C:\RPA\rpa_vivo_mvp2\rpa1_captura\src\main\process_handle.py", line 34, in run
+    controller.processar(
+    │          └ <function ProcessamentoController.processar at 0x00000271E893A1F0>
+    └ <src.controllers.processamento_controller.ProcessamentoController object at 0x00000271E88D5BE0>
+
+  File "C:\RPA\rpa_vivo_mvp2\rpa1_captura\src\controllers\processamento_controller.py", line 104, in processar
+    arquivos = self._outlook.capturar_arquivos()
+               │    └ <property object at 0x00000271E2D72390>
+               └ <src.controllers.processamento_controller.ProcessamentoController object at 0x00000271E88D5BE0>
+
+  File "C:\RPA\rpa_vivo_mvp2\rpa1_captura\src\controllers\outlook_controller.py", line 105, in capturar_arquivos
+    self.organizar_caixa_de_entrada(outlook)
+    │    │                          └ <comum.integracoes.outlook.OutlookService object at 0x00000271E88D6510>
+    │    └ <function OutlookController.organizar_caixa_de_entrada at 0x00000271E2F10250>
+    └ <src.controllers.outlook_controller.OutlookController object at 0x00000271E88D6120>
+
+  File "C:\RPA\rpa_vivo_mvp2\rpa1_captura\src\controllers\outlook_controller.py", line 66, in organizar_caixa_de_entrada
+    emails = outlook.fetch_emails_from_inbox()
+             │       └ <function OutlookService.fetch_emails_from_inbox at 0x00000271E2F0A820>
+             └ <comum.integracoes.outlook.OutlookService object at 0x00000271E88D6510>
+
+  File "C:\RPA\rpa_vivo_mvp2\comum\integracoes\outlook.py", line 159, in fetch_emails_from_inbox
+    emails.append(self._build_email(item))
+    │      │      │    │            └ <COMObject <unknown>>
+    │      │      │    └ <function OutlookService._build_email at 0x00000271E2F0B8A0>
+    │      │      └ <comum.integracoes.outlook.OutlookService object at 0x00000271E88D6510>
+    │      └ <method 'append' of 'list' objects>
+    └ [EmailMessage(entry_id='00000000A949F53E017BB44C86E46D56D2D6BB100700F25FC41A3584FC499D024E55DD250D4D00000000010C0000F25FC41A3...
+ 
+  File "C:\RPA\rpa_vivo_mvp2\comum\integracoes\outlook.py", line 485, in _build_email
+    attachments = self._build_attachments(item)
+                  │    │                  └ <COMObject <unknown>>
+                  │    └ <function OutlookService._build_attachments at 0x00000271E2F0BA00>
+                  └ <comum.integracoes.outlook.OutlookService object at 0x00000271E88D6510>
+
+> File "C:\RPA\rpa_vivo_mvp2\comum\integracoes\outlook.py", line 517, in _build_attachments
+    attachments = item.Attachments
+                  └ <COMObject <unknown>>
+
+  File "c:\RPA\rpa_vivo_mvp2\.venv\Lib\site-packages\win32com\client\dynamic.py", line 620, in __getattr__
+    ret = self._oleobj_.Invoke(retEntry.dispid, 0, invoke_type, 1)
+          │    │        │      │        │          └ 2
+          │    │        │      │        └ 63509
+          │    │        │      └ MapEntry(dispid=63509, desc=PyFUNCDESC(memid=63509, scodeArray=(), args=(), funckind=4, invkind=2, callconv=4, cParamsOpt=0, ...
+          │    │        └ <method 'Invoke' of 'PyIDispatch' objects>
+          │    └ <PyIDispatch at 0x00000271E6414930 with obj at 0x00000271E6528D68>
+          └ <COMObject <unknown>>
+
+pywintypes.com_error: (-2147467262, 'No such interface supported', None, None)
+2026-08-21 16:07:13.191 | WARNING |src.controllers.outlook_controller:organizar_caixa_de_entrada:66 - Item ignorado ao ler a Caixa de Entrada (não é um e-mail válido?): (-2147467262, 'No such interface supported', None, None)
+2026-08-21 16:07:19.121 | INFO    |src.controllers.outlook_controller:capturar_arquivos:105 - Organização da Caixa de Entrada: 189 e-mail(s) lido(s), 0 movido(s) para 'Detraf Despesas'.
+2026-08-21 16:07:35.640 | INFO    |src.controllers.processamento_controller:processar:104 - 157 e-mail(s) em 'Detraf Despesas' 
+2026-08-21 16:07:36.233 | INFO    |src.controllers.processamento_controller:processar:104 - Resumo da captura — lidos: 157 | filtrados (ignorados): 0 | já rastreados (ignorados): 157 | falha no download: 0 | falha ao mover p/ PROCESSADOS: 0 | arquivos capturados: 0
+2026-08-21 16:07:36.237 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] E-mails lidos:            157 
+2026-08-21 16:07:36.238 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] Ignorados pelo filtro:    0
+2026-08-21 16:07:36.246 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] Ignorados (já capturados):157 
+2026-08-21 16:07:36.254 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] Falha no download:        0 
+2026-08-21 16:07:36.262 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] Falha ao mover:           0 
+2026-08-21 16:07:36.267 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] Arquivos baixados:        0
+2026-08-21 16:07:36.269 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] Pasta: C:\RPA\rpa_vivo_mvp2\arquivos\Entrada        
+2026-08-21 16:07:36.270 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] ────────────────────────────────────────────────────────────
+2026-08-21 16:07:36.275 | INFO    |src.controllers.processamento_controller:processar:106 - [RPA 1 — etapa 1/2: captura] PRÓXIMA ETAPA: identificação da operadora e salvamento na árvore
+2026-08-21 16:07:36.288 | INFO    |src.main.process_handle:run:34 - [RPA 1] Etapa 2/2 — identificação da operadora e salvamento (HU-02/HU-03) 
+2026-08-21 16:07:36.296 | INFO    |src.controllers.processamento_controller:processar:155 - Iniciando fluxo de processamento 
+2026-08-21 16:07:36.299 | INFO    |src.controllers.processamento_controller:processar:155 - Competência: 202607 | Ano: 2026
+2026-08-21 16:07:36.302 | INFO    |src.controllers.processamento_controller:processar:155 - Total de arquivos a processar: 0
+
+==================================================
+PROCESSAMENTO FINALIZADO 
+==================================================
+Arquivos reprovados na validação: 0
+Arquivos não identificados: 0
+Arquivos com erro: 0
+2026-08-21 16:07:36.325 | INFO    |src.services.processamento_service:executar:153 - Resumo — Sucesso: 0 | Reprovados: 0 | Não identificados: 0 | Erros: 0
+2026-08-21 16:07:36.329 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Arquivos salvos:          0      
+2026-08-21 16:07:36.341 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Reprovados na validação:  0      
+2026-08-21 16:07:36.345 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Não identificados:        0      
+2026-08-21 16:07:36.353 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Com erro:                 0      
+2026-08-21 16:07:36.361 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Pasta: \\10.128.223.33\arquivos_detraf$\DETRAF_RECEBIDO
+2026-08-21 16:07:36.369 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] ────────────────────────────────────────────────────────────
+2026-08-21 16:07:36.375 | INFO    |src.controllers.processamento_controller:processar:158 - [RPA 1 — etapa 2/2: identificação e salvamento] Esta é a última etapa da execução.
+2026-08-21 16:07:36.386 | INFO    |__main__:main:94 - Aplicação finalizada
+2026-08-21 16:07:36.400 | INFO    |__main__:main:110 - [Diagnóstico] Etapas desta execução em [C:\RPA\rpa_vivo_mvp2\logs\BRTAZBGY0015CO\rpa1_captura\diagnosticos\2026-08-21_16-02-00.txt].
+2026-08-21 16:07:36.445 | INFO    |__main__:<module>:118 - [RPA 1] Diagnóstico das etapas em [C:\RPA\rpa_vivo_mvp2\logs\BRTAZBGY0015CO\rpa1_captura\diagnosticos\2026-08-21_16-02-00.txt]
+(.venv) PS C:\RPA\rpa_vivo_mvp2> if (Get-Command deactivate -ErrorAction SilentlyContinue) { deactivate }
+PS C:\RPA\rpa_vivo_mvp2> (Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& c:\RPA\rpa_vivo_mvp2\.venv\Scripts\Activate.ps1)
+(.venv) PS C:\RPA\rpa_vivo_mvp2>  
