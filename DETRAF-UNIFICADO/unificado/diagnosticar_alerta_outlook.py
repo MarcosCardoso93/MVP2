@@ -41,9 +41,16 @@ def main() -> int:
         print(f"Janela: título='{titulo}' | classe='{janela.class_name()}'")
         print("=" * 70)
         try:
+            print("Textos (própria janela + todos os descendentes, em ordem):")
+            for texto in janela.texts():
+                print(f"  - {texto!r}")
+        except Exception as erro:
+            print(f"(falha ao ler os textos desta janela: {erro})")
+        try:
+            print("print_control_identifiers() (se disponível nesta versão do pywinauto):")
             janela.print_control_identifiers()
         except Exception as erro:
-            print(f"(falha ao listar os controles desta janela: {erro})")
+            print(f"(não disponível nesta versão/wrapper: {erro})")
         print()
 
     if not encontrou:

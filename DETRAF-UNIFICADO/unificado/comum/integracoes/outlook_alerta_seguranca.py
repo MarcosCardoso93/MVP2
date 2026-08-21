@@ -42,10 +42,19 @@ _TRECHO_ESPERADO = "endere"
 
 
 def _e_o_alerta_certo(janela) -> bool:
-    """Confere que é o alerta de acesso a endereço, não outra janela com o mesmo título."""
+    """
+    Confere que é o alerta de acesso a endereço, não outra janela com o mesmo título.
+
+    🔴 2026-08-21: era `janela.children_texts()`, que não existe no
+    `DialogWrapper` desta versão do pywinauto — a chamada estourava
+    `AttributeError`, engolido pelo `except` abaixo, e a função sempre
+    devolvia `False` sem erro visível. `.texts()` é o método real: devolve o
+    texto da própria janela e de todos os descendentes.
+    """
     try:
-        textos = " ".join(janela.children_texts()).lower()
-    except Exception:
+        textos = " ".join(janela.texts()).lower()
+    except Exception as erro:
+        print(f"[vigia-outlook] Falha ao ler o texto da janela (ignorando): {erro}")
         return False
     return _TRECHO_ESPERADO in textos
 
