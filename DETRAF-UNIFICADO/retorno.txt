@@ -1,7 +1,9 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
 
-PS C:\RPA\rpa_vivo_mvp2> (Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& c:\RPA\rpa_vivo_mvp2\.venv\Scripts\Activate.ps1)
-(.venv) PS C:\RPA\rpa_vivo_mvp2> .\.venv\Scripts\python.exe .\rpa1_captura\diagnosticar_alerta_seguranca.py
-====================================================================== 
+PS C:\Users\atacadoadmin> cd C:\RPA\rpa_vivo_mvp2
+PS C:\RPA\rpa_vivo_mvp2> .\.venv\Scripts\python.exe .\rpa1_captura\diagnosticar_alerta_seguranca.py
+======================================================================
 Janela: título='Microsoft Outlook' | classe='#32770'
 ======================================================================
 Textos (própria janela + todos os descendentes, em ordem):
