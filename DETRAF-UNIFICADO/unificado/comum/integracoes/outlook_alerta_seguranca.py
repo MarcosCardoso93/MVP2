@@ -8,11 +8,18 @@ ajuste local — o Outlook mostra, ao conectar/ler a caixa via COM, o alerta:
     "Progr. tentando acessar inform. de endereço de email armazenados no
     Outlook."
 
-``vigiar_alerta_seguranca()`` é um *context manager*: liga uma thread em
-segundo plano que fica só observando esse alerta, e desliga sozinha ao saír
-do bloco ``with``. Não é um script solto rodando pra sempre numa janela
-separada — a vigília nasce e morre junto do trecho de código que realmente
-toca o Outlook, no momento em que o alerta normalmente aparece.
+``vigiar_alerta_seguranca()`` é um *context manager*: liga um **processo**
+em segundo plano que fica só observando esse alerta, e desliga sozinho ao
+saír do bloco ``with``.
+
+🔴 **Por que processo, e não thread (2026-08-21).** A primeira versão usava
+uma `threading.Thread`. Não funcionou: a chamada COM que dispara o alerta
+(via `pywin32`) trava dentro de uma função C que não libera o GIL enquanto
+espera o usuário responder ao diálogo modal — então nenhuma outra thread do
+mesmo processo Python roda nesse meio tempo, incluindo a que deveria clicar
+"Permitir". Um processo separado tem seu próprio interpretador e GIL, e por
+isso continua rodando mesmo com o processo principal congelado dentro da
+chamada COM.
 
 Quando os controles existirem, também marca a caixa "Permitir acesso por" e
 escolhe a maior duração disponível na lista — o alerta demora mais para
@@ -25,14 +32,9 @@ e-mail") não é reconhecido por este módulo.
 
 from __future__ import annotations
 
-import threading
+import multiprocessing
 from contextlib import contextmanager
 from typing import Iterator
-
-from pywinauto import Desktop
-from pywinauto.findwindows import ElementNotFoundError
-
-from comum.config.logger_config import logger
 
 _TITULO_JANELA = "Microsoft Outlook"
 #: Trecho de "endereço" sem o "ç" — evita depender de acento/encoding.
@@ -61,7 +63,17 @@ def _tentar_prolongar_acesso(janela) -> None:
 
 
 def _tentar_clicar_permitir() -> bool:
-    """Procura o alerta e clica 'Permitir'. Devolve se encontrou (e clicou)."""
+    """
+    Procura o alerta e clica 'Permitir'. Devolve se encontrou (e clicou).
+
+    Importa `pywinauto` aqui dentro, não no topo do módulo: esta função roda
+    num processo separado (`multiprocessing`, método `spawn` no Windows), que
+    reimporta o módulo do zero — mantendo o import pesado só onde é de fato
+    usado evita puxá-lo também no processo principal, que não precisa dele.
+    """
+    from pywinauto import Desktop
+    from pywinauto.findwindows import ElementNotFoundError
+
     try:
         janela = Desktop(backend="win32").window(
             title=_TITULO_JANELA, class_name="#32770"
@@ -76,34 +88,37 @@ def _tentar_clicar_permitir() -> bool:
 
     _tentar_prolongar_acesso(janela)
     janela.child_window(title="Permitir", class_name="Button").click_input()
-    logger.info("[vigia-outlook] Alerta de acesso a endereço apareceu — 'Permitir' clicado.")
+    print("[vigia-outlook] Alerta de acesso a endereço apareceu — 'Permitir' clicado.")
     return True
 
 
-def _vigiar(parar: threading.Event, intervalo: float) -> None:
+def _vigiar(parar, intervalo: float) -> None:
+    """Corpo do processo filho. `parar` é um `multiprocessing.Event`."""
     while not parar.is_set():
         try:
             _tentar_clicar_permitir()
         except Exception as erro:
-            logger.warning(f"[vigia-outlook] Falha ao tentar clicar (ignorando): {erro}")
+            print(f"[vigia-outlook] Falha ao tentar clicar (ignorando): {erro}")
         parar.wait(intervalo)
 
 
 @contextmanager
-def vigiar_alerta_seguranca(intervalo: float = 0.5) -> Iterator[None]:
+def vigiar_alerta_seguranca(intervalo: float = 0.3) -> Iterator[None]:
     """
-    Liga a vigília do alerta enquanto o bloco ``with`` roda; desliga ao saír.
+    Liga a vigília do alerta (processo separado) enquanto o bloco ``with``
+    roda; desliga ao saír.
 
     Args:
-        intervalo: Segundos entre cada verificação (padrão: 0.5s — o alerta é
-            modal e bloqueia a chamada COM que o disparou, então vale checar
-            com frequência para não deixar o robô parado à toa).
+        intervalo: Segundos entre cada verificação (padrão: 0.3s — o alerta é
+            modal, então vale checar com frequência).
     """
-    parar = threading.Event()
-    thread = threading.Thread(target=_vigiar, args=(parar, intervalo), daemon=True)
-    thread.start()
+    parar = multiprocessing.Event()
+    processo = multiprocessing.Process(target=_vigiar, args=(parar, intervalo), daemon=True)
+    processo.start()
     try:
         yield
     finally:
         parar.set()
-        thread.join(timeout=2)
+        processo.join(timeout=2)
+        if processo.is_alive():
+            processo.terminate()
